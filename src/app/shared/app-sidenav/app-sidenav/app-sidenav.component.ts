@@ -13,6 +13,13 @@ import {AppBreakpointService} from "../../../core/services/app-breakpoint.servic
 import {Subscription} from 'rxjs'
 import {ResizeEvent} from 'angular-resizable-element'
 
+export enum DirectionType {
+  left = 'left',
+  right = 'right',
+  top = 'top',
+  bottom = 'bottom'
+}
+
 @Component({
   selector: 'app-sidenav-v2',
   templateUrl: './app-sidenav.component.html',
@@ -21,9 +28,9 @@ import {ResizeEvent} from 'angular-resizable-element'
 export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit, OnChanges, AfterViewInit, AfterViewChecked {
 
   @Input('opened') originalOpened: boolean
-  @Input('direction') direction: string = 'left'
-  @Input('size') size: string = 'md'
-  @Input('mode') originalMode: string = 'over'
+  @Input('direction') direction: string = 'left' // right,left,bottom,top
+  @Input('size') size: string = 'md' //
+  @Input('mode') originalMode: string = 'over' // side,over
   @Input('breakpoint') breakpoint: string = ''
   @Input('transparent') transparent: boolean = false
   @Input('toggleableBtn') toggleableBtn: boolean = false
@@ -58,6 +65,7 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
     left: false,
   }
 
+  private lock: boolean = false
   private hoverTimeout = null
   private breakpointSub: Subscription
   private dimensions = {
@@ -181,10 +189,6 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
 
   setHeight(height) {
     this.height = height
-
-    /*    if (Number(this.height) <= 200) {
-          this.height = '200'
-        }*/
   }
 
   sendChange(changes = null) {
@@ -252,6 +256,9 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
   }
 
   onMouseLeave(event) {
+    if (this.lock) {
+      return
+    }
     this.isMouseEntered = false
     if (this.hoverTimeout) {
       clearTimeout(this.hoverTimeout)
@@ -271,7 +278,16 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
     this.setHeight(calcHeight)
 
     this.sendChange()
-    this.resizeEnd.next(calcWidth)
+
+
+    if (this.direction === 'top' || this.direction === 'bottom') {
+      this.resizeEnd.next(calcHeight)
+    }
+    else {
+      this.resizeEnd.next(calcWidth)
+    }
+
+    this.lock = false
   }
 
   onResize(event: ResizeEvent) {
@@ -286,12 +302,18 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
     this.setHeight(calcHeight)
 
     this.sendChange({windowResize: false})
-    this.resizing.next(calcWidth)
+
+    if (this.direction === 'top' || this.direction === 'bottom') {
+      this.resizing.next(calcHeight)
+    }
+    else {
+      this.resizing.next(calcWidth)
+    }
   }
 
   onResizeStart(event: ResizeEvent) {
-    console.log('sadasd')
     this.onForceHover(true)
+    this.lock = true
   }
 
   onSetDefaultWidth(event) {

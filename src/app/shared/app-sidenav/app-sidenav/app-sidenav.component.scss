@@ -1,17 +1,78 @@
 @import '../../styles/scss/helpers';
 
+$app_bg_color: #fff;
+$app_primary_lighter: #536dfe;
+
+$resizeSurface: 10px;
+$resizeBorder: 3px;
+
+.app-layout-btn {
+  width: 24px;
+  height: 24px;
+  background-color: $app_bg_color;
+  border: 1px solid $app_primary_lighter;
+  border-radius: 200px;
+  cursor: pointer;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: $app_primary_lighter;
+  display: none;
+
+  .mat-icon {
+    height: 24px;
+    width: 24px;
+    font-size: 18px;
+    line-height: 22px;
+    color: $app_primary_lighter;
+  }
+
+  &:hover {
+    background-color: $app_primary_lighter;
+    color: $app_bg_color;
+
+    .mat-icon {
+      color: $app_bg_color;
+    }
+  }
+
+  &.app-layout-btn--closed {
+    background-color: $app_primary_lighter;
+    color: $app_bg_color;
+
+    .mat-icon {
+      color: $app_bg_color;
+    }
+  }
+
+  &.app-layout-btn--horizontal-flipped {
+    transform: rotate(180deg);
+  }
+
+  &.app-layout-btn--vertical-flipped--alt {
+    transform: rotate(-90deg);
+  }
+
+  &.app-layout-btn--vertical-flipped--alt-i {
+    transform: rotate(-90deg) !important;
+  }
+
+  &.app-layout-btn--vertical-flipped {
+    transform: rotate(90deg);
+  }
+}
+
 .app-sidenav-v2 {
   position: absolute;
-
   top: 0;
   left: 0;
   bottom: 0;
-
   background-color: #fff;
   transform: translateX(-100%);
   z-index: 6;
   border-right: 1px solid #D5D5D5;
   display: none;
+
 
   .app-sidenav-v2__inner {
     position: absolute;
@@ -19,6 +80,7 @@
     left: 0;
     bottom: 0;
     right: 0;
+    overflow: hidden;
   }
 
   .app-layout-btn__holder {
@@ -53,10 +115,6 @@
 
   @include bemMod(opened) {
     transform: translateX(0);
-
-    .app-layout-btn__holder {
-      left: -13px;
-    }
   }
 
   @include bemMod(right) {
@@ -75,12 +133,16 @@
       }
 
       .app-layout-btn__holder {
-        left: -13px;
+        left: -5px;
       }
     }
 
     &.app-sidenav-v2--opened {
       transform: translateX(0);
+
+      .app-layout-btn__holder {
+        left: -5px;
+      }
     }
   }
 
@@ -88,7 +150,7 @@
 
     &.app-sidenav-v2--toggleBtn-always {
       .app-layout-btn__holder {
-        left: -5px;
+        left: -12px;
       }
     }
 
@@ -100,7 +162,7 @@
       }
 
       .app-layout-btn__holder {
-        left: -10px;
+        left: -12px;
       }
     }
 
@@ -108,16 +170,15 @@
       transform: translateX(0);
 
       .app-layout-btn__holder {
-        left: -10px;
+        left: -12px;
       }
     }
   }
 
   @include bemMod(top) {
-
     right: 0;
     bottom: auto;
-    width:100% !important;
+    width: 100% !important;
     transform: translateY(100%);
     transition: transform 400ms cubic-bezier(.05, .74, .27, .99);
     border-bottom: 1px solid #D5D5D5;
@@ -137,7 +198,9 @@
       }
 
       .app-layout-btn__holder {
-        top: -10px;
+        top: -9px;
+        right: calc(50% - 12px);
+        left: auto;
       }
     }
 
@@ -145,16 +208,15 @@
       transform: translateY(0);
 
       .app-layout-btn__holder {
-        top: -10px;
+        top: -9px;
       }
     }
   }
 
   @include bemMod(bottom) {
-
     right: 0;
     top: auto;
-    width:100% !important;
+    width: 100% !important;
     transform: translateY(100%);
     transition: transform 400ms cubic-bezier(.05, .74, .27, .99);
     border-top: 1px solid #D5D5D5;
@@ -162,7 +224,7 @@
 
     &.app-sidenav-v2--toggleBtn-always {
       .app-layout-btn__holder {
-        left: -5px;
+        left: -4px;
       }
     }
 
@@ -174,7 +236,9 @@
       }
 
       .app-layout-btn__holder {
-        top: -10px;
+        top: -4px;
+        right: calc(50% - 12px);
+        left: auto;
       }
     }
 
@@ -182,12 +246,113 @@
       transform: translateY(0);
 
       .app-layout-btn__holder {
-        top: -10px;
+        top: -4px;
       }
     }
   }
-
-
 }
+
+.resize-handle-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  width: 3px;
+
+  .resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    cursor: ew-resize;
+    width: 3px;
+    z-index: 1;
+    border-color: rgb(39, 122, 252);
+    border-style: solid;
+    border-width: 0;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  &.resize-handle-container--left {
+    right: auto;
+    left: -$resizeSurface;
+    width: $resizeSurface;
+
+    .resize-handle {
+      width: $resizeSurface;
+      border-right-width: $resizeBorder;
+    }
+  }
+
+  &.resize-handle-container--right {
+    right: -$resizeSurface;
+    left: auto;
+    width: $resizeSurface;
+
+    .resize-handle {
+      width: $resizeSurface;
+      border-left-width: $resizeBorder;
+    }
+  }
+
+  &.resize-handle-container--top {
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: $resizeSurface;
+    top: -$resizeSurface;
+
+    .resize-handle {
+      width: 100%;
+      bottom: auto;
+      height: $resizeSurface;
+      cursor: n-resize;
+      border-bottom-width: $resizeBorder;
+    }
+  }
+
+  &.resize-handle-container--bottom {
+    right: 0;
+    left: 0;
+    top: auto;
+    width: 100%;
+    height: 3px;
+
+    .resize-handle {
+      width: 100%;
+      bottom: auto;
+      height: $resizeSurface;
+      cursor: n-resize;
+      border-top-width: $resizeBorder;
+    }
+  }
+
+  &:hover {
+    .resize-handle {
+      opacity: 1;
+    }
+
+    .resize-toggle-button {
+      &:before {
+        transform: rotate(40deg);
+      }
+
+      &:after {
+        transform: rotate(-40deg);
+      }
+
+      &:before, &:after {
+        opacity: 1;
+      }
+    }
+
+    .app-layout-btn {
+      display: inline-block !important;
+    }
+  }
+}
+
+
 
 
