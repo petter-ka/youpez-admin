@@ -1,7 +1,7 @@
 @import '../../styles/scss/helpers';
 
 $app_bg_color: #fff;
-$app_primary_lighter: #536dfe;
+$app_primary_lighter: #0f62fe;
 
 $resizeSurface: 10px;
 $resizeBorder: 3px;
@@ -267,7 +267,7 @@ $resizeBorder: 3px;
     cursor: ew-resize;
     width: 3px;
     z-index: 1;
-    border-color: rgb(39, 122, 252);
+    border-color: $app_primary_lighter;
     border-style: solid;
     border-width: 0;
     opacity: 0;
