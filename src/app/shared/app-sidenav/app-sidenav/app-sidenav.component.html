@@ -1,0 +1,83 @@
+<div #sideNavEl
+     mwlResizable
+     [resizeCursorPrecision]="8"
+     [enableGhostResize]="true"
+     (resizeStart)="onResizeStart($event)"
+     (resizeEnd)="onResizeEnd($event)"
+     (resizing)="onResize($event)"
+     [class]="getMainCSSclass()"
+     [ngClass]="{
+       'app-sidenav-v2--rendered': rendered,
+       'app-sidenav-v2--opened': opened,
+       'app-sidenav-v2--right': direction === 'right',
+       'app-sidenav-v2--left': direction === 'left',
+       'app-sidenav-v2--top': direction === 'top',
+       'app-sidenav-v2--bottom': direction === 'bottom',
+       'app-sidenav-v2--lg': size === 'lg',
+       'app-sidenav-v2--xl': size === 'xl',
+       'app-sidenav-v2--custom1': size === 'custom1',
+       'app-sidenav-v2--transparent': transparent,
+       'app-sidenav-v2--hoverAble': hoverAble,
+       'app-sidenav-v2--hoverEvent': hoverEvent,
+       'app-sidenav-v2--toggleBtn-always': toggleableBtnAlwaysVisible
+     }"
+     [style.width]="(direction === 'right' || direction === 'left') ? width+'px' : '100%'"
+     [style.height]="(direction === 'top' || direction === 'bottom') ? height+'px' : '100%'"
+     (mouseleave)="onMouseLeave($event)">
+
+  <div class="app-sidenav-v2__inner"
+       (mouseenter)="onMouseEnter($event)">
+    <ng-container *ngIf="opened || hoverEvent">
+      <ng-content></ng-content>
+    </ng-container>
+  </div>
+
+  <div class="resize-handle-container"
+       [ngClass]="{
+          'resize-handle-container--left':direction === 'right',
+          'resize-handle-container--right':direction === 'left',
+          'resize-handle-container--top':direction === 'bottom',
+          'resize-handle-container--bottom':direction === 'top'
+        }"
+       (dblclick)="onSetDefaultWidth($event)">
+    <div mwlResizeHandle
+         [resizeEdges]="resizeEdges"
+         class="resize-handle"></div>
+    <div class="app-layout-btn__holder" style="" *ngIf="toggleableBtn">
+
+      <ng-container *ngIf="direction === 'right'">
+        <button class="app-layout-btn"
+                [ngClass]="{
+                'app-layout-btn--closed':!opened,
+                'app-layout-btn--horizontal-flipped': opened
+              }"
+                (click)="onToggle()">
+
+          <svg width="24" height="24" viewBox="0 0 26 26" focusable="false" role="presentation">
+            <path
+                d="M13.706 9.698a.988.988 0 0 0 0-1.407 1.01 1.01 0 0 0-1.419 0l-2.965 2.94a1.09 1.09 0 0 0 0 1.548l2.955 2.93a1.01 1.01 0 0 0 1.42 0 .988.988 0 0 0 0-1.407l-2.318-2.297 2.327-2.307z"
+                fill="currentColor" fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </ng-container>
+
+      <ng-container *ngIf="direction === 'left'">
+        <button class="app-layout-btn"
+                [ngClass]="{
+                'app-layout-btn--closed':!opened,
+                'app-layout-btn--horizontal-flipped': !opened
+              }"
+                (click)="onToggle()">
+
+          <svg width="24" height="24" viewBox="0 0 26 26" focusable="false" role="presentation">
+            <path
+                d="M13.706 9.698a.988.988 0 0 0 0-1.407 1.01 1.01 0 0 0-1.419 0l-2.965 2.94a1.09 1.09 0 0 0 0 1.548l2.955 2.93a1.01 1.01 0 0 0 1.42 0 .988.988 0 0 0 0-1.407l-2.318-2.297 2.327-2.307z"
+                fill="currentColor" fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </ng-container>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~carbon-components/scss/globals/scss/styles.scss";
+
+.resize-handle-container {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  top: 0;
+  width: 3px;
+  z-index:10;
+
+  .resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    cursor: col-resize;
+    width: 3px;
+    z-index: 1;
+    background-color: blue;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  &.resize-handle-container--left {
+    right: auto;
+    left: 0;
+  }
+
+  &.resize-handle-container--right {
+    right: 0;
+    left: auto;
+  }
+
+  &.resize-handle-container--top {
+    top: 0;
+    bottom: auto;
+    height: 3px;
+    width: 100%;
+
+    .resize-handle {
+      top: auto;
+      left: 0;
+      height: 3px;
+      width: 100%;
+    }
+  }
+
+  &.resize-handle-container--bottom {
+    top: auto;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+
+    .resize-handle {
+      top: auto;
+      left: 0;
+      height: 3px;
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    .resize-handle {
+      opacity: 1;
+    }
+
+    .resize-toggle-button {
+      &:before {
+        transform: rotate(40deg);
+      }
+
+      &:after {
+        transform: rotate(-40deg);
+      }
+
+      &:before,
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    .app-layout-btn {
+      display: inline-block !important;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../styles/scss/helpers';
+
+.app-sidenav-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+
+  @include bemEl(overlay) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    display: none;
+
+    @include bemMod(visible) {
+      opacity: 1;
+      display: block;
+      z-index: 5;
+    }
+  }
+  @include bemEl(content) {
+    position: relative;
+    flex: 1;
+
+  }
+  @include bemMod(opened) {
+
+  }
+  @include bemMod(side) {
+
+  }
+}

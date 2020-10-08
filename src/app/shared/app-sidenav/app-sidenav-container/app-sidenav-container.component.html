@@ -1,0 +1,15 @@
+<div block="app-sidenav-container"
+     [mod]="{ opened: overlayVisible, side: sideMode }">
+  <div elem="content"
+       [style.marginRight]="contentMargins.right"
+       [style.marginLeft]="contentMargins.left"
+       [style.marginTop]="contentMargins.top"
+       [style.marginBottom]="contentMargins.bottom">
+    <ng-content></ng-content>
+  </div>
+  <div elem="overlay"
+       [mod]="{ visible: overlayVisible && !sideMode }"
+       (click)="onCloseAll()"
+       [style.opacity]="overlayOpacity"></div>
+  <ng-content select="app-sidenav-v2"></ng-content>
+</div>

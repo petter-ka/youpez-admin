@@ -1,0 +1,148 @@
+<app-sidenav-container fxFill>
+
+  <app-sidenav-v2
+    [opened]="true"
+    [mode]="'side'"
+    [size]="'lg'">
+
+
+    <app-sidenav-container fxFill>
+      <app-sidenav-v2
+        [opened]="false"
+        [direction]="'bottom'"
+        [hoverAble]="true"
+        [initWidth]="200"
+        [mode]="'side'"
+        [size]="'lg'">
+        bottom
+      </app-sidenav-v2>
+      <div fxFill fxLayout="column">
+        sidenav
+      </div>
+    </app-sidenav-container>
+
+  </app-sidenav-v2>
+
+  <div fxFill fxLayout="column">
+    <app-sidenav-container fxFill>
+      <app-sidenav-v2
+        [opened]="true"
+        [direction]="'top'"
+        [mode]="'side'"
+        [initWidth]="100"
+        [size]="'lg'">
+        top
+      </app-sidenav-v2>
+      <div fxFill fxLayout="column">
+
+
+
+
+        <app-sidenav-container fxFill>
+          <app-sidenav-v2
+            [opened]="false"
+            [direction]="'right'"
+            [mode]="'side'"
+            [initWidth]="150"
+            [hoverAble]="true"
+            [size]="'lg'">
+            right
+          </app-sidenav-v2>
+          <div fxFill fxLayout="column">
+            <div class="starter-home" ibmGrid>
+              <h1 class="title">Congratulations, <br>you made it!</h1>
+              <p class="subtitle">You have offically built your first Carbon Angular app</p>
+              <div class="body-text" ibmRow>
+                <div ibmCol [columnNumbers]="{'lg': 6, 'md': 12, 'sm': 12}">
+                  <p>
+                    This is an Angular CLI app configured for use with Carbon.
+                    It includes the grid, list, tab and tile components. Feel free
+                    to add or remove any components to fit your use case.
+                    To help you get started we've also set up:
+                  </p>
+                </div>
+                <div ibmCol [columnNumbers]="{'lg': 6, 'md': 12, 'sm': 12}">
+                  <ul ibmList class="list">
+                    <li ibmListItem>Angular-cli</li>
+                    <li ibmListItem>Build Process</li>
+                    <li ibmListItem>Code styles <br>& editor configs</li>
+                    <li ibmListItem>Folder structure</li>
+                    <li ibmListItem>Lazy loading</li>
+                    <li ibmListItem>Routing</li>
+                    <li ibmListItem>Service workers</li>
+                    <li ibmListItem>Test framework</li>
+                  </ul>
+                </div>
+              </div>
+
+              <ibm-tabs [isNavigation]="false">
+                <ibm-tab heading="carbon-components-angular">
+                  <p>Description</p><br>
+                  <p class="starter-tab-description">
+                    A component library that gives developers a collection of
+                    re-usable angular components that they can use for building
+                    websites and user interfaces
+                  </p>
+                  <p>Other useful resources</p><br>
+                  <div ibmRow>
+                    <div ibmCol [columnNumbers]="{'md': 2, 'sm': 12}">
+                      <ibm-clickable-tile href="https://github.com/IBM/carbon-components-angular" target="_blank">Repository
+                      </ibm-clickable-tile>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'md': 2, 'sm': 12}">
+                      <ibm-clickable-tile href="https://angular.carbondesignsystem.com/" target="_blank">Component Library
+                      </ibm-clickable-tile>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'md': 2, 'sm': 12}">
+                      <ibm-clickable-tile href="https://angular.carbondesignsystem.com/documentation/" target="_blank">
+                        Documentation
+                      </ibm-clickable-tile>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'md': 2, 'sm': 12}">
+                      <ibm-clickable-tile href="https://www.npmjs.com/package/carbon-components-angular" target="_blank">NPM
+                      </ibm-clickable-tile>
+                    </div>
+                  </div>
+                </ibm-tab>
+                <ibm-tab heading="carbon-charts">
+                  <p>Description</p><br>
+                  <p class="starter-tab-description">
+                    Carbon Charts is an open-source JavaScript data visualization
+                    library used as a functional component of IBM's Carbon Design System.
+                  </p>
+                  <p>Other useful resources</p><br>
+                  <div ibmRow>
+                    <div ibmCol [columnNumbers]="{'md': 2, 'sm': 12}">
+                      <ibm-clickable-tile href="https://github.com/IBM/carbon-charts" target="_blank">Repository
+                      </ibm-clickable-tile>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'md': 2, 'sm': 12}">
+                      <ibm-clickable-tile href="https://carbon-design-system.github.io/carbon-charts/" target="_blank">Demo
+                      </ibm-clickable-tile>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'md': 2, 'sm': 12}">
+                      <ibm-clickable-tile href="https://carbon-design-system.github.io/carbon-charts/documentation/"
+                                          target="_blank">Documentation
+                      </ibm-clickable-tile>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'md': 2, 'sm': 12}">
+                      <ibm-clickable-tile href="https://www.npmjs.com/package/@carbon/charts" target="_blank">NPM
+                      </ibm-clickable-tile>
+                    </div>
+                  </div>
+                </ibm-tab>
+              </ibm-tabs>
+            </div>
+          </div>
+        </app-sidenav-container>
+
+
+      </div>
+    </app-sidenav-container>
+  </div>
+</app-sidenav-container>
+
+
+<!--
+
+-->
