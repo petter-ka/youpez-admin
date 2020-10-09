@@ -1,0 +1,21 @@
+.app-layout {
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+
+  .app-layout__mini-sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+  }
+
+  .app-layout__content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 60px;
+  }
+}

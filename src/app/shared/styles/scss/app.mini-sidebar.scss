@@ -1,0 +1,56 @@
+@import 'helpers';
+
+.app-mini-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #19191e;
+  /*border-right:1px solid #2b2b37;*/
+
+
+  .app-mini-sidebar__list {
+    position: relative;
+
+    .app-mini-sidebar__list__item {
+      padding: 0 10px;
+      cursor: pointer;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      position: relative;
+
+      &.app-mini-sidebar__list__item__highlight {
+        margin: 20px 0;
+      }
+
+      .app-mini-sidebar__list__item__pill {
+        @extend .app-row;
+        @extend .app-row--center;
+        @extend .app-row--x-center;
+
+        text-align: center;
+        padding: 3px;
+        cursor: pointer;
+        border-radius: 8px;
+        display: block;
+        height: 40px;
+        width: 40px;
+        transition: all 100ms ease-in;
+        position: absolute;
+        top: 0;
+        /*background-color: #59595d;*/
+
+        svg {
+          fill: #eaeaeb;
+        }
+
+        &:hover {
+          background-color: #59595d;
+        }
+      }
+    }
+  }
+}

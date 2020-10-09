@@ -1,0 +1,43 @@
+$__app_color_blue: rgb(39, 122, 252);
+$__app_on_color_blue: #fff;
+$__app_color_grey: rgb(239, 239, 239);
+
+$theme-sidebar-light: (
+  '--theme-main-sidebar': #fff,
+  '--theme-main-sidebar-lt': #eee,
+  '--theme-on-main-sidebar':#373a3c,
+  '--theme-on-main-sidebar-lt':#989898,
+  '--theme-main-sidebar-border': #D5D5D5,
+  '--theme-main-sidebar-active': $__app_color_blue,
+  '--theme-on-main-sidebar-active': $__app_on_color_blue,
+);
+
+$theme-sub-sidebar-light: (
+  '--theme-sub-sidebar':#EFEFEF,
+  '--theme-on-sub-sidebar':#373a3c,
+  '--theme-sub-sidebar-border':#D5D5D5,
+  '--theme-sub-sidebar__list_hover':#fff,
+  '--theme-on-sub-sidebar__list_hover':#fff,
+  '--theme-sub-sidebar__list_active':#cbdfff,
+  '--theme-on-sub-sidebar__list_active':$__app_color_blue,
+  '--theme-sub-sidebar__input':#fff,
+  '--theme-on-sub-sidebar__input':#000,
+  '--theme-sub-sidebar__input_border':#D5D5D5,
+  '--theme-sub-sidebar__required':#deecff,
+  '--theme-sub-sidebar__badge':#dedede,
+  '--theme-on-sub-sidebar__badge':#9e9e9e,
+);
+
+$theme-map-light: (
+  '--theme-primary': #d75893, // fő szín
+  '--theme-on-primary': #fff, // fő szín text
+  '--theme-primary-lt': #d75893, // fő szín light
+  '--theme-secondary': #9b4dca, // mellék szín
+  '--theme-on-secondary': #fff, //mellék szín text
+  '--theme-surface': #EFEFEF, // content háttér
+  '--theme-on-surface': #000, //content text
+  '--theme-background': #fafafa, // body background color
+  '--theme-input-surface': #fff,
+  '--theme-input-border': rgba(0, 0, 0, 0.42),
+  '--theme-input-active': $__app_color_blue,
+);

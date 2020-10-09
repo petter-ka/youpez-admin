@@ -1,0 +1,30 @@
+@import 'app.variables';
+@import 'helpers';
+
+// LIGHT THEMES
+:root.app-theme-light {
+  @include spread-map($theme-map-light);
+}
+
+:root.app-theme-sidebar-light {
+  @include spread-map($theme-sidebar-light);
+}
+
+:root.app-theme-sub-sidebar-light {
+  @include spread-map($theme-sub-sidebar-light);
+}
+
+// DARK THEMES
+/*
+:root.app-theme-dark {
+  @include spread-map($theme-map-dark);
+}
+
+:root.app-theme-sidebar-dark {
+  @include spread-map($theme-sidebar-dark);
+}
+
+:root.app-theme-sub-sidebar-dark {
+  @include spread-map($theme-sub-sidebar-dark);
+}
+*/

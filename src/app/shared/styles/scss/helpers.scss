@@ -1,3 +1,29 @@
+.app-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &.app-row--center {
+    align-items: center;
+  }
+
+  &.app-row--end {
+    align-items: flex-end;
+  }
+
+  &.app-row--x-center {
+    justify-content: center;
+  }
+
+  &.app-row--x-end {
+    justify-content: flex-end;
+  }
+}
+
+.app-row__fill {
+  width: 100%;
+}
+
 // Mixins
 @mixin bemEl($element) {
   &__#{$element} {

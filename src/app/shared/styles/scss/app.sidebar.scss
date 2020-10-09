@@ -1,0 +1,71 @@
+@import 'helpers';
+
+.app-sidebar {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  background-color: #0f0f13;
+  padding: 15px 0;
+  color: #c0c0c1;
+
+
+  .app-sidebar__list {
+
+    .app-sidebar__list__header {
+      margin: 0 20px 5px 20px;
+      letter-spacing: 1px;
+      font-size: 12px;
+      opacity: .7;
+      cursor: default;
+    }
+
+    .app-sidebar__list__item {
+      margin: 0 10px;
+      cursor: pointer;
+
+
+      .app-sidebar__list__item__inner {
+        padding: 8px 10px;
+        border-radius: 8px;
+
+        @extend .app-row;
+        @extend .app-row--center;
+
+        &:hover {
+          background-color: #27272b;
+          color: #eaeaeb;
+        }
+      }
+
+      .app-sidebar__list__item__icon {
+        margin-right: 8px;
+
+        .material-icons-two-tone {
+          font-size: 22px;
+          filter: invert(91%) sepia(5%) saturate(37%) hue-rotate(201deg) brightness(88%) contrast(82%);
+        }
+
+        svg {
+          fill: #eaeaeb;
+        }
+      }
+
+      .app-sidebar__list__item__caret {
+        fill: #eaeaeb;
+      }
+
+
+      .app-sidebar__list__item__text {
+        @extend .app-row__fill;
+        font-weight: 700;
+      }
+    }
+
+  }
+
+
+}

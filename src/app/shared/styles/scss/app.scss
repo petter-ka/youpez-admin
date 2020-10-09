@@ -1,0 +1,36 @@
+@import 'app.themes';
+@import 'app.layout';
+@import 'app.mini-sidebar';
+@import 'app.sidebar';
+
+body {
+  overflow: hidden;
+}
+
+.app-relative {
+  position: relative;
+}
+
+.app-a-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.app-scrollbar-fix {
+  .ng-scrollbar {
+    height: 100% !important;
+  }
+}
+
+.material-icons-two-tone {
+}
+
+.material-icons,
+.material-icons-outlined,
+.material-icons-round,
+.material-icons-sharp {
+
+}

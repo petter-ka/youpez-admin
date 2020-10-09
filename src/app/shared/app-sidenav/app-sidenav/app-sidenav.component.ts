@@ -183,7 +183,12 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
     this.width = width
 
     if (Number(this.width) <= 200) {
-      this.width = '200'
+      this.onClose()
+      setTimeout(()=>{
+        this.width = '200'
+      },1000)
+
+
     }
   }
 
