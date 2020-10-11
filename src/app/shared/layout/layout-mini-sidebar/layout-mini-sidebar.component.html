@@ -1,0 +1,59 @@
+<div fxFill fxLayout="column">
+  <div fxFlex class="app-relative">
+    <div class="app-a-box app-scrollbar-fix">
+      <ng-scrollbar>
+        <div class="app-mini-sidebar__list">
+          <div class="app-mini-sidebar__list__item app-mini-sidebar__list__item__highlight">
+            <div class="app-mini-sidebar__list__item__pill">
+              <app-ibm-icon iconName="search" iconSize="24"></app-ibm-icon>
+            </div>
+          </div>
+
+          <div class="app-mini-sidebar__list__item">
+            <div class="app-mini-sidebar__list__item__pill">
+              <app-ibm-icon iconName="aperture" iconSize="24"></app-ibm-icon>
+            </div>
+          </div>
+          <div class="app-mini-sidebar__list__item">
+            <div class="app-mini-sidebar__list__item__pill">
+              <app-ibm-icon iconName="notification" iconSize="24"></app-ibm-icon>
+            </div>
+          </div>
+          <div class="app-mini-sidebar__list__item">
+            <div class="app-mini-sidebar__list__item__pill">
+              <app-ibm-icon iconName="chat" iconSize="24"></app-ibm-icon>
+            </div>
+          </div>
+        </div>
+      </ng-scrollbar>
+    </div>
+  </div>
+
+  <div class="app-mini-sidebar__list">
+    <div class="app-mini-sidebar__list__item">
+      <div class="app-mini-sidebar__list__item__pill">
+        <app-ibm-icon iconName="help" iconSize="24"></app-ibm-icon>
+      </div>
+    </div>
+    <div class="app-mini-sidebar__list__item" ngbDropdown container="body">
+      <div class="app-mini-sidebar__list__item__pill"
+           placement="right"
+           container="body"
+           ngbTooltip="Tooltip on right"
+           ngbDropdownToggle>
+        <app-ibm-icon iconName="user" iconSize="24"></app-ibm-icon>
+      </div>
+      <div ngbDropdownMenu aria-labelledby="dropdownForm1">
+        <div style="height: 300px;width: 200px">
+          <div>Contact Support</div>
+          <div>Feature Request</div>
+          <div>Documentation</div>
+          <div>What's new</div>
+          <div>About</div>
+          <div>Pricing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -27,19 +27,19 @@
 
   <div class="app-sidenav-v2__inner"
        (mouseenter)="onMouseEnter($event)">
-    <ng-container *ngIf="opened || hoverEvent">
+    <ng-container *ngIf="opened || hoverAble">
       <ng-content></ng-content>
     </ng-container>
   </div>
 
   <div class="resize-handle-container"
-       [ngClass]="{
-          'resize-handle-container--left':direction === 'right',
-          'resize-handle-container--right':direction === 'left',
-          'resize-handle-container--top':direction === 'bottom',
-          'resize-handle-container--bottom':direction === 'top'
-        }"
-       (dblclick)="onSetDefaultWidth($event)">
+     [ngClass]="{
+        'resize-handle-container--left':direction === 'right',
+        'resize-handle-container--right':direction === 'left',
+        'resize-handle-container--top':direction === 'bottom',
+        'resize-handle-container--bottom':direction === 'top'
+      }"
+     (dblclick)="onSetDefaultWidth($event)">
     <div mwlResizeHandle
          [resizeEdges]="resizeEdges"
          class="resize-handle"></div>

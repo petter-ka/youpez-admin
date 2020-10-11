@@ -21,7 +21,14 @@
 }
 
 .app-row__fill {
-  width: 100%;
+  flex: 1;
+}
+
+.text-overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto;
+  overflow: hidden;
 }
 
 // Mixins

@@ -1,7 +1,9 @@
 import {NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
+import {NavigationEnd, NavigationStart, Router, RouterModule} from '@angular/router'
 
 import {NgScrollbarModule} from 'ngx-scrollbar'
+import {DynamicModule} from 'ng-dynamic-component'
 import {
   AddModule,
   CaretDownModule,
@@ -16,11 +18,13 @@ import {
   UserModule,
   ToolsModule,
   ApplicationModule,
+  HelpModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
 import {ResizableModule} from 'angular-resizable-element'
 import {BemModule} from 'angular-bem'
+import {NgbDropdownModule, NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap'
 
 import {AppSidenavComponent} from "./app-sidenav/app-sidenav/app-sidenav.component"
 import {AppSidenavContainerComponent} from "./app-sidenav/app-sidenav-container/app-sidenav-container.component"
@@ -32,12 +36,24 @@ import {
   TilesModule,
   InputModule,
 } from 'carbon-components-angular'
+import {LayoutComponent} from './layout/layout.component'
+import {LayoutMiniSidebarComponent} from './layout/layout-mini-sidebar/layout-mini-sidebar.component'
+import {LayoutSidebarComponent} from './layout/layout-sidebar/layout-sidebar.component'
+
+import {AppMenuComponent} from "./app-menu/app-menu/app-menu.component"
+import {AppMenuHeaderComponent} from "./app-menu/app-menu-header/app-menu-header.component"
+import {AppMenuItemComponent} from "./app-menu/app-menu-item/app-menu-item.component"
+import {IbmIconComponent} from './ibm-icon/ibm-icon.component'
 
 const MainModules = [
+  RouterModule,
   FlexLayoutModule,
   ResizableModule,
   BemModule,
   NgScrollbarModule,
+  NgbDropdownModule,
+  NgbTooltipModule,
+  DynamicModule,
 ]
 
 const CarbonModules = [
@@ -62,11 +78,19 @@ const CarbonIconModules = [
   UserModule,
   ToolsModule,
   ApplicationModule,
+  HelpModule,
 ]
 
 const Components = [
   AppSidenavComponent,
   AppSidenavContainerComponent,
+  LayoutComponent,
+  LayoutMiniSidebarComponent,
+  LayoutSidebarComponent,
+  AppMenuComponent,
+  AppMenuHeaderComponent,
+  AppMenuItemComponent,
+  IbmIconComponent,
 ]
 
 @NgModule({
@@ -77,14 +101,13 @@ const Components = [
     ...CarbonModules,
   ],
   declarations: [
-    ...Components
+    ...Components,
   ],
   exports: [
     ...Components,
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
-
   ]
 })
 export class SharedModule {

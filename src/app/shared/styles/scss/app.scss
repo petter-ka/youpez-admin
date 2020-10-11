@@ -25,6 +25,48 @@ body {
   }
 }
 
+.dropdown-menu {
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: .25rem;
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
+.tooltip {
+  z-index: 1070;
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+  font-size: .875rem;
+  word-wrap: break-word;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: .25rem .5rem;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: .25rem;
+}
+
+
 .material-icons-two-tone {
 }
 

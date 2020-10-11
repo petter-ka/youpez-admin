@@ -1,0 +1,39 @@
+<ng-container [ngSwitch]="iconName">
+  <ng-container *ngSwitchCase="'home'">
+    <svg ibmIconHome [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'application'">
+    <svg ibmIconApplication [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'help'">
+    <svg ibmIconHelp [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'aperture'">
+    <svg ibmIconAperture [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'search'">
+    <svg ibmIconSearch [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'notification'">
+    <svg ibmIconNotification [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'chat'">
+    <svg ibmIconChat [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'user'">
+    <svg ibmIconUser [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'tools'">
+    <svg ibmIconTools [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchDefault>!!!</ng-container>
+</ng-container>
