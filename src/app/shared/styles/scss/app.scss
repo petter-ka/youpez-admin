@@ -1,7 +1,9 @@
 @import 'app.themes';
+@import 'app.typograpy.scss';
 @import 'app.layout';
 @import 'app.mini-sidebar';
 @import 'app.sidebar';
+@import 'app.cards.scss';
 
 body {
   overflow: hidden;

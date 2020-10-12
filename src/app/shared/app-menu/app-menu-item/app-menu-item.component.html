@@ -38,7 +38,7 @@
 
   <ng-container *ngIf="!item.children">
     <div class="app-sidebar__list__item__inner"
-         [routerLinkActive]="['app-menu__item--active']"
+         [routerLinkActive]="['app-sidebar__list__item__inner--active']"
          [routerLinkActiveOptions]="{exact:true}"
          [routerLink]="item.url"
          [attr.route]="item.url">

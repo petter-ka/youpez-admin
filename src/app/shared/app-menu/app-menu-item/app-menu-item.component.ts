@@ -1,4 +1,14 @@
-import {Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef, QueryList, ViewChildren} from '@angular/core'
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild,
+  ElementRef,
+  QueryList,
+  ViewChildren
+} from '@angular/core'
 import {Router, Routes} from '@angular/router'
 
 @Component({

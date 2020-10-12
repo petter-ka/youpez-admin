@@ -196,10 +196,11 @@ export class LayoutSidebarComponent implements OnInit {
             type: 'ibm-icon',
             name: 'home',
           },
+          parentUrl: '/app/widgets',
           children: [
             {
               name: 'General',
-              url: '/auth/log-in',
+              url: '/app/widgets/general',
             },
             {
               name: 'Lists',
@@ -259,6 +260,7 @@ export class LayoutSidebarComponent implements OnInit {
         },
         {
           name: 'Charts',
+          url: '/app/charts',
           prefix: {
             type: 'ibm-icon',
             name: 'home',
@@ -266,6 +268,7 @@ export class LayoutSidebarComponent implements OnInit {
         },
         {
           name: 'Icons',
+          url: '/app/icons',
           prefix: {
             type: 'ibm-icon',
             name: 'home',
@@ -273,6 +276,7 @@ export class LayoutSidebarComponent implements OnInit {
         },
         {
           name: 'Typography',
+          url: '/app/typography',
           prefix: {
             type: 'ibm-icon',
             name: 'home',

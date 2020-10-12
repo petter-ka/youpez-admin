@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common'
 import {NavigationEnd, NavigationStart, Router, RouterModule} from '@angular/router'
 
 import {NgScrollbarModule} from 'ngx-scrollbar'
-import {DynamicModule} from 'ng-dynamic-component'
 import {
   AddModule,
   CaretDownModule,
@@ -50,10 +49,8 @@ const MainModules = [
   FlexLayoutModule,
   ResizableModule,
   BemModule,
-  NgScrollbarModule,
   NgbDropdownModule,
   NgbTooltipModule,
-  DynamicModule,
 ]
 
 const CarbonModules = [
@@ -96,6 +93,9 @@ const Components = [
 @NgModule({
   imports: [
     CommonModule,
+    NgScrollbarModule.withConfig({
+      visibility: 'hover',
+    }),
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
@@ -105,6 +105,7 @@ const Components = [
   ],
   exports: [
     ...Components,
+    NgScrollbarModule,
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,

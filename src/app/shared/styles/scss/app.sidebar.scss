@@ -9,7 +9,7 @@
   bottom: 0;
 
   background-color: #0f0f13;
-  padding: 15px 0;
+  padding: 0;
   color: #c0c0c1;
 
 
@@ -66,6 +66,11 @@
         @extend .app-row--center;
 
         &:hover {
+          background-color: #1f1f23;
+          color: #eaeaeb;
+        }
+
+        &.app-sidebar__list__item__inner--active {
           background-color: #27272b;
           color: #eaeaeb;
         }
@@ -153,6 +158,13 @@
 
         .app-sidebar__list__item__children {
           max-height: 3000px;
+        }
+      }
+
+      &.app-sidebar__list__item--active-opened {
+        & > .app-sidebar__list__item__inner {
+          background-color: #27272b;
+          color: #eaeaeb;
         }
       }
 
