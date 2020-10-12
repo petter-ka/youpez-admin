@@ -3,12 +3,22 @@ import {Routes, RouterModule} from '@angular/router'
 import {TypographyComponent} from "./typography/typography.component"
 import {LayoutComponent} from "../shared/layout/layout.component"
 import {WidgetsGeneralComponent} from "./widgets/widgets-general/widgets-general.component"
+import {DashboardDefaultComponent} from "./dashboard/dashboard-default/dashboard-default.component"
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
     children: [
+      {
+        path: 'dashboard',
+        children: [
+          {
+            path: 'default',
+            component: DashboardDefaultComponent,
+          }
+        ]
+      },
       {
         path: 'typography',
         component: TypographyComponent,

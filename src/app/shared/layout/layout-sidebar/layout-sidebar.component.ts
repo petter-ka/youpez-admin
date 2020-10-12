@@ -21,8 +21,8 @@ export class LayoutSidebarComponent implements OnInit {
           parentUrl: '/app/dashboard',
           children: [
             {
-              name: 'Dashboard 1',
-              url: '/app/dashboard/dashboard-v1',
+              name: 'Default',
+              url: '/app/dashboard/default',
               suffix: {
                 type: 'badge',
                 level: 'default',
@@ -30,7 +30,11 @@ export class LayoutSidebarComponent implements OnInit {
               },
             },
             {
-              name: 'Dashboard 2',
+              name: 'Analytics',
+              url: '/app/dashboard/dashboard-v2',
+            },
+            {
+              name: 'Sales',
               url: '/app/dashboard/dashboard-v2',
             }
           ]

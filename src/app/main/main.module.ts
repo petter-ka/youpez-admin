@@ -5,12 +5,14 @@ import {SharedModule} from "../shared/shared.module"
 
 import {MainRoutingModule} from './main-routing.module'
 import {TypographyComponent} from './typography/typography.component';
-import { WidgetsGeneralComponent } from './widgets/widgets-general/widgets-general.component'
+import { WidgetsGeneralComponent } from './widgets/widgets-general/widgets-general.component';
+import { DashboardDefaultComponent } from './dashboard/dashboard-default/dashboard-default.component'
 
 @NgModule({
   declarations: [
     TypographyComponent,
-    WidgetsGeneralComponent
+    WidgetsGeneralComponent,
+    DashboardDefaultComponent
   ],
   imports: [
     CommonModule,
