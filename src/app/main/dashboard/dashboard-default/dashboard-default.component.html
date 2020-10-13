@@ -10,9 +10,15 @@
         </ibm-breadcrumb-item>
       </ibm-breadcrumb>
     </div>
-    <div class="app-expressive-heading-06">
-      Project Management
+    <div>
+      <span class="app-expressive-heading-06">
+        Yopp
+      </span>
+      <span class="app-expressive-heading-03">
+        the startup company
+      </span>
     </div>
+
   </div>
   <div fxFlex="100%" fxFlex.gt-sm="50%">
     <div class="text-left lg:text-right">
@@ -23,6 +29,9 @@
         Schedule
         <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
       </button>
+      <button ibmButton="ghost" size="sm">
+        <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+      </button>
     </div>
   </div>
   <div fxFlex="100%">
@@ -30,7 +39,7 @@
       <div fxFlex="100%" fxFlex.gt-sm="50%" class="mt-4">
         <ibm-combo-box
           style="width:200px"
-          [placeholder]="'Filter project...'"
+          [placeholder]="'Filter group...'"
           [items]="comboboxItems"
           size="md"
           [appendInline]="false">
@@ -67,6 +76,58 @@
       <div fxFlex="25%">
         <div class="app-card">
           <div class="app-card__header">
+            <div class="app-expressive-heading-03 font-extrabold mb-8">Reviews</div>
+            <div class="app-label-01">Current</div>
+            <div>
+              <span class="app-expressive-heading-06 mr-2">1,231</span>
+              <app-ibm-icon iconName="arrowUp" size="32"></app-ibm-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="25%">
+        <div class="app-card">
+          <div class="app-card__header">
+            <div class="app-expressive-heading-03 font-extrabold mb-8">Campaigns</div>
+            <div class="app-label-01">Current</div>
+            <div>
+              <span class="app-expressive-heading-06 mr-2">566</span>
+              <app-ibm-icon iconName="arrowUp" size="32"></app-ibm-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="25%">
+        <div class="app-card">
+          <div class="app-card__header">
+            <div class="app-expressive-heading-03 font-extrabold mb-8">Users</div>
+            <div class="app-label-01">Current</div>
+            <div>
+              <span class="app-expressive-heading-06 mr-2">11,122</span>
+              <app-ibm-icon iconName="arrowUp" size="32"></app-ibm-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="25">
+        <div class="app-card">
+          <div class="app-card__header">
+            <div class="app-expressive-heading-03 font-extrabold mb-8">Downloads</div>
+            <div class="app-label-01">Current</div>
+            <div>
+              <span class="app-expressive-heading-06 mr-2">234,122</span>
+              <app-ibm-icon iconName="arrowDown" size="32"></app-ibm-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div fxFlex="25%">
+        <div class="app-card">
+          <div class="app-card__tool app-card__tool--sign">
+            <div class="app-card__tool__sign app-card__tool__sign--danger"></div>
+          </div>
+          <div class="app-card__header">
             <div class="app-expressive-heading-01">Alerts</div>
             <div class="app-label-01">Last 24hrs</div>
           </div>
@@ -75,6 +136,9 @@
       </div>
       <div fxFlex="25%">
         <div class="app-card">
+          <div class="app-card__tool app-card__tool--sign">
+            <div class="app-card__tool__sign app-card__tool__sign--success"></div>
+          </div>
           <div class="app-card__header">
             <div class="app-expressive-heading-01">Revenue</div>
             <div class="app-label-01">Current month</div>
@@ -84,6 +148,9 @@
       </div>
       <div fxFlex="25%">
         <div class="app-card">
+          <div class="app-card__tool app-card__tool--sign">
+            <div class="app-card__tool__sign app-card__tool__sign--success"></div>
+          </div>
           <div class="app-card__header">
             <div class="app-expressive-heading-01">Profit</div>
             <div class="app-label-01">Last month</div>
@@ -93,46 +160,12 @@
       </div>
       <div fxFlex="25">
         <div class="app-card">
+          <div class="app-card__tool app-card__tool--sign">
+            <div class="app-card__tool__sign app-card__tool__sign--warning"></div>
+          </div>
           <div class="app-card__header">
             <div class="app-expressive-heading-01">Customers</div>
             <div class="app-label-01">Last 6 month</div>
-          </div>
-          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
-        </div>
-      </div>
-
-      <div fxFlex="25%">
-        <div class="app-card">
-          <div class="app-card__header">
-            <div class="app-expressive-heading-01">Alerts</div>
-            <div class="app-label-01">Last 24hrs</div>
-          </div>
-          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
-        </div>
-      </div>
-      <div fxFlex="25%">
-        <div class="app-card">
-          <div class="app-card__header">
-            <div class="app-expressive-heading-01">Alerts</div>
-            <div class="app-label-01">Last 24hrs</div>
-          </div>
-          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
-        </div>
-      </div>
-      <div fxFlex="25%">
-        <div class="app-card">
-          <div class="app-card__header">
-            <div class="app-expressive-heading-01">Alerts</div>
-            <div class="app-label-01">Last 24hrs</div>
-          </div>
-          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
-        </div>
-      </div>
-      <div fxFlex="25">
-        <div class="app-card">
-          <div class="app-card__header">
-            <div class="app-expressive-heading-01">Alerts</div>
-            <div class="app-label-01">Last 24hrs</div>
           </div>
           <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
         </div>
@@ -142,7 +175,14 @@
 
   <div fxFlex="40%">
     <div class="app-card" fxFlex>
-      dasdsad
+      <div class="app-card__header">
+        <div class="app-expressive-heading-03 font-extrabold">Usage</div>
+        <div class="app-label-01">Working days</div>
+      </div>
+      <div class="app-card__content">
+        <app-echarts [options]="punchCardOpts" class="app-echarts-component" style="height: 210px;"></app-echarts>
+      </div>
+
     </div>
   </div>
 </div>

@@ -1,3 +1,5 @@
+@import "~carbon-components/scss/globals/scss/colors";
+
 .app-card-row-holder {
   padding: 15px 8px;
 }
@@ -21,5 +23,38 @@
 
   .app-card__header {
     padding: 0.75rem 1rem;
+  }
+
+  .app-card__content {
+    padding: 15px;
+  }
+
+  .app-card__tool {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &.app-card__tool--sign {
+      top: 6px;
+      right: 6px;
+    }
+
+    .app-card__tool__sign {
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+
+      &.app-card__tool__sign--danger {
+        background-color: $support-01;
+      }
+
+      &.app-card__tool__sign--success {
+        background-color: $support-02;
+      }
+
+      &.app-card__tool__sign--warning {
+        background-color: $support-03;
+      }
+    }
   }
 }

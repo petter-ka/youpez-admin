@@ -35,5 +35,13 @@
     <svg ibmIconTools [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'arrowUp'">
+    <svg ibmIconArrowUp [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'arrowDown'">
+    <svg ibmIconArrowDown [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchDefault>!!!</ng-container>
 </ng-container>

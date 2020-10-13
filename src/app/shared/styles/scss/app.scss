@@ -8,6 +8,8 @@
 
 body {
   overflow: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 .app-relative {

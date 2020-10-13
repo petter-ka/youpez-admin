@@ -18,6 +18,8 @@ import {
   ToolsModule,
   ApplicationModule,
   HelpModule,
+  ArrowUpModule,
+  ArrowDownModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -43,6 +45,7 @@ import {
   TableModule,
   ToggleModule,
   DatePickerModule,
+
 } from 'carbon-components-angular'
 import {LayoutComponent} from './layout/layout.component'
 import {LayoutMiniSidebarComponent} from './layout/layout-mini-sidebar/layout-mini-sidebar.component'
@@ -94,6 +97,8 @@ const CarbonIconModules = [
   ToolsModule,
   ApplicationModule,
   HelpModule,
+  ArrowUpModule,
+  ArrowDownModule,
 ]
 
 const Components = [
