@@ -1,5 +1,5 @@
-@import 'app.variables';
-@import 'helpers';
+@import './app.variables.scss';
+@import './helpers.scss';
 
 // LIGHT THEMES
 :root.app-theme-light {

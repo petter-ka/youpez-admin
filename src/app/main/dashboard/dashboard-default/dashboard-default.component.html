@@ -1,46 +1,140 @@
-<div fxFlex fxLayout="row wrap" class="app-card-row-holder">
+<div fxLayout="row wrap" class="app-header app-header--default">
+  <div fxFlex="100%" fxFlex.gt-sm="50%">
+    <div>
+      <ibm-breadcrumb [noTrailingSlash]="true">
+        <ibm-breadcrumb-item href="#1">
+          Dashboard
+        </ibm-breadcrumb-item>
+        <ibm-breadcrumb-item current="true" href="#2">
+          Default
+        </ibm-breadcrumb-item>
+      </ibm-breadcrumb>
+    </div>
+    <div class="app-expressive-heading-06">
+      Project Management
+    </div>
+  </div>
+  <div fxFlex="100%" fxFlex.gt-sm="50%">
+    <div class="text-left lg:text-right">
+      <button ibmButton="primary" size="sm" ibmIconTools class="mr-2">
+        Invoices
+      </button>
+      <button ibmButton="tertiary" size="sm">
+        Schedule
+        <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+      </button>
+    </div>
+  </div>
+  <div fxFlex="100%">
+    <div fxLayout="row wrap">
+      <div fxFlex="100%" fxFlex.gt-sm="50%" class="mt-4">
+        <ibm-combo-box
+          style="width:200px"
+          [placeholder]="'Filter project...'"
+          [items]="comboboxItems"
+          size="md"
+          [appendInline]="false">
+          <ibm-dropdown-list></ibm-dropdown-list>
+        </ibm-combo-box>
+      </div>
+      <div fxFlex="100%" fxFlex.gt-sm="50%" class="mt-4">
+        <div class="text-left lg:text-right">
+          <span class="app-label-01 mr-3">Date range</span>
+          <ibm-date-picker
+            class="app-inline-block"
+            size="md" range="true">
+          </ibm-date-picker>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--            <button ibmButton="ghost" size="sm">Button</button>
+            <button ibmButton="ghost">Button</button>
+            <button ibmButton="danger">Button</button>
+            <button ibmButton="danger&#45;&#45;primary">Button</button>
+            <button ibmButton="primary">Button</button>
+            <button ibmButton="secondary">Button</button>
+
+            <button ibmButton="toolbar-action">Button</button>-->
+
+
+<div fxLayout="row wrap" class="app-card-row-holder">
 
   <div fxFlex="60%">
     <div fxFlex fxLayout="row wrap">
       <div fxFlex="25%">
         <div class="app-card">
-          <div class="app-expressive-heading-01">Alerts</div>
+          <div class="app-card__header">
+            <div class="app-expressive-heading-01">Alerts</div>
+            <div class="app-label-01">Last 24hrs</div>
+          </div>
+          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
         </div>
       </div>
       <div fxFlex="25%">
         <div class="app-card">
-          <div class="app-expressive-heading-01">Occupancy</div>
+          <div class="app-card__header">
+            <div class="app-expressive-heading-01">Revenue</div>
+            <div class="app-label-01">Current month</div>
+          </div>
+          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
         </div>
       </div>
       <div fxFlex="25%">
         <div class="app-card">
-          <div class="app-expressive-heading-01">Noise</div>
+          <div class="app-card__header">
+            <div class="app-expressive-heading-01">Profit</div>
+            <div class="app-label-01">Last month</div>
+          </div>
+          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
         </div>
       </div>
       <div fxFlex="25">
         <div class="app-card">
-          <div class="app-expressive-heading-01">Temperature</div>
+          <div class="app-card__header">
+            <div class="app-expressive-heading-01">Customers</div>
+            <div class="app-label-01">Last 6 month</div>
+          </div>
+          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
         </div>
       </div>
 
       <div fxFlex="25%">
         <div class="app-card">
-          dasdsad
+          <div class="app-card__header">
+            <div class="app-expressive-heading-01">Alerts</div>
+            <div class="app-label-01">Last 24hrs</div>
+          </div>
+          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
         </div>
       </div>
       <div fxFlex="25%">
         <div class="app-card">
-          dasdsad
+          <div class="app-card__header">
+            <div class="app-expressive-heading-01">Alerts</div>
+            <div class="app-label-01">Last 24hrs</div>
+          </div>
+          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
         </div>
       </div>
       <div fxFlex="25%">
         <div class="app-card">
-          dasdsad
+          <div class="app-card__header">
+            <div class="app-expressive-heading-01">Alerts</div>
+            <div class="app-label-01">Last 24hrs</div>
+          </div>
+          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
         </div>
       </div>
       <div fxFlex="25">
         <div class="app-card">
-          dasdsad
+          <div class="app-card__header">
+            <div class="app-expressive-heading-01">Alerts</div>
+            <div class="app-label-01">Last 24hrs</div>
+          </div>
+          <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
         </div>
       </div>
     </div>

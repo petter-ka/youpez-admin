@@ -1,4 +1,4 @@
-@import 'helpers';
+@import './helpers.scss';
 
 .app-sidebar {
 
@@ -61,6 +61,7 @@
         padding: 0 15px 0 10px;
         border-radius: 8px;
         margin-bottom: 2px;
+        outline: none;
 
         @extend .app-row;
         @extend .app-row--center;

@@ -1,9 +1,10 @@
-@import 'app.themes';
+@import 'app.themes.scss';
 @import 'app.typograpy.scss';
-@import 'app.layout';
-@import 'app.mini-sidebar';
-@import 'app.sidebar';
+@import 'app.layout.scss';
+@import 'app.mini-sidebar.scss';
+@import 'app.sidebar.scss';
 @import 'app.cards.scss';
+@import 'app.headers.scss';
 
 body {
   overflow: hidden;
@@ -68,8 +69,18 @@ body {
   border-radius: .25rem;
 }
 
+.app-echarts-component {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 
 .material-icons-two-tone {
+}
+
+.app-inline-block {
+  display: inline-block;
 }
 
 .material-icons,

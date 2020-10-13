@@ -34,6 +34,15 @@ import {
   TabsModule,
   TilesModule,
   InputModule,
+  ButtonModule,
+  TagModule,
+  BreadcrumbModule,
+  CheckboxModule,
+  ComboBoxModule,
+  AccordionModule,
+  TableModule,
+  ToggleModule,
+  DatePickerModule,
 } from 'carbon-components-angular'
 import {LayoutComponent} from './layout/layout.component'
 import {LayoutMiniSidebarComponent} from './layout/layout-mini-sidebar/layout-mini-sidebar.component'
@@ -59,6 +68,15 @@ const CarbonModules = [
   TabsModule,
   TilesModule,
   InputModule,
+  ButtonModule,
+  TagModule,
+  BreadcrumbModule,
+  CheckboxModule,
+  ComboBoxModule,
+  AccordionModule,
+  TableModule,
+  ToggleModule,
+  DatePickerModule,
 ]
 
 const CarbonIconModules = [
@@ -104,8 +122,8 @@ const Components = [
     ...Components,
   ],
   exports: [
-    ...Components,
     NgScrollbarModule,
+    ...Components,
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,

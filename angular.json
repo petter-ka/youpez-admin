@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/tailwind/tailwind.css",
               "src/styles.scss",
               "src/app/shared/styles/scss/app.scss"
             ],

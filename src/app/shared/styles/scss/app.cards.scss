@@ -1,5 +1,5 @@
 .app-card-row-holder {
-  padding: 15px;
+  padding: 15px 8px;
 }
 
 .app-card-row {
@@ -9,18 +9,17 @@
   min-height: 100px;
 }
 
-
 .app-card {
   position: relative;
   display: block;
-  min-width: 8rem;
   min-height: 4rem;
-  padding: 1rem;
+
   background-color: #fff;
   outline: 2px solid transparent;
   outline-offset: -2px;
-
-  //border-left: 1px solid #c6c6c6;
-  //border-bottom: 1px solid #c6c6c6;
   margin: 7px;
+
+  .app-card__header {
+    padding: 0.75rem 1rem;
+  }
 }
