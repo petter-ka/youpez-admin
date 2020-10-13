@@ -15,21 +15,8 @@
         [size]="'sideBar1'">
         <app-layout-sidebar></app-layout-sidebar>
       </app-sidenav-v2>
-      <div fxFill>
-        <app-sidenav-container fxFill>
-          <app-sidenav-container fxFill>
-            <app-sidenav-v2
-              [opened]="false"
-              [direction]="'right'"
-              [mode]="'side'"
-              [initWidth]="150"
-              [hoverAble]="true"
-              [size]="'lg'">
-              right
-            </app-sidenav-v2>
-            <router-outlet></router-outlet>
-          </app-sidenav-container>
-        </app-sidenav-container>
+      <div fxFill class="relative">
+        <router-outlet></router-outlet>
       </div>
     </app-sidenav-container>
   </div>

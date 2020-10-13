@@ -10,7 +10,7 @@
 
   background-color: #0f0f13;
   padding: 0;
-  color: #c0c0c1;
+  color: #808080;
 
 
   .app-sidebar__list {
@@ -47,7 +47,8 @@
         opacity: .7;
 
         svg {
-          fill: #eaeaeb;
+          fill: #808080;
+
         }
       }
     }
@@ -69,11 +70,19 @@
         &:hover {
           background-color: #1f1f23;
           color: #eaeaeb;
+
+          svg {
+            fill: #eaeaeb;
+          }
         }
 
         &.app-sidebar__list__item__inner--active {
           background-color: #27272b;
           color: #eaeaeb;
+
+          svg {
+            fill: #eaeaeb;
+          }
         }
       }
 
@@ -86,19 +95,19 @@
         }
 
         svg {
-          fill: #eaeaeb;
+          fill: #808080;
         }
       }
 
       .app-sidebar__list__item__caret {
-        fill: #eaeaeb;
+        fill: #808080;
       }
 
 
       .app-sidebar__list__item__text {
         @extend .app-row__fill;
         @extend .text-overflow-ellipsis;
-        font-weight: 700;
+        //font-weight: 700;
       }
 
       .app-sidebar__list__item__badge {
@@ -166,6 +175,10 @@
         & > .app-sidebar__list__item__inner {
           background-color: #27272b;
           color: #eaeaeb;
+
+          svg {
+            fill: #eaeaeb;
+          }
         }
       }
 

@@ -20,6 +20,10 @@ import {
   HelpModule,
   ArrowUpModule,
   ArrowDownModule,
+  OverflowMenuHorizontalModule,
+  OverflowMenuVerticalModule,
+  CloudDataOpsModule,
+  VirtualPrivateCloudAltModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -99,6 +103,10 @@ const CarbonIconModules = [
   HelpModule,
   ArrowUpModule,
   ArrowDownModule,
+  OverflowMenuHorizontalModule,
+  OverflowMenuVerticalModule,
+  CloudDataOpsModule,
+  VirtualPrivateCloudAltModule,
 ]
 
 const Components = [

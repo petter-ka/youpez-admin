@@ -43,5 +43,13 @@
     <svg ibmIconArrowDown [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'cloudDataOps'">
+    <svg ibmIconCloudDataOps [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'virtualPrivateCloudAlt'">
+    <svg ibmIconVirtualPrivateCloudAlt [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchDefault>!!!</ng-container>
 </ng-container>

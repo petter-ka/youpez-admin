@@ -20,6 +20,23 @@
   }
 }
 
+.app-symbol {
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 0.42rem;
+
+  &.app-symbol--default {
+    background-color: #eee;
+  }
+
+  .app-symbol__label {
+    @extend .app-row;
+    @extend .app-row--center;
+    @extend .app-row--x-center;
+  }
+}
+
 .app-row__fill {
   flex: 1;
 }

@@ -29,9 +29,6 @@
         Schedule
         <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
       </button>
-      <button ibmButton="ghost" size="sm">
-        <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
-      </button>
     </div>
   </div>
   <div fxFlex="100%">
@@ -128,7 +125,7 @@
             <div class="app-card__tool__sign app-card__tool__sign--danger"></div>
           </div>
           <div class="app-card__header">
-            <div class="app-expressive-heading-01">Alerts</div>
+            <div class="app-expressive-heading-02">Alerts</div>
             <div class="app-label-01">Last 24hrs</div>
           </div>
           <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
@@ -140,7 +137,7 @@
             <div class="app-card__tool__sign app-card__tool__sign--success"></div>
           </div>
           <div class="app-card__header">
-            <div class="app-expressive-heading-01">Revenue</div>
+            <div class="app-expressive-heading-02">Revenue</div>
             <div class="app-label-01">Current month</div>
           </div>
           <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
@@ -152,7 +149,7 @@
             <div class="app-card__tool__sign app-card__tool__sign--success"></div>
           </div>
           <div class="app-card__header">
-            <div class="app-expressive-heading-01">Profit</div>
+            <div class="app-expressive-heading-02">Profit</div>
             <div class="app-label-01">Last month</div>
           </div>
           <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
@@ -164,7 +161,7 @@
             <div class="app-card__tool__sign app-card__tool__sign--warning"></div>
           </div>
           <div class="app-card__header">
-            <div class="app-expressive-heading-01">Customers</div>
+            <div class="app-expressive-heading-02">Customers</div>
             <div class="app-label-01">Last 6 month</div>
           </div>
           <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
@@ -175,14 +172,210 @@
 
   <div fxFlex="40%">
     <div class="app-card" fxFlex>
+      <div class="app-card__tool">
+        <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+          <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+        </button>
+        <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+          <svg class="bx--btn__icon" ibmIconOverflowMenuVertical size="32"></svg>
+        </button>
+      </div>
       <div class="app-card__header">
-        <div class="app-expressive-heading-03 font-extrabold">Usage</div>
+        <div class="app-expressive-heading-03 font-extrabold">App usage</div>
         <div class="app-label-01">Working days</div>
       </div>
       <div class="app-card__content">
         <app-echarts [options]="punchCardOpts" class="app-echarts-component" style="height: 210px;"></app-echarts>
       </div>
-
     </div>
   </div>
+
+  <div fxFlex="100%">
+    <div fxLayout="row wrap">
+      <div fxFlex="25%">
+        <div class="app-card" fxFlex>
+          <div class="app-card__header">
+            <div class="app-row app-row--center">
+              <div class="app-symbol app-symbol--default mr-4">
+                <div class="app-symbol__label w-20 h-20">
+                  <app-ibm-icon iconName="cloudDataOps" iconSize="32"></app-ibm-icon>
+                </div>
+              </div>
+              <div>
+                <div class="app-expressive-heading-02">Monthly Subscription <br/> Based SaaS</div>
+                <div class="app-label-01 mt-2">Due: 21 Dec 2020</div>
+              </div>
+            </div>
+          </div>
+          <div class="app-list app-list--hover app-list--select">
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowDown" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                january
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                february
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                march
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                april
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                may
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                june
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div fxFlex="25%">
+        <div class="app-card" fxFlex>
+          <div class="app-card__header">
+            <div class="app-row app-row--center">
+              <div class="app-symbol app-symbol--default mr-4">
+                <div class="app-symbol__label w-20 h-20">
+                  <app-ibm-icon iconName="virtualPrivateCloudAlt" iconSize="32"></app-ibm-icon>
+                </div>
+              </div>
+              <div>
+                <div class="app-expressive-heading-02">Monthly Subscription <br/> Based On-premise</div>
+                <div class="app-label-01 mt-2">Due: 21 Dec 2020</div>
+              </div>
+            </div>
+          </div>
+          <div class="app-list app-list--hover app-list--select">
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowDown" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                january
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                february
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                march
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                april
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                may
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__prefix">
+                <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+              </div>
+              <div class="app-list__item__content">
+                june
+              </div>
+              <div class="app-expressive-heading-02 mr-1">112,333$</div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
