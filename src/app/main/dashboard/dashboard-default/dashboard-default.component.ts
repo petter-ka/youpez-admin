@@ -11,6 +11,32 @@ export class DashboardDefaultComponent implements OnInit {
   public chartOptions = {}
   public punchCardOpts = {}
 
+  public model = {
+    header: [
+      {data: "Name"},
+      {data: "Country"},
+      {data: "Goals"},
+    ],
+    data: [
+      [{data: 'Jon Doe'}, {data: 'USA'},{data: 11}],
+      [{data: 'Philip Jones'}, {data: 'Australia'},{data: 9}],
+      [{data: 'Doe Jane'}, {data: 'Canada'},{data: 110}],
+      [{data: 'Buck Jones'}, {data: 'Mexico'},{data: 56}],
+      [{data: 'Jon Doe'}, {data: 'USA'},{data: 11}],
+      [{data: 'Philip Jones'}, {data: 'Australia'},{data: 9}],
+      [{data: 'Doe Jane'}, {data: 'Canada'},{data: 110}],
+      [{data: 'Buck Jones'}, {data: 'Mexico'},{data: 56}],
+      [{data: 'Jon Doe'}, {data: 'USA'},{data: 11}],
+      [{data: 'Philip Jones'}, {data: 'Australia'},{data: 9}],
+      [{data: 'Doe Jane'}, {data: 'Canada'},{data: 110}],
+      [{data: 'Buck Jones'}, {data: 'Mexico'},{data: 56}],
+      [{data: 'Jon Doe'}, {data: 'USA'},{data: 11}],
+      [{data: 'Philip Jones'}, {data: 'Australia'},{data: 9}],
+      [{data: 'Doe Jane'}, {data: 'Canada'},{data: 110}],
+      [{data: 'Buck Jones'}, {data: 'Mexico'},{data: 56}]
+    ]
+  }
+
   public comboboxItems = [
     {
       content: "one"
@@ -133,6 +159,13 @@ export class DashboardDefaultComponent implements OnInit {
         data: days,
         axisLine: {
           show: false
+        },
+        splitLine: {
+          show: true,
+          lineStyle: {
+            color: '#efefef',
+            type: 'dashed'
+          }
         },
         axisLabel: {
           fontSize: 10,

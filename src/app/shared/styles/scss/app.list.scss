@@ -5,28 +5,30 @@
     position: relative;
     @extend .app-row;
     @extend .app-row--center;
-    /*border: 2px solid transparent;*/
     padding-left: 40px;
-    min-height: 2.5rem;
+   //min-height: 2.5rem;
     .app-list__item__prefix {
       position: absolute;
       top: 13px;
       left: 13px;
     }
 
-    &:before {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 40px;
-      content: '';
-      height: 1px;
-      background-color: #e2e2e2;
-    }
+
 
     .app-list__item__content {
-      padding: 0.5rem 0;
+      padding: 0.75rem 0;
+      position: relative;
       @extend .app-row__fill;
+
+      &:before {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        content: '';
+        height: 1px;
+        background-color: #e2e2e2;
+      }
     }
   }
 

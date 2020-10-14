@@ -27,7 +27,7 @@
     }
 
     .app-sidebar__list__header {
-      margin: 15px 25px 3px 20px;
+      margin: 16px 25px 3px 20px;
       letter-spacing: 1px;
       font-size: 12px;
 
@@ -40,15 +40,14 @@
       .app-sidebar__list__header__text {
         @extend .app-row__fill;
         @extend .text-overflow-ellipsis;
-        opacity: .7;
+        opacity: .8;
       }
 
       .app-sidebar__list__header__toggle {
-        opacity: .7;
+        opacity: .8;
 
         svg {
           fill: #808080;
-
         }
       }
     }
@@ -59,7 +58,7 @@
 
       .app-sidebar__list__item__inner {
         height: 38px;
-        padding: 0 15px 0 10px;
+        padding: 0 16px 0 10px;
         border-radius: 8px;
         margin-bottom: 2px;
         outline: none;
@@ -107,6 +106,7 @@
       .app-sidebar__list__item__text {
         @extend .app-row__fill;
         @extend .text-overflow-ellipsis;
+        line-height: 1rem;
         //font-weight: 700;
       }
 

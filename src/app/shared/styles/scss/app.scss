@@ -1,3 +1,6 @@
+@import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
+$carbon--theme: $carbon--theme--g10;
+
 @import 'app.themes.scss';
 @import 'app.typograpy.scss';
 @import 'app.layout.scss';
@@ -28,6 +31,23 @@ body {
 .app-scrollbar-fix {
   .ng-scrollbar {
     height: 100% !important;
+  }
+}
+
+.app-ibm-table-fix {
+  position: relative;
+
+  .bx--data-table--sticky-header {
+    max-height: 100%;
+  }
+
+  .bx--data-table--sticky-header.bx--data-table--short {
+    th {
+      .bx--table-header-label {
+        padding-top: 0;
+      }
+    }
+
   }
 }
 

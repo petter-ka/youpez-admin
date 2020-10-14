@@ -1,7 +1,28 @@
 .app-header {
+  position: relative;
 
+  &.app-header--hero {
+    padding: 40px 40px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(351deg, rgba(255, 255, 255, 0) 0%, rgba(203, 223, 255, 1) 100%);
 
-  &.app-header--default {
-    padding: 15px 15px 0 15px;
+    &:before {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      bottom: 0;
+      left: 10px;
+      content: '';
+      background: url(
+      data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAKklEQVQoU2NkIBIwEqmOgWyFDQwMDCCMAbCZiFUxLqsxFJPtRpyBQH0TAaqHAwtRB8lvAAAAAElFTkSuQmCC
+      ) repeat;
+      opacity: .4;
+    }
+  }
+
+  .app_header__tools {
+    position: absolute;
+    top: 16px;
+    right: 16px;
   }
 }

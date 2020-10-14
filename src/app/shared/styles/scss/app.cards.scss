@@ -1,13 +1,15 @@
 @import "~carbon-components/scss/globals/scss/colors";
 
+$appCardBg: $ui-01;
+
 .app-card-row-holder {
-  padding: 15px 8px;
+  padding: 8px 8px;
 }
 
 .app-card-row {
   background-color: #fff;
-  margin-bottom: 15px;
-  padding: 15px;
+  margin-bottom: 16px;
+  padding: 16px;
   min-height: 100px;
 }
 
@@ -15,18 +17,18 @@
   position: relative;
   display: block;
   min-height: 4rem;
-
-  background-color: #fff;
+  background-color: $appCardBg;
   outline: 2px solid transparent;
   outline-offset: -2px;
-  margin: 7px;
+  margin: 8px;
+  box-shadow: 0 1px 2px 0 rgba(33,33,33,.14), 0 0 1px 0 rgba(0,0,0,.14);
 
   .app-card__header {
     padding: 0.75rem 1rem;
   }
 
   .app-card__content {
-    padding: 15px;
+    padding: 16px;
   }
 
   .app-card__tool {
