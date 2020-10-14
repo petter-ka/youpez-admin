@@ -10,6 +10,7 @@ export class DashboardDefaultComponent implements OnInit {
   public loaded = false
   public chartOptions = {}
   public punchCardOpts = {}
+  public gaugeOpts = {}
 
   public model = {
     header: [
@@ -18,22 +19,22 @@ export class DashboardDefaultComponent implements OnInit {
       {data: "Goals"},
     ],
     data: [
-      [{data: 'Jon Doe'}, {data: 'USA'},{data: 11}],
-      [{data: 'Philip Jones'}, {data: 'Australia'},{data: 9}],
-      [{data: 'Doe Jane'}, {data: 'Canada'},{data: 110}],
-      [{data: 'Buck Jones'}, {data: 'Mexico'},{data: 56}],
-      [{data: 'Jon Doe'}, {data: 'USA'},{data: 11}],
-      [{data: 'Philip Jones'}, {data: 'Australia'},{data: 9}],
-      [{data: 'Doe Jane'}, {data: 'Canada'},{data: 110}],
-      [{data: 'Buck Jones'}, {data: 'Mexico'},{data: 56}],
-      [{data: 'Jon Doe'}, {data: 'USA'},{data: 11}],
-      [{data: 'Philip Jones'}, {data: 'Australia'},{data: 9}],
-      [{data: 'Doe Jane'}, {data: 'Canada'},{data: 110}],
-      [{data: 'Buck Jones'}, {data: 'Mexico'},{data: 56}],
-      [{data: 'Jon Doe'}, {data: 'USA'},{data: 11}],
-      [{data: 'Philip Jones'}, {data: 'Australia'},{data: 9}],
-      [{data: 'Doe Jane'}, {data: 'Canada'},{data: 110}],
-      [{data: 'Buck Jones'}, {data: 'Mexico'},{data: 56}]
+      [{data: 'Jon Doe'}, {data: 'USA'}, {data: 11}],
+      [{data: 'Philip Jones'}, {data: 'Australia'}, {data: 9}],
+      [{data: 'Doe Jane'}, {data: 'Canada'}, {data: 110}],
+      [{data: 'Buck Jones'}, {data: 'Mexico'}, {data: 56}],
+      [{data: 'Jon Doe'}, {data: 'USA'}, {data: 11}],
+      [{data: 'Philip Jones'}, {data: 'Australia'}, {data: 9}],
+      [{data: 'Doe Jane'}, {data: 'Canada'}, {data: 110}],
+      [{data: 'Buck Jones'}, {data: 'Mexico'}, {data: 56}],
+      [{data: 'Jon Doe'}, {data: 'USA'}, {data: 11}],
+      [{data: 'Philip Jones'}, {data: 'Australia'}, {data: 9}],
+      [{data: 'Doe Jane'}, {data: 'Canada'}, {data: 110}],
+      [{data: 'Buck Jones'}, {data: 'Mexico'}, {data: 56}],
+      [{data: 'Jon Doe'}, {data: 'USA'}, {data: 11}],
+      [{data: 'Philip Jones'}, {data: 'Australia'}, {data: 9}],
+      [{data: 'Doe Jane'}, {data: 'Canada'}, {data: 110}],
+      [{data: 'Buck Jones'}, {data: 'Mexico'}, {data: 56}]
     ]
   }
 
@@ -98,6 +99,132 @@ export class DashboardDefaultComponent implements OnInit {
     console.log(this.chartOptions)
 
     this.createPunchCard()
+    this.createGauge()
+  }
+
+  createGauge() {
+
+    let data = {
+      value: 52.32,
+      name: '完成率'
+    }
+
+    this.gaugeOpts = {
+      backgroundColor: 'transparent',
+      title: {
+        text: '{num|' + data.value + '}{key| %}',
+        subtext: data.name,
+        x: '49%',
+        y: '46%',
+        textAlign: 'center',
+        textStyle: {
+          rich: {
+            num: {
+              fontWeight: 'bold',
+              color: '#1c1c1c',
+              fontFamily: '微软雅黑',
+              fontSize: 25,
+            },
+            key: {
+              fontWeight: 'bold',
+              color: '#1c1c1c',
+              fontFamily: '微软雅黑',
+              fontSize: 15,
+            }
+          }
+
+        },
+        subtextStyle: {
+          lineHeight: 30,
+          fontSize: 15
+        }
+      },
+      data: [{
+        name: data.name,
+      }],
+      series: [{ // 主圆环
+        name: data.name,
+        type: 'pie',
+        radius: ['70%', '90%'],
+        startAngle: 225,
+        color: [{
+          type: 'linear',
+          x: 1,
+          y: 0,
+          x2: 0,
+          y2: 0,
+          colorStops: [{
+            offset: 0,
+            color: 'rgba(51,227,189,1)' // 0% 处的颜色
+          }, {
+            offset: 1,
+            color: 'rgba(51,227,189,.1)' // 100% 处的颜色
+          }]
+        }, 'transparent'],
+        hoverAnimation: true,
+        legendHoverLink: false,
+        z: 10,
+        labelLine: {
+          normal: {
+            show: false
+          }
+        },
+        data: [{
+          value: 75 * data.value / 100
+        }, {
+          value: 100 - (75 * data.value / 100)
+        }]
+      }, { // 背景圆环
+        name: '',
+        type: 'pie',
+        radius: ['70%', '90%'],
+        silent: true,
+        startAngle: 225,
+        labelLine: {
+          normal: {
+            show: false
+          }
+        },
+        z: 5,
+        data: [{
+          value: 75,
+          itemStyle: {
+            color: '#eee'
+          }
+        }, {
+          value: 25,
+          itemStyle: {
+            color: 'transparent'
+          }
+        }]
+      }, { // 中间圈
+        name: '',
+        z: 5,
+        type: 'pie',
+        cursor: 'default',
+        radius: ['65%', '65%'],
+        startAngle: 225,
+        hoverAnimation: false,
+        legendHoverLink: false,
+        labelLine: {
+          normal: {
+            show: false
+          }
+        },
+        data: [{
+          value: 75,
+          itemStyle: {
+            borderColor: 'rgb(167,166,169)',
+            borderType: 'dashed'
+          }
+        }, {
+          value: 25,
+          itemStyle: {
+            color: 'transparent'
+          }
+        }]
+      }]
+    }
   }
 
   createPunchCard() {

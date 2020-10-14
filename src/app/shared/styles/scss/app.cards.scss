@@ -21,7 +21,7 @@ $appCardBg: $ui-01;
   outline: 2px solid transparent;
   outline-offset: -2px;
   margin: 8px;
-  box-shadow: 0 1px 2px 0 rgba(33,33,33,.14), 0 0 1px 0 rgba(0,0,0,.14);
+ // box-shadow: 0 1px 2px 0 rgba(33, 33, 33, .14), 0 0 1px 0 rgba(0, 0, 0, .14);
 
   .app-card__header {
     padding: 0.75rem 1rem;
@@ -30,6 +30,20 @@ $appCardBg: $ui-01;
   .app-card__content {
     padding: 16px;
   }
+
+  .app-card__blocks {
+    border-top: 1px solid #e0e0e0;
+
+    .app-card__block {
+      padding: 1rem;
+      border-right: 1px solid #e0e0e0;
+
+      &:last-child {
+        border-right-color: transparent;
+      }
+    }
+  }
+
 
   .app-card__tool {
     position: absolute;

@@ -21,6 +21,7 @@ import 'echarts/lib/chart/line'
 import 'echarts/lib/chart/bar'
 import 'echarts/lib/chart/pie'
 import 'echarts/lib/chart/scatter'
+import 'echarts/lib/chart/gauge'
 
 
 function isChanged(param) {

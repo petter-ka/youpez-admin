@@ -208,7 +208,7 @@
               </div>
               <div class="app-list app-list--hover app-list--select">
                 <div class="app-list__item">
-                  <div class="app-list__item__prefix">
+                  <div class="app-list__item__prefix w-8 text-center">
                     <app-ibm-icon iconName="arrowDown" iconSize="16"></app-ibm-icon>
                   </div>
                   <div class="app-list__item__content">
@@ -393,7 +393,7 @@
                   </div>
                 </div>
               </div>
-              <div class="app-ibm-table-fix" style="height:270px;">
+              <div class="app-ibm-table-fix" style="height:260px;">
                 <app-table size="sh" stickyHeader="true"></app-table>
               </div>
             </div>
@@ -401,7 +401,68 @@
         </div>
       </div>
 
-      <ibm-tile>aysxdsa</ibm-tile>
+      <div fxFlex="75%">
+        <div class="app-card">
+          <div class="app-card__header">
+            <div class="app-expressive-heading-02">Kubernetes cluster</div>
+            <div class="app-label-01">Cloud environment</div>
+          </div>
+
+          <div fxLayout="row wrap" class="app-card__blocks">
+            <div fxFlex="33.33%" class="app-card__block">
+              <div class="flex justify-between">
+                <div class="app-productive-heading-03">Node #1</div>
+                <span>lofa</span>
+              </div>
+
+              <div class="app-label-01">region: EU</div>
+
+              <div class="mt-5 mb-1">
+                <span class="app-productive-heading-05 mr-2">2,333</span>
+                <span class="app-productive-heading-02">users</span>
+              </div>
+
+              <div class="app-productive-heading-01 mb-2">Workload</div>
+
+              <app-echarts [options]="gaugeOpts" class="app-echarts-component" style="height: 240px;"></app-echarts>
+
+              <div class="">
+                <div fxLayout="row wrap" class="text-center">
+                  <div fxFlex="50%">
+                    <div class="app-label-01">Volume</div>
+                    <div class="app-productive-heading-03">2.37 TB</div>
+                    <div class="app-productive-heading-02">29%</div>
+                  </div>
+                  <div fxFlex="50%">
+                    <div class="app-label-01">Volume</div>
+                    <div class="app-productive-heading-03">2.37 TB</div>
+                    <div class="app-productive-heading-02">29%</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-4">
+                <button ibmButton="tertiary" size="sm">
+                  SSH
+                  <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+                </button>
+              </div>
+            </div>
+
+            <div fxFlex="33.33%" class="app-card__block">
+              dasdsadsaasd
+            </div>
+
+            <div fxFlex="33.33%" class="app-card__block">
+              dasdsadsaasd
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
     </div>
   </ng-scrollbar>
 </div>

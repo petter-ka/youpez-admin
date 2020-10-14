@@ -1,16 +1,17 @@
 .app-list {
   position: relative;
+  overflow: hidden;
 
   .app-list__item {
     position: relative;
     @extend .app-row;
     @extend .app-row--center;
-    padding-left: 40px;
+    /*padding-left: 40px;*/
    //min-height: 2.5rem;
     .app-list__item__prefix {
-      position: absolute;
+      /*position: absolute;
       top: 13px;
-      left: 13px;
+      left: 13px;*/
     }
 
 
@@ -18,12 +19,14 @@
     .app-list__item__content {
       padding: 0.75rem 0;
       position: relative;
+      @extend .app-row;
+      @extend .app-row--center;
       @extend .app-row__fill;
 
       &:before {
         position: absolute;
         bottom: 0;
-        right: 0;
+        right: -1000px;
         left: 0;
         content: '';
         height: 1px;
