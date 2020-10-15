@@ -1,13 +1,10 @@
-@import "~carbon-components/scss/globals/scss/colors";
-
-$appCardBg: $ui-01;
+@import 'app.variables';
 
 .app-card-row-holder {
   padding: 8px 8px;
 }
 
 .app-card-row {
-  background-color: #fff;
   margin-bottom: 16px;
   padding: 16px;
   min-height: 100px;
@@ -21,7 +18,7 @@ $appCardBg: $ui-01;
   outline: 2px solid transparent;
   outline-offset: -2px;
   margin: 8px;
- // box-shadow: 0 1px 2px 0 rgba(33, 33, 33, .14), 0 0 1px 0 rgba(0, 0, 0, .14);
+  //box-shadow: 0 1px 2px 0 rgba(33, 33, 33, .14), 0 0 1px 0 rgba(0, 0, 0, .14);
 
   .app-card__header {
     padding: 0.75rem 1rem;
@@ -32,11 +29,11 @@ $appCardBg: $ui-01;
   }
 
   .app-card__blocks {
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid $appBorderColor;
 
     .app-card__block {
       padding: 1rem;
-      border-right: 1px solid #e0e0e0;
+      border-right: 1px solid $appBorderColor;
 
       &:last-child {
         border-right-color: transparent;
@@ -65,15 +62,15 @@ $appCardBg: $ui-01;
       border-radius: 100%;
 
       &.app-card__tool__sign--danger {
-        background-color: $support-01;
+        background-color: $appColorDanger;
       }
 
       &.app-card__tool__sign--success {
-        background-color: $support-02;
+        background-color: $appColorSuccess;
       }
 
       &.app-card__tool__sign--warning {
-        background-color: $support-03;
+        background-color: $appColorWarning;
       }
     }
   }

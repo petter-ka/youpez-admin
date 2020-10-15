@@ -9,9 +9,13 @@ export class DashboardDefaultComponent implements OnInit {
 
   public loaded = false
   public chartOptions = {}
+  public chartOptions2 = {}
+  public chartOptions3 = {}
+  public chartOptions4 = {}
   public punchCardOpts = {}
   public gaugeOpts = {}
-
+  public themeRiverOpts = {}
+  public realtimeOpts = {}
   public model = {
     header: [
       {data: "Name"},
@@ -37,7 +41,6 @@ export class DashboardDefaultComponent implements OnInit {
       [{data: 'Buck Jones'}, {data: 'Mexico'}, {data: 56}]
     ]
   }
-
   public comboboxItems = [
     {
       content: "one"
@@ -52,31 +55,161 @@ export class DashboardDefaultComponent implements OnInit {
       content: "four"
     }
   ]
+  public subscriptions = [
+    {
+      month: 'january',
+      count: '-111,333',
+      up: false,
+    },
+    {
+      month: 'february',
+      count: '233,123',
+      up: true,
+    },
+    {
+      month: 'march',
+      count: '543,854',
+      up: true,
+    },
+    {
+      month: 'april',
+      count: '-99,112',
+      up: false,
+    },
+    {
+      month: 'may',
+      count: '678,112',
+      up: true,
+    },
+    {
+      month: 'june',
+      count: '891,451',
+      up: true,
+    }
+  ]
 
   constructor() {
   }
 
   ngOnInit(): void {
+    this.createHistogram()
+    this.createPunchCard()
+    this.createGauge()
+    this.createThemeRiver()
+    this.createRealTime()
+  }
+
+  createHistogram() {
+    const getSeries = (data) => {
+      return data.map((points, index) => {
+        return {
+          data: points,
+          stack: 'stackGroup',
+          type: 'bar',
+          barCategoryGap: 0.1,
+          showBackground: true,
+          backgroundStyle: {
+            color: 'transparent'
+          },
+          itemStyle: {
+            color: index % 2 === 0 ? 'rgb(77, 137, 249)' : 'rgba(198,213,255,0.7)'
+          }
+        }
+      })
+    }
+
+    const getXAxis = (data) => {
+      return [...Array(data[0].length).keys()]
+    }
+
     const data = [
       [10, 20, 30, 50, 55, 60, 23],
       [15, 40, 50, 20, 45, 20, 12],
     ]
-    const series = data.map((points, index) => {
-      return {
-        data: points,
-        stack: 'stackGroup',
-        type: 'bar',
-        barCategoryGap: 0.1,
-        showBackground: true,
-        backgroundStyle: {
-          color: 'transparent'
-        },
-        itemStyle: {
-          color: index % 2 === 0 ? 'rgb(77, 137, 249)' : 'rgba(198,213,255,0.7)'
+
+    const data2 = [
+      [6, 67, 30, 78, 12, 78, 60],
+      [12, 12, 10, 33, 32, 40, 20],
+    ]
+
+    const data3 = [820, 932, 901, 934, 1290, 1330, 1320]
+
+    const data4 = [540, 932, 901, 934, 500, 560, 770]
+
+    this.chartOptions3 = {
+      animation: false,
+      grid: {
+        top: 0,
+        right: -18,
+        bottom: 0,
+        left: -18,
+      },
+      xAxis: {
+        type: 'category',
+        data: getXAxis(data),
+        show: false,
+      },
+      yAxis: {
+        type: 'value',
+        show: false,
+      },
+      series: [
+        {
+          data: data3,
+          type: 'line',
+          symbol: 'none',
+          smooth: true,
+          smoothMonotone: 'x',
+          backgroundStyle: {
+            color: 'transparent'
+          },
+          itemStyle: {
+            color: 'rgb(77, 137, 249)'
+          },
+          areaStyle: {
+            color: 'rgba(198,213,255,0.8)'
+          }
         }
-      }
-    })
-    const xAxisCategories = [...Array(data[0].length).keys()] // this is "hack", because this option split the bars
+      ]
+    }
+
+    this.chartOptions4 = {
+      animation: false,
+      grid: {
+        top: 0,
+        right: -18,
+        bottom: 0,
+        left: -18,
+      },
+      xAxis: {
+        type: 'category',
+        data: getXAxis(data),
+        show: false,
+      },
+      yAxis: {
+        type: 'value',
+        show: false,
+      },
+      series: [
+        {
+          data: data4,
+          type: 'line',
+          symbol: 'none',
+          smooth: true,
+          smoothMonotone: 'x',
+          backgroundStyle: {
+            color: 'transparent'
+          },
+          itemStyle: {
+            color: 'rgb(77, 137, 249)'
+          },
+          areaStyle: {
+            color: 'rgba(198,213,255,0.8)'
+          }
+        }
+      ]
+    }
+
     this.chartOptions = {
       animation: false,
       grid: {
@@ -87,26 +220,144 @@ export class DashboardDefaultComponent implements OnInit {
       },
       xAxis: {
         type: 'category',
-        data: xAxisCategories,
+        data: getXAxis(data),
         show: false,
       },
       yAxis: {
         type: 'value',
         show: false,
       },
-      series: series
+      series: getSeries(data)
     }
-    console.log(this.chartOptions)
 
-    this.createPunchCard()
-    this.createGauge()
+    this.chartOptions2 = {
+      animation: false,
+      grid: {
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+      },
+      xAxis: {
+        type: 'category',
+        data: getXAxis(data2),
+        show: false,
+      },
+      yAxis: {
+        type: 'value',
+        show: false,
+
+      },
+      series: getSeries(data2)
+    }
+  }
+
+  createRealTime() {
+    this.realtimeOpts = {
+      xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        //data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        show: false,
+
+      },
+      grid: {
+        top: 10,
+        left: 10,
+        right: 10,
+        bottom: 3,
+        containLabel: true,
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [{
+        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        type: 'line',
+        areaStyle: {}
+      }]
+    }
+  }
+
+  createThemeRiver() {
+    this.themeRiverOpts = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'line',
+          lineStyle: {
+            color: 'rgba(0,0,0,0.2)',
+            width: 1,
+            type: 'solid'
+          }
+        }
+      },
+      legend: {
+        show: true,
+        data: ['AD-FB', 'AD-TWTR', 'AD-GOOGL']
+      },
+      singleAxis: {
+        top: 50,
+        bottom: 50,
+        axisTick: {},
+        axisLabel: {},
+        type: 'time',
+        axisPointer: {
+          animation: true,
+          label: {
+            show: true
+          }
+        },
+        splitLine: {
+          show: true,
+          lineStyle: {
+            type: 'dashed',
+            opacity: 0.2
+          }
+        }
+      },
+      series: [
+        {
+          type: 'themeRiver',
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 20,
+              shadowColor: 'rgba(0, 0, 0, 0.8)'
+            }
+          },
+          data: [
+            ['2020/12/08', 10, 'AD-FB'], ['2020/12/09', 15, 'AD-FB'], ['2020/12/10', 35, 'AD-FB'],
+            ['2020/12/11', 38, 'AD-FB'], ['2020/12/12', 22, 'AD-FB'], ['2020/12/13', 16, 'AD-FB'],
+            ['2020/12/14', 7, 'AD-FB'], ['2020/12/15', 2, 'AD-FB'], ['2020/12/16', 17, 'AD-FB'],
+            ['2020/12/17', 33, 'AD-FB'], ['2020/12/18', 40, 'AD-FB'], ['2020/12/19', 32, 'AD-FB'],
+            ['2020/12/20', 26, 'AD-FB'], ['2020/12/21', 35, 'AD-FB'], ['2020/12/22', 40, 'AD-FB'],
+            ['2020/12/23', 32, 'AD-FB'], ['2020/12/24', 26, 'AD-FB'], ['2020/12/25', 22, 'AD-FB'],
+            ['2020/12/26', 16, 'AD-FB'], ['2020/12/27', 22, 'AD-FB'], ['2020/12/28', 10, 'AD-FB'],
+            ['2020/12/08', 35, 'AD-TWTR'], ['2020/12/09', 36, 'AD-TWTR'], ['2020/12/10', 37, 'AD-TWTR'],
+            ['2020/12/11', 22, 'AD-TWTR'], ['2020/12/12', 24, 'AD-TWTR'], ['2020/12/13', 26, 'AD-TWTR'],
+            ['2020/12/14', 34, 'AD-TWTR'], ['2020/12/15', 21, 'AD-TWTR'], ['2020/12/16', 18, 'AD-TWTR'],
+            ['2020/12/17', 45, 'AD-TWTR'], ['2020/12/18', 32, 'AD-TWTR'], ['2020/12/19', 35, 'AD-TWTR'],
+            ['2020/12/20', 30, 'AD-TWTR'], ['2020/12/21', 28, 'AD-TWTR'], ['2020/12/22', 27, 'AD-TWTR'],
+            ['2020/12/23', 26, 'AD-TWTR'], ['2020/12/24', 15, 'AD-TWTR'], ['2020/12/25', 30, 'AD-TWTR'],
+            ['2020/12/26', 35, 'AD-TWTR'], ['2020/12/27', 42, 'AD-TWTR'], ['2020/12/28', 42, 'AD-TWTR'],
+            ['2020/12/08', 10, 'AD-GOOGL'], ['2020/12/09', 15, 'AD-GOOGL'], ['2020/12/10', 35, 'AD-GOOGL'],
+            ['2020/12/11', 38, 'AD-GOOGL'], ['2020/12/12', 22, 'AD-GOOGL'], ['2020/12/13', 16, 'AD-GOOGL'],
+            ['2020/12/14', 7, 'AD-GOOGL'], ['2020/12/15', 2, 'AD-GOOGL'], ['2020/12/16', 17, 'AD-GOOGL'],
+            ['2020/12/17', 33, 'AD-GOOGL'], ['2020/12/18', 4, 'AD-GOOGL'], ['2020/12/19', 32, 'AD-GOOGL'],
+            ['2020/12/20', 26, 'AD-GOOGL'], ['2020/12/21', 35, 'AD-GOOGL'], ['2020/12/22', 40, 'AD-GOOGL'],
+            ['2020/12/23', 32, 'AD-GOOGL'], ['2020/12/24', 26, 'AD-GOOGL'], ['2020/12/25', 22, 'AD-GOOGL'],
+            ['2020/12/26', 16, 'AD-GOOGL'], ['2020/12/27', 22, 'AD-GOOGL'], ['2020/12/28', 10, 'AD-GOOGL']
+          ]
+        }
+      ]
+    }
   }
 
   createGauge() {
 
     let data = {
       value: 52.32,
-      name: '完成率'
+      name: 'EU'
     }
 
     this.gaugeOpts = {
@@ -243,12 +494,8 @@ export class DashboardDefaultComponent implements OnInit {
 
     this.punchCardOpts = {
       title: {
-        text: 'Punch Card of Github',
-        link: 'https://github.com/pissang/echarts-next/graphs/punch-card'
-      },
-      legend: {
-        data: ['Punch Card'],
-        left: 'right'
+        text: '',
+        link: ''
       },
       tooltip: {
         position: 'top',

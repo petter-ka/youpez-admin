@@ -22,7 +22,9 @@ import 'echarts/lib/chart/bar'
 import 'echarts/lib/chart/pie'
 import 'echarts/lib/chart/scatter'
 import 'echarts/lib/chart/gauge'
-
+import 'echarts/lib/chart/themeRiver'
+import 'echarts/lib/component/legend'
+import 'echarts/lib/component/title'
 
 function isChanged(param) {
   if (param && param.previousValue) {

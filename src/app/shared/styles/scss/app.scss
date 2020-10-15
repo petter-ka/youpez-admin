@@ -1,6 +1,7 @@
 @import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
 $carbon--theme: $carbon--theme--g10;
 
+@import 'app.utils.scss';
 @import 'app.themes.scss';
 @import 'app.typograpy.scss';
 @import 'app.layout.scss';

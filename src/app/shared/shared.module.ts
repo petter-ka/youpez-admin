@@ -24,6 +24,7 @@ import {
   OverflowMenuVerticalModule,
   CloudDataOpsModule,
   VirtualPrivateCloudAltModule,
+  CheckmarkOutlineModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -108,6 +109,7 @@ const CarbonIconModules = [
   OverflowMenuVerticalModule,
   CloudDataOpsModule,
   VirtualPrivateCloudAltModule,
+  CheckmarkOutlineModule,
 ]
 
 const Components = [

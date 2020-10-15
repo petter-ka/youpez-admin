@@ -1,0 +1,181 @@
+@import 'app.variables';
+
+.app-color-default {
+
+}
+
+.app-color-primary {
+  color: $appColorPrimary;
+
+  svg {
+    fill: $appColorPrimary;
+  }
+}
+
+.app-bg-primary {
+  background-color: $appColorPrimary;
+
+  svg {
+    fill: $appColorPrimary;
+  }
+}
+
+.app-color-secondary {
+  color: $appColorSecondary;
+
+  svg {
+    fill: $appColorSecondary;
+  }
+}
+
+.app-bg-secondary {
+  background-color: $appColorSecondary;
+
+  svg {
+    fill: $appColorSecondary;
+  }
+}
+
+.app-color-success {
+  color: $appColorSuccess;
+
+  svg {
+    fill: $appColorSuccess;
+  }
+}
+
+.app-bg-success {
+  background-color: $appColorSuccess;
+
+  svg {
+    fill: $appColorSuccess;
+  }
+}
+
+.app-color-danger {
+  color: $appColorDanger;
+
+  svg {
+    fill: $appColorDanger;
+  }
+}
+
+.app-bg-danger {
+  background-color: $appColorDanger;
+
+  svg {
+    fill: $appColorDanger;
+  }
+}
+
+.app-color-warning {
+  color: $appColorWarning;
+
+  svg {
+    fill: $appColorWarning;
+  }
+}
+
+.app-bg-warning {
+  background-color: $appColorWarning;
+
+  svg {
+    fill: $appColorWarning;
+  }
+}
+
+.app-color-info {
+  color: $appColorInfo;
+
+  svg {
+    fill: $appColorInfo;
+  }
+}
+
+.app-bg-info {
+  background-color: $appColorInfo;
+
+  svg {
+    fill: $appColorInfo;
+  }
+}
+
+.app-color-muted {
+  opacity: .7;
+}
+
+.app-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &.app-row--center {
+    align-items: center;
+  }
+
+  &.app-row--end {
+    align-items: flex-end;
+  }
+
+  &.app-row--x-center {
+    justify-content: center;
+  }
+
+  &.app-row--x-end {
+    justify-content: flex-end;
+  }
+}
+
+.app-symbol {
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 0.42rem;
+
+  &.app-symbol--default {
+    background-color: #eee;
+  }
+
+  .app-symbol__label {
+    @extend .app-row;
+    @extend .app-row--center;
+    @extend .app-row--x-center;
+  }
+}
+
+.app-row__fill {
+  flex: 1;
+}
+
+.text-overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto;
+  overflow: hidden;
+}
+
+.app-progress {
+  height: 4px;
+  background-color: rgba(63, 63, 63, .15);
+  background-image: none;
+  box-shadow: none;
+  border-radius: 0;
+
+  &.app-progress--small {
+    height: 3px;
+  }
+
+  .app-progress__bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: none;
+    border-radius: 0;
+    background-image: none;
+    height: 100%;
+    transition: all 1000ms cubic-bezier(.785, .135, .15, .86);
+  }
+}
