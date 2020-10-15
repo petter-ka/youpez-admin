@@ -43,6 +43,14 @@
     <svg ibmIconArrowDown [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'arrowLeft'">
+    <svg ibmIconArrowLeft [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'arrowRight'">
+    <svg ibmIconArrowRight [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchCase="'cloudDataOps'">
     <svg ibmIconCloudDataOps [size]="iconSize"></svg>
   </ng-container>
@@ -53,6 +61,14 @@
 
   <ng-container *ngSwitchCase="'checkMarkOutline'">
     <svg ibmIconCheckmarkOutline [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'caretRight'">
+    <svg ibmIconCaretRight [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'caretLeft'">
+    <svg ibmIconCaretLeft [size]="iconSize"></svg>
   </ng-container>
 
   <ng-container *ngSwitchDefault>!!!</ng-container>

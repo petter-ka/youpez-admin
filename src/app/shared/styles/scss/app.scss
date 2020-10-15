@@ -37,6 +37,7 @@ body {
 
 .app-ibm-table-fix {
   position: relative;
+  overflow: hidden;
 
   .bx--data-table--sticky-header {
     max-height: 100%;

@@ -8,6 +8,7 @@
     position: relative;
     @extend .app-row;
     @extend .app-row--center;
+
     .app-list__item__prefix {
 
     }
@@ -29,14 +30,17 @@
         background-color: $appBorderColor;
       }
     }
+
+    &:last-child {
+      .app-list__item__content:before {
+        display: none;
+      }
+    }
   }
 
   &.app-list--hover {
-
-    .app-list__item {
-      &:hover {
-        background-color: $appHoverBg;
-      }
+    .app-list__item:hover {
+      background-color: $appHoverBg;
     }
   }
 

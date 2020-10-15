@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 
+import * as echarts from 'echarts'
+
 @Component({
   selector: 'app-dashboard-default',
   templateUrl: './dashboard-default.component.html',
@@ -128,25 +130,26 @@ export class DashboardDefaultComponent implements OnInit {
     ]
 
     const data2 = [
-      [6, 67, 30, 78, 12, 78, 60],
+      [6, 67, 30, 78, 99, 78, 60],
       [12, 12, 10, 33, 32, 40, 20],
     ]
 
-    const data3 = [820, 932, 901, 934, 1290, 1330, 1320]
+    const data3 = [820, 1100, 600, 400]
 
-    const data4 = [540, 932, 901, 934, 500, 560, 770]
+    const data4 = [300, 790, 560, 1200]
 
     this.chartOptions3 = {
       animation: false,
       grid: {
         top: 0,
-        right: -18,
+        right: 0,
         bottom: 0,
-        left: -18,
+        left: 0,
+        containLabel: false,
       },
       xAxis: {
         type: 'category',
-        data: getXAxis(data),
+        boundaryGap: false,
         show: false,
       },
       yAxis: {
@@ -164,10 +167,10 @@ export class DashboardDefaultComponent implements OnInit {
             color: 'transparent'
           },
           itemStyle: {
-            color: 'rgb(77, 137, 249)'
+            color: 'rgb(249,23,6)'
           },
           areaStyle: {
-            color: 'rgba(198,213,255,0.8)'
+            color: 'rgba(255,160,166,0.8)'
           }
         }
       ]
@@ -177,14 +180,14 @@ export class DashboardDefaultComponent implements OnInit {
       animation: false,
       grid: {
         top: 0,
-        right: -18,
+        right: 0,
         bottom: 0,
-        left: -18,
+        left: 0,
       },
       xAxis: {
         type: 'category',
-        data: getXAxis(data),
         show: false,
+        boundaryGap: false,
       },
       yAxis: {
         type: 'value',
@@ -201,10 +204,10 @@ export class DashboardDefaultComponent implements OnInit {
             color: 'transparent'
           },
           itemStyle: {
-            color: 'rgb(77, 137, 249)'
+            color: 'rgb(8,180,0)'
           },
           areaStyle: {
-            color: 'rgba(198,213,255,0.8)'
+            color: 'rgba(138,255,191,0.8)'
           }
         }
       ]
@@ -253,29 +256,90 @@ export class DashboardDefaultComponent implements OnInit {
   }
 
   createRealTime() {
-    this.realtimeOpts = {
-      xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        //data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-        show: false,
+    var dataAxis = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',];
+    let data = [220, 182, 191, 234, 290, 330, 310, 123, 442, 321,]
+    let yMax = 500
+    let dataShadow = []
 
-      },
+    for (let i = 0; i < data.length; i++) {
+      dataShadow.push(yMax)
+    }
+
+    this.realtimeOpts = {
       grid: {
         top: 10,
-        left: 10,
-        right: 10,
+        right: 0,
         bottom: 3,
+        left: 0,
         containLabel: true,
       },
-      yAxis: {
-        type: 'value'
+      xAxis: {
+        data: dataAxis,
+        axisLabel: {
+          inside: true,
+          textStyle: {
+            color: '#fff'
+          }
+        },
+        axisTick: {
+          show: false
+        },
+        axisLine: {
+          show: false
+        },
+        z: 10
       },
-      series: [{
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
-        type: 'line',
-        areaStyle: {}
-      }]
+      yAxis: {
+        axisLine: {
+          show: false
+        },
+        axisTick: {
+          show: false
+        },
+        axisLabel: {
+          textStyle: {
+            color: '#999'
+          }
+        }
+      },
+      series: [
+        { // For shadow
+          type: 'bar',
+          itemStyle: {
+            color: 'rgba(0,0,0,0.05)'
+          },
+          barGap: '-100%',
+          barCategoryGap: '40%',
+          data: dataShadow,
+          animation: false
+        },
+        {
+          type: 'bar',
+          itemStyle: {
+            color: new echarts.graphic.LinearGradient(
+              0, 0, 0, 1,
+              [
+                {offset: 0, color: '#83bff6'},
+                {offset: 0.5, color: '#188df0'},
+                {offset: 1, color: '#188df0'}
+              ]
+            )
+          },
+          emphasis: {
+            itemStyle: {
+              color: new echarts.graphic.LinearGradient(
+                0, 0, 0, 1,
+                [
+                  {offset: 0, color: '#2378f7'},
+                  {offset: 0.7, color: '#2378f7'},
+                  {offset: 1, color: '#83bff6'}
+                ]
+              )
+            }
+          },
+          data: data
+        }
+      ]
     }
   }
 

@@ -56,9 +56,9 @@
 
 
     <div fxLayout="row wrap" class="app-card-row-holder">
-      <div fxFlex="60%">
+      <div fxFlex="100%" fxFlex.gt-lg="60%">
         <div fxFlex fxLayout="row wrap">
-          <div fxFlex="25%">
+          <div fxFlex="50%" fxFlex.gt-md="25%">
             <div class="app-card">
               <div class="app-card__header">
                 <div class="app-expressive-heading-03 font-extrabold mb-8">Reviews</div>
@@ -70,7 +70,7 @@
               </div>
             </div>
           </div>
-          <div fxFlex="25%">
+          <div fxFlex="50%" fxFlex.gt-md="25%">
             <div class="app-card">
               <div class="app-card__header">
                 <div class="app-expressive-heading-03 font-extrabold mb-8">Campaigns</div>
@@ -82,7 +82,7 @@
               </div>
             </div>
           </div>
-          <div fxFlex="25%">
+          <div fxFlex="50%" fxFlex.gt-md="25%">
             <div class="app-card">
               <div class="app-card__header">
                 <div class="app-expressive-heading-03 font-extrabold mb-8">Users</div>
@@ -94,7 +94,7 @@
               </div>
             </div>
           </div>
-          <div fxFlex="25">
+          <div fxFlex="50%" fxFlex.gt-md="25%">
             <div class="app-card">
               <div class="app-card__header">
                 <div class="app-expressive-heading-03 font-extrabold mb-8">Downloads</div>
@@ -107,7 +107,7 @@
             </div>
           </div>
 
-          <div fxFlex="25%">
+          <div fxFlex="50%" fxFlex.gt-md="25%">
             <div class="app-card">
               <div class="app-card__tool app-card__tool--sign">
                 <div class="app-card__tool__sign app-card__tool__sign--danger"></div>
@@ -119,7 +119,7 @@
               <app-echarts [options]="chartOptions3" class="app-echarts-component" style="height: 100px;"></app-echarts>
             </div>
           </div>
-          <div fxFlex="25%">
+          <div fxFlex="50%" fxFlex.gt-md="25%">
             <div class="app-card">
               <div class="app-card__tool app-card__tool--sign">
                 <div class="app-card__tool__sign app-card__tool__sign--success"></div>
@@ -131,19 +131,7 @@
               <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
             </div>
           </div>
-          <div fxFlex="25%">
-            <div class="app-card">
-              <div class="app-card__tool app-card__tool--sign">
-                <div class="app-card__tool__sign app-card__tool__sign--success"></div>
-              </div>
-              <div class="app-card__header">
-                <div class="app-expressive-heading-02">Profit</div>
-                <div class="app-label-01">Last month</div>
-              </div>
-              <app-echarts [options]="chartOptions2" class="app-echarts-component" style="height: 100px;"></app-echarts>
-            </div>
-          </div>
-          <div fxFlex="25">
+          <div fxFlex="50%" fxFlex.gt-md="25%">
             <div class="app-card">
               <div class="app-card__tool app-card__tool--sign">
                 <div class="app-card__tool__sign app-card__tool__sign--warning"></div>
@@ -155,10 +143,22 @@
               <app-echarts [options]="chartOptions4" class="app-echarts-component" style="height: 100px;"></app-echarts>
             </div>
           </div>
+          <div fxFlex="50%" fxFlex.gt-md="25%">
+            <div class="app-card">
+              <div class="app-card__tool app-card__tool--sign">
+                <div class="app-card__tool__sign app-card__tool__sign--success"></div>
+              </div>
+              <div class="app-card__header">
+                <div class="app-expressive-heading-02">Profit</div>
+                <div class="app-label-01">Last month</div>
+              </div>
+              <app-echarts [options]="chartOptions2" class="app-echarts-component" style="height: 100px;"></app-echarts>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div fxFlex="40%">
+      <div fxFlex="100%" fxFlex.gt-lg="40%">
         <div class="app-card" fxFlex>
           <div class="app-card__tool">
             <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
@@ -180,7 +180,7 @@
 
       <div fxFlex="100%">
         <div fxLayout="row wrap">
-          <div fxFlex="25%">
+          <div fxFlex="100%" fxFlex.gt-md="50%" fxFlex.gt-lg="25%">
             <div class="app-card">
               <div class="app-card__header">
                 <div class="app-row app-row--center">
@@ -199,14 +199,19 @@
                 <ng-container *ngFor="let sub of subscriptions">
                   <div class="app-list__item" [ngClass]="{'app-color-success':sub.up,'app-color-danger':!sub.up}">
                     <div class="app-list__item__prefix w-10 text-center">
-                      <app-ibm-icon iconName="arrowDown" iconSize="16"></app-ibm-icon>
+                      <ng-container *ngIf="sub.up">
+                        <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+                      </ng-container>
+                      <ng-container *ngIf="!sub.up">
+                        <app-ibm-icon iconName="arrowDown" iconSize="16"></app-ibm-icon>
+                      </ng-container>
                     </div>
                     <div class="app-list__item__content">
                       {{sub.month}}
                     </div>
                     <div class="app-expressive-heading-02 mr-1">{{sub.count}}$</div>
                     <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
-                      <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+                      <svg class="bx--btn__icon" ibmIconArrowRight size="32"></svg>
                     </button>
                   </div>
                 </ng-container>
@@ -214,7 +219,7 @@
             </div>
           </div>
 
-          <div fxFlex="25%">
+          <div fxFlex="100%" fxFlex.gt-md="50%" fxFlex.gt-lg="25%">
             <div class="app-card" fxFlex>
               <div class="app-card__header">
                 <div class="app-row app-row--center">
@@ -272,7 +277,7 @@
             </div>
           </div>
 
-          <div fxFlex="50%">
+          <div fxFlex="100%" fxFlex.gt-lg="50%">
             <div class="app-card" fxFlex>
               <div class="app-card__tool">
                 <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
@@ -298,7 +303,7 @@
         </div>
       </div>
 
-      <div fxFlex="70%">
+      <div fxFlex="100%" fxFlex.gt-md="70%">
         <div class="app-card">
           <div class="app-card__tool">
             <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
@@ -323,7 +328,7 @@
           </div>
 
           <div fxLayout="row wrap" class="app-card__blocks">
-            <div fxFlex="33.33%" class="app-card__block">
+            <div fxFlex="100%" fxFlex.gt-md="33.33%" class="app-card__block">
               <div class="flex justify-between">
                 <div>
                   <div class="app-productive-heading-03">Node #1</div>
@@ -346,27 +351,27 @@
                 <div fxLayout="row wrap" class="text-center">
                   <div fxFlex="50%">
                     <div class="app-label-01">Volume</div>
-                    <div class="app-productive-heading-03">2.37 TB</div>
-                    <div class="app-productive-heading-02">29%</div>
+                    <div class="app-productive-heading-03">6.36 TB</div>
+                    <div class="app-productive-heading-02">19%</div>
                   </div>
                   <div fxFlex="50%">
                     <div class="app-label-01">Volume</div>
-                    <div class="app-productive-heading-03">2.37 TB</div>
-                    <div class="app-productive-heading-02">29%</div>
+                    <div class="app-productive-heading-03">5.17 TB</div>
+                    <div class="app-productive-heading-02">59%</div>
                   </div>
                 </div>
               </div>
               <div class="text-center mt-4">
                 <button ibmButton="tertiary" size="sm">
                   SSH
-                  <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+                  <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
                 </button>
               </div>
             </div>
-            <div fxFlex="33.33%" class="app-card__block">
+            <div fxFlex="100%" fxFlex.gt-md="33.33%" class="app-card__block">
               <div class="flex justify-between">
                 <div>
-                  <div class="app-productive-heading-03">Node #1</div>
+                  <div class="app-productive-heading-03">Node #2</div>
                   <div class="app-label-01">region: EU</div>
                 </div>
                 <div class="app-row app-row--center app-color-success">
@@ -377,7 +382,7 @@
               </div>
 
               <div class="mt-5 mb-1">
-                <span class="app-productive-heading-05 mr-2">2,333</span>
+                <span class="app-productive-heading-05 mr-2">1,133</span>
                 <span class="app-productive-heading-02">users</span>
               </div>
               <div class="app-productive-heading-01 mb-2">Workload</div>
@@ -386,27 +391,27 @@
                 <div fxLayout="row wrap" class="text-center">
                   <div fxFlex="50%">
                     <div class="app-label-01">Volume</div>
-                    <div class="app-productive-heading-03">2.37 TB</div>
-                    <div class="app-productive-heading-02">29%</div>
+                    <div class="app-productive-heading-03">9.37 TB</div>
+                    <div class="app-productive-heading-02">31%</div>
                   </div>
                   <div fxFlex="50%">
                     <div class="app-label-01">Volume</div>
-                    <div class="app-productive-heading-03">2.37 TB</div>
-                    <div class="app-productive-heading-02">29%</div>
+                    <div class="app-productive-heading-03">0.37 TB</div>
+                    <div class="app-productive-heading-02">11%</div>
                   </div>
                 </div>
               </div>
               <div class="text-center mt-4">
                 <button ibmButton="tertiary" size="sm">
                   SSH
-                  <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+                  <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
                 </button>
               </div>
             </div>
-            <div fxFlex="33.33%" class="app-card__block">
+            <div fxFlex="100%" fxFlex.gt-md="33.33%" class="app-card__block">
               <div class="flex justify-between">
                 <div>
-                  <div class="app-productive-heading-03">Node #1</div>
+                  <div class="app-productive-heading-03">Node #3</div>
                   <div class="app-label-01">region: EU</div>
                 </div>
                 <div class="app-row app-row--center app-color-success">
@@ -417,7 +422,7 @@
               </div>
 
               <div class="mt-5 mb-1">
-                <span class="app-productive-heading-05 mr-2">2,333</span>
+                <span class="app-productive-heading-05 mr-2">4,105</span>
                 <span class="app-productive-heading-02">users</span>
               </div>
               <div class="app-productive-heading-01 mb-2">Workload</div>
@@ -427,19 +432,19 @@
                   <div fxFlex="50%">
                     <div class="app-label-01">Volume</div>
                     <div class="app-productive-heading-03">2.37 TB</div>
-                    <div class="app-productive-heading-02">29%</div>
+                    <div class="app-productive-heading-02">67%</div>
                   </div>
                   <div fxFlex="50%">
                     <div class="app-label-01">Volume</div>
-                    <div class="app-productive-heading-03">2.37 TB</div>
-                    <div class="app-productive-heading-02">29%</div>
+                    <div class="app-productive-heading-03">1.17 TB</div>
+                    <div class="app-productive-heading-02">55%</div>
                   </div>
                 </div>
               </div>
               <div class="text-center mt-4">
                 <button ibmButton="tertiary" size="sm">
                   SSH
-                  <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+                  <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
                 </button>
               </div>
             </div>
@@ -447,7 +452,7 @@
         </div>
       </div>
 
-      <div fxFlex="30%" fxLayout="column">
+      <div fxFlex="100%" fxFlex.gt-md="30%" fxLayout="column">
 
         <div class="app-card">
           <div class="">
