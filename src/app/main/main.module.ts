@@ -8,12 +8,14 @@ import {MainRoutingModule} from './main-routing.module'
 import {TypographyComponent} from './typography/typography.component'
 import {WidgetsGeneralComponent} from './widgets/widgets-general/widgets-general.component'
 import {DashboardDefaultComponent} from './dashboard/dashboard-default/dashboard-default.component'
+import {DashboardAnalyticsComponent} from './dashboard/dashboard-analytics/dashboard-analytics.component'
 
 @NgModule({
   declarations: [
     TypographyComponent,
     WidgetsGeneralComponent,
-    DashboardDefaultComponent
+    DashboardDefaultComponent,
+    DashboardAnalyticsComponent
   ],
   imports: [
     CommonModule,

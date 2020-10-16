@@ -4,6 +4,7 @@ import {TypographyComponent} from "./typography/typography.component"
 import {LayoutComponent} from "../shared/layout/layout.component"
 import {WidgetsGeneralComponent} from "./widgets/widgets-general/widgets-general.component"
 import {DashboardDefaultComponent} from "./dashboard/dashboard-default/dashboard-default.component"
+import {DashboardAnalyticsComponent} from "./dashboard/dashboard-analytics/dashboard-analytics.component"
 
 const routes: Routes = [
   {
@@ -16,8 +17,12 @@ const routes: Routes = [
           {
             path: 'default',
             component: DashboardDefaultComponent,
-          }
-        ]
+          },
+          {
+            path: 'analytics',
+            component: DashboardAnalyticsComponent,
+          },
+        ],
       },
       {
         path: 'typography',

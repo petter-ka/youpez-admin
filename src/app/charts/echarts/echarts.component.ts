@@ -217,7 +217,7 @@ export class EchartsComponent implements OnInit, OnDestroy, OnChanges, DoCheck, 
       }
     }
 
-    return this.ngZone.runOutsideAngular(() => init(dom, this.theme ? this.theme : 'amDefault', this.initOpts))
+    return this.ngZone.runOutsideAngular(() => init(dom, this.theme ? this.theme : 'default', this.initOpts))
   }
 
   private initChart() {

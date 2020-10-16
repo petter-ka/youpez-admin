@@ -564,12 +564,12 @@ export class DashboardDefaultComponent implements OnInit {
       tooltip: {
         position: 'top',
         formatter: function (params) {
-          return params.value[2] + ' commits in ' + hours[params.value[0]] + ' of ' + days[params.value[1]]
+          return params.value[2] + ' users in ' + hours[params.value[0]] + ' of ' + days[params.value[1]]
         }
       },
       grid: {
         left: 2,
-        bottom: 10,
+        bottom: 0,
         right: 20,
         top: 0,
         containLabel: true
@@ -601,7 +601,7 @@ export class DashboardDefaultComponent implements OnInit {
         splitLine: {
           show: true,
           lineStyle: {
-            color: '#efefef',
+            color: '#cdcdcd',
             type: 'dashed'
           }
         },

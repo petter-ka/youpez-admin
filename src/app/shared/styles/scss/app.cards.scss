@@ -22,6 +22,10 @@
 
   .app-card__header {
     padding: 0.75rem 1rem;
+
+    &.app-card__header--border {
+      border-bottom: 1px solid $appBorderColor;
+    }
   }
 
   .app-card__content {

@@ -31,7 +31,7 @@ export class LayoutSidebarComponent implements OnInit {
             },
             {
               name: 'Analytics',
-              url: '/app/dashboard/dashboard-v2',
+              url: '/app/dashboard/analytics',
             },
             {
               name: 'Sales',
