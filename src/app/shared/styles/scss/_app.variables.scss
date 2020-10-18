@@ -1,6 +1,12 @@
 @import "~carbon-components/scss/globals/scss/colors";
 
+$appUIBg: $ui-background;
+
+$appText: $text-01;
+$appTextInverse: $inverse-01;
+
 $appBorderColor: $ui-03;
+$appBorderColorAlt: $active-ui;
 $appCardBg: $ui-01;
 $appHoverBg: $hover-ui;
 $appFocusBorder: $focus;
@@ -12,6 +18,8 @@ $appColorSuccess: $support-02;
 $appColorDanger: $support-01;
 $appColorWarning: $support-03;
 $appColorInfo: $support-04;
+
+$appSelectedColor: $selected-ui;
 
 $__app_color_blue: rgb(39, 122, 252);
 $__app_on_color_blue: #fff;

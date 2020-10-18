@@ -5,6 +5,7 @@ import {LayoutComponent} from "../shared/layout/layout.component"
 import {WidgetsGeneralComponent} from "./widgets/widgets-general/widgets-general.component"
 import {DashboardDefaultComponent} from "./dashboard/dashboard-default/dashboard-default.component"
 import {DashboardAnalyticsComponent} from "./dashboard/dashboard-analytics/dashboard-analytics.component"
+import {DashboardCryptoComponent} from "./dashboard/dashboard-crypto/dashboard-crypto.component"
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
           {
             path: 'analytics',
             component: DashboardAnalyticsComponent,
+          },
+          {
+            path: 'crypto',
+            component: DashboardCryptoComponent,
           },
         ],
       },

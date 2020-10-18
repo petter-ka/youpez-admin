@@ -12,7 +12,7 @@ export class LayoutSidebarComponent implements OnInit {
       groupName: 'APPLICATIONS',
       opened: true,
       children: [
-        {
+/*        {
           name: 'Dashboard',
           prefix: {
             type: 'ibm-icon',
@@ -34,16 +34,52 @@ export class LayoutSidebarComponent implements OnInit {
               url: '/app/dashboard/analytics',
             },
             {
-              name: 'Sales',
-              url: '/app/dashboard/dashboard-v2',
+              name: 'Stocks / Crypto',
+              url: '/app/dashboard/crypto',
             }
           ]
+        },*/
+
+        {
+          name: 'Dashboard',
+          url: '/app/dashboard/default',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'home',
+          },
+          suffix: {
+            type: 'badge',
+            level: 'default',
+            text: 2,
+          },
         },
+
+        {
+          name: 'Analytics',
+          url: '/app/dashboard/analytics',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'activity',
+          },
+        },
+
+        {
+          name: 'Stocks / Crypto',
+          url: '/app/dashboard/crypto',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'analytics',
+          },
+        },
+
+
+
+
         {
           name: 'Scrum Board',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'dashboardReference',
           },
           url: '/app/scrum-board',
         },
@@ -51,7 +87,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Tasks',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'task',
           },
           suffix: {
             type: 'badge',
@@ -64,7 +100,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Notes',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'catalog',
           },
           url: '/app/notes',
         },
@@ -72,7 +108,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'File Manager',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'folder',
           },
           url: '/app/file-manager',
         },
@@ -80,7 +116,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Mail',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'email',
           },
           suffix: {
             type: 'badge',
@@ -93,7 +129,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Messages',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'sendAlt',
           },
           url: '/app/messages',
         }
@@ -107,7 +143,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Auth',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'userAdmin',
           },
           children: [
             {
@@ -140,7 +176,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Profile',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'userAvatar',
           },
           url: '/app/profile',
         },
@@ -148,7 +184,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Timeline',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'alarm',
           },
           url: '/app/timeline',
         },
@@ -156,7 +192,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Invoice',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'document',
           },
           url: '/app/invoice',
         },
@@ -164,7 +200,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Search Result',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'imageSearch',
           },
           url: '/app/search-result',
         },
@@ -172,7 +208,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Errors',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'error',
           },
           suffix: {
             type: 'badge',
@@ -198,7 +234,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Widgets',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'phraseSentiment',
           },
           parentUrl: '/app/widgets',
           children: [
@@ -220,7 +256,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Tables',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'tableSplit',
           },
           children: [
             {
@@ -241,7 +277,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Forms',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'textCreation',
           },
           children: [
             {
@@ -267,7 +303,7 @@ export class LayoutSidebarComponent implements OnInit {
           url: '/app/charts',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'chartColumn',
           },
         },
         {
@@ -275,7 +311,7 @@ export class LayoutSidebarComponent implements OnInit {
           url: '/app/icons',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'magicWand',
           },
         },
         {
@@ -283,7 +319,7 @@ export class LayoutSidebarComponent implements OnInit {
           url: '/app/typography',
           prefix: {
             type: 'ibm-icon',
-            name: 'home',
+            name: 'textTracking',
           },
         }
       ]

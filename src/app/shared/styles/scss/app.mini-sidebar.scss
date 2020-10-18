@@ -23,7 +23,7 @@
       position: relative;
 
       &.app-mini-sidebar__list__item__highlight {
-        margin: 20px 0;
+        margin: 10px 0;
       }
 
       .app-mini-sidebar__list__item__pill {
@@ -35,7 +35,7 @@
         padding: 3px;
         cursor: pointer;
         border-radius: 8px;
-        display: block;
+        display: flex;
         height: 40px;
         width: 40px;
         transition: all 100ms ease-in;
@@ -48,7 +48,7 @@
         }
 
         &:hover {
-          background-color: #59595d;
+          background-color: #535357;
         }
       }
     }

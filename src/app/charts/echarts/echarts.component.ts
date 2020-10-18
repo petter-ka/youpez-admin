@@ -51,6 +51,7 @@ export class EchartsComponent implements OnInit, OnDestroy, OnChanges, DoCheck, 
   }
   @Input() merge: EChartOption
   @Input() autoResize = true
+  @Input() forceResize = false
   @Input() loadingType = 'default'
   @Input() loadingOpts: object
   @Input() detectEventChanges = true // deprecated, left for compatibility reasons to avoid triggering major version
@@ -124,7 +125,7 @@ export class EchartsComponent implements OnInit, OnDestroy, OnChanges, DoCheck, 
 
   ngOnInit() {
     this.resizeSub = fromEvent(window, 'resize').pipe(debounceTime(50)).subscribe(() => {
-      if (this.autoResize && window.innerWidth !== this.currentWindowWidth) {
+      if ((this.autoResize && window.innerWidth !== this.currentWindowWidth) || this.forceResize) {
         this.currentWindowWidth = window.innerWidth
         this.currentOffsetWidth = this.el.nativeElement.offsetWidth
         this.currentOffsetHeight = this.el.nativeElement.offsetHeight

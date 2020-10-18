@@ -1,103 +1,16 @@
 @import 'app.variables';
+@import 'helpers';
 
-.app-color-default {
+@include color-helper('ui', $appUIBg);
+@include color-helper('primary', $appColorPrimary);
+@include color-helper('secondary', $appColorSecondary);
+@include color-helper('success', $appColorSuccess);
+@include color-helper('danger', $appColorDanger);
+@include color-helper('warning', $appColorWarning);
+@include color-helper('info', $appColorInfo);
 
-}
-
-.app-color-primary {
-  color: $appColorPrimary;
-
-  svg {
-    fill: $appColorPrimary;
-  }
-}
-
-.app-bg-primary {
-  background-color: $appColorPrimary;
-
-  svg {
-    fill: $appColorPrimary;
-  }
-}
-
-.app-color-secondary {
-  color: $appColorSecondary;
-
-  svg {
-    fill: $appColorSecondary;
-  }
-}
-
-.app-bg-secondary {
-  background-color: $appColorSecondary;
-
-  svg {
-    fill: $appColorSecondary;
-  }
-}
-
-.app-color-success {
-  color: $appColorSuccess;
-
-  svg {
-    fill: $appColorSuccess;
-  }
-}
-
-.app-bg-success {
-  background-color: $appColorSuccess;
-
-  svg {
-    fill: $appColorSuccess;
-  }
-}
-
-.app-color-danger {
-  color: $appColorDanger;
-
-  svg {
-    fill: $appColorDanger;
-  }
-}
-
-.app-bg-danger {
-  background-color: $appColorDanger;
-
-  svg {
-    fill: $appColorDanger;
-  }
-}
-
-.app-color-warning {
-  color: $appColorWarning;
-
-  svg {
-    fill: $appColorWarning;
-  }
-}
-
-.app-bg-warning {
-  background-color: $appColorWarning;
-
-  svg {
-    fill: $appColorWarning;
-  }
-}
-
-.app-color-info {
-  color: $appColorInfo;
-
-  svg {
-    fill: $appColorInfo;
-  }
-}
-
-.app-bg-info {
-  background-color: $appColorInfo;
-
-  svg {
-    fill: $appColorInfo;
-  }
+.app-content-p {
+  padding: 1.1rem;
 }
 
 .app-color-muted {
@@ -154,7 +67,7 @@
   overflow: hidden;
 }
 
-.text-muted{
+.text-muted {
   opacity: .7;
 }
 

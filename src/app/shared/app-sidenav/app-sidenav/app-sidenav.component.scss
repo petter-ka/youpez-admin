@@ -1,10 +1,13 @@
 @import '../../styles/scss/helpers.scss';
+/*@import '../../../shared/styles/scss/app.variables';*/
 
 $app_bg_color: #fff;
 $app_primary_lighter: #0f62fe;
 
 $resizeSurface: 10px;
 $resizeBorder: 3px;
+
+$borderColor: #e0e0e0;
 
 .app-layout-btn {
   width: 24px;
@@ -71,7 +74,7 @@ $resizeBorder: 3px;
   /*background-color: #fff;*/
   transform: translateX(calc(-100% - 10px));
   z-index: 6;
-  border-right: 1px solid #D5D5D5;
+  border-right: 1px solid $borderColor;
   display: none;
 
 
@@ -123,7 +126,7 @@ $resizeBorder: 3px;
     left: auto;
     transform: translateX(calc(100% + 10px));
     transition: transform 400ms cubic-bezier(.05, .74, .27, .99);
-    border-left: 1px solid #D5D5D5;
+    border-left: 3px solid $borderColor;
     border-right: none;
 
     &.app-sidenav-v2--hoverAble {
@@ -182,7 +185,7 @@ $resizeBorder: 3px;
     width: 100% !important;
     transform: translateY(calc(100% + 10px));
     transition: transform 400ms cubic-bezier(.05, .74, .27, .99);
-    border-bottom: 1px solid #D5D5D5;
+    border-bottom: 3px solid $borderColor;
     border-right: none;
 
     &.app-sidenav-v2--toggleBtn-always {
@@ -220,7 +223,7 @@ $resizeBorder: 3px;
     width: 100% !important;
     transform: translateY(calc(100% + 10px));
     transition: transform 400ms cubic-bezier(.05, .74, .27, .99);
-    border-top: 1px solid #D5D5D5;
+    border-top: 3px solid $borderColor;
     border-right: none;
 
     &.app-sidenav-v2--toggleBtn-always {

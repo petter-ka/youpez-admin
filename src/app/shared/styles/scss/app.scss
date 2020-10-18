@@ -11,6 +11,7 @@ $carbon--theme: $carbon--theme--g10;
 @import 'app.cards.scss';
 @import 'app.headers.scss';
 @import 'app.list.scss';
+@import 'table.scss';
 
 body {
   overflow: hidden;
@@ -38,8 +39,17 @@ body {
 }
 
 .app-ibm-table-fix {
-  position: relative;
+  //position: relative;
   overflow: hidden;
+
+  .bx--data-table {
+    height: 100%;
+    display: block;
+
+    tbody {
+      height: 100%;
+    }
+  }
 
   .bx--data-table--sticky-header {
     max-height: 100%;
@@ -58,6 +68,22 @@ body {
 .app-ibm-toggle-fix {
   .bx--toggle-input__label .bx--toggle__switch {
     margin-top: 0;
+  }
+}
+
+.app-ibm-btn-merge {
+  button {
+    margin-right: -1px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.app-ibm-tab-auto {
+  .bx--tabs__nav-link {
+    width: auto !important;
   }
 }
 

@@ -1,0 +1,187 @@
+<app-sidenav-container>
+  <app-sidenav-v2
+    [breakpoint]="'md'"
+    [direction]="'right'"
+    [opened]="true"
+    [hoverAble]="true"
+    [mode]="'side'"
+    [toggleableBtn]="true"
+    initWidth="300">
+
+    <app-sidenav-container>
+      <app-sidenav-v2
+        [breakpoint]="'md'"
+        [direction]="'bottom'"
+        [opened]="true"
+        [hoverAble]="true"
+        [mode]="'side'"
+        [toggleableBtn]="true"
+        initWidth="600">
+        <div class="app-a-box app-bg-ui app-scrollbar-fix">
+          <ng-scrollbar>
+          </ng-scrollbar>
+        </div>
+      </app-sidenav-v2>
+
+      <div fxFill fxLayout="column" class="app-bg-ui relative">
+
+        <div class="app-header app-header--sm">
+          <div class="app-expressive-heading-02">Watchlist</div>
+
+          <div class="app_header__tools">
+            <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+              <svg class="bx--btn__icon" ibmIconAdd size="32"></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="app-list-header">
+          <div fxFlex fxLayout="row" class="app-expressive-heading-01">
+            <div fxFlex="40" class="">Symbol</div>
+            <div fxFlex="30" class="text-right">Last</div>
+            <div fxFlex="30" class="text-right">Chg</div>
+          </div>
+        </div>
+
+        <div fxFlex class="relative">
+          <div class="app-a-box app-bg-ui app-scrollbar-fix">
+            <ng-scrollbar>
+              <div class="app-list app-list--hover app-list--select app-list--p">
+                <ng-container *ngFor="let watch of watchList">
+                  <div class="app-list__item" (click)="onSelect(watch[0])"
+                       [ngClass]="{'app-list__item--active':selectedWatch[watch[0]] === true}">
+                    <div class="app-list__item__content">
+                      <div fxFlex fxLayout="row">
+                        <div fxFlex="40" class="app-expressive-heading-01">{{watch[0]}}</div>
+                        <div fxFlex="30" class="app-helper-text-01 text-right">{{watch[1]}}</div>
+                        <div fxFlex="30" class="app-helper-text-01 text-right">{{watch[2]}}</div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+            </ng-scrollbar>
+          </div>
+        </div>
+      </div>
+
+
+    </app-sidenav-container>
+
+  </app-sidenav-v2>
+
+  <app-sidenav-container>
+    <app-sidenav-v2
+      [breakpoint]="'md'"
+      [direction]="'bottom'"
+      [opened]="true"
+      [hoverAble]="true"
+      [mode]="'side'"
+      initWidth="370"
+      [toggleableBtn]="true"
+      [size]="'sideBar1'">
+      <div fxFill fxLayout="column" class="app-bg-ui relative">
+
+        <ibm-tab-header-group class="app-ibm-tab-auto">
+          <ibm-tab-header>
+            Stock Viewer
+          </ibm-tab-header>
+          <ibm-tab-header>
+            Trading Options
+          </ibm-tab-header>
+          <ibm-tab-header>
+            Strategy Validation
+          </ibm-tab-header>
+          <ibm-tab-header>
+            Text Notes
+          </ibm-tab-header>
+          <ibm-tab-header>
+            Alert Management
+          </ibm-tab-header>
+        </ibm-tab-header-group>
+
+        <div class="absolute top-0 right-0">
+          <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+            <svg class="bx--btn__icon" ibmIconMinimize size="32"></svg>
+          </button>
+        </div>
+
+        <div class="p-2 flex">
+          <div class="app-ibm-btn-merge mr-2">
+            <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+              <svg class="bx--btn__icon" ibmIconRenew size="32"></svg>
+            </button>
+            <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+              <svg class="bx--btn__icon" ibmIconOverflowMenuVertical size="32"></svg>
+            </button>
+          </div>
+
+          <ibm-combo-box
+            style="width:150px"
+            [placeholder]="'Search...'"
+            [items]="[{name:'Example'}]"
+            size="sm"
+            [appendInline]="false" class="mr-2">
+            <ibm-dropdown-list></ibm-dropdown-list>
+          </ibm-combo-box>
+
+          <ibm-tag-filter
+            type="blue"
+            title="Filter"
+            closeButtonLabel="Clear"
+          >Fortune 500
+          </ibm-tag-filter>
+
+          <div class="flex flex-1 justify-end">
+            <div class="app-ibm-btn-merge mr-1">
+              <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAlarm size="32"></svg>
+              </button>
+            </div>
+            <button ibmButton="tertiary" size="sm">
+              Filters
+              <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+            </button>
+          </div>
+        </div>
+
+        <div fxFlex fxFill class="relative">
+          <ng-container *ngIf="!loading">
+            <ag-grid-angular
+              class="app-ag-grid app-ag-grid--border-t"
+              [modules]="modules"
+              [gridOptions]="gridOptions">
+            </ag-grid-angular>
+          </ng-container>
+        </div>
+      </div>
+    </app-sidenav-v2>
+
+    <div fxFill fxLayout="column" class="relative app-bg-ui">
+      <div class="app-header app-header--default">
+        <div class="app-expressive-heading-03"><span class="font-bold">Bitcoin / U.S. Dollar</span></div>
+        <div class="app_header__tools">
+          <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+            <svg class="bx--btn__icon" ibmIconCloudDownload size="32"></svg>
+          </button>
+          <button ibmButton="primary" size="sm">
+            Buy
+            <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+          </button>
+        </div>
+      </div>
+      <div fxFlex class="relative px-4 pb-4">
+        <div class="absolute top-0 left-0 ml-4 app-bg-ui" style="top:-10px;left:-3px;z-index: 1">
+          <div class="">
+            <ibm-tag type="warm-gray">11452.0</ibm-tag><span>- </span><ibm-tag type="warm-gray">11453.0</ibm-tag>
+          </div>
+          <div class="app-helper-text-01 ml-2">
+            Vol <span class="font-bold ml-1">52.799K</span>
+          </div>
+        </div>
+        <app-echarts [options]="mainChart" [forceResize]="true" class="app-echarts-component"></app-echarts>
+      </div>
+    </div>
+  </app-sidenav-container>
+
+</app-sidenav-container>

@@ -38,3 +38,36 @@
     @return var($key);
   }
 }
+
+@mixin color-helper($type,$color) {
+  .app-bg-#{$type} {
+    background-color: $color;
+
+    &.app-bg-#{type}--contrast, .app-text-contrast {
+      @include text-contrast($color);
+    }
+  }
+
+  svg.app-color-#{$type} {
+    fill: $color;
+  }
+
+  .app-color-#{$type} {
+    color: $color;
+
+    svg {
+      fill: $color;
+    }
+  }
+}
+
+@mixin text-contrast($n) {
+  $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+
+  @if abs($color-brightness) < ($light-color/2) {
+    color: white;
+  } @else {
+    color: black;
+  }
+}

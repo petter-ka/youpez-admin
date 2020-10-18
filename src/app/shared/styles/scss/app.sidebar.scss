@@ -12,6 +12,15 @@
   padding: 0;
   color: #808080;
 
+  .app-sidebar__logo {
+    padding: 18px 22px 11px 18px;
+    background-color: #27272b;
+
+    img {
+      width: 160px;
+    }
+  }
+
 
   .app-sidebar__list {
 
@@ -41,6 +50,10 @@
         @extend .app-row__fill;
         @extend .text-overflow-ellipsis;
         opacity: .8;
+
+        &:hover {
+          opacity: 1;
+        }
       }
 
       .app-sidebar__list__header__toggle {
@@ -100,6 +113,9 @@
 
       .app-sidebar__list__item__caret {
         fill: #808080;
+        transition: .3s cubic-bezier(.35, 0, .35, 1);
+        transition-property: all;
+        transform: rotate(-90deg);
       }
 
 
@@ -161,7 +177,7 @@
           color: #eaeaeb;
 
           .app-sidebar__list__item__caret {
-            transform: rotate(180deg);
+            transform: rotate(0deg);
           }
         }
 

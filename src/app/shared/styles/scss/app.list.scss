@@ -1,5 +1,11 @@
 @import 'app.variables';
 
+.app-list-header {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid $appBorderColorAlt;
+  background-color: #f4f4f4;
+}
+
 .app-list {
   position: relative;
   overflow: hidden;
@@ -38,6 +44,12 @@
     }
   }
 
+  &.app-list--p {
+    .app-list__item__content {
+      padding: 0.5rem 1rem;
+    }
+  }
+
   &.app-list--hover {
     .app-list__item:hover {
       background-color: $appHoverBg;
@@ -54,10 +66,18 @@
       }
 
       &.app-list__item--active {
+        outline: 2px solid $appFocusBorder;
+        outline-offset: -2px;
+/*        background-color: $appFocusBorder;
+        color: #fff;*/
 
-        &:before {
-          display: none;
+        .app-list__item__content {
+          &:before {
+            //display: none;
+            background-color: transparent;
+          }
         }
+
       }
     }
   }

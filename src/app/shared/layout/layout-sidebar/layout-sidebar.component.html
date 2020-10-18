@@ -1,5 +1,8 @@
-<div fxFill fxLayout="column">
-  <div fxFlex class="app-sidebar app-scrollbar-fix">
+<div fxFill fxLayout="column" class="app-sidebar app-scrollbar-fix">
+  <div class="app-sidebar__logo">
+    <img class="app-sidebar__logo__white" src="/assets/img/logo/logo-big-white.png"/>
+  </div>
+  <div fxFlex class="relative">
     <ng-scrollbar>
       <app-menu [menu]="menu" (groupToggle)="onGroupToggle($event)"></app-menu>
     </ng-scrollbar>

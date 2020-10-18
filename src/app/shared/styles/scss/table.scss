@@ -1,0 +1,66 @@
+@import "~@ag-grid-community/core/dist/styles/ag-grid.css";
+@import "~@ag-grid-community/core/dist/styles/ag-theme-balham/sass/ag-theme-balham-mixin";
+@import 'app.variables';
+
+.app-ag-grid {
+  @include ag-theme-balham((
+    font-family: ('IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif),
+    //font-size:0.875rem,
+    odd-row-background-color: null,
+    border-color:$appBorderColorAlt,
+    row-border-color:$appBorderColor,
+    header-background-color: $appUIBg,
+  ));
+
+  width: 100%;
+  height: 100%;
+
+  .ag-header-cell-text {
+    font-size: 0.875rem;
+  }
+
+  .ag-header-cell::after, .ag-header-group-cell::after {
+    top: 0 !important;
+    height: 100% !important;
+  }
+
+  &.app-ag-grid--border-t {
+    .ag-root-wrapper {
+      border-width: 1px 0 0 0 !important;
+    }
+  }
+
+  &.app-ag-grid--no-border {
+    .ag-root-wrapper {
+      border: none !important;
+    }
+  }
+
+  .cell-flex-middle {
+    display: flex;
+    align-items: center;
+
+    & > span {
+      display: flex;
+      height: 100%;
+      line-height: 1rem;
+      align-items: center;
+    }
+  }
+
+  .cell-flex-right {
+    justify-content: flex-end;
+
+    .ag-header-cell-label {
+      justify-content: flex-end;
+    }
+  }
+
+  .cell-flex-center {
+    justify-content: center;
+
+    .ag-header-cell-label {
+      justify-content: center;
+    }
+  }
+}

@@ -1,10 +1,37 @@
 .app-header {
   position: relative;
 
+  &.app-header--default{
+    padding: 0.75rem 1.1rem;
+
+    .app_header__tools {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.75rem;
+
+      @extend .app-row;
+      @extend .app-row--center;
+    }
+  }
+
+  &.app-header--sm{
+    padding: 0.75rem 1rem;
+
+    .app_header__tools {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+
+      @extend .app-row;
+      @extend .app-row--center;
+    }
+  }
+
   &.app-header--hero {
     padding: 40px 40px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(351deg, rgba(255, 255, 255, 0) 0%, rgba(203, 223, 255, 1) 100%);
+    background: transparent;
 
     &:before {
       position: absolute;
@@ -16,13 +43,14 @@
       background: url(
       data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAKklEQVQoU2NkIBIwEqmOgWyFDQwMDCCMAbCZiFUxLqsxFJPtRpyBQH0TAaqHAwtRB8lvAAAAAElFTkSuQmCC
       ) repeat;
-      opacity: .4;
+      opacity: .5;
+    }
+
+    .app_header__tools {
+      position: absolute;
+      top: 16px;
+      right: 16px;
     }
   }
 
-  .app_header__tools {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-  }
 }

@@ -5,8 +5,8 @@
 }
 
 .app-card-row {
-  margin-bottom: 16px;
-  padding: 16px;
+  margin-bottom: 1rem;
+  padding: 1rem;
   min-height: 100px;
 }
 
@@ -17,11 +17,11 @@
   background-color: $appCardBg;
   outline: 2px solid transparent;
   outline-offset: -2px;
-  margin: 8px;
+  margin: 0.5rem;
   //box-shadow: 0 1px 2px 0 rgba(33, 33, 33, .14), 0 0 1px 0 rgba(0, 0, 0, .14);
 
   .app-card__header {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1.1rem;
 
     &.app-card__header--border {
       border-bottom: 1px solid $appBorderColor;
@@ -29,7 +29,7 @@
   }
 
   .app-card__content {
-    padding: 16px;
+    padding: 1.1rem;
   }
 
   .app-card__blocks {
