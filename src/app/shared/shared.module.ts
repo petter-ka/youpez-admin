@@ -78,7 +78,7 @@ import {
   TableModule,
   ToggleModule,
   DatePickerModule,
-
+  SearchModule as SearchModuleComponent,
 } from 'carbon-components-angular'
 import {LayoutComponent} from './layout/layout.component'
 import {LayoutMiniSidebarComponent} from './layout/layout-mini-sidebar/layout-mini-sidebar.component'
@@ -114,6 +114,7 @@ const CarbonModules = [
   TableModule,
   ToggleModule,
   DatePickerModule,
+  SearchModuleComponent,
 ]
 
 const CarbonIconModules = [

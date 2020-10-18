@@ -16,9 +16,104 @@
         [hoverAble]="true"
         [mode]="'side'"
         [toggleableBtn]="true"
-        initWidth="600">
+        initWidth="570">
         <div class="app-a-box app-bg-ui app-scrollbar-fix">
           <ng-scrollbar>
+            <div class="app-inner-content app-inner-content--default">
+              <div class="app-row app-row--center mb-4">
+                <div class="app-symbol app-symbol--default mr-2">
+                  <div class="app-symbol__label w-10 h-10">
+                    <span class="font-bold">BTC</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="app-expressive-heading-02">BTCUSD</div>
+                  <div class="app-label-01">crypto | BITMARKET</div>
+                </div>
+              </div>
+
+              <div class="mb-1">
+                <span class="app-expressive-heading-04 mr-1">11437.0</span>
+                <span class="app-expressive-heading-02 mr-3">USD</span>
+                <span class="app-label-01 app-color-success">66.0 (0.58%)</span>
+              </div>
+
+              <div>
+                <span class="w-2 h-2 rounded-full inline-block app-bg-success mr-1"></span>
+                <span class="inline-block app-helper-text-01">Market open</span>
+              </div>
+
+              <div class="my-6">
+                <div class="flex justify-between app-helper-text-01 mb-1">
+                  <div>11364.9</div>
+                  <div>DAY'S RANGE</div>
+                  <div>11508.0</div>
+                </div>
+                <div class="app-progress">
+                  <div class="app-progress__bar app-bg-success" style="margin-left:20%;width:70%"></div>
+                </div>
+              </div>
+
+              <div class="my-6">
+                <div class="flex justify-between app-helper-text-01 mb-1">
+                  <div>4000.9</div>
+                  <div>52WK RANGE</div>
+                  <div>12490.0</div>
+                </div>
+                <div class="app-progress">
+                  <div class="app-progress__bar app-bg-success" style="margin-left:70%;width:5%"></div>
+                </div>
+              </div>
+
+              <div class="app-expressive-heading-01 mb-1">Performance</div>
+              <div fxLayout="row wrap" class="text-center">
+                <div fxFlex="33.33%">
+                  <div class="p-2 m-1 rounded app-bg-success-lt-60 app-color-success">
+                    <div class="app-expressive-heading-01">0.12%</div>
+                    <div class="app-helper-text-01">1W</div>
+                  </div>
+                </div>
+                <div fxFlex="33.33%">
+                  <div class="p-2 m-1 rounded app-bg-success-lt-50 app-color-success">
+                    <div class="app-expressive-heading-01">6.04%</div>
+                    <div class="app-helper-text-01">1M</div>
+                  </div>
+                </div>
+                <div fxFlex="33.33%">
+                  <div class="p-2 m-1 rounded app-bg-danger-lt-40 app-color-danger">
+                    <div class="app-expressive-heading-01">-3.93%</div>
+                    <div class="app-helper-text-01">3M</div>
+                  </div>
+                </div>
+                <div fxFlex="33.33%">
+                  <div class="p-2 m-1 rounded app-bg-success-lt-40 app-color-success">
+                    <div class="app-expressive-heading-01">22.59%</div>
+                    <div class="app-helper-text-01">6M</div>
+                  </div>
+                </div>
+                <div fxFlex="33.33%">
+                  <div class="p-2 m-1 rounded app-bg-success-lt-40 app-color-success">
+                    <div class="app-expressive-heading-01">58.93%</div>
+                    <div class="app-helper-text-01">YTD</div>
+                  </div>
+                </div>
+                <div fxFlex="33.33%">
+                  <div class="p-2 m-1 rounded app-bg-success-lt-40 app-color-success">
+                    <div class="app-expressive-heading-01">16.29%</div>
+                    <div class="app-helper-text-01">1Y</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app-expressive-heading-01 mt-4">Recommendation</div>
+              <div class="overflow-hidden " style="height: 135px">
+                <div style="height: 250px" class="relative">
+                  <app-echarts [options]="technicalChart" class="app-echarts-component"></app-echarts>
+                </div>
+              </div>
+
+
+            </div>
           </ng-scrollbar>
         </div>
       </app-sidenav-v2>
@@ -38,8 +133,8 @@
         <div class="app-list-header">
           <div fxFlex fxLayout="row" class="app-expressive-heading-01">
             <div fxFlex="40" class="">Symbol</div>
-            <div fxFlex="30" class="text-right">Last</div>
-            <div fxFlex="30" class="text-right">Chg</div>
+            <div fxFlex="25" class="text-right">Last</div>
+            <div fxFlex="35" class="text-right">Chg</div>
           </div>
         </div>
 
@@ -49,12 +144,27 @@
               <div class="app-list app-list--hover app-list--select app-list--p">
                 <ng-container *ngFor="let watch of watchList">
                   <div class="app-list__item" (click)="onSelect(watch[0])"
-                       [ngClass]="{'app-list__item--active':selectedWatch[watch[0]] === true}">
+                       [ngClass]="{'app-list__item--active':selectedWatch === watch[0]}">
                     <div class="app-list__item__content">
                       <div fxFlex fxLayout="row">
                         <div fxFlex="40" class="app-expressive-heading-01">{{watch[0]}}</div>
-                        <div fxFlex="30" class="app-helper-text-01 text-right">{{watch[1]}}</div>
-                        <div fxFlex="30" class="app-helper-text-01 text-right">{{watch[2]}}</div>
+                        <div fxFlex="25" class="app-helper-text-01 text-right">{{watch[1]}}</div>
+                        <ng-container *ngIf="watch[2] < 0">
+                          <div fxFlex="35" class="app-helper-text-01 text-right app-color-danger">
+                            <div class="flex justify-end align-middle">
+                              {{watch[2]}}
+                              <!--<app-ibm-icon iconName="arrowDown" iconSize="16"></app-ibm-icon>-->
+                            </div>
+                          </div>
+                        </ng-container>
+                        <ng-container *ngIf="watch[2] >= 0">
+                          <div fxFlex="35" class="app-helper-text-01 text-right app-color-success">
+                            <div class="flex justify-end">
+                              {{watch[2]}}
+                             <!-- <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>-->
+                            </div>
+                          </div>
+                        </ng-container>
                       </div>
                     </div>
                   </div>
@@ -116,14 +226,9 @@
             </button>
           </div>
 
-          <ibm-combo-box
-            style="width:150px"
-            [placeholder]="'Search...'"
-            [items]="[{name:'Example'}]"
-            size="sm"
-            [appendInline]="false" class="mr-2">
-            <ibm-dropdown-list></ibm-dropdown-list>
-          </ibm-combo-box>
+          <div class="mr-2" style="width:170px">
+            <ibm-search placeholder="Search..." size="sm" theme="light"></ibm-search>
+          </div>
 
           <ibm-tag-filter
             type="blue"
@@ -173,7 +278,9 @@
       <div fxFlex class="relative px-4 pb-4">
         <div class="absolute top-0 left-0 ml-4 app-bg-ui" style="top:-10px;left:-3px;z-index: 1">
           <div class="">
-            <ibm-tag type="warm-gray">11452.0</ibm-tag><span>- </span><ibm-tag type="warm-gray">11453.0</ibm-tag>
+            <ibm-tag type="warm-gray">11452.0</ibm-tag>
+            <span>- </span>
+            <ibm-tag type="warm-gray">11453.0</ibm-tag>
           </div>
           <div class="app-helper-text-01 ml-2">
             Vol <span class="font-bold ml-1">52.799K</span>

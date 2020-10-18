@@ -9,12 +9,22 @@
 @include color-helper('warning', $appColorWarning);
 @include color-helper('info', $appColorInfo);
 
-.app-content-p {
-  padding: 1.1rem;
+.app-inner-content {
+  &.app-inner-content--default {
+    padding: 1.1rem;
+  }
+
+  &.app-inner-content--sm {
+    padding: 1rem;
+  }
 }
 
 .app-color-muted {
   opacity: .7;
+}
+
+.app-text-lnh {
+  line-height: 1.5 !important;
 }
 
 .app-row {
@@ -72,7 +82,7 @@
 }
 
 .app-progress {
-  height: 4px;
+  height: 6px;
   background-color: rgba(63, 63, 63, .15);
   background-image: none;
   box-shadow: none;

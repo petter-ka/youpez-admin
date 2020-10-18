@@ -68,23 +68,27 @@ export class DashboardCryptoComponent implements OnInit {
   public modules = [InfiniteRowModelModule, ClientSideRowModelModule]
   public gridOptions: GridOptions = {}
   public mainChart = {}
+  public technicalChart = {}
   public loading: boolean = false
   public watchList = [
+    ['ETHUSD', 367.21, 1.51, 0.41, '19.091K'],
     ['BTCUSD', 11359.1, 34.1, 0.30, 962],
     ['LTCUSD', 46.1, -0.81, -1.70, '56.091K'],
-    ['ETHUSD', 367.21, 1.51, 0.41, '19.091K'],
-    ['DASHUSD', 11359.1, 34.1, 0.30, 962],
-    ['BTGUSD', 11359.1, 34.1, 0.30, 962],
-    ['GLD', 11359.1, 34.1, 0.30, 962],
-    ['USDEUR', 11359.1, 34.1, 0.30, 962],
-    ['EURUSD', 11359.1, 34.1, 0.30, 962],
-    ['AAPL', 11359.1, 34.1, 0.30, 962],
-    ['FB', 11359.1, 34.1, 0.30, 962],
-    ['AMZN', 11359.1, 34.1, 0.30, 962],
-    ['JPM', 11359.1, 34.1, 0.30, 962],
-    ['TSLA', 11359.1, 34.1, 0.30, 962],
+    ['DASHUSD', 67.041, -0.578, -0.85, 163],
+    ['BTGUSD', 7.01, -0.52, -6.91, 962],
+    ['GLD', 178.3, -0.62, -0.35, '7.262M'],
+    ['USDEUR', 0.825, 0.000, 0.00, 0],
+    ['EURUSD', 1.171, 0.000, 0.05, '241.95K'],
+    ['AAPL', 119.02, -1.69, -1.40, '115.39M'],
+    ['FB',265, -0.79, -0.30, '16.623M'],
+    ['AMZN', 3272.71, -65.94, -1.98, '6.474M'],
+    ['JPM', 101.51, -0.21, -0.21, '13.276M'],
+    ['TSLA', 439.67, -9.21, -2.05, '32.776M'],
+    ['NFLX', 530.9, -11.15, -2.60, '6.376M'],
+    ['GOOG', 1573.01, 13.88, 0.89, '1.45M'],
+    ['BABA', 307.31, 7.88, 2.89, '12.45M'],
   ]
-  public selectedWatch = {BTCUSD: true, ETHUSD: true}
+  public selectedWatch = 'BTCUSD'
 
   constructor(private http: HttpClient) {
   }
@@ -92,6 +96,7 @@ export class DashboardCryptoComponent implements OnInit {
   ngOnInit(): void {
     this.getData()
     this.createMainChart()
+    this.createTechnicals()
   }
 
   createMainChart() {
@@ -450,12 +455,83 @@ export class DashboardCryptoComponent implements OnInit {
       })
   }
 
+  createTechnicals() {
+    this.technicalChart = {
+      grid: {
+        top: 0,
+        right: 0,
+        left: 0,
+        bottom: 0,
+      },
+      series: [{
+        name: '',
+        radius: '80%',
+        type: 'gauge',
+        startAngle: 180,
+        endAngle: 0,
+        min: 0,
+        max: 100,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            width: 10,
+            shadowBlur: 0,
+            color: [
+              [0.2, '#e44a47'],
+              [0.4, '#ff7e85'],
+              [0.6, '#bfbfbf'],
+              [0.8, '#97d66e'],
+              [1, '#49bb18']
+            ]
+          }
+        },
+        axisTick: {
+          show: false,
+          splitNumber: 1
+        },
+        splitLine: {
+          show: false,
+          length: 15,
+        },
+        axisLabel: {
+          formatter: function (e) {
+            switch (e + "") {
+              case "10":
+                return "SELL NOW"
+              case "30":
+                return "SELL"
+              case "50":
+                return "NEUTRAL"
+              case "70":
+                return "BUY"
+              case "90":
+                return "BUY NOW"
+              default:
+                return ''
+            }
+          },
+          textBorderColor: '#fff',
+          textBorderWidth: 2,
+          distance: -30,
+          textStyle: {
+            fontSize: 10,
+            fontWeight: ""
+          }
+        },
+        pointer: {
+          show: true,
+          width: 3,
+          length: '80%',
+        },
+        data: [{
+          name: "",
+          value: 80
+        }]
+      }]
+    }
+  }
+
   onSelect(watch) {
-    if (this.selectedWatch[watch]) {
-      this.selectedWatch[watch] = false
-    }
-    else {
-      this.selectedWatch[watch] = true
-    }
+    this.selectedWatch = watch
   }
 }

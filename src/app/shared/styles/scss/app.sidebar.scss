@@ -75,6 +75,8 @@
         border-radius: 8px;
         margin-bottom: 2px;
         outline: none;
+        transition: .1s cubic-bezier(.35, 0, .35, 1);
+        transition-property: all;
 
         @extend .app-row;
         @extend .app-row--center;

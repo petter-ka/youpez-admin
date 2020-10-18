@@ -134,33 +134,3 @@ span.code {
   background-color: #e0e0e0;
   color: #161616;
 }
-
-/*.starter-home {
-  .title {
-    @include type-style("productive-heading-05");
-  }
-
-  .subtitle {
-    margin-top: carbon--mini-units(2);
-    @include type-style("productive-heading-02");
-  }
-
-  .body-text {
-    margin-top: carbon--mini-units(2);
-    margin-bottom: carbon--mini-units(4);
-  }
-
-  .list {
-    max-width: carbon--mini-units(63);
-    padding-left: carbon--mini-units(6);
-    column-count: 2;
-
-    @media only screen and (max-width: 1055px) {
-      margin-top: carbon--mini-units(2);
-    }
-  }
-
-  .starter-tab-description {
-    margin-bottom: carbon--mini-units(2);
-  }
-}*/

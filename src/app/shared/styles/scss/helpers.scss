@@ -59,6 +59,36 @@
       fill: $color;
     }
   }
+
+  .app-border-color-#{$type} {
+    border-color: $color;
+  }
+
+  @for $i from 1 through 10 {
+    .app-bg-#{$type}-lt-#{$i*10} {
+      background-color: lighten($color, $i*10%);
+
+      &.app-bg-#{$type}-lt-#{$i*10}--contrast, .app-text-contrast {
+        @include text-contrast(lighten($color, $i*10%));
+      }
+    }
+
+    svg.app-color-#{$type}-lt-#{$i*10} {
+      fill: lighten($color, $i*10%);
+    }
+
+    .app-color-#{$type}-lt-#{$i*10} {
+      color: lighten($color, $i*10%);
+
+      svg {
+        fill: lighten($color, $i*10%);
+      }
+    }
+
+    .app-border-color-#{$type}-lt-#{$i*10} {
+      border-color: lighten($color, $i*10%);
+    }
+  }
 }
 
 @mixin text-contrast($n) {
