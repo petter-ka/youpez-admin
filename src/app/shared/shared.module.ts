@@ -79,6 +79,7 @@ import {
   ToggleModule,
   DatePickerModule,
   SearchModule as SearchModuleComponent,
+  ContentSwitcherModule,
 } from 'carbon-components-angular'
 import {LayoutComponent} from './layout/layout.component'
 import {LayoutMiniSidebarComponent} from './layout/layout-mini-sidebar/layout-mini-sidebar.component'
@@ -115,6 +116,7 @@ const CarbonModules = [
   ToggleModule,
   DatePickerModule,
   SearchModuleComponent,
+  ContentSwitcherModule,
 ]
 
 const CarbonIconModules = [

@@ -29,8 +29,15 @@
                   <div class="app-expressive-heading-03 mb-1">Campaign Analysis</div>
                   <div class="app-label-01">Production environment on <span class="font-bold">US Region</span></div>
                 </div>
-                <div class="flex justify-end">
-                  <button ibmButton="ghost" size="sm" class="mr-1">
+                <div class="flex-1 flex justify-end">
+                  <div style="width:300px">
+                    <ibm-content-switcher>
+                      <button ibmContentOption name="First">DAY</button>
+                      <button ibmContentOption name="Second">WEEK</button>
+                      <button ibmContentOption name="Third">MONTH</button>
+                    </ibm-content-switcher>
+                  </div>
+                  <!--<button ibmButton="ghost" size="sm" class="mr-1">
                     DAY
                   </button>
                   <button ibmButton="tertiary" size="sm" class="mr-1">
@@ -38,19 +45,17 @@
                   </button>
                   <button ibmButton="ghost" size="sm">
                     MONTH
-                  </button>
+                  </button>-->
                 </div>
-                <div class="app-ibm-toggle-fix" style="width: 100px;">
-
-
-                  <!--<ibm-toggle
-                    label="EU Region"
-                    [onText]="'INCLUDE'"
-                    [offText]="'EXCLUDE'"
-                    [checked]="true"
-                    [size]="'sm'">
-                  </ibm-toggle>-->
-                </div>
+                <!--                <div class="app-ibm-toggle-fix" style="width: 100px;">
+                                  &lt;!&ndash;<ibm-toggle
+                                    label="EU Region"
+                                    [onText]="'INCLUDE'"
+                                    [offText]="'EXCLUDE'"
+                                    [checked]="true"
+                                    [size]="'sm'">
+                                  </ibm-toggle>&ndash;&gt;
+                                </div>-->
               </div>
             </div>
 
