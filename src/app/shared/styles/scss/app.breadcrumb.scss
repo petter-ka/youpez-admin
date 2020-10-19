@@ -2,15 +2,38 @@
   margin-bottom: 1px;
 
   .app-breadcrumb__item {
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 400;
     letter-spacing: .5px;
     text-transform: uppercase;
     display: inline-block;
+    margin-right: .4rem;
+    opacity: .8;
+    cursor: pointer;
+
+    &:before {
+      display: inline-block;
+      padding-right: 0.35rem;
+      //color: #7987a1;
+      font-size: 0.72rem;
+      content: "/";
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      cursor: default;
+      opacity: 1;
+      //font-weight: 600;
+    }
   }
 
-  .app-breadcrumb__separator {
-    display: inline-block;
-    margin: 0 .4rem;
-  }
+  /*  .app-breadcrumb__separator {
+      display: inline-block;
+      margin: 0 .4rem;
+    }*/
 }
