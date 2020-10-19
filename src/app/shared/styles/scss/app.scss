@@ -12,6 +12,7 @@ $carbon--theme: $carbon--theme--g10;
 @import 'app.headers.scss';
 @import 'app.list.scss';
 @import 'table.scss';
+@import 'app.breadcrumb.scss';
 
 body {
   overflow: hidden;
@@ -35,6 +36,9 @@ body {
 .app-scrollbar-fix {
   .ng-scrollbar {
     height: 100% !important;
+  }
+  .ng-scroll-content{
+    display: block !important;
   }
 }
 

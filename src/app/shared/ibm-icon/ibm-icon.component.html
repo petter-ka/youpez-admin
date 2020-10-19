@@ -171,5 +171,13 @@
     <svg ibmIconTextCreation [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'trashCan'">
+    <svg ibmIconTrashCan [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'menu'">
+    <svg ibmIconMenu [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchDefault>!!!</ng-container>
 </ng-container>

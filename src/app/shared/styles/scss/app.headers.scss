@@ -1,7 +1,54 @@
+.app-main-header {
+  padding: 0 1.1rem 0 1.1rem;
+  position: relative;
+  border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+  height: 60px;
+  @extend .app-row;
+  @extend .app-row--center;
+
+  .app-main-header__inner{
+    @extend .app-row;
+    @extend .app-row--center;
+  }
+
+  .app-main-header__text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  .app-main-header__menu-btn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 6px;
+    height: 19px;
+    width:18px;
+    //margin-left: -0.5rem;
+    padding: 0;
+    cursor: pointer;
+   // margin-left: -3px;
+  }
+
+  .app_main-header__tools {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem;
+
+    @extend .app-row;
+    @extend .app-row--center;
+  }
+}
+
+
 .app-header {
   position: relative;
 
-  &.app-header--default{
+  &.app-header--default {
     padding: 0.75rem 1.1rem;
 
     .app_header__tools {
@@ -15,7 +62,7 @@
     }
   }
 
-  &.app-header--sm{
+  &.app-header--sm {
     padding: 0.75rem 1rem;
 
     .app_header__tools {

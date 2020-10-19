@@ -52,7 +52,7 @@ import {
   TableSplitModule,
   ChartColumnModule,
   MagicWandModule,
-  TextTrackingModule, TextCreationModule,
+  TextTrackingModule, TextCreationModule, TrashCanModule, MenuModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -89,7 +89,8 @@ import {AppMenuComponent} from "./app-menu/app-menu/app-menu.component"
 import {AppMenuHeaderComponent} from "./app-menu/app-menu-header/app-menu-header.component"
 import {AppMenuItemComponent} from "./app-menu/app-menu-item/app-menu-item.component"
 import {IbmIconComponent} from './ibm-icon/ibm-icon.component'
-import {AppTableComponent} from './app-table/app-table.component'
+import {AppTableComponent} from './app-table/app-table.component';
+import { AppHeaderComponent } from './layout/app-header/app-header.component'
 
 const MainModules = [
   RouterModule,
@@ -170,6 +171,8 @@ const CarbonIconModules = [
   MagicWandModule,
   TextTrackingModule,
   TextCreationModule,
+  TrashCanModule,
+
 ]
 
 const Components = [
@@ -183,6 +186,7 @@ const Components = [
   AppMenuItemComponent,
   IbmIconComponent,
   AppTableComponent,
+  AppHeaderComponent,
 ]
 
 @NgModule({
@@ -194,6 +198,7 @@ const Components = [
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
+    MenuModule,
   ],
   declarations: [
     ...Components,

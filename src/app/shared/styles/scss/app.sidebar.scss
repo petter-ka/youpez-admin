@@ -13,10 +13,14 @@
   color: #808080;
 
   .app-sidebar__logo {
-    padding: 18px 22px 11px 18px;
+    padding: 0 1.1rem 0 1.1rem;
     background-color: #27272b;
+    height: 60px;
+    @extend .app-row;
+    @extend .app-row--center;
 
     img {
+      margin-top: 7px;
       width: 160px;
     }
   }

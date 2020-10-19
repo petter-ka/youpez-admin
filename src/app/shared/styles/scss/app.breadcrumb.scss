@@ -1,0 +1,16 @@
+.app-breadcrumb {
+  margin-bottom: 1px;
+
+  .app-breadcrumb__item {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  .app-breadcrumb__separator {
+    display: inline-block;
+    margin: 0 .4rem;
+  }
+}

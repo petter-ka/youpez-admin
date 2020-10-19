@@ -40,8 +40,10 @@
     "echarts": "^4.9.0",
     "ng-dynamic-component": "^7.0.2",
     "ngx-scrollbar": "^7.3.0",
+    "random-avatar-generator": "^2.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.3",
+    "unique-names-generator": "^4.3.1",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
