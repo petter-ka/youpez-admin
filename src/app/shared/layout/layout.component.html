@@ -1,9 +1,26 @@
-<div class="app-layout">
+<div class="app-layout" [ngClass.lt-md]="{'app-layout--show-header': true}">
+
+  <div class="app-layout__header">
+    <button class="app-layout__header__btn app-layout__header__btn--menu">
+      <app-ibm-icon iconName="menu"></app-ibm-icon>
+    </button>
+    <img class="app-layout__header__logo app-layout__header__logo--white" src="/assets/img/logo/logo-big-white.png"/>
+    <div class="app-layout__header__tools">
+      <button class="app-layout__header__btn app-layout__header__btn--icon">
+        <app-ibm-icon iconName="notification" iconSize="24"></app-ibm-icon>
+      </button>
+      <button class="app-layout__header__btn app-layout__header__btn--icon">
+        <app-ibm-icon iconName="user" iconSize="24"></app-ibm-icon>
+      </button>
+    </div>
+  </div>
+
   <div class="app-layout__mini-sidebar">
     <div class="app-mini-sidebar">
       <app-layout-mini-sidebar></app-layout-mini-sidebar>
     </div>
   </div>
+
   <div class="app-layout__content">
     <app-sidenav-container fxFill>
       <app-sidenav-v2
@@ -15,7 +32,7 @@
         [size]="'sideBar1'">
         <app-layout-sidebar></app-layout-sidebar>
       </app-sidenav-v2>
-      <div fxFill class="relative">
+      <div fxFill class="app-layout__content__inner">
         <router-outlet></router-outlet>
       </div>
     </app-sidenav-container>
