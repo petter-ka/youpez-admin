@@ -139,7 +139,7 @@ export class DashboardDefaultComponent implements OnInit {
     const data4 = [300, 790, 560, 1200]
 
     this.chartOptions3 = {
-      animation: false,
+      animation: true,
       grid: {
         top: 0,
         right: 0,
@@ -177,7 +177,7 @@ export class DashboardDefaultComponent implements OnInit {
     }
 
     this.chartOptions4 = {
-      animation: false,
+      animation: true,
       grid: {
         top: 0,
         right: 0,
@@ -214,7 +214,7 @@ export class DashboardDefaultComponent implements OnInit {
     }
 
     this.chartOptions = {
-      animation: false,
+      animation: true,
       grid: {
         top: 0,
         right: 0,
@@ -234,7 +234,7 @@ export class DashboardDefaultComponent implements OnInit {
     }
 
     this.chartOptions2 = {
-      animation: false,
+      animation: true,
       grid: {
         top: 0,
         right: 0,

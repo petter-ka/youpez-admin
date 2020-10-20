@@ -157,7 +157,6 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
 
   ngAfterContentInit() {
     if (this.originalMode !== 'side') {
-
       setTimeout(() => {
         this.rendered = true
       }, 450)
@@ -181,14 +180,11 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
 
   setWidth(width) {
     this.width = width
-
     if (Number(this.width) <= 200) {
       this.onClose()
       setTimeout(()=>{
         this.width = '200'
       },1000)
-
-
     }
   }
 
