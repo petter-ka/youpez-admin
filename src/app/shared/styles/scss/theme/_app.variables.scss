@@ -1,7 +1,8 @@
 @import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
-$carbon--theme: $carbon--theme--g10;
+$carbon--theme: $carbon--theme--g10 !global;
 @import "~carbon-components/scss/globals/scss/colors";
 
+$lofa: $ui-background;
 $appUIBg: $ui-background;
 $appUIForegroundBg: $ui-01;
 $appCardBg: $ui-01;

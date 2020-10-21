@@ -542,6 +542,16 @@ export const defaultRouterTransition = trigger('defaultRouterAnimation', [
   ])
 ])
 
+/*export const defaultRouterTransition = trigger('defaultRouterAnimation', [transition('* => *', [
+  query(':enter', [style({left: '-100%'})], {optional: true}),
+  query(':leave', animateChild(), {optional: true}),
+  group([
+    query(':leave', [animate('2s ease-out', style({left: '100%'}))], {optional: true}),
+    query(':enter', [animate('2s ease-out', style({left: '0%'}))], {optional: true})
+  ]),
+  query(':enter', animateChild())
+])
+])*/
 
 export const sharedStyles = {
   position: 'fixed',
