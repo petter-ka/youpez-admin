@@ -1,5 +1,4 @@
-@import '../../styles/scss/helpers.scss';
-/*@import '../../../shared/styles/scss/app.variables';*/
+@import '../../styles/scss/theme/app.helpers';
 
 $app_bg_color: #fff;
 $app_primary_lighter: #0f62fe;
@@ -71,12 +70,11 @@ $borderColor: #e0e0e0;
   top: 0;
   left: 0;
   bottom: 0;
-  /*background-color: #fff;*/
   transform: translateX(calc(-100% - 10px));
   z-index: 6;
   border-right: 1px solid $borderColor;
   display: none;
-
+  background-color: var(--theme-background);
 
   .app-sidenav-v2__inner {
     position: absolute;

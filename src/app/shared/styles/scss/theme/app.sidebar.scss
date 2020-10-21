@@ -1,13 +1,11 @@
-@import './helpers.scss';
+@import 'app.helpers';
 
 .app-sidebar {
-
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-
   background-color: #0f0f13;
   padding: 0;
   color: #808080;
@@ -140,6 +138,7 @@
         display: inline-block;
         margin-right: -4px;
         text-align: center;
+        min-width: 16px;
 
         &.app-sidebar__list__item__badge--success {
           background-color: #8aee46;

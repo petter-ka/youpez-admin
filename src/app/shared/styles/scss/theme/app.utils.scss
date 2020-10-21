@@ -1,5 +1,5 @@
 @import 'app.variables';
-@import 'helpers';
+@import 'app.helpers';
 
 @include color-helper('ui', $appUIBg);
 @include color-helper('primary', $appColorPrimary);
@@ -8,6 +8,24 @@
 @include color-helper('danger', $appColorDanger);
 @include color-helper('warning', $appColorWarning);
 @include color-helper('info', $appColorInfo);
+
+body {
+  overflow: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-relative {
+  position: relative;
+}
+
+.app-a-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
 .app-inner-content {
   &.app-inner-content--default {
@@ -56,7 +74,7 @@
   border-radius: 0.42rem;
 
   &.app-symbol--default {
-    background-color: #eee;
+    background-color: $appCardBg;
   }
 
   .app-symbol__label {
@@ -105,4 +123,14 @@
     height: 100%;
     transition: all 1000ms cubic-bezier(.785, .135, .15, .86);
   }
+}
+
+.app-inline-block {
+  display: inline-block;
+}
+
+.app-echarts-component {
+  display: block;
+  width: 100%;
+  height: 100%;
 }

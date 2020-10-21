@@ -1,12 +1,11 @@
 .app-main-header {
   padding: 0 1.1rem 0 1.1rem;
   position: relative;
-  border-bottom: 1px solid rgba(72, 94, 144, 0.16);
   height: 65px;
   @extend .app-row;
   @extend .app-row--center;
 
-  .app-main-header__inner{
+  .app-main-header__inner {
     @extend .app-row;
     @extend .app-row--center;
   }
@@ -26,11 +25,9 @@
     margin-bottom: 0;
     margin-right: 6px;
     height: 19px;
-    width:18px;
-    //margin-left: -0.5rem;
+    width: 18px;
     padding: 0;
     cursor: pointer;
-   // margin-left: -3px;
   }
 
   .app_main-header__tools {
@@ -41,6 +38,10 @@
 
     @extend .app-row;
     @extend .app-row--center;
+  }
+
+  &.app-main-header--border {
+    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
   }
 }
 

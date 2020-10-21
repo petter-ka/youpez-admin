@@ -3,7 +3,7 @@
 .app-list-header {
   padding: 0.5rem 1rem;
   border-bottom: 1px solid $appBorderColorAlt;
-  background-color: #f4f4f4;
+  background-color: $appUIBg;
 }
 
 .app-list {
@@ -68,12 +68,9 @@
       &.app-list__item--active {
         outline: 2px solid $appFocusBorder;
         outline-offset: -2px;
-/*        background-color: $appFocusBorder;
-        color: #fff;*/
 
         .app-list__item__content {
           &:before {
-            //display: none;
             background-color: transparent;
           }
         }

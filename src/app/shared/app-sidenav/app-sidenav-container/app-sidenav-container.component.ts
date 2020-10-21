@@ -45,18 +45,6 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
 
   }
 
-  ngOnDestroy(): void {
-    if (this.sideNavOpenEventSub) {
-      this.sideNavOpenEventSub.unsubscribe()
-    }
-    if (this.sideNavCloseEventSub) {
-      this.sideNavCloseEventSub.unsubscribe()
-    }
-    if (this.sideNavChangeEventSub) {
-      this.sideNavChangeEventSub.unsubscribe()
-    }
-  }
-
   ngAfterContentInit() {
     this.sidenavs.forEach((sidenav: AppSidenavComponent) => {
       this.sideNavOpenEventSub = sidenav.open.subscribe((changes) => {
@@ -73,6 +61,18 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
   }
 
   ngAfterViewChecked(): void {
+  }
+
+  ngOnDestroy(): void {
+    if (this.sideNavOpenEventSub) {
+      this.sideNavOpenEventSub.unsubscribe()
+    }
+    if (this.sideNavCloseEventSub) {
+      this.sideNavCloseEventSub.unsubscribe()
+    }
+    if (this.sideNavChangeEventSub) {
+      this.sideNavChangeEventSub.unsubscribe()
+    }
   }
 
   setContent(sidenav: AppSidenavComponent, options = null) {
@@ -106,7 +106,6 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
       else {
         this.contentMargins.top = `0px`
       }
-
     }
     if (direction === 'bottom') {
       if (mode === 'side') {
@@ -118,27 +117,33 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
     }
 
     if (options) {
-      if (options.windowResize === false) {
-
-      }
-      else {
+      if (options.windowResize !== false) {
         this.windowRefService.callWindowResize()
       }
     }
     else {
       this.windowRefService.callWindowResize()
     }
+  }
 
+  setRight() {
+
+  }
+
+  setLeft() {
+
+  }
+
+  setTop() {
+
+  }
+
+  setBottom() {
 
   }
 
   toggleOverlay(bool, mode) {
-    if (mode === 'side') {
-      this.sideMode = true
-    }
-    else {
-      this.sideMode = false
-    }
+    this.sideMode = (mode === 'side')
     this.overlayVisible = bool
   }
 

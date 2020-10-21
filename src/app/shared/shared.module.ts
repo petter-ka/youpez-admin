@@ -89,8 +89,10 @@ import {AppMenuComponent} from "./app-menu/app-menu/app-menu.component"
 import {AppMenuHeaderComponent} from "./app-menu/app-menu-header/app-menu-header.component"
 import {AppMenuItemComponent} from "./app-menu/app-menu-item/app-menu-item.component"
 import {IbmIconComponent} from './ibm-icon/ibm-icon.component'
-import {AppTableComponent} from './app-table/app-table.component';
-import { AppHeaderComponent } from './layout/app-header/app-header.component'
+import {AppTableComponent} from './app-table/app-table.component'
+import {AppHeaderComponent} from './layout/app-header/app-header.component'
+import {AppHeaderTitleComponent} from './layout/app-header/app-header-title/app-header-title.component'
+import {AppHeaderToolsComponent} from './layout/app-header/app-header-tools/app-header-tools.component'
 
 const MainModules = [
   RouterModule,
@@ -172,7 +174,7 @@ const CarbonIconModules = [
   TextTrackingModule,
   TextCreationModule,
   TrashCanModule,
-
+  MenuModule,
 ]
 
 const Components = [
@@ -187,6 +189,8 @@ const Components = [
   IbmIconComponent,
   AppTableComponent,
   AppHeaderComponent,
+  AppHeaderTitleComponent,
+  AppHeaderToolsComponent,
 ]
 
 @NgModule({
@@ -198,7 +202,6 @@ const Components = [
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
-    MenuModule,
   ],
   declarations: [
     ...Components,

@@ -14,7 +14,6 @@
     &:before {
       display: inline-block;
       padding-right: 0.35rem;
-      //color: #7987a1;
       font-size: 0.72rem;
       content: "/";
     }
@@ -28,12 +27,6 @@
     &:last-child {
       cursor: default;
       opacity: 1;
-      //font-weight: 600;
     }
   }
-
-  /*  .app-breadcrumb__separator {
-      display: inline-block;
-      margin: 0 .4rem;
-    }*/
 }

@@ -32,8 +32,10 @@
         [size]="'sideBar1'">
         <app-layout-sidebar></app-layout-sidebar>
       </app-sidenav-v2>
-      <div fxFill class="app-layout__content__inner">
-        <router-outlet></router-outlet>
+
+      <div fxFill class="app-layout__content__inner"
+        [@defaultRouterAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
+        <router-outlet #outlet="outlet"></router-outlet>
       </div>
     </app-sidenav-container>
   </div>

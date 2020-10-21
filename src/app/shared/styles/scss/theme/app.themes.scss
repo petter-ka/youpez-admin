@@ -1,8 +1,8 @@
-@import './app.variables.scss';
-@import './helpers.scss';
+@import 'app.variables.scss';
+@import 'app.helpers';
 
 // LIGHT THEMES
-:root.app-theme-light {
+:root.app-theme--default {
   @include spread-map($theme-map-light);
 }
 

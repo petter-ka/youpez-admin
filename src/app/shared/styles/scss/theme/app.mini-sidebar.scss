@@ -1,4 +1,4 @@
-@import './helpers.scss';
+@import 'app.helpers';
 
 .app-mini-sidebar {
   position: absolute;
@@ -7,8 +7,6 @@
   bottom: 0;
   left: 0;
   background-color: #19191e;
-  /*border-right:1px solid #2b2b37;*/
-
 
   .app-mini-sidebar__list {
     position: relative;
@@ -23,7 +21,7 @@
       position: relative;
 
       &.app-mini-sidebar__list__item__highlight {
-        margin: 13px 0;
+        margin: 15px 0;
       }
 
       .app-mini-sidebar__list__item__pill {
@@ -41,14 +39,17 @@
         transition: all 100ms ease-in;
         position: absolute;
         top: 0;
-        /*background-color: #59595d;*/
 
         svg {
-          fill: #eaeaeb;
+          fill: #b7b7b8;
         }
 
         &:hover {
-          background-color: #535357;
+          background-color: #27272b;
+
+          svg {
+            fill: #f6f6f7;
+          }
         }
       }
     }

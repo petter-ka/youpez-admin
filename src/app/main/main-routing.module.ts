@@ -6,6 +6,7 @@ import {WidgetsGeneralComponent} from "./widgets/widgets-general/widgets-general
 import {DashboardDefaultComponent} from "./dashboard/dashboard-default/dashboard-default.component"
 import {DashboardAnalyticsComponent} from "./dashboard/dashboard-analytics/dashboard-analytics.component"
 import {DashboardCryptoComponent} from "./dashboard/dashboard-crypto/dashboard-crypto.component"
+import {ScrumBoardComponent} from "./scrum/scrum-board/scrum-board.component"
 
 const routes: Routes = [
   {
@@ -18,14 +19,17 @@ const routes: Routes = [
           {
             path: 'default',
             component: DashboardDefaultComponent,
+            //data: { state: 'home'}
           },
           {
             path: 'analytics',
             component: DashboardAnalyticsComponent,
+            //data: { state: 'home2'}
           },
           {
             path: 'crypto',
             component: DashboardCryptoComponent,
+            //data: { state: 'home3'}
           },
         ],
       },
@@ -41,9 +45,13 @@ const routes: Routes = [
             component: WidgetsGeneralComponent,
           }
         ]
-      }
+      },
+      {
+        path:'scrum-board',
+        component: ScrumBoardComponent,
+      },
     ]
-  }
+  },
 ]
 
 @NgModule({

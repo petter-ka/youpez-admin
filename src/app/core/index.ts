@@ -1,3 +1,16 @@
+import {
+  animate,
+  animateChild, animation,
+  AnimationKeyframesSequenceMetadata,
+  AnimationReferenceMetadata,
+  group, keyframes,
+  query as q,
+  query,
+  style,
+  transition,
+  trigger
+} from '@angular/animations'
+
 export function getDefaultEchartsTheme() {
   const axisLine = {
     color: 'rgb(204, 214, 235)'
@@ -31,7 +44,7 @@ export function getDefaultEchartsTheme() {
     ],
     'backgroundColor': 'rgba(252,252,252,0)',
     'textStyle': {
-      fontFamily:'sans-serif',
+      fontFamily: 'sans-serif',
     },
     'title': {
       'textStyle': {
@@ -508,3 +521,59 @@ export function getDefaultEchartsTheme() {
     }
   }
 }
+
+export const defaultRouterTransition = trigger('defaultRouterAnimation', [
+  transition('* => *', [
+    query(
+      ':enter',
+      [style({opacity: 0,})],
+      {optional: true}
+    ),
+    query(
+      ':leave',
+      [style({opacity: 1,}), animate('0.3s cubic-bezier(.785, .135, .15, .86)', style({opacity: 0}))],
+      {optional: true}
+    ),
+    query(
+      ':enter',
+      [style({opacity: 0,}), animate('0.3s cubic-bezier(.785, .135, .15, .86)', style({opacity: 1}))],
+      {optional: true}
+    )
+  ])
+])
+
+
+export const sharedStyles = {
+  position: 'fixed',
+  overflow: 'hidden',
+  backfaceVisibility: 'hidden',
+  transformStyle: 'preserve-3d',
+  //  transform: 'translate3d(0,0,0)'
+}
+
+export const moveToTopKeyframes: AnimationKeyframesSequenceMetadata =
+  keyframes([
+    style({transform: 'translateY(0%)', offset: 0}),
+    style({transform: 'translateY(-100%)', opacity: '0', offset: 1})
+  ])
+
+export const moveFromBottomKeyframes: AnimationKeyframesSequenceMetadata =
+  keyframes([
+    style({transform: 'translateY(100%)', offset: 0, 'z-index': '9999'}),
+    style({transform: 'translateY(0%)', offset: 1})
+  ])
+
+export const moveFromBottom: AnimationReferenceMetadata = animation([
+  query(':enter, :leave', style(sharedStyles)
+    , {optional: true}),
+  group([
+    query(':enter', [
+
+      animate('{{enterTiming}}s {{enterDelay}}s ease', moveFromBottomKeyframes)
+    ], {optional: true}),
+
+    query(':leave', [
+      animate('{{leaveTiming}}s {{leaveDelay}}s ease', moveToTopKeyframes)
+    ], {optional: true}),
+  ])
+], {params: {enterTiming: '.6', leaveTiming: '0.6', enterDelay: '0', leaveDelay: '0'}})

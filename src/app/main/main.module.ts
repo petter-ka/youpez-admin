@@ -10,7 +10,8 @@ import {TypographyComponent} from './typography/typography.component'
 import {WidgetsGeneralComponent} from './widgets/widgets-general/widgets-general.component'
 import {DashboardDefaultComponent} from './dashboard/dashboard-default/dashboard-default.component'
 import {DashboardAnalyticsComponent} from './dashboard/dashboard-analytics/dashboard-analytics.component'
-import {DashboardCryptoComponent} from './dashboard/dashboard-crypto/dashboard-crypto.component'
+import {DashboardCryptoComponent} from './dashboard/dashboard-crypto/dashboard-crypto.component';
+import { ScrumBoardComponent } from './scrum/scrum-board/scrum-board.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {DashboardCryptoComponent} from './dashboard/dashboard-crypto/dashboard-c
     WidgetsGeneralComponent,
     DashboardDefaultComponent,
     DashboardAnalyticsComponent,
-    DashboardCryptoComponent
+    DashboardCryptoComponent,
+    ScrumBoardComponent
   ],
   imports: [
     CommonModule,

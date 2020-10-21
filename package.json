@@ -39,6 +39,7 @@
     "carbon-components-angular": "^4.19.4",
     "echarts": "^4.9.0",
     "ng-dynamic-component": "^7.0.2",
+    "ngx-router-animations": "0.0.9",
     "ngx-scrollbar": "^7.3.0",
     "random-avatar-generator": "^2.0.0",
     "rxjs": "~6.5.5",

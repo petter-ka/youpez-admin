@@ -1,49 +1,14 @@
-@import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
-
-$carbon--theme: $carbon--theme--g10;
-
-@import 'app.utils.scss';
-@import 'app.themes.scss';
-@import 'app.typograpy.scss';
-@import 'app.layout.scss';
-@import 'app.mini-sidebar.scss';
-@import 'app.sidebar.scss';
-@import 'app.cards.scss';
-@import 'app.headers.scss';
-@import 'app.list.scss';
-@import 'table.scss';
-@import 'app.breadcrumb.scss';
-
-body {
-  overflow: hidden;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  //font-family: 'Inter', sans-serif !important;
-}
-
-.app-relative {
-  position: relative;
-}
-
-.app-a-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
 .app-scrollbar-fix {
   .ng-scrollbar {
     height: 100% !important;
   }
-  .ng-scroll-content{
+
+  .ng-scroll-content {
     display: block !important;
   }
 }
 
 .app-ibm-table-fix {
-  //position: relative;
   overflow: hidden;
 
   .bx--data-table {
@@ -65,7 +30,6 @@ body {
         padding-top: 0;
       }
     }
-
   }
 }
 
@@ -133,18 +97,7 @@ body {
   border-radius: .25rem;
 }
 
-.app-echarts-component {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-
 .material-icons-two-tone {
-}
-
-.app-inline-block {
-  display: inline-block;
 }
 
 .material-icons,

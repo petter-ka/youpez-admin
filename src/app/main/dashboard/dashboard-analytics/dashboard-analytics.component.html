@@ -59,9 +59,23 @@
   </app-sidenav-v2>
   <div class="app-a-box app-scrollbar-fix">
     <ng-scrollbar>
+
       <app-header>
-        Platform Analytics
+        <app-header-title>
+          Platform Analytics
+        </app-header-title>
+
+        <app-header-tools>
+          <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+            <svg class="bx--btn__icon" ibmIconCloudDownload size="32"></svg>
+          </button>
+          <button ibmButton="primary" size="sm">
+            Widget
+            <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+          </button>
+        </app-header-tools>
       </app-header>
+
       <div fxLayout="row wrap" class="app-card-row-holder">
         <div fxFlex="100%" fxFlex.gt-lg="100%">
           <div class="app-card">

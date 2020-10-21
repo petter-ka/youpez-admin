@@ -263,24 +263,24 @@
 
     <div fxFill fxLayout="column" class="relative app-bg-ui">
 
-      <app-header>
-        Bitcoin / U.S. Dollar
-      </app-header>
+      <app-header [bordered]="false">
+        <app-header-title>
+          Bitcoin / U.S. Dollar
+        </app-header-title>
 
-<!--      <div class="app-header app-header&#45;&#45;default">
-        <div class="app-expressive-heading-03"><span class="font-bold">Bitcoin / U.S. Dollar</span></div>
-        <div class="app_header__tools">
-          <button ibmButton="tertiary" size="sm" class="bx&#45;&#45;btn&#45;&#45;icon-only">
-            <svg class="bx&#45;&#45;btn__icon" ibmIconCloudDownload size="32"></svg>
+        <app-header-tools>
+          <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+            <svg class="bx--btn__icon" ibmIconCloudDownload size="32"></svg>
           </button>
           <button ibmButton="primary" size="sm">
             Buy
-            <svg class="bx&#45;&#45;btn__icon" ibmIconAdd size="20"></svg>
+            <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
           </button>
-        </div>
-      </div>-->
+        </app-header-tools>
+      </app-header>
+
       <div fxFlex class="relative px-4 pb-4">
-        <div class="absolute top-0 left-0 ml-4 app-bg-ui" style="top:-3px;left:-3px;z-index: 1">
+        <div class="absolute top-0 left-0 ml-4 app-bg-ui" style="top:-8px;left:-3px;z-index: 1">
           <div class="">
             <ibm-tag type="warm-gray">11452.0</ibm-tag>
             <span>- </span>

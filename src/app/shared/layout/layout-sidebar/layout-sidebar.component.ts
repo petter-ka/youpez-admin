@@ -12,34 +12,6 @@ export class LayoutSidebarComponent implements OnInit {
       groupName: 'APPLICATIONS',
       opened: true,
       children: [
-/*        {
-          name: 'Dashboard',
-          prefix: {
-            type: 'ibm-icon',
-            name: 'home',
-          },
-          parentUrl: '/app/dashboard',
-          children: [
-            {
-              name: 'Default',
-              url: '/app/dashboard/default',
-              suffix: {
-                type: 'badge',
-                level: 'default',
-                text: 2,
-              },
-            },
-            {
-              name: 'Analytics',
-              url: '/app/dashboard/analytics',
-            },
-            {
-              name: 'Stocks / Crypto',
-              url: '/app/dashboard/crypto',
-            }
-          ]
-        },*/
-
         {
           name: 'Dashboard',
           url: '/app/dashboard/default',
@@ -47,13 +19,7 @@ export class LayoutSidebarComponent implements OnInit {
             type: 'ibm-icon',
             name: 'home',
           },
-          suffix: {
-            type: 'badge',
-            level: 'default',
-            text: 2,
-          },
         },
-
         {
           name: 'Analytics',
           url: '/app/dashboard/analytics',
@@ -70,11 +36,12 @@ export class LayoutSidebarComponent implements OnInit {
             type: 'ibm-icon',
             name: 'analytics',
           },
+          suffix: {
+            type: 'badge',
+            level: 'default',
+            text: '!',
+          },
         },
-
-
-
-
         {
           name: 'Scrum Board',
           prefix: {

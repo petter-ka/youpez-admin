@@ -30,7 +30,7 @@
             "styles": [
               "src/assets/tailwind/tailwind.css",
               "src/styles.scss",
-              "src/app/shared/styles/scss/app.scss"
+              "src/app/shared/styles/scss/theme/app.scss"
             ],
             "scripts": []
           },

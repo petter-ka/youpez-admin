@@ -1,13 +1,16 @@
+@import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
+$carbon--theme: $carbon--theme--g10;
 @import "~carbon-components/scss/globals/scss/colors";
 
 $appUIBg: $ui-background;
+$appUIForegroundBg: $ui-01;
+$appCardBg: $ui-01;
 
 $appText: $text-01;
 $appTextInverse: $inverse-01;
 
 $appBorderColor: $ui-03;
 $appBorderColorAlt: $active-ui;
-$appCardBg: $ui-01;
 $appHoverBg: $hover-ui;
 $appFocusBorder: $focus;
 
@@ -59,7 +62,7 @@ $theme-map-light: (
   '--theme-on-secondary': #fff, //mellék szín text
   '--theme-surface': #EFEFEF, // content háttér
   '--theme-on-surface': #000, //content text
-  '--theme-background': #fafafa, // body background color
+  '--theme-background': $appUIForegroundBg, // body background color
   '--theme-input-surface': #fff,
   '--theme-input-border': rgba(0, 0, 0, 0.42),
   '--theme-input-active': $__app_color_blue,
