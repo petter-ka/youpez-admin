@@ -52,7 +52,19 @@ import {
   TableSplitModule,
   ChartColumnModule,
   MagicWandModule,
-  TextTrackingModule, TextCreationModule, TrashCanModule, MenuModule,
+  TextTrackingModule,
+  TextCreationModule,
+  TrashCanModule,
+  MenuModule,
+  RadioButtonModule,
+  RadioButtonCheckedModule,
+  SettingsAdjustModule,
+  SettingsModule,
+  CheckboxCheckedModule,
+  CloudAppModule,
+  BullhornModule,
+  BuildingInsights_1Module,
+  TagModule as TagModuleIcon,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -80,6 +92,7 @@ import {
   DatePickerModule,
   SearchModule as SearchModuleComponent,
   ContentSwitcherModule,
+  SkeletonModule,
 } from 'carbon-components-angular'
 import {LayoutComponent} from './layout/layout.component'
 import {LayoutMiniSidebarComponent} from './layout/layout-mini-sidebar/layout-mini-sidebar.component'
@@ -93,6 +106,9 @@ import {AppTableComponent} from './app-table/app-table.component'
 import {AppHeaderComponent} from './layout/app-header/app-header.component'
 import {AppHeaderTitleComponent} from './layout/app-header/app-header-title/app-header-title.component'
 import {AppHeaderToolsComponent} from './layout/app-header/app-header-tools/app-header-tools.component'
+import {AppThemeSettingsComponent} from './layout/app-theme-settings/app-theme-settings.component'
+import {AppLayoutHeaderComponent} from './layout/app-layout-header/app-layout-header.component';
+import { AppSearchComponent } from './app-search/app-search.component'
 
 const MainModules = [
   RouterModule,
@@ -120,6 +136,7 @@ const CarbonModules = [
   DatePickerModule,
   SearchModuleComponent,
   ContentSwitcherModule,
+  SkeletonModule,
 ]
 
 const CarbonIconModules = [
@@ -175,6 +192,15 @@ const CarbonIconModules = [
   TextCreationModule,
   TrashCanModule,
   MenuModule,
+  RadioButtonModule,
+  RadioButtonCheckedModule,
+  SettingsAdjustModule,
+  SettingsModule,
+  CheckboxCheckedModule,
+  CloudAppModule,
+  BullhornModule,
+  BuildingInsights_1Module,
+  TagModuleIcon,
 ]
 
 const Components = [
@@ -191,6 +217,9 @@ const Components = [
   AppHeaderComponent,
   AppHeaderTitleComponent,
   AppHeaderToolsComponent,
+  AppThemeSettingsComponent,
+  AppLayoutHeaderComponent,
+  AppSearchComponent,
 ]
 
 @NgModule({

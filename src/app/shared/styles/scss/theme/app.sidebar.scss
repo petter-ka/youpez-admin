@@ -6,20 +6,37 @@
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: #0f0f13;
+  background: var(--theme-main-sidebar--background);
   padding: 0;
-  color: #808080;
+  color: var(--theme-main-sidebar--color);
+  border-right: 1px solid var(--theme-main-sidebar--border-color);
 
   .app-sidebar__logo {
     padding: 0 1.1rem 0 1.1rem;
-    background-color: #27272b;
+    background: var(--theme-main-sidebar--logo-background);
     height: 65px;
+    position: relative;
     @extend .app-row;
     @extend .app-row--center;
+    border-bottom: 1px solid var(--theme-main-sidebar--logo-border);
 
     img {
+      cursor: pointer;
       margin-top: 7px;
-      width: 160px;
+      width: 145px;
+    }
+  }
+
+  .app-sidebar__toggle-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    svg {
+      fill: var(--theme-main-sidebar--toggle);
     }
   }
 
@@ -41,10 +58,8 @@
       margin: 16px 25px 3px 20px;
       letter-spacing: 1px;
       font-size: 12px;
-
       cursor: pointer;
       text-transform: uppercase;
-
       @extend .app-row;
       @extend .app-row--center;
 
@@ -62,7 +77,7 @@
         opacity: .8;
 
         svg {
-          fill: #808080;
+          fill: var(--theme-main-sidebar--color);
         }
       }
     }
@@ -79,26 +94,32 @@
         outline: none;
         transition: .1s cubic-bezier(.35, 0, .35, 1);
         transition-property: all;
-
         @extend .app-row;
         @extend .app-row--center;
 
         &:hover {
-          background-color: #1f1f23;
-          color: #eaeaeb;
+          &:not(.app-sidebar__list__item__inner--disabled) {
+            background: var(--theme-main-sidebar--hover-background);
+            color: var(--theme-main-sidebar--active-color);
 
-          svg {
-            fill: #eaeaeb;
+            svg {
+              fill: var(--theme-main-sidebar--active-color);
+            }
           }
         }
 
         &.app-sidebar__list__item__inner--active {
-          background-color: #27272b;
-          color: #eaeaeb;
+          background: var(--theme-main-sidebar--active-background);
+          color: var(--theme-main-sidebar--active-color);
 
           svg {
-            fill: #eaeaeb;
+            fill: var(--theme-main-sidebar--active-color);
           }
+        }
+
+        &.app-sidebar__list__item__inner--disabled {
+          cursor: no-drop;
+          opacity: .7;
         }
       }
 
@@ -111,23 +132,21 @@
         }
 
         svg {
-          fill: #808080;
+          fill: var(--theme-main-sidebar--color);
         }
       }
 
       .app-sidebar__list__item__caret {
-        fill: #808080;
+        fill: var(--theme-main-sidebar--color);
         transition: .3s cubic-bezier(.35, 0, .35, 1);
         transition-property: all;
         transform: rotate(-90deg);
       }
 
-
       .app-sidebar__list__item__text {
         @extend .app-row__fill;
         @extend .text-overflow-ellipsis;
         line-height: 1rem;
-        //font-weight: 700;
       }
 
       .app-sidebar__list__item__badge {
@@ -176,16 +195,14 @@
       }
 
       &.app-sidebar__list__item--opened {
-
         & > .app-sidebar__list__item__inner {
-          background-color: #27272b;
-          color: #eaeaeb;
+          background: var(--theme-main-sidebar--hover-background);
+          color: var(--theme-main-sidebar--active-color);
 
           .app-sidebar__list__item__caret {
             transform: rotate(0deg);
           }
         }
-
 
         .app-sidebar__list__item__children {
           max-height: 3000px;
@@ -194,18 +211,14 @@
 
       &.app-sidebar__list__item--active-opened {
         & > .app-sidebar__list__item__inner {
-          background-color: #27272b;
-          color: #eaeaeb;
+          background: var(--theme-main-sidebar--hover-background);
+          color: var(--theme-main-sidebar--active-color);
 
           svg {
-            fill: #eaeaeb;
+            fill: var(--theme-main-sidebar--active-color);
           }
         }
       }
-
     }
-
   }
-
-
 }

@@ -18,6 +18,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     registerTheme('default', getDefaultEchartsTheme())
-    this.settingsService.setTheme('app-theme--default')
+    this.settingsService.setTheme('app-theme--light')
+    this.settingsService.setTheme('app-theme-sidebar--black')
+    this.settingsService.setTheme('app-theme-header--black')
+
   }
 }

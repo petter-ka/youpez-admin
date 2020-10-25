@@ -100,3 +100,40 @@
     color: black;
   }
 }
+
+@mixin theme-bg-helper($color,$name) {
+  .app-theme-bg--#{$name} {
+    background: $color;
+  }
+}
+
+@mixin set-white-logo() {
+  .app-sidebar__logo__black {
+    display: none;
+  }
+  .app-sidebar__logo__white {
+    display: block;
+  }
+  .app-layout__header__logo--white {
+    display: block;
+  }
+  .app-layout__header__logo--black {
+    display: none;
+  }
+}
+
+
+@mixin set-black-logo() {
+  .app-sidebar__logo__black {
+    display: block;
+  }
+  .app-sidebar__logo__white {
+    display: none;
+  }
+  .app-layout__header__logo--white {
+    display: none;
+  }
+  .app-layout__header__logo--black {
+    display: block;
+  }
+}

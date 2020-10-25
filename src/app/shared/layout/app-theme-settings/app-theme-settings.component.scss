@@ -1,0 +1,12 @@
+.app-theme-bg--block {
+  padding: 2px;
+  background: #fff;
+  border: 1px solid #ccc;
+/*  margin-right: 15px;
+  margin-bottom: 15px;*/
+
+  & > div {
+    height: 25px;
+    width: 100%;
+  }
+}

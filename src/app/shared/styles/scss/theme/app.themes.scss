@@ -1,18 +1,61 @@
 @import 'app.variables.scss';
 @import 'app.helpers';
 
-// LIGHT THEMES
-:root.app-theme--default {
+// LAYOUT THEMES
+:root.app-theme--light {
   @include spread-map($theme-map-light);
 }
 
-:root.app-theme-sidebar-light {
+// SIDEBAR THEMES
+:root.app-theme-sidebar--black {
+  @include set-white-logo();
+  @include spread-map($theme-sidebar-1);
+}
+
+:root.app-theme-sidebar--white {
+  @include set-black-logo();
+  @include spread-map($theme-sidebar-2);
+}
+
+:root.app-theme-sidebar--blue {
+  @include set-black-logo();
+  @include spread-map($theme-sidebar-3);
+}
+
+:root.app-theme-sidebar--grey {
+  @include set-black-logo();
+  @include spread-map($theme-sidebar-4);
+}
+
+:root.app-theme-sidebar--gradient {
+  @include set-black-logo();
+  @include spread-map($theme-sidebar-5);
+}
+
+:root {
+  @include theme-bg-helper(map-get($theme-sidebar-1, --theme-main-sidebar--background), black);
+  @include theme-bg-helper(map-get($theme-sidebar-2, --theme-main-sidebar--background), white);
+  @include theme-bg-helper(map-get($theme-sidebar-3, --theme-main-sidebar--background), blue);
+  @include theme-bg-helper(map-get($theme-sidebar-4, --theme-main-sidebar--background), grey);
+  @include theme-bg-helper(map-get($theme-sidebar-5, --theme-main-sidebar--background), gradient);
+}
+
+// HEADER THEMES
+:root.app-theme-header--black {
+  @include spread-map($theme-header-1);
+}
+
+:root.app-theme-header--white {
+  @include spread-map($theme-header-2);
+}
+
+/*:root.app-theme-sidebar-light {
   @include spread-map($theme-sidebar-light);
 }
 
 :root.app-theme-sub-sidebar-light {
   @include spread-map($theme-sub-sidebar-light);
-}
+}*/
 
 // DARK THEMES
 /*

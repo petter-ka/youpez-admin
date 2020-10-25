@@ -72,7 +72,7 @@ $borderColor: #e0e0e0;
   bottom: 0;
   transform: translateX(calc(-100% - 10px));
   z-index: 6;
-  border-right: 1px solid $borderColor;
+  border-right: 0 solid var(--theme-sidenav-border);
   display: none;
   background-color: var(--theme-background);
 
@@ -90,10 +90,6 @@ $borderColor: #e0e0e0;
     top: 10px;
     left: -30px;
     z-index: 100;
-  }
-
-  @include bemMod(light-border) {
-    border-color: #eee !important;
   }
 
   @media (max-width: 850px) {
@@ -119,12 +115,13 @@ $borderColor: #e0e0e0;
     transform: translateX(0);
   }
 
+
   @include bemMod(right) {
     right: 0;
     left: auto;
     transform: translateX(calc(100% + 10px));
     transition: transform 400ms cubic-bezier(.05, .74, .27, .99);
-    border-left: 3px solid $borderColor;
+    border-left: 0 solid var(--theme-sidenav-border);
     border-right: none;
 
     &.app-sidenav-v2--hoverAble {
@@ -149,7 +146,6 @@ $borderColor: #e0e0e0;
   }
 
   @include bemMod(left) {
-
     &.app-sidenav-v2--toggleBtn-always {
       .app-layout-btn__holder {
         left: -12px;
@@ -183,7 +179,7 @@ $borderColor: #e0e0e0;
     width: 100% !important;
     transform: translateY(calc(100% + 10px));
     transition: transform 400ms cubic-bezier(.05, .74, .27, .99);
-    border-bottom: 3px solid $borderColor;
+    border-bottom: 0 solid var(--theme-sidenav-border);
     border-right: none;
 
     &.app-sidenav-v2--toggleBtn-always {
@@ -221,7 +217,7 @@ $borderColor: #e0e0e0;
     width: 100% !important;
     transform: translateY(calc(100% + 10px));
     transition: transform 400ms cubic-bezier(.05, .74, .27, .99);
-    border-top: 3px solid $borderColor;
+    border-top: 0 solid var(--theme-sidenav-border);
     border-right: none;
 
     &.app-sidenav-v2--toggleBtn-always {
@@ -251,6 +247,14 @@ $borderColor: #e0e0e0;
         top: -4px;
       }
     }
+  }
+
+  @include bemMod(solid) {
+    border-width: 1px;
+  }
+
+  @include bemMod(panel) {
+    border-width: 4px;
   }
 }
 

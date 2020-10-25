@@ -41,10 +41,9 @@
   }
 
   &.app-main-header--border {
-    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+    border-bottom: 1px solid var(--theme-header-border);
   }
 }
-
 
 .app-header {
   position: relative;

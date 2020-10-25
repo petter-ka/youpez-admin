@@ -12,13 +12,12 @@ import {
 import {AppBreakpointService} from "../../../core/services/app-breakpoint.service"
 import {Subscription} from 'rxjs'
 import {ResizeEvent} from 'angular-resizable-element'
+import {PanelType} from "../app-sidenav-container/app-sidenav-container.component"
+import {AppSidenavService} from "../../../core/services/app-sidenav.service"
 
-export enum DirectionType {
-  left = 'left',
-  right = 'right',
-  top = 'top',
-  bottom = 'bottom'
-}
+export declare type DirectionType = 'left' | 'right' | 'bottom' | 'top'
+export declare type ModeType = 'over' | 'side'
+export declare type SizeType = 'md' | 'sm' | 'lg' | 'xl' | 'custom1' | 'sideBar1' | 'sideBar2' | 'xsm' | 'docs'
 
 @Component({
   selector: 'app-sidenav-v2',
@@ -28,9 +27,9 @@ export enum DirectionType {
 export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit, OnChanges, AfterViewInit, AfterViewChecked {
 
   @Input('opened') originalOpened: boolean
-  @Input('direction') direction: string = 'left' // right,left,bottom,top
-  @Input('size') size: string = 'md' //
-  @Input('mode') originalMode: string = 'over' // side,over
+  @Input('direction') direction: DirectionType = 'left'
+  @Input('size') size: SizeType = 'md'
+  @Input('mode') originalMode: ModeType = 'over'
   @Input('breakpoint') breakpoint: string = ''
   @Input('transparent') transparent: boolean = false
   @Input('toggleableBtn') toggleableBtn: boolean = false
@@ -40,6 +39,8 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
   @Input('optionalClass') optionalClass: string = ''
   @Input('initWidth') initWidth: string = ''
   @Input('hoverDelay') hoverDelay: number = 100
+
+  @Input('options') options: Object = null
 
   @Output('open') open: EventEmitter<any> = new EventEmitter<any>()
   @Output('close') close: EventEmitter<any> = new EventEmitter<any>()
@@ -85,37 +86,12 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
 
   constructor(public element: ElementRef,
               private appBreakpointService: AppBreakpointService,
-  ) {
+              private appSidenavService: AppSidenavService,) {
   }
 
   ngOnInit() {
-    if (this.initWidth) {
-      this.setWidth(this.initWidth)
-      this.setHeight(this.initWidth)
-    }
-    else {
-      this.setWidth(this.dimensions.width[this.size])
-      this.setHeight(this.dimensions.width[this.size])
-    }
+    this.firstInit()
 
-    this.mode = this.originalMode
-    this.hoverAble = this.originalHoverAble
-    this.opened = this.originalOpened
-
-    if (this.originalMode === 'side') {
-      if (this.direction === 'right') {
-        this.resizeEdges.left = true
-      }
-      if (this.direction === 'left') {
-        this.resizeEdges.right = true
-      }
-      if (this.direction === 'top') {
-        this.resizeEdges.bottom = true
-      }
-      if (this.direction === 'bottom') {
-        this.resizeEdges.top = true
-      }
-    }
 
     this.breakpointSub = this.appBreakpointService.$windowWidth
       .subscribe((width: any) => {
@@ -133,6 +109,38 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
           this.change.emit()
         }
       })
+  }
+
+  private firstInit() {
+    let {initWidth, size, originalMode, originalHoverAble, originalOpened, direction} = this
+
+    if (initWidth) {
+      this.setWidth(initWidth)
+      this.setHeight(initWidth)
+    }
+    else {
+      this.setWidth(this.dimensions.width[size])
+      this.setHeight(this.dimensions.width[size])
+    }
+
+    this.mode = originalMode
+    this.hoverAble = originalHoverAble
+    this.opened = originalOpened
+
+    if (originalMode === 'side') {
+      if (direction === 'right') {
+        this.resizeEdges.left = true
+      }
+      if (direction === 'left') {
+        this.resizeEdges.right = true
+      }
+      if (direction === 'top') {
+        this.resizeEdges.bottom = true
+      }
+      if (direction === 'bottom') {
+        this.resizeEdges.top = true
+      }
+    }
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -174,17 +182,13 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
 
   }
 
-  getMainCSSclass() {
-    return `app-sidenav-v2 ${this.optionalClass}`
-  }
-
   setWidth(width) {
     this.width = width
     if (Number(this.width) <= 200) {
       this.onClose()
-      setTimeout(()=>{
+      setTimeout(() => {
         this.width = '200'
-      },1000)
+      }, 1000)
     }
   }
 
@@ -196,8 +200,23 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
     this.change.emit()
   }
 
+  setPanelStyle(panel: PanelType) {
+    let panelCss = ''
+    if (panel === 'panel') {
+      panelCss = 'app-sidenav-v2--panel'
+    }
+    if (panel === 'solid') {
+      panelCss = 'app-sidenav-v2--solid'
+    }
+    this.optionalClass = this.optionalClass + ' ' + panelCss
+  }
+
   getWidth() {
     return this.width
+  }
+
+  getMainCSSclass() {
+    return `app-sidenav-v2 ${this.optionalClass}`
   }
 
   getHeight() {

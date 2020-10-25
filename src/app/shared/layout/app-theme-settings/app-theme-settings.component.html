@@ -1,0 +1,15 @@
+<div fxLayout="row wrap">
+  <ng-container *ngFor="let theme of sideBarThemes">
+    <div fxFlex="25%" class="app-theme-bg--block">
+      <div (click)="onSetSideBarTheme(theme.name)" class="app-theme-bg--{{theme.name}}"></div>
+    </div>
+  </ng-container>
+</div>
+
+<div>
+  <ng-container *ngFor="let theme of headerThemes">
+    <button (click)="onSetHeaderTheme(theme.name)">
+      {{theme.name}}
+    </button>
+  </ng-container>
+</div>

@@ -39,14 +39,14 @@ $appMainHeaderHeight: 48px;
     right: 0;
     left: 0;
     height: $appMainHeaderHeight;
-    background-color: #0f0f13;
-    color: #fff;
+    background: var(--theme-main-header--background);
+    color: var(--theme-main-header--color);
     z-index: 2;
     @extend .app-row;
     @extend .app-row--center;
 
     svg {
-      fill: #fff;
+      fill: var(--theme-main-header--color);
     }
 
     .app-layout__header__tools {
@@ -60,12 +60,12 @@ $appMainHeaderHeight: 48px;
     .app-layout__header__btn {
       outline: 0;
       border: 0;
-      background-color: transparent;
+      background: transparent;
       padding: 0 1rem;
       margin: 0;
       cursor: pointer;
       height: 100%;
-      color: #fff;
+      color: var(--theme-main-header--color);
 
       &.app-layout__header__btn--icon {
         padding: 0;
@@ -73,7 +73,11 @@ $appMainHeaderHeight: 48px;
       }
 
       &:hover {
-        background-color: rgb(191, 191, 191, 0.1);
+        background: var(--theme-main-header--hover-background);
+
+        svg {
+          fill: var(--theme-main-header--hover-color);
+        }
       }
 
       &.app-layout__header__btn--menu {

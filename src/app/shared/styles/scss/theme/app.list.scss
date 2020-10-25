@@ -6,9 +6,40 @@
   background-color: $appUIBg;
 }
 
+.app-list-header-alt {
+  padding: 0.5rem 1rem;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 1px solid $appBorderColor;
+}
+
+.app-list-header-title {
+  padding: 0.5rem 1rem;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 1px solid $appBorderColor;
+  background-color: $appUIBg;
+}
+
+.app-list-footer-alt {
+  padding: 0.5rem 1rem 0.2rem 1rem;
+  border-top: 1px solid $appBorderColor;
+}
+
 .app-list {
   position: relative;
   overflow: hidden;
+
+  .app-list__divider {
+    height: 0;
+    margin: .5rem 0;
+    overflow: hidden;
+    border-top: 1px solid $appBorderColor;
+  }
 
   .app-list__item {
     position: relative;
@@ -37,6 +68,33 @@
       }
     }
 
+    &.app-list__item--p {
+      .app-list__item__content {
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    &.app-list__item--p-alt {
+      .app-list__item__content {
+        padding: 0.2rem 0.4rem;
+      }
+
+      .app-list__item__prefix {
+        padding-left: 0.4rem;
+      }
+
+      .app-list__item__suffix {
+        padding-right: 0.5rem;
+      }
+    }
+
+
+    &.app-list__item--no-p {
+      .app-list__item__content {
+        padding: 0.75rem 0;
+      }
+    }
+
     &:last-child {
       .app-list__item__content:before {
         display: none;
@@ -50,9 +108,46 @@
     }
   }
 
+  &.app-list--p-notifications {
+    .app-list__item__content {
+      padding: 0.2rem 0.3rem;
+    }
+
+    .app-list__item__prefix {
+      padding-left: 0.5rem;
+    }
+
+    .app-list__item__suffix {
+      padding: 0 0.5rem;
+    }
+  }
+
+  &.app-list--p-messages {
+    .app-list__item__content {
+      padding: 0.5rem 0;
+      overflow: hidden;
+    }
+
+    .app-list__item__prefix {
+      padding: 0 0.5rem 0 1rem;
+    }
+
+    .app-list__item__suffix {
+      padding: 0 0.5rem;
+    }
+  }
+
   &.app-list--hover {
     .app-list__item:hover {
       background-color: $appHoverBg;
+    }
+  }
+
+  &.app-list--no-border {
+    .app-list__item__content {
+      &:before {
+        display: none;
+      }
     }
   }
 

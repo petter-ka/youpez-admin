@@ -3,54 +3,271 @@
     <div class="app-a-box app-scrollbar-fix">
       <ng-scrollbar>
         <div class="app-mini-sidebar__list">
-          <div class="app-mini-sidebar__list__item app-mini-sidebar__list__item__highlight">
-            <div class="app-mini-sidebar__list__item__pill">
+
+          <div (click)="onItemClick({key:'search'})"
+            class="app-mini-sidebar__list__item app-mini-sidebar__list__item__highlight">
+            <div class="app-mini-sidebar__list__item__pill"
+                 placement="right"
+                 container="body"
+                 ngbTooltip="Global search">
               <app-ibm-icon iconName="search" iconSize="24"></app-ibm-icon>
             </div>
           </div>
 
-          <div class="app-mini-sidebar__list__item">
-            <div class="app-mini-sidebar__list__item__pill">
-              <app-ibm-icon iconName="aperture" iconSize="24"></app-ibm-icon>
-            </div>
-          </div>
-          <div class="app-mini-sidebar__list__item">
-            <div class="app-mini-sidebar__list__item__pill">
+          <div class="app-mini-sidebar__list__item"
+               ngbDropdown
+               container="body">
+            <div class="app-mini-sidebar__list__item__pill"
+              (click)="onFakeLoading()"
+                 placement="right"
+                 container="body"
+                 ngbTooltip="Notifications"
+                 ngbDropdownToggle>
               <app-ibm-icon iconName="notification" iconSize="24"></app-ibm-icon>
             </div>
-          </div>
-          <div class="app-mini-sidebar__list__item">
-            <div class="app-mini-sidebar__list__item__pill">
-              <app-ibm-icon iconName="chat" iconSize="24"></app-ibm-icon>
+            <div ngbDropdownMenu class="relative">
+              <div fxLayout="column">
+                <div class="app-list-header-alt" ngbDropdownItem>
+                  <div class="flex justify-between items-center">
+                    <div>notifications</div>
+                    <div class="app-helper-text-01 app-color-danger">+ 12</div>
+                  </div>
+                </div>
+                <div fxFlex>
+                  <div class="relative" style="height: 220px;width: 300px">
+                    <div class="app-a-box app-scrollbar-fix">
+                      <ng-scrollbar>
+                        <ng-container *ngIf="loading">
+                          <div class="p-4">
+                            <ibm-skeleton-text
+                              [lines]="12"
+                              [minLineWidth]="70"
+                              [maxLineWidth]="220">
+                            </ibm-skeleton-text>
+                          </div>
+                        </ng-container>
+
+                        <ng-container *ngIf="!loading">
+                          <div class="app-list app-list--hover app-list--no-border
+                          app-list--p-notifications app-list--select app-helper-text-01">
+                            <ng-container *ngFor="let item of notifications">
+                              <div class="app-list__item" ngbDropdownItem>
+                                <div class="app-list__item__prefix">
+                                  <ng-container *ngIf="item.level === 'bug'">
+                                    <ibm-tag type="red">bug</ibm-tag>
+                                  </ng-container>
+                                  <ng-container *ngIf="item.level === 'feature'">
+                                    <ibm-tag type="blue">feature</ibm-tag>
+                                  </ng-container>
+                                  <ng-container *ngIf="item.level === 'accept'">
+                                    <ibm-tag type="green">accept</ibm-tag>
+                                  </ng-container>
+                                  <ng-container *ngIf="item.level === 'default'">
+                                    <ibm-tag type="cool-gray">info</ibm-tag>
+                                  </ng-container>
+                                </div>
+                                <div class="app-list__item__content overflow-hidden">
+                                  <div class="truncate">{{item.text}}</div>
+                                </div>
+                                <div class="app-list__item__suffix text-muted">
+                                  <div>{{item.date}}</div>
+                                </div>
+                              </div>
+                            </ng-container>
+                          </div>
+                        </ng-container>
+                      </ng-scrollbar>
+                    </div>
+                  </div>
+                </div>
+                <div class="app-list-footer-alt text-center app-helper-text-01" ngbDropdownItem>
+                  <a>See all</a>
+                </div>
+              </div>
             </div>
           </div>
+
+          <div class="app-mini-sidebar__list__item"
+               ngbDropdown
+               container="body">
+            <div class="app-mini-sidebar__list__item__pill"
+                (click)="onFakeLoading()"
+                 placement="right"
+                 container="body"
+                 ngbTooltip="Messages"
+                 ngbDropdownToggle>
+              <app-ibm-icon iconName="chat" iconSize="24"></app-ibm-icon>
+            </div>
+            <div ngbDropdownMenu class="relative">
+              <div fxLayout="column">
+                <div class="app-list-header-alt" ngbDropdownItem>
+                  <div class="flex justify-between items-center">
+                    <div>Messages</div>
+                    <div class="app-helper-text-01 app-color-success">+ 5</div>
+                  </div>
+                </div>
+                <div fxFlex>
+                  <div class="relative" style="height: 220px;width: 300px">
+                    <div class="app-a-box app-scrollbar-fix">
+                      <ng-scrollbar>
+                        <ng-container *ngIf="loading">
+                          <div class="p-4">
+                            <ibm-skeleton-text
+                              [lines]="12"
+                              [minLineWidth]="70"
+                              [maxLineWidth]="220">
+                            </ibm-skeleton-text>
+                          </div>
+                        </ng-container>
+
+                        <ng-container *ngIf="!loading">
+                          <div class="app-list app-list--hover app-list--select app-list--p-messages">
+                            <ng-container *ngFor="let item of messages">
+                              <div class="app-list__item" ngbDropdownItem>
+                                <div class="app-list__item__prefix">
+                                  <img [src]="item.avatar" class="w-8 h-8 rounded-full"/>
+                                </div>
+                                <div class="app-list__item__content">
+                                  <div class="overflow-hidden">
+                                    <div class="mb-1">
+                                      <span class="app-productive-heading-01">{{item.name}}</span>
+                                      <span class="app-label-01 ml-2">{{item.date}}</span>
+                                    </div>
+                                    <div class="app-helper-text-01 truncate">{{item.text}}</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </ng-container>
+                          </div>
+                        </ng-container>
+                      </ng-scrollbar>
+                    </div>
+                  </div>
+                </div>
+                <div class="app-list-footer-alt text-center app-helper-text-01" ngbDropdownItem>
+                  <a>See all</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div (click)="onItemClick({key:'theme'})" class="app-mini-sidebar__list__item">
+            <div class="app-mini-sidebar__list__item__pill"
+                 placement="right"
+                 container="body"
+                 ngbTooltip="Theme settings">
+              <app-ibm-icon iconName="settingsAdjust" iconSize="24"></app-ibm-icon>
+            </div>
+          </div>
+
         </div>
       </ng-scrollbar>
     </div>
   </div>
 
   <div class="app-mini-sidebar__list">
-    <div class="app-mini-sidebar__list__item">
-      <div class="app-mini-sidebar__list__item__pill">
-        <app-ibm-icon iconName="help" iconSize="24"></app-ibm-icon>
-      </div>
-    </div>
-    <div class="app-mini-sidebar__list__item" ngbDropdown container="body">
+
+    <div class="app-mini-sidebar__list__item"
+         ngbDropdown
+         container="body">
       <div class="app-mini-sidebar__list__item__pill"
            placement="right"
            container="body"
-           ngbTooltip="Tooltip on right"
+           ngbTooltip="Help"
+           ngbDropdownToggle>
+        <app-ibm-icon iconName="help" iconSize="24"></app-ibm-icon>
+      </div>
+      <div ngbDropdownMenu>
+        <div class="app-list app-list--hover app-list--no-border app-list--select">
+          <div class="app-list__item" ngbDropdownItem>
+            <div class="px-2">
+              <app-ibm-icon iconName="email" iconSize="20"></app-ibm-icon>
+            </div>
+            <div class="app-list__item__content">
+              Contact Support
+            </div>
+          </div>
+          <div class="app-list__item" ngbDropdownItem>
+            <div class="px-2">
+              <app-ibm-icon iconName="cloudApp" iconSize="20"></app-ibm-icon>
+            </div>
+            <div class="app-list__item__content">
+              Feature Request
+            </div>
+          </div>
+          <div class="app-list__item" ngbDropdownItem>
+            <div class="px-2">
+              <app-ibm-icon iconName="bullhorn" iconSize="20"></app-ibm-icon>
+            </div>
+            <div class="app-list__item__content">
+              What's new
+            </div>
+          </div>
+          <div class="app-list__item" ngbDropdownItem>
+            <div class="px-2">
+              <app-ibm-icon iconName="buildingInsights1" iconSize="20"></app-ibm-icon>
+            </div>
+            <div class="app-list__item__content">
+              About
+            </div>
+          </div>
+          <div class="app-list__item" ngbDropdownItem>
+            <div class="px-2">
+              <app-ibm-icon iconName="tag" iconSize="20"></app-ibm-icon>
+            </div>
+            <div class="app-list__item__content">
+              Pricing
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-mini-sidebar__list__item"
+         ngbDropdown
+         container="body">
+      <div class="app-mini-sidebar__list__item__pill"
+           placement="right"
+           container="body"
+           ngbTooltip="Account details"
            ngbDropdownToggle>
         <app-ibm-icon iconName="user" iconSize="24"></app-ibm-icon>
       </div>
-      <div ngbDropdownMenu aria-labelledby="dropdownForm1">
-        <div style="height: 300px;width: 200px">
-          <div>Contact Support</div>
-          <div>Feature Request</div>
-          <div>Documentation</div>
-          <div>What's new</div>
-          <div>About</div>
-          <div>Pricing</div>
+      <div ngbDropdownMenu>
+        <div class="app-list app-list--hover app-list--select app-list--no-border app-list--p">
+          <div class="app-list__item app-list__item--no-p" ngbDropdownItem>
+            <div class="px-2">
+              <img class="w-10 h-10 rounded-full" src="/assets/img/avatar/avatar2.jpg"/>
+            </div>
+            <div class="app-list__item__content mr-4">
+              <div>
+                <div class="app-helper-text-01">Signed in as</div>
+                <div class="app-expressive-heading-02">David Robson</div>
+              </div>
+            </div>
+          </div>
+          <div class="app-list__divider"></div>
+          <div class="app-list__item" ngbDropdownItem>
+            <div class="app-list__item__content">
+              Profile
+            </div>
+          </div>
+          <div class="app-list__item" ngbDropdownItem>
+            <div class="app-list__item__content">
+              Plan & Upgrade
+            </div>
+          </div>
+          <div class="app-list__item" ngbDropdownItem>
+            <div class="app-list__item__content">
+              Settings
+            </div>
+          </div>
+          <div class="app-list__divider"></div>
+          <div class="app-list__item" ngbDropdownItem>
+            <div class="app-list__item__content">
+              Logout
+            </div>
+          </div>
         </div>
       </div>
     </div>

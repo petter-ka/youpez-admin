@@ -1,10 +1,23 @@
 <div fxFill fxLayout="column" class="app-sidebar app-scrollbar-fix">
   <div class="app-sidebar__logo">
     <img class="app-sidebar__logo__white" src="/assets/img/logo/logo-big-white.png"/>
+    <img class="app-sidebar__logo__black" src="/assets/img/logo/logo-big-black.png"/>
+    <ng-container *ngIf="opened">
+      <div (click)="onSideBarToggle()" class="app-sidebar__toggle-btn">
+        <app-ibm-icon iconName="radioButtonChecked" iconSize="16"></app-ibm-icon>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!opened">
+      <div (click)="onSideBarToggle()" class="app-sidebar__toggle-btn">
+        <app-ibm-icon iconName="radioButton" iconSize="16"></app-ibm-icon>
+      </div>
+    </ng-container>
   </div>
   <div fxFlex class="relative">
     <ng-scrollbar>
-      <app-menu [menu]="menu" (groupToggle)="onGroupToggle($event)"></app-menu>
+      <app-menu
+        [menu]="menu"
+        (groupToggle)="onGroupToggle($event)"></app-menu>
     </ng-scrollbar>
   </div>
 </div>

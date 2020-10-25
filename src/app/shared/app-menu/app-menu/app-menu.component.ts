@@ -10,6 +10,7 @@ export class AppMenuComponent implements OnInit {
 
   @ViewChildren('menuLevel') menuLevel: QueryList<AppMenuItemComponent>
   @Input() menu: Array<any> = []
+  @Input() opened: boolean = true
 
   @Output() groupToggle: EventEmitter<string> = new EventEmitter()
 
@@ -28,5 +29,4 @@ export class AppMenuComponent implements OnInit {
   onGroupToggle(groupName) {
     this.groupToggle.next(groupName)
   }
-
 }

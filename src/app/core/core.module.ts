@@ -4,6 +4,7 @@ import {CommonModule} from '@angular/common'
 import {AppBreakpointService} from "./services/app-breakpoint.service"
 import {WindowRefService} from "./services/window-ref.service"
 import {SettingsService} from "./services/settings.service"
+import {AppSidenavService} from "./services/app-sidenav.service"
 
 export function throwIfAlreadyLoaded(parentModule: any, moduleName: string) {
   if (parentModule) {
@@ -16,6 +17,7 @@ export function throwIfAlreadyLoaded(parentModule: any, moduleName: string) {
     AppBreakpointService,
     WindowRefService,
     SettingsService,
+    AppSidenavService,
   ],
   imports: [
     CommonModule

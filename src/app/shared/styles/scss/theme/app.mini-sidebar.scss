@@ -6,7 +6,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #19191e;
+  background-color: var(--theme-main-header--background);
+  border-right: 1px solid var(--theme-main-header--border-color);
 
   .app-mini-sidebar__list {
     position: relative;
@@ -28,7 +29,6 @@
         @extend .app-row;
         @extend .app-row--center;
         @extend .app-row--x-center;
-
         text-align: center;
         padding: 3px;
         cursor: pointer;
@@ -41,14 +41,26 @@
         top: 0;
 
         svg {
-          fill: #b7b7b8;
+          fill: var(--theme-main-header--color);
         }
 
         &:hover {
-          background-color: #27272b;
+          background-color: var(--theme-main-header--hover-background);
 
           svg {
-            fill: #f6f6f7;
+            fill: var(--theme-main-header--hover-color);
+          }
+        }
+      }
+
+      &.dropdown {
+        &.show {
+          .app-mini-sidebar__list__item__pill {
+            background-color: var(--theme-main-header--hover-background);
+
+            svg {
+              fill: var(--theme-main-header--hover-color);
+            }
           }
         }
       }

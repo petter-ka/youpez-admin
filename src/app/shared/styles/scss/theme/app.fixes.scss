@@ -55,27 +55,20 @@
   }
 }
 
-
-.dropdown-menu {
-  text-align: left;
-  list-style: none;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, .15);
-  border-radius: .25rem;
-  display: none;
-
-  &.show {
-    display: block;
-  }
+.bx--tag {
+  white-space: nowrap;
 }
 
 .tooltip {
+  position: absolute;
   z-index: 1070;
   display: block;
   margin: 0;
+  font-style: normal;
   font-weight: 400;
   line-height: 1.5;
+  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-shadow: none;
   text-transform: none;
@@ -86,6 +79,85 @@
   line-break: auto;
   font-size: .875rem;
   word-wrap: break-word;
+  opacity: 0
+}
+
+.tooltip.show {
+  opacity: .9
+}
+
+.tooltip .arrow {
+  position: absolute;
+  display: block;
+  width: .8rem;
+  height: .4rem
+}
+
+.tooltip .arrow:before {
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-style: solid
+}
+
+.bs-tooltip-auto[x-placement^=top], .bs-tooltip-top {
+  padding: .4rem 0
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow, .bs-tooltip-top .arrow {
+  bottom: 0
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow:before, .bs-tooltip-top .arrow:before {
+  top: 0;
+  border-width: .4rem .4rem 0;
+  border-top-color: #000
+}
+
+.bs-tooltip-auto[x-placement^=right], .bs-tooltip-right {
+  padding: 0 .4rem
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow, .bs-tooltip-right .arrow {
+  left: 0;
+  width: .4rem;
+  height: .8rem
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow:before, .bs-tooltip-right .arrow:before {
+  right: 0;
+  border-width: .4rem .4rem .4rem 0;
+  border-right-color: #000
+}
+
+.bs-tooltip-auto[x-placement^=bottom], .bs-tooltip-bottom {
+  padding: .4rem 0
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow, .bs-tooltip-bottom .arrow {
+  top: 0
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow:before, .bs-tooltip-bottom .arrow:before {
+  bottom: 0;
+  border-width: 0 .4rem .4rem;
+  border-bottom-color: #000
+}
+
+.bs-tooltip-auto[x-placement^=left], .bs-tooltip-left {
+  padding: 0 .4rem
+}
+
+.bs-tooltip-auto[x-placement^=left] .arrow, .bs-tooltip-left .arrow {
+  right: 0;
+  width: .4rem;
+  height: .8rem
+}
+
+.bs-tooltip-auto[x-placement^=left] .arrow:before, .bs-tooltip-left .arrow:before {
+  left: 0;
+  border-width: .4rem 0 .4rem .4rem;
+  border-left-color: #000
 }
 
 .tooltip-inner {
@@ -94,15 +166,107 @@
   color: #fff;
   text-align: center;
   background-color: #000;
+  border-radius: .25rem
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .1rem 0 0;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .05);
   border-radius: .25rem;
+
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15), 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+
+  &.show {
+    display: block;
+  }
 }
 
-.material-icons-two-tone {
+.dropdown-menu-left {
+  right: auto;
+  left: 0
 }
 
-.material-icons,
-.material-icons-outlined,
-.material-icons-round,
-.material-icons-sharp {
+.dropdown-menu-right {
+  right: 0;
+  left: auto
+}
 
+@media (min-width: 576px) {
+  .dropdown-menu-sm-left {
+    right: auto;
+    left: 0
+  }
+
+  .dropdown-menu-sm-right {
+    right: 0;
+    left: auto
+  }
+}
+
+@media (min-width: 768px) {
+  .dropdown-menu-md-left {
+    right: auto;
+    left: 0
+  }
+
+  .dropdown-menu-md-right {
+    right: 0;
+    left: auto
+  }
+}
+
+@media (min-width: 992px) {
+  .dropdown-menu-lg-left {
+    right: auto;
+    left: 0
+  }
+
+  .dropdown-menu-lg-right {
+    right: 0;
+    left: auto
+  }
+}
+
+@media (min-width: 1200px) {
+  .dropdown-menu-xl-left {
+    right: auto;
+    left: 0
+  }
+
+  .dropdown-menu-xl-right {
+    right: 0;
+    left: auto
+  }
+}
+
+.dropup .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: .125rem
+}
+
+.dropdown-menu[x-placement^=bottom], .dropdown-menu[x-placement^=left], .dropdown-menu[x-placement^=right], .dropdown-menu[x-placement^=top] {
+  right: auto;
+  bottom: auto
+}
+
+.dropdown-divider {
+  height: 0;
+  margin: .5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef
 }

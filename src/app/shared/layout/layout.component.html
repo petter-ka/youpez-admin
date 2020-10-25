@@ -1,43 +1,60 @@
 <div class="app-layout" [ngClass.lt-md]="{'app-layout--show-header': true}">
 
-  <div class="app-layout__header">
-    <button class="app-layout__header__btn app-layout__header__btn--menu">
-      <app-ibm-icon iconName="menu"></app-ibm-icon>
-    </button>
-    <img class="app-layout__header__logo app-layout__header__logo--white" src="/assets/img/logo/logo-big-white.png"/>
-    <div class="app-layout__header__tools">
-      <button class="app-layout__header__btn app-layout__header__btn--icon">
-        <app-ibm-icon iconName="notification" iconSize="24"></app-ibm-icon>
+  <ng-container *ngIf="searchVisible">
+    <app-search (close)="onSearchClose($event)"></app-search>
+  </ng-container>
+
+  <app-sidenav-container>
+    <app-sidenav-v2
+      (close)="onCloseSettings($event)"
+      [opened]="settingsVisible"
+      [direction]="'right'"
+      [mode]="'over'"
+      [size]="'md'">
+      <app-theme-settings></app-theme-settings>
+    </app-sidenav-v2>
+
+    <div class="app-layout__header">
+      <button (click)="onSideBarToggle($event)" class="app-layout__header__btn app-layout__header__btn--menu">
+        <app-ibm-icon iconName="menu"></app-ibm-icon>
       </button>
-      <button class="app-layout__header__btn app-layout__header__btn--icon">
-        <app-ibm-icon iconName="user" iconSize="24"></app-ibm-icon>
-      </button>
-    </div>
-  </div>
-
-  <div class="app-layout__mini-sidebar">
-    <div class="app-mini-sidebar">
-      <app-layout-mini-sidebar></app-layout-mini-sidebar>
-    </div>
-  </div>
-
-  <div class="app-layout__content">
-    <app-sidenav-container fxFill>
-      <app-sidenav-v2
-        [breakpoint]="'md'"
-        [opened]="true"
-        [hoverAble]="true"
-        [mode]="'side'"
-        [toggleableBtn]="true"
-        [size]="'sideBar1'">
-        <app-layout-sidebar></app-layout-sidebar>
-      </app-sidenav-v2>
-
-      <div fxFill class="app-layout__content__inner"
-        [@defaultRouterAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
-        <router-outlet #outlet="outlet"></router-outlet>
+      <img class="app-layout__header__logo app-layout__header__logo--white" src="/assets/img/logo/logo-big-white.png"/>
+      <img class="app-layout__header__logo app-layout__header__logo--black" src="/assets/img/logo/logo-big-black.png"/>
+      <div class="app-layout__header__tools">
+        <button class="app-layout__header__btn app-layout__header__btn--icon">
+          <app-ibm-icon iconName="notification" iconSize="24"></app-ibm-icon>
+        </button>
+        <button class="app-layout__header__btn app-layout__header__btn--icon">
+          <app-ibm-icon iconName="user" iconSize="24"></app-ibm-icon>
+        </button>
       </div>
-    </app-sidenav-container>
-  </div>
+    </div>
+
+    <div class="app-layout__mini-sidebar">
+      <div class="app-mini-sidebar">
+        <app-layout-mini-sidebar (itemClick)="onMiniSidebarItemClick($event)"></app-layout-mini-sidebar>
+      </div>
+    </div>
+
+    <div class="app-layout__content">
+      <app-sidenav-container>
+        <app-sidenav-v2
+          [breakpoint]="mainSidebarOpts.breakpoint"
+          [opened]="mainSidebarOpts.opened"
+          [hoverAble]="mainSidebarOpts.hoverAble"
+          [mode]="mainSidebarOpts.mode"
+          [toggleableBtn]="mainSidebarOpts.toggleableBtn"
+          [size]="mainSidebarOpts.size">
+          <app-layout-sidebar [opened]="mainSidebarOpts.opened" (sideBarToggle)="onSideBarToggle($event)"></app-layout-sidebar>
+        </app-sidenav-v2>
+
+        <div fxFill class="app-layout__content__inner"
+          [@defaultRouterAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
+          <router-outlet #outlet="outlet"></router-outlet>
+        </div>
+      </app-sidenav-container>
+
+    </div>
+  </app-sidenav-container>
 </div>
 

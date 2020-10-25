@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core'
+import {Component, EventEmitter, OnInit, Output, Input} from '@angular/core'
 
 @Component({
   selector: 'app-layout-sidebar',
@@ -6,6 +6,9 @@ import {Component, OnInit} from '@angular/core'
   styleUrls: ['./layout-sidebar.component.scss']
 })
 export class LayoutSidebarComponent implements OnInit {
+
+  @Input() opened: boolean = false
+  @Output() sideBarToggle: EventEmitter<boolean> = new EventEmitter()
 
   public menu = [
     {
@@ -290,6 +293,46 @@ export class LayoutSidebarComponent implements OnInit {
           },
         }
       ]
+    },
+    {
+      groupName: 'Menu options',
+      opened: true,
+      children: [
+        {
+          name: 'Disabled Item',
+          disabled: true,
+          prefix: {
+            type: 'ibm-icon',
+            name: 'phraseSentiment',
+          },
+        },
+        {
+          name: 'Disabled Group',
+          disabled: true,
+          prefix: {
+            type: 'ibm-icon',
+            name: 'phraseSentiment',
+          },
+          children: []
+        },
+        {
+          name: 'Disabled Subitem',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'phraseSentiment',
+          },
+          children: [
+            {
+              name: 'Disabled Item',
+              disabled: true,
+            }
+          ]
+        },
+        {
+          name: 'No Icon',
+          url:'/app'
+        },
+      ]
     }
   ]
 
@@ -306,6 +349,10 @@ export class LayoutSidebarComponent implements OnInit {
       }
       return item
     })
+  }
+
+  onSideBarToggle() {
+    this.sideBarToggle.next(true)
   }
 
 }

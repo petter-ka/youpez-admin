@@ -12,6 +12,8 @@ import {AppSidenavComponent} from '../app-sidenav/app-sidenav.component'
 import {Subscription} from 'rxjs'
 import {WindowRefService} from "../../../core/services/window-ref.service"
 
+export declare type PanelType = '' | 'panel' | 'solid'
+
 @Component({
   selector: 'app-sidenav-container',
   templateUrl: './app-sidenav-container.component.html',
@@ -22,6 +24,7 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
   @ContentChildren(AppSidenavComponent) sidenavs: QueryList<AppSidenavComponent>
 
   @Input() overlayOpacity: number = 1
+  @Input() panel: PanelType = ''
 
   public overlayVisible: boolean = false
   public sideMode: boolean = false
@@ -57,6 +60,7 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
         this.setContent(sidenav, changes)
       })
       this.setContent(sidenav)
+      this.setStyleClass(sidenav)
     })
   }
 
@@ -75,17 +79,23 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
     }
   }
 
+  setStyleClass(sidenav: AppSidenavComponent) {
+    sidenav.setPanelStyle(this.panel)
+  }
+
   setContent(sidenav: AppSidenavComponent, options = null) {
     const mode = sidenav.mode
     const direction = sidenav.direction
     const opened = sidenav.opened
     const hoverAble = sidenav.hoverAble
+    const calcWidthMargin = `${opened ? sidenav.getWidth() : (hoverAble ? 20 : 0)}px`
+    const calcHeightMargin = `${opened ? sidenav.getHeight() : (hoverAble ? 20 : 0)}px`
 
     this.toggleOverlay(sidenav.opened, sidenav.mode)
 
     if (direction === 'right') {
       if (mode === 'side') {
-        this.contentMargins.right = `${opened ? sidenav.getWidth() : (hoverAble ? 20 : 0)}px`
+        this.contentMargins.right = calcWidthMargin
       }
       else {
         this.contentMargins.right = `0px`
@@ -93,7 +103,7 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
     }
     if (direction === 'left') {
       if (mode === 'side') {
-        this.contentMargins.left = `${opened ? sidenav.getWidth() : (hoverAble ? 20 : 0)}px`
+        this.contentMargins.left = calcWidthMargin
       }
       else {
         this.contentMargins.left = `0px`
@@ -101,7 +111,7 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
     }
     if (direction === 'top') {
       if (mode === 'side') {
-        this.contentMargins.top = `${opened ? sidenav.getHeight() : (hoverAble ? 20 : 0)}px`
+        this.contentMargins.top = calcHeightMargin
       }
       else {
         this.contentMargins.top = `0px`
@@ -109,7 +119,7 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
     }
     if (direction === 'bottom') {
       if (mode === 'side') {
-        this.contentMargins.bottom = `${opened ? sidenav.getHeight() : (hoverAble ? 20 : 0)}px`
+        this.contentMargins.bottom = calcHeightMargin
       }
       else {
         this.contentMargins.bottom = `0px`
@@ -124,22 +134,6 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
     else {
       this.windowRefService.callWindowResize()
     }
-  }
-
-  setRight() {
-
-  }
-
-  setLeft() {
-
-  }
-
-  setTop() {
-
-  }
-
-  setBottom() {
-
   }
 
   toggleOverlay(bool, mode) {
