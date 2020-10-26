@@ -1,1 +1,105 @@
-<p>scrum-board works!</p>
+<div fxFill fxLayout="column">
+  <app-header>
+    <app-header-title>
+      Youpez 2020 Sprint W31-32
+    </app-header-title>
+    <app-header-tools>
+      <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+        <svg class="bx--btn__icon" ibmIconCloudDownload size="32"></svg>
+      </button>
+      <button ibmButton="primary" size="sm">
+        Complete sprint
+        <svg class="bx--btn__icon" ibmIconCheckmarkOutline size="20"></svg>
+      </button>
+    </app-header-tools>
+  </app-header>
+  <div class="p-4 flex items-center">
+    <div class="app-ibm-btn-merge mr-2">
+      <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+        <svg class="bx--btn__icon" ibmIconRenew size="32"></svg>
+      </button>
+    </div>
+    <div class="mr-3" style="width:170px">
+      <ibm-search placeholder="Search task..." size="sm"></ibm-search>
+    </div>
+    <div class="app-img-select mr-2">
+      <ng-container *ngFor="let member of teamMembers;let i=index">
+        <img [ngClass]="{'app-img-select__item--selected': member.id === selectedId}"
+             (click)="onSelectMember(member.id)"
+             [src]="member.avatar"
+             [style.z-index]="member.id === selectedId ? teamMembers.length + 1 : teamMembers.length - i"
+             placement="bottom"
+             container="body"
+             [ngbTooltip]="member.name"
+             class="app-img-select__item w-10 rounded-full z-50"/>
+      </ng-container>
+    </div>
+    <div class="flex flex-1 justify-end">
+      <button ibmButton="tertiary" size="sm">
+        Quick filters
+        <svg class="bx--btn__icon" ibmIconArrowDown size="20"></svg>
+      </button>
+    </div>
+  </div>
+
+  <div fxFlex class="relative ml-4">
+    <div class="app-a-box app-scrollbar-fix--horizontal">
+      <ng-scrollbar track="horizontal">
+        <div fxLayout="row" fxFill cdkDropListGroup>
+          <ng-container *ngFor="let board of boards">
+            <div fxFlex="320px"
+                 class="relative">
+              <div fxFill fxLayout="column" style="background-color: #eee;padding-right:0.25rem;padding-left:0.25rem;border-right:1px solid #ccc;">
+                <div class="flex justify-between app-productive-heading-01 px-2 py-2">
+                  <span>{{board.name}}</span>
+                  <span class="text-muted">{{board.tasks.length}}</span>
+                </div>
+                <div fxFlex class="relative">
+                  <div class="app-a-box app-scrollbar-fix"
+                       cdkDropList
+                       [cdkDropListData]="board.tasks"
+                       (cdkDropListDropped)="drop($event)">
+                    <ng-scrollbar track="vertical">
+                      <ng-container *ngFor="let task of board.tasks">
+                        <div class="app-card app-card--bt-danger-vertical cursor-move"
+                             [ngClass]="{'app-card--bt-danger-vertical': task.important}"
+                             cdkDrag
+                             style="">
+                          <div class="app-card__content">
+                            <div class="app-expressive-heading-02 mb-4">
+                              {{task.description}}
+                            </div>
+                            <div class="flex items-center mb-1">
+                              <app-ibm-icon iconName="time" iconSize="16"></app-ibm-icon> <span class="ml-1">26.10.2020</span>
+                            </div>
+                            <div class="app-label-01">
+                              reporter: <span class="font-bold">Jon Doe</span>
+                            </div>
+                            <div class="flex items-center mt-4">
+                              <ng-container *ngIf="!task.bug">
+                                <ibm-tag class="app-ibm-tag-list" type="blue">Task</ibm-tag>
+                              </ng-container>
+                              <ng-container *ngIf="task.bug">
+                                <ibm-tag class="app-ibm-tag-list" type="red">Bug</ibm-tag>
+                              </ng-container>
+
+                              <ibm-tag class="app-ibm-tag-list" type="cool-gray">2h 50m</ibm-tag>
+                              <div class="flex flex-1 items-center justify-end">
+                                <div class="mr-2">AA-2052</div>
+                                <img class="w-6 h-6 rounded-full" [src]="getUserAvatarById(task.userId)"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </ng-container>
+                    </ng-scrollbar>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </ng-scrollbar>
+    </div>
+  </div>
+</div>

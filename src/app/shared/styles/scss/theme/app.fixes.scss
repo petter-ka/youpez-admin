@@ -8,6 +8,22 @@
   }
 }
 
+.app-scrollbar-fix--horizontal {
+  .ng-scrollbar {
+    width: 100% !important;
+    height: 100% !important;
+
+    .ng-scroll-content {
+      height: 100% !important;
+    }
+  }
+
+  .ng-scroll-content {
+    display: block !important;
+  }
+
+}
+
 .app-ibm-table-fix {
   overflow: hidden;
 
@@ -31,6 +47,14 @@
       }
     }
   }
+}
+
+.app-ibm-tag-no-m {
+  margin: 0 !important;
+}
+
+.app-ibm-tag-list {
+  margin: 0 .25rem 0 0 !important;
 }
 
 .app-ibm-toggle-fix {

@@ -16,6 +16,18 @@
   }
 }
 
+@mixin appCardBtVertical() {
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: transparent;
+    content: '';
+  }
+}
+
 .app-card-row {
   margin-bottom: 1rem;
   padding: 1rem;
@@ -35,6 +47,15 @@
 
   &.app-card--bt-success {
     @include appCardBt();
+
+    &:before {
+      background-color: $appColorSuccess;
+    }
+  }
+
+  &.app-card--bt-danger-success {
+    @include appCardBtVertical();
+
     &:before {
       background-color: $appColorSuccess;
     }
@@ -42,6 +63,15 @@
 
   &.app-card--bt-danger {
     @include appCardBt();
+
+    &:before {
+      background-color: $appColorDanger;
+    }
+  }
+
+  &.app-card--bt-danger-vertical {
+    @include appCardBtVertical();
+
     &:before {
       background-color: $appColorDanger;
     }
@@ -49,6 +79,15 @@
 
   &.app-card--bt-warning {
     @include appCardBt();
+
+    &:before {
+      background-color: $appColorWarning;
+    }
+  }
+
+  &.app-card--bt-danger-warning {
+    @include appCardBtVertical();
+
     &:before {
       background-color: $appColorWarning;
     }

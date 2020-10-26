@@ -27,6 +27,33 @@ body {
   bottom: 0;
 }
 
+.app-img-select {
+  .app-img-select__item {
+    position: relative;
+    cursor: pointer;
+    padding: 2px;
+    margin-left: -0.5rem;
+    background-color: #fff;
+    transition: .1s cubic-bezier(.35, 0, .35, 1);
+    transition-property: all;
+
+    &.app-img-select__item--selected {
+      border: 2px solid blue;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover{
+      z-index: 50 !important;
+      transform: translateY(-4px);
+    }
+  }
+
+}
+
+
 .app-inner-content {
   &.app-inner-content--default {
     padding: 1.1rem;

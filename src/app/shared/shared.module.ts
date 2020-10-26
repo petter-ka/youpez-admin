@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common'
 import {NavigationEnd, NavigationStart, Router, RouterModule} from '@angular/router'
 
 import {NgScrollbarModule} from 'ngx-scrollbar'
+import {DragDropModule} from '@angular/cdk/drag-drop'
 import {
   AddModule,
   CaretDownModule,
@@ -64,7 +65,7 @@ import {
   CloudAppModule,
   BullhornModule,
   BuildingInsights_1Module,
-  TagModule as TagModuleIcon,
+  TagModule as TagModuleIcon, TimeModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -107,8 +108,8 @@ import {AppHeaderComponent} from './layout/app-header/app-header.component'
 import {AppHeaderTitleComponent} from './layout/app-header/app-header-title/app-header-title.component'
 import {AppHeaderToolsComponent} from './layout/app-header/app-header-tools/app-header-tools.component'
 import {AppThemeSettingsComponent} from './layout/app-theme-settings/app-theme-settings.component'
-import {AppLayoutHeaderComponent} from './layout/app-layout-header/app-layout-header.component';
-import { AppSearchComponent } from './app-search/app-search.component'
+import {AppLayoutHeaderComponent} from './layout/app-layout-header/app-layout-header.component'
+import {AppSearchComponent} from './app-search/app-search.component'
 
 const MainModules = [
   RouterModule,
@@ -117,6 +118,7 @@ const MainModules = [
   BemModule,
   NgbDropdownModule,
   NgbTooltipModule,
+  DragDropModule,
 ]
 
 const CarbonModules = [
@@ -201,6 +203,7 @@ const CarbonIconModules = [
   BullhornModule,
   BuildingInsights_1Module,
   TagModuleIcon,
+  TimeModule,
 ]
 
 const Components = [

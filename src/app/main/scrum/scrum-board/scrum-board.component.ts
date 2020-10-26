@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core'
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop'
 
 @Component({
   selector: 'app-scrum-board',
@@ -7,9 +8,197 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScrumBoardComponent implements OnInit {
 
-  constructor() { }
+  public teamMembers = [
+    {
+      id: 1,
+      name: 'Jon Done',
+      avatar: '/assets/img/avatar/avatar2.jpg',
+    },
+    {
+      id: 2,
+      name: 'Sprint James',
+      avatar: '/assets/img/avatar/avatar3.jpg',
+    },
+    {
+      id: 3,
+      name: 'Scrum Jonas',
+      avatar: '/assets/img/avatar/avatar6.jpg',
+    },
+    {
+      id: 4,
+      name: 'Kanban Nikola',
+      avatar: '/assets/img/avatar/avatar7.jpg',
+    },
+  ]
+  public selectedId: number = null
+
+  public boards = [
+    {
+      name: 'Backlog',
+      tasks: [
+        {
+          userId: 1,
+          description: 'Function has non-object prototype \'null\' in instanceof check',
+        },
+        {
+          userId: 1,
+          description: 'Http2: Cannot read property \'finishWrite\' of null',
+          important: true,
+          bug: true,
+        },
+        {
+          userId: 2,
+          description: 'fs: inconsistent options treatment between rm() and rmdir()',
+        },
+        {
+          userId: 3,
+          description: 'Some statements have already been executed when debugger stops at line breakpoint',
+          important: true,
+          bug: true,
+        },
+        {
+          userId: 1,
+          description: 'cluster.fork() fails when called in repl (cluster.settings.exec undefined) ',
+        },
+        {
+          userId: 2,
+          description: 'Assertions that are removed in production?',
+        },
+        {
+          userId: 3,
+          description: 'regression: `require.resolve()` caches `package.json` when it shouldn\'t ',
+        },
+        {
+          userId: 1,
+          description: 'Don\'t "exit" android-configure, which is meant to be "source"d',
+        },
+        {
+          userId: 4,
+          description: 'Chocolatey fails to install visual studio workload tools',
+        },
+        {
+          userId: 3,
+          description: 'Allow to ensure a process will exit and warn for remaining async operations if any ',
+        },
+      ]
+    },
+    {
+      name: 'TODO',
+      tasks: [
+        {
+          userId: 3,
+          description: 'Investigate flaky test-webcrypto-encrypt-decrypt-aes on rhe17-s390x',
+          important: true,
+          bug: true,
+        },
+        {
+          userId: 4,
+          description: 'Listen: Misleading error message when directory of IPC socket does not exist',
+        },
+      ]
+    },
+    {
+      name: 'IN PROGRESS',
+      tasks: [
+        {
+          userId: 4,
+          description: 'using Whatwg url to parse relative urls received via http may fail ',
+        },
+        {
+          userId: 3,
+          description: 'http2: calling ServerHttp2Stream end() can silently fail',
+          important: true,
+          bug: true,
+        },
+        {
+          userId: 4,
+          description: '`vm.compileFunction(source)` is much slower than `new vm.Script(source)`',
+          important: true,
+          bug: true,
+        },
+      ]
+    },
+    {
+      name: 'REVIEW',
+      tasks: [
+        {
+          userId: 2,
+          description: 'Reloading page bypasses TLS client authentication',
+          important: true,
+          bug: true,
+        },
+        {
+          userId: 1,
+          description: 'investigate flaky test-performance-eventlooputil',
+
+        },
+      ]
+    },
+    {
+      name: 'TEST',
+      tasks: [
+        {
+          userId: 1,
+          description: 'http2: The http2 server rejects large headers and the cutoff does not appear to be configurable ',
+        },
+      ]
+    },
+    {
+      name: 'DONE',
+      tasks: [
+        {
+          userId: 1,
+          description: 'Add conditions to require.resolve options',
+        },
+        {
+          userId: 2,
+          description: 'Windows: child_process.spawn leaving orphaned processes around when running processes in an sh shell',
+        },
+        {
+          userId: 3,
+          description: 'Usage of `.clang-tidy` config for c++ codebase',
+        },
+        {
+          userId: 4,
+          description: 'Crash deserializing IPC message using advanced serialization',
+        },
+        {
+          userId: 3,
+          description: 'investigate flaky test-child-process-exec-timeout on SmartOS ',
+        },
+        {
+          userId: 3,
+          description: 'On loading invalid ES module, internal SyntaxError: Missing initializer in destructuring declaration',
+        }
+      ]
+    }
+  ]
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  onSelectMember(id) {
+    this.selectedId = id
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    console.log(event)
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex)
+    }
+    else {
+      transferArrayItem(event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex)
+    }
+  }
+
+  getUserAvatarById(id) {
+    const member = this.teamMembers.find(member => member.id === id)
+    return member.avatar
+  }
 }
