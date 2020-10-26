@@ -4,32 +4,38 @@
 // LAYOUT THEMES
 :root.app-theme--light {
   @include spread-map($theme-map-light);
+  @include scrollbarStyleDark();
 }
 
 // SIDEBAR THEMES
 :root.app-theme-sidebar--black {
   @include set-white-logo();
   @include spread-map($theme-sidebar-1);
+  @include sidebarScrollbarStyleLight();
 }
 
 :root.app-theme-sidebar--white {
   @include set-black-logo();
   @include spread-map($theme-sidebar-2);
+  @include sidebarScrollbarStyleDark();
 }
 
 :root.app-theme-sidebar--blue {
   @include set-black-logo();
   @include spread-map($theme-sidebar-3);
+  @include sidebarScrollbarStyleDark();
 }
 
 :root.app-theme-sidebar--grey {
   @include set-black-logo();
   @include spread-map($theme-sidebar-4);
+  @include sidebarScrollbarStyleDark();
 }
 
 :root.app-theme-sidebar--gradient {
   @include set-black-logo();
   @include spread-map($theme-sidebar-5);
+  @include sidebarScrollbarStyleDark();
 }
 
 :root {
@@ -43,10 +49,12 @@
 // HEADER THEMES
 :root.app-theme-header--black {
   @include spread-map($theme-header-1);
+  //@include sidebarScrollbarStyleLight();
 }
 
 :root.app-theme-header--white {
   @include spread-map($theme-header-2);
+  //@include sidebarScrollbarStyleDark();
 }
 
 /*:root.app-theme-sidebar-light {

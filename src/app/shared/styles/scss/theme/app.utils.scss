@@ -27,6 +27,11 @@ body {
   bottom: 0;
 }
 
+.app-transition-default{
+  transition: .1s cubic-bezier(.35, 0, .35, 1);
+  transition-property: all;
+}
+
 .app-img-select {
   .app-img-select__item {
     position: relative;

@@ -42,59 +42,70 @@
     </div>
   </div>
 
-  <div fxFlex class="relative ml-4">
-    <div class="app-a-box app-scrollbar-fix--horizontal">
+  <div fxFlex class="relative" style="background-color: #eee;">
+    <div class="app-a-box app-scrollbar-fix--horizontal ml-4">
       <ng-scrollbar track="horizontal">
         <div fxLayout="row" fxFill cdkDropListGroup>
-          <ng-container *ngFor="let board of boards">
-            <div fxFlex="320px"
-                 class="relative">
-              <div fxFill fxLayout="column" style="background-color: #eee;padding-right:0.25rem;padding-left:0.25rem;border-right:1px solid #ccc;">
-                <div class="flex justify-between app-productive-heading-01 px-2 py-2">
-                  <span>{{board.name}}</span>
-                  <span class="text-muted">{{board.tasks.length}}</span>
-                </div>
-                <div fxFlex class="relative">
-                  <div class="app-a-box app-scrollbar-fix"
-                       cdkDropList
-                       [cdkDropListData]="board.tasks"
-                       (cdkDropListDropped)="drop($event)">
-                    <ng-scrollbar track="vertical">
-                      <ng-container *ngFor="let task of board.tasks">
-                        <div class="app-card app-card--bt-danger-vertical cursor-move"
-                             [ngClass]="{'app-card--bt-danger-vertical': task.important}"
-                             cdkDrag
-                             style="">
-                          <div class="app-card__content">
-                            <div class="app-expressive-heading-02 mb-4">
-                              {{task.description}}
-                            </div>
-                            <div class="flex items-center mb-1">
-                              <app-ibm-icon iconName="time" iconSize="16"></app-ibm-icon> <span class="ml-1">26.10.2020</span>
-                            </div>
-                            <div class="app-label-01">
-                              reporter: <span class="font-bold">Jon Doe</span>
-                            </div>
-                            <div class="flex items-center mt-4">
-                              <ng-container *ngIf="!task.bug">
-                                <ibm-tag class="app-ibm-tag-list" type="blue">Task</ibm-tag>
-                              </ng-container>
-                              <ng-container *ngIf="task.bug">
-                                <ibm-tag class="app-ibm-tag-list" type="red">Bug</ibm-tag>
-                              </ng-container>
+          <ng-container *ngFor="let board of boards;let i = index">
+            <div [fxFlex]="board.opened ? '320px' : '40px'"
+                 class="relative app-transition-default mb-3">
+              <div fxFill fxLayout="column" class="overflow-hidden" style="border-right:1px solid #ccc;">
+                <ng-container *ngIf="!board.opened">
+                  <div (click)="onToggleColumn(i)" class="app-productive-heading-01 whitespace-no-wrap cursor-pointer"
+                       style="transform: rotate(270deg);margin-top: 100%;">
+                    {{board.name}}
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="board.opened">
+                  <div class="flex justify-between app-productive-heading-01 px-3 py-3">
+                    <span (click)="onToggleColumn(i)" class="cursor-pointer">{{board.name}}</span>
+                    <span class="text-muted">{{board.tasks.length}}</span>
+                  </div>
+                  <div fxFlex class="relative">
+                    <div class="app-a-box app-scrollbar-fix"
+                         cdkDropList
+                         [cdkDropListData]="board.tasks"
+                         (cdkDropListDropped)="drop($event)">
+                      <ng-scrollbar track="vertical">
+                        <div class="px-1">
+                          <ng-container *ngFor="let task of board.tasks">
+                            <div class="app-card cursor-move"
+                                 [ngClass]="{'app-card--bt-danger-vertical': task.important}"
+                                 cdkDrag
+                                 style="">
+                              <div class="app-card__content">
+                                <div class="app-expressive-heading-02 mb-4">
+                                  {{task.description}}
+                                </div>
+                                <div class="flex items-center mb-1">
+                                  <app-ibm-icon iconName="time" iconSize="16"></app-ibm-icon>
+                                  <span class="ml-1">26.10.2020</span>
+                                </div>
+                                <div class="app-label-01">
+                                  reporter: <span class="font-bold">Jon Doe</span>
+                                </div>
+                                <div class="flex items-center mt-4">
+                                  <ng-container *ngIf="!task.bug">
+                                    <ibm-tag class="app-ibm-tag-list" type="blue">Task</ibm-tag>
+                                  </ng-container>
+                                  <ng-container *ngIf="task.bug">
+                                    <ibm-tag class="app-ibm-tag-list" type="red">Bug</ibm-tag>
+                                  </ng-container>
 
-                              <ibm-tag class="app-ibm-tag-list" type="cool-gray">2h 50m</ibm-tag>
-                              <div class="flex flex-1 items-center justify-end">
-                                <div class="mr-2">AA-2052</div>
-                                <img class="w-6 h-6 rounded-full" [src]="getUserAvatarById(task.userId)"/>
+                                  <ibm-tag class="app-ibm-tag-list" type="cool-gray">2h 50m</ibm-tag>
+                                  <div class="flex flex-1 items-center justify-end">
+                                    <div class="mr-2">AA-2052</div>
+                                    <img class="w-6 h-6 rounded-full" [src]="getUserAvatarById(task.userId)"/>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                          </div>
+                          </ng-container>
                         </div>
-                      </ng-container>
-                    </ng-scrollbar>
+                      </ng-scrollbar>
+                    </div>
                   </div>
-                </div>
+                </ng-container>
               </div>
             </div>
           </ng-container>

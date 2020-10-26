@@ -137,3 +137,64 @@
     display: block;
   }
 }
+
+@mixin includeScrollbarDark() {
+  --scrollbar-border-radius: 0px;
+  --scrollbar-padding: 2px;
+  --scrollbar-viewport-margin: 0;
+  --scrollbar-track-color: rgba(0, 0, 0, 0.15);
+  --scrollbar-wrapper-color: transparent;
+  --scrollbar-thumb-color: rgba(0, 0, 0, 0.2);
+  --scrollbar-thumb-hover-color: rgba(0, 0, 0, 0.15);
+  --scrollbar-size: 7px;
+  --scrollbar-hover-size: 12px;
+  --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
+  --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
+}
+
+@mixin includeScrollbarLight() {
+  --scrollbar-border-radius: 0px;
+  --scrollbar-padding: 2px;
+  --scrollbar-viewport-margin: 0;
+  --scrollbar-track-color: rgba(255, 255, 255, 0.15);
+  --scrollbar-wrapper-color: transparent;
+  --scrollbar-thumb-color: rgba(255, 255, 255, 0.2);
+  --scrollbar-thumb-hover-color: rgba(255, 255, 255, 0.15);
+  --scrollbar-size: 7px;
+  --scrollbar-hover-size: 12px;
+  --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
+  --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
+}
+
+
+@mixin scrollbarStyleDark() {
+  .app-scrollbar-fix, .app-scrollbar-fix--horizontal {
+    .ng-scrollbar {
+      @include includeScrollbarDark();
+    }
+  }
+}
+
+@mixin scrollbarStyleLight() {
+  .app-scrollbar-fix, .app-scrollbar-fix--horizontal {
+    .ng-scrollbar {
+      @include includeScrollbarLight();
+    }
+  }
+}
+
+@mixin sidebarScrollbarStyleDark() {
+  .app-sidebar.app-scrollbar-fix, .app-sidebar.app-scrollbar-fix--horizontal {
+    .ng-scrollbar {
+      @include includeScrollbarDark();
+    }
+  }
+}
+
+@mixin sidebarScrollbarStyleLight() {
+  .app-sidebar.app-scrollbar-fix, .app-sidebar.app-scrollbar-fix--horizontal {
+    .ng-scrollbar {
+      @include includeScrollbarLight();
+    }
+  }
+}

@@ -35,6 +35,7 @@ export class ScrumBoardComponent implements OnInit {
   public boards = [
     {
       name: 'Backlog',
+      opened: true,
       tasks: [
         {
           userId: 1,
@@ -84,6 +85,7 @@ export class ScrumBoardComponent implements OnInit {
     },
     {
       name: 'TODO',
+      opened: true,
       tasks: [
         {
           userId: 3,
@@ -99,6 +101,7 @@ export class ScrumBoardComponent implements OnInit {
     },
     {
       name: 'IN PROGRESS',
+      opened: true,
       tasks: [
         {
           userId: 4,
@@ -120,6 +123,7 @@ export class ScrumBoardComponent implements OnInit {
     },
     {
       name: 'REVIEW',
+      opened: true,
       tasks: [
         {
           userId: 2,
@@ -136,6 +140,7 @@ export class ScrumBoardComponent implements OnInit {
     },
     {
       name: 'TEST',
+      opened: true,
       tasks: [
         {
           userId: 1,
@@ -145,6 +150,7 @@ export class ScrumBoardComponent implements OnInit {
     },
     {
       name: 'DONE',
+      opened: true,
       tasks: [
         {
           userId: 1,
@@ -181,7 +187,12 @@ export class ScrumBoardComponent implements OnInit {
   }
 
   onSelectMember(id) {
-    this.selectedId = id
+    if (this.selectedId !== id) {
+      this.selectedId = id
+    }
+    else {
+      this.selectedId = null
+    }
   }
 
   drop(event: CdkDragDrop<string[]>) {
@@ -200,5 +211,9 @@ export class ScrumBoardComponent implements OnInit {
   getUserAvatarById(id) {
     const member = this.teamMembers.find(member => member.id === id)
     return member.avatar
+  }
+
+  onToggleColumn(index) {
+    this.boards[index].opened = !this.boards[index].opened
   }
 }

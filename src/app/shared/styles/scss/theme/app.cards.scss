@@ -43,7 +43,10 @@
   outline-offset: -2px;
   margin: 0.5rem;
   border: 1px solid rgba(72, 94, 144, 0.16);
-  //box-shadow: 0 1px 2px 0 rgba(33, 33, 33, .14), 0 0 1px 0 rgba(0, 0, 0, .14);
+
+  &.app-card--tile {
+    margin: 0.25rem;
+  }
 
   &.app-card--bt-success {
     @include appCardBt();

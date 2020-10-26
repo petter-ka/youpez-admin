@@ -48,7 +48,7 @@
           <app-layout-sidebar [opened]="mainSidebarOpts.opened" (sideBarToggle)="onSideBarToggle($event)"></app-layout-sidebar>
         </app-sidenav-v2>
 
-        <div fxFill class="app-layout__content__inner"
+        <div class="app-layout__content__inner"
           [@defaultRouterAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
           <router-outlet #outlet="outlet"></router-outlet>
         </div>
