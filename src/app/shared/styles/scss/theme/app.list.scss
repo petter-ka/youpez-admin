@@ -34,74 +34,6 @@
   position: relative;
   overflow: hidden;
 
-  .app-list__divider {
-    height: 0;
-    margin: .5rem 0;
-    overflow: hidden;
-    border-top: 1px solid $appBorderColor;
-  }
-
-  .app-list__item {
-    position: relative;
-    @extend .app-row;
-    @extend .app-row--center;
-
-    .app-list__item__prefix {
-
-    }
-
-    .app-list__item__content {
-      padding: 0.75rem 0;
-      position: relative;
-      @extend .app-row;
-      @extend .app-row--center;
-      @extend .app-row__fill;
-
-      &:before {
-        position: absolute;
-        bottom: 0;
-        right: -1000px;
-        left: 0;
-        content: '';
-        height: 1px;
-        background-color: $appBorderColor;
-      }
-    }
-
-    &.app-list__item--p {
-      .app-list__item__content {
-        padding: 0.5rem 1rem;
-      }
-    }
-
-    &.app-list__item--p-alt {
-      .app-list__item__content {
-        padding: 0.2rem 0.4rem;
-      }
-
-      .app-list__item__prefix {
-        padding-left: 0.4rem;
-      }
-
-      .app-list__item__suffix {
-        padding-right: 0.5rem;
-      }
-    }
-
-
-    &.app-list__item--no-p {
-      .app-list__item__content {
-        padding: 0.75rem 0;
-      }
-    }
-
-    &:last-child {
-      .app-list__item__content:before {
-        display: none;
-      }
-    }
-  }
-
   &.app-list--p {
     .app-list__item__content {
       padding: 0.5rem 1rem;
@@ -151,6 +83,10 @@
     }
   }
 
+  &.app-list--border-over {
+    border: 1px solid $appBorderColor;
+  }
+
   &.app-list--select {
     .app-list__item {
       cursor: pointer;
@@ -173,4 +109,127 @@
       }
     }
   }
+
+  &.app-list--todo {
+    overflow: hidden;
+
+    .app-list__add-btn {
+      padding: 0.5rem 2rem 0.5rem 2rem;
+    }
+
+    .app-list__group {
+      .app-list__group__children {
+        .app-list__item {
+          padding-left: 2rem;
+        }
+      }
+    }
+
+    .app-list__item {
+      .app-list__item__drag {
+        display: none;
+        position: absolute;
+        top: 0.68rem;
+        left: 0.5rem;
+        cursor: move;
+      }
+
+      &:hover {
+        .app-list__item__drag {
+          display: block;
+        }
+      }
+
+      &:last-child {
+        .app-list__item__content:before {
+          display: block;
+        }
+      }
+    }
+
+    .app-list__item__content {
+      padding: 0.5rem 0;
+    }
+  }
 }
+
+.app-list__divider {
+  height: 0;
+  margin: .5rem 0;
+  overflow: hidden;
+  border-top: 1px solid $appBorderColor;
+}
+
+.app-list__item {
+  position: relative;
+  @extend .app-row;
+  @extend .app-row--center;
+
+  .app-list__item__prefix {
+
+  }
+
+  .app-list__item__input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .app-list__item__content {
+    padding: 0.75rem 0;
+    position: relative;
+    @extend .app-row;
+    @extend .app-row--center;
+    @extend .app-row__fill;
+
+    &:before {
+      position: absolute;
+      bottom: 0;
+      right: -10000px;
+      left: 0;
+      content: '';
+      height: 1px;
+      background-color: $appBorderColor;
+    }
+  }
+
+  &.app-list__item--p {
+    .app-list__item__content {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &.app-list__item--p-alt {
+    .app-list__item__content {
+      padding: 0.2rem 0.4rem;
+    }
+
+    .app-list__item__prefix {
+      padding-left: 0.4rem;
+    }
+
+    .app-list__item__suffix {
+      padding-right: 0.5rem;
+    }
+  }
+
+
+  &.app-list__item--no-p {
+    .app-list__item__content {
+      padding: 0.75rem 0;
+    }
+  }
+
+  &.app-list__item--todo-header {
+    margin-left: 1.5rem;
+  }
+
+  &:last-child {
+    .app-list__item__content:before {
+      display: none;
+    }
+  }
+}
+

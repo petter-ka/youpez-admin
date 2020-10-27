@@ -66,14 +66,14 @@ export class LayoutSidebarComponent implements OnInit {
           },
           url: '/app/tasks',
         },
-        {
+/*        {
           name: 'Notes',
           prefix: {
             type: 'ibm-icon',
             name: 'catalog',
           },
           url: '/app/notes',
-        },
+        },*/
         {
           name: 'File Manager',
           prefix: {

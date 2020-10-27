@@ -1,0 +1,32 @@
+<div fxFill fxLayout="column">
+  <app-header>
+    <app-header-title>
+      Youpez 2020 Sprint W31-32
+    </app-header-title>
+    <app-header-tools>
+      <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+        <svg class="bx--btn__icon" ibmIconCloudDownload size="32"></svg>
+      </button>
+      <button ibmButton="primary" size="sm">
+        Complete sprint
+        <svg class="bx--btn__icon" ibmIconCheckmarkOutline size="20"></svg>
+      </button>
+    </app-header-tools>
+  </app-header>
+  <div fxFlex class="relative">
+    <div fxLayout="row wrap">
+      <div fxFlex="50%">
+
+        <div class="app-content app-content--default">
+          <div class="mb-4">
+            <button (click)="onAddList()" ibmButton="tertiary" size="sm">
+              Add list
+              <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+            </button>
+          </div>
+          <app-tasks-list #appTasksList [tasks]="taskGroups" [transparent]="false"></app-tasks-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

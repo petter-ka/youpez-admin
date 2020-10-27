@@ -7,6 +7,7 @@ import {DashboardDefaultComponent} from "./dashboard/dashboard-default/dashboard
 import {DashboardAnalyticsComponent} from "./dashboard/dashboard-analytics/dashboard-analytics.component"
 import {DashboardCryptoComponent} from "./dashboard/dashboard-crypto/dashboard-crypto.component"
 import {ScrumBoardComponent} from "./scrum/scrum-board/scrum-board.component"
+import {TasksComponent} from "./tasks/tasks/tasks.component"
 
 const routes: Routes = [
   {
@@ -47,9 +48,13 @@ const routes: Routes = [
         ]
       },
       {
-        path:'scrum-board',
+        path: 'scrum-board',
         component: ScrumBoardComponent,
       },
+      {
+        path: 'tasks',
+        component: TasksComponent,
+      }
     ]
   },
 ]

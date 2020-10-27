@@ -219,5 +219,17 @@
     <svg ibmIconTime [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'chevronDown'">
+    <svg ibmIconChevronDown [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'chevronUp'">
+    <svg ibmIconChevronUp [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'draggable'">
+    <svg ibmIconDraggable [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchDefault>!!!</ng-container>
 </ng-container>

@@ -4,6 +4,7 @@ import {NavigationEnd, NavigationStart, Router, RouterModule} from '@angular/rou
 
 import {NgScrollbarModule} from 'ngx-scrollbar'
 import {DragDropModule} from '@angular/cdk/drag-drop'
+import {A11yModule} from '@angular/cdk/a11y'
 import {
   AddModule,
   CaretDownModule,
@@ -65,7 +66,7 @@ import {
   CloudAppModule,
   BullhornModule,
   BuildingInsights_1Module,
-  TagModule as TagModuleIcon, TimeModule,
+  TagModule as TagModuleIcon, TimeModule, ChevronDownModule, ChevronUpModule, DraggableModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -94,6 +95,7 @@ import {
   SearchModule as SearchModuleComponent,
   ContentSwitcherModule,
   SkeletonModule,
+  DialogModule,
 } from 'carbon-components-angular'
 import {LayoutComponent} from './layout/layout.component'
 import {LayoutMiniSidebarComponent} from './layout/layout-mini-sidebar/layout-mini-sidebar.component'
@@ -109,7 +111,8 @@ import {AppHeaderTitleComponent} from './layout/app-header/app-header-title/app-
 import {AppHeaderToolsComponent} from './layout/app-header/app-header-tools/app-header-tools.component'
 import {AppThemeSettingsComponent} from './layout/app-theme-settings/app-theme-settings.component'
 import {AppLayoutHeaderComponent} from './layout/app-layout-header/app-layout-header.component'
-import {AppSearchComponent} from './app-search/app-search.component'
+import {AppSearchComponent} from './app-search/app-search.component';
+import {AppTasksComponent } from './app-tasks/app-tasks.component'
 
 const MainModules = [
   RouterModule,
@@ -119,6 +122,7 @@ const MainModules = [
   NgbDropdownModule,
   NgbTooltipModule,
   DragDropModule,
+  A11yModule,
 ]
 
 const CarbonModules = [
@@ -139,6 +143,7 @@ const CarbonModules = [
   SearchModuleComponent,
   ContentSwitcherModule,
   SkeletonModule,
+  DialogModule,
 ]
 
 const CarbonIconModules = [
@@ -204,6 +209,9 @@ const CarbonIconModules = [
   BuildingInsights_1Module,
   TagModuleIcon,
   TimeModule,
+  ChevronDownModule,
+  ChevronUpModule,
+  DraggableModule,
 ]
 
 const Components = [
@@ -223,6 +231,7 @@ const Components = [
   AppThemeSettingsComponent,
   AppLayoutHeaderComponent,
   AppSearchComponent,
+  AppTasksComponent,
 ]
 
 @NgModule({
@@ -234,6 +243,7 @@ const Components = [
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
+
   ],
   declarations: [
     ...Components,
