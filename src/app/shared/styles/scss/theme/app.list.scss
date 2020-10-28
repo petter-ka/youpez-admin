@@ -13,6 +13,24 @@
   text-transform: uppercase;
   font-weight: 700;
   border-bottom: 1px solid $appBorderColor;
+
+  &.app-list-header-alt--no-border {
+    border-bottom: none;
+  }
+}
+
+.app-list-header-pill, .app-subtitle {
+  padding: 0.5rem 20px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: default;
+  /*  border-bottom: 1px solid $appBorderColor;
+
+    &.app-list-header-alt--no-border {
+      border-bottom: none;
+    }*/
 }
 
 .app-list-header-title {
@@ -229,6 +247,80 @@
   &:last-child {
     .app-list__item__content:before {
       display: none;
+    }
+  }
+}
+
+.app-list-pill {
+
+}
+
+.app-list-pill__item {
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+
+  .app-list-pill__item__inner {
+    min-height: 30px;
+    padding: 0 16px 0 10px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    outline: none;
+    transition: 0.1s cubic-bezier(0.35, 0, 0.35, 1);
+    transition-property: all;
+    @extend .app-row;
+    @extend .app-row--center;
+
+    &:hover {
+      &:not(.app-list-pill__item__inner--disabled) {
+        background: var(--theme-list-pill--hover-background);
+        color: var(--theme-list-pill--hover-color);
+
+        svg {
+          fill: var(--theme-list-pill--hover-color);
+        }
+      }
+    }
+
+    &.app-list-pill__item__inner--active {
+      background: var(--theme-list-pill--active-background);
+      color: var(--theme-list-pill--active-color);
+
+      svg {
+        fill: var(--theme-list-pill--active-color);
+      }
+    }
+
+    &.app-list-pill__item__inner--disabled {
+      cursor: no-drop;
+      opacity: .7;
+    }
+  }
+}
+
+.app-list-data {
+
+  margin-bottom: 0.75rem;
+
+  &.app-list-data--horizontal {
+    @extend .app-row;
+    @extend .app-row--center;
+
+    .app-list-data__title {
+      width: 5rem;
+    }
+
+    .app-list-data__content {
+
+    }
+  }
+
+  &:not(.app-list-data--horizontal) {
+    .app-list-data__title {
+      margin-bottom: 0.2rem;
+    }
+
+    .app-list-data__content {
+
     }
   }
 }

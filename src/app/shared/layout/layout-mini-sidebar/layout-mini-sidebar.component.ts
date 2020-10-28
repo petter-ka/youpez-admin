@@ -53,7 +53,7 @@ export class LayoutMiniSidebarComponent implements OnInit {
   ]
   public messages = [
     {
-      avatar: '/assets/img/avatar/avatar2.jpg',
+        avatar: '/assets/img/avatar/avatar2.jpg',
       name: 'John Belinda',
       text: 'Cannot start service web: error while creating mount source path ',
       date: '5 mins ago',

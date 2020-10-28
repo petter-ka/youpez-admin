@@ -21,7 +21,17 @@ export class AppTasksComponent implements OnInit {
 
   @Input('tasks') taskGroups = []
   @Input('transparent') transparent = false
+  @Input() set filterText(value: string) {
+    this._filterText = value
+  }
+
+  get filterText(): string {
+    return this._filterText
+  }
+
+  public _filterText: string = ''
   public taskFocusId: string = ''
+  public deletableTaskGroupIndex: number = null
 
   constructor() {
   }
@@ -29,8 +39,44 @@ export class AppTasksComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addGroup() {
+    const uid = getUniqueId(5)
+    const newGroup = {
+      groupName: '',
+      id: uid,
+      opened: true,
+      tasks: []
+    }
+    this.taskGroups = [newGroup, ...this.taskGroups]
+    this.taskFocusId = uid
+  }
+
+  minimize() {
+    this.taskGroups = this.taskGroups.map(group => {
+      group.opened = false
+      return group
+    })
+  }
+
+  maximize() {
+    this.taskGroups = this.taskGroups.map(group => {
+      group.opened = true
+      return group
+    })
+  }
+
   getConnectedList(): any[] {
     return this.taskGroups.map(x => `${x.id}`)
+  }
+
+  getProgress(groupIndex) {
+    const tasks = this.taskGroups[groupIndex].tasks
+    const solved = this.taskGroups[groupIndex].tasks.filter(task => task.checked === true)
+    const percentage = ((solved.length / tasks.length) * 100)
+/*    if (percentage === 100) {
+      this.taskGroups[groupIndex].opened = false
+    }*/
+    return `${percentage}%`
   }
 
   drop(event: CdkDragDrop<any>) {
@@ -45,8 +91,16 @@ export class AppTasksComponent implements OnInit {
     }
   }
 
+  trackByFn(index, row) {
+    return index
+  }
+
   dropGroup(event: CdkDragDrop<any>) {
     moveItemInArray(this.taskGroups, event.previousIndex, event.currentIndex)
+  }
+
+  onSelectedDeletableGroup(groupIndex) {
+    this.deletableTaskGroupIndex = groupIndex
   }
 
   onToggleTask(event: CheckboxChange, groupIndex, taskIndex) {
@@ -78,20 +132,12 @@ export class AppTasksComponent implements OnInit {
     this.taskFocusId = uid
   }
 
-  addGroup() {
-    const uid = getUniqueId(5)
-    const newGroup = {
-      groupName: '',
-      id: uid,
-      opened: true,
-      tasks: []
-    }
-    this.taskGroups = [newGroup, ...this.taskGroups]
-    this.taskFocusId = uid
-  }
-
   onDeleteGroup(groupIndex) {
     this.taskGroups.splice(groupIndex, 1)
+  }
+
+  onDeleteTask(groupIndex, taskIndex) {
+    this.taskGroups[groupIndex].tasks.splice(taskIndex, 1)
   }
 
 }

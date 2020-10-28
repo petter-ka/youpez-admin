@@ -206,7 +206,7 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
       panelCss = 'app-sidenav-v2--panel'
     }
     if (panel === 'solid') {
-      panelCss = 'app-sidenav-v2--solid'
+      panelCss = 'app-sidenav-v2--solid-border'
     }
     this.optionalClass = this.optionalClass + ' ' + panelCss
   }

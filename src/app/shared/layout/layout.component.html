@@ -47,9 +47,9 @@
           [size]="mainSidebarOpts.size">
           <app-layout-sidebar [opened]="mainSidebarOpts.opened" (sideBarToggle)="onSideBarToggle($event)"></app-layout-sidebar>
         </app-sidenav-v2>
-
-        <div class="app-layout__content__inner"
-          [@defaultRouterAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
+        <!--<div class="app-layout__content__inner"
+              [@defaultRouterAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">-->
+        <div class="app-layout__content__inner">
           <router-outlet #outlet="outlet"></router-outlet>
         </div>
       </app-sidenav-container>

@@ -66,7 +66,18 @@ import {
   CloudAppModule,
   BullhornModule,
   BuildingInsights_1Module,
-  TagModule as TagModuleIcon, TimeModule, ChevronDownModule, ChevronUpModule, DraggableModule,
+  TagModule as TagModuleIcon,
+  TimeModule,
+  ChevronDownModule,
+  ChevronUpModule,
+  DraggableModule,
+  ArchiveModule,
+  MaximizeModule,
+  ImageModule,
+  StarModule,
+  FolderSharedModule,
+  RecentlyViewedModule,
+  HashtagModule, DownloadModule, ShareModule, MoveModule, TableOfContentsModule, UploadModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -111,8 +122,11 @@ import {AppHeaderTitleComponent} from './layout/app-header/app-header-title/app-
 import {AppHeaderToolsComponent} from './layout/app-header/app-header-tools/app-header-tools.component'
 import {AppThemeSettingsComponent} from './layout/app-theme-settings/app-theme-settings.component'
 import {AppLayoutHeaderComponent} from './layout/app-layout-header/app-layout-header.component'
-import {AppSearchComponent} from './app-search/app-search.component';
-import {AppTasksComponent } from './app-tasks/app-tasks.component'
+import {AppSearchComponent} from './app-search/app-search.component'
+import {AppTasksComponent} from './app-tasks/app-tasks.component'
+
+import {InputTypeAdvancedPipe} from "./pipes/input-type-advanced.pipe"
+import {TextHiglightPipe} from "./pipes/text-higlight.pipe"
 
 const MainModules = [
   RouterModule,
@@ -144,6 +158,7 @@ const CarbonModules = [
   ContentSwitcherModule,
   SkeletonModule,
   DialogModule,
+  MaximizeModule,
 ]
 
 const CarbonIconModules = [
@@ -212,6 +227,17 @@ const CarbonIconModules = [
   ChevronDownModule,
   ChevronUpModule,
   DraggableModule,
+  ArchiveModule,
+  ImageModule,
+  StarModule,
+  FolderSharedModule,
+  RecentlyViewedModule,
+  HashtagModule,
+  DownloadModule,
+  ShareModule,
+  MoveModule,
+  TableOfContentsModule,
+  UploadModule,
 ]
 
 const Components = [
@@ -234,6 +260,11 @@ const Components = [
   AppTasksComponent,
 ]
 
+const Pipes = [
+  InputTypeAdvancedPipe,
+  TextHiglightPipe,
+]
+
 @NgModule({
   imports: [
     CommonModule,
@@ -244,9 +275,11 @@ const Components = [
     ...CarbonIconModules,
     ...CarbonModules,
 
+
   ],
   declarations: [
     ...Components,
+    ...Pipes,
   ],
   exports: [
     NgScrollbarModule,
@@ -254,6 +287,8 @@ const Components = [
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
+    ...Pipes,
+
   ]
 })
 export class SharedModule {

@@ -1,0 +1,364 @@
+<div fxFill fxLayout="column">
+  <app-header>
+    <app-header-title>
+      File manager
+    </app-header-title>
+    <app-header-tools>
+      <button ibmButton="primary" size="sm">
+        Upload
+        <svg class="bx--btn__icon" ibmIconUpload size="20"></svg>
+      </button>
+    </app-header-tools>
+  </app-header>
+  <div fxFlex class="relative">
+    <app-sidenav-container panel="solid">
+      <app-sidenav-v2
+        [breakpoint]="'md'"
+        [direction]="'left'"
+        [opened]="true"
+        [hoverAble]="true"
+        [mode]="'side'"
+        [toggleableBtn]="true"
+        [size]="'sideBar1'">
+
+        <div fxFill fxLayout="column" class="app-bg-ui">
+          <div class="app-border-separator flex items-center px-4 py-3">
+            <div class="pr-2">
+              <div class="app-symbol">
+                <div class="app-symbol__label w-10 h-10 rounded-full app-bg-info-lt-40 font-bold app-text-contrast">
+                  D
+                </div>
+              </div>
+            </div>
+            <div class="mr-4">
+              <div>
+                <div class="app-expressive-heading-02">Devops team</div>
+                <div class="app-helper-text-01">33 member</div>
+              </div>
+            </div>
+          </div>
+          <div fxFlex class="relative">
+            <div class="app-a-box app-scrollbar-fix">
+              <ng-scrollbar>
+                <div class="mt-2">
+                  <div class="app-list-header-pill">MY DRIVE</div>
+                  <div class="app-list-pill">
+                    <div class="app-list-pill__item">
+                      <div class="app-list-pill__item__inner font-bold">
+                        <app-ibm-icon iconSize="20" iconName="checkboxChecked" class="mr-2"></app-ibm-icon>
+                        Priority
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-list-pill">
+                    <div class="app-list-pill__item">
+                      <div class="app-list-pill__item__inner app-list-pill__item__inner--active font-bold">
+                        <app-ibm-icon iconSize="20" iconName="folder" class="mr-2"></app-ibm-icon>
+                        Storage
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-list-pill">
+                    <div class="app-list-pill__item">
+                      <div class="app-list-pill__item__inner font-bold">
+                        <app-ibm-icon iconSize="20" iconName="folderShared" class="mr-2"></app-ibm-icon>
+                        Shared
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-list-pill">
+                    <div class="app-list-pill__item">
+                      <div class="app-list-pill__item__inner font-bold">
+                        <app-ibm-icon iconSize="20" iconName="recentlyViewed" class="mr-2"></app-ibm-icon>
+                        Recent
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-list-pill">
+                    <div class="app-list-pill__item">
+                      <div class="app-list-pill__item__inner font-bold">
+                        <app-ibm-icon iconSize="20" iconName="star" class="mr-2"></app-ibm-icon>
+                        Starred
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-list-pill">
+                    <div class="app-list-pill__item">
+                      <div class="app-list-pill__item__inner font-bold">
+                        <app-ibm-icon iconSize="20" iconName="trashCan" class="mr-2"></app-ibm-icon>
+                        Trash
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-2">
+                  <div class="app-list-header-pill">TAGS</div>
+                  <div class="app-list-pill">
+                    <div class="app-list-pill__item">
+                      <div class="app-list-pill__item__inner">
+                        <app-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></app-ibm-icon>
+                        devops
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-list-pill">
+                    <div class="app-list-pill__item">
+                      <div class="app-list-pill__item__inner">
+                        <app-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></app-ibm-icon>
+                        infrastructure
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-list-pill">
+                    <div class="app-list-pill__item">
+                      <div class="app-list-pill__item__inner">
+                        <app-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></app-ibm-icon>
+                        holyday
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-list-pill">
+                    <div class="app-list-pill__item">
+                      <div class="app-list-pill__item__inner">
+                        <app-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></app-ibm-icon>
+                        freelance
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-scrollbar>
+            </div>
+          </div>
+
+          <div class="app-list-header-pill">STORAGE STATUS</div>
+          <div class="flex items-center px-4 pb-4">
+
+            <div class="pr-2">
+              <app-ibm-icon iconName="cloudDataOps" iconSize="32"></app-ibm-icon>
+            </div>
+            <div class="mr-4 flex-1">
+              <div>
+                <div class="app-expressive-heading-02 mb-1">3TB used of 10TB</div>
+                <div class="app-progress app-progress--small">
+                  <div class="app-progress__bar app-bg-info" style="width:30%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </app-sidenav-v2>
+
+
+      <app-sidenav-container panel="solid">
+        <app-sidenav-v2
+          [breakpoint]="'md'"
+          [direction]="'right'"
+          [opened]="true"
+          [hoverAble]="true"
+          [mode]="'side'"
+          [toggleableBtn]="true"
+          [size]="'xsm'">
+
+          <div fxFill fxLayout="column" class="">
+            <div class="px-20 py-20 text-center  mb-2">
+              <app-ibm-icon iconName="document" iconSize="32"></app-ibm-icon>
+            </div>
+            <div class="app-expressive-heading-02 px-4 truncate mb-2">{{selectedItem.name}}</div>
+            <div fxFlex class="relative">
+              <div class="app-a-box app-scrollbar-fix">
+                <ng-scrollbar>
+                  <div class="px-4 py-3">
+                    <div class="app-list-data app-list-data--horizontal">
+                      <div class="app-expressive-heading-01 app-list-data__title">Offline</div>
+                      <div class="app-list-data__content ">
+                        <ibm-toggle
+                          class="app-ibm-toggle-fix"
+                          [checked]="true"
+                          [size]="'sm'">
+                        </ibm-toggle>
+                      </div>
+                    </div>
+                    <div  class="app-list-data app-list-data--horizontal">
+                      <div class="app-expressive-heading-01 app-list-data__title">Type</div>
+                      <div class="app-list-data__content truncate">Yaml</div>
+                    </div>
+                    <div  class="app-list-data app-list-data--horizontal">
+                      <div class="app-expressive-heading-01 app-list-data__title">Size</div>
+                      <div class="app-list-data__content truncate">{{selectedItem.size}}</div>
+                    </div>
+                    <div  class="app-list-data app-list-data--horizontal">
+                      <div class="app-expressive-heading-01 app-list-data__title">Location</div>
+                      <div class="app-list-data__content truncate">/var/www/tmp</div>
+                    </div>
+                    <div  class="app-list-data app-list-data--horizontal">
+                      <div class="app-expressive-heading-01 app-list-data__title">Owner</div>
+                      <div class="app-list-data__content truncate">June Abraham</div>
+                    </div>
+                    <div  class="app-list-data app-list-data--horizontal">
+                      <div class="app-expressive-heading-01 app-list-data__title">Modified</div>
+                      <div class="app-list-data__content truncate">june 10, 2020</div>
+                    </div>
+                    <div  class="app-list-data app-list-data--horizontal">
+                      <div class="app-expressive-heading-01 app-list-data__title">Opened</div>
+                      <div class="app-list-data__content truncate">june 12, 2020</div>
+                    </div>
+                    <div  class="app-list-data app-list-data--horizontal">
+                      <div class="app-expressive-heading-01 app-list-data__title">Created</div>
+                      <div class="app-list-data__content truncate">june 10, 2020</div>
+                    </div>
+                  </div>
+                </ng-scrollbar>
+              </div>
+            </div>
+            <div class="px-4 py-4">
+              <div class="mb-1">
+                <button ibmButton="primary" size="sm" class="w-full mb-1">
+                  Download
+                  <svg class="bx--btn__icon" ibmIconDownload size="20"></svg>
+                </button>
+              </div>
+              <div class="mb-1">
+                <button ibmButton="primary" size="sm" class="w-full mb-1">
+                  Share
+                  <svg class="bx--btn__icon" ibmIconShare size="20"></svg>
+                </button>
+              </div>
+              <div class="mb-1">
+                <button ibmButton="primary" size="sm" class="w-full mb-1">
+                  Move
+                  <svg class="bx--btn__icon" ibmIconMove size="20"></svg>
+                </button>
+              </div>
+              <div class="mb-1">
+                <button ibmButton="danger" size="sm" class="w-full">
+                  Delete
+                  <svg class="bx--btn__icon" ibmIconTrashCan size="20"></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </app-sidenav-v2>
+
+        <div class="app-a-box app-scrollbar-fix">
+          <ng-scrollbar>
+            <div fxFill fxLayout="column">
+              <div fxFlex class="relative">
+                <div fxLayout="row wrap">
+                  <div fxFlex="100%">
+                    <div class="app-content app-content--default">
+                      <div class="flex items-center">
+                        <div class="app-expressive-heading-02">
+                          My storage
+                        </div>
+                        <div class="ml-3" style="width:170px">
+                          <ibm-search placeholder="Search..."
+                                      size="sm"></ibm-search>
+                        </div>
+                        <div class="flex-1 flex justify-end">
+                          <button
+                            ibmButton="ghost" size="sm"
+                            class="bx--btn--icon-only bx--btn--remove-tooltip">
+                            <svg class="bx--btn__icon" ibmIconSettings size="32"></svg>
+                          </button>
+                          <button
+                            ibmButton="ghost" size="sm"
+                            class="bx--btn--icon-only bx--btn--remove-tooltip">
+                            <svg class="bx--btn__icon" ibmIconTableOfContents size="32"></svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="app-subtitle app-cards-title">Recent</div>
+                <div fxLayout="row wrap" class="app-card-row-holder">
+                  <ng-container *ngFor="let file of files">
+
+                    <div fxFlex="16.66%">
+                      <div class="app-card app-card--select"
+                           (click)="onSelectItem(file)"
+                           [ngClass]="{'app-card--select--active':selectedItem.name === file.name}">
+                        <div class="app-card__content__alt">
+                          <div class="">
+                            <div class="px-10 py-10 text-center app-bg-decorative mb-2">
+                              <app-ibm-icon iconName="document" iconSize="32"></app-ibm-icon>
+                            </div>
+                            <div>
+                              <div class="app-expressive-heading-01 truncate">{{file.name}}</div>
+                              <div class="app-helper-text-01 mb-2">{{file.size}}</div>
+                              <div class="app-label-01 text-muted">{{file.accessed}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+
+                <div class="mx-4 py-1 mb-3 app-border-separator"></div>
+
+                <div class="app-subtitle app-cards-title">Folders</div>
+                <div fxLayout="row wrap" class="app-card-row-holder">
+                  <ng-container *ngFor="let folder of folders">
+                    <div fxFlex="20%">
+                      <div class="app-card app-card--select">
+                        <div class="app-card__content__alt">
+                          <div class="flex items-center">
+                            <div class="mr-3">
+                              <app-ibm-icon iconName="folder" iconSize="32"></app-ibm-icon>
+                            </div>
+                            <div>
+                              <div class="app-expressive-heading-01">{{folder.name}}</div>
+                              <div>
+                                <span class="app-label-01 mr-2">{{folder.files}} files</span>
+                                <span class="app-label-01">{{folder.size}}</span>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+
+                <div class="app-subtitle app-cards-title">Files</div>
+                <div fxLayout="row wrap" class="app-card-row-holder">
+                  <ng-container *ngFor="let file of filesMore">
+                    <div fxFlex="16.66%">
+                      <div class="app-card app-card--select">
+                        <div class="app-card__content__alt">
+                          <div class="">
+                            <div class="px-10 py-10 text-center app-bg-decorative mb-2">
+                              <app-ibm-icon iconName="document" iconSize="32"></app-ibm-icon>
+                            </div>
+                            <div>
+                              <div class="app-expressive-heading-01 truncate">{{file.name}}</div>
+                              <div class="app-helper-text-01 mb-2">{{file.size}}</div>
+                              <div class="app-label-01 text-muted">{{file.accessed}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </ng-scrollbar>
+        </div>
+      </app-sidenav-container>
+
+
+    </app-sidenav-container>
+  </div>
+</div>
+
+
+
+
+
+
+

@@ -38,6 +38,7 @@
     "carbon-components": "^10.22.0",
     "carbon-components-angular": "^4.21.0",
     "echarts": "^4.9.0",
+    "lodash": "^4.17.20",
     "ng-dynamic-component": "^7.0.2",
     "ngx-router-animations": "0.0.9",
     "ngx-scrollbar": "^7.3.0",

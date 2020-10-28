@@ -139,6 +139,18 @@
     <svg ibmIconFolder [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'folderShared'">
+    <svg ibmIconFolderShared [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'recentlyViewed'">
+    <svg ibmIconRecentlyViewed [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'image'">
+    <svg ibmIconImage [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchCase="'imageSearch'">
     <svg ibmIconImageSearch [size]="iconSize"></svg>
   </ng-container>
@@ -229,6 +241,53 @@
 
   <ng-container *ngSwitchCase="'draggable'">
     <svg ibmIconDraggable [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'archive'">
+    <svg ibmIconArchive [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'maximize'">
+    <svg ibmIconMaximize [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'star'">
+    <svg ibmIconStar [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'download'">
+    <svg ibmIconDownload [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'share'">
+    <svg ibmIconShare [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'move'">
+    <svg ibmIconMove [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'tableOfContents'">
+    <svg ibmIconTableOfContents [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'upload'">
+    <svg ibmIconUpload [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'hashtag'">
+    <!--<svg ibmIconHashtag [size]="iconSize"></svg>-->
+    <svg xmlns="http://www.w3.org/2000/svg" [style.width]="iconSize" [style.height]="iconSize" viewBox="0 0 32 32">
+      <defs>
+        <style>
+          .cls-1 {
+            fill: none;
+          }
+        </style>
+      </defs>
+      <path d="M28,12V10H22V4H20v6H12V4H10v6H4v2h6v8H4v2h6v6h2V22h8v6h2V22h6V20H22V12Zm-8,8H12V12h8Z"/>
+      <rect class="cls-1" [style.width]="iconSize" [style.height]="iconSize"/>
+    </svg>
   </ng-container>
 
   <ng-container *ngSwitchDefault>!!!</ng-container>

@@ -18,7 +18,8 @@ $appHoverBg: $hover-ui;
 $appFocusBorder: $focus;
 
 $appColorDefault: #fff;
-$appColorPrimary: $interactive-02;
+$appColorPrimary: $interactive-01;
+$appColorDecorative: $ui-03;
 $appColorSecondary: $interactive-02;
 $appColorSuccess: $support-02;
 $appColorDanger: $support-01;
@@ -58,7 +59,7 @@ $theme-sub-sidebar-light: (
 );
 
 $theme-map-light: (
-  '--theme-primary': #d75893, // fő szín
+/*  '--theme-primary': #d75893, // fő szín
   '--theme-on-primary': #fff, // fő szín text
   '--theme-primary-lt': #d75893, // fő szín light
   '--theme-secondary': #9b4dca, // mellék szín
@@ -68,9 +69,14 @@ $theme-map-light: (
   '--theme-background': $appUIForegroundBg, // body background color
   '--theme-input-surface': #fff,
   '--theme-input-border': rgba(0, 0, 0, 0.42),
-  '--theme-input-active': $__app_color_blue,
+  '--theme-input-active': $__app_color_blue,*/
+  '--theme-background': $appUIForegroundBg,
   '--theme-sidenav-border': #e0e0e0,
   '--theme-header-border': #e0e0e0,
+  '--theme-list-pill--hover-background': #ebedf0,
+  '--theme-list-pill--hover-color': #464646,
+  '--theme-list-pill--active-background': #e0e2e5,
+  '--theme-list-pill--active-color': $appColorPrimary,
 );
 
 $theme-sidebar-1: (

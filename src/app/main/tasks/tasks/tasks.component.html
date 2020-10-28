@@ -1,32 +1,137 @@
 <div fxFill fxLayout="column">
   <app-header>
     <app-header-title>
-      Youpez 2020 Sprint W31-32
+      The company tasks
     </app-header-title>
     <app-header-tools>
-      <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
-        <svg class="bx--btn__icon" ibmIconCloudDownload size="32"></svg>
-      </button>
       <button ibmButton="primary" size="sm">
-        Complete sprint
+        Synchronise
         <svg class="bx--btn__icon" ibmIconCheckmarkOutline size="20"></svg>
       </button>
     </app-header-tools>
   </app-header>
   <div fxFlex class="relative">
-    <div fxLayout="row wrap">
-      <div fxFlex="50%">
+    <app-sidenav-container panel="solid">
+      <app-sidenav-v2
+        [breakpoint]="'md'"
+        [direction]="'left'"
+        [opened]="true"
+        [hoverAble]="true"
+        [mode]="'side'"
+        [toggleableBtn]="true"
+        [size]="'sideBar1'">
+        <div fxFill fxLayout="column" class="app-bg-ui">
 
-        <div class="app-content app-content--default">
-          <div class="mb-4">
-            <button (click)="onAddList()" ibmButton="tertiary" size="sm">
-              Add list
-              <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
-            </button>
+          <div class="app-border-separator flex items-center px-4 py-3">
+            <div class="pr-2">
+              <img class="w-10 h-10 rounded-full" src="/assets/img/avatar/avatar2.jpg"/>
+            </div>
+            <div class="mr-4">
+              <div>
+                <div class="app-helper-text-01">david@youpez.com</div>
+                <div class="app-expressive-heading-02">David Robson</div>
+              </div>
+            </div>
           </div>
-          <app-tasks-list #appTasksList [tasks]="taskGroups" [transparent]="false"></app-tasks-list>
+
+          <div fxFlex class="relative">
+            <div class="app-a-box app-scrollbar-fix">
+              <ng-scrollbar>
+                <div class="mt-2">
+                  <div class="app-list-header-pill">TAGS</div>
+                  <div class="app-list-pill">
+                    <ng-container *ngFor="let tag of tags">
+                      <div class="app-list-pill__item">
+                        <div class="app-list-pill__item__inner"
+                             [ngClass]="{'app-list-pill__item__inner--active':tag.active}">
+                          <span class="h-3 w-3 rounded-full mr-2" [class]="tag.bg"></span>
+                          {{tag.name}}
+                        </div>
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <div class="app-list-header-pill">TEAM MEMBERS</div>
+                  <div class="app-list-pill">
+                    <ng-container *ngFor="let user of users">
+                      <div class="app-list-pill__item">
+                        <div class="app-list-pill__item__inner">
+                          <img class="h-3 w-3 rounded-full mr-2" [src]="user.avatar"/>
+                          {{user.name}}
+                        </div>
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <div class="app-list-header-pill">ARCHIVES</div>
+                  <div class="app-list-pill">
+                    <ng-container *ngFor="let archive of archives">
+                      <div class="app-list-pill__item">
+                        <div class="app-list-pill__item__inner">
+                          <app-ibm-icon iconName="archive" iconSize="16" class="mr-2"></app-ibm-icon>
+                          {{archive.name}}
+                        </div>
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+              </ng-scrollbar>
+            </div>
+          </div>
         </div>
+      </app-sidenav-v2>
+
+      <div class="app-a-box app-scrollbar-fix">
+        <ng-scrollbar>
+          <div fxFill fxLayout="column">
+            <div fxFlex class="relative">
+              <div fxLayout="row wrap">
+                <div fxFlex="100%">
+                  <div class="app-content app-content--default">
+                    <div class="flex items-center mb-4">
+                      <button (click)="onAddList()" ibmButton="tertiary" size="sm">
+                        Add list
+                        <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+                      </button>
+                      <div class="ml-2" style="width:170px">
+                        <ibm-search (valueChange)="onSearchChange($event)"
+                                    (clear)="onSearchChange('')"
+                                    placeholder="Search..."
+                                    size="sm"></ibm-search>
+                      </div>
+                      <div class="flex-1 flex justify-end">
+                        <button (click)="onMinimize()"
+                                ibmButton="ghost" size="sm"
+                                class="bx--btn--icon-only bx--btn--remove-tooltip">
+                          <svg class="bx--btn__icon" ibmIconMinimize size="32"></svg>
+                        </button>
+                        <button (click)="onMaximize()"
+                                ibmButton="ghost" size="sm"
+                                class="bx--btn--icon-only bx--btn--remove-tooltip">
+                          <svg class="bx--btn__icon" ibmIconMaximize size="32"></svg>
+                        </button>
+                      </div>
+                    </div>
+                    <app-tasks-list #appTasksList
+                                    [tasks]="taskGroups"
+                                    [transparent]="false"
+                                    [filterText]="txtSearch"
+                    ></app-tasks-list>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-scrollbar>
       </div>
-    </div>
+    </app-sidenav-container>
   </div>
 </div>
+
+
+
+
+
+

@@ -4,6 +4,10 @@
   padding: 8px 8px;
 }
 
+.app-cards-title {
+  margin-bottom: -12px;
+}
+
 @mixin appCardBt() {
   &:before {
     position: absolute;
@@ -37,7 +41,7 @@
 .app-card {
   position: relative;
   display: block;
-  min-height: 4rem;
+  min-height: 2rem;
   background-color: $appCardBg;
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -96,6 +100,23 @@
     }
   }
 
+  &.app-card--select {
+    cursor: pointer;
+
+    &:hover {
+      outline: 1px solid $appColorSecondary;
+    }
+  }
+
+  &.app-card--select--active {
+    cursor: pointer;
+    outline: 2px solid $appColorPrimary;
+
+    &:hover {
+      outline: 2px solid $appColorPrimary;
+    }
+  }
+
   .app-card__header {
     padding: 0.75rem 1.1rem;
 
@@ -106,6 +127,10 @@
 
   .app-card__content {
     padding: 1.1rem;
+  }
+
+  .app-card__content__alt {
+    padding: 0.8rem;
   }
 
   .app-card__blocks {

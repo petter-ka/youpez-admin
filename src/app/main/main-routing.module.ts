@@ -8,6 +8,7 @@ import {DashboardAnalyticsComponent} from "./dashboard/dashboard-analytics/dashb
 import {DashboardCryptoComponent} from "./dashboard/dashboard-crypto/dashboard-crypto.component"
 import {ScrumBoardComponent} from "./scrum/scrum-board/scrum-board.component"
 import {TasksComponent} from "./tasks/tasks/tasks.component"
+import {FileManagerComponent} from "./file-manager/file-manager/file-manager.component"
 
 const routes: Routes = [
   {
@@ -20,17 +21,14 @@ const routes: Routes = [
           {
             path: 'default',
             component: DashboardDefaultComponent,
-            //data: { state: 'home'}
           },
           {
             path: 'analytics',
             component: DashboardAnalyticsComponent,
-            //data: { state: 'home2'}
           },
           {
             path: 'crypto',
             component: DashboardCryptoComponent,
-            //data: { state: 'home3'}
           },
         ],
       },
@@ -54,6 +52,10 @@ const routes: Routes = [
       {
         path: 'tasks',
         component: TasksComponent,
+      },
+      {
+        path: 'file-manager',
+        component: FileManagerComponent,
       }
     ]
   },

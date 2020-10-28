@@ -10,9 +10,10 @@ import {TypographyComponent} from './typography/typography.component'
 import {WidgetsGeneralComponent} from './widgets/widgets-general/widgets-general.component'
 import {DashboardDefaultComponent} from './dashboard/dashboard-default/dashboard-default.component'
 import {DashboardAnalyticsComponent} from './dashboard/dashboard-analytics/dashboard-analytics.component'
-import {DashboardCryptoComponent} from './dashboard/dashboard-crypto/dashboard-crypto.component';
-import { ScrumBoardComponent } from './scrum/scrum-board/scrum-board.component';
-import { TasksComponent } from './tasks/tasks/tasks.component'
+import {DashboardCryptoComponent} from './dashboard/dashboard-crypto/dashboard-crypto.component'
+import {ScrumBoardComponent} from './scrum/scrum-board/scrum-board.component'
+import {TasksComponent} from './tasks/tasks/tasks.component'
+import {FileManagerComponent} from './file-manager/file-manager/file-manager.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TasksComponent } from './tasks/tasks/tasks.component'
     DashboardAnalyticsComponent,
     DashboardCryptoComponent,
     ScrumBoardComponent,
-    TasksComponent
+    TasksComponent,
+    FileManagerComponent,
   ],
   imports: [
     CommonModule,

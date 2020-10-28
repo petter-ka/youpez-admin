@@ -50,7 +50,7 @@ export class LayoutComponent implements OnInit {
     this.settingsVisible = false
   }
 
-  onSearchClose() {
+  onSearchClose(event) {
     this.searchVisible = false
   }
 }

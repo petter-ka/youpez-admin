@@ -8,6 +8,7 @@
 @include color-helper('danger', $appColorDanger);
 @include color-helper('warning', $appColorWarning);
 @include color-helper('info', $appColorInfo);
+@include color-helper('decorative', $appColorDecorative);
 
 body {
   overflow: hidden;
@@ -27,7 +28,11 @@ body {
   bottom: 0;
 }
 
-.app-transition-default{
+.app-border-separator {
+  border-bottom: 1px solid $appBorderColor;
+}
+
+.app-transition-default {
   transition: .1s cubic-bezier(.35, 0, .35, 1);
   transition-property: all;
 }
@@ -50,7 +55,7 @@ body {
       margin-left: 0;
     }
 
-    &:hover{
+    &:hover {
       z-index: 50 !important;
       transform: translateY(-4px);
     }
@@ -140,6 +145,10 @@ body {
 
   &.app-progress--small {
     height: 3px;
+  }
+
+  &.app-progress--x-small {
+    height: 2px;
   }
 
   .app-progress__bar {

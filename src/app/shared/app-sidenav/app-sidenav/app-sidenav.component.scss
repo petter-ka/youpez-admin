@@ -249,7 +249,7 @@ $borderColor: #e0e0e0;
     }
   }
 
-  @include bemMod(solid) {
+  @include bemMod(solid-border) {
     border-width: 1px;
   }
 
