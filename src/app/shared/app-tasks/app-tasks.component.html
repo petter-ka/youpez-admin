@@ -13,7 +13,7 @@
     <div cdkDropListGroup
          cdkDrag
          [cdkDragData]="group"
-         [ngClass]="{'app-bg-ui app-list--border-over':!transparent}"
+         [ngClass]="{'app-bg-ui app-list--border-over':!transparent, 'opacity-75':getProgress(groupIndex) === '100%'}"
          class="app-list app-list--todo mb-3">
       <div class="app-list__group">
         <ng-container *ngIf="group.tasks.length">

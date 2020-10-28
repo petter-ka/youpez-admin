@@ -139,7 +139,7 @@
             </div>
             <div class="mr-4 flex-1">
               <div>
-                <div class="app-expressive-heading-02 mb-1">3TB used of 10TB</div>
+                <div class="app-expressive-heading-02 mb-2">3TB used of 10TB</div>
                 <div class="app-progress app-progress--small">
                   <div class="app-progress__bar app-bg-info" style="width:30%"></div>
                 </div>
@@ -154,11 +154,11 @@
         <app-sidenav-v2
           [breakpoint]="'md'"
           [direction]="'right'"
-          [opened]="true"
-          [hoverAble]="true"
-          [mode]="'side'"
+          [opened]="isDetailsOpened"
+          [mode]="'over'"
           [toggleableBtn]="true"
-          [size]="'xsm'">
+          (close)="onClose($event)"
+          [size]="'md'">
 
           <div fxFill fxLayout="column" class="">
             <div class="px-20 py-20 text-center  mb-2">
@@ -225,12 +225,6 @@
                 </button>
               </div>
               <div class="mb-1">
-                <button ibmButton="primary" size="sm" class="w-full mb-1">
-                  Move
-                  <svg class="bx--btn__icon" ibmIconMove size="20"></svg>
-                </button>
-              </div>
-              <div class="mb-1">
                 <button ibmButton="danger" size="sm" class="w-full">
                   Delete
                   <svg class="bx--btn__icon" ibmIconTrashCan size="20"></svg>
@@ -275,7 +269,6 @@
                 <div class="app-subtitle app-cards-title">Recent</div>
                 <div fxLayout="row wrap" class="app-card-row-holder">
                   <ng-container *ngFor="let file of files">
-
                     <div fxFlex="16.66%">
                       <div class="app-card app-card--select"
                            (click)="onSelectItem(file)"
@@ -296,9 +289,7 @@
                     </div>
                   </ng-container>
                 </div>
-
                 <div class="mx-4 py-1 mb-3 app-border-separator"></div>
-
                 <div class="app-subtitle app-cards-title">Folders</div>
                 <div fxLayout="row wrap" class="app-card-row-holder">
                   <ng-container *ngFor="let folder of folders">
@@ -323,7 +314,6 @@
                     </div>
                   </ng-container>
                 </div>
-
                 <div class="app-subtitle app-cards-title">Files</div>
                 <div fxLayout="row wrap" class="app-card-row-holder">
                   <ng-container *ngFor="let file of filesMore">
@@ -350,8 +340,6 @@
           </ng-scrollbar>
         </div>
       </app-sidenav-container>
-
-
     </app-sidenav-container>
   </div>
 </div>

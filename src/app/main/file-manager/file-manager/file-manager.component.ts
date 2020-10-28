@@ -29,22 +29,21 @@ export class FileManagerComponent implements OnInit {
       size: '1MB'
     }
   ]
-
   public files = [
     {
       name: 'SUPPORT.md',
       accessed: '5 mins ago',
-      size: '2.2GB',
+      size: '2KB',
     },
     {
       name: 'repos_generated.bzl',
       accessed: '1 hour ago',
-      size: '0.2GB',
+      size: '16KB',
     },
     {
       name: 'import-restrictions.yaml',
       accessed: '6 hours ago',
-      size: '0.1GB',
+      size: '101KB',
     },
     {
       name: 'build-cross.sh',
@@ -54,15 +53,14 @@ export class FileManagerComponent implements OnInit {
     {
       name: 'infrastructure.svg',
       accessed: '1 month ago',
-      size: '1MB',
+      size: '178MB',
     },
     {
       name: 'packages.json',
       accessed: '4 months ago',
-      size: '0.01MB',
+      size: '13KB',
     }
   ]
-
   public filesMore = [
     {
       name: 'README.md',
@@ -136,12 +134,12 @@ export class FileManagerComponent implements OnInit {
       size: '0.01MB',
     },
   ]
-
   public selectedItem = {
     name: 'import-restrictions.yaml',
     accessed: '5 mins ago',
     size: '0.1GB',
   }
+  public isDetailsOpened: boolean = false
 
   constructor() {
   }
@@ -150,7 +148,11 @@ export class FileManagerComponent implements OnInit {
   }
 
   onSelectItem(item) {
+    this.isDetailsOpened = true
     this.selectedItem = item
   }
 
+  onClose(event) {
+    this.isDetailsOpened = false
+  }
 }

@@ -118,6 +118,9 @@ body {
     @extend .app-row;
     @extend .app-row--center;
     @extend .app-row--x-center;
+    font-weight: 700;
+    letter-spacing: 0.01px;
+    font-size: 14px;
   }
 }
 

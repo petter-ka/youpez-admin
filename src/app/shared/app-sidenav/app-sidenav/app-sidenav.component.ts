@@ -39,7 +39,6 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
   @Input('optionalClass') optionalClass: string = ''
   @Input('initWidth') initWidth: string = ''
   @Input('hoverDelay') hoverDelay: number = 100
-
   @Input('options') options: Object = null
 
   @Output('open') open: EventEmitter<any> = new EventEmitter<any>()

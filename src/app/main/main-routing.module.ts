@@ -9,6 +9,8 @@ import {DashboardCryptoComponent} from "./dashboard/dashboard-crypto/dashboard-c
 import {ScrumBoardComponent} from "./scrum/scrum-board/scrum-board.component"
 import {TasksComponent} from "./tasks/tasks/tasks.component"
 import {FileManagerComponent} from "./file-manager/file-manager/file-manager.component"
+import {MailComponent} from "./mail/mail/mail.component"
+import {MessagesComponent} from "./messages/messages/messages.component"
 
 const routes: Routes = [
   {
@@ -56,6 +58,14 @@ const routes: Routes = [
       {
         path: 'file-manager',
         component: FileManagerComponent,
+      },
+      {
+        path: 'mail',
+        component: MailComponent,
+      },
+      {
+        path: 'messages',
+        component: MessagesComponent,
       }
     ]
   },

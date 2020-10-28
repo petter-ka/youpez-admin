@@ -42,7 +42,7 @@
   .app-bg-#{$type} {
     background-color: $color;
 
-    &.app-bg-#{type}--contrast, .app-text-contrast {
+    &.app-bg-#{type}--contrast, &.app-text-contrast {
       @include text-contrast($color);
     }
   }
@@ -67,7 +67,7 @@
     .app-bg-#{$type}-lt-#{$i*10} {
       background-color: lighten($color, $i*10%);
 
-      &.app-bg-#{$type}-lt-#{$i*10}--contrast, .app-text-contrast {
+      &.app-bg-#{$type}-lt-#{$i*10}--contrast, &.app-text-contrast {
         @include text-contrast(lighten($color, $i*10%));
       }
     }

@@ -47,6 +47,7 @@ export class LayoutSidebarComponent implements OnInit {
         },
         {
           name: 'Scrum Board',
+
           prefix: {
             type: 'ibm-icon',
             name: 'dashboardReference',
@@ -66,14 +67,14 @@ export class LayoutSidebarComponent implements OnInit {
           },
           url: '/app/tasks',
         },
-/*        {
-          name: 'Notes',
-          prefix: {
-            type: 'ibm-icon',
-            name: 'catalog',
-          },
-          url: '/app/notes',
-        },*/
+        /*        {
+                  name: 'Notes',
+                  prefix: {
+                    type: 'ibm-icon',
+                    name: 'catalog',
+                  },
+                  url: '/app/notes',
+                },*/
         {
           name: 'File Manager',
           prefix: {
@@ -295,15 +296,40 @@ export class LayoutSidebarComponent implements OnInit {
       ]
     },
     {
-      groupName: 'Menu options',
+      groupName: 'Menu features',
       opened: true,
       children: [
+        {
+          name: 'Badge number',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'home',
+          },
+          suffix: {
+            type: 'badge',
+            level: 'danger',
+            text: 2,
+          },
+        },
+        {
+          name: 'Badge text',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'home',
+          },
+          suffix: {
+            type: 'badge',
+            level: 'success',
+            text: 'Updated',
+
+          },
+        },
         {
           name: 'Disabled Item',
           disabled: true,
           prefix: {
             type: 'ibm-icon',
-            name: 'phraseSentiment',
+            name: 'home',
           },
         },
         {
@@ -311,7 +337,7 @@ export class LayoutSidebarComponent implements OnInit {
           disabled: true,
           prefix: {
             type: 'ibm-icon',
-            name: 'phraseSentiment',
+            name: 'home',
           },
           children: []
         },
@@ -319,7 +345,7 @@ export class LayoutSidebarComponent implements OnInit {
           name: 'Disabled Subitem',
           prefix: {
             type: 'ibm-icon',
-            name: 'phraseSentiment',
+            name: 'home',
           },
           children: [
             {
@@ -329,8 +355,65 @@ export class LayoutSidebarComponent implements OnInit {
           ]
         },
         {
-          name: 'No Icon',
-          url:'/app'
+          name: 'Looooong Menu item, with loooong menu item',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'home',
+          },
+        },
+        {
+          name: 'Menu item',
+          subtitle: 'with subtitle',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'home',
+          },
+          children: [
+            {
+              name: 'Subitem',
+            },
+          ]
+        },
+        {
+          name: 'Menu item',
+          subtitle: 'with subtitle',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'home',
+          },
+        },
+        {
+          name: 'Menu item',
+          subtitle: 'with long subtitle, with long subtitle, with log subtitle',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'home',
+          },
+        },
+      ]
+    },
+    {
+      groupName: 'iconless features ',
+      opened: true,
+      children: [
+        {
+          name: 'Iconless',
+        },
+        {
+          name: 'Iconless badge',
+          suffix: {
+            type: 'badge',
+            level: 'danger',
+            text: 'Deleted',
+          },
+        },
+        {
+          name: 'Iconless sub',
+          children: [
+            {
+              name: 'Sub item',
+            }
+          ]
         },
       ]
     }

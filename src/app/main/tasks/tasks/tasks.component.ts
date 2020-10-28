@@ -43,6 +43,22 @@ export class TasksComponent implements OnInit {
         {
           description: '*ngFor should support separators',
           id: 'sadassdfsddfdasdssdsdfsasdasdfdsdas',
+          checked: false,
+        },
+
+        {
+          description: 'Interpolation options for View.styles argument',
+          id: 'sadassdfsddfdasdssdsdfsas2dasdfdsdas',
+          checked: false,
+        },
+        {
+          description: 'Angular2 Routing: persisting route tabs and child routes',
+          id: 'sadassdfsddfdasdssds1dfsasdasdfdsdas',
+          checked: true,
+        },
+        {
+          description: 'Implement @ObserveChildren or similar API',
+          id: 'sadassdfsddfdasds2sdsdfsasdasdfdsdas',
           checked: true,
         }
       ]

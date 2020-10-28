@@ -24,7 +24,11 @@
             <div class="app-content app-content--sm ">
               <ng-container *ngFor="let user of users">
                 <div class="app-row app-row-center truncate mb-2 relative">
-                  <img src="{{user.avatar}}" class="w-8 rounded-full mr-2"/>
+                  <div class="app-symbol mr-2">
+                    <div class="app-symbol__label w-8 h-8 rounded-full app-bg-info-lt-50 app-text-contrast">
+                      {{user.name[0]}}{{user.name[1]}}
+                    </div>
+                  </div>
                   <div>
                     <div class="app-productive-heading-01">{{user.name}}</div>
                     <div class="app-helper-text-01">{{user.country}}</div>

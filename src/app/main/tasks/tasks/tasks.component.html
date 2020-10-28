@@ -88,10 +88,10 @@
           <div fxFill fxLayout="column">
             <div fxFlex class="relative">
               <div fxLayout="row wrap">
-                <div fxFlex="100%">
+                <div fxFlex.gt-lg="100%">
                   <div class="app-content app-content--default">
                     <div class="flex items-center mb-4">
-                      <button (click)="onAddList()" ibmButton="tertiary" size="sm">
+                      <button (click)="onAddList()" ibmButton="primary" size="sm">
                         Add list
                         <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
                       </button>
@@ -114,11 +114,16 @@
                         </button>
                       </div>
                     </div>
-                    <app-tasks-list #appTasksList
-                                    [tasks]="taskGroups"
-                                    [transparent]="false"
-                                    [filterText]="txtSearch"
-                    ></app-tasks-list>
+
+                    <div fxLayout="row wrap">
+                      <div fxFlex.gt-lg="65%">
+                        <app-tasks-list #appTasksList
+                                        [tasks]="taskGroups"
+                                        [transparent]="false"
+                                        [filterText]="txtSearch"
+                        ></app-tasks-list>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

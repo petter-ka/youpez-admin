@@ -40,7 +40,6 @@
     }
   }
 
-
   .app-sidebar__list {
 
     .app-sidebar__list__group {
@@ -87,7 +86,7 @@
       cursor: pointer;
 
       .app-sidebar__list__item__inner {
-        height: 38px;
+        min-height: 38px;
         padding: 0 16px 0 10px;
         border-radius: 8px;
         margin-bottom: 2px;
@@ -144,9 +143,23 @@
       }
 
       .app-sidebar__list__item__text {
+        /*margin-left: 4px;*/
         @extend .app-row__fill;
         @extend .text-overflow-ellipsis;
         line-height: 1rem;
+
+        .app-sidebar__list__item__text__main {
+          padding-top: 10px;
+          margin-bottom: 2px;
+          @extend .text-overflow-ellipsis;
+        }
+
+        .app-sidebar__list__item__text__sub {
+          padding-bottom: 10px;
+          @extend .text-overflow-ellipsis;
+          font-size: 12px;
+          opacity: 0.7;
+        }
       }
 
       .app-sidebar__list__item__badge {
@@ -189,7 +202,7 @@
 
         .app-sidebar__list__item {
           .app-sidebar__list__item__inner {
-            height: 30px;
+            min-height: 30px;
           }
         }
       }
