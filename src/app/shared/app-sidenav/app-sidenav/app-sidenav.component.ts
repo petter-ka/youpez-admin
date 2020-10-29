@@ -17,7 +17,18 @@ import {AppSidenavService} from "../../../core/services/app-sidenav.service"
 
 export declare type DirectionType = 'left' | 'right' | 'bottom' | 'top'
 export declare type ModeType = 'over' | 'side'
-export declare type SizeType = 'md' | 'sm' | 'lg' | 'xl' | 'custom1' | 'sideBar1' | 'sideBar2' | 'xsm' | 'docs'
+export declare type SizeType =
+  'md'
+  | 'sm'
+  | 'lg'
+  | 'xl'
+  | 'custom1'
+  | 'sideBar1'
+  | 'sideBar2'
+  | 'xsm'
+  | 'docs'
+  | 'mail'
+  | 'mini'
 
 @Component({
   selector: 'app-sidenav-v2',
@@ -40,6 +51,7 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
   @Input('initWidth') initWidth: string = ''
   @Input('hoverDelay') hoverDelay: number = 100
   @Input('options') options: Object = null
+  @Input('minDimension') minDimension: number = null
 
   @Output('open') open: EventEmitter<any> = new EventEmitter<any>()
   @Output('close') close: EventEmitter<any> = new EventEmitter<any>()
@@ -79,6 +91,8 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
       custom1: '260',
       sideBar1: '240',
       sideBar2: '300',
+      mail: '380',
+      mini: '100',
     },
     height: {},
   }
@@ -220,6 +234,10 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
 
   getHeight() {
     return this.height
+  }
+
+  getMinDimension() {
+    return this.minDimension
   }
 
   onClose() {

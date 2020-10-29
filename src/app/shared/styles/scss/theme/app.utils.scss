@@ -28,9 +28,34 @@ body {
   bottom: 0;
 }
 
-.app-border-separator {
+.app-border-all {
+  border: 1px solid $appBorderColor;
+}
+
+.app-border-t {
+  border-top: 1px solid $appBorderColor;
+}
+
+.app-border-b {
   border-bottom: 1px solid $appBorderColor;
 }
+
+.app-border-r {
+  border-right: 1px solid $appBorderColor;
+}
+
+.app-border-l {
+  border-left: 1px solid $appBorderColor;
+}
+
+.app-btn-border-sep {
+  display: inline-block;
+  height: 15px;
+  width: 1px;
+  background-color: $appBorderColor;
+  margin: 0 .5rem;
+}
+
 
 .app-transition-default {
   transition: .1s cubic-bezier(.35, 0, .35, 1);
@@ -119,8 +144,9 @@ body {
     @extend .app-row--center;
     @extend .app-row--x-center;
     font-weight: 700;
-    letter-spacing: 0.01px;
+    letter-spacing: -0.5px;
     font-size: 14px;
+    cursor: default;
   }
 }
 

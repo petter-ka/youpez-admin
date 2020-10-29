@@ -88,8 +88,9 @@ export class AppSidenavContainerComponent implements OnInit, OnDestroy, AfterCon
     const direction = sidenav.direction
     const opened = sidenav.opened
     const hoverAble = sidenav.hoverAble
-    const calcWidthMargin = `${opened ? sidenav.getWidth() : (hoverAble ? 20 : 0)}px`
-    const calcHeightMargin = `${opened ? sidenav.getHeight() : (hoverAble ? 20 : 0)}px`
+    const minDimension = sidenav.getMinDimension() || 20
+    const calcWidthMargin = `${opened ? sidenav.getWidth() : (hoverAble ? minDimension : 0)}px`
+    const calcHeightMargin = `${opened ? sidenav.getHeight() : (hoverAble ? minDimension : 0)}px`
 
     this.toggleOverlay(sidenav.opened, sidenav.mode)
 

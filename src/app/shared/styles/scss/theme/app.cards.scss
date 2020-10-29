@@ -52,6 +52,10 @@
     margin: 0.25rem;
   }
 
+  &.app-card--alone {
+    margin: 1rem;
+  }
+
   &.app-card--bt-success {
     @include appCardBt();
 

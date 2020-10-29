@@ -77,7 +77,20 @@ import {
   StarModule,
   FolderSharedModule,
   RecentlyViewedModule,
-  HashtagModule, DownloadModule, ShareModule, MoveModule, TableOfContentsModule, UploadModule,
+  HashtagModule,
+  DownloadModule,
+  ShareModule,
+  MoveModule,
+  TableOfContentsModule,
+  UploadModule,
+  PackageModule,
+  ChevronLeftModule,
+  ChevronRightModule,
+  AttachmentModule,
+  FlagModule,
+  FlagFilledModule,
+  TextBoldModule,
+  TextItalicModule, TextUnderlineModule, PrinterModule, OpenPanelFilledLeftModule, OpenPanelLeftModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -238,6 +251,18 @@ const CarbonIconModules = [
   MoveModule,
   TableOfContentsModule,
   UploadModule,
+  PackageModule,
+  ChevronLeftModule,
+  ChevronRightModule,
+  AttachmentModule,
+  FlagModule,
+  FlagFilledModule,
+  TextBoldModule,
+  TextItalicModule,
+  TextUnderlineModule,
+  PrinterModule,
+  OpenPanelFilledLeftModule,
+  OpenPanelLeftModule,
 ]
 
 const Components = [
@@ -274,8 +299,6 @@ const Pipes = [
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
-
-
   ],
   declarations: [
     ...Components,

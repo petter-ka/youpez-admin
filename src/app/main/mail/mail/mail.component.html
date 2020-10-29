@@ -1,1 +1,375 @@
-<p>mail works!</p>
+<div fxFill fxLayout="column">
+  <app-header>
+    <app-header-title>
+      Mailbox
+    </app-header-title>
+    <app-header-tools>
+      <button ibmButton="primary" size="sm">
+        New
+        <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+      </button>
+    </app-header-tools>
+  </app-header>
+  <div fxFlex class="relative">
+    <app-sidenav-container panel="solid">
+      <app-sidenav-v2
+        [breakpoint]="'md'"
+        [direction]="'left'"
+        [opened]="true"
+        [hoverAble]="true"
+        [mode]="'side'"
+        [toggleableBtn]="true"
+        [size]="'mail'">
+
+        <div class="app-mini-sidebar-alt app-bg-ui">
+          <div class="app-mini-sidebar-alt__list">
+
+            <div class="app-mini-sidebar-alt__list__item app-mini-sidebar-alt__list__item--active">
+              <div class="app-mini-sidebar-alt__list__item__pill">
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Inbox</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__icon">
+                  <app-ibm-icon iconSize="24" iconName="package"></app-ibm-icon>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-mini-sidebar-alt__list__item">
+              <div class="app-mini-sidebar-alt__list__item__pill">
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Starred</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__icon">
+                  <app-ibm-icon iconSize="24" iconName="star"></app-ibm-icon>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-mini-sidebar-alt__list__item">
+              <div class="app-mini-sidebar-alt__list__item__pill">
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Important</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__icon">
+                  <app-ibm-icon iconSize="24" iconName="alarm"></app-ibm-icon>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-mini-sidebar-alt__list__item">
+              <div class="app-mini-sidebar-alt__list__item__pill">
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Sent</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__icon">
+                  <app-ibm-icon iconSize="24" iconName="sendAlt"></app-ibm-icon>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-mini-sidebar-alt__list__item">
+              <div class="app-mini-sidebar-alt__list__item__pill">
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Drafts</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__icon">
+                  <app-ibm-icon iconSize="24" iconName="document"></app-ibm-icon>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-mini-sidebar-alt__list__item">
+              <div class="app-mini-sidebar-alt__list__item__pill">
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Spam</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__icon">
+                  <app-ibm-icon iconSize="24" iconName="error"></app-ibm-icon>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-mini-sidebar-alt__list__item">
+              <div class="app-mini-sidebar-alt__list__item__pill">
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Trash</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__icon">
+                  <app-ibm-icon iconSize="24" iconName="trashCan"></app-ibm-icon>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="app-mini-sidebar-alt-holder">
+          <div fxFill fxLayout="column" class="app-bg-ui">
+            <div class="app-header-subheader">
+              <div class="app-productive-heading-02 flex-1">Inbox</div>
+              <div class="app-helper-text-01">
+                Sort: <span class="font-bold">date</span>
+              </div>
+            </div>
+            <div>
+              <ibm-search placeholder="Search..."
+                          size="md"></ibm-search>
+            </div>
+            <div fxFlex class="relative">
+              <div class="app-a-box app-scrollbar-fix">
+
+                <ng-scrollbar>
+
+                  <div class="app-list app-list--hover app-list--select-alt">
+
+                    <ng-container *ngFor="let mail of mails">
+                      <ng-container *ngIf="mail.sep">
+                        <div class="app-list-header-title">{{mail.sep}}</div>
+                      </ng-container>
+
+                      <ng-container *ngIf="!mail.sep">
+                        <div (click)="onSelect(mail)" [ngClass]="{'app-list__item--active':mail === selectedMail}"
+                             class="app-list__item app-list__item--align-top">
+                          <div class="app-list__item__prefix w-10 text-center">
+                            <div class="pt-4">
+                              <ng-container *ngIf="!mail.read">
+                                <div class="mb-4">
+                                  <span class="w-2 h-2 rounded-full inline-block app-bg-info"></span>
+                                </div>
+                              </ng-container>
+                              <ng-container *ngIf="mail.flagged">
+                                <div class="mb-2 app-color-warning">
+                                  <app-ibm-icon iconName="flagFilled" iconSize="16"></app-ibm-icon>
+                                </div>
+                              </ng-container>
+                              <ng-container *ngIf="mail.attachments">
+                                <div>
+                                  <app-ibm-icon iconName="attachment" iconSize="16"></app-ibm-icon>
+                                </div>
+                              </ng-container>
+                            </div>
+                          </div>
+                          <div class="app-list__item__content">
+                            <div class="mr-4 min-w-0">
+                              <div class="flex items-center overflow-hidden mb-2">
+                                <div class="app-symbol mr-1">
+                                  <div
+                                    class="app-symbol__label app-bg-primary-lt-40 app-color-contrast rounded-full h-6 w-6">
+                                    {{mail.sender[0]}}
+                                  </div>
+                                </div>
+                                <div class="flex-1 overflow-hidden truncate">
+                                  <span class="app-productive-heading-01 mr-2">{{mail.sender}}</span>
+                                  <span class="app-helper-text-01">jon@noice.com</span>
+                                </div>
+                                <div class="whitespace-no-wrap app-label-01 text-muted ml-1">
+                                  {{mail.date}}
+                                </div>
+                              </div>
+                              <div class="app-productive-heading-02 mb-1">{{mail.title}}</div>
+                              <div class="app-body-long-01">{{mail.content | slice:0:110}}...</div>
+                            </div>
+                          </div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </div>
+                </ng-scrollbar>
+              </div>
+            </div>
+            <div class=" app-header-subheader app-border-t">
+              <div class="flex flex-1 items-center justify-between">
+                <div></div>
+                <div class="flex items-center">
+                  <div class="app-helper-text-01">1 - 10 of 1,451</div>
+                  <button
+                    ibmButton="ghost" size="sm"
+                    class="bx--btn--icon-only bx--btn--remove-tooltip">
+                    <svg class="bx--btn__icon" ibmIconChevronLeft size="32"></svg>
+                  </button>
+                  <button
+                    ibmButton="ghost" size="sm"
+                    class="bx--btn--icon-only bx--btn--remove-tooltip">
+                    <svg class="bx--btn__icon" ibmIconChevronRight size="32"></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </app-sidenav-v2>
+
+      <div fxFill fxLayout="column" class="relative">
+        <div class="app-a-box app-scrollbar-fix">
+          <ng-scrollbar>
+            <div class="app-header-subheader">
+              <div class="flex flex-1">
+
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconOpenPanelLeft size="32"></svg>
+                </button>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconFlag size="32"></svg>
+                </button>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconError size="32"></svg>
+                </button>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconTag size="32"></svg>
+                </button>
+                <span class="app-btn-border-sep"></span>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconStar size="32"></svg>
+                </button>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconTrashCan size="32"></svg>
+                </button>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconPrinter size="32"></svg>
+                </button>
+              </div>
+
+              <div class="flex-1 flex items-end">
+                <div class="app-helper-text-01">1 of 1,451</div>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconChevronLeft size="32"></svg>
+                </button>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconChevronRight size="32"></svg>
+                </button>
+              </div>
+
+            </div>
+
+        </div>
+
+        <div class="app-header-subheader" style="height: 40px">
+          <div class="flex justify-between flex-1 items-center">
+            <div class="app-productive-heading-02">{{selectedMail.title}}</div>
+            <ibm-tag type="warm-gray">work</ibm-tag>
+          </div>
+
+        </div>
+
+        <div class="app-card app-card--alone">
+          <div class="app-card__content">
+            <div class="flex items-center overflow-hidden mb-6">
+              <div class="app-symbol mr-2">
+                <div
+                  class="app-symbol__label app-bg-primary-lt-40 app-color-contrast rounded-full h-10 w-10">
+                  {{selectedMail.sender[0]}}
+                </div>
+              </div>
+              <div class="flex-1 overflow-hidden truncate">
+                <div class="mb-1">
+                  <span class="app-productive-heading-01 mr-2">{{selectedMail.sender}}</span>
+                  <span class="app-helper-text-01">jon@noice.com</span>
+                </div>
+                <div class="app-helper-text-01">
+                  to <span class="font-bold">you</span>, <span class="font-bold">Jonathan</span>, <span
+                  class="font-bold">Joseph</span>
+                </div>
+              </div>
+              <div class="whitespace-no-wrap app-label-01 text-muted ml-1">
+                {{selectedMail.date}}
+              </div>
+            </div>
+            <p class="app-body-long-01">
+              <span>HEY JON!</span><br/><br/>
+              Declarative: React makes it painless to create interactive UIs. Design simple views for each state in
+              your
+              application, and React will efficiently update and render just the right components when your data
+              changes. Declarative views make your code more predictable, simpler to understand, and easier to
+              debug.<br/><br/>
+              Component-Based: Build encapsulated components that manage their own state, then compose them to make
+              complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass
+              rich
+              data through your app and keep state out of the DOM.<br/>
+              Learn Once, Write Anywhere: We don't make assumptions about the rest of your technology stack, so you
+              can
+              develop new features in React without rewriting existing code. React can also render on the server
+              using
+              Node and power mobile apps using React Native.<br/><br/>
+              You'll notice that we used an HTML-like syntax; we call it JSX. JSX is not required to use React, but
+              it
+              makes code more readable, and writing it feels like writing HTML.<br/><br/>
+              The main purpose of this repository is to continue evolving React core, making it faster and easier to
+              use. Development of React happens in the open on GitHub, and we are grateful to the community for
+              contributing bugfixes and improvements. Read below to learn how you can take part in improving
+              React.<br/><br/>
+              Sincerely yours,<br/>
+              <span class="font-bold">React Team</span>
+            </p>
+            <p class="app-helper-text-01 text-muted mt-4">
+              The content of this email message - including any attachments to it - is confidential and considered
+              to be
+              business secret.<br/>
+              Therefore it is prohibited to publish, distribute, share, copy it in any way. If you are not the
+              recipient, you are not allowed to use or store the information in this email. If you have got this
+              message
+              by coincidence, please delete it immediately and notify the sender.
+            </p>
+            <div class="mt-6">
+              <textarea
+                ibmTextArea
+                [placeholder]="'Type your reply here'"
+                class="app-border-all"
+                [rows]="5"
+                [cols]="5"
+                aria-label="textarea"></textarea>
+              <div class="flex items-center mt-1">
+                <div class="flex-1 flex items-center">
+                  <button
+                    ibmButton="ghost"
+                    size="sm"
+                    class="bx--btn--icon-only">
+                    <svg class="bx--btn__icon" ibmIconTextBold size="32"></svg>
+                  </button>
+                  <button
+                    ibmButton="ghost"
+                    size="sm"
+                    class="bx--btn--icon-only">
+                    <svg class="bx--btn__icon" ibmIconTextItalic size="32"></svg>
+                  </button>
+                  <button
+                    ibmButton="ghost"
+                    size="sm"
+                    class="bx--btn--icon-only">
+                    <svg class="bx--btn__icon" ibmIconTextUnderline size="32"></svg>
+                  </button>
+                  <span class="app-btn-border-sep"></span>
+                  <button
+                    ibmButton="ghost"
+                    size="sm"
+                    class="bx--btn--icon-only">
+                    <svg class="bx--btn__icon" ibmIconAttachment size="32"></svg>
+                  </button>
+                  <button
+                    ibmButton="ghost"
+                    size="sm"
+                    class="bx--btn--icon-only">
+                    <svg class="bx--btn__icon" ibmIconImage size="32"></svg>
+                  </button>
+                </div>
+                <button ibmButton="ghost" size="sm">
+                  Discard
+                </button>
+                <button ibmButton="primary" size="sm">
+                  Send
+                  <svg class="bx--btn__icon" ibmIconSend size="20"></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </ng-scrollbar>
+      </div>
+  </div>
+  </app-sidenav-container>
+</div>
+</div>

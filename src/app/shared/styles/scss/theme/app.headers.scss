@@ -1,3 +1,5 @@
+@import 'app.variables';
+
 .app-main-header {
   padding: 0 1.1rem 0 1.1rem;
   position: relative;
@@ -99,5 +101,13 @@
       right: 16px;
     }
   }
+}
 
+.app-header-subheader {
+  height: 47px;
+  @extend .app-row;
+  @extend .app-row--center;
+  padding: 0 1rem;
+  background-color: $appUIForegroundBg;
+  border-bottom: 1px solid $appBorderColor;
 }
