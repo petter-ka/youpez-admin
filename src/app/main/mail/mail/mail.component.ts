@@ -110,6 +110,7 @@ export class MailComponent implements OnInit {
   ]
 
   public selectedMail: any = null
+  public sidebarVisible: boolean = true
 
   constructor() {
   }
@@ -121,6 +122,10 @@ export class MailComponent implements OnInit {
   onSelect(mail: any) {
     mail.read = true
     this.selectedMail = mail
+  }
+
+  onToggleSidebar() {
+    this.sidebarVisible = !this.sidebarVisible
   }
 
 }

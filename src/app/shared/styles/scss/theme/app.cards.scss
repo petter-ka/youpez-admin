@@ -53,7 +53,11 @@
   }
 
   &.app-card--alone {
-    margin: 1rem;
+    margin: 1.25rem;
+
+    .app-card__content {
+      padding: 1.5rem;
+    }
   }
 
   &.app-card--bt-success {

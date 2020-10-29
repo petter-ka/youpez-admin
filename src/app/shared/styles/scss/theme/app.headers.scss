@@ -110,4 +110,10 @@
   padding: 0 1rem;
   background-color: $appUIForegroundBg;
   border-bottom: 1px solid $appBorderColor;
+  position: relative;
+
+  .app-sidebar-toggle-btn {
+    margin-left: -0.25rem;
+    margin-right: 0.75rem;
+  }
 }
