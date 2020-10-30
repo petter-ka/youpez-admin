@@ -1,1 +1,329 @@
-<p>messages works!</p>
+<div fxFill fxLayout="column">
+  <app-header>
+    <app-header-title>
+      <!--      <button (click)="onToggleSidebar()" class="app-sidebar-toggle-btn">
+              <app-ibm-icon iconSize="20" iconName="openPanelLeft"></app-ibm-icon>
+            </button>-->
+      Messages
+    </app-header-title>
+    <app-header-tools>
+      <button ibmButton="primary" size="sm">
+        New
+        <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+      </button>
+    </app-header-tools>
+  </app-header>
+  <div fxFlex class="relative">
+    <app-sidenav-container panel="solid">
+      <app-sidenav-v2
+        [breakpoint]="'md'"
+        [direction]="'left'"
+        [opened]="true"
+        [hoverAble]="true"
+        [mode]="'side'"
+        [toggleableBtn]="true"
+        [size]="'sideBar1'">
+
+        <div fxFill fxLayout="column" class="app-bg-ui">
+
+          <div ngbDropdown container="body">
+            <div class="app-header-subheader cursor-pointer" ngbDropdownToggle style="height: 49px">
+              <div class="pr-2">
+                <div class="app-symbol">
+                  <div class="app-symbol__label w-6 h-6 rounded-full app-bg-info-lt-40 font-bold app-text-contrast">
+                    D
+                  </div>
+                </div>
+              </div>
+              <div class="mr-2 flex-1">
+                <div>
+                  <div class="app-expressive-heading-02">Youpez coorp.</div>
+                </div>
+              </div>
+
+              <div class="-mr-2">
+                <button
+                  ibmButton="tertiary" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconEdit size="32"></svg>
+                </button>
+              </div>
+
+              <div ngbDropdownMenu>
+                <div class="app-list app-list--hover app-list--select app-list--no-border app-list--p">
+
+                  <div class="app-list__item" ngbDropdownItem>
+                    <div class="app-list__item__content">
+                      Invite people
+                    </div>
+                  </div>
+                  <div class="app-list__item" ngbDropdownItem>
+                    <div class="app-list__item__content">
+                      Create a channel
+                    </div>
+                  </div>
+                  <div class="app-list__divider"></div>
+                  <div class="app-list__item" ngbDropdownItem>
+                    <div class="app-list__item__content">
+                      Preferences
+                    </div>
+                  </div>
+
+                  <div class="app-list__item" ngbDropdownItem>
+                    <div class="app-list__item__content">
+                      Administration
+                    </div>
+                  </div>
+                  <div class="app-list__divider"></div>
+                  <div class="app-list__item" ngbDropdownItem>
+                    <div class="app-list__item__content">
+                      Sign out
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div fxFlex class="relative">
+            <div class="app-a-box app-scrollbar-fix">
+              <ng-scrollbar>
+                <div class="mt-2">
+                  <div class="app-list-header-pill">Channels</div>
+                  <div class="mb-4">
+                    <ng-container *ngFor="let channel of channels">
+                      <div class="app-list-pill">
+                        <div (click)="onSelect(channel)" class="app-list-pill__item">
+                          <div class="app-list-pill__item__inner"
+                               [ngClass]="{'app-list-pill__item__inner--active': channel === selectedItem}">
+                            <div class="w-5 h-5 app-bg-info-lt-50 mr-2 flex items-center justify-center rounded">
+                              <app-ibm-icon class="flex" iconSize="16" [iconName]="channel.icon"></app-ibm-icon>
+                            </div>
+                            <div class="flex-1 truncate app-body-long-01">{{channel.name}}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-container>
+                    <div class="app-list-pill mt-1">
+                      <div class="app-list-pill__item">
+                        <div class="app-list-pill__item__inner">
+                          <div class="w-5 h-5 app-bg-success-lt-30 mr-2 flex items-center justify-center rounded">
+                            <app-ibm-icon class="flex" iconSize="16" iconName="add"></app-ibm-icon>
+                          </div>
+                          <div class="flex-1 truncate app-body-long-01">Add channels</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="app-list-header-pill">Direct messages</div>
+                  <div>
+                    <ng-container *ngFor="let message of messages">
+                      <div class="app-list-pill">
+                        <div (click)="onSelect(message)" class="app-list-pill__item">
+                          <div class="app-list-pill__item__inner"
+                               [ngClass]="{'app-list-pill__item__inner--active': message === selectedItem}">
+                            <ng-container *ngIf="message.avatar.type === 'symbol'">
+                              <div class="app-symbol mr-2" [class]="message.status">
+                                <div [class]="message.avatar.color" class="app-symbol__label w-5 h-5 rounded">
+                                  {{message.avatar.src}}
+                                </div>
+                              </div>
+                            </ng-container>
+                            <ng-container *ngIf="message.avatar.type === 'img'">
+                              <div class="app-symbol mr-2" [class]="message.status">
+                                <div class="app-symbol__img">
+                                  <img [src]="message.avatar.src" class="w-5 rounded"/>
+                                </div>
+                              </div>
+                            </ng-container>
+                            <div class="flex-1 truncate app-body-long-01">{{message.name}}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-container>
+                    <div class="app-list-pill mt-1">
+                      <div class="app-list-pill__item">
+                        <div class="app-list-pill__item__inner">
+                          <div class="w-5 h-5 app-bg-success-lt-30 mr-2 flex items-center justify-center rounded">
+                            <app-ibm-icon class="flex" iconSize="16" iconName="add"></app-ibm-icon>
+                          </div>
+                          <div class="flex-1 truncate app-body-long-01">Add teammates</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-scrollbar>
+            </div>
+          </div>
+
+          <div class="flex items-center px-4 py-3 app-border-t">
+            <div class="mr-2">
+              <div class="app-symbol app-symbol--status-success">
+                <div class="app-symbol__img">
+                  <img class="w-10 h-10 rounded-full" src="/assets/img/avatar/avatar8.jpg"/>
+                </div>
+              </div>
+
+            </div>
+            <div class="flex-1 mr-1">
+              <div>
+                <div class="app-helper-text-01">Signed in as</div>
+                <div class="app-expressive-heading-02">David Robson</div>
+              </div>
+            </div>
+            <button
+              ibmButton="ghost" size="sm"
+              class="bx--btn--icon-only bx--btn--remove-tooltip">
+              <svg class="bx--btn__icon" ibmIconSettings size="32"></svg>
+            </button>
+          </div>
+        </div>
+      </app-sidenav-v2>
+
+      <div fxFill fxLayout="column">
+        <div class="app-header-subheader" style="height:49px">
+          <div>
+            <div class="app-productive-heading-02"># {{selectedItem.name}}</div>
+            <div class="app-helper-text-01">active thread</div>
+          </div>
+          <div class="flex flex-1 items-center justify-end">
+            <button
+              ibmButton="ghost" size="sm"
+              class="bx--btn--icon-only bx--btn--remove-tooltip">
+              <svg class="bx--btn__icon" ibmIconInformation size="32"></svg>
+            </button>
+            <button
+              ibmButton="ghost" size="sm"
+              class="bx--btn--icon-only bx--btn--remove-tooltip">
+              <svg class="bx--btn__icon" ibmIconFlag size="32"></svg>
+            </button>
+            <button
+              ibmButton="ghost" size="sm"
+              class="bx--btn--icon-only bx--btn--remove-tooltip">
+              <svg class="bx--btn__icon" ibmIconPhone size="32"></svg>
+            </button>
+            <button
+              ibmButton="ghost" size="sm"
+              class="bx--btn--icon-only bx--btn--remove-tooltip">
+              <svg class="bx--btn__icon" ibmIconStar size="32"></svg>
+            </button>
+            <span class="app-btn-border-sep"></span>
+            <button
+              ibmButton="ghost" size="sm"
+              class="bx--btn--icon-only bx--btn--remove-tooltip">
+              <svg class="bx--btn__icon" ibmIconOverflowMenuVertical size="32"></svg>
+            </button>
+          </div>
+        </div>
+        <div fxFlex class="relative">
+          <div class="app-a-box app-scrollbar-fix">
+            <ng-scrollbar>
+              <div class="app-list-message">
+                <ng-container *ngFor="let channel of selectedChannel;">
+
+                  <ng-container *ngIf="channel.separator">
+                    <div class="app-list-message__divider">{{channel.time}}</div>
+                  </ng-container>
+
+                  <ng-container *ngIf="!channel.separator">
+                    <ng-container *ngFor="let row of channel.rows;let index=index">
+
+                      <ng-container *ngIf="index === 0">
+                        <div class="app-list-message__item">
+                          <ng-container *ngIf="channel.user.avatar.type === 'symbol'">
+                            <div class="app-symbol mr-2" [class]="channel.user.status">
+                              <div [class]="channel.user.avatar.color"
+                                   class="app-symbol__label w-10 h-10 rounded">
+                                {{channel.user.avatar.src}}
+                              </div>
+                            </div>
+                          </ng-container>
+
+                          <ng-container *ngIf="channel.user.avatar.type === 'img'">
+                            <div class="app-symbol mr-2" [class]="channel.user.status">
+                              <div class="app-symbol__img">
+                                <img [src]="channel.user.avatar.src" class="w-10 rounded"/>
+                              </div>
+                            </div>
+                          </ng-container>
+
+                          <div>
+                            <div class="cursor-pointer">
+                              <span class="app-list-message__item__text">{{channel.user.name}}</span>
+                              <span class="app-list-message__item__main-time">{{row.time}}</span>
+                            </div>
+                            <div>{{row.content}}</div>
+                          </div>
+                        </div>
+                      </ng-container>
+
+                      <ng-container *ngIf="index !== 0">
+                        <div class="app-list-message__item">
+                          <div class="w-10 mr-2">
+                            <div class="app-list-message__item__time">
+                              {{row.time}}
+                            </div>
+                          </div>
+                          <div class="flex-1">{{row.content}}</div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+
+                </ng-container>
+              </div>
+            </ng-scrollbar>
+          </div>
+        </div>
+        <div class="app-content app-content--default-bottom">
+          <div class="app-border-all app-bg-ui">
+            <input ibmText placeholder="Message office-all"/>
+            <div class="flex items-center">
+              <div class="flex-1 flex items-center">
+                <button
+                  ibmButton="ghost"
+                  size="sm"
+                  class="bx--btn--icon-only">
+                  <svg class="bx--btn__icon" ibmIconTextBold size="32"></svg>
+                </button>
+                <button
+                  ibmButton="ghost"
+                  size="sm"
+                  class="bx--btn--icon-only">
+                  <svg class="bx--btn__icon" ibmIconTextItalic size="32"></svg>
+                </button>
+                <button
+                  ibmButton="ghost"
+                  size="sm"
+                  class="bx--btn--icon-only">
+                  <svg class="bx--btn__icon" ibmIconTextUnderline size="32"></svg>
+                </button>
+                <span class="app-btn-border-sep"></span>
+                <button
+                  ibmButton="ghost"
+                  size="sm"
+                  class="bx--btn--icon-only">
+                  <svg class="bx--btn__icon" ibmIconAttachment size="32"></svg>
+                </button>
+                <button
+                  ibmButton="ghost"
+                  size="sm"
+                  class="bx--btn--icon-only">
+                  <svg class="bx--btn__icon" ibmIconImage size="32"></svg>
+                </button>
+              </div>
+              <button ibmButton="primary" size="sm">
+                Send
+                <svg class="bx--btn__icon" ibmIconSend size="20"></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </app-sidenav-container>
+  </div>
+</div>

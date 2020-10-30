@@ -90,7 +90,13 @@ import {
   FlagModule,
   FlagFilledModule,
   TextBoldModule,
-  TextItalicModule, TextUnderlineModule, PrinterModule, OpenPanelFilledLeftModule, OpenPanelLeftModule,
+  TextItalicModule,
+  TextUnderlineModule,
+  PrinterModule,
+  OpenPanelFilledLeftModule,
+  OpenPanelLeftModule,
+  LockedModule,
+  InformationModule, PhoneModule, EditModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -263,6 +269,10 @@ const CarbonIconModules = [
   PrinterModule,
   OpenPanelFilledLeftModule,
   OpenPanelLeftModule,
+  LockedModule,
+  InformationModule,
+  PhoneModule,
+  EditModule,
 ]
 
 const Components = [

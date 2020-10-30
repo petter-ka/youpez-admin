@@ -107,16 +107,12 @@
             </div>
             <div fxFlex class="relative">
               <div class="app-a-box app-scrollbar-fix">
-
                 <ng-scrollbar>
-
                   <div class="app-list app-list--hover app-list--select-alt">
-
                     <ng-container *ngFor="let mail of mails">
                       <ng-container *ngIf="mail.sep">
                         <div class="app-list-header-title">{{mail.sep}}</div>
                       </ng-container>
-
                       <ng-container *ngIf="!mail.sep">
                         <div (click)="onSelect(mail)" [ngClass]="{'app-list__item--active':mail === selectedMail}"
                              class="app-list__item app-list__item--align-top">

@@ -129,11 +129,23 @@ body {
   }
 }
 
+@mixin symbolStatus($color) {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  right: -1px;
+  width: 7px;
+  height: 7px;
+  box-shadow: 0 0 0 2px #fff;
+  border-radius: 100px;
+
+  background-color: $color;
+}
+
 .app-symbol {
   display: inline-block;
   flex-shrink: 0;
   position: relative;
-  border-radius: 0.42rem;
 
   &.app-symbol--default {
     background-color: $appCardBg;
@@ -147,6 +159,24 @@ body {
     letter-spacing: -0.5px;
     font-size: 14px;
     cursor: default;
+  }
+
+  .app-symbol__img {
+    @extend .app-row;
+    @extend .app-row--center;
+    @extend .app-row--x-center;
+  }
+
+  &.app-symbol--status-success {
+    &:after {
+      @include symbolStatus($appColorSuccess);
+    }
+  }
+
+  &.app-symbol--status-warning {
+    &:after {
+      @include symbolStatus($appColorWarning);
+    }
   }
 }
 
@@ -214,4 +244,11 @@ body {
   cursor: pointer;
   height: 20px;
   width: 20px;
+}
+
+.app-text-default {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.16px;
 }

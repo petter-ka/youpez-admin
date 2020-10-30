@@ -96,8 +96,14 @@
 
   @if abs($color-brightness) < ($light-color/2) {
     color: white;
+    svg {
+      fill: white;
+    }
   } @else {
     color: black;
+    svg {
+      fill: black;
+    }
   }
 }
 

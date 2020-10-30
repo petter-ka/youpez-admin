@@ -160,8 +160,8 @@
           (close)="onClose($event)"
           [size]="'md'">
 
-          <div fxFill fxLayout="column" class="">
-            <div class="px-20 py-20 text-center  mb-2">
+          <div fxFill fxLayout="column">
+            <div class="px-20 py-20 text-center mb-2 app-border-b">
               <app-ibm-icon iconName="document" iconSize="32"></app-ibm-icon>
             </div>
             <div class="app-expressive-heading-02 px-4 truncate mb-2">{{selectedItem.name}}</div>
@@ -179,31 +179,31 @@
                         </ibm-toggle>
                       </div>
                     </div>
-                    <div  class="app-list-data app-list-data--horizontal">
+                    <div class="app-list-data app-list-data--horizontal">
                       <div class="app-expressive-heading-01 app-list-data__title">Type</div>
                       <div class="app-list-data__content truncate">Yaml</div>
                     </div>
-                    <div  class="app-list-data app-list-data--horizontal">
+                    <div class="app-list-data app-list-data--horizontal">
                       <div class="app-expressive-heading-01 app-list-data__title">Size</div>
                       <div class="app-list-data__content truncate">{{selectedItem.size}}</div>
                     </div>
-                    <div  class="app-list-data app-list-data--horizontal">
+                    <div class="app-list-data app-list-data--horizontal">
                       <div class="app-expressive-heading-01 app-list-data__title">Location</div>
                       <div class="app-list-data__content truncate">/var/www/tmp</div>
                     </div>
-                    <div  class="app-list-data app-list-data--horizontal">
+                    <div class="app-list-data app-list-data--horizontal">
                       <div class="app-expressive-heading-01 app-list-data__title">Owner</div>
                       <div class="app-list-data__content truncate">June Abraham</div>
                     </div>
-                    <div  class="app-list-data app-list-data--horizontal">
+                    <div class="app-list-data app-list-data--horizontal">
                       <div class="app-expressive-heading-01 app-list-data__title">Modified</div>
                       <div class="app-list-data__content truncate">june 10, 2020</div>
                     </div>
-                    <div  class="app-list-data app-list-data--horizontal">
+                    <div class="app-list-data app-list-data--horizontal">
                       <div class="app-expressive-heading-01 app-list-data__title">Opened</div>
                       <div class="app-list-data__content truncate">june 12, 2020</div>
                     </div>
-                    <div  class="app-list-data app-list-data--horizontal">
+                    <div class="app-list-data app-list-data--horizontal">
                       <div class="app-expressive-heading-01 app-list-data__title">Created</div>
                       <div class="app-list-data__content truncate">june 10, 2020</div>
                     </div>
@@ -240,33 +240,33 @@
               <div fxFlex class="relative">
                 <div fxLayout="row wrap">
                   <div fxFlex="100%">
-                    <div class="app-content app-content--default">
-                      <div class="flex items-center">
-                        <div class="app-expressive-heading-02">
-                          My storage
-                        </div>
-                        <div class="ml-3" style="width:170px">
-                          <ibm-search placeholder="Search..."
-                                      size="sm"></ibm-search>
-                        </div>
-                        <div class="flex-1 flex justify-end">
-                          <button
-                            ibmButton="ghost" size="sm"
-                            class="bx--btn--icon-only bx--btn--remove-tooltip">
-                            <svg class="bx--btn__icon" ibmIconSettings size="32"></svg>
-                          </button>
-                          <button
-                            ibmButton="ghost" size="sm"
-                            class="bx--btn--icon-only bx--btn--remove-tooltip">
-                            <svg class="bx--btn__icon" ibmIconTableOfContents size="32"></svg>
-                          </button>
-                        </div>
+
+                    <div class="app-header-subheader app-header-subheader--transparent" style="height: 65px">
+                      <div class="app-expressive-heading-02">
+                        My storage
+                      </div>
+                      <div class="ml-3" style="width:170px">
+                        <ibm-search placeholder="Search..."
+                                    size="sm"></ibm-search>
+                      </div>
+                      <div class="flex-1 flex justify-end">
+                        <button
+                          ibmButton="ghost" size="sm"
+                          class="bx--btn--icon-only bx--btn--remove-tooltip">
+                          <svg class="bx--btn__icon" ibmIconSettings size="32"></svg>
+                        </button>
+                        <button
+                          ibmButton="ghost" size="sm"
+                          class="bx--btn--icon-only bx--btn--remove-tooltip">
+                          <svg class="bx--btn__icon" ibmIconTableOfContents size="32"></svg>
+                        </button>
                       </div>
                     </div>
+
                   </div>
                 </div>
 
-                <div class="app-subtitle app-cards-title">Recent</div>
+                <div class="app-subtitle app-cards-title mt-3">Recent</div>
                 <div fxLayout="row wrap" class="app-card-row-holder">
                   <ng-container *ngFor="let file of files">
                     <div fxFlex="16.66%">

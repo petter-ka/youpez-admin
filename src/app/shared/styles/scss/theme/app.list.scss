@@ -143,11 +143,11 @@
 
         background-color: rgba(205, 232, 255, .4);
 
-       /* .app-list__item__content {
-          &:before {
-            background-color: transparent;
-          }
-        }*/
+        /* .app-list__item__content {
+           &:before {
+             background-color: transparent;
+           }
+         }*/
 
       }
     }
@@ -282,7 +282,11 @@
 }
 
 .app-list-pill {
-
+  &.font-bold {
+    .app-list-pill__item__inner {
+      font-weight: 600;
+    }
+  }
 }
 
 .app-list-pill__item {
@@ -297,8 +301,14 @@
     outline: none;
     transition: 0.1s cubic-bezier(0.35, 0, 0.35, 1);
     transition-property: all;
+
+    @extend .app-text-default;
     @extend .app-row;
     @extend .app-row--center;
+
+    &.font-bold {
+      font-weight: 600;
+    }
 
     &:hover {
       &:not(.app-list-pill__item__inner--disabled) {
@@ -350,6 +360,88 @@
 
     .app-list-data__content {
 
+    }
+  }
+}
+
+.app-list-message {
+  padding: 1.1rem 0;
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .app-list-message__divider {
+    margin: 1.5rem 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+
+    &:before {
+      content: '';
+      display: block;
+      flex: 1;
+      height: 1px;
+      background-color: $appBorderColor;
+      opacity: .7;
+      margin-right: 0.75rem;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      flex: 1;
+      height: 1px;
+      background-color: $appBorderColor;
+      opacity: .7;
+      margin-left: 0.75rem;
+    }
+  }
+
+  .app-list-message__item {
+    position: relative;
+    padding: 0 1.1rem;
+    @extend .app-row;
+    @extend .app-text-default;
+    line-height: 1.65;
+
+    .app-symbol {
+      margin-top: 0.4rem;
+    }
+
+    .app-list-message__item__text {
+      @extend .app-productive-heading-02;
+      line-height: 1.65;
+      margin-right: 0.5rem;
+    }
+
+    .app-list-message__item__main-time {
+      @extend .app-helper-text-01;
+      line-height: 1.65;
+    }
+
+    .app-list-message__item__time {
+      margin-top: 0.2rem;
+      display: none;
+      font-size: 10px;
+      line-height: 1.65;
+      letter-spacing: 0.32px;
+      text-align: right;
+      cursor: default;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      background-color: #eee;
+
+      .app-list-message__item__time {
+        display: block;
+
+      }
     }
   }
 }

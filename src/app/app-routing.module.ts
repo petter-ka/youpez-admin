@@ -6,6 +6,11 @@ const routes: Routes = [
     path: 'app',
     loadChildren: () => import('./main/main.module').then(m => m.MainModule)
   },
+  {
+    path: '**',
+    redirectTo: '/app/dashboard/default',
+    pathMatch: 'full',
+  },
 ]
 
 @NgModule({

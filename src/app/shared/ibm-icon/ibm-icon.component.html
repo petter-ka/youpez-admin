@@ -11,6 +11,10 @@
     <svg ibmIconHelp [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'add'">
+    <svg ibmIconAdd [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchCase="'aperture'">
     <svg ibmIconAperture [size]="iconSize"></svg>
   </ng-container>
@@ -207,6 +211,10 @@
     <svg ibmIconSettings [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'edit'">
+    <svg ibmIconEdit [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchCase="'checkboxChecked'">
     <svg ibmIconCheckboxChecked [size]="iconSize"></svg>
   </ng-container>
@@ -329,6 +337,18 @@
 
   <ng-container *ngSwitchCase="'openPanelLeft'">
     <svg ibmIconOpenPanelLeft [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'locked'">
+    <svg ibmIconLocked [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'information'">
+    <svg ibmIconInformation [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'phone'">
+    <svg ibmIconPhone [size]="iconSize"></svg>
   </ng-container>
 
   <ng-container *ngSwitchCase="'hashtag'">
