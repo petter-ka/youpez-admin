@@ -1,10 +1,15 @@
 <div class="app-layout" [ngClass.lt-md]="{'app-layout--show-header': true}">
 
+  <!-- BEGIN: GLOBAL SEARCH DIALOG -->
   <ng-container *ngIf="searchVisible">
     <app-search (close)="onSearchClose($event)"></app-search>
   </ng-container>
+  <!-- END: GLOBAL SEARCH DIALOG -->
 
+  <!-- BEGIN: MAIN SIDENAV CONTAINER -->
   <app-sidenav-container>
+
+    <!-- BEGIN: THEME SETTINGS SIDEBAR -->
     <app-sidenav-v2
       (close)="onCloseSettings($event)"
       [opened]="settingsVisible"
@@ -13,7 +18,9 @@
       [size]="'md'">
       <app-theme-settings></app-theme-settings>
     </app-sidenav-v2>
+    <!-- END: THEME SETTINGS SIDEBAR -->
 
+    <!-- BEGIN: MAIN HEADER (XS VIEW) -->
     <div class="app-layout__header">
       <button (click)="onSideBarToggle($event)" class="app-layout__header__btn app-layout__header__btn--menu">
         <app-ibm-icon iconName="menu"></app-ibm-icon>
@@ -29,15 +36,21 @@
         </button>
       </div>
     </div>
+    <!-- BEGIN: END HEADER (XS VIEW) -->
 
+    <!-- BEGIN: MAIN MINI SIDEBAR (LEFT) -->
     <div class="app-layout__mini-sidebar">
       <div class="app-mini-sidebar">
         <app-layout-mini-sidebar (itemClick)="onMiniSidebarItemClick($event)"></app-layout-mini-sidebar>
       </div>
     </div>
+    <!-- END: MAIN MINI SIDEBAR (LEFT) -->
 
+    <!-- BEGIN: MAIN LAYOUT -->
     <div class="app-layout__content">
       <app-sidenav-container>
+
+        <!-- BEGIN: MAIN SIDEBAR -->
         <app-sidenav-v2
           [breakpoint]="mainSidebarOpts.breakpoint"
           [opened]="mainSidebarOpts.opened"
@@ -47,14 +60,20 @@
           [size]="mainSidebarOpts.size">
           <app-layout-sidebar [opened]="mainSidebarOpts.opened" (sideBarToggle)="onSideBarToggle($event)"></app-layout-sidebar>
         </app-sidenav-v2>
-        <!--<div class="app-layout__content__inner"
-              [@defaultRouterAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">-->
+        <!-- END: MAIN SIDEBAR -->
+
+        <!-- BEGIN: MAIN PAGE CONTENT -->
         <div class="app-layout__content__inner">
           <router-outlet #outlet="outlet"></router-outlet>
         </div>
-      </app-sidenav-container>
+        <!-- END: MAIN PAGE CONTENT -->
 
+      </app-sidenav-container>
     </div>
+    <!-- END: MAIN LAYOUT -->
+
   </app-sidenav-container>
+
+  <!-- END: MAIN SIDENAV CONTAINER -->
 </div>
 

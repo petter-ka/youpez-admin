@@ -13,9 +13,9 @@ import {DashboardAnalyticsComponent} from './dashboard/dashboard-analytics/dashb
 import {DashboardCryptoComponent} from './dashboard/dashboard-crypto/dashboard-crypto.component'
 import {ScrumBoardComponent} from './scrum/scrum-board/scrum-board.component'
 import {TasksComponent} from './tasks/tasks/tasks.component'
-import {FileManagerComponent} from './file-manager/file-manager/file-manager.component';
-import { MailComponent } from './mail/mail/mail.component';
-import { MessagesComponent } from './messages/messages/messages.component'
+import {FileManagerComponent} from './file-manager/file-manager/file-manager.component'
+import {MailComponent} from './mail/mail/mail.component'
+import {MessagesComponent} from './messages/messages/messages.component'
 
 @NgModule({
   declarations: [

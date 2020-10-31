@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
 import {NavigationEnd, NavigationStart, Router, RouterModule} from '@angular/router'
+import {ReactiveFormsModule} from "@angular/forms"
 
 import {NgScrollbarModule} from 'ngx-scrollbar'
 import {DragDropModule} from '@angular/cdk/drag-drop'
@@ -96,7 +97,7 @@ import {
   OpenPanelFilledLeftModule,
   OpenPanelLeftModule,
   LockedModule,
-  InformationModule, PhoneModule, EditModule,
+  InformationModule, PhoneModule, EditModule, SubtractModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -126,6 +127,7 @@ import {
   ContentSwitcherModule,
   SkeletonModule,
   DialogModule,
+  LinkModule,
 } from 'carbon-components-angular'
 import {LayoutComponent} from './layout/layout.component'
 import {LayoutMiniSidebarComponent} from './layout/layout-mini-sidebar/layout-mini-sidebar.component'
@@ -146,6 +148,7 @@ import {AppTasksComponent} from './app-tasks/app-tasks.component'
 
 import {InputTypeAdvancedPipe} from "./pipes/input-type-advanced.pipe"
 import {TextHiglightPipe} from "./pipes/text-higlight.pipe"
+import {AppLayoutDividedComponent} from './layout/app-layout-divided/app-layout-divided.component'
 
 const MainModules = [
   RouterModule,
@@ -156,6 +159,7 @@ const MainModules = [
   NgbTooltipModule,
   DragDropModule,
   A11yModule,
+  ReactiveFormsModule,
 ]
 
 const CarbonModules = [
@@ -178,6 +182,7 @@ const CarbonModules = [
   SkeletonModule,
   DialogModule,
   MaximizeModule,
+  LinkModule,
 ]
 
 const CarbonIconModules = [
@@ -273,6 +278,7 @@ const CarbonIconModules = [
   InformationModule,
   PhoneModule,
   EditModule,
+  SubtractModule,
 ]
 
 const Components = [
@@ -293,6 +299,7 @@ const Components = [
   AppLayoutHeaderComponent,
   AppSearchComponent,
   AppTasksComponent,
+  AppLayoutDividedComponent,
 ]
 
 const Pipes = [

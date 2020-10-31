@@ -212,6 +212,11 @@ export class LayoutSidebarComponent implements OnInit {
             {
               name: 'General',
               url: '/app/widgets/general',
+              suffix: {
+                type: 'badge',
+                level: 'default',
+                text: '!',
+              },
             },
             {
               name: 'Lists',

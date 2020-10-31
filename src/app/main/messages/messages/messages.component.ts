@@ -51,7 +51,7 @@ export class MessagesComponent implements OnInit {
   ]
   public messages = [
     {
-      name: 'jonny',
+      name: 'jonny cluster',
       avatar: {
         type: 'img',
         src: '/assets/img/avatar/avatar2.jpg',

@@ -373,33 +373,11 @@
   justify-content: flex-end;
 
   .app-list-message__divider {
+    @extend .app-separator;
     margin: 1.5rem 0;
-    position: relative;
-    display: flex;
-    align-items: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 10px;
-
-    &:before {
-      content: '';
-      display: block;
-      flex: 1;
-      height: 1px;
-      background-color: $appBorderColor;
-      opacity: .7;
-      margin-right: 0.75rem;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      flex: 1;
-      height: 1px;
-      background-color: $appBorderColor;
-      opacity: .7;
-      margin-left: 0.75rem;
-    }
   }
 
   .app-list-message__item {

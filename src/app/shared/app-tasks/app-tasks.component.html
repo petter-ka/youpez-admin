@@ -41,7 +41,6 @@
                        placeholder="List description..."
                        class="flex-1 app-list__item__input app-expressive-heading-02"
                        type="text"
-
                        (input)="onGroupChange($event.target.value,groupIndex)"
                        [value]="group.groupName"/>
               </ng-container>
@@ -80,7 +79,7 @@
              class="app-list__group__children">
           <ng-container
             *ngFor="let task of group.tasks | inputTypeAdvanced:'description':_filterText;trackBy: trackByFn;let taskIndex=index">
-            <div cdkDrag [cdkDragData]="task" class="app-list__item">
+            <div cdkDrag [cdkDragData]="task" class="app-list__item" [ngClass]="{'opacity-75':task.checked}">
               <div cdkDragHandle class="app-list__item__drag">
                 <app-ibm-icon iconName="draggable" iconSize="16"></app-ibm-icon>
               </div>
@@ -116,6 +115,20 @@
                   </ng-container>
                 </div>
               </ng-container>
+
+              <div (click)="onSwitchPriority(groupIndex,taskIndex)" class="cursor-pointer">
+                <ng-container *ngIf="task.priority === undefined || task.priority === 'normal'">
+                  <app-ibm-icon iconName="subtract" iconSize="16"></app-ibm-icon>
+                </ng-container>
+                <ng-container *ngIf="task.priority === 'low'">
+                  <app-ibm-icon iconName="arrowDown" iconSize="16" class="app-color-success"></app-ibm-icon>
+                </ng-container>
+                <ng-container *ngIf="task.priority === 'high'">
+                  <app-ibm-icon iconName="arrowUp" iconSize="16" class="app-color-danger"></app-ibm-icon>
+                </ng-container>
+              </div>
+
+
               <button (click)="onDeleteTask(groupIndex,taskIndex)"
                       ibmButton="ghost" size="sm"
                       class="bx--btn--icon-only bx--btn--remove-tooltip">

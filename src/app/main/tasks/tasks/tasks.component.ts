@@ -22,12 +22,14 @@ export class TasksComponent implements OnInit {
           id: 'sadasdas',
           level: 1,
           checked: false,
+          priority: 'high',
         },
         {
           description: 'Make more descriptive errors for directives\' errors in AOT build',
           level: 1,
           id: 'sadassdfsdfsdfdsdas',
           checked: true,
+          priority: 'high',
         },
         {
           description: 'Add autocorrect attribute support on field for iOS devices',
@@ -39,6 +41,7 @@ export class TasksComponent implements OnInit {
           description: 'docs: update /deep/ to ::ng-deep ',
           id: 'sadassdfsddfdasdsasdasdfdsdas',
           checked: false,
+          priority: 'low',
         },
         {
           description: '*ngFor should support separators',
@@ -55,11 +58,13 @@ export class TasksComponent implements OnInit {
           description: 'Angular2 Routing: persisting route tabs and child routes',
           id: 'sadassdfsddfdasdssds1dfsasdasdfdsdas',
           checked: true,
+          priority: 'low',
         },
         {
           description: 'Implement @ObserveChildren or similar API',
           id: 'sadassdfsddfdasds2sdsdfsasdasdfdsdas',
           checked: true,
+          priority: 'high',
         }
       ]
     },
@@ -79,12 +84,14 @@ export class TasksComponent implements OnInit {
           level: 1,
           id: 'sadfd2asdssdsdfsasdasdfdsdas',
           checked: true,
+          priority: 'low',
         },
         {
           description: 'Unix domain socket cause crashes in Windows certain versions ',
           level: 1,
           id: 'sasdssdsdfsasdasdfdsdas',
           checked: true,
+          priority: 'high',
         },
         {
           description: 'Evicted DaemonSet pod stuck Daemonset\'s rolling update',
@@ -103,6 +110,7 @@ export class TasksComponent implements OnInit {
           level: 1,
           id: 'dffddsffsd',
           checked: true,
+          priority: 'high',
         }
       ]
     },
@@ -122,24 +130,28 @@ export class TasksComponent implements OnInit {
           level: 1,
           id: 'sadfd2asdssdsdfsasdasdfdsda2s',
           checked: true,
+          priority: 'high',
         },
         {
           description: 'timeBudget shouldn\'t depend on the real clock help wanted',
           level: 1,
           id: 'sasdssdsdfsasdasd3fdsdas',
           checked: true,
+          priority: 'high',
         },
         {
           description: 'waitForFirstConsumer PVCs fail to bind when Pod spec.nodeName is specified  ',
           level: 1,
           id: 'sasdssdsdf5sasdas4dfdsdas',
           checked: true,
+          priority: 'high',
         },
         {
           description: 'Add default node affinity constraints to NodeAffinity plugin',
           level: 1,
           id: 'sasdssdsd5454f5sasda5sdfdsdas',
           checked: true,
+          priority: 'high',
         }
       ]
     }

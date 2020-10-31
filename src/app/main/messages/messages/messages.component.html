@@ -26,12 +26,12 @@
 
         <div fxFill fxLayout="column" class="app-bg-ui">
 
-          <div ngbDropdown container="body">
+          <div ngbDropdown>
             <div class="app-header-subheader cursor-pointer" ngbDropdownToggle style="height: 49px">
               <div class="pr-2">
                 <div class="app-symbol">
-                  <div class="app-symbol__label w-6 h-6 rounded-full app-bg-info-lt-40 font-bold app-text-contrast">
-                    D
+                  <div class="app-symbol__label w-6 h-6 rounded app-bg-warning-lt-20 font-bold app-text-contrast">
+                    Yz
                   </div>
                 </div>
               </div>
@@ -49,7 +49,7 @@
                 </button>
               </div>
 
-              <div ngbDropdownMenu>
+              <div ngbDropdownMenu class="w-full">
                 <div class="app-list app-list--hover app-list--select app-list--no-border app-list--p">
 
                   <div class="app-list__item" ngbDropdownItem>
@@ -162,7 +162,7 @@
             <div class="mr-2">
               <div class="app-symbol app-symbol--status-success">
                 <div class="app-symbol__img">
-                  <img class="w-10 h-10 rounded-full" src="/assets/img/avatar/avatar8.jpg"/>
+                  <img class="w-10 h-10 rounded" src="/assets/img/avatar/avatar8.jpg"/>
                 </div>
               </div>
 
@@ -186,7 +186,12 @@
         <div class="app-header-subheader" style="height:49px">
           <div>
             <div class="app-productive-heading-02"># {{selectedItem.name}}</div>
-            <div class="app-helper-text-01">active thread</div>
+            <div class="app-helper-text-01">
+              <a class="cursor-pointer">5 member</a>
+              <span class="mx-1 opacity-50">|</span>
+              <a class="cursor-pointer">+ Add a topic</a>
+            </div>
+
           </div>
           <div class="flex flex-1 items-center justify-end">
             <button

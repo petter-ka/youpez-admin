@@ -11,6 +11,7 @@ import {TasksComponent} from "./tasks/tasks/tasks.component"
 import {FileManagerComponent} from "./file-manager/file-manager/file-manager.component"
 import {MailComponent} from "./mail/mail/mail.component"
 import {MessagesComponent} from "./messages/messages/messages.component"
+import {AppLayoutDividedComponent} from "../shared/layout/app-layout-divided/app-layout-divided.component"
 
 const routes: Routes = [
   {
@@ -66,6 +67,10 @@ const routes: Routes = [
       {
         path: 'messages',
         component: MessagesComponent,
+      },
+      {
+        path: 'test',
+        component: AppLayoutDividedComponent,
       }
     ]
   },

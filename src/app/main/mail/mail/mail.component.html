@@ -116,7 +116,7 @@
                       <ng-container *ngIf="!mail.sep">
                         <div (click)="onSelect(mail)" [ngClass]="{'app-list__item--active':mail === selectedMail}"
                              class="app-list__item app-list__item--align-top">
-                          <div class="app-list__item__prefix w-8 text-center">
+                          <div class="app-list__item__prefix w-6 text-center">
                             <div style="padding-top:47px">
                               <ng-container *ngIf="!mail.read">
                                 <div class="mb-4">
@@ -126,11 +126,6 @@
                               <ng-container *ngIf="mail.flagged">
                                 <div class="mb-2 app-color-warning">
                                   <app-ibm-icon iconName="flagFilled" iconSize="16"></app-ibm-icon>
-                                </div>
-                              </ng-container>
-                              <ng-container *ngIf="mail.attachments">
-                                <div>
-                                  <app-ibm-icon iconName="attachment" iconSize="16"></app-ibm-icon>
                                 </div>
                               </ng-container>
                             </div>
@@ -152,7 +147,12 @@
                                   {{mail.date}}
                                 </div>
                               </div>
-                              <div class="app-productive-heading-02 mb-1">{{mail.title}}</div>
+                              <div class="app-productive-heading-02 mb-1">
+                                {{mail.title}}
+                                <ng-container *ngIf="mail.attachments">
+                                  <app-ibm-icon iconName="attachment" iconSize="16"></app-ibm-icon>
+                                </ng-container>
+                              </div>
                               <div class="app-body-long-01">{{mail.content | slice:0:110}}...</div>
                             </div>
                           </div>
@@ -190,7 +190,7 @@
           <ng-scrollbar>
             <div class="app-header-subheader">
               <button (click)="onToggleSidebar()" class="app-sidebar-toggle-btn">
-                <app-ibm-icon iconSize="20" iconName="openPanelLeft"></app-ibm-icon>
+                <app-ibm-icon iconSize="16" iconName="openPanelLeft"></app-ibm-icon>
               </button>
               <!--<button
                 (click)="onToggleSidebar()"

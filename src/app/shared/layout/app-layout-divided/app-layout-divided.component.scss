@@ -1,0 +1,20 @@
+.app-layout-divided-middle {
+  max-width: 1200px;
+  width: calc(100% - 16px);
+}
+
+.app-layout-divided-alone {
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+
+.app-layout-divided-full {
+  height: 100%;
+  width: 100%;
+
+  .app-divided-content {
+    height: 100%;
+    width: 100%;
+  }
+}

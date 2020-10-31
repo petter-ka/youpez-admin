@@ -21,6 +21,7 @@ export class AppTasksComponent implements OnInit {
 
   @Input('tasks') taskGroups = []
   @Input('transparent') transparent = false
+
   @Input() set filterText(value: string) {
     this._filterText = value
   }
@@ -73,9 +74,9 @@ export class AppTasksComponent implements OnInit {
     const tasks = this.taskGroups[groupIndex].tasks
     const solved = this.taskGroups[groupIndex].tasks.filter(task => task.checked === true)
     const percentage = ((solved.length / tasks.length) * 100)
-/*    if (percentage === 100) {
-      this.taskGroups[groupIndex].opened = false
-    }*/
+    /*    if (percentage === 100) {
+          this.taskGroups[groupIndex].opened = false
+        }*/
     return `${percentage}%`
   }
 
@@ -138,6 +139,19 @@ export class AppTasksComponent implements OnInit {
 
   onDeleteTask(groupIndex, taskIndex) {
     this.taskGroups[groupIndex].tasks.splice(taskIndex, 1)
+  }
+
+  onSwitchPriority(groupIndex, taskIndex) {
+    const task = this.taskGroups[groupIndex].tasks[taskIndex]
+    if (task.priority === undefined || task.priority === 'normal') {
+      task.priority = 'high'
+    }
+    else if(task.priority === 'high'){
+      task.priority = 'low'
+    }
+    else if(task.priority === 'low'){
+      task.priority = 'normal'
+    }
   }
 
 }

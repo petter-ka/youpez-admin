@@ -43,6 +43,15 @@
   }
 }
 
+.app-ibm-btn-full {
+  width: 100% !important;
+  max-width: 10000rem !important;
+  display: block !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding-left:60px !important;
+}
+
 .app-ibm-table-fix {
   overflow: hidden;
 
@@ -256,9 +265,7 @@
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  border-radius: .25rem;
-
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15), 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
   &.show {
     display: block;

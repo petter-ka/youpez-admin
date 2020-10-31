@@ -1,0 +1,14 @@
+<div class="app-a-box app-scrollbar-fix">
+  <ng-scrollbar track="vertical">
+    <div fxFill
+         fxLayout="row"
+         fxLayoutAlign="center center">
+      <div [class]="layoutClass">
+        <div class="app-divided-content" fxLayout="row">
+          <ng-content select="[data-right]"></ng-content>
+          <ng-content select="[data-left]"></ng-content>
+        </div>
+      </div>
+    </div>
+  </ng-scrollbar>
+</div>

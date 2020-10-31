@@ -1,0 +1,14 @@
+.app-form {
+  .app-form__item {
+    margin-bottom: 1.5rem;
+
+    &.app-form__item--opts {
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .app-form__submit {
+    margin-top: 1rem;
+  }
+}
