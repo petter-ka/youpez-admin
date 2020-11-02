@@ -13,7 +13,7 @@ import {
   SearchModule,
   AccountModule,
   ChatModule,
-  NotificationModule,
+  NotificationModule as NotificationIconModule,
   CloudSatelliteModule,
   ApiModule,
   ApertureModule,
@@ -128,6 +128,7 @@ import {
   SkeletonModule,
   DialogModule,
   LinkModule,
+  NotificationModule,
 } from 'carbon-components-angular'
 import {LayoutComponent} from './layout/layout.component'
 import {LayoutMiniSidebarComponent} from './layout/layout-mini-sidebar/layout-mini-sidebar.component'
@@ -148,7 +149,13 @@ import {AppTasksComponent} from './app-tasks/app-tasks.component'
 
 import {InputTypeAdvancedPipe} from "./pipes/input-type-advanced.pipe"
 import {TextHiglightPipe} from "./pipes/text-higlight.pipe"
-import {AppLayoutDividedComponent} from './layout/app-layout-divided/app-layout-divided.component'
+import {AppLayoutDividedComponent} from './layout/auth/app-layout-divided/app-layout-divided.component'
+import {AppLayoutDividedAltComponent} from './layout/auth/app-layout-divided-alt/app-layout-divided-alt.component'
+import {AuthWelcomeScreenComponent} from "./layout/auth/auth-welcome-screen/auth-welcome-screen.component";
+import { AppLayoutDividedFullComponent } from './layout/auth/app-layout-divided-full/app-layout-divided-full.component';
+import { AppLayoutBasicComponent } from './layout/auth/app-layout-basic/app-layout-basic.component';
+import { AppLockScreenComponent } from './app-lock-screen/app-lock-screen.component'
+
 
 const MainModules = [
   RouterModule,
@@ -183,6 +190,7 @@ const CarbonModules = [
   DialogModule,
   MaximizeModule,
   LinkModule,
+  NotificationModule,
 ]
 
 const CarbonIconModules = [
@@ -192,7 +200,7 @@ const CarbonIconModules = [
   SearchModule,
   AccountModule,
   ChatModule,
-  NotificationModule,
+  NotificationIconModule,
   CloudSatelliteModule,
   ApiModule,
   ApertureModule,
@@ -300,6 +308,11 @@ const Components = [
   AppSearchComponent,
   AppTasksComponent,
   AppLayoutDividedComponent,
+  AppLayoutDividedAltComponent,
+  AuthWelcomeScreenComponent,
+  AppLayoutDividedFullComponent,
+  AppLayoutBasicComponent,
+  AppLockScreenComponent,
 ]
 
 const Pipes = [

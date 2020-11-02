@@ -542,48 +542,33 @@ export const defaultRouterTransition = trigger('defaultRouterAnimation', [
   ])
 ])
 
-/*export const defaultRouterTransition = trigger('defaultRouterAnimation', [transition('* => *', [
-  query(':enter', [style({left: '-100%'})], {optional: true}),
-  query(':leave', animateChild(), {optional: true}),
-  group([
-    query(':leave', [animate('2s ease-out', style({left: '100%'}))], {optional: true}),
-    query(':enter', [animate('2s ease-out', style({left: '0%'}))], {optional: true})
-  ]),
-  query(':enter', animateChild())
-])
-])*/
-
 export const sharedStyles = {
   position: 'fixed',
   overflow: 'hidden',
   backfaceVisibility: 'hidden',
   transformStyle: 'preserve-3d',
-  //  transform: 'translate3d(0,0,0)'
 }
 
-export const moveToTopKeyframes: AnimationKeyframesSequenceMetadata =
-  keyframes([
-    style({transform: 'translateY(0%)', offset: 0}),
-    style({transform: 'translateY(-100%)', opacity: '0', offset: 1})
-  ])
+export const numberRegex = /^\d+$/
+export const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/
 
-export const moveFromBottomKeyframes: AnimationKeyframesSequenceMetadata =
-  keyframes([
-    style({transform: 'translateY(100%)', offset: 0, 'z-index': '9999'}),
-    style({transform: 'translateY(0%)', offset: 1})
-  ])
+export const passwordCheckerHelper = (value, type) => {
+  if (type === 'length') {
+    return /.{8,}/.test(value)
+  }
+  if (type === 'number') {
+    return /(?=.*?[0-9])/.test(value)
+  }
+  if (type === 'lower') {
+    return /(?=.*?[a-z])/.test(value)
+  }
+  if (type === 'upper') {
+    return /(?=.*?[A-Z])/.test(value)
+  }
+  return false
+}
 
-export const moveFromBottom: AnimationReferenceMetadata = animation([
-  query(':enter, :leave', style(sharedStyles)
-    , {optional: true}),
-  group([
-    query(':enter', [
-
-      animate('{{enterTiming}}s {{enterDelay}}s ease', moveFromBottomKeyframes)
-    ], {optional: true}),
-
-    query(':leave', [
-      animate('{{leaveTiming}}s {{leaveDelay}}s ease', moveToTopKeyframes)
-    ], {optional: true}),
-  ])
-], {params: {enterTiming: '.6', leaveTiming: '0.6', enterDelay: '0', leaveDelay: '0'}})
+export const isFormItemValid = (formGroup, name) => {
+  const instance = formGroup.get(name)
+  return instance.invalid && (instance.dirty || instance.touched)
+}

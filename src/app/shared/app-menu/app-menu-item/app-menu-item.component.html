@@ -61,7 +61,7 @@
         </div>
       </ng-container>
       <ng-container *ngIf="!item.url">
-        <div class="app-sidebar__list__item__inner">
+        <div (click)="onClick()" class="app-sidebar__list__item__inner">
           <ng-container *ngTemplateOutlet="menuItemTemplate"></ng-container>
         </div>
       </ng-container>

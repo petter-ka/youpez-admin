@@ -12,30 +12,42 @@
   @include set-white-logo();
   @include spread-map($theme-sidebar-1);
   @include sidebarScrollbarStyleLight();
+  @include sideBarBadgesDarker();
+}
+
+:root.app-theme-sidebar--dark-blue {
+  @include set-white-logo();
+  @include spread-map($theme-sidebar-6);
+  @include sidebarScrollbarStyleLight();
+  @include sideBarBadgesDarker();
 }
 
 :root.app-theme-sidebar--white {
   @include set-black-logo();
   @include spread-map($theme-sidebar-2);
   @include sidebarScrollbarStyleDark();
+  @include sideBarBadgesLighter();
 }
 
 :root.app-theme-sidebar--blue {
   @include set-black-logo();
   @include spread-map($theme-sidebar-3);
   @include sidebarScrollbarStyleDark();
+  @include sideBarBadgesLighter();
 }
 
 :root.app-theme-sidebar--grey {
   @include set-black-logo();
   @include spread-map($theme-sidebar-4);
   @include sidebarScrollbarStyleDark();
+  @include sideBarBadgesLighter();
 }
 
 :root.app-theme-sidebar--gradient {
   @include set-black-logo();
   @include spread-map($theme-sidebar-5);
   @include sidebarScrollbarStyleDark();
+  @include sideBarBadgesLighter();
 }
 
 :root {
@@ -44,17 +56,20 @@
   @include theme-bg-helper(map-get($theme-sidebar-3, --theme-main-sidebar--background), blue);
   @include theme-bg-helper(map-get($theme-sidebar-4, --theme-main-sidebar--background), grey);
   @include theme-bg-helper(map-get($theme-sidebar-5, --theme-main-sidebar--background), gradient);
+  @include theme-bg-helper(map-get($theme-sidebar-6, --theme-main-sidebar--background), dark-blue);
 }
 
 // HEADER THEMES
 :root.app-theme-header--black {
   @include spread-map($theme-header-1);
-  //@include sidebarScrollbarStyleLight();
 }
 
 :root.app-theme-header--white {
   @include spread-map($theme-header-2);
-  //@include sidebarScrollbarStyleDark();
+}
+
+:root.app-theme-header--dark-blue {
+  @include spread-map($theme-header-3);
 }
 
 /*:root.app-theme-sidebar-light {

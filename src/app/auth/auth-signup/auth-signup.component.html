@@ -1,0 +1,104 @@
+<div class="mb-8">
+  <img class="cursor-pointer" src="/assets/img/logo/logo-big-black.png" style="width:130px"/>
+</div>
+<h1 class="app-expressive-heading-06 mb-1">Sign up</h1>
+<div class="app-body-long-02 mb-8">
+  Already have an account?
+  <a ibmLink>Sign in</a>
+</div>
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div class="app-form">
+
+    <div fxLayout="row" class="">
+      <div fxFlex="50" class="app-form__row">
+        <div class="app-form__item">
+          <ibm-label
+            [helperText]="''"
+            [invalid]="isValid('firstName')"
+            [invalidText]="'This field is required'">
+            First name
+            <input
+              formControlName="firstName"
+              ibmText
+              size="md"
+              [invalid]="isValid('firstName')"
+              [disabled]="false"
+              theme="light"
+              [placeholder]="'First name'"
+              [autocomplete]="true">
+          </ibm-label>
+        </div>
+      </div>
+      <div fxFlex="50" class="app-form__row">
+        <div class="app-form__item">
+          <ibm-label
+            [helperText]="''"
+            [invalid]="isValid('lastName')"
+            [invalidText]="'This field is required'">
+            Last name
+            <input
+              formControlName="lastName"
+              ibmText
+              size="md"
+              [invalid]="isValid('lastName')"
+              [disabled]="false"
+              theme="light"
+              [placeholder]="'Last name'"
+              [autocomplete]="true">
+          </ibm-label>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-form__item">
+      <ibm-label
+        [helperText]="''"
+        [invalid]="isValid('email')"
+        [invalidText]="'This field is required'">
+        Email address
+        <input
+          formControlName="email"
+          ibmText
+          size="md"
+          [invalid]="isValid('email')"
+          [disabled]="false"
+          theme="light"
+          [placeholder]="'Email address'"
+          [autocomplete]="true">
+      </ibm-label>
+    </div>
+    <div class="app-form__item">
+      <ibm-label
+        [helperText]="''"
+        [invalid]="isValid('company')"
+        [invalidText]="'This field is required'">
+        Company
+        <input
+          formControlName="company"
+          ibmText
+          size="md"
+          [invalid]="isValid('company')"
+          [disabled]="false"
+          theme="light"
+          [placeholder]="'Company'"
+          [autocomplete]="true">
+      </ibm-label>
+    </div>
+    <div class="app-form__item app-form__item--opts">
+      <div class="flex justify-between items-center">
+        <ibm-checkbox formControlName="condition">
+          I have read and accept
+          <a class="app-link">terms & conditions</a>
+        </ibm-checkbox>
+      </div>
+    </div>
+    <div class="app-form__submit">
+      <button type="submit" class="app-ibm-btn-full" ibmButton="primary" size="field">
+        Create your account
+        <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+      </button>
+    </div>
+  </div>
+</form>
+
+

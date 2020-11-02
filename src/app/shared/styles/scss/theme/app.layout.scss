@@ -114,6 +114,11 @@ $appMainHeaderHeight: 48px;
       left: 0;
     }
   }
+
+  &.app-layout--blurred {
+    //-webkit-filter: url(#svg-blur);
+    //filter: url(#svg-blur);
+  }
 }
 
 .app-content {

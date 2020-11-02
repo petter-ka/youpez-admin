@@ -12,7 +12,7 @@ export class LayoutSidebarComponent implements OnInit {
 
   public menu = [
     {
-      groupName: 'APPLICATIONS',
+      groupName: 'DASHBOARDS',
       opened: true,
       children: [
         {
@@ -45,6 +45,12 @@ export class LayoutSidebarComponent implements OnInit {
             text: '!',
           },
         },
+      ],
+    },
+    {
+      groupName: 'APPLICATIONS',
+      opened: true,
+      children: [
         {
           name: 'Scrum Board',
 
@@ -118,29 +124,125 @@ export class LayoutSidebarComponent implements OnInit {
           },
           children: [
             {
-              name: 'Log In',
-              url: '/auth/log-in',
+              name: 'Sign In',
+              children: [
+                {
+                  name: 'Modern',
+                  url: '/auth/modern/signin'
+                },
+                {
+                  name: 'Full',
+                  url: '/auth/full/signin'
+                },
+                {
+                  name: 'Full middle',
+                  url: '/auth/full-middle/signin'
+                },
+                {
+                  name: 'Basic',
+                  url: '/auth/basic/signin'
+                }
+              ]
             },
             {
               name: 'Sign Up',
-              url: '/auth/sign-up',
+              children: [
+                {
+                  name: 'Modern',
+                  url: '/auth/modern/signup'
+                },
+                {
+                  name: 'Full',
+                  url: '/auth/full/signup'
+                },
+                {
+                  name: 'Full middle',
+                  url: '/auth/full-middle/signup'
+                },
+                {
+                  name: 'Basic',
+                  url: '/auth/basic/signup'
+                }
+              ]
+            },
+            {
+              name: 'Book a demo',
+              url: '/auth/book-a-demo',
+              suffix: {
+                type: 'badge',
+                level: 'danger',
+                text: 'HOT',
+              },
             },
             {
               name: 'Confirmation',
               url: '/auth/confirmation',
+              children: [
+                {
+                  name: 'Modern',
+                  url: '/auth/modern/confirmation'
+                },
+                {
+                  name: 'Full',
+                  url: '/auth/full/confirmation'
+                },
+                {
+                  name: 'Full middle',
+                  url: '/auth/full-middle/confirmation'
+                },
+                {
+                  name: 'Basic',
+                  url: '/auth/basic/confirmation'
+                }
+              ]
             },
-            {
-              name: 'Lock screen',
-              url: '/auth/lock-screen',
-            },
+
             {
               name: 'Forgot password',
-              url: '/auth/forgot-password',
+              children: [
+                {
+                  name: 'Modern',
+                  url: '/auth/modern/forgot-password'
+                },
+                {
+                  name: 'Full',
+                  url: '/auth/full/forgot-password'
+                },
+                {
+                  name: 'Full middle',
+                  url: '/auth/full-middle/forgot-password'
+                },
+                {
+                  name: 'Basic',
+                  url: '/auth/basic/forgot-password'
+                }
+              ]
             },
             {
               name: 'Reset password',
-              url: '/auth/reset-password',
-            }
+              children: [
+                {
+                  name: 'Modern',
+                  url: '/auth/modern/reset-password'
+                },
+                {
+                  name: 'Full',
+                  url: '/auth/full/reset-password'
+                },
+                {
+                  name: 'Full middle',
+                  url: '/auth/full-middle/reset-password'
+                },
+                {
+                  name: 'Basic',
+                  url: '/auth/basic/reset-password'
+                }
+              ]
+            },
+            {
+              name: 'Lock screen',
+              callback: 'lock',
+            },
           ]
         },
         {

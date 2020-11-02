@@ -204,3 +204,41 @@
     }
   }
 }
+
+@mixin sideBarBadgesDarker() {
+  .app-sidebar__list__item__badge--success {
+    background-color: #31413f;
+    color: #2cc9b6;
+  }
+
+  .app-sidebar__list__item__badge--default {
+    background-color: #3f3629;
+    color: #ff9d42;
+  }
+
+  .app-sidebar__list__item__badge--danger {
+    background-color: #413131;
+    color: #ff6057;
+  }
+}
+
+@mixin sideBarBadgesLighter() {
+  .app-sidebar__list__item__badge--success {
+    background-color: #1ed35e;
+    color: #ffffff;
+  }
+
+  .app-sidebar__list__item__badge--default {
+    background-color: #e0e6ee;
+    color: #000000;
+  }
+
+  .app-sidebar__list__item__badge--danger {
+    background-color: #ff5461;
+    color: #fff;
+  }
+}
+
+
+
+

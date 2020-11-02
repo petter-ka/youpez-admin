@@ -1,4 +1,25 @@
+@import 'app.variables';
+
 .app-form {
+
+  .app-form__row {
+    margin: 0 -0.755rem;
+
+    .app-form__item {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  }
+
+  .app-form__header {
+    padding-top: 1rem;
+    border-top: 2px solid $appBorderColorAlt;
+
+    &.app-form__header--active {
+      border-top: 3px solid $appColorPrimary;
+    }
+  }
+
   .app-form__item {
     margin-bottom: 1.5rem;
 

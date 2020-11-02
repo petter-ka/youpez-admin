@@ -1,6 +1,9 @@
-import {Component, OnInit} from '@angular/core'
+import {Component, OnDestroy, OnInit} from '@angular/core'
+import {takeUntil} from 'rxjs/operators'
+import {Subject} from "rxjs"
 import {defaultRouterTransition} from "../../core"
 import {SettingsService} from "../../core/services/settings.service"
+import {AppMenuService} from "../../core/services/app-menu.service"
 
 @Component({
   selector: 'app-layout',
@@ -10,7 +13,9 @@ import {SettingsService} from "../../core/services/settings.service"
     defaultRouterTransition,
   ],
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit, OnDestroy {
+  private readonly onDestroy = new Subject<void>()
+
   public mainSidebarOpts = {
     breakpoint: 'md',
     opened: true,
@@ -22,11 +27,25 @@ export class LayoutComponent implements OnInit {
   public miniSidebarOpts = {}
   public settingsVisible: boolean = false
   public searchVisible: boolean = false
+  public lockScreenVisible: boolean = false
 
-  constructor(private settingsService: SettingsService,) {
+  constructor(private settingsService: SettingsService,
+              private appMenuService: AppMenuService) {
   }
 
   ngOnInit(): void {
+    this.appMenuService
+      .$callbackClick
+      .pipe(takeUntil(this.onDestroy))
+      .subscribe((params) => {
+        if (params === 'lock') {
+          this.lockScreenVisible = true
+        }
+      })
+  }
+
+  ngOnDestroy(): void {
+    this.onDestroy.next()
   }
 
   onMiniSidebarItemClick(event) {
@@ -52,5 +71,9 @@ export class LayoutComponent implements OnInit {
 
   onSearchClose(event) {
     this.searchVisible = false
+  }
+
+  onLockClose(event) {
+    this.lockScreenVisible = false
   }
 }

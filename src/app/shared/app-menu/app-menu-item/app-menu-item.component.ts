@@ -10,6 +10,7 @@ import {
   ViewChildren
 } from '@angular/core'
 import {Router, Routes} from '@angular/router'
+import {AppMenuService} from "../../../core/services/app-menu.service"
 
 @Component({
   selector: 'app-menu-item',
@@ -24,7 +25,8 @@ export class AppMenuItemComponent implements OnInit {
   @ViewChild('parentHolder') parentHolder: ElementRef
   @ViewChildren('menuLevel') menuLevel: QueryList<AppMenuItemComponent>
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private appMenuService: AppMenuService) {
   }
 
   ngOnInit() {
@@ -50,6 +52,12 @@ export class AppMenuItemComponent implements OnInit {
     this.menuLevel.map((item) => {
       item.toggleParent(event)
     })
+  }
+
+  onClick() {
+    if (this.item.callback !== undefined) {
+      this.appMenuService.itemClick(this.item.callback)
+    }
   }
 
   isRouteActive(url) {

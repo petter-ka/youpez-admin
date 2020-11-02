@@ -5,6 +5,7 @@ import {AppBreakpointService} from "./services/app-breakpoint.service"
 import {WindowRefService} from "./services/window-ref.service"
 import {SettingsService} from "./services/settings.service"
 import {AppSidenavService} from "./services/app-sidenav.service"
+import {AppMenuService} from "./services/app-menu.service"
 
 export function throwIfAlreadyLoaded(parentModule: any, moduleName: string) {
   if (parentModule) {
@@ -18,6 +19,7 @@ export function throwIfAlreadyLoaded(parentModule: any, moduleName: string) {
     WindowRefService,
     SettingsService,
     AppSidenavService,
+    AppMenuService,
   ],
   imports: [
     CommonModule

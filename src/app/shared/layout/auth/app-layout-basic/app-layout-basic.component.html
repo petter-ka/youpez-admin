@@ -3,12 +3,14 @@
     <div fxFill
          fxLayout="row"
          fxLayoutAlign="center center">
-      <div [class]="layoutClass">
+      <div class="app-layout-divided-middle">
         <div class="app-divided-content" fxLayout="row">
-          <ng-content select="[data-right]"></ng-content>
-          <ng-content select="[data-left]"></ng-content>
+          <div data-left fxFlex="450px" class="px-16 py-16 app-bg-ui" style="max-width: 450px">
+            <router-outlet></router-outlet>
+          </div>
         </div>
       </div>
     </div>
   </ng-scrollbar>
 </div>
+

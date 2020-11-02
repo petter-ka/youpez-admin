@@ -1,10 +1,6 @@
-<div class="app-layout" [ngClass.lt-md]="{'app-layout--show-header': true}">
-
-  <!-- BEGIN: GLOBAL SEARCH DIALOG -->
-  <ng-container *ngIf="searchVisible">
-    <app-search (close)="onSearchClose($event)"></app-search>
-  </ng-container>
-  <!-- END: GLOBAL SEARCH DIALOG -->
+<div class="app-layout"
+  [ngClass]="{'app-layout--blurred':lockScreenVisible}"
+  [ngClass.lt-md]="{'app-layout--show-header': true}">
 
   <!-- BEGIN: MAIN SIDENAV CONTAINER -->
   <app-sidenav-container>
@@ -76,4 +72,22 @@
 
   <!-- END: MAIN SIDENAV CONTAINER -->
 </div>
+
+<svg id="svg-filter">
+  <filter id="svg-blur">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur>
+  </filter>
+</svg>
+
+<!-- BEGIN: GLOBAL SEARCH DIALOG -->
+<ng-container *ngIf="searchVisible">
+  <app-search (close)="onSearchClose($event)"></app-search>
+</ng-container>
+<!-- END: GLOBAL SEARCH DIALOG -->
+
+<!-- BEGIN: LOCK SCREEN DIALOG -->
+<ng-container *ngIf="lockScreenVisible">
+  <app-lock-screen (close)="onLockClose($event)"></app-lock-screen>
+</ng-container>
+<!-- END: LOCK SCREEN DIALOG -->
 

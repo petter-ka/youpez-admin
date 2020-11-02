@@ -33,6 +33,10 @@ export class AppThemeSettingsComponent implements OnInit {
       theme: 'app-theme-sidebar--black'
     },
     {
+      name: 'dark-blue',
+      theme: 'app-theme-sidebar--dark-blue'
+    },
+    {
       name: 'white',
       theme: 'app-theme-sidebar--white'
     },
@@ -57,6 +61,10 @@ export class AppThemeSettingsComponent implements OnInit {
     {
       name: 'white',
       theme: 'app-theme-header--white'
+    },
+    {
+      name: 'dark-blue',
+      theme: 'app-theme-header--dark-blue'
     },
   ]
 
