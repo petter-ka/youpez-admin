@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core'
+import {Component, OnInit, ViewChild} from '@angular/core'
 import {FormBuilder, FormGroup, Validators} from "@angular/forms"
 import {Router} from "@angular/router"
 import {NotificationService} from "carbon-components-angular"
+
+import {NgScrollbar} from "ngx-scrollbar"
 import {passwordRegex, passwordCheckerHelper, isFormItemValid, numberRegex} from "../../core"
 
 @Component({
@@ -11,18 +13,17 @@ import {passwordRegex, passwordCheckerHelper, isFormItemValid, numberRegex} from
 })
 export class AuthBookADemoComponent implements OnInit {
 
+  @ViewChild('scrollbar', {static: false}) scrollbar: NgScrollbar
+
   public formGroup: FormGroup
   public formGroup2: FormGroup
   public formGroup3: FormGroup
-
   public currentStep: number = 1
-
   public step1Valid: boolean = false
   public step2Valid: boolean = false
   public step1Loading: boolean = false
   public step2Loading: boolean = false
   public step3Loading: boolean = false
-
   public countries = [
     {content: "Afghanistan", id: "AF"},
     {content: "land Islands", id: "AX"},
@@ -610,20 +611,27 @@ export class AuthBookADemoComponent implements OnInit {
 
   gotoStep(number) {
     this.currentStep = number
+    const element = `#form_${number}`
+    console.log(element)
+    setTimeout(() => {
+      this.scrollbar.scrollTo({bottom: 0, duration: 400})
+    }, 400)
   }
 
   isValid(name) {
+    console.log(this.formGroup.get(name).errors)
     return isFormItemValid(this.formGroup, name)
   }
 
   isValid2(name) {
+    console.log(this.formGroup2.get(name).errors)
     return isFormItemValid(this.formGroup2, name)
   }
 
   isValid3(name) {
+    console.log(this.formGroup3.get(name).errors)
     return isFormItemValid(this.formGroup3, name)
   }
-
 
   getPasswordClass(name, type) {
     const instance = this.formGroup.get(name)

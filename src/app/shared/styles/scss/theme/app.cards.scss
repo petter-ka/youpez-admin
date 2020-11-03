@@ -46,7 +46,7 @@
   outline: 2px solid transparent;
   outline-offset: -2px;
   margin: 0.5rem;
-  border: 1px solid rgba(72, 94, 144, 0.16);
+  border: 1px solid rgba(72, 94, 144, 0.1);
 
   &.app-card--tile {
     margin: 0.25rem;
@@ -58,6 +58,14 @@
     .app-card__content {
       padding: 1.5rem;
     }
+  }
+
+  &.app-card--b-0 {
+    border: none;
+  }
+
+  &.app-card--m-0 {
+    margin: 0rem;
   }
 
   &.app-card--bt-success {
@@ -153,7 +161,6 @@
       }
     }
   }
-
 
   .app-card__tool {
     position: absolute;

@@ -101,6 +101,18 @@
       right: 16px;
     }
   }
+
+  &.app-header--carbon {
+    padding: 6.25rem 3.75rem 3.75rem 3.75rem;
+    background: $appColorHighContrast;
+    color: $appColorHighContrastTextOn;
+
+    .app_header__tools {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+  }
 }
 
 .app-header-subheader {

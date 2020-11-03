@@ -572,3 +572,14 @@ export const isFormItemValid = (formGroup, name) => {
   const instance = formGroup.get(name)
   return instance.invalid && (instance.dirty || instance.touched)
 }
+
+export const getFormItemError = (formGroup, name) => {
+  const errors = formGroup.get(name).errors
+
+  const errorTypes = {
+    required: 'This field is required',
+    email: 'Email address is not correct',
+    minLength: 'This field is too short',
+    pattern: 'This field\'s format is not correct'
+  }
+}

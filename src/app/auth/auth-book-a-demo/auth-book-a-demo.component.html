@@ -1,5 +1,5 @@
 <div class="app-a-box app-scrollbar-fix">
-  <ng-scrollbar track="vertical">
+  <ng-scrollbar #scrollbar track="vertical">
     <div fxFill
          fxLayout="row wrap">
       <div fxFlex="100%" fxFlex.gt-sm="45%" fxLayoutAlign="center start" class="relative app-bg-success text-white">
@@ -15,7 +15,6 @@
             <div style="max-width: 450px">
               <p class="app-body-long-02 mb-8">Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
               <div class="px-4">
                 <ul ibmList class="bx--list--margin text-white">
                   <li ibmListItem>Sed ut perspiciatis unde omnis iste natus error</li>
@@ -46,7 +45,7 @@
           <h1 class="app-expressive-heading-06 pb-8">Start your
             free trial</h1>
           <div class="relative">
-            <div class="app-expressive-heading-03 mb-4 app-form__header"
+            <div id="form_1" class="app-expressive-heading-03 mb-4 app-form__header"
                  [ngClass]="{'app-form__header--active':currentStep === 1}">1. Account
               information
             </div>
@@ -192,14 +191,13 @@
                 </div>
               </div>
             </form>
-
             <ng-container *ngIf="step1Valid">
               <div class="absolute top-0 right-0 bottom-0 left-0 app-bg-success opacity-25 -mx-4 -my-4"></div>
             </ng-container>
           </div>
 
           <div class="relative">
-            <div class="app-expressive-heading-03 mt-8 mb-6 app-form__header"
+            <div id="form_2" class="app-expressive-heading-03 mt-8 mb-6 app-form__header"
                  [ngClass]="{'app-form__header--active':currentStep === 2}">2.
               Additional information
             </div>
@@ -208,7 +206,7 @@
                 <div>
                   <div class="app-form__item">
                     <div fxLayout="row wrap">
-                      <div fxFlex="100px">
+                      <div fxFlex="100px" class="mr-1">
                         <ibm-dropdown
                           [label]="'Area'"
                           formControlName="area"
@@ -315,26 +313,20 @@
                 </div>
               </form>
             </div>
-
             <ng-container *ngIf="step2Valid">
               <div class="absolute top-0 right-0 bottom-0 left-0 app-bg-success opacity-25 -mx-4 -my-4"></div>
             </ng-container>
           </div>
-
-          <div class="app-expressive-heading-03 mt-8 mb-6 app-form__header">3.
-            Verify your data
+          <div id="form_3" class="app-expressive-heading-03 mt-8 mb-6 app-form__header" [ngClass]="{'app-form__header--active':currentStep === 3}">
+            3. Verify your data
           </div>
-
           <div [ngClass]="{'hidden':!step2Valid}">
             <div class="app-body-long-02 mb-2">
-              We emailed a 7 digit code to your email address. <br/>
-
+              We emailed a 7 digit code to your email address.
             </div>
             <div class="app-body-long-02 mb-4">
-              Type here and just push the create my account button! <br/>
+              Type here and just push the create my account button!
             </div>
-
-
             <form [formGroup]="formGroup3" (ngSubmit)="onSubmit3()">
               <div>
                 <div class="app-form__item" style="max-width: 300px">
@@ -362,7 +354,6 @@
               </div>
             </form>
           </div>
-
           <ng-container *ngIf="currentStep !== 3">
             <div class="flex justify-between">
               <div></div>
@@ -372,7 +363,6 @@
               </button>
             </div>
           </ng-container>
-
         </div>
       </div>
     </div>

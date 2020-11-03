@@ -97,7 +97,7 @@ import {
   OpenPanelFilledLeftModule,
   OpenPanelLeftModule,
   LockedModule,
-  InformationModule, PhoneModule, EditModule, SubtractModule,
+  InformationModule, PhoneModule, EditModule, SubtractModule, MoneyModule, FaceActivatedModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -151,10 +151,10 @@ import {InputTypeAdvancedPipe} from "./pipes/input-type-advanced.pipe"
 import {TextHiglightPipe} from "./pipes/text-higlight.pipe"
 import {AppLayoutDividedComponent} from './layout/auth/app-layout-divided/app-layout-divided.component'
 import {AppLayoutDividedAltComponent} from './layout/auth/app-layout-divided-alt/app-layout-divided-alt.component'
-import {AuthWelcomeScreenComponent} from "./layout/auth/auth-welcome-screen/auth-welcome-screen.component";
-import { AppLayoutDividedFullComponent } from './layout/auth/app-layout-divided-full/app-layout-divided-full.component';
-import { AppLayoutBasicComponent } from './layout/auth/app-layout-basic/app-layout-basic.component';
-import { AppLockScreenComponent } from './app-lock-screen/app-lock-screen.component'
+import {AuthWelcomeScreenComponent} from "./layout/auth/auth-welcome-screen/auth-welcome-screen.component"
+import {AppLayoutDividedFullComponent} from './layout/auth/app-layout-divided-full/app-layout-divided-full.component'
+import {AppLayoutBasicComponent} from './layout/auth/app-layout-basic/app-layout-basic.component'
+import {AppLockScreenComponent} from './app-lock-screen/app-lock-screen.component'
 
 
 const MainModules = [
@@ -287,6 +287,8 @@ const CarbonIconModules = [
   PhoneModule,
   EditModule,
   SubtractModule,
+  MoneyModule,
+  FaceActivatedModule,
 ]
 
 const Components = [
@@ -329,6 +331,7 @@ const Pipes = [
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
+
   ],
   declarations: [
     ...Components,

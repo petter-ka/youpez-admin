@@ -33,7 +33,7 @@ export class LayoutSidebarComponent implements OnInit {
         },
 
         {
-          name: 'Stocks / Crypto',
+          name: 'Stocks / crypto',
           url: '/app/dashboard/crypto',
           prefix: {
             type: 'ibm-icon',
@@ -52,7 +52,7 @@ export class LayoutSidebarComponent implements OnInit {
       opened: true,
       children: [
         {
-          name: 'Scrum Board',
+          name: 'Scrum board',
 
           prefix: {
             type: 'ibm-icon',
@@ -82,7 +82,7 @@ export class LayoutSidebarComponent implements OnInit {
                   url: '/app/notes',
                 },*/
         {
-          name: 'File Manager',
+          name: 'File manager',
           prefix: {
             type: 'ibm-icon',
             name: 'folder',
@@ -246,10 +246,89 @@ export class LayoutSidebarComponent implements OnInit {
           ]
         },
         {
-          name: 'Profile',
+          name: 'User',
           prefix: {
             type: 'ibm-icon',
             name: 'userAvatar',
+          },
+          children:[
+            {
+              name: 'Billing',
+              url: '/app/user/billing',
+            },
+            {
+              name: 'Creditcard',
+              url: '/app/user/credit-card',
+            },
+            {
+              name: 'Profile',
+              url: '/app/user/profile',
+            },
+            {
+              name: 'Transactions',
+              url: '/app/user/transactions',
+            },
+          ]
+        },
+        {
+          name: 'Application',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'application',
+          },
+          children:[
+            {
+              name: 'FAQ',
+              url: '/app/application/faq',
+            },
+            {
+              name: 'Manual',
+              url: '/app/application/manual',
+            },
+            {
+              name: 'Support',
+              url: '/app/application/support',
+            },
+            {
+              name: 'Changelog',
+              url: '/app/application/changelog',
+            },
+            {
+              name: 'Coming soon',
+              url: '/app/application/coming-soon',
+            },
+            {
+              name: 'Maintenance',
+              url: '/app/application/coming-soon',
+            },
+          ]
+        },
+        {
+          name: 'Pricing',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'money',
+          },
+          children:[
+            {
+              name: 'Simple',
+              url: '/app/pricing/simple',
+            },
+            {
+              name: 'Modern',
+              url: '/app/pricing/modern',
+            },
+            {
+              name: 'Table',
+              url: '/app/pricing/table',
+            },
+          ]
+        },
+        {
+          name: 'Social profile',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'faceActivated',
           },
           url: '/app/profile',
         },
@@ -270,7 +349,7 @@ export class LayoutSidebarComponent implements OnInit {
           url: '/app/invoice',
         },
         {
-          name: 'Search Result',
+          name: 'Search result',
           prefix: {
             type: 'ibm-icon',
             name: 'imageSearch',

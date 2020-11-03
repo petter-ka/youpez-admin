@@ -124,6 +124,10 @@ $appMainHeaderHeight: 48px;
 .app-content {
   position: relative;
 
+  &.app-content--carbon {
+    padding: 0 3.75rem 0 3.75rem;
+  }
+
   &.app-content--default {
     padding: 1.1rem;
   }
