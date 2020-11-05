@@ -1,4 +1,5 @@
 @import 'app.helpers';
+@import 'app.variables';
 
 .app-scrollbar-fix {
   .ng-scrollbar {
@@ -49,7 +50,7 @@
   display: block !important;
   justify-content: center !important;
   text-align: center !important;
-  padding-left:60px !important;
+  padding-left: 60px !important;
 }
 
 .app-ibm-table-fix {
@@ -347,4 +348,70 @@
   margin: .5rem 0;
   overflow: hidden;
   border-top: 1px solid #e9ecef
+}
+
+.app-ibm-tabs-header {
+  border-top: 1px solid #313131;
+  background: $appColorHighContrast;
+  color: $appColorHighContrastTextOn;
+  padding: 0 1.1rem 0 1.1rem;
+
+  .bx--tabs {
+    .bx--tabs__nav-item {
+      box-shadow: none;
+      background: $appColorHighContrast;
+
+      .bx--tabs__nav-link {
+        width: 8rem;
+        color: $appColorHighContrastTextOn;
+      }
+
+      &:hover {
+        background: $appColorSecondary;
+
+        .bx--tabs__nav-link {
+          color: $appColorHighContrastTextOn;
+        }
+      }
+
+      &.bx--tabs__nav-item--selected {
+        background: $appColorSecondary;
+      }
+
+      &.bx--tabs__nav-item--disabled {
+        opacity: .5;
+
+        &:hover {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .bx--tabs-trigger {
+    background: $appColorHighContrast;
+    color: $appColorHighContrastTextOn;
+
+    .bx--tabs-trigger-text {
+      color: $appColorHighContrastTextOn;
+
+
+    }
+
+    svg {
+      fill: $appColorHighContrastTextOn;
+    }
+
+    border: none;
+
+    & + .bx--tabs__nav {
+      .bx--tabs__nav-link {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.bx--text-area {
+  height: auto;
 }

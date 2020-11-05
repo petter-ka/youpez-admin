@@ -363,6 +363,22 @@
     <svg ibmIconFaceActivated [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'purchase'">
+    <svg ibmIconPurchase [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'calendar'">
+    <svg ibmIconCalendar [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'password'">
+    <svg ibmIconPassword [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'location'">
+    <svg ibmIconLocation [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchCase="'hashtag'">
     <!--<svg ibmIconHashtag [size]="iconSize"></svg>-->
     <svg xmlns="http://www.w3.org/2000/svg" [style.width]="iconSize" [style.height]="iconSize" viewBox="0 0 32 32">

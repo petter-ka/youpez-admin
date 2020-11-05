@@ -1,0 +1,156 @@
+<div fxLayout="row wrap">
+  <div fxFlex="100%" fxFlex.gt-md="60%">
+
+    <div class="mb-8">
+      <div class="mb-4">
+        <div class="app-productive-heading-03">Profile picture</div>
+        <div class="app-body-short-01">Your picture will be avaliable for everyone</div>
+      </div>
+      <div class="app-cards-vertical-merge">
+        <div class="app-card">
+          <div class="app-card__content">
+            <div class="flex items-center">
+              <img class="w-24 h-24 rounded-full mr-4" src="/assets/img/avatar/avatar2.jpg"/>
+              <div class="">
+                <button ibmButton="tertiary" size="sm">
+                  Upload new profile picture
+                </button>
+                <div class="mt-2 app-body-short-01">
+                  Must be JPEG, PNG, or GIF and cannot exceed 5MB.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <div class="mb-4">
+        <div class="app-productive-heading-03">Profile settings</div>
+        <div class="app-body-short-01">Change identifying details for your account</div>
+      </div>
+      <div class="app-cards-vertical-merge">
+        <div class="app-card">
+          <div class="app-card__content">
+            <div fxLayout="row wrap">
+              <div fxFlex="100%" fxFlex.gt-md="30%">
+                <div class="app-productive-heading-02">E-mail</div>
+              </div>
+              <div fxFlex="100%" fxFlex.gt-md="70%">
+                <input
+                  ibmText
+                  size="md"
+                  theme="light">
+                <div class="mt-2 app-caption-01">Your email address where we can reach you</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-card__content">
+            <div fxLayout="row wrap">
+              <div fxFlex="100%" fxFlex.gt-md="30%">
+                <div class="app-productive-heading-02">Username</div>
+              </div>
+              <div fxFlex="100%" fxFlex.gt-md="70%">
+                <input
+                  ibmText
+                  size="md"
+                  theme="light">
+                <div class="mt-2 app-caption-01">You may update your username</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-card__content">
+            <div fxLayout="row wrap">
+              <div fxFlex="100%" fxFlex.gt-md="30%">
+                <div class="app-productive-heading-02">Display Name</div>
+              </div>
+              <div fxFlex="100%" fxFlex.gt-md="70%">
+                <input
+                  ibmText
+                  size="md"
+                  theme="light">
+                <div class="mt-2 app-caption-01">Customize your username</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-card__content">
+            <div fxLayout="row wrap">
+              <div fxFlex="100%" fxFlex.gt-md="30%">
+                <div class="app-productive-heading-02">Bio</div>
+              </div>
+              <div fxFlex="100%" fxFlex.gt-md="70%">
+                    <textarea
+                      ibmTextArea
+                      theme="light"
+                      [rows]="3"
+                      [cols]="3"
+                      aria-label="textarea"></textarea>
+                <div class="mt-2 app-caption-01">Customize your username</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-card__content flex justify-end">
+            <button ibmButton="primary" size="field">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <div class="mb-4">
+        <div class="app-productive-heading-03">Account management</div>
+        <div class="app-body-short-01">Manage your account visiblity</div>
+      </div>
+      <div class="app-cards-vertical-merge">
+        <div class="app-card">
+          <div class="app-card__content">
+            <div fxLayout="row wrap">
+              <div fxFlex="100%" fxFlex.gt-md="30%">
+                <div class="app-productive-heading-02">Private</div>
+              </div>
+              <div fxFlex="100%" fxFlex.gt-md="70%">
+                <ibm-toggle
+                  class="app-ibm-toggle-fix"
+                  [onText]="'private'"
+                  [offText]="'public'"
+                  [checked]="false"
+                  size="md">
+                </ibm-toggle>
+                <div class="mt-2 app-caption-01">This feature will hide you</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <div class="app-card__content">
+            <div fxLayout="row wrap">
+              <div fxFlex="100%" fxFlex.gt-md="30%">
+                <div class="app-productive-heading-02">Delete</div>
+              </div>
+              <div fxFlex="100%" fxFlex.gt-md="70%">
+                <button ibmButton="danger" size="field">
+                  Delete my account
+                </button>
+                <div class="mt-2 app-caption-01">Completely delete your account</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

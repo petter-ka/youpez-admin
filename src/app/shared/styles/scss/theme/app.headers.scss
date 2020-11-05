@@ -103,7 +103,7 @@
   }
 
   &.app-header--carbon {
-    padding: 6.25rem 3.75rem 3.75rem 3.75rem;
+    padding: 3.2rem 1.1rem 1.5rem 2rem;
     background: $appColorHighContrast;
     color: $appColorHighContrastTextOn;
 
@@ -111,6 +111,10 @@
       position: absolute;
       top: 16px;
       right: 16px;
+    }
+
+    &.app-header--with-tabs {
+      padding-bottom: 0;
     }
   }
 }

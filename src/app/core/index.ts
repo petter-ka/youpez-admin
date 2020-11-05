@@ -583,3 +583,10 @@ export const getFormItemError = (formGroup, name) => {
     pattern: 'This field\'s format is not correct'
   }
 }
+
+export interface AppTab {
+  name: string
+  url?: string | null
+  active?: boolean | null
+  disabled?: boolean | null
+}

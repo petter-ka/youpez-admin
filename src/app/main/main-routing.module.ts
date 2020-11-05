@@ -12,6 +12,11 @@ import {FileManagerComponent} from "./file-manager/file-manager/file-manager.com
 import {MailComponent} from "./mail/mail/mail.component"
 import {MessagesComponent} from "./messages/messages/messages.component"
 import {AppLayoutDividedComponent} from "../shared/layout/auth/app-layout-divided/app-layout-divided.component"
+import {UserSettingsComponent} from "./user/user-settings/user-settings.component"
+import {UserLayoutComponent} from "./user/user-layout/user-layout.component"
+import {UserBillingComponent} from "./user/user-billing/user-billing.component"
+import {UserCreditcardComponent} from "./user/user-creditcard/user-creditcard.component"
+import {UserTransactionsComponent} from "./user/user-transactions/user-transactions.component"
 
 const routes: Routes = [
   {
@@ -71,6 +76,28 @@ const routes: Routes = [
       {
         path: 'test',
         component: AppLayoutDividedComponent,
+      },
+      {
+        path: 'user',
+        component: UserLayoutComponent,
+        children: [
+          {
+            path: 'settings',
+            component: UserSettingsComponent,
+          },
+          {
+            path: 'billing',
+            component: UserBillingComponent,
+          },
+          {
+            path: 'creditcard',
+            component: UserCreditcardComponent,
+          },
+          {
+            path: 'transactions',
+            component: UserTransactionsComponent,
+          },
+        ]
       }
     ]
   },

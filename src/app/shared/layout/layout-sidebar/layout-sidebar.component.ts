@@ -247,22 +247,23 @@ export class LayoutSidebarComponent implements OnInit {
         },
         {
           name: 'User',
+          parentUrl: '/app/user',
           prefix: {
             type: 'ibm-icon',
             name: 'userAvatar',
           },
           children:[
             {
+              name: 'Settings',
+              url: '/app/user/settings',
+            },
+            {
               name: 'Billing',
               url: '/app/user/billing',
             },
             {
               name: 'Creditcard',
-              url: '/app/user/credit-card',
-            },
-            {
-              name: 'Profile',
-              url: '/app/user/profile',
+              url: '/app/user/creditcard',
             },
             {
               name: 'Transactions',
@@ -325,7 +326,7 @@ export class LayoutSidebarComponent implements OnInit {
           ]
         },
         {
-          name: 'Social profile',
+          name: 'Profile',
           prefix: {
             type: 'ibm-icon',
             name: 'faceActivated',

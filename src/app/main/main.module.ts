@@ -16,6 +16,11 @@ import {TasksComponent} from './tasks/tasks/tasks.component'
 import {FileManagerComponent} from './file-manager/file-manager/file-manager.component'
 import {MailComponent} from './mail/mail/mail.component'
 import {MessagesComponent} from './messages/messages/messages.component'
+import {UserSettingsComponent} from './user/user-settings/user-settings.component'
+import {UserLayoutComponent} from './user/user-layout/user-layout.component'
+import {UserBillingComponent} from './user/user-billing/user-billing.component';
+import { UserCreditcardComponent } from './user/user-creditcard/user-creditcard.component';
+import { UserTransactionsComponent } from './user/user-transactions/user-transactions.component'
 
 @NgModule({
   declarations: [
@@ -29,6 +34,11 @@ import {MessagesComponent} from './messages/messages/messages.component'
     FileManagerComponent,
     MailComponent,
     MessagesComponent,
+    UserSettingsComponent,
+    UserLayoutComponent,
+    UserBillingComponent,
+    UserCreditcardComponent,
+    UserTransactionsComponent,
   ],
   imports: [
     CommonModule,

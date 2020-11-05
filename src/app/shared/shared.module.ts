@@ -97,7 +97,14 @@ import {
   OpenPanelFilledLeftModule,
   OpenPanelLeftModule,
   LockedModule,
-  InformationModule, PhoneModule, EditModule, SubtractModule, MoneyModule, FaceActivatedModule,
+  InformationModule,
+  PhoneModule,
+  EditModule,
+  SubtractModule,
+  MoneyModule,
+  FaceActivatedModule,
+  PurchaseModule,
+  CalendarModule, PasswordModule, LocationModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -154,7 +161,9 @@ import {AppLayoutDividedAltComponent} from './layout/auth/app-layout-divided-alt
 import {AuthWelcomeScreenComponent} from "./layout/auth/auth-welcome-screen/auth-welcome-screen.component"
 import {AppLayoutDividedFullComponent} from './layout/auth/app-layout-divided-full/app-layout-divided-full.component'
 import {AppLayoutBasicComponent} from './layout/auth/app-layout-basic/app-layout-basic.component'
-import {AppLockScreenComponent} from './app-lock-screen/app-lock-screen.component'
+import {AppLockScreenComponent} from './app-lock-screen/app-lock-screen.component';
+import { AppContentTabsComponent } from './app-content/app-content-tabs/app-content-tabs.component';
+import { AppCreditCardComponent } from './app-credit-card/app-credit-card.component'
 
 
 const MainModules = [
@@ -289,6 +298,10 @@ const CarbonIconModules = [
   SubtractModule,
   MoneyModule,
   FaceActivatedModule,
+  PurchaseModule,
+  CalendarModule,
+  PasswordModule,
+  LocationModule,
 ]
 
 const Components = [
@@ -315,6 +328,8 @@ const Components = [
   AppLayoutDividedFullComponent,
   AppLayoutBasicComponent,
   AppLockScreenComponent,
+  AppContentTabsComponent,
+  AppCreditCardComponent,
 ]
 
 const Pipes = [
@@ -331,7 +346,6 @@ const Pipes = [
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
-
   ],
   declarations: [
     ...Components,
@@ -344,7 +358,6 @@ const Pipes = [
     ...CarbonIconModules,
     ...CarbonModules,
     ...Pipes,
-
   ]
 })
 export class SharedModule {

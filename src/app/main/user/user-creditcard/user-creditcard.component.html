@@ -1,0 +1,131 @@
+<div fxLayout="row wrap">
+  <div fxFlex="100%" fxFlex.gt-md="60%">
+
+    <div class="mb-8" style="max-width: 550px">
+      <div class="mb-4">
+        <div class="app-productive-heading-03">Add new credit card</div>
+        <div class="app-body-short-01">Fill the form to add new card</div>
+      </div>
+      <div class="app-cards-vertical-merge">
+        <div class="app-card">
+          <div class="app-card__content">
+            <div class="app-form">
+
+              <div fxLayout="row wrap" class="app-form__row">
+                <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
+                  <div class="app-input-icon">
+                    <app-ibm-icon iconName="purchase" class="app-icon" iconSize="20"></app-ibm-icon>
+                    <ibm-label>
+                      Card number
+                      <input
+                        ibmText
+                        size="md"
+                        theme="light"
+                        [placeholder]="'1111 1111 1111 11111'"
+                        [autocomplete]="true">
+                    </ibm-label>
+                  </div>
+                </div>
+                <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
+                  <div class="app-input-icon">
+                    <app-ibm-icon iconName="user" class="app-icon" iconSize="20"></app-ibm-icon>
+                    <ibm-label>
+                      Cardholder name
+                      <input
+                        ibmText
+                        size="md"
+                        theme="light"
+                        [placeholder]="'John Doe'"
+                        [autocomplete]="true">
+                    </ibm-label>
+                  </div>
+                </div>
+              </div>
+              <div fxLayout="row wrap" class="app-form__row">
+                <div fxFlex="100%" fxFlex.gt-md="33.33%" class="app-form__item">
+                  <div class="app-input-icon">
+                    <app-ibm-icon iconName="calendar" class="app-icon" iconSize="20"></app-ibm-icon>
+                    <ibm-label>
+                      Expiration
+                      <input
+                        ibmText
+                        size="md"
+                        theme="light"
+                        [placeholder]="'10/22'"
+                        [autocomplete]="true">
+                    </ibm-label>
+                  </div>
+                </div>
+                <div fxFlex="100%" fxFlex.gt-md="33.33%" class="app-form__item">
+                  <div class="app-input-icon">
+                    <app-ibm-icon iconName="locked" class="app-icon" iconSize="20"></app-ibm-icon>
+                    <ibm-label>
+                      CVC
+                      <input
+                        ibmText
+                        size="md"
+                        theme="light"
+                        [placeholder]="'126'"
+                        [autocomplete]="true">
+                    </ibm-label>
+                  </div>
+                </div>
+                <div fxFlex="100%" fxFlex.gt-md="33.33%" class="app-form__item">
+                  <div class="app-input-icon">
+                    <app-ibm-icon iconName="location" class="app-icon" iconSize="20"></app-ibm-icon>
+                    <ibm-label>
+                      Postal code
+                      <input
+                        ibmText
+                        size="md"
+                        theme="light"
+                        [placeholder]="'2567'"
+                        [autocomplete]="true">
+                    </ibm-label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-card__content flex justify-end">
+            <button ibmButton="primary" size="field">
+              Save card
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-8" style="max-width: 550px">
+      <div class="mb-4">
+        <div class="app-productive-heading-03">Current credit card</div>
+        <div class="app-body-short-01">This card handle payments</div>
+      </div>
+      <div class="app-cards-vertical-merge">
+        <div class="app-card">
+          <div class="app-card__content">
+            <app-credit-card></app-credit-card>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-card__content flex justify-end">
+            <div class="mr-2">
+              <button ibmButton="tertiary" size="field">
+                Change card
+              </button>
+            </div>
+            <button ibmButton="danger" size="field">
+              Delete card
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>
