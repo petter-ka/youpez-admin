@@ -71,26 +71,3 @@
 :root.app-theme-header--dark-blue {
   @include spread-map($theme-header-3);
 }
-
-/*:root.app-theme-sidebar-light {
-  @include spread-map($theme-sidebar-light);
-}
-
-:root.app-theme-sub-sidebar-light {
-  @include spread-map($theme-sub-sidebar-light);
-}*/
-
-// DARK THEMES
-/*
-:root.app-theme-dark {
-  @include spread-map($theme-map-dark);
-}
-
-:root.app-theme-sidebar-dark {
-  @include spread-map($theme-sidebar-dark);
-}
-
-:root.app-theme-sub-sidebar-dark {
-  @include spread-map($theme-sub-sidebar-dark);
-}
-*/

@@ -612,24 +612,20 @@ export class AuthBookADemoComponent implements OnInit {
   gotoStep(number) {
     this.currentStep = number
     const element = `#form_${number}`
-    console.log(element)
     setTimeout(() => {
       this.scrollbar.scrollTo({bottom: 0, duration: 400})
     }, 400)
   }
 
   isValid(name) {
-    console.log(this.formGroup.get(name).errors)
     return isFormItemValid(this.formGroup, name)
   }
 
   isValid2(name) {
-    console.log(this.formGroup2.get(name).errors)
     return isFormItemValid(this.formGroup2, name)
   }
 
   isValid3(name) {
-    console.log(this.formGroup3.get(name).errors)
     return isFormItemValid(this.formGroup3, name)
   }
 

@@ -104,7 +104,7 @@ import {
   MoneyModule,
   FaceActivatedModule,
   PurchaseModule,
-  CalendarModule, PasswordModule, LocationModule,
+  CalendarModule, PasswordModule, LocationModule, HourglassModule, InProgressModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -163,7 +163,9 @@ import {AppLayoutDividedFullComponent} from './layout/auth/app-layout-divided-fu
 import {AppLayoutBasicComponent} from './layout/auth/app-layout-basic/app-layout-basic.component'
 import {AppLockScreenComponent} from './app-lock-screen/app-lock-screen.component';
 import { AppContentTabsComponent } from './app-content/app-content-tabs/app-content-tabs.component';
-import { AppCreditCardComponent } from './app-credit-card/app-credit-card.component'
+import { AppCreditCardComponent } from './app-credit-card/app-credit-card.component';
+import { AppLayoutHorizontalComponent } from './app-layout-horizontal/app-layout-horizontal.component';
+import { AppContentSimpleComponent } from './app-content/app-content-simple/app-content-simple.component'
 
 
 const MainModules = [
@@ -302,6 +304,8 @@ const CarbonIconModules = [
   CalendarModule,
   PasswordModule,
   LocationModule,
+  HourglassModule,
+  InProgressModule,
 ]
 
 const Components = [
@@ -330,6 +334,8 @@ const Components = [
   AppLockScreenComponent,
   AppContentTabsComponent,
   AppCreditCardComponent,
+  AppLayoutHorizontalComponent,
+  AppContentSimpleComponent,
 ]
 
 const Pipes = [

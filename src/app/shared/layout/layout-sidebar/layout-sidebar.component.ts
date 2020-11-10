@@ -279,6 +279,10 @@ export class LayoutSidebarComponent implements OnInit {
           },
           children:[
             {
+              name: 'Welcome',
+              url: '/app/application/welcome',
+            },
+            {
               name: 'FAQ',
               url: '/app/application/faq',
             },
@@ -293,14 +297,6 @@ export class LayoutSidebarComponent implements OnInit {
             {
               name: 'Changelog',
               url: '/app/application/changelog',
-            },
-            {
-              name: 'Coming soon',
-              url: '/app/application/coming-soon',
-            },
-            {
-              name: 'Maintenance',
-              url: '/app/application/coming-soon',
             },
           ]
         },
@@ -358,6 +354,40 @@ export class LayoutSidebarComponent implements OnInit {
           url: '/app/search-result',
         },
         {
+          name: 'Coming soon',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'inProgress',
+
+          },
+          children: [
+            {
+              name: 'Modern',
+              url: '/auth/coming-soon/modern'
+            },
+            {
+              name: 'Full',
+              url: '/auth/coming-soon/full'
+            },
+            {
+              name: 'Full middle',
+              url: '/auth/coming-soon/full-middle'
+            },
+            {
+              name: 'Basic',
+              url: '/auth/coming-soon/basic'
+            }
+          ]
+        },
+        {
+          name: 'Maintenance',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'hourglass',
+          },
+          url: '/app/maintenance',
+        },
+        {
           name: 'Errors',
           prefix: {
             type: 'ibm-icon',
@@ -371,9 +401,11 @@ export class LayoutSidebarComponent implements OnInit {
           children: [
             {
               name: '404',
+              url: '/app/errors/404',
             },
             {
               name: '500',
+              url: '/app/errors/500',
             },
           ]
         },

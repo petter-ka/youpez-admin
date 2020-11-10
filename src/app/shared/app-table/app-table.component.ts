@@ -85,7 +85,7 @@ export class AppTableComponent implements OnInit, OnChanges {
   }
 
   onRowClick(index: number) {
-    console.log("Row item selected:", index)
+
   }
 
   simpleSort(index: number) {

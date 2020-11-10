@@ -1,5 +1,49 @@
 @import 'app.helpers';
 
+@mixin appSideBarListStyle1() {
+  .app-sidebar {
+    .app-sidebar__list__item {
+      margin: 0 10px 0 10px;
+
+      .app-sidebar__list__item__inner {
+        padding: 0 16px 0 10px;
+        margin-bottom: 2px;
+        border-radius: 8px;
+      }
+
+      .app-sidebar__list__item__children {
+        padding-left: 18px;
+        margin-right: -10px;
+      }
+    }
+  }
+}
+
+@mixin appSideBarListStyle2() {
+  .app-sidebar {
+    .app-sidebar__list__item {
+      /*margin: 0 10px 0 10px;*/
+
+      .app-sidebar__list__item__inner {
+        padding: 0 26px 0 20px;
+      }
+
+      .app-sidebar__list__item__children {
+
+        .app-sidebar__list__item {
+          .app-sidebar__list__item__inner {
+            padding-left: 48px;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  @include appSideBarListStyle1();
+}
+
 .app-sidebar {
   position: absolute;
   top: 0;
@@ -82,14 +126,10 @@
     }
 
     .app-sidebar__list__item {
-      margin: 0 10px 0 10px;
       cursor: pointer;
 
       .app-sidebar__list__item__inner {
         min-height: 38px;
-        padding: 0 16px 0 10px;
-        border-radius: 8px;
-        margin-bottom: 2px;
         outline: none;
         transition: .1s cubic-bezier(.35, 0, .35, 1);
         transition-property: all;
@@ -183,8 +223,6 @@
         overflow: hidden;
         transition: .3s cubic-bezier(.35, 0, .35, 1);
         transition-property: max-height;
-        padding-left: 18px;
-        margin-right: -10px;
 
         .app-sidebar__list__item {
           .app-sidebar__list__item__inner {
@@ -193,9 +231,6 @@
           }
 
           .app-sidebar__list__item__children {
-            padding-left: 0px;
-            margin-right: -10px;
-
             .app-sidebar__list__item {
               .app-sidebar__list__item__inner {
                 min-height: 30px;

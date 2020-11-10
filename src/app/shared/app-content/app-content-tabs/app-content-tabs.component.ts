@@ -24,7 +24,6 @@ export class AppContentTabsComponent implements OnInit {
   onClick(tab: AppTab) {
     if (this.navigation === true) {
       if (!tab.active) {
-        console.log(tab.url)
         this.router.navigate([tab.url])
       }
     }

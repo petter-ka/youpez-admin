@@ -2,6 +2,23 @@
 @import "~@ag-grid-community/core/dist/styles/ag-theme-balham/sass/ag-theme-balham-mixin";
 @import 'app.variables';
 
+.app-table {
+  .app-table__header {
+    th {
+      border-bottom: 2px solid $appBorderColor;
+    }
+  }
+
+  .app-table__row {
+    td {
+      border-bottom: 1px solid $appBorderColor;
+    }
+    &.app-table__row--b-1{
+      border: 1px solid $appBorderColor;
+    }
+  }
+}
+
 .app-ag-grid {
   @include ag-theme-balham((
     font-family: ('IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif),

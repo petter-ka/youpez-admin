@@ -18,9 +18,24 @@ import {MailComponent} from './mail/mail/mail.component'
 import {MessagesComponent} from './messages/messages/messages.component'
 import {UserSettingsComponent} from './user/user-settings/user-settings.component'
 import {UserLayoutComponent} from './user/user-layout/user-layout.component'
-import {UserBillingComponent} from './user/user-billing/user-billing.component';
-import { UserCreditcardComponent } from './user/user-creditcard/user-creditcard.component';
-import { UserTransactionsComponent } from './user/user-transactions/user-transactions.component'
+import {UserBillingComponent} from './user/user-billing/user-billing.component'
+import {UserCreditcardComponent} from './user/user-creditcard/user-creditcard.component'
+import {UserTransactionsComponent} from './user/user-transactions/user-transactions.component'
+import {TimelineComponent} from './timeline/timeline.component'
+import {ProfileComponent} from './profile/profile.component'
+import {PricingSimpleComponent} from './pricing/pricing-simple/pricing-simple.component'
+import {PricingModernComponent} from './pricing/pricing-modern/pricing-modern.component'
+import {PricingTableComponent} from './pricing/pricing-table/pricing-table.component'
+import {InvoiceComponent} from './invoice/invoice.component'
+import {SearchResultComponent} from './search-result/search-result.component'
+import {Error404Component} from './errors/error404/error404.component'
+import {Error500Component} from './errors/error500/error500.component'
+import {FaqComponent} from './application/faq/faq.component'
+import {ManualComponent} from './application/manual/manual.component'
+import {SupportComponent} from './application/support/support.component'
+import {ChangelogComponent} from './application/changelog/changelog.component'
+import {MaintenanceComponent} from './maintenance/maintenance.component'
+import {WelcomeComponent} from './application/welcome/welcome.component'
 
 @NgModule({
   declarations: [
@@ -39,6 +54,21 @@ import { UserTransactionsComponent } from './user/user-transactions/user-transac
     UserBillingComponent,
     UserCreditcardComponent,
     UserTransactionsComponent,
+    TimelineComponent,
+    ProfileComponent,
+    PricingSimpleComponent,
+    PricingModernComponent,
+    PricingTableComponent,
+    InvoiceComponent,
+    SearchResultComponent,
+    Error404Component,
+    Error500Component,
+    FaqComponent,
+    ManualComponent,
+    SupportComponent,
+    ChangelogComponent,
+    MaintenanceComponent,
+    WelcomeComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,17 @@
+<div class="absolute top-0 right-0 left-0 bottom-0">
+  <div fxFill fxLayout="column" class="relative">
+    <div>
+      <ibm-tabs type="container" [followFocus]="true" [isNavigation]="true" [cacheActive]="true">
+        <ibm-tab heading="one"></ibm-tab>
+        <ibm-tab heading="two"></ibm-tab>
+        <ibm-tab heading="three"></ibm-tab>
+        <ibm-tab heading="four" disabled="true"></ibm-tab>
+      </ibm-tabs>
+    </div>
+
+    <div fxFlex class="relative">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+
+  </div>
+</div>

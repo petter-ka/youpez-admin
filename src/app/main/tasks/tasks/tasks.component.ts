@@ -262,7 +262,6 @@ export class TasksComponent implements OnInit {
   }
 
   onSearchChange(event) {
-    console.log(event)
     this.txtSearch = event
   }
 }

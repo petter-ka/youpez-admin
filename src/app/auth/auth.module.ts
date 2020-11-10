@@ -9,7 +9,7 @@ import {AuthConfirmationComponent} from './auth-confirmation/auth-confirmation.c
 import {AuthForgotPasswordComponent} from './auth-forgot-password/auth-forgot-password.component'
 import {AuthResetPasswordComponent} from './auth-reset-password/auth-reset-password.component'
 import {AuthBookADemoComponent} from './auth-book-a-demo/auth-book-a-demo.component'
-
+import {ComingSoonComponent} from "./coming-soon/coming-soon.component"
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import {AuthBookADemoComponent} from './auth-book-a-demo/auth-book-a-demo.compon
     AuthForgotPasswordComponent,
     AuthResetPasswordComponent,
     AuthBookADemoComponent,
+    ComingSoonComponent,
   ],
   imports: [
     CommonModule,

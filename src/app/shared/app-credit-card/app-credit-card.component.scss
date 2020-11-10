@@ -6,8 +6,8 @@
 }
 
 .card {
-  width: 400px;
-  height: 250px;
+  width: 359px;
+  height: 215px;
 }
 
 .flip {
@@ -15,7 +15,6 @@
   height: inherit;
   transition: 0.7s;
   transform-style: preserve-3d;
-  //animation: flip 2.5s ease;
 }
 
 .front,
@@ -26,7 +25,6 @@
   border-radius: 15px;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  //box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.3);
   backface-visibility: hidden;
   background-image: linear-gradient(to right, #000f2d, #004754);
   overflow: hidden;
@@ -41,8 +39,6 @@
   position: absolute;
   right: 0;
   height: inherit;
-  background-image: linear-gradient(to bottom, #56c9ff, #174dff);
-  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .strip-bottom {
@@ -57,8 +53,8 @@
 
 .logo {
   position: absolute;
-  top: 30px;
-  right: 25px;
+  top: 20px;
+  right: 20px;
 }
 
 .investor {
@@ -174,10 +170,6 @@
 .card {
   perspective: 1000;
 }
-
-/*.card:hover .flip {
-  transform: rotateY(180deg);
-}*/
 
 .back {
   transform: rotateY(180deg) translateZ(0);

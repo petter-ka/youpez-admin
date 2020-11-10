@@ -379,6 +379,14 @@
     <svg ibmIconLocation [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'hourglass'">
+    <svg ibmIconHourglass [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'inProgress'">
+    <svg ibmIconInProgress [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchCase="'hashtag'">
     <!--<svg ibmIconHashtag [size]="iconSize"></svg>-->
     <svg xmlns="http://www.w3.org/2000/svg" [style.width]="iconSize" [style.height]="iconSize" viewBox="0 0 32 32">
