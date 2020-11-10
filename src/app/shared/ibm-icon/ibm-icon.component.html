@@ -387,6 +387,26 @@
     <svg ibmIconInProgress [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'hearing'">
+    <svg ibmIconHearing [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'favorite'">
+    <svg ibmIconFavorite [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'pin'">
+    <svg ibmIconPin [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'industry'">
+    <svg ibmIconIndustry [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'portfolio'">
+    <svg ibmIconPortfolio [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchCase="'hashtag'">
     <!--<svg ibmIconHashtag [size]="iconSize"></svg>-->
     <svg xmlns="http://www.w3.org/2000/svg" [style.width]="iconSize" [style.height]="iconSize" viewBox="0 0 32 32">

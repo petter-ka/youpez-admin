@@ -104,7 +104,14 @@ import {
   MoneyModule,
   FaceActivatedModule,
   PurchaseModule,
-  CalendarModule, PasswordModule, LocationModule, HourglassModule, InProgressModule,
+  CalendarModule,
+  PasswordModule,
+  LocationModule,
+  HourglassModule,
+  InProgressModule,
+  HearingModule,
+  FavoriteModule,
+  PinModule, PortfolioModule, IndustryModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -306,6 +313,8 @@ const CarbonIconModules = [
   LocationModule,
   HourglassModule,
   InProgressModule,
+  HearingModule,
+  FavoriteModule,
 ]
 
 const Components = [
@@ -352,6 +361,9 @@ const Pipes = [
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
+    PinModule,
+    PortfolioModule,
+    IndustryModule,
   ],
   declarations: [
     ...Components,

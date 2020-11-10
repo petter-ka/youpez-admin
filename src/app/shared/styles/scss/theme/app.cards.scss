@@ -78,6 +78,10 @@
     margin: 0;
   }
 
+  &.app-card--m-b {
+    margin: 0 0 1rem 0;
+  }
+
   &.app-card--bt-success {
     @include appCardBt();
 
@@ -160,7 +164,7 @@
   }
 
   .app-card__blocks {
-    border-top: 1px solid $appBorderColor;
+    //border-top: 1px solid $appBorderColor;
 
     .app-card__block {
       padding: 1rem;
@@ -168,6 +172,12 @@
 
       &:last-child {
         border-right-color: transparent;
+      }
+    }
+
+    &.app-card__blocks--collapse {
+      .app-card__block {
+        border-bottom: 1px solid $appBorderColor;
       }
     }
   }

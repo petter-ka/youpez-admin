@@ -3,17 +3,62 @@
 
     <div class="mb-8">
       <div class="mb-4">
-        <div class="app-productive-heading-03">Profile picture</div>
-        <div class="app-body-short-01">Your picture will be avaliable for everyone</div>
+        <div class="app-productive-heading-03 font-bold">Transaction history</div>
+        <div class="app-body-short-01">List of your all invoices</div>
       </div>
       <div class="app-cards-vertical-merge">
-        <div class="app-card">
-          <div class="app-card__content">
+        <ng-container *ngFor="let invoice of transactions">
+          <div class="app-card">
+            <div class="app-card__content">
+              <div fxLayout="row wrap" fxLayoutAlign=" center">
+                <div fxFlex.gt-md="180px" fxFlex="100%">
+                  <div class="flex items-center">
+                    <ng-container *ngIf="invoice.payed">
+                      <app-ibm-icon class="app-ibm-icon-xl" iconName="document" iconSize="32"></app-ibm-icon>
+                    </ng-container>
+                    <ng-container *ngIf="!invoice.payed">
+                      <app-ibm-icon class="app-ibm-icon-xl" iconName="inProgress" iconSize="32"></app-ibm-icon>
+                    </ng-container>
+                    <div class="ml-3">
+                      <div class="app-productive-heading-01 mb-1">#{{invoice.number}}</div>
+                      <div class="app-label-01">
+                        <ng-container *ngIf="invoice.payed">
+                          <div class="pr-3 pl-2 py-1 app-bg-success-lt-50 app-color-success rounded-full flex items-center">
+                            <span class="w-2 h-2 app-bg-success rounded-full inline-block mr-2"></span>
+                            Payed
+                          </div>
+                        </ng-container>
+                        <ng-container *ngIf="!invoice.payed">
+                          <div class="pr-3 pl-2 py-1 app-bg-info-lt-50 app-color-info rounded-full flex items-center">
+                            <span class="w-2 h-2 app-bg-info rounded-full inline-block mr-2"></span>
+                            waiting
+                          </div>
+                        </ng-container>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-
-
+                <div fxFlex.gt-md="" fxFlex="100%" class="">
+                  <div class="app-productive-heading-02 mb-1">{{invoice.title}}</div>
+                  <div class="app-body-short-01">{{invoice.range}}</div>
+                </div>
+                <div fxFlex.gt-md="190px" fxFlex="50%">
+                  <div class="app-productive-heading-03 text-right mr-4">{{invoice.price}} USD</div>
+                </div>
+                <div fxFlex.gt-md="40px" fxFlex="50%">
+                  <button
+                    [disabled]="!invoice.payed"
+                    ibmButton="tertiary" size="field"
+                    class="bx--btn--icon-only bx--btn--remove-tooltip">
+                    <svg class="bx--btn__icon" ibmIconDownload size="32"></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </ng-container>
+
       </div>
     </div>
   </div>

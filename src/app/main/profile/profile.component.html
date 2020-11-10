@@ -1,1 +1,486 @@
-<p>profile works!</p>
+<div class="app-a-box app-scrollbar-fix">
+  <ng-scrollbar>
+    <div class="bg-cover cursor-pointer"
+         style="background-image:url('assets/img/pixabay/orange-1377310_1920.jpg');height: 200px">
+
+    </div>
+    <div fxLayout="row wrap">
+      <div fxFlex.gt-md="240px" fxFlex="100%">
+        <div class="app-content app-content--default relative sticky top-0" ngClass.gt-md="-mt-20">
+          <div fxLayout="row wrap">
+            <div fxFlex="30%" fxFlex.gt-md="100%">
+              <div class="">
+                <img class="w-full rounded-lg border-4 border-solid border-white" src="/assets/img/avatar/avatar2.jpg"/>
+              </div>
+            </div>
+
+            <div fxFlex="70%" fxFlex.gt-md="100%">
+              <div ngClass.lt-md="ml-2" ngClass.md="ml-2" ngClass.gt-md="pt-4">
+                <div>
+                  <div class="app-productive-heading-03 font-bold">David Robson</div>
+                  <div class="app-body-short-01 opacity-75">@robsonDave</div>
+                </div>
+                <div class="app-body-short-01 mt-4 mb-4">
+                  My passion for communication drew me to public relations and marketing, where I have worked with
+                  clients
+                  across a range of industries, including retail, education and technology.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="flex items-center mb-2">
+              <app-ibm-icon iconName="pin" iconSize="20"></app-ibm-icon>
+              <div class="ml-3">
+                <div class="app-productive-heading-01">London, UK</div>
+              </div>
+            </div>
+            <div class="flex items-center mb-2">
+              <app-ibm-icon iconName="industry" iconSize="20"></app-ibm-icon>
+              <div class="ml-3">
+                <div class="app-productive-heading-01">Nice Corp.</div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <app-ibm-icon iconName="portfolio" iconSize="20"></app-ibm-icon>
+              <div class="ml-3">
+                <div class="app-productive-heading-01">Marketing Manager</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <div class="app-subtitle mb-2">SKILLS</div>
+            <ibm-tag type="cool-gray">html</ibm-tag> <ibm-tag type="cool-gray">css</ibm-tag>
+            <ibm-tag type="cool-gray">marketing</ibm-tag> <ibm-tag type="cool-gray">campaigns</ibm-tag>
+            <ibm-tag type="cool-gray">sales</ibm-tag> <ibm-tag type="cool-gray">tech</ibm-tag>
+          </div>
+        </div>
+      </div>
+      <div fxFlex.gt-md="" fxFlex="100%">
+        <div class="mt-4">
+          <div class="app-card app-card--m-b">
+            <div class="app-card__blocks" fxLayout="row wrap" ngClass.lt-lg="app-card__blocks--collapse">
+              <div fxFlex="33.33%" fxFlex.gt-md="20%" class="app-card__block">
+                <div class="app-subtitle">POSTS</div>
+                <div class="app-productive-heading-03">234</div>
+              </div>
+              <div fxFlex="33.33%" fxFlex.gt-md="20%" class="app-card__block">
+                <div class="app-subtitle">FOLLOWERS</div>
+                <div class="app-productive-heading-03">9,456</div>
+              </div>
+              <div fxFlex="33.33%" fxFlex.gt-md="20%" class="app-card__block">
+                <div class="app-subtitle">PHOTOS</div>
+                <div class="app-productive-heading-03">1,222</div>
+              </div>
+              <div fxFlex="50%" fxFlex.gt-md="20%" class="app-card__block">
+                <div class="app-subtitle">FOLLOWING</div>
+                <div class="app-productive-heading-03">456</div>
+              </div>
+              <div fxFlex="50%" fxFlex.gt-md="20%" class="app-card__block">
+                <div class="app-subtitle">SKILL</div>
+                <div class="app-productive-heading-03">4,45</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ibm-tab-header-group class="app-ibm-tab-auto">
+          <ibm-tab-header>
+            Wall
+          </ibm-tab-header>
+          <ibm-tab-header>
+            Personal
+          </ibm-tab-header>
+          <ibm-tab-header>
+            Photos
+          </ibm-tab-header>
+          <ibm-tab-header>
+            Videos
+          </ibm-tab-header>
+        </ibm-tab-header-group>
+
+        <div class="app-card app-card--m-b mb-4">
+          <div class="app-card__content">
+            <div class="flex justify-between mb-4">
+              <div class="flex items-center">
+                <img class="w-12 rounded mr-2" src="/assets/img/avatar/avatar2.jpg"/>
+                <div>
+                  <div class="app-productive-heading-02">David Robson <span class="app-helper-text-01 opacity-5 ml-1">Following</span>
+                  </div>
+                  <div class="app-label-01">Marketing manager</div>
+                  <div class="app-label-01">3d</div>
+                </div>
+              </div>
+              <div>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconOverflowMenuVertical size="32"></svg>
+                </button>
+              </div>
+            </div>
+            <div class="app-body-long-02 mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="3px grid" style="min-height: 350px;">
+              <div fxFlex="50%" fxFlex.gt-md="50%" style="min-height: 350px;">
+                <div class="bg-cover cursor-pointer" fxFlex
+                     style="background-image:url(/assets/img/pixabay/new-york-2699520_640.jpg)">
+                </div>
+              </div>
+              <div fxFlex="25%" fxFlex.gt-md="25%" style="min-height: 350px;">
+                <div fxFlex fxLayout="column" fxLayoutGap="3px">
+                  <div class="bg-cover cursor-pointer" fxFlex
+                       style="background-image:url(/assets/img/pixabay/dusk-404072_640.jpg)">
+                  </div>
+                  <div class="bg-cover cursor-pointer" fxFlex
+                       style="background-image:url(/assets/img/pixabay/road-238458_640.jpg)">
+                  </div>
+                </div>
+              </div>
+              <div fxFlex="25%" fxFlex.gt-md="25%" style="min-height: 350px;">
+                <div fxFlex fxLayout="column" fxLayoutGap="3px">
+                  <div class="bg-cover cursor-pointer" fxFlex
+                       style="background-image:url(/assets/img/pixabay/house-569115_640.jpg)">
+                  </div>
+                  <div class="bg-cover cursor-pointer" fxFlex
+                       style="background-image:url(/assets/img/pixabay/grand-central-station-690180_640.jpg)">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <div class="flex items-center ">
+                <div class="app-img-select">
+                  <img src="/assets/img/avatar/avatar3.jpg" class="app-img-select__item w-8 rounded"/>
+                  <img src="/assets/img/avatar/avatar7.jpg" class="app-img-select__item w-8 rounded"/>
+                  <img src="/assets/img/avatar/avatar6.jpg" class="app-img-select__item w-8 rounded"/>
+                </div>
+                <div class="app-label-01 ml-2">You and 12 more liked this
+                </div>
+              </div>
+              <div class="flex items-center">
+                25 comments
+              </div>
+            </div>
+            <div class="pt-2 mt-4 app-border-t">
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconFavorite size="20"></svg>
+                Like
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconChat size="20"></svg>
+                Comment
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconShare size="20"></svg>
+                Share
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconSend size="20"></svg>
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card app-card--m-b mb-4">
+          <div class="app-card__content">
+            <div class="flex justify-between mb-4">
+              <div class="flex items-center">
+                <img class="w-12 rounded mr-2" src="/assets/img/avatar/avatar2.jpg"/>
+                <div>
+                  <div class="app-productive-heading-02">David Robson <span class="app-helper-text-01 opacity-5 ml-1">Following</span>
+                  </div>
+                  <div class="app-label-01">Marketing manager</div>
+                  <div class="app-label-01">3d</div>
+                </div>
+              </div>
+              <div>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconOverflowMenuVertical size="32"></svg>
+                </button>
+              </div>
+            </div>
+            <p class="app-body-long-02 mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint <b>occaecat cupidatat non proident</b>, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.<br/>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </p>
+            <div class="flex justify-between items-center mt-4">
+              <div class="flex items-center ">
+                <div class="app-img-select">
+                  <img src="/assets/img/avatar/avatar3.jpg" class="app-img-select__item w-8 rounded"/>
+                  <img src="/assets/img/avatar/avatar6.jpg" class="app-img-select__item w-8 rounded"/>
+                </div>
+                <div class="app-label-01 ml-2">You and 5 more liked this
+                </div>
+              </div>
+              <div class="flex items-center">
+                0 comment
+              </div>
+            </div>
+            <div class="pt-2 mt-4 app-border-t">
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconFavorite size="20"></svg>
+                Like
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconChat size="20"></svg>
+                Comment
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconShare size="20"></svg>
+                Share
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconSend size="20"></svg>
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card app-card--m-b mb-4">
+          <div class="app-card__content">
+            <div class="flex justify-between mb-4">
+              <div class="flex items-center">
+                <img class="w-12 rounded mr-2" src="/assets/img/avatar/avatar2.jpg"/>
+                <div>
+                  <div class="app-productive-heading-02">David Robson <span class="app-helper-text-01 opacity-5 ml-1">Following</span>
+                  </div>
+                  <div class="app-label-01">Marketing manager</div>
+                  <div class="app-label-01">3d</div>
+                </div>
+              </div>
+              <div>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconOverflowMenuVertical size="32"></svg>
+                </button>
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="3px grid" style="min-height: 350px;">
+              <div fxFlex="50%" fxFlex.gt-md="50%" style="min-height: 350px;">
+                <div class="bg-cover cursor-pointer" fxFlex
+                     style="background-image:url(/assets/img/pixabay/forest-931706_640.jpg)">
+                </div>
+              </div>
+              <div fxFlex="50%" fxFlex.gt-md="50%" style="min-height: 350px;">
+                <div class="bg-cover cursor-pointer" fxFlex
+                     style="background-image:url(/assets/img/pixabay/rock-540130_640.jpg)">
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <div class="flex items-center ">
+                <div class="app-img-select">
+                  <img src="/assets/img/avatar/avatar3.jpg" class="app-img-select__item w-8 rounded"/>
+                  <img src="/assets/img/avatar/avatar7.jpg" class="app-img-select__item w-8 rounded"/>
+                  <img src="/assets/img/avatar/avatar6.jpg" class="app-img-select__item w-8 rounded"/>
+                </div>
+                <div class="app-label-01 ml-2">You and 12 more liked this
+                </div>
+              </div>
+              <div class="flex items-center">
+                25 comments
+              </div>
+            </div>
+            <div class="pt-2 mt-4 app-border-t">
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconFavorite size="20"></svg>
+                Like
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconChat size="20"></svg>
+                Comment
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconShare size="20"></svg>
+                Share
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconSend size="20"></svg>
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card app-card--m-b mb-4">
+          <div class="app-card__content">
+            <div class="flex justify-between mb-4">
+              <div class="flex items-center">
+                <img class="w-12 rounded mr-2" src="/assets/img/avatar/avatar2.jpg"/>
+                <div>
+                  <div class="app-productive-heading-02">David Robson <span class="app-helper-text-01 opacity-5 ml-1">Following</span>
+                  </div>
+                  <div class="app-label-01">Marketing manager</div>
+                  <div class="app-label-01">3d</div>
+                </div>
+              </div>
+              <div>
+                <button
+                  ibmButton="ghost" size="sm"
+                  class="bx--btn--icon-only bx--btn--remove-tooltip">
+                  <svg class="bx--btn__icon" ibmIconOverflowMenuVertical size="32"></svg>
+                </button>
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="3px grid" style="min-height: 250px;">
+              <div fxFlex="50%" fxFlex.gt-md="50%" style="min-height: 350px;">
+                <div class="app-productive-heading-02 mb-2">Nice title - nice subtitle</div>
+                <div class="app-body-long-02 mb-2 mr-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip
+                  ex ea commodo consequat.
+                </div>
+                <div class="app-productive-heading-01">
+                  #tag1 #tag2 #tag3 #tag4
+                </div>
+              </div>
+              <div fxFlex="50%" fxFlex.gt-md="50%" style="min-height: 350px;">
+                <div class="bg-cover cursor-pointer" fxFlex
+                     style="background-image:url(/assets/img/pixabay/taj-mahal-1209004_640.jpg)">
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <div class="flex items-center ">
+                <div class="app-img-select">
+                  <img src="/assets/img/avatar/avatar3.jpg" class="app-img-select__item w-8 rounded"/>
+                  <img src="/assets/img/avatar/avatar7.jpg" class="app-img-select__item w-8 rounded"/>
+                  <img src="/assets/img/avatar/avatar6.jpg" class="app-img-select__item w-8 rounded"/>
+                </div>
+                <div class="app-label-01 ml-2">You and 12 more liked this
+                </div>
+              </div>
+              <div class="flex items-center">
+                25 comments
+              </div>
+            </div>
+            <div class="pt-2 mt-4 app-border-t">
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconFavorite size="20"></svg>
+                Like
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconChat size="20"></svg>
+                Comment
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconShare size="20"></svg>
+                Share
+              </button>
+              <button ibmButton="ghost" size="sm">
+                <svg class="bx--btn__icon bx--btn__icon--left" ibmIconSend size="20"></svg>
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxFlex.gt-md="330px" fxFlex="100%">
+        <div class="app-content app-content--default sticky top-0">
+          <div class="app-card app-card--m-b mb-4">
+            <div class="app-card__content">
+              <div class="app-productive-heading-02 mb-4">GROUPS</div>
+
+              <div class="flex items-center mb-2">
+                <div class="bg-cover cursor-pointer w-16 h-16 rounded mr-3"
+                     style="background-image:url(/assets/img/pixabay/taj-mahal-1209004_640.jpg)">
+                </div>
+                <div>
+                  <div class="app-productive-heading-02">Cities</div>
+                  <div class="truncate app-body-short-01 mb-1">Lorem ipsum dolor sit amet</div>
+                  <div class="app-helper-text-01">122k followers</div>
+                </div>
+              </div>
+
+              <div class="flex items-center mb-2">
+                <div class="bg-cover cursor-pointer w-16 h-16 rounded mr-3"
+                     style="background-image:url(/assets/img/pixabay/rock-540130_640.jpg)">
+                </div>
+                <div>
+                  <div class="app-productive-heading-02">Nature</div>
+                  <div class="truncate app-body-short-01 mb-1">Lorem ipsum dolor sit amet</div>
+                  <div class="app-helper-text-01">533k followers</div>
+                </div>
+              </div>
+
+              <div class="flex items-center mb-2">
+                <div class="bg-cover cursor-pointer w-16 h-16 rounded mr-3"
+                     style="background-image:url(/assets/img/pixabay/orange-1377310_1920.jpg)">
+                </div>
+                <div>
+                  <div class="app-productive-heading-02">Paint</div>
+                  <div class="truncate app-body-short-01 mb-1">Lorem ipsum dolor sit amet</div>
+                  <div class="app-helper-text-01">1.2M followers</div>
+                </div>
+              </div>
+
+              <div class="flex items-center mb-2">
+                <div class="bg-cover cursor-pointer w-16 h-16 rounded mr-3"
+                     style="background-image:url(/assets/img/pixabay/house-569115_640.jpg)">
+                </div>
+                <div>
+                  <div class="app-productive-heading-02">Buildings</div>
+                  <div class="truncate app-body-short-01 mb-1">Lorem ipsum dolor sit amet</div>
+                  <div class="app-helper-text-01">16k followers</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-card app-card--m-b mb-4">
+            <div class="app-card__content">
+              <div class="app-productive-heading-02 mb-4">NEWS</div>
+
+              <div class="flex items-center mb-2">
+                <app-ibm-icon iconName="flag" iconSize="32"></app-ibm-icon>
+                <div class="ml-3">
+                  <div class="app-productive-heading-02">Discount 20%</div>
+                  <div class="truncate app-body-short-01 mb-1">Lorem ipsum dolor sit amet</div>
+                  <div class="app-helper-text-01">See details</div>
+                </div>
+              </div>
+
+              <div class="flex items-center mb-2">
+                <app-ibm-icon iconName="locked" iconSize="32"></app-ibm-icon>
+                <div class="ml-3">
+                  <div class="app-productive-heading-02">New servers</div>
+                  <div class="truncate app-body-short-01 mb-1">Lorem ipsum dolor sit amet</div>
+                  <div class="app-helper-text-01">See details</div>
+                </div>
+              </div>
+
+              <div class="flex items-center mb-2">
+                <app-ibm-icon iconName="star" iconSize="32"></app-ibm-icon>
+                <div class="ml-3">
+                  <div class="app-productive-heading-02">Free beer</div>
+                  <div class="truncate app-body-short-01 mb-1">Lorem ipsum dolor sit amet</div>
+                  <div class="app-helper-text-01">See details</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-scrollbar>
+</div>

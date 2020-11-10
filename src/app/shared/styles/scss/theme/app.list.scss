@@ -19,7 +19,15 @@
   }
 }
 
-.app-list-header-pill, .app-subtitle {
+.app-subtitle {
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: default;
+}
+
+.app-list-header-pill {
   padding: 0.5rem 20px;
   letter-spacing: 1px;
   font-size: 12px;
