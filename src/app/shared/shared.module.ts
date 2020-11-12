@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
 import {NavigationEnd, NavigationStart, Router, RouterModule} from '@angular/router'
 import {ReactiveFormsModule} from "@angular/forms"
+import {NgxMdModule} from 'ngx-md'
 
 import {NgScrollbarModule} from 'ngx-scrollbar'
 import {DragDropModule} from '@angular/cdk/drag-drop'
@@ -111,7 +112,7 @@ import {
   InProgressModule,
   HearingModule,
   FavoriteModule,
-  PinModule, PortfolioModule, IndustryModule,
+  PinModule, PortfolioModule, IndustryModule, ExitModule, CloseModule
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -168,11 +169,11 @@ import {AppLayoutDividedAltComponent} from './layout/auth/app-layout-divided-alt
 import {AuthWelcomeScreenComponent} from "./layout/auth/auth-welcome-screen/auth-welcome-screen.component"
 import {AppLayoutDividedFullComponent} from './layout/auth/app-layout-divided-full/app-layout-divided-full.component'
 import {AppLayoutBasicComponent} from './layout/auth/app-layout-basic/app-layout-basic.component'
-import {AppLockScreenComponent} from './app-lock-screen/app-lock-screen.component';
-import { AppContentTabsComponent } from './app-content/app-content-tabs/app-content-tabs.component';
-import { AppCreditCardComponent } from './app-credit-card/app-credit-card.component';
-import { AppLayoutHorizontalComponent } from './app-layout-horizontal/app-layout-horizontal.component';
-import { AppContentSimpleComponent } from './app-content/app-content-simple/app-content-simple.component'
+import {AppLockScreenComponent} from './app-lock-screen/app-lock-screen.component'
+import {AppContentTabsComponent} from './app-content/app-content-tabs/app-content-tabs.component'
+import {AppCreditCardComponent} from './app-credit-card/app-credit-card.component'
+import {AppLayoutHorizontalComponent} from './app-layout-horizontal/app-layout-horizontal.component'
+import {AppContentSimpleComponent} from './app-content/app-content-simple/app-content-simple.component'
 
 
 const MainModules = [
@@ -209,6 +210,7 @@ const CarbonModules = [
   MaximizeModule,
   LinkModule,
   NotificationModule,
+  CloseModule,
 ]
 
 const CarbonIconModules = [
@@ -315,6 +317,10 @@ const CarbonIconModules = [
   InProgressModule,
   HearingModule,
   FavoriteModule,
+  PinModule,
+  PortfolioModule,
+  IndustryModule,
+  ExitModule,
 ]
 
 const Components = [
@@ -355,27 +361,26 @@ const Pipes = [
 @NgModule({
   imports: [
     CommonModule,
-    NgScrollbarModule.withConfig({
-      visibility: 'hover',
-    }),
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
-    PinModule,
-    PortfolioModule,
-    IndustryModule,
+    NgScrollbarModule.withConfig({
+      visibility: 'hover',
+    }),
+    NgxMdModule,
   ],
   declarations: [
     ...Components,
     ...Pipes,
   ],
   exports: [
-    NgScrollbarModule,
     ...Components,
     ...MainModules,
     ...CarbonIconModules,
     ...CarbonModules,
     ...Pipes,
+    NgScrollbarModule,
+    NgxMdModule,
   ]
 })
 export class SharedModule {

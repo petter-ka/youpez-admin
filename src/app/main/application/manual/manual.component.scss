@@ -1,0 +1,8 @@
+.app-docs-list-holder {
+  width: 220px;
+  left: -220px;
+
+  &.app-docs-list-holder--opened {
+    left: 0;
+  }
+}

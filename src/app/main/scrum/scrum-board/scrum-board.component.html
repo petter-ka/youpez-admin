@@ -57,9 +57,18 @@
                   </div>
                 </ng-container>
                 <ng-container *ngIf="board.opened">
-                  <div class="flex justify-between app-productive-heading-01 px-3 py-3">
-                    <span (click)="onToggleColumn(i)" class="cursor-pointer">{{board.name}}</span>
-                    <span class="text-muted">{{board.tasks.length}}</span>
+                  <div class="flex items-center justify-between app-productive-heading-01 px-3 pt-2 pb-1">
+                    <div>
+                      <span class="cursor-pointer">{{board.name}}</span>
+                      <span class="text-muted ml-3">({{board.tasks.length}})</span>
+                    </div>
+                    <button
+                      (click)="onToggleColumn(i)"
+                      ibmButton="ghost"
+                      size="sm"
+                      class="bx--btn--icon-only">
+                      <svg class="bx--btn__icon" ibmIconMinimize size="32"></svg>
+                    </button>
                   </div>
                   <div fxFlex class="relative">
                     <div class="app-a-box app-scrollbar-fix"

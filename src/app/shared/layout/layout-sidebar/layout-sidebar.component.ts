@@ -272,7 +272,8 @@ export class LayoutSidebarComponent implements OnInit {
           ]
         },
         {
-          name: 'Application',
+          name: 'Web application',
+          parentUrl: '/app/application',
           prefix: {
             type: 'ibm-icon',
             name: 'application',
@@ -287,7 +288,7 @@ export class LayoutSidebarComponent implements OnInit {
               url: '/app/application/faq',
             },
             {
-              name: 'Manual',
+              name: 'Documentation',
               url: '/app/application/manual',
             },
             {

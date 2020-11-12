@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser'
 import {NgModule} from '@angular/core'
 import {FlexLayoutModule} from '@angular/flex-layout'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {NgxMdModule} from "ngx-md"
 
 import {CoreModule} from "./core/core.module"
 import {SharedModule} from './shared/shared.module'
@@ -39,6 +40,7 @@ import {AppEffects} from './store/app.effects'
     StoreModule.forRoot(reducers, {metaReducers}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot([AppEffects]),
+    NgxMdModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

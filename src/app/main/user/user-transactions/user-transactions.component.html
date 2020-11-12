@@ -1,6 +1,5 @@
 <div fxLayout="row wrap">
   <div fxFlex="100%" fxFlex.gt-md="60%">
-
     <div class="mb-8">
       <div class="mb-4">
         <div class="app-productive-heading-03 font-bold">Transaction history</div>
@@ -14,12 +13,12 @@
                 <div fxFlex.gt-md="180px" fxFlex="100%">
                   <div class="flex items-center">
                     <ng-container *ngIf="invoice.payed">
-                      <app-ibm-icon class="app-ibm-icon-xl" iconName="document" iconSize="32"></app-ibm-icon>
+                      <app-ibm-icon iconName="document" iconSize="32"></app-ibm-icon>
                     </ng-container>
                     <ng-container *ngIf="!invoice.payed">
-                      <app-ibm-icon class="app-ibm-icon-xl" iconName="inProgress" iconSize="32"></app-ibm-icon>
+                      <app-ibm-icon iconName="inProgress" iconSize="32"></app-ibm-icon>
                     </ng-container>
-                    <div class="ml-3">
+                    <div class="ml-4">
                       <div class="app-productive-heading-01 mb-1">#{{invoice.number}}</div>
                       <div class="app-label-01">
                         <ng-container *ngIf="invoice.payed">
@@ -38,15 +37,14 @@
                     </div>
                   </div>
                 </div>
-
                 <div fxFlex.gt-md="" fxFlex="100%" class="">
                   <div class="app-productive-heading-02 mb-1">{{invoice.title}}</div>
                   <div class="app-body-short-01">{{invoice.range}}</div>
                 </div>
-                <div fxFlex.gt-md="190px" fxFlex="50%">
+                <div fxFlex.gt-md="190px" fxFlex="190px">
                   <div class="app-productive-heading-03 text-right mr-4">{{invoice.price}} USD</div>
                 </div>
-                <div fxFlex.gt-md="40px" fxFlex="50%">
+                <div fxFlex.gt-md="40px" fxFlex="40px">
                   <button
                     [disabled]="!invoice.payed"
                     ibmButton="tertiary" size="field"
@@ -58,7 +56,6 @@
             </div>
           </div>
         </ng-container>
-
       </div>
     </div>
   </div>

@@ -163,6 +163,10 @@
     padding: 0.8rem;
   }
 
+  .app-card__content__fill {
+    padding: 0;
+  }
+
   .app-card__blocks {
     //border-top: 1px solid $appBorderColor;
 
@@ -212,6 +216,20 @@
       &.app-card__tool__sign--warning {
         background-color: $appColorWarning;
       }
+    }
+  }
+}
+
+.app-cards-layout-1 {
+  background: $appBorderColor;
+  margin-bottom: -1px;
+  overflow: hidden;
+
+  .app-card {
+    border: none;
+
+    .app-card__content {
+      padding: 1.5rem;
     }
   }
 }

@@ -1,1 +1,155 @@
-<p>support works!</p>
+<div class="app-a-box app-scrollbar-fix">
+  <ng-scrollbar>
+    <div fxLayout="row" fxLayoutAlign="center start">
+      <div fxFlex="100%" fxFlex.gt-md="70%" fxFlex.gt-lg="50%" class="app-content app-content--default">
+        <div class="mt-8 mb-12">
+          <img src="/assets/img/logo/logo-big-black.png" style="width:200px;">
+        </div>
+        <div class="">
+          <button routerLink="/app/application/welcome" ibmButton="ghost" size="sm" class="bx--btn__icon--left -ml-2">
+            <svg class="bx--btn__icon" ibmIconArrowLeft size="20"></svg>
+            Back to dashboard screen
+          </button>
+        </div>
+        <div class="app-productive-heading-06 mb-8">
+          Support Request Form
+        </div>
+        <p class="app-body-long-02 mb-10" style="max-width: 520px;">
+          Fill out this form in order to get <span class="font-bold">free tech support</span>, your platform api token in case
+          it gets lost, and information
+          about updates and upgrades. We guarantee complete confidentiality of the information provided to us.
+        </p>
+        <div class="app-card app-card--m-0">
+          <div class="app-card__content app-form">
+            <div class="app-form__item">
+              <ibm-label
+                [helperText]="'Use your registered e-mail'"
+                [invalidText]="'This field is required or incorrect'">
+                Email address
+                <input
+                  ibmText
+                  size="md"
+                  [disabled]="false"
+                  theme="light"
+                  [placeholder]="''"
+                  [autocomplete]="true">
+              </ibm-label>
+            </div>
+            <div fxLayout="row wrap" class="app-form__row">
+              <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
+                <ibm-label
+                  [helperText]="''"
+                  [invalidText]="'This field is required or incorrect'">
+                  First name
+                  <input
+                    ibmText
+                    size="md"
+                    [disabled]="false"
+                    theme="light"
+                    [placeholder]="''"
+                    [autocomplete]="true">
+                </ibm-label>
+              </div>
+              <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
+                <ibm-label
+                  [helperText]="''"
+                  [invalidText]="'This field is required or incorrect'">
+                  Last name
+                  <input
+                    ibmText
+                    size="md"
+                    [disabled]="false"
+                    theme="light"
+                    [placeholder]="''"
+                    [autocomplete]="true">
+                </ibm-label>
+              </div>
+            </div>
+            <div fxLayout="row wrap" class="app-form__row">
+              <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
+                <ibm-dropdown
+                  [label]="'Product'"
+                  size="md"
+                  [invalidText]="'This field is required or incorrect'"
+                  dropUp="false"
+                  theme="light"
+                  placeholder="">
+                  <ibm-dropdown-list [items]="products"></ibm-dropdown-list>
+                </ibm-dropdown>
+              </div>
+              <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
+                <ibm-label
+                  [helperText]="''">
+                  Program version and build
+                  <input
+                    value="0.0.0 (000)"
+                    ibmText
+                    size="md"
+                    [disabled]="false"
+                    theme="light"
+                    [placeholder]="''"
+                    [autocomplete]="true">
+                </ibm-label>
+              </div>
+            </div>
+            <div fxLayout="row wrap" class="app-form__row">
+              <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
+                <ibm-dropdown
+                  [label]="'Product purchased from'"
+                  size="md"
+                  [invalidText]="'This field is required or incorrect'"
+                  dropUp="false"
+                  theme="light"
+                  placeholder="">
+                  <ibm-dropdown-list [items]="purchased"></ibm-dropdown-list>
+                </ibm-dropdown>
+              </div>
+              <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
+                <ibm-dropdown
+                  [label]="'Server model'"
+                  size="md"
+                  [invalidText]="'This field is required or incorrect'"
+                  dropUp="false"
+                  theme="light"
+                  placeholder="">
+                  <ibm-dropdown-list [items]="server"></ibm-dropdown-list>
+                </ibm-dropdown>
+              </div>
+            </div>
+            <div class="app-form__item">
+              <ibm-label
+                [helperText]="''">
+                Problem or feature request
+              <textarea
+                ibmTextArea
+                theme="light"
+                [rows]="5"
+                [cols]="5"
+                aria-label="textarea"></textarea>
+              </ibm-label>
+            </div>
+            <div class="app-form__item app-form__item--opts">
+              <div class="flex justify-between items-center">
+                <ibm-checkbox>
+                  I agree with
+                  <a class="app-link">terms & conditions</a>
+                </ibm-checkbox>
+              </div>
+              <div class="flex justify-between items-center">
+                <ibm-checkbox>
+                  E-mail me about support updates
+                </ibm-checkbox>
+              </div>
+            </div>
+            <div class="app-form__submit flex justify-end">
+              <button type="submit" ibmButton="primary" size="field">
+                Submit
+                <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-scrollbar>
+</div>

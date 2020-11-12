@@ -1,1 +1,50 @@
-<p>manual works!</p>
+<div fxFill fxLayout="row wrap" fxLayoutAlign="center start">
+  <div fxFlex="100%" fxFlex.gt-md="80%" fxFlexOffset.gt-md="20%" fxFlex.gt-lg="70%" fxFlexOffset.gt-lg="30%"
+       class="app-bg-ui relative h-full">
+    <div class="app-docs-list-holder absolute top-0 bottom-0 z-10" style=""
+         [ngClass.lt-lg]="{'app-bg-ui':true,'app-docs-list-holder--opened app-border-r':opened}">
+      <div class="app-a-box app-scrollbar-fix">
+        <ng-scrollbar>
+          <div class="app-docs-list app-content app-content--default">
+            <div class="flex justify-between items-center mb-4">
+              <div>
+                <img src="/assets/img/logo/logo-big-black.png" style="width:120px;">
+              </div>
+              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only" (click)="onToggle()" fxHide fxShow.lt-lg>
+                <svg class="bx--btn__icon" ibmIconClose size="32"></svg>
+              </button>
+            </div>
+            <ng-container *ngFor="let section of sections;">
+              <div class="app-docs-list__item">
+                <div class="app-docs-list__item__group">{{section.name}}</div>
+                <div class="app-docs-list__children">
+                  <ng-container *ngFor="let section of section.children">
+                    <div class="app-docs-list__item__text"
+                         [ngClass]="{'app-docs-list__item__text--selected':section.selected}">{{section.name}}</div>
+                  </ng-container>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </ng-scrollbar>
+      </div>
+    </div>
+    <div class="app-a-box app-scrollbar-fix">
+      <ng-scrollbar>
+        <div fxLayout="row" fxLayoutAlign="start start">
+          <div fxFlex="90%" fxFlex.gt-md="80%" fxFlex.gt-lg="70%" class="app-content app-content--default">
+            <button (click)="onToggle()" ibmButton="ghost"
+                    fxHide fxShow.lt-lg
+                    size="sm" class="bx--btn__icon--left -ml-2">
+              <svg class="bx--btn__icon" ibmIconArrowLeft size="20"></svg>
+              Show menu
+            </button>
+            <ngx-md class="app-markdown ">
+              {{mdContent}}
+            </ngx-md>
+          </div>
+        </div>
+      </ng-scrollbar>
+    </div>
+  </div>
+</div>

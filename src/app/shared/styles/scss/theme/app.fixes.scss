@@ -357,10 +357,29 @@
   }
 }
 
-.bx--btn__icon {
+.bx--btn {
   &.bx--btn__icon--left {
-    margin-left: 0;
-    margin-right: 0.5rem;
+    padding-right: 8px;
+    padding-left: 8px;
+
+    .bx--btn__icon {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.bx--list--margin {
+  .bx--list__item {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.bx--list--separator {
+  .bx--list__item {
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.25rem;
+    border-bottom: 1px solid lighten($appBorderColor, 5%);
   }
 }
 
