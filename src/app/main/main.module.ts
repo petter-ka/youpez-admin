@@ -35,7 +35,9 @@ import {ManualComponent} from './application/manual/manual.component'
 import {SupportComponent} from './application/support/support.component'
 import {ChangelogComponent} from './application/changelog/changelog.component'
 import {MaintenanceComponent} from './maintenance/maintenance.component'
-import {WelcomeComponent} from './application/welcome/welcome.component'
+import {WelcomeComponent} from './application/welcome/welcome.component';
+import {GettingStartedComponent } from './application/getting-started/getting-started.component';
+import { PricingOtherComponent } from './pricing/pricing-other/pricing-other.component'
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import {WelcomeComponent} from './application/welcome/welcome.component'
     ChangelogComponent,
     MaintenanceComponent,
     WelcomeComponent,
+    GettingStartedComponent,
+    PricingOtherComponent,
   ],
   imports: [
     CommonModule,

@@ -4,6 +4,9 @@
   padding: 8px 8px;
 }
 
+.app-card-row {
+}
+
 .app-cards-title {
   margin-bottom: -12px;
 }
@@ -43,9 +46,7 @@
 }
 
 .app-card-row {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  min-height: 100px;
+  margin: 0 -.5rem;
 }
 
 .app-card {
@@ -157,6 +158,10 @@
 
   .app-card__content {
     padding: 1.1rem;
+  }
+
+  .app-card__content--inverse {
+    margin: 0 -1.1rem -1.1rem -1.1rem;
   }
 
   .app-card__content__alt {

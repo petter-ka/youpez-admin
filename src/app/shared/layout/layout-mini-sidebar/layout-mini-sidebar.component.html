@@ -123,17 +123,21 @@
                         <ng-container *ngIf="!loading">
                           <div class="app-list app-list--hover app-list--select app-list--p-messages">
                             <ng-container *ngFor="let item of messages">
-                              <div class="app-list__item" ngbDropdownItem>
-                                <div class="app-list__item__prefix">
+                              <div class="app-list__item app-list__item--align-top" ngbDropdownItem>
+                                <div class="app-list__item__prefix mt-3">
                                   <img [src]="item.avatar" class="w-8 h-8 rounded-full"/>
                                 </div>
                                 <div class="app-list__item__content">
                                   <div class="overflow-hidden">
-                                    <div class="mb-1">
+                                    <div class="flex items-center">
+                                      <ng-container *ngIf="item.read === false">
+                                        <span class="w-2 h-2 app-bg-primary rounded-full inline-block mr-2"></span>
+                                      </ng-container>
+
                                       <span class="app-productive-heading-01">{{item.name}}</span>
-                                      <span class="app-label-01 ml-2">{{item.date}}</span>
                                     </div>
-                                    <div class="app-helper-text-01 truncate">{{item.text}}</div>
+                                    <div class="app-helper-text-01 truncate mb-1">{{item.text}}</div>
+                                    <div class="app-label-01">{{item.date}}</div>
                                   </div>
                                 </div>
                               </div>

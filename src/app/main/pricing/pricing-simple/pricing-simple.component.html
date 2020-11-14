@@ -1,1 +1,105 @@
-<p>pricing-simple works!</p>
+<div class="app-a-box app-scrollbar-fix">
+  <ng-scrollbar>
+    <div fxLayout="row" fxLayoutAlign="center start" class="app-border-b  mb-5">
+      <div fxFlex="100%" fxFlex.gt-md="80%" fxFlex.gt-lg="70%" class="app-content app-content--default">
+        <div class="pt-5 pb-4">
+          <img src="/assets/img/logo/logo-big-black.png" style="width:200px;">
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center start">
+      <div fxFlex="100%" fxFlex.gt-md="80%" fxFlex.gt-lg="70%" class="app-content app-content--default">
+        <div>
+          <div class="">
+            <div class="text-center">
+              <div class="app-productive-heading-06 mb-4">
+                Pricing and plans
+              </div>
+              <p class="app-body-long-02 mb-8">
+                Youpez’s powerful platform empowers everyone <br/> across your organization with data.
+              </p>
+              <div class="flex justify-center mb-5">
+                <div class="mr-4">
+                  <ibm-checkbox checked="true" name="billing">
+                    Monthly
+                  </ibm-checkbox>
+                </div>
+                <div>
+                  <ibm-checkbox name="billing">
+                    Yearly
+                  </ibm-checkbox>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="mb-8">
+                <div fxLayout="row wrap" fxLayoutAlign="center">
+                  <div fxFlex="100%" fxFlex.gt-md="100%">
+                    <div class="app-card" fxLayout="row wrap">
+                      <div fxFlex="100%" fxFlex.gt-md="300px">
+                        <div fxFlex
+                             class="p-12 text-center app-bg-success-lt-30 app-text-contrast">
+                          <div class="flex items-center justify-center">
+                            <span class="app-productive-heading-02 mr-1">$</span>
+                            <span class="app-productive-heading-07 mr-1 font-bold">10</span>
+                            <span class="app-productive-heading-02">/month</span>
+                          </div>
+                          <div class="app-body-short-01 mt-1 mb-8">
+                            You can refund a subscription and plan anytime
+                          </div>
+                          <div class="">
+                            <button ibmButton="primary" size="field" class="app-ibm-btn-full">
+                              Buy now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div fxLayout="row wrap" fxLayoutAlign=" center" fxFlex="100%" fxFlex.gt-md="">
+                        <div fxFlex class="px-12 py-8">
+                          <div class="app-productive-heading-03 mb-3 font-bold">Youpez pro subscription</div>
+                          <div class="app-body-short-02">
+                            Reach more buyers and drive higher conversion with the only bigdata platform that delivers
+                            highly valuated insights from your customers
+                          </div>
+                          <div class="app-separator app-separator--left mt-8 mb-4">
+                            <span class="app-label-01 font-bold">INCLUDED FEATURES</span>
+                          </div>
+                          <div fxLayout="row wrap">
+                            <div fxFlex="100%" fxFlex.gt-md="50%">
+                              <div class="flex items-center app-body-short-01 mb-1">
+                                <app-ibm-icon iconName="checkMarkOutline" class="app-color-success mr-2"></app-ibm-icon>
+                                Download data
+                              </div>
+                              <div class="flex items-center app-body-short-01">
+                                <app-ibm-icon iconName="checkMarkOutline" class="app-color-success mr-2"></app-ibm-icon>
+                                Bigdata toolkits
+                              </div>
+                            </div>
+                            <div fxFlex="100%" fxFlex.gt-md="50%">
+                              <div class="flex items-center app-body-short-01 mb-1">
+                                <app-ibm-icon iconName="checkMarkOutline" class="app-color-success mr-2"></app-ibm-icon>
+                                Users up to 10
+                              </div>
+                              <div class="flex items-center app-body-short-01">
+                                <app-ibm-icon iconName="checkMarkOutline" class="app-color-success mr-2"></app-ibm-icon>
+                                100+ visualizations
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+
+          </div>
+        </div>
+        <app-pricing-other></app-pricing-other>
+      </div>
+    </div>
+  </ng-scrollbar>
+</div>

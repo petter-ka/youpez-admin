@@ -284,6 +284,10 @@ export class LayoutSidebarComponent implements OnInit {
               url: '/app/application/welcome',
             },
             {
+              name: 'Getting started',
+              url: '/app/application/getting-started',
+            },
+            {
               name: 'FAQ',
               url: '/app/application/faq',
             },
@@ -303,15 +307,12 @@ export class LayoutSidebarComponent implements OnInit {
         },
         {
           name: 'Pricing',
+          parentUrl: '/app/pricing',
           prefix: {
             type: 'ibm-icon',
             name: 'money',
           },
           children:[
-            {
-              name: 'Simple',
-              url: '/app/pricing/simple',
-            },
             {
               name: 'Modern',
               url: '/app/pricing/modern',
@@ -319,6 +320,10 @@ export class LayoutSidebarComponent implements OnInit {
             {
               name: 'Table',
               url: '/app/pricing/table',
+            },
+            {
+              name: 'Simple',
+              url: '/app/pricing/simple',
             },
           ]
         },

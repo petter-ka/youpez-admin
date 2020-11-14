@@ -112,7 +112,14 @@ import {
   InProgressModule,
   HearingModule,
   FavoriteModule,
-  PinModule, PortfolioModule, IndustryModule, ExitModule, CloseModule
+  PinModule,
+  PortfolioModule,
+  IndustryModule,
+  ExitModule,
+  CloseModule,
+  ViewModule,
+  CheckmarkModule,
+  CheckmarkFilledModule
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -174,6 +181,7 @@ import {AppContentTabsComponent} from './app-content/app-content-tabs/app-conten
 import {AppCreditCardComponent} from './app-credit-card/app-credit-card.component'
 import {AppLayoutHorizontalComponent} from './app-layout-horizontal/app-layout-horizontal.component'
 import {AppContentSimpleComponent} from './app-content/app-content-simple/app-content-simple.component'
+import {SafePipe} from "./pipes/safe"
 
 
 const MainModules = [
@@ -356,6 +364,7 @@ const Components = [
 const Pipes = [
   InputTypeAdvancedPipe,
   TextHiglightPipe,
+  SafePipe,
 ]
 
 @NgModule({
@@ -368,6 +377,9 @@ const Pipes = [
       visibility: 'hover',
     }),
     NgxMdModule,
+    ViewModule,
+    CheckmarkModule,
+    CheckmarkFilledModule,
   ],
   declarations: [
     ...Components,

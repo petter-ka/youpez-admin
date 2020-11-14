@@ -39,6 +39,7 @@ import {AuthSignupComponent} from "../auth/auth-signup/auth-signup.component"
 import {AuthResetPasswordComponent} from "../auth/auth-reset-password/auth-reset-password.component"
 import {AuthForgotPasswordComponent} from "../auth/auth-forgot-password/auth-forgot-password.component"
 import {AuthConfirmationComponent} from "../auth/auth-confirmation/auth-confirmation.component"
+import {GettingStartedComponent} from "./application/getting-started/getting-started.component"
 
 const routeForPages = [
   {
@@ -177,6 +178,10 @@ const routeForPages = [
       {
         path: 'welcome',
         component: WelcomeComponent,
+      },
+      {
+        path: 'getting-started',
+        component: GettingStartedComponent,
       },
       {
         path: 'faq',

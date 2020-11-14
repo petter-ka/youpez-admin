@@ -67,6 +67,14 @@
     <svg ibmIconCheckmarkOutline [size]="iconSize"></svg>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'checkmark'">
+    <svg ibmIconCheckmark [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'checkmarkFilled'">
+    <svg ibmIconCheckmarkFilled [size]="iconSize"></svg>
+  </ng-container>
+
   <ng-container *ngSwitchCase="'caretRight'">
     <svg ibmIconCaretRight [size]="iconSize"></svg>
   </ng-container>
@@ -413,6 +421,10 @@
 
   <ng-container *ngSwitchCase="'close'">
     <svg ibmIconClose [size]="iconSize"></svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'view'">
+    <svg ibmIconView [size]="iconSize"></svg>
   </ng-container>
 
   <ng-container *ngSwitchCase="'hashtag'">

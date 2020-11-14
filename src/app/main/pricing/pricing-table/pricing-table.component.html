@@ -1,1 +1,125 @@
-<p>pricing-table works!</p>
+<div class="app-a-box app-scrollbar-fix">
+  <ng-scrollbar>
+    <div fxLayout="row" fxLayoutAlign="center start" class="app-border-b  mb-5">
+      <div fxFlex="100%" fxFlex.gt-md="80%" fxFlex.gt-lg="70%" class="app-content app-content--default">
+        <div class="pt-5 pb-4">
+          <img src="/assets/img/logo/logo-big-black.png" style="width:200px;">
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center start">
+      <div fxFlex="100%" fxFlex.gt-md="80%" fxFlex.gt-lg="70%" class="app-content app-content--default">
+        <div>
+          <div class="">
+            <div class="text-center">
+              <div class="app-productive-heading-06 mb-4">
+                Pricing and plans
+              </div>
+              <p class="app-body-long-02 mb-8">
+                Youpez’s powerful platform empowers everyone <br/> across your organization with data.
+              </p>
+              <div class="mb-10">
+                <ibm-toggle
+                  class="app-ibm-toggle-fix inline-block"
+                  [onText]="'Yearly'"
+                  [offText]="'Monthly'"
+                  [checked]="true"
+                  (change)="onChange($event)"
+                  size="md">
+                </ibm-toggle>
+              </div>
+            </div>
+          </div>
+          <div class="app-bg-ui">
+            <div fxLayout="row wrap" class="app-border-b">
+              <div fxFlex="50%" fxFlex.gt-md="" class="app-border-r"></div>
+              <ng-container *ngFor="let package of packages">
+                <div fxFlex="50%" fxFlex.gt-md="240px" class="app-border-r">
+                  <div class="p-3 app-border-b text-center relative">
+                    <ng-container *ngIf="package.recommend">
+                      <div
+                        class="absolute top-0 right-0 left-0 -mt-6 text-center app-border-color-primary border-b-4 border-solid">
+                        <span class="app-helper-text-01 app-bg-primary app-text-contrast inline-block px-2 py-1">Recommended for you</span>
+                      </div>
+                    </ng-container>
+                    <div class="app-label-01">
+                      {{package.use}}
+                    </div>
+                  </div>
+                  <div class="p-4 text-center">
+                    <div class="app-productive-heading-04">{{package.type}}</div>
+                    <div class="flex items-center justify-center mt-2">
+                      <ng-container *ngIf="package.price[period]">
+                        <span class="app-productive-heading-01 mr-1">$</span>
+                        <span class="app-productive-heading-03 mr-1 font-bold">{{package.price[period]}}</span>
+                        <span class="app-productive-heading-01">/month</span>
+                      </ng-container>
+                      <ng-container *ngIf="!package.price[period]">
+                        <span class="app-productive-heading-03 mr-1 font-bold">Individual</span>
+                      </ng-container>
+                    </div>
+                    <div class="mt-6">
+                      <ng-container *ngIf="package.button === 1">
+                        <button ibmButton="primary" size="field" class="app-ibm-btn-full">
+                          Choose plan
+                          <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+                        </button>
+                      </ng-container>
+                      <ng-container *ngIf="package.button === 2">
+                        <button ibmButton="secondary" size="field" class="app-ibm-btn-full">
+                          Contact us
+                          <svg class="bx--btn__icon" ibmIconSend size="20"></svg>
+                        </button>
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+            <ng-container *ngFor="let feature of features">
+              <div class="app-subtitle py-2 px-4 app-border-b mt-4">{{feature.group}}</div>
+              <ng-container *ngFor="let feature of feature.children">
+                <div fxLayout="row wrap" class="app-border-b">
+                  <div fxFlex="50%" fxFlex.gt-md="" class="app-border-r">
+                    <div class="h-10 px-4 flex items-center app-body-short-01 font-bold">
+                      {{feature.name}}
+                    </div>
+                  </div>
+                  <ng-container *ngFor="let pricePackage of packages">
+                    <div fxFlex="50%" fxFlex.gt-md="240px" class="app-border-r">
+                      <div class="h-10 justify-center flex items-center app-body-short-01">
+                        <ng-container *ngIf="isBoolean(pricePackage.features[feature.id])">
+                          <ng-container *ngIf="pricePackage.features[feature.id] === true">
+                            <app-ibm-icon iconName="checkMarkOutline" class="app-color-success"></app-ibm-icon>
+                          </ng-container>
+                          <ng-container *ngIf="pricePackage.features[feature.id] === false">
+                            -
+                          </ng-container>
+                        </ng-container>
+                        <ng-container *ngIf="isString(pricePackage.features[feature.id])">
+                          <span [ngClass]="{'font-bold':pricePackage.features[feature.id] === 'Unlimited'}">
+                            {{pricePackage.features[feature.id]}}
+                          </span>
+                        </ng-container>
+                        <ng-container *ngIf="isInteger(pricePackage.features[feature.id])">
+                          {{pricePackage.features[feature.id]}}
+                        </ng-container>
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
+        <app-pricing-other></app-pricing-other>
+      </div>
+    </div>
+  </ng-scrollbar>
+</div>
+
+
+
+
+
+

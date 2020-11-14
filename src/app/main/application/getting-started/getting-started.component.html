@@ -1,0 +1,70 @@
+<div fxFill fxLayout="row wrap" fxLayoutAlign="center start">
+  <div fxFlex="100%" fxFlex.gt-md="80%" fxFlexOffset.gt-md="20%" fxFlex.gt-lg="90%" fxFlexOffset.gt-lg="10%"
+       class="relative h-full">
+    <div class="app-a-box app-scrollbar-fix">
+      <ng-scrollbar track="all">
+        <div fxLayout="row" fxLayoutAlign="start start">
+          <div fxFlex="90%" fxFlex.gt-md="80%" fxFlex.gt-lg="70%" class="app-content app-content--default">
+            <div class="mt-8 mb-12">
+              <img src="/assets/img/logo/logo-big-black.png" style="width:200px;">
+            </div>
+            <div class="">
+              <button routerLink="/app/application/welcome" ibmButton="ghost" size="sm"
+                      class="bx--btn__icon--left -ml-2">
+                <svg class="bx--btn__icon" ibmIconArrowLeft size="20"></svg>
+                Back to dashboard screen
+              </button>
+            </div>
+            <div class="app-productive-heading-06 mb-4">
+              Getting started
+            </div>
+            <p class="app-body-short-01 mb-8">Experience Youpez platform by using guided walkthroughs &
+              videos</p>
+            <div fxLayout="row">
+              <ng-container *ngFor="let video of videos;trackBy:trackByFn">
+                <div fxFlex="350px" class="mr-4">
+                  <div class="app-card app-card--m-0">
+                    <div class="app-card__content app-border-b flex justify-between">
+                      <div class="app-productive-heading-03">{{video.title}}</div>
+                      <ng-container *ngIf="video.seen">
+                        <app-ibm-icon iconName="checkMarkOutline" class="app-color-success"></app-ibm-icon>
+                      </ng-container>
+                    </div>
+                    <div class="app-card__content app-border-b">
+                      <div class="app-subtitle mb-1">TOPIC</div>
+                      <div class="app-productive-heading-02">{{video.topic}}</div>
+                    </div>
+                    <div class="app-card__content app-border-b">
+                      <div class="app-subtitle mb-2">VIDEO</div>
+                      <div class="">
+                        <iframe width="100%" height="250" [src]="video.url | safe:'resourceUrl'" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="app-card__content app-border-b">
+                      <div class="app-subtitle mb-1">Description</div>
+                      <div class="app-body-short-01">
+                        <ng-container *ngFor="let step of video.steps;trackBy:trackByFn;let i=index">
+                          <div class="pt-1">{{i+1}}. {{step}}</div>
+                        </ng-container>
+                      </div>
+                    </div>
+                    <div class="app-card__content app-border-b">
+                      <div class="app-subtitle mb-1">page</div>
+                      <div class="app-productive-heading-02">{{video.page}}</div>
+                    </div>
+                    <div class="app-card__content">
+                      <div class="app-subtitle mb-1">more info</div>
+                      <div class="app-body-short-01">{{video.info}}</div>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </ng-scrollbar>
+    </div>
+  </div>
+</div>
