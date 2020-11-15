@@ -5,7 +5,7 @@
     "experimentalDecorators": true,
     "baseUrl": "./",
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [ ]
   },
   "files": [
     "src/main.ts",
@@ -13,5 +13,10 @@
   ],
   "include": [
     "src/**/*.d.ts"
-  ]
+  ],
+  "paths": {
+    "@youpez/*": [
+      "src/@youpez/*"
+    ]
+  }
 }

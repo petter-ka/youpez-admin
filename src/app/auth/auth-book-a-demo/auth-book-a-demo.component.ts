@@ -4,7 +4,7 @@ import {Router} from "@angular/router"
 import {NotificationService} from "carbon-components-angular"
 
 import {NgScrollbar} from "ngx-scrollbar"
-import {passwordRegex, passwordCheckerHelper, isFormItemValid, numberRegex} from "../../core"
+import {passwordRegex, passwordCheckerHelper, isFormItemValid, numberRegex} from "../../../@youpez"
 
 @Component({
   selector: 'app-auth-book-a-demo',

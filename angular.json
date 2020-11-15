@@ -29,8 +29,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/app/shared/styles/scss/theme/app.scss",
-              "src/assets/tailwind/tailwind.css",
+              "src/@youpez/styles/scss/theme/app.scss",
+              "src/assets/tailwind/tailwind.css"
             ],
             "scripts": []
           },

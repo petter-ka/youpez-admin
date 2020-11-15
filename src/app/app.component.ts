@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core'
 import {registerTheme} from 'echarts/lib/echarts'
 
-import {getDefaultEchartsTheme} from "./core"
-import {SettingsService} from "./core/services/settings.service"
+import {getDefaultEchartsTheme} from "../@youpez"
+import {SettingsService} from "../@youpez/services/settings.service"
 
 @Component({
   selector: 'app-root',

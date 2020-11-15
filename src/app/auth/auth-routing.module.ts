@@ -1,11 +1,14 @@
 import {NgModule} from '@angular/core'
 import {Routes, RouterModule} from '@angular/router'
-import {LayoutComponent} from "../shared/layout/layout.component"
 import {AuthLoginComponent} from "./auth-login/auth-login.component"
-import {AppLayoutDividedComponent} from "../shared/layout/auth/app-layout-divided/app-layout-divided.component"
-import {AppLayoutDividedAltComponent} from "../shared/layout/auth/app-layout-divided-alt/app-layout-divided-alt.component"
-import {AppLayoutDividedFullComponent} from "../shared/layout/auth/app-layout-divided-full/app-layout-divided-full.component"
-import {AppLayoutBasicComponent} from "../shared/layout/auth/app-layout-basic/app-layout-basic.component"
+
+import {
+  AppLayoutDividedComponent,
+  AppLayoutDividedAltComponent,
+  AppLayoutDividedFullComponent,
+  AppLayoutBasicComponent
+} from "../../@youpez"
+
 import {AuthSignupComponent} from "./auth-signup/auth-signup.component"
 import {AuthForgotPasswordComponent} from "./auth-forgot-password/auth-forgot-password.component"
 import {AuthResetPasswordComponent} from "./auth-reset-password/auth-reset-password.component"

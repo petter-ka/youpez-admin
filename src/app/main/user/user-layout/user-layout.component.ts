@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AppTab} from "../../../core"
+import {AppTab} from "../../../../@youpez"
 
 @Component({
   selector: 'app-user-layout',
