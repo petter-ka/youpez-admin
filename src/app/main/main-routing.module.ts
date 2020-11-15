@@ -2,7 +2,8 @@ import {NgModule} from '@angular/core'
 import {Routes, RouterModule} from '@angular/router'
 import {TypographyComponent} from "./typography/typography.component"
 
-import {LayoutComponent, AppLayoutHorizontalComponent, AppLayoutDividedComponent} from "../../@youpez"
+import {LayoutComponent} from '../layout/default/layout.component'
+import {AppLayoutHorizontalComponent} from "../layout/horizontal/app-layout-horizontal/app-layout-horizontal.component"
 
 import {WidgetsGeneralComponent} from "./widgets/widgets-general/widgets-general.component"
 import {DashboardDefaultComponent} from "./dashboard/dashboard-default/dashboard-default.component"
@@ -89,10 +90,6 @@ const routeForPages = [
   {
     path: 'timeline',
     component: TimelineComponent,
-  },
-  {
-    path: 'test',
-    component: AppLayoutDividedComponent,
   },
   {
     path: 'profile',

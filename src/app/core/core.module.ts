@@ -1,11 +1,7 @@
 import {NgModule, Optional, SkipSelf} from '@angular/core'
 import {CommonModule} from '@angular/common'
 
-import {AppBreakpointService} from "../../@youpez/services/app-breakpoint.service"
-import {WindowRefService} from "../../@youpez/services/window-ref.service"
-import {SettingsService} from "../../@youpez/services/settings.service"
-import {AppSidenavService} from "../../@youpez/services/app-sidenav.service"
-import {AppMenuService} from "../../@youpez/services/app-menu.service"
+import {AppBreakpointService, WindowRefService, SettingsService, AppSidenavService, AppMenuService} from "../../@youpez"
 
 export function throwIfAlreadyLoaded(parentModule: any, moduleName: string) {
   if (parentModule) {

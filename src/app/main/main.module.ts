@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
 
 import {SharedModule} from "../shared/shared.module"
+import {LayoutModule} from "../layout/layout.module"
 import {AgGridModule} from '@ag-grid-community/angular'
 import {ChartsModule} from '../../@youpez'
 import {MainRoutingModule} from './main-routing.module'
@@ -35,9 +36,9 @@ import {ManualComponent} from './application/manual/manual.component'
 import {SupportComponent} from './application/support/support.component'
 import {ChangelogComponent} from './application/changelog/changelog.component'
 import {MaintenanceComponent} from './maintenance/maintenance.component'
-import {WelcomeComponent} from './application/welcome/welcome.component';
-import {GettingStartedComponent } from './application/getting-started/getting-started.component';
-import { PricingOtherComponent } from './pricing/pricing-other/pricing-other.component'
+import {WelcomeComponent} from './application/welcome/welcome.component'
+import {GettingStartedComponent} from './application/getting-started/getting-started.component'
+import {PricingOtherComponent} from './pricing/pricing-other/pricing-other.component'
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { PricingOtherComponent } from './pricing/pricing-other/pricing-other.com
   imports: [
     CommonModule,
     MainRoutingModule,
+    LayoutModule,
     SharedModule,
     ChartsModule,
     AgGridModule.withComponents([]),

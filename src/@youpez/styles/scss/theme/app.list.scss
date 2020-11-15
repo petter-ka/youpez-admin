@@ -66,6 +66,12 @@
     }
   }
 
+  &.app-list--condensed {
+    .app-list__item__content {
+      padding: 0.25rem 1rem;
+    }
+  }
+
   &.app-list--p-notifications {
     .app-list__item__content {
       padding: 0.2rem 0.3rem;

@@ -152,9 +152,6 @@ import {
   LinkModule,
   NotificationModule,
 } from 'carbon-components-angular'
-import {LayoutComponent} from './layout/layout.component'
-import {LayoutMiniSidebarComponent} from './layout/layout-mini-sidebar/layout-mini-sidebar.component'
-import {LayoutSidebarComponent} from './layout/layout-sidebar/layout-sidebar.component'
 
 import {AppMenuComponent} from "./components/app-menu/app-menu/app-menu.component"
 import {AppMenuHeaderComponent} from "./components/app-menu/app-menu-header/app-menu-header.component"
@@ -179,7 +176,6 @@ import {AppLayoutBasicComponent} from './layout/auth/app-layout-basic/app-layout
 import {AppLockScreenComponent} from './components/app-lock-screen/app-lock-screen.component'
 import {AppContentTabsComponent} from './components/app-content/app-content-tabs/app-content-tabs.component'
 import {AppCreditCardComponent} from './components/app-credit-card/app-credit-card.component'
-import {AppLayoutHorizontalComponent} from './components/app-layout-horizontal/app-layout-horizontal.component'
 import {AppContentSimpleComponent} from './components/app-content/app-content-simple/app-content-simple.component'
 import {SafePipe} from "./pipes/safe"
 
@@ -337,9 +333,6 @@ const CarbonIconModules = [
 const Components = [
   AppSidenavComponent,
   AppSidenavContainerComponent,
-  LayoutComponent,
-  LayoutMiniSidebarComponent,
-  LayoutSidebarComponent,
   AppMenuComponent,
   AppMenuHeaderComponent,
   AppMenuItemComponent,
@@ -360,7 +353,6 @@ const Components = [
   AppLockScreenComponent,
   AppContentTabsComponent,
   AppCreditCardComponent,
-  AppLayoutHorizontalComponent,
   AppContentSimpleComponent,
 ]
 

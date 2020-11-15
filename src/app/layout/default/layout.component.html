@@ -1,5 +1,4 @@
 <div class="app-layout"
-  [ngClass]="{'app-layout--blurred':lockScreenVisible}"
   [ngClass.lt-md]="{'app-layout--show-header': true}">
 
   <!-- BEGIN: MAIN SIDENAV CONTAINER -->
@@ -21,8 +20,8 @@
       <button (click)="onSideBarToggle($event)" class="app-layout__header__btn app-layout__header__btn--menu">
         <app-ibm-icon iconName="menu"></app-ibm-icon>
       </button>
-      <img class="app-layout__header__logo app-layout__header__logo--white" src="/assets/img/logo/logo-big-white.png"/>
-      <img class="app-layout__header__logo app-layout__header__logo--black" src="/assets/img/logo/logo-big-black.png"/>
+      <img class="app-layout__header__logo app-layout__header__logo--white" src="/src/assets/img/logo/logo-big-white.png"/>
+      <img class="app-layout__header__logo app-layout__header__logo--black" src="/src/assets/img/logo/logo-big-black.png"/>
       <div class="app-layout__header__tools">
         <button class="app-layout__header__btn app-layout__header__btn--icon">
           <app-ibm-icon iconName="notification" iconSize="24"></app-ibm-icon>
@@ -72,12 +71,6 @@
 
   <!-- END: MAIN SIDENAV CONTAINER -->
 </div>
-
-<svg id="svg-filter">
-  <filter id="svg-blur">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur>
-  </filter>
-</svg>
 
 <!-- BEGIN: GLOBAL SEARCH DIALOG -->
 <ng-container *ngIf="searchVisible">

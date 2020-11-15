@@ -140,27 +140,27 @@
         <div fxFlex class="relative">
           <div class="app-a-box app-bg-ui app-scrollbar-fix">
             <ng-scrollbar>
-              <div class="app-list app-list--hover app-list--select app-list--p">
+              <div class="app-list app-list--hover app-list--select app-list--condensed">
                 <ng-container *ngFor="let watch of watchList">
                   <div class="app-list__item" (click)="onSelect(watch[0])"
                        [ngClass]="{'app-list__item--active':selectedWatch === watch[0]}">
                     <div class="app-list__item__content">
-                      <div fxFlex fxLayout="row">
+                      <div fxFlex fxLayout="row" fxLayoutAlign="center center">
                         <div fxFlex="40" class="app-expressive-heading-01">{{watch[0]}}</div>
                         <div fxFlex="25" class="app-helper-text-01 text-right">{{watch[1]}}</div>
                         <ng-container *ngIf="watch[2] < 0">
                           <div fxFlex="35" class="app-helper-text-01 text-right app-color-danger">
-                            <div class="flex justify-end align-middle">
+                            <div class="flex justify-end items-center">
                               {{watch[2]}}
-                              <!--<app-ibm-icon iconName="arrowDown" iconSize="16"></app-ibm-icon>-->
+                              <app-ibm-icon iconName="arrowDown" iconSize="16" class="-mr-2 ml-1"></app-ibm-icon>
                             </div>
                           </div>
                         </ng-container>
                         <ng-container *ngIf="watch[2] >= 0">
                           <div fxFlex="35" class="app-helper-text-01 text-right app-color-success">
-                            <div class="flex justify-end">
+                            <div class="flex justify-end items-center">
                               {{watch[2]}}
-                             <!-- <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>-->
+                              <app-ibm-icon iconName="arrowUp" iconSize="16" class="-mr-2 ml-1"></app-ibm-icon>
                             </div>
                           </div>
                         </ng-container>

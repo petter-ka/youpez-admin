@@ -1,5 +1,7 @@
 import {Component, EventEmitter, OnInit, Output, Input} from '@angular/core'
 
+import {MenuType} from "../../../../@youpez"
+
 @Component({
   selector: 'app-layout-sidebar',
   templateUrl: './layout-sidebar.component.html',
@@ -10,7 +12,7 @@ export class LayoutSidebarComponent implements OnInit {
   @Input() opened: boolean = false
   @Output() sideBarToggle: EventEmitter<boolean> = new EventEmitter()
 
-  public menu = [
+  public menu: Array<MenuType> = [
     {
       groupName: 'DASHBOARDS',
       opened: true,
@@ -31,7 +33,6 @@ export class LayoutSidebarComponent implements OnInit {
             name: 'activity',
           },
         },
-
         {
           name: 'Stocks / crypto',
           url: '/app/dashboard/crypto',
