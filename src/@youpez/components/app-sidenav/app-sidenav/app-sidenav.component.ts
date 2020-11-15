@@ -9,11 +9,11 @@ import {
   SimpleChange,
   ElementRef, AfterContentInit, ViewChild, AfterViewInit, AfterViewChecked, OnDestroy
 } from '@angular/core'
-import {AppBreakpointService} from "../../../core/services/app-breakpoint.service"
+import {AppBreakpointService} from "../../../services/app-breakpoint.service"
 import {Subscription} from 'rxjs'
 import {ResizeEvent} from 'angular-resizable-element'
 import {PanelType} from "../app-sidenav-container/app-sidenav-container.component"
-import {AppSidenavService} from "../../../core/services/app-sidenav.service"
+import {AppSidenavService} from "../../../services/app-sidenav.service"
 
 export declare type DirectionType = 'left' | 'right' | 'bottom' | 'top'
 export declare type ModeType = 'over' | 'side'

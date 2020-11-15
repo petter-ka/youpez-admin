@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core'
 import {takeUntil} from 'rxjs/operators'
 import {Subject} from "rxjs"
-import {defaultRouterTransition} from "../../core"
-import {SettingsService} from "../../core/services/settings.service"
-import {AppMenuService} from "../../core/services/app-menu.service"
+import {defaultRouterTransition} from "../helpers"
+import {SettingsService} from "../services/settings.service"
+import {AppMenuService} from "../services/app-menu.service"
 
 @Component({
   selector: 'app-layout',

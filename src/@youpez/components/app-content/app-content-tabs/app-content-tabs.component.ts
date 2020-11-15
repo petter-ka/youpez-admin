@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, Output} from '@angular/core'
-import {AppTab} from "../../../core"
+import {AppTab} from "../../../"
 import {Router} from "@angular/router"
 
 

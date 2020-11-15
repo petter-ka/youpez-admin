@@ -10,7 +10,7 @@ import {
   ViewChildren
 } from '@angular/core'
 import {Router, Routes} from '@angular/router'
-import {AppMenuService} from "../../../core/services/app-menu.service"
+import {AppMenuService} from "../../../services/app-menu.service"
 
 @Component({
   selector: 'app-menu-item',

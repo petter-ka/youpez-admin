@@ -10,7 +10,7 @@ import {
 } from '@angular/core'
 import {AppSidenavComponent} from '../app-sidenav/app-sidenav.component'
 import {Subscription} from 'rxjs'
-import {WindowRefService} from "../../../core/services/window-ref.service"
+import {WindowRefService} from "../../../services/window-ref.service"
 
 export declare type PanelType = '' | 'panel' | 'solid'
 
