@@ -6,7 +6,8 @@ import {LayoutComponent} from "./default/layout.component"
 import {AppLayoutHorizontalComponent} from "./horizontal/app-layout-horizontal/app-layout-horizontal.component"
 
 import {LayoutMiniSidebarComponent} from "./menu/layout-mini-sidebar/layout-mini-sidebar.component"
-import {LayoutSidebarComponent} from "./menu/layout-sidebar/layout-sidebar.component"
+import {LayoutSidebarComponent} from "./menu/layout-sidebar/layout-sidebar.component";
+import { HeaderComponent } from './header/header/header.component'
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {LayoutSidebarComponent} from "./menu/layout-sidebar/layout-sidebar.compo
     AppLayoutHorizontalComponent,
     LayoutMiniSidebarComponent,
     LayoutSidebarComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -24,6 +26,7 @@ import {LayoutSidebarComponent} from "./menu/layout-sidebar/layout-sidebar.compo
     AppLayoutHorizontalComponent,
     LayoutMiniSidebarComponent,
     LayoutSidebarComponent,
+    HeaderComponent,
   ],
 })
 export class LayoutModule {

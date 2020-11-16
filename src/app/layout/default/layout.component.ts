@@ -57,6 +57,10 @@ export class LayoutComponent implements OnInit, OnDestroy {
     }
   }
 
+  onToggleThemeSettings() {
+    this.settingsVisible = true
+  }
+
   onSideBarOpen() {
     this.mainSidebarOpts.opened = true
   }

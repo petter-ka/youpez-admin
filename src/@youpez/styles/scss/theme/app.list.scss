@@ -25,6 +25,12 @@
   text-transform: uppercase;
   font-weight: 700;
   cursor: default;
+
+  &.app-subtitle--cards {
+    margin-left: 1.1rem;
+    margin-right: 1.1rem;
+    margin-bottom: -8px;
+  }
 }
 
 .app-list-header-pill {

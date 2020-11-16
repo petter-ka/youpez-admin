@@ -1,8 +1,18 @@
 <div class="app-layout"
-  [ngClass.lt-md]="{'app-layout--show-header': true}">
+     [ngClass.lt-md]="{'app-layout--show-header': true}">
 
   <!-- BEGIN: MAIN SIDENAV CONTAINER -->
   <app-sidenav-container>
+
+    <!-- BEGIN: THEME SETTINGS BTN -->
+    <div class="app-theme-settings-btn"
+         (click)="onToggleThemeSettings()"
+         placement="left"
+         container="body"
+         ngbTooltip="Theme settings">
+      <app-ibm-icon iconName="settingsAdjust" iconSize="24"></app-ibm-icon>
+    </div>
+    <!-- END: THEME SETTINGS BTN -->
 
     <!-- BEGIN: THEME SETTINGS SIDEBAR -->
     <app-sidenav-v2
@@ -16,21 +26,7 @@
     <!-- END: THEME SETTINGS SIDEBAR -->
 
     <!-- BEGIN: MAIN HEADER (XS VIEW) -->
-    <div class="app-layout__header">
-      <button (click)="onSideBarToggle($event)" class="app-layout__header__btn app-layout__header__btn--menu">
-        <app-ibm-icon iconName="menu"></app-ibm-icon>
-      </button>
-      <img class="app-layout__header__logo app-layout__header__logo--white" src="/src/assets/img/logo/logo-big-white.png"/>
-      <img class="app-layout__header__logo app-layout__header__logo--black" src="/src/assets/img/logo/logo-big-black.png"/>
-      <div class="app-layout__header__tools">
-        <button class="app-layout__header__btn app-layout__header__btn--icon">
-          <app-ibm-icon iconName="notification" iconSize="24"></app-ibm-icon>
-        </button>
-        <button class="app-layout__header__btn app-layout__header__btn--icon">
-          <app-ibm-icon iconName="user" iconSize="24"></app-ibm-icon>
-        </button>
-      </div>
-    </div>
+    <app-main-header (menuClick)="onSideBarToggle($event)" class="app-layout__header"></app-main-header>
     <!-- BEGIN: END HEADER (XS VIEW) -->
 
     <!-- BEGIN: MAIN MINI SIDEBAR (LEFT) -->
@@ -53,7 +49,8 @@
           [mode]="mainSidebarOpts.mode"
           [toggleableBtn]="mainSidebarOpts.toggleableBtn"
           [size]="mainSidebarOpts.size">
-          <app-layout-sidebar [opened]="mainSidebarOpts.opened" (sideBarToggle)="onSideBarToggle($event)"></app-layout-sidebar>
+          <app-layout-sidebar [opened]="mainSidebarOpts.opened"
+                              (sideBarToggle)="onSideBarToggle($event)"></app-layout-sidebar>
         </app-sidenav-v2>
         <!-- END: MAIN SIDEBAR -->
 

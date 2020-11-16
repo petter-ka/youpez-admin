@@ -5,7 +5,7 @@
         <div class="app-mini-sidebar__list">
 
           <div (click)="onItemClick({key:'search'})"
-            class="app-mini-sidebar__list__item app-mini-sidebar__list__item__highlight">
+               class="app-mini-sidebar__list__item app-mini-sidebar__list__item__highlight">
             <div class="app-mini-sidebar__list__item__pill"
                  placement="right"
                  container="body"
@@ -18,7 +18,7 @@
                ngbDropdown
                container="body">
             <div class="app-mini-sidebar__list__item__pill"
-              (click)="onFakeLoading()"
+                 (click)="onFakeLoading()"
                  placement="right"
                  container="body"
                  ngbTooltip="Notifications"
@@ -91,7 +91,7 @@
                ngbDropdown
                container="body">
             <div class="app-mini-sidebar__list__item__pill"
-                (click)="onFakeLoading()"
+                 (click)="onFakeLoading()"
                  placement="right"
                  container="body"
                  ngbTooltip="Messages"
@@ -155,13 +155,86 @@
             </div>
           </div>
 
-          <div (click)="onItemClick({key:'theme'})" class="app-mini-sidebar__list__item">
+          <div class="app-mini-sidebar__list__item"
+               ngbDropdown
+               container="body">
             <div class="app-mini-sidebar__list__item__pill"
                  placement="right"
                  container="body"
-                 ngbTooltip="Theme settings">
-              <app-ibm-icon iconName="settingsAdjust" iconSize="24"></app-ibm-icon>
+                 ngbTooltip="Applications"
+                 ngbDropdownToggle>
+              <app-ibm-icon iconName="contourFinding" iconSize="24"></app-ibm-icon>
             </div>
+            <div ngbDropdownMenu class="relative">
+              <div fxLayout="column">
+                <div class="app-list-header-alt" ngbDropdownItem>
+                  <div class="flex justify-between items-center">
+                    <div>APPLICATIONS</div>
+                  </div>
+                </div>
+                <div fxFlex>
+                  <div class="relative" style="width: 260px">
+                    <div fxLayout="row wrap" class="app-border-b">
+                      <div fxFlex="50%" class="app-border-r">
+                        <div class="app-card app-card--select app-card--m-0" ngbDropdownItem
+                             routerLink="/app/scrum-board">
+                          <div class="app-card__content text-center">
+                            <app-ibm-icon iconName="dashboardReference" iconSize="32"></app-ibm-icon>
+                            <div class="app-productive-heading-01 mt-2">SCRUM board</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div fxFlex="50%">
+                        <div class="app-card app-card--select app-card--m-0" ngbDropdownItem routerLink="/app/tasks">
+                          <div class="app-card__content text-center">
+                            <app-ibm-icon iconName="task" iconSize="32"></app-ibm-icon>
+                            <div class="app-productive-heading-01 mt-2">Tasks</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div fxLayout="row wrap" class="app-border-b">
+                      <div fxFlex="50%" class="app-border-r">
+                        <div class="app-card app-card--select app-card--m-0" ngbDropdownItem
+                             routerLink="/app/file-manager">
+                          <div class="app-card__content text-center">
+                            <app-ibm-icon iconName="folder" iconSize="32"></app-ibm-icon>
+                            <div class="app-productive-heading-01 mt-2">File manager</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div fxFlex="50%">
+                        <div class="app-card app-card--select app-card--m-0" ngbDropdownItem routerLink="/app/mail">
+                          <div class="app-card__content text-center">
+                            <app-ibm-icon iconName="email" iconSize="32"></app-ibm-icon>
+                            <div class="app-productive-heading-01 mt-2">Mail</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div fxLayout="row wrap" class="">
+                      <div fxFlex="50%" class="app-border-r">
+                        <div class="app-card app-card--select app-card--m-0" ngbDropdownItem routerLink="/app/messages">
+                          <div class="app-card__content text-center">
+                            <app-ibm-icon iconName="sendAlt" iconSize="32"></app-ibm-icon>
+                            <div class="app-productive-heading-01 mt-2">Messages</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div fxFlex="50%">
+                        <div class="app-card app-card--select app-card--m-0" ngbDropdownItem routerLink="/app/profile">
+                          <div class="app-card__content text-center">
+                            <app-ibm-icon iconName="faceActivated" iconSize="32"></app-ibm-icon>
+                            <div class="app-productive-heading-01 mt-2">Profile</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>

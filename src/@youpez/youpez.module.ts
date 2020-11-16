@@ -119,7 +119,7 @@ import {
   CloseModule,
   ViewModule,
   CheckmarkModule,
-  CheckmarkFilledModule
+  CheckmarkFilledModule, AppsModule, WatsonHealthContourFindingModule
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -328,6 +328,7 @@ const CarbonIconModules = [
   CheckmarkModule,
   CheckmarkFilledModule,
   ViewModule,
+  AppsModule,
 ]
 
 const Components = [
@@ -372,6 +373,7 @@ const Pipes = [
       visibility: 'hover',
     }),
     NgxMdModule,
+    WatsonHealthContourFindingModule,
   ],
   declarations: [
     ...Components,

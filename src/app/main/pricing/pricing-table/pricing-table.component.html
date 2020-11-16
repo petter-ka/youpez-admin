@@ -34,7 +34,7 @@
             <div fxLayout="row wrap" class="app-border-b">
               <div fxFlex="50%" fxFlex.gt-md="" class="app-border-r"></div>
               <ng-container *ngFor="let package of packages">
-                <div fxFlex="50%" fxFlex.gt-md="240px" class="app-border-r">
+                <div fxFlex="100%" fxFlex.gt-md="240px" class="app-border-r">
                   <div class="p-3 app-border-b text-center relative">
                     <ng-container *ngIf="package.recommend">
                       <div
@@ -86,7 +86,7 @@
                     </div>
                   </div>
                   <ng-container *ngFor="let pricePackage of packages">
-                    <div fxFlex="50%" fxFlex.gt-md="240px" class="app-border-r">
+                    <div fxFlex="100%" fxFlex.gt-md="240px" class="app-border-r">
                       <div class="h-10 justify-center flex items-center app-body-short-01">
                         <ng-container *ngIf="isBoolean(pricePackage.features[feature.id])">
                           <ng-container *ngIf="pricePackage.features[feature.id] === true">

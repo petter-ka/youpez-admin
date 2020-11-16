@@ -14,7 +14,7 @@
     </ng-container>
   </div>
   <div fxFlex class="relative">
-    <ng-scrollbar>
+    <ng-scrollbar #scrollBar>
       <app-menu
         [menu]="menu"
         (groupToggle)="onGroupToggle($event)"></app-menu>

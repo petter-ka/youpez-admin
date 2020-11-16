@@ -1,5 +1,5 @@
-import {Component, EventEmitter, OnInit, Output, Input} from '@angular/core'
-
+import {Component, EventEmitter, OnInit, Output, Input, ViewChild, AfterViewInit} from '@angular/core'
+import {NgScrollbar} from "ngx-scrollbar"
 import {MenuType} from "../../../../@youpez"
 
 @Component({
@@ -7,7 +7,9 @@ import {MenuType} from "../../../../@youpez"
   templateUrl: './layout-sidebar.component.html',
   styleUrls: ['./layout-sidebar.component.scss']
 })
-export class LayoutSidebarComponent implements OnInit {
+export class LayoutSidebarComponent implements OnInit, AfterViewInit {
+
+  @ViewChild(NgScrollbar, {static: false}) scrollBar: NgScrollbar
 
   @Input() opened: boolean = false
   @Output() sideBarToggle: EventEmitter<boolean> = new EventEmitter()
@@ -74,14 +76,6 @@ export class LayoutSidebarComponent implements OnInit {
           },
           url: '/app/tasks',
         },
-        /*        {
-                  name: 'Notes',
-                  prefix: {
-                    type: 'ibm-icon',
-                    name: 'catalog',
-                  },
-                  url: '/app/notes',
-                },*/
         {
           name: 'File manager',
           prefix: {
@@ -253,7 +247,7 @@ export class LayoutSidebarComponent implements OnInit {
             type: 'ibm-icon',
             name: 'userAvatar',
           },
-          children:[
+          children: [
             {
               name: 'Settings',
               url: '/app/user/settings',
@@ -279,7 +273,7 @@ export class LayoutSidebarComponent implements OnInit {
             type: 'ibm-icon',
             name: 'application',
           },
-          children:[
+          children: [
             {
               name: 'Welcome',
               url: '/app/application/welcome',
@@ -313,7 +307,7 @@ export class LayoutSidebarComponent implements OnInit {
             type: 'ibm-icon',
             name: 'money',
           },
-          children:[
+          children: [
             {
               name: 'Modern',
               url: '/app/pricing/modern',
@@ -422,6 +416,14 @@ export class LayoutSidebarComponent implements OnInit {
       groupName: 'Components',
       opened: true,
       children: [
+        {
+          name: 'UI components',
+          url: '/app/charts',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'view',
+          },
+        },
         {
           name: 'Widgets',
           prefix: {
@@ -649,6 +651,13 @@ export class LayoutSidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.scrollToActiveElement()
+    }, 200)
   }
 
   onGroupToggle(groupName) {
@@ -662,6 +671,14 @@ export class LayoutSidebarComponent implements OnInit {
 
   onSideBarToggle() {
     this.sideBarToggle.next(true)
+  }
+
+  scrollToActiveElement() {
+    const element: any = document.getElementsByClassName("app-sidebar__list__item__inner--active")[0]
+    if (element) {
+      const offsetTop = element.offsetTop
+      this.scrollBar.scrollTo({top: offsetTop - 50, duration: 100})
+    }
   }
 
 }
