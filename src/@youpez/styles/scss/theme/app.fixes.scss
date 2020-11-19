@@ -53,6 +53,19 @@
   padding-left: 60px !important;
 }
 
+.app-ibm-h-full {
+  height: 100%;
+
+  .bx--data-table-container {
+    height: 100%;
+  }
+
+  .bx--data-table--sticky-header {
+    height: 100%;
+    max-height: calc(100% - 48px);
+  }
+}
+
 .app-ibm-table-fix {
   overflow: hidden;
 

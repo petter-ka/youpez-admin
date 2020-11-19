@@ -5,6 +5,14 @@
 }
 
 .app-card-row {
+  margin: -.5rem;
+}
+
+.app-cards-vertical {
+  .app-card {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .app-cards-title {
@@ -57,7 +65,6 @@
   outline: 2px solid transparent;
   outline-offset: -2px;
   margin: 0.5rem;
-/*  border: 1px solid rgba(72, 94, 144, 0.1);*/
 
   &.app-card--tile {
     margin: 0.25rem;
@@ -91,7 +98,7 @@
     }
   }
 
-  &.app-card--bt-danger-success {
+  &.app-card--bt-success-vertical {
     @include appCardBtVertical();
 
     &:before {
@@ -123,7 +130,7 @@
     }
   }
 
-  &.app-card--bt-danger-warning {
+  &.app-card--bt-warning-vertical {
     @include appCardBtVertical();
 
     &:before {
@@ -198,6 +205,12 @@
 
     button {
       margin-left: 0.25rem;
+    }
+
+    &.app-card__tool--ghost {
+      button {
+        margin-left: 0;
+      }
     }
 
     &.app-card__tool--sign {

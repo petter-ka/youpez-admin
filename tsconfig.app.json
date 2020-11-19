@@ -5,7 +5,7 @@
     "experimentalDecorators": true,
     "baseUrl": "./",
     "outDir": "./out-tsc/app",
-    "types": [ ],
+    "types": ["node"],
     "paths": {
       "@youpez/*": [
         "src/@youpez/*"

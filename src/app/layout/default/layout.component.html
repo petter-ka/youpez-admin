@@ -49,8 +49,10 @@
           [mode]="mainSidebarOpts.mode"
           [toggleableBtn]="mainSidebarOpts.toggleableBtn"
           [size]="mainSidebarOpts.size">
-          <app-layout-sidebar [opened]="mainSidebarOpts.opened"
-                              (sideBarToggle)="onSideBarToggle($event)"></app-layout-sidebar>
+          <app-layout-sidebar
+            [menu]="menu"
+            [opened]="mainSidebarOpts.opened"
+            (sideBarToggle)="onSideBarToggle($event)"></app-layout-sidebar>
         </app-sidenav-v2>
         <!-- END: MAIN SIDEBAR -->
 

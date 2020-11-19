@@ -35,6 +35,18 @@ import {SupportComponent} from "./application/support/support.component"
 import {ChangelogComponent} from "./application/changelog/changelog.component"
 import {WelcomeComponent} from "./application/welcome/welcome.component"
 import {GettingStartedComponent} from "./application/getting-started/getting-started.component"
+import {UiComponentsComponent} from "./ui-components/ui-components.component"
+import {WidgetsCardComponent} from "./widgets/widgets-card/widgets-card.component"
+import {WidgetsListComponent} from "./widgets/widgets-list/widgets-list.component"
+import {TableBasicComponent} from "./tables/table-basic/table-basic.component"
+import {TableAdvancedComponent} from "./tables/table-advanced/table-advanced.component"
+import {TableFullComponent} from "./tables/table-full/table-full.component"
+import {ChartsComponent} from "./charts/charts.component"
+import {IconsComponent} from "./icons/icons.component"
+import {FormsGeneralComponent} from "./forms/forms-general/forms-general.component"
+import {FormsAdvancedComponent} from "./forms/forms-advanced/forms-advanced.component"
+import {FormsValidationComponent} from "./forms/forms-validation/forms-validation.component"
+import {FormsWizardComponent} from "./forms/forms-wizard/forms-wizard.component"
 
 const routeForPages = [
   {
@@ -64,8 +76,62 @@ const routeForPages = [
       {
         path: 'general',
         component: WidgetsGeneralComponent,
-      }
+      },
+      {
+        path: 'cards',
+        component: WidgetsCardComponent,
+      },
+      {
+        path: 'lists',
+        component: WidgetsListComponent,
+      },
     ]
+  },
+  {
+    path: 'tables',
+    children: [
+      {
+        path: 'basic',
+        component: TableBasicComponent,
+      },
+      {
+        path: 'advanced',
+        component: TableAdvancedComponent,
+      },
+      {
+        path: 'full',
+        component: TableFullComponent,
+      },
+    ]
+  },
+  {
+    path: 'forms',
+    children: [
+      {
+        path: 'general',
+        component: FormsGeneralComponent,
+      },
+      {
+        path: 'advanced',
+        component: FormsAdvancedComponent,
+      },
+      {
+        path: 'validation',
+        component: FormsValidationComponent,
+      },
+      {
+        path: 'wizard',
+        component: FormsWizardComponent,
+      },
+    ]
+  },
+  {
+    path: 'charts',
+    component: ChartsComponent,
+  },
+  {
+    path: 'icons',
+    component: IconsComponent,
   },
   {
     path: 'scrum-board',
@@ -78,6 +144,10 @@ const routeForPages = [
   {
     path: 'file-manager',
     component: FileManagerComponent,
+  },
+  {
+    path: 'ui-components',
+    component: UiComponentsComponent,
   },
   {
     path: 'mail',

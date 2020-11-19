@@ -1,0 +1,269 @@
+<app-content-simple mainTitle="Widgets - list">
+  <div fxLayout="row wrap">
+    <div fxFlex="100%" fxFlex.gt-md="40%">
+      <div class="app-body-long-02 mb-6">
+        We created a unique and highly customizable list elements with basic css classes. These lists are easy
+        modifiable with <span class="font-bold">BEM modifier</span> css classes. You can easily add your design ideas to
+        list design of the theme or
+        create new ones with <span class="font-bold">tailwindcss</span>.
+      </div>
+
+      <div class="app-cards-vertical">
+        <div class="app-productive-heading-02 mb-2">BASIC</div>
+        <div class="app-card mb-6">
+          <div class="app-list app-list--simple">
+            <div class="app-list__item">
+              <div class="app-list__item__content">Cras justo odio</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Dapibus ac facilisis in</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Morbi leo risus</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Porta ac consectetur ac</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Vestibulum at eros</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-productive-heading-02 mb-2">CONDENSED</div>
+        <div class="app-card mb-6">
+          <div class="app-list app-list--p">
+            <div class="app-list__item">
+              <div class="app-list__item__content">Cras justo odio</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Dapibus ac facilisis in</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Morbi leo risus</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Porta ac consectetur ac</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Vestibulum at eros</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-productive-heading-02 mb-2">HOVERABLE</div>
+        <div class="app-card mb-6">
+          <div class="app-list app-list--simple app-list--hover">
+            <div class="app-list__item">
+              <div class="app-list__item__content">Cras justo odio</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Dapibus ac facilisis in</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Morbi leo risus</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Porta ac consectetur ac</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Vestibulum at eros</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-productive-heading-02 mb-2">SELECTABLE</div>
+        <div class="app-card app-list--select mb-6">
+          <div class="app-list app-list--simple app-list--hover app-list--select">
+            <div class="app-list__item">
+              <div class="app-list__item__content">Cras justo odio</div>
+            </div>
+            <div class="app-list__item app-list__item--active">
+              <div class="app-list__item__content">Dapibus ac facilisis in</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Morbi leo risus</div>
+            </div>
+            <div class="app-list__item app-list__item--active">
+              <div class="app-list__item__content">Porta ac consectetur ac</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Vestibulum at eros</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-productive-heading-02 mb-2">GROUP</div>
+        <div class="app-card mb-6">
+          <div class="app-list app-list--hover app-list--simple">
+            <div class="app-list-header-alt">List header #1</div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Cras justo odio Dapibus ac facilisis in</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Dapibus ac facilisis in Cras justo odio</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Morbi leo risus Porta ac consectetur ac</div>
+            </div>
+            <div class="app-list-header-alt mt-4">List header #2</div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Porta ac consectetur ac Morbi leo risus</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Vestibulum at eros justo odio Dapibus</div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">Dapibus ac facilisis in Cras justo odio</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-productive-heading-02 mb-2">ADVANCED EXAMPLE #1</div>
+        <div class="app-card mb-6" style="max-width: 300px">
+          <div class="app-list app-list--hover app-list--select">
+            <ng-container *ngFor="let sub of subscriptions">
+              <div class="app-list__item" [ngClass]="{'app-color-success':sub.up,'app-color-danger':!sub.up}">
+                <div class="app-list__item__prefix w-10 text-center">
+                  <ng-container *ngIf="sub.up">
+                    <app-ibm-icon iconName="arrowUp" iconSize="16"></app-ibm-icon>
+                  </ng-container>
+                  <ng-container *ngIf="!sub.up">
+                    <app-ibm-icon iconName="arrowDown" iconSize="16"></app-ibm-icon>
+                  </ng-container>
+                </div>
+                <div class="app-list__item__content">
+                  {{sub.month}}
+                </div>
+                <div class="app-expressive-heading-02 mr-1">{{sub.count}}$</div>
+                <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                  <svg class="bx--btn__icon" ibmIconArrowRight size="32"></svg>
+                </button>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="app-productive-heading-02 mb-2">ADVANCED EXAMPLE #2</div>
+        <div class="app-card mb-6 p-1" style="max-width: 300px">
+          <div class="app-list-header-title">TOP HITS</div>
+          <div class="app-list app-list--hover app-list--p app-list--select">
+            <div class="app-list__item">
+              <div class="app-list__item__content truncate">
+                <mark class="app-text-mark">Kube</mark>
+                rnetes cluster prod env
+              </div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content truncate">
+                <mark class="app-text-mark">Kube</mark>
+                ctl EU. Region
+              </div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content truncate">
+                <mark class="app-text-mark">Kube</mark>
+                -proxy EKS
+              </div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content truncate">
+                <mark class="app-text-mark">Kube</mark>
+                let primary node US
+              </div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content truncate">
+                K8S-
+                <mark class="app-text-mark"> Kuber</mark>
+                netes scheduler
+              </div>
+            </div>
+          </div>
+          <div class="app-list-header-title">MORE RESULT</div>
+          <div class="app-list app-list--hover app-list--p app-list--select">
+            <div class="app-list__item">
+              <div class="app-list__item__content">
+                Google Cloud - GKS
+              </div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">
+                AWS - EKS
+              </div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">
+                Azure - AKS
+              </div>
+            </div>
+            <div class="app-list__item">
+              <div class="app-list__item__content">
+                Alibaba - ACK
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-productive-heading-02 mb-2">ADVANCED EXAMPLE #3</div>
+        <div class="app-card mb-6 p-1">
+          <div class="app-list app-list--hover app-list--select-alt">
+            <ng-container *ngFor="let mail of mails">
+              <ng-container *ngIf="mail.sep">
+                <div class="app-list-header-title">{{mail.sep}}</div>
+              </ng-container>
+              <ng-container *ngIf="!mail.sep">
+                <div (click)="onSelect(mail)" [ngClass]="{'app-list__item--active':mail === selectedMail}"
+                     class="app-list__item app-list__item--align-top">
+                  <div class="app-list__item__prefix w-6 text-center">
+                    <div style="padding-top:47px">
+                      <ng-container *ngIf="!mail.read">
+                        <div class="mb-4">
+                          <span class="w-2 h-2 rounded-full inline-block app-bg-info"></span>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="mail.flagged">
+                        <div class="mb-2 app-color-warning">
+                          <app-ibm-icon iconName="flagFilled" iconSize="16"></app-ibm-icon>
+                        </div>
+                      </ng-container>
+                    </div>
+                  </div>
+                  <div class="app-list__item__content">
+                    <div class="mr-4 min-w-0">
+                      <div class="flex items-center overflow-hidden mb-2">
+                        <div class="app-symbol mr-1">
+                          <div
+                            class="app-symbol__label app-bg-primary-lt-40 app-color-contrast rounded-full h-6 w-6">
+                            {{mail.sender[0]}}
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden truncate">
+                          <span class="app-productive-heading-01 mr-2">{{mail.sender}}</span>
+                          <span class="app-helper-text-01">jon@noice.com</span>
+                        </div>
+                        <div class="whitespace-no-wrap app-label-01 text-muted ml-1">
+                          {{mail.date}}
+                        </div>
+                      </div>
+                      <div class="app-productive-heading-02 mb-1">
+                        {{mail.title}}
+                        <ng-container *ngIf="mail.attachments">
+                          <app-ibm-icon iconName="attachment" iconSize="16"></app-ibm-icon>
+                        </ng-container>
+                      </div>
+                      <div class="app-body-long-01">{{mail.content | slice:0:110}}...</div>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</app-content-simple>
+

@@ -7,7 +7,7 @@ import {Component, OnInit, Input} from '@angular/core'
 })
 export class AppContentSimpleComponent implements OnInit {
 
-  @Input() title: string = ''
+  @Input() mainTitle: string = ''
 
   constructor() {
   }

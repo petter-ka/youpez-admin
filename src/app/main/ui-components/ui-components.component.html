@@ -1,0 +1,67 @@
+<app-content-simple mainTitle="UI Components">
+  <div fxLayout="row wrap">
+    <div fxFlex="100%" fxFlex.gt-md="50%">
+      <div class="app-productive-heading-02 mb-2">UI-COMPONENTS</div>
+      <div class="app-body-long-02 mb-4">
+        Youpez uses the <span class="font-bold">Carbon Design System for ui-components</span> (input, select,
+        typography, design-elements).
+        In some cases we modified the carbon components a little (colors, paddings...), but they are 100% compatible
+        with the original ones.
+      </div>
+      <div class="app-body-long-02 mb-4">
+        We don't created demo pages for the components because we don't want to include the Storybooks for this theme, because it would increased its size.
+        And of course, the original documentations & stories are up-to-date.
+      </div>
+      <div class="app-body-long-01 p-4 app-bg-ui mb-10">
+        Carbon is IBM’s open source design system for products and digital experiences. With the IBM Design Language as
+        its foundation, the system consists of working code, design tools and resources, human interface guidelines, and
+        a vibrant community of contributors.
+        <br/><br/>
+        <a href="https://www.carbondesignsystem.com/components/overview" target="_blank">Official documentation</a> <br/>
+        <a href="https://angular.carbondesignsystem.com/?path=/story/components-welcome--to-carbon-angular" target="_blank">Angular Carbon Design System stories</a>
+      </div>
+      <div class="app-productive-heading-02 mb-2">RESPONSIVE GRID</div>
+      <div class="app-body-long-02 mb-6">
+        Youpez uses the <span class="font-bold">angular-flex</span> library for creating <span class="font-bold">responsive grid layouts</span>.
+        This library allows to create layouts without using css 'hacking' with media queries (which are complicated to
+        use nowadays because you can't reach css code in your business logic).
+        So basically you can handle your responsive operations in your frontend typescript code with basic css class
+        modifications depending on the resolution and your unique implementation.
+      </div>
+      <div class="app-body-long-01 p-4 app-bg-ui mb-10">
+        Angular Flex Layout provides a sophisticated layout API using Flexbox CSS + mediaQuery. This module provides
+        Angular developers with component layout features using a custom Layout API, mediaQuery observables, and
+        injected DOM flexbox-2016 CSS stylings.
+        <br/> <br/>
+        The Flex Layout engine intelligently automates the process of applying appropriate Flexbox CSS to browser view
+        hierarchies. This automation also addresses many of the complexities and workarounds encountered with the
+        traditional, manual, CSS-only application of box CSS.
+        <br/> <br/>
+        The real power of Flex Layout, however, is its responsive engine. The Responsive API enables developers to
+        easily specify different layouts, sizing, visibilities for different viewport sizes and display devices.
+        <br/><br/>
+        <a href="https://github.com/angular/flex-layout/wiki" target="_blank">Official documentation</a> <br/>
+      </div>
+
+      <div class="app-productive-heading-02 mb-2">WIDGETS & HELPERS</div>
+      <div class="app-body-long-02 mb-6">
+        Youpez uses <span class="font-bold">Tailwindcss</span> for styling components and for helper classes.
+        This allows for very fast development and to focus on unique and creative stuff not on the 'how am i going to do this?'.
+      </div>
+      <div class="app-body-long-01 p-4 app-bg-ui mb-10">
+        Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
+        <br/> <br/>
+        A utility-first CSS framework for
+        rapidly building custom designs.
+        <br/> <br/>
+        <a href="https://tailwindcss.com/" target="_blank">Official documentation</a> <br/>
+      </div>
+
+      <div class="app-productive-heading-02 mb-2">THEME LAYOUT</div>
+      <div class="app-body-long-02 mb-6 font-bold">
+        For layout of the theme (sidebar, header...) we created unique highly customizable (but carbon design related)
+        components. The unique components of the theme are using BEM css class style.
+      </div>
+    </div>
+  </div>
+</app-content-simple>

@@ -119,7 +119,9 @@ import {
   CloseModule,
   ViewModule,
   CheckmarkModule,
-  CheckmarkFilledModule, AppsModule, WatsonHealthContourFindingModule
+  CheckmarkFilledModule,
+  AppsModule,
+  WatsonHealthContourFindingModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -151,6 +153,8 @@ import {
   DialogModule,
   LinkModule,
   NotificationModule,
+  RadioModule,
+
 } from 'carbon-components-angular'
 
 import {AppMenuComponent} from "./components/app-menu/app-menu/app-menu.component"
@@ -214,7 +218,7 @@ const CarbonModules = [
   MaximizeModule,
   LinkModule,
   NotificationModule,
-  CloseModule,
+  RadioModule,
 ]
 
 const CarbonIconModules = [
@@ -329,6 +333,7 @@ const CarbonIconModules = [
   CheckmarkFilledModule,
   ViewModule,
   AppsModule,
+  CloseModule,
 ]
 
 const Components = [

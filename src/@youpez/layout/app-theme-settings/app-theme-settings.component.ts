@@ -53,6 +53,7 @@ export class AppThemeSettingsComponent implements OnInit {
       theme: 'app-theme-sidebar--gradient'
     },
   ]
+
   public headerThemes = [
     {
       name: 'black',

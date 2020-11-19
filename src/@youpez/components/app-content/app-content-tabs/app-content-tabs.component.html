@@ -3,7 +3,6 @@
     <div class="app-header app-header--carbon">
       <div class="app-productive-heading-04">User data</div>
     </div>
-
     <div class="app-ibm-tabs-header sticky top-0 z-10">
       <ibm-tabs type="container" [isNavigation]="true" [followFocus]="true">
         <ng-container *ngFor="let tab of tabs;let i = index">
@@ -12,10 +11,8 @@
         </ng-container>
       </ibm-tabs>
     </div>
-
     <div class="app-content app-content--default z-0">
       <ng-content></ng-content>
     </div>
-
   </ng-scrollbar>
 </div>

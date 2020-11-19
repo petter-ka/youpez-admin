@@ -72,6 +72,12 @@
     }
   }
 
+  &.app-list--simple {
+    .app-list__item__content {
+      padding: 0.75rem 1rem;
+    }
+  }
+
   &.app-list--condensed {
     .app-list__item__content {
       padding: 0.25rem 1rem;
