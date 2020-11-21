@@ -62,7 +62,7 @@ export class PricingTableComponent implements OnInit {
       cssClass: 'app-bg-success-lt-30 app-text-contrast',
     },
     {
-      type: 'Enterprise',
+      type: 'Premium',
       price: {
         1: 300,
         12: 250,
@@ -89,7 +89,7 @@ export class PricingTableComponent implements OnInit {
       recommend: true,
     },
     {
-      type: 'Premium',
+      type: 'Enterprise',
       price: {},
       features: {
         1: 'Unlimited',

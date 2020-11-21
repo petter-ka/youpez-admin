@@ -22,11 +22,14 @@
 .app-ag-grid {
   @include ag-theme-balham((
     font-family: ('IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif),
-    //font-size:0.875rem,
     odd-row-background-color: null,
     border-color:$appBorderColorAlt,
     row-border-color:$appBorderColor,
-    header-background-color: $appUIBg,
+    header-foreground-color: $appText,
+    header-background-color: $appColorDecorative,
+    background-color: $appUIForegroundBg,
+    data-color:$appText,
+    selected-row-background-color: $appHighLightColor,
   ));
 
   width: 100%;
@@ -39,6 +42,7 @@
   .ag-header-cell::after, .ag-header-group-cell::after {
     top: 0 !important;
     height: 100% !important;
+/*    background: transparent !important;*/
   }
 
   &.app-ag-grid--border-t {

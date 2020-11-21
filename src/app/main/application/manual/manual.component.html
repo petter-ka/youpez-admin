@@ -5,7 +5,7 @@
          [ngClass.lt-lg]="{'app-bg-ui':true,'app-docs-list-holder--opened app-border-r':opened}">
       <div class="app-a-box app-scrollbar-fix">
         <ng-scrollbar>
-          <div class="app-docs-list app-content app-content--default">
+          <div class="app-nav-list app-content app-content--default">
             <div class="flex justify-between items-center mb-4">
               <div>
                 <img src="/assets/img/logo/logo-big-black.png" style="width:120px;">
@@ -15,12 +15,12 @@
               </button>
             </div>
             <ng-container *ngFor="let section of sections;">
-              <div class="app-docs-list__item">
-                <div class="app-docs-list__item__group">{{section.name}}</div>
-                <div class="app-docs-list__children">
+              <div class="app-nav-list__item">
+                <div class="app-nav-list__item__group">{{section.name}}</div>
+                <div class="app-nav-list__children">
                   <ng-container *ngFor="let section of section.children">
-                    <div class="app-docs-list__item__text"
-                         [ngClass]="{'app-docs-list__item__text--selected':section.selected}">{{section.name}}</div>
+                    <div class="app-nav-list__item__text"
+                         [ngClass]="{'app-nav-list__item__text--selected':section.selected}">{{section.name}}</div>
                   </ng-container>
                 </div>
               </div>

@@ -1,0 +1,59 @@
+<ng-template #totalHeaderTemplate let-data="data">
+  <div class="w-full text-right">{{data}}</div>
+</ng-template>
+<ng-template #proficiencyTemplate let-data="data">
+  <div class="app-progress w-full">
+    <div class="app-progress__bar app-bg-success"
+         [ngClass]="{
+          'app-bg-success':data>=70,
+          'app-bg-warning':data>=50 && data < 70,
+          'app-bg-danger':data<50
+          }"
+         [style.width]="data+'%'"></div>
+  </div>
+</ng-template>
+<ng-template #totalTemplate let-data="data">
+  <ng-container *ngIf="data>110">
+    <ng-container *ngIf="data>500">
+      <div class="text-right w-full font-bold app-color-success">{{data}} $</div>
+    </ng-container>
+    <ng-container *ngIf="data<500">
+      <div class="text-right w-full app-color-success">{{data}} $</div>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="data<110">
+    <div class="text-right w-full app-color-danger">{{data}} $</div>
+  </ng-container>
+
+</ng-template>
+<ng-template #onlineTemplate let-data="data">
+  <div class="flex">
+    <ng-container *ngIf="data === '1'">
+      <div class="pr-3 pl-2 py-1 app-bg-success-lt-50 app-color-success rounded-full flex items-center">
+        <span class="w-2 h-2 app-bg-success rounded-full inline-block mr-1"></span>
+        Online
+      </div>
+    </ng-container>
+    <ng-container *ngIf="data === '0'">
+      <div class="pr-3 pl-2 py-1 app-bg-warning-lt-40 app-color-warning rounded-full flex items-center">
+        Offline
+      </div>
+    </ng-container>
+  </div>
+</ng-template>
+
+<ibm-table
+  [model]="model"
+  [size]="size"
+  [skeleton]="skeleton"
+  [showSelectionColumn]="showSelectionColumn"
+  [enableSingleSelect]="enableSingleSelect"
+  (rowClick)="onRowClick($event)"
+  [sortable]="sortable"
+  [stickyHeader]="stickyHeader"
+  [striped]="striped"
+  [isDataGrid]="isDataGrid"
+  (sort)="simpleSort($event)">
+  <ng-content></ng-content>
+</ibm-table>
+

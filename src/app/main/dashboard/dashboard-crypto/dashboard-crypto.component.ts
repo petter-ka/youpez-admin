@@ -4,6 +4,35 @@ import {ClientSideRowModelModule} from "@ag-grid-community/client-side-row-model
 import {HttpClient} from "@angular/common/http"
 import {ColDef, GridOptions} from "@ag-grid-community/core"
 
+const categories = {
+  'Utilities': '#edb879',
+  'Technology Services': '#1979a9',
+  'Transportation': '#e07b39',
+  'Retail Trade': '#80391e',
+  'Producer Manufacturing': '#042f66',
+  'Health Technology': '#042f66',
+  'Health Services': '#521799',
+  'Finance': '#991717',
+  'Energy Minerals': '#805C33',
+  'Electronic Technology': '#003A52',
+  'Consumer Services': '#008580',
+  'Consumer Non-Durables': '#D1C400',
+  'Consumer Durables': '#850200',
+  'Communications': '#001FD1',
+}
+
+const sectorCellRenderer = function(params) {
+  const {value} = params
+  const color = categories[value]
+
+  return `
+    <div class="flex">
+    <div style="background-color: ${color};width:4px;height:16px;;margin-right:5px;"></div>
+      ${value}
+    </div>
+  `
+}
+
 const createRowHelper = (_1, _2, _3, _4, _5, _6, _7, _8, _9) => {
   return {
     company: _1,
@@ -28,8 +57,8 @@ const companyCellRenderer = (params) => {
 
   return `
     <div class="app-row app-row--center">
-      <div class="app-symbol app-symbol--default mr-2">
-        <div class="app-symbol__label w-6 h-6 app-color-info font-bold">L</div>
+      <div class="app-symbol app-symbol--default mr-2 rounded">
+        <div class="app-symbol__label w-6 h-6 app-color-info font-bold ">${split[0][0]}${split[0][1]}</div>
       </div>
       <div>
         <div class="app-expressive-heading-01">${split[0]}</div>
@@ -80,7 +109,7 @@ export class DashboardCryptoComponent implements OnInit {
     ['USDEUR', 0.825, 0.000, 0.00, 0],
     ['EURUSD', 1.171, 0.000, 0.05, '241.95K'],
     ['AAPL', 119.02, -1.69, -1.40, '115.39M'],
-    ['FB',265, -0.79, -0.30, '16.623M'],
+    ['FB', 265, -0.79, -0.30, '16.623M'],
     ['AMZN', 3272.71, -65.94, -1.98, '6.474M'],
     ['JPM', 101.51, -0.21, -0.21, '13.276M'],
     ['TSLA', 439.67, -9.21, -2.05, '32.776M'],
@@ -430,7 +459,8 @@ export class DashboardCryptoComponent implements OnInit {
         headerName: 'Sector',
         field: 'sector',
         headerClass: 'cell-flex-center',
-        cellClass: 'cell-flex-middle'
+        cellClass: 'cell-flex-middle',
+        cellRenderer: sectorCellRenderer,
       },
     ]
     this.http.get('/assets/data/stocks.csv', {responseType: 'text'})
@@ -450,7 +480,11 @@ export class DashboardCryptoComponent implements OnInit {
         }
         this.loading = false
         setTimeout(() => {
-          this.gridOptions.api.sizeColumnsToFit()
+          try {
+            this.gridOptions.api.sizeColumnsToFit()
+          } catch (error) {
+
+          }
         }, 10)
       })
   }

@@ -30,7 +30,7 @@ export class PricingModernComponent implements OnInit {
       cssClass: 'app-bg-success-lt-30 app-text-contrast',
     },
     {
-      type: 'enterprise',
+      type: 'premium',
       price: {
         1: 300,
         12: 250,
@@ -50,7 +50,7 @@ export class PricingModernComponent implements OnInit {
       recommend: true,
     },
     {
-      type: 'premium',
+      type: 'enterprise',
       price: {},
       features: [
         'Kubernetes support',
@@ -60,7 +60,7 @@ export class PricingModernComponent implements OnInit {
         'On-premise',
       ],
       use: 'Perfect for giant companies',
-      subtitle: 'Everything in Enterprise, plus',
+      subtitle: 'Everything in Premium, plus',
       users: 'more than 100 users',
       button: 2,
       cssClass: 'app-bg-success-lt-10 app-text-contrast',

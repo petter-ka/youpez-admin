@@ -450,35 +450,34 @@
   }
 }
 
-.app-docs-list {
+.app-nav-list {
 
-  .app-docs-list__item__group {
-
+  .app-nav-list__item__group {
     @extend .app-subtitle;
     cursor: pointer;
   }
 
-  .app-docs-list__item {
+  .app-nav-list__item {
     margin-bottom: 1rem;
-
   }
 
-  .app-docs-list__children {
+  .app-nav-list__children {
     margin: 0.5rem 0 0.5rem 0rem;
 
-    .app-docs-list__item__text {
+    .app-nav-list__item__text {
       @extend .app-body-long-01;
-      margin-bottom: 0.25rem;
       cursor: pointer;
       border-left: 2px solid $appBorderColor;
       padding-left: .75rem;
+      padding-bottom: 0.125rem;
+      padding-top: 0.125rem;
 
       &:hover {
         border-left-color: $appColorInfo;
         color: $appColorInfo;
       }
 
-      &.app-docs-list__item__text--selected {
+      &.app-nav-list__item__text--selected {
         border-left-color: $appColorInfo;
         color: $appColorInfo;
         font-weight: 700;

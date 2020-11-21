@@ -1,1 +1,22 @@
-<p>table-full works!</p>
+<div fxFill fxLayout="column">
+  <div class="app-header app-header--carbon">
+    <div class="app-productive-heading-04">Table full</div>
+  </div>
+  <div class="pt-2 px-4">
+    <ibm-tag type="magenta">Editable</ibm-tag>
+    <ibm-tag type="magenta">Custom cellrenders</ibm-tag>
+    <ibm-tag type="magenta">Column pinned</ibm-tag>
+    <ibm-tag type="warm-gray">Multiple selection</ibm-tag>
+    <ibm-tag type="warm-gray">Horizontal scrollable</ibm-tag>
+    <ibm-tag type="warm-gray">Pagination</ibm-tag>
+  </div>
+  <div fxFlex class="relative px-4 pb-4 pt-2">
+    <ng-container *ngIf="!loading">
+      <ag-grid-angular
+        class="app-ag-grid app-border-all"
+        [modules]="modules"
+        [gridOptions]="gridOptions">
+      </ag-grid-angular>
+    </ng-container>
+  </div>
+</div>

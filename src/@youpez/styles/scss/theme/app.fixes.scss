@@ -58,6 +58,7 @@
 
   .bx--data-table-container {
     height: 100%;
+
     .bx--data-table--sticky-header {
       height: 100%;
       max-height: calc(100% - 48px) !important;
@@ -489,4 +490,9 @@
 
 .bx--text-area {
   height: auto;
+}
+
+
+.bx--data-table--sticky-header:not(.bx--data-table--compact):not(.bx--data-table--tall):not(.bx--data-table--short) td:not(.bx--table-column-menu):not(.bx--table-column-checkbox) {
+  padding-top: 0 !important;
 }

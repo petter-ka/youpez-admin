@@ -53,7 +53,8 @@ import { FormsValidationComponent } from './forms/forms-validation/forms-validat
 import { FormsWizardComponent } from './forms/forms-wizard/forms-wizard.component';
 import { DummyTableExpansionComponent } from './components/dummy-table-expansion/dummy-table-expansion.component';
 import { DummyTableAdvancedComponent } from './components/dummy-table-advanced/dummy-table-advanced.component';
-import { DummyTablePaginationComponent } from './components/dummy-table-pagination/dummy-table-pagination.component'
+import { DummyTablePaginationComponent } from './components/dummy-table-pagination/dummy-table-pagination.component';
+import { DummyTableRichComponent } from './components/dummy-table-rich/dummy-table-rich.component'
 
 @NgModule({
   declarations: [
@@ -104,6 +105,7 @@ import { DummyTablePaginationComponent } from './components/dummy-table-paginati
     DummyTableExpansionComponent,
     DummyTableAdvancedComponent,
     DummyTablePaginationComponent,
+    DummyTableRichComponent,
   ],
   imports: [
     CommonModule,
