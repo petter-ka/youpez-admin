@@ -483,8 +483,13 @@ export class LayoutComponent implements OnInit, OnDestroy {
               url: '/app/tables/advanced',
             },
             {
-              name: 'Full',
+              name: 'Full Datagrid',
               url: '/app/tables/full',
+              suffix: {
+                type: 'badge',
+                level: 'danger',
+                text: 'HOT',
+              },
             },
           ]
         },

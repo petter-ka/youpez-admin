@@ -1,0 +1,23 @@
+<ng-template #paginationTableItemTemplate let-data="data">
+  <a [attr.href]="data.link">{{data.name}} {{data.surname}}</a>
+</ng-template>
+<ng-template #filterableHeaderTemplate let-data="data">
+  <i><a [attr.href]="data.link">{{data.name}}</a></i>
+</ng-template>
+<ng-template #filter let-popover="popover" let-filter="data">
+  <ibm-label class="first-label">
+    Value
+    <input type="text" [(ngModel)]="filter1" class="input-field">
+    <button class="btn--primary" (click)="filter.data = filter1; popover.doClose()">Apply</button>
+    <button class="btn--secondary" (click)="popover.doClose()">Cancel</button>
+  </ibm-label>
+</ng-template>
+<ibm-table
+  [sortable]="sortable"
+  [skeleton]="skeleton"
+  [showSelectionColumn]="showSelectionColumn"
+  [model]="model"
+  (rowClick)="onRowClick($event)"
+  [stickyHeader]="stickyHeader">
+</ibm-table>
+<ibm-pagination [model]="model" (selectPage)="selectPage($event)"></ibm-pagination>

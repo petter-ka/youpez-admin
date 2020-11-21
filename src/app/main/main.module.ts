@@ -50,7 +50,10 @@ import { IconsComponent } from './icons/icons.component';
 import { FormsGeneralComponent } from './forms/forms-general/forms-general.component';
 import { FormsAdvancedComponent } from './forms/forms-advanced/forms-advanced.component';
 import { FormsValidationComponent } from './forms/forms-validation/forms-validation.component';
-import { FormsWizardComponent } from './forms/forms-wizard/forms-wizard.component'
+import { FormsWizardComponent } from './forms/forms-wizard/forms-wizard.component';
+import { DummyTableExpansionComponent } from './components/dummy-table-expansion/dummy-table-expansion.component';
+import { DummyTableAdvancedComponent } from './components/dummy-table-advanced/dummy-table-advanced.component';
+import { DummyTablePaginationComponent } from './components/dummy-table-pagination/dummy-table-pagination.component'
 
 @NgModule({
   declarations: [
@@ -98,6 +101,9 @@ import { FormsWizardComponent } from './forms/forms-wizard/forms-wizard.componen
     FormsAdvancedComponent,
     FormsValidationComponent,
     FormsWizardComponent,
+    DummyTableExpansionComponent,
+    DummyTableAdvancedComponent,
+    DummyTablePaginationComponent,
   ],
   imports: [
     CommonModule,

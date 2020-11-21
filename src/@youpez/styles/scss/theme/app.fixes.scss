@@ -58,11 +58,17 @@
 
   .bx--data-table-container {
     height: 100%;
+    .bx--data-table--sticky-header {
+      height: 100%;
+      max-height: calc(100% - 48px) !important;
+    }
   }
 
-  .bx--data-table--sticky-header {
-    height: 100%;
-    max-height: calc(100% - 48px);
+  .bx--data-table_inner-container {
+    .bx--data-table--sticky-header {
+      height: 100%;
+      max-height: 100%;
+    }
   }
 }
 

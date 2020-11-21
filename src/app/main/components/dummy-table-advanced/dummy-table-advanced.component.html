@@ -1,0 +1,55 @@
+<ibm-table-container class="">
+  <ibm-table-toolbar
+    [model]="model"
+    [batchText]="batchText"
+    [size]="size"
+    #toolbar>
+    <ibm-table-toolbar-actions>
+      <button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+        Delete
+        <app-ibm-icon iconName="trashCan" iconSize="16" class="bx--btn__icon"></app-ibm-icon>
+      </button>
+      <button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+        Save
+        <app-ibm-icon iconName="document" iconSize="16" class="bx--btn__icon"></app-ibm-icon>
+      </button>
+      <button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+        Download
+        <app-ibm-icon iconName="download" iconSize="16" class="bx--btn__icon"></app-ibm-icon>
+      </button>
+    </ibm-table-toolbar-actions>
+    <ibm-table-toolbar-content>
+      <ibm-table-toolbar-search
+        ngDefaultControl
+        [expandable]="false">
+      </ibm-table-toolbar-search>
+      <ibm-overflow-menu
+        triggerClass="bx--toolbar-action"
+        [customTrigger]="customTrigger"
+        placement="bottom">
+        <ibm-overflow-menu-option>Option 1</ibm-overflow-menu-option>
+        <ibm-overflow-menu-option>Option 2</ibm-overflow-menu-option>
+        <ibm-overflow-menu-option disabled="true">Disabled</ibm-overflow-menu-option>
+        <ibm-overflow-menu-option type="danger">Danger option</ibm-overflow-menu-option>
+      </ibm-overflow-menu>
+      <button ibmButton="primary" size="sm" [tabindex]="toolbar.selected ? -1 : 0">
+        Primary Button
+        <ibm-icon-add size="20" class="bx--btn__icon"></ibm-icon-add>
+      </button>
+    </ibm-table-toolbar-content>
+  </ibm-table-toolbar>
+  <app-table
+    [model]="model"
+    [size]="size"
+    [showSelectionColumn]="true"
+    [enableSingleSelect]="false"
+    [striped]="false"
+    [sortable]="true"
+    [skeleton]="false"
+    [stickyHeader]="true"
+    [isDataGrid]="true">
+  </app-table>
+  <ng-template #customTrigger>
+    <svg ibmIconSettings size="16"></svg>
+  </ng-template>
+</ibm-table-container>

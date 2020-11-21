@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 
 import * as echarts from 'echarts'
+import {getDummyModel} from "../../../../@youpez/data/dummy"
 
 @Component({
   selector: 'app-dashboard-default',
@@ -18,31 +19,7 @@ export class DashboardDefaultComponent implements OnInit {
   public gaugeOpts = {}
   public themeRiverOpts = {}
   public realtimeOpts = {}
-  public model = {
-    header: [
-      {data: "Name"},
-      {data: "Country"},
-      {data: "Goals"},
-    ],
-    data: [
-      [{data: 'Jon Doe'}, {data: 'USA'}, {data: 11}],
-      [{data: 'Philip Jones'}, {data: 'Australia'}, {data: 9}],
-      [{data: 'Doe Jane'}, {data: 'Canada'}, {data: 110}],
-      [{data: 'Buck Jones'}, {data: 'Mexico'}, {data: 56}],
-      [{data: 'Jon Doe'}, {data: 'USA'}, {data: 11}],
-      [{data: 'Philip Jones'}, {data: 'Australia'}, {data: 9}],
-      [{data: 'Doe Jane'}, {data: 'Canada'}, {data: 110}],
-      [{data: 'Buck Jones'}, {data: 'Mexico'}, {data: 56}],
-      [{data: 'Jon Doe'}, {data: 'USA'}, {data: 11}],
-      [{data: 'Philip Jones'}, {data: 'Australia'}, {data: 9}],
-      [{data: 'Doe Jane'}, {data: 'Canada'}, {data: 110}],
-      [{data: 'Buck Jones'}, {data: 'Mexico'}, {data: 56}],
-      [{data: 'Jon Doe'}, {data: 'USA'}, {data: 11}],
-      [{data: 'Philip Jones'}, {data: 'Australia'}, {data: 9}],
-      [{data: 'Doe Jane'}, {data: 'Canada'}, {data: 110}],
-      [{data: 'Buck Jones'}, {data: 'Mexico'}, {data: 56}]
-    ]
-  }
+  public model = getDummyModel()
   public comboboxItems = [
     {
       content: "one"
