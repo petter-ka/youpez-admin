@@ -1,1 +1,282 @@
-<p>forms-advanced works!</p>
+<app-content-simple mainTitle="Forms - general">
+  <div fxLayout="row wrap">
+    <div fxFlex="100%" fxFlex.gt-md="60%">
+
+      <div fxLayout="row wrap" class="mb-6">
+        <div fxFlex="100%" fxFlex.gt-md="50%">
+          <div class="app-productive-heading-02 px-4">DROPDOWN</div>
+          <div class="app-card mb-6">
+            <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-dropdown
+                  [label]="'Small dropdown'"
+                  [helperText]="''"
+                  [size]="'sm'"
+                  [dropUp]="false"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [theme]="'light'"
+                  placeholder="Select"
+                  [disabled]="false">
+                  <ibm-dropdown-list [items]="items"></ibm-dropdown-list>
+                </ibm-dropdown>
+              </div>
+              <div class="mb-6">
+                <ibm-dropdown
+                  [label]="'Medium dropdown'"
+                  [helperText]="''"
+                  [size]="'md'"
+                  [dropUp]="false"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [theme]="'light'"
+                  placeholder="Select"
+                  [disabled]="false">
+                  <ibm-dropdown-list [items]="items"></ibm-dropdown-list>
+                </ibm-dropdown>
+              </div>
+              <div class="mb-6">
+                <ibm-dropdown
+                  [label]="'XL dropdown'"
+                  [helperText]="''"
+                  [size]="'xl'"
+                  [dropUp]="false"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [theme]="'light'"
+                  placeholder="Select"
+                  [disabled]="false">
+                  <ibm-dropdown-list [items]="items"></ibm-dropdown-list>
+                </ibm-dropdown>
+              </div>
+
+              <div class="mb-6">
+                <ibm-dropdown
+                  [label]="'Dropdown label'"
+                  [helperText]="'Optional helper text.'"
+                  [size]="'md'"
+                  [dropUp]="false"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [theme]="'light'"
+                  placeholder="Select"
+                  [disabled]="false">
+                  <ibm-dropdown-list [items]="items"></ibm-dropdown-list>
+                </ibm-dropdown>
+              </div>
+
+              <div class="mb-6">
+                <ibm-dropdown
+                  [label]="'Dropdown label'"
+                  [helperText]="''"
+                  [size]="'md'"
+                  [dropUp]="false"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [theme]="'light'"
+                  placeholder="Select"
+                  [disabled]="true">
+                  <ibm-dropdown-list [items]="items"></ibm-dropdown-list>
+                </ibm-dropdown>
+              </div>
+
+              <div class="mb-6">
+                <ibm-dropdown
+                  [label]="'Dropdown label'"
+                  [helperText]="'Optional helper text.'"
+                  [size]="'md'"
+                  [dropUp]="false"
+                  [invalid]="true"
+                  [invalidText]="'This is not a validation text'"
+                  [theme]="'light'"
+                  placeholder="Select"
+                  [disabled]="false">
+                  <ibm-dropdown-list [items]="items"></ibm-dropdown-list>
+                </ibm-dropdown>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-card app-card--transparent mb-6">
+            <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-dropdown
+                  [label]="'Dropdown label'"
+                  [helperText]="'Optional helper text.'"
+                  [size]="'md'"
+                  [dropUp]="false"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [theme]="'dark'"
+                  placeholder="Select"
+                  [disabled]="false">
+                  <ibm-dropdown-list [items]="items"></ibm-dropdown-list>
+                </ibm-dropdown>
+              </div>
+
+              <div class="mb-6">
+                <ibm-dropdown
+                  [label]="'Dropdown label'"
+                  [helperText]="''"
+                  [size]="'md'"
+                  [dropUp]="false"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [theme]="'dark'"
+                  placeholder="Select"
+                  [disabled]="true">
+                  <ibm-dropdown-list [items]="items"></ibm-dropdown-list>
+                </ibm-dropdown>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div fxFlex="100%" fxFlex.gt-md="50%">
+          <div class="app-productive-heading-02 px-4">COMBOBOX</div>
+          <div class="app-card mb-6">
+            <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-combo-box
+                  [disabled]="false"
+                  [invalid]="false"
+                  [size]="'md'"
+                  [appendInline]="false"
+                  [invalidText]="''"
+                  [label]="'Simple combobox'"
+                  [helperText]="''"
+                  [items]="items2"
+                  [theme]="'light'">
+                  <ibm-dropdown-list></ibm-dropdown-list>
+                </ibm-combo-box>
+              </div>
+              <div class="">
+                <ibm-combo-box
+                  [disabled]="false"
+                  [invalid]="false"
+                  [size]="'md'"
+                  [appendInline]="false"
+                  [invalidText]="''"
+                  [label]="'Multiselect combobox'"
+                  [helperText]="''"
+                  [items]="items2"
+                  type="multi"
+                  [theme]="'light'">
+                  <ibm-dropdown-list></ibm-dropdown-list>
+                </ibm-combo-box>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="app-productive-heading-02 px-4">DATE</div>
+          <div class="app-card mb-6">
+            <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-date-picker-input
+                  [theme]="'light'"
+                  [label]="'Date input'"
+                  [placeholder]="'mm/dd/yyyy'"
+                  [disabled]="false"
+                  [size]="'md'"
+                  [invalid]="false"
+                  [invalidText]="''">
+                </ibm-date-picker-input>
+              </div>
+              <div class="mb-6">
+                <ibm-date-picker
+                  [label]="'Date picker'"
+                  [placeholder]="'mm/dd/yyyy'"
+                  [language]="'en'"
+                  [size]="'md'"
+                  [theme]="'light'"
+                  [value]="''"
+                  [disabled]="false"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [dateFormat]="'m/d/Y'">
+                </ibm-date-picker>
+              </div>
+
+              <div class="">
+                <ibm-date-picker
+                  class="app-inline-block"
+                  [label]="'Date from'"
+                  [rangeLabel]="'Date to'"
+                  [placeholder]="'mm/dd/yyyy'"
+                  range="true"
+                  [language]="'en'"
+                  [size]="'md'"
+                  [theme]="'light'"
+                  [value]="''"
+                  [disabled]="false"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [dateFormat]="'m/d/Y'">
+                </ibm-date-picker>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="app-productive-heading-02 px-4">SLIDER / NUMBER</div>
+          <div class="app-card mb-6">
+            <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-slider
+                  [label]="'Slider label'"
+                  [min]="0"
+                  [max]="100"
+                  [step]="10"
+                  [value]="0"
+                  [shiftMultiplier]="4"
+                  [disabled]="false"
+                  aria-Label="Label for slider value"
+                  (valueChange)="valueChange($event)">
+                  <span minLabel>0</span>
+                  <span maxLabel>100</span>
+                </ibm-slider>
+              </div>
+              <div>
+                <ibm-number
+                  [label]="'Number label'"
+                  [helperText]="''"
+                  [theme]="'light'"
+                  [min]="0"
+                  [max]="100"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [size]="'md'"
+                  [disabled]="false">
+                </ibm-number>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-productive-heading-02 px-4">FILE UPLOADER</div>
+          <div class="app-card mb-6">
+            <div class="app-card__content">
+              <div class="">
+                <ibm-file-uploader
+                  [title]="'File uploader'"
+                  [description]="'only jpg, png'"
+                  [buttonText]="'Add files'"
+                  [buttonType]="'primary'"
+                  [accept]="'.png,image/jpeg'"
+                  [multiple]="true"
+                  [size]="'normal'"
+                  [disabled]="false">
+                </ibm-file-uploader>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</app-content-simple>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core'
 
 @Component({
   selector: 'app-forms-advanced',
@@ -7,9 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormsAdvancedComponent implements OnInit {
 
-  constructor() { }
+  public items = [
+    {content: "one"},
+    {content: "two", selected: true},
+    {content: "three"},
+    {content: "four"}
+  ]
+
+  public items2 = [
+    {content: "one"},
+    {content: "two", selected: true},
+    {content: "three"},
+    {content: "four"}
+  ]
+
+  public minLabel
+  public maxLabel
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  valueChange(event){
+
   }
 
 }

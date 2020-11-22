@@ -66,6 +66,10 @@
   outline-offset: -2px;
   margin: 0.5rem;
 
+  &.app-card--transparent {
+    background-color: transparent;
+  }
+
   &.app-card--tile {
     margin: 0.25rem;
   }

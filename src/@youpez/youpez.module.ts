@@ -155,6 +155,10 @@ import {
   NotificationModule,
   RadioModule,
   PaginationModule,
+  SelectModule,
+  SliderModule,
+  NumberModule,
+  FileUploaderModule,
 } from 'carbon-components-angular'
 
 import {AppMenuComponent} from "./components/app-menu/app-menu/app-menu.component"
@@ -220,6 +224,10 @@ const CarbonModules = [
   NotificationModule,
   RadioModule,
   PaginationModule,
+  SelectModule,
+  SliderModule,
+  NumberModule,
+  FileUploaderModule,
 ]
 
 const CarbonIconModules = [

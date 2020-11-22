@@ -1,11 +1,512 @@
 <app-content-simple mainTitle="Forms - general">
   <div fxLayout="row wrap">
-    <div fxFlex="100%" fxFlex.gt-md="50%">
-      <div class="mb-6">
-        <div class="mb-4">
-          <div class="app-subtitle">TABLE SIZE</div>
+    <div fxFlex="100%" fxFlex.gt-md="60%">
+      <div class="app-productive-heading-02 px-4">INPUT</div>
+      <div fxLayout="row wrap" class="mb-6">
+        <div fxFlex="100%" fxFlex.gt-md="50%">
+          <div class="app-card">
+            <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-label
+                  [invalid]="false"
+                  [invalidText]="''">
+                  Small text input
+                  <input
+                    ibmText
+                    [size]="'sm'"
+                    [invalid]="false"
+                    [disabled]="false"
+                    theme="light"
+                    [placeholder]="'placeholder'"
+                    [autocomplete]="true">
+                </ibm-label>
+              </div>
+              <div class="mb-6">
+                <ibm-label
+                  [invalid]="false"
+                  [invalidText]="''">
+                  Medium text input
+                  <input
+                    ibmText
+                    size="md"
+                    [invalid]="false"
+                    [disabled]="false"
+                    theme="light"
+                    [placeholder]="'placeholder'"
+                    [autocomplete]="true">
+                </ibm-label>
+              </div>
+              <div class="mb-6">
+                <ibm-label
+                  [invalid]="false"
+                  [invalidText]="''">
+                  XL text input
+                  <input
+                    ibmText
+                    size="xl"
+                    [invalid]="false"
+                    [disabled]="false"
+                    theme="light"
+                    [placeholder]="'placeholder'"
+                    [autocomplete]="true">
+                </ibm-label>
+              </div>
+              <div>
+                <ibm-label
+                  [invalid]="false"
+                  [invalidText]="''">
+                  Disabled text input
+                  <input
+                    ibmText
+                    size="md"
+                    [invalid]="false"
+                    [disabled]="true"
+                    theme="light"
+                    [placeholder]="'placeholder'"
+                    [autocomplete]="true">
+                </ibm-label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="100%" fxFlex.gt-md="50%">
+          <div class="m-2 mb-4 p-4 app-border-all">
+            <div class="mb-6">
+              <ibm-label
+                [invalid]="false"
+                [invalidText]="''">
+                Text input on darker background
+                <input
+                  ibmText
+                  size="md"
+                  [invalid]="false"
+                  [disabled]="false"
+                  theme="dark"
+                  [placeholder]="'placeholder'"
+                  [autocomplete]="true">
+              </ibm-label>
+            </div>
+            <div class="">
+              <ibm-label
+                [invalid]="false"
+                [invalidText]="''">
+                Disabled input on darker background
+                <input
+                  ibmText
+                  size="md"
+                  [invalid]="false"
+                  [disabled]="true"
+                  theme="dark"
+                  [placeholder]="'placeholder'"
+                  [autocomplete]="true">
+              </ibm-label>
+            </div>
+          </div>
+          <div class="app-card">
+            <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-label
+                  [helperText]="'Helper text here'"
+                  [invalid]="false"
+                  [invalidText]="''">
+                  Text input label
+                  <input
+                    ibmText
+                    size="md"
+                    [invalid]="false"
+                    [disabled]="false"
+                    theme="light"
+                    [placeholder]="''"
+                    [autocomplete]="true">
+                </ibm-label>
+              </div>
+              <div class="">
+                <ibm-label
+                  [helperText]="'Helper text here'"
+                  [invalid]="true"
+                  [invalidText]="'Validation message here'">
+                  Text input label
+                  <input
+                    ibmText
+                    size="md"
+                    [invalid]="true"
+                    [disabled]="false"
+                    theme="light"
+                    [placeholder]="''"
+                    [autocomplete]="true">
+                </ibm-label>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="app-productive-heading-02 px-4">TEXTAREA</div>
+      <div fxLayout="row wrap" class="mb-6">
+        <div fxFlex="100%" fxFlex.gt-md="50%">
+          <div class="app-card">
+            <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-label
+                  [helperText]="'Optional helper text.'"
+                  [invalid]="false"
+                  [invalidText]="''">
+                  Text area label
+                  <textarea
+                    ibmTextArea
+                    [placeholder]="''"
+                    [invalid]="false"
+                    [disabled]="false"
+                    theme="light"
+                    [rows]="5"
+                    [cols]="5"
+                    aria-label="textarea"></textarea>
+                </ibm-label>
+              </div>
+
+              <div class="mb-6">
+                <ibm-label
+                  [invalid]="true"
+                  [invalidText]="'Validation message here'">
+                  Text area label
+                  <textarea
+                    ibmTextArea
+                    [placeholder]="''"
+                    [invalid]="true"
+                    [disabled]="false"
+                    theme="light"
+                    [rows]="5"
+                    [cols]="5"
+                    aria-label="textarea"></textarea>
+                </ibm-label>
+              </div>
+
+              <div>
+                <ibm-label
+                  [invalid]="false"
+                  [invalidText]="''">
+                  Disabled Text area
+                  <textarea
+                    ibmTextArea
+                    [placeholder]="''"
+                    [invalid]="false"
+                    [disabled]="true"
+                    theme="light"
+                    [rows]="5"
+                    [cols]="5"
+                    aria-label="textarea"></textarea>
+                </ibm-label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="100%" fxFlex.gt-md="50%">
+          <div class="mx-2 p-4 app-border-all">
+            <div class="mb-6">
+              <ibm-label
+                [invalid]="false"
+                [invalidText]="''">
+                Text area on darker background
+                <textarea
+                  ibmTextArea
+                  [placeholder]="''"
+                  [invalid]="false"
+                  [disabled]="false"
+                  theme="dark"
+                  [rows]="5"
+                  [cols]="5"
+                  aria-label="textarea"></textarea>
+              </ibm-label>
+            </div>
+            <div class="">
+              <ibm-label
+                [invalid]="false"
+                [invalidText]="''">
+                Disable text area on darker background
+                <textarea
+                  ibmTextArea
+                  [placeholder]="''"
+                  [invalid]="false"
+                  [disabled]="true"
+                  theme="dark"
+                  [rows]="5"
+                  [cols]="5"
+                  aria-label="textarea"></textarea>
+              </ibm-label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-productive-heading-02 px-4">SELECT</div>
+      <div fxLayout="row wrap">
+        <div fxFlex="100%" fxFlex.gt-md="50%">
+          <div class="app-card">
+            <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-select
+                  [disabled]="false"
+                  size="sm"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [label]="'Select small'"
+                  [helperText]="''"
+                  theme="light"
+                  [display]="''">
+                  <option value="default" disabled selected hidden>Choose an option</option>
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+                </ibm-select>
+              </div>
+              <div class="mb-6">
+                <ibm-select
+                  [disabled]="false"
+                  size="md"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [label]="'Select medium'"
+                  [helperText]="''"
+                  theme="light"
+                  [display]="''">
+                  <option value="default" disabled selected hidden>Choose an option</option>
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+                </ibm-select>
+              </div>
+              <div class="mb-6">
+                <ibm-select
+                  [disabled]="false"
+                  size="xl"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [label]="'Select XL'"
+                  [helperText]="''"
+                  theme="light"
+                  [display]="''">
+                  <option value="" disabled selected hidden>Choose an option</option>
+                  <option value="solong">A much longer option that is worth having around to check how text flows
+                  </option>
+                  <optgroup label="Category 1">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                  </optgroup>
+                  <optgroup label="Category 2">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                  </optgroup>
+                </ibm-select>
+              </div>
+              <div>
+                <ibm-select
+                  [disabled]="true"
+                  size="sm"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [label]="'Disabled select'"
+                  [helperText]="''"
+                  theme="light"
+                  [display]="''">
+                  <option value="default" disabled selected hidden>Choose an option</option>
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+                </ibm-select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div fxFlex="100%" fxFlex.gt-md="50%">
+          <div class="app-card">
+            <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-select
+                  [disabled]="false"
+                  size="md"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [label]="'Select medium'"
+                  [helperText]="'Helper text here'"
+                  theme="light"
+                  [display]="''">
+                  <option value="default" disabled selected hidden>Choose an option</option>
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+                </ibm-select>
+              </div>
+              <div class="">
+                <ibm-select
+                  [disabled]="false"
+                  size="md"
+                  [invalid]="true"
+                  [invalidText]="'Validation message here'"
+                  [label]="'Select medium'"
+                  [helperText]="''"
+                  theme="light"
+                  [display]="''">
+                  <option value="default" disabled selected hidden>Choose an option</option>
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+                </ibm-select>
+              </div>
+            </div>
+          </div>
+
+          <div class="mx-2 p-4 mt-2 app-border-all">
+            <div>
+              <div class="mb-6">
+                <ibm-select
+                  [disabled]="false"
+                  size="md"
+                  [invalid]="false"
+                  [invalidText]="''"
+                  [label]="'Select medium'"
+                  [helperText]="'Helper text here'"
+                  theme="dark"
+                  [display]="''">
+                  <option value="default" disabled selected hidden>Choose an option</option>
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+                </ibm-select>
+              </div>
+              <div class="">
+                <ibm-select
+                  [disabled]="false"
+                  size="md"
+                  [invalid]="true"
+                  [invalidText]="'Validation message here'"
+                  [label]="'Select medium'"
+                  [helperText]="''"
+                  theme="dark"
+                  [display]="''">
+                  <option value="default" disabled selected hidden>Choose an option</option>
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+                </ibm-select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="app-productive-heading-02 px-4 mt-6">CHECKBOX</div>
+      <div fxLayout="row wrap">
+        <div fxFlex="100%" fxFlex.gt-md="50%">
+          <div class="app-card">
+            <div class="app-card__content">
+              <fieldset class="bx--fieldset">
+                <legend class="bx--label">Checkboxes</legend>
+                <ibm-checkbox
+                  checked="true">
+                  Checkbox
+                </ibm-checkbox>
+                <ibm-checkbox
+                  indeterminate="true">
+                  Indeterminate checkbox
+                </ibm-checkbox>
+                <ibm-checkbox
+                  disabled="true">
+                  Disabled checkbox
+                </ibm-checkbox>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="app-productive-heading-02 px-4 mt-6">RADIO BUTTON</div>
+      <div fxLayout="row wrap">
+        <div fxFlex="100%" fxFlex.gt-md="50%">
+          <div class="app-card">
+            <div class="app-card__content">
+              <ibm-radio-group
+                aria-label="radiogroup">
+                <ibm-radio
+                  value="radio"
+                  checked="true">
+                  zero
+                </ibm-radio>
+                <ibm-radio [value]="'one'"
+                           [disabled]="false">
+                  one
+                </ibm-radio>
+                <ibm-radio [value]="'two'"
+                           [disabled]="false">
+                  two
+                </ibm-radio>
+                <ibm-radio [value]="'three'"
+                           [disabled]="false">
+                  three
+                </ibm-radio>
+                <ibm-radio [value]="'four'"
+                           [disabled]="true">
+                  four
+                </ibm-radio>
+              </ibm-radio-group>
+              <div class="mt-6">
+                <ibm-radio-group
+                  orientation="vertical"
+                  aria-label="radiogroup">
+                  <ibm-radio
+                    value="radio"
+                    checked="true">
+                    zero
+                  </ibm-radio>
+                  <ibm-radio [value]="'one'"
+                             [disabled]="false">
+                    one
+                  </ibm-radio>
+                  <ibm-radio [value]="'two'"
+                             [disabled]="false">
+                    two
+                  </ibm-radio>
+                  <ibm-radio [value]="'three'"
+                             [disabled]="false">
+                    three
+                  </ibm-radio>
+                  <ibm-radio [value]="'four'"
+                             [disabled]="true">
+                    four
+                  </ibm-radio>
+                </ibm-radio-group>
+              </div>
+              <div class="mt-6">
+                <ibm-radio-group
+                  labelPlacement="left"
+                  orientation="vertical"
+                  aria-label="radiogroup">
+                  <ibm-radio
+                    value="radio"
+                    checked="true">
+                    zero
+                  </ibm-radio>
+                  <ibm-radio [value]="'one'"
+                             [disabled]="false">
+                    one
+                  </ibm-radio>
+                  <ibm-radio [value]="'two'"
+                             [disabled]="false">
+                    two
+                  </ibm-radio>
+                  <ibm-radio [value]="'three'"
+                             [disabled]="false">
+                    three
+                  </ibm-radio>
+                  <ibm-radio [value]="'four'"
+                             [disabled]="true">
+                    four
+                  </ibm-radio>
+                </ibm-radio-group>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </app-content-simple>
