@@ -1,0 +1,130 @@
+<form [formGroup]="formGroup" class="app-form">
+  <div fxLayout="row wrap" class="app-form__row">
+    <div fxFlex="100%" class="app-form__item">
+      <div class="app-input">
+        <ibm-label
+          [invalidText]="'This field is required or incorrect'"
+          [invalid]="isValid('name')">
+          Name
+          <input
+            type="text"
+            formControlName="name"
+            [invalid]="isValid('name')"
+            ibmText
+            size="md"
+            [theme]="theme"
+            [placeholder]="''"
+            [autocomplete]="false">
+        </ibm-label>
+      </div>
+    </div>
+
+    <div fxFlex="100%" [fxFlex.gt-md]="getRowLayout(50)" class="app-form__item">
+      <div class="app-input">
+        <ibm-dropdown
+          [label]="'Country'"
+          formControlName="country"
+          size="md"
+          [invalid]="isValid('country')"
+          [invalidText]="'This field is required or incorrect'"
+          dropUp="false"
+          [theme]="theme"
+          placeholder="">
+          <ibm-dropdown-list [items]="countries"></ibm-dropdown-list>
+        </ibm-dropdown>
+      </div>
+    </div>
+    <div fxFlex="100%" [fxFlex.gt-md]="getRowLayout(50)" class="app-form__item">
+      <div class="app-input">
+        <ibm-dropdown
+          [label]="'State or province'"
+          formControlName="state"
+          size="md"
+          [invalid]="isValid('state')"
+          [invalidText]="'This field is required or incorrect'"
+          dropUp="false"
+          [theme]="theme"
+          placeholder="">
+          <ibm-dropdown-list [items]="usStates"></ibm-dropdown-list>
+        </ibm-dropdown>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="row wrap" class="app-form__row">
+    <div fxFlex="100%" [fxFlex.gt-md]="getRowLayout(25)" class="app-form__item">
+      <div class="app-input">
+        <ibm-label
+          [invalid]="isValid('zip')">
+          Zip code
+          <input
+            type="text"
+            formControlName="zip"
+            [invalid]="isValid('zip')"
+            ibmText
+            size="md"
+            [theme]="theme"
+            [placeholder]="''"
+            [autocomplete]="false">
+        </ibm-label>
+      </div>
+    </div>
+    <div fxFlex="100%" [fxFlex.gt-md]="getRowLayout(75)" class="app-form__item">
+      <div class="app-input">
+        <ibm-label
+          [invalidText]="'This field is required or incorrect'"
+          [invalid]="isValid('city')">
+          City
+          <input
+            formControlName="city"
+            [invalid]="isValid('city')"
+            ibmText
+            size="md"
+            [theme]="theme"
+            [placeholder]="''"
+            [autocomplete]="false">
+        </ibm-label>
+      </div>
+    </div>
+    <div fxFlex="100%" class="app-form__item">
+      <div class="app-input">
+        <ibm-label
+          [invalidText]="'This field is required or incorrect'"
+          [invalid]="isValid('street')">
+          Street address
+          <input
+            type="text"
+            formControlName="street"
+            [invalid]="isValid('street')"
+            ibmText
+            size="md"
+            [theme]="theme"
+            [placeholder]="''"
+            [autocomplete]="false">
+        </ibm-label>
+      </div>
+    </div>
+    <div fxFlex="100%" class="app-form__item">
+      <ibm-toggle
+        class="app-ibm-toggle-fix"
+        [onText]="'Personal use only'"
+        [offText]="'Business use only'"
+        [disabled]="false"
+        [checked]="true"
+        size="md">
+      </ibm-toggle>
+    </div>
+    <div fxFlex="100%" class="app-form__item app-form__item--opts">
+      <div class="flex justify-between items-center">
+        <ibm-checkbox formControlName="condition">
+          I have read and accept
+          <a class="app-link">terms & conditions</a>
+        </ibm-checkbox>
+      </div>
+      <ng-container *ngIf="isValid('condition')">
+        <div class="app-helper-text-01 app-color-danger">This field is required</div>
+      </ng-container>
+    </div>
+  </div>
+</form>
+

@@ -75,7 +75,7 @@ export class DummyTablePaginationComponent implements OnInit {
   }
 
   onRowClick(index: number) {
-    console.log("Row item selected:", index)
+
   }
 
   protected prepareData(data: Array<Array<any>>) {

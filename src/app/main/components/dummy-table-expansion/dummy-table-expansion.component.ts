@@ -76,7 +76,7 @@ export class DummyTableExpansionComponent implements OnInit {
   }
 
   onRowClick(index: number) {
-    console.log("Row item selected:", index)
+
   }
 
   sort(model, index: number) {

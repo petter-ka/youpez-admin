@@ -1,1 +1,82 @@
-<p>forms-wizard works!</p>
+<app-content-simple mainTitle="Wizard">
+  <div fxLayout="row wrap">
+    <div fxFlex="100%" fxFlex.gt-md="850px">
+      <div fxLayout="row wrap" class="mb-6">
+        <div fxFlex="100%" fxFlex.gt-md="70%" class="">
+          <div class="mb-6">
+            <div class="mb-4">
+              <div class="app-productive-heading-03 font-bold">Working form wizard (horizontal)</div>
+              <div class="app-body-short-01">wizard steps are validated with submit buttons, but for demo purposes: you
+                can view the pages by clicking on the step title
+              </div>
+            </div>
+            <div class="app-card app-card--m-0">
+              <div class="app-card__content" style="padding-top:0;">
+                <app-dummy-form-wizard></app-dummy-form-wizard>
+              </div>
+            </div>
+          </div>
+          <div class="mb-6">
+            <div class="mb-4">
+              <div class="app-productive-heading-03 font-bold">Working form wizard (horizontal)</div>
+              <div class="app-body-short-01">wizard steps are validated with submit buttons</div>
+            </div>
+            <div class="app-card app-card--m-0">
+              <div class="app-card__content" style="padding-left:0;">
+                <app-dummy-form-wizard orientation="vertical"></app-dummy-form-wizard>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <div class="mb-4">
+              <div class="app-productive-heading-03 font-bold">Form wizard style alternative #1</div>
+            </div>
+            <div class="app-card app-card--m-0">
+              <div class="app-card__content" style="padding-top:0;">
+                <app-dummy-form-wizard formTheme="dark"></app-dummy-form-wizard>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <div class="mb-4">
+              <div class="app-productive-heading-03 font-bold">Form wizard style alternative #2</div>
+            </div>
+            <div class="app-card app-card--m-0 app-card--transparent app-border-all">
+              <div class="app-card__content" style="padding-top:0;">
+                <app-dummy-form-wizard formTheme="dark"></app-dummy-form-wizard>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <div class="mb-4">
+              <div class="app-productive-heading-03 font-bold">Form wizard style alternative #3</div>
+            </div>
+            <div class="app-card app-card--m-0 app-card--transparent app-border-all">
+              <div class="app-card__content" style="padding-left:0">
+                <app-dummy-form-wizard orientation="vertical" formTheme="light"></app-dummy-form-wizard>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="mb-4">
+              <div class="app-productive-heading-03 font-bold">Wizard steps states & tooltips</div>
+              <div class="app-body-short-01">error state, overflow texts, disabled step, optional subtitle</div>
+            </div>
+            <div class="app-card app-card--m-0">
+              <div class="app-card__content">
+                <ibm-progress-indicator [steps]="demoSteps" [current]="demoCurrentPage"></ibm-progress-indicator>
+              </div>
+              <div class="app-card__content">
+                <ibm-progress-indicator orientation="vertical" [steps]="demoSteps" [current]="demoCurrentPage"></ibm-progress-indicator>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-content-simple>

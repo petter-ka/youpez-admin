@@ -1,9 +1,8 @@
-<app-content-simple mainTitle="Forms - general">
+<app-content-simple mainTitle="Forms - advanced">
   <div fxLayout="row wrap">
     <div fxFlex="100%" fxFlex.gt-md="60%">
-
-      <div fxLayout="row wrap" class="mb-6">
-        <div fxFlex="100%" fxFlex.gt-md="50%">
+      <div fxLayout="row wrap" class="mb-6 app-card-row">
+        <div fxFlex="100%" fxFlex.gt-md="50%" class="">
           <div class="app-productive-heading-02 px-4">DROPDOWN</div>
           <div class="app-card mb-6">
             <div class="app-card__content">
@@ -96,7 +95,6 @@
               </div>
             </div>
           </div>
-
           <div class="app-card app-card--transparent mb-6">
             <div class="app-card__content">
               <div class="mb-6">
@@ -130,9 +128,44 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <div fxFlex="100%" fxFlex.gt-md="50%">
+          <div class="app-productive-heading-02 px-4">TOGGLE</div>
+          <div class="app-card mb-6">
+            <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-toggle
+                  [label]="'Toggle'"
+                  [onText]="'On'"
+                  [offText]="'Off'"
+                  [disabled]="false"
+                  [checked]="true"
+                  size="sm">
+                </ibm-toggle>
+              </div>
+              <div class="mb-6">
+                <ibm-toggle
+                  [label]="'Toggle'"
+                  [onText]="'On'"
+                  [offText]="'Off'"
+                  [disabled]="false"
+                  [checked]="false"
+                  size="md">
+                </ibm-toggle>
+              </div>
+              <div class="mb-6">
+                <ibm-toggle
+                  [label]="'Disabled'"
+                  [onText]="'On'"
+                  [offText]="'Off'"
+                  [disabled]="true"
+                  [checked]="false"
+                  size="md">
+                </ibm-toggle>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="100%" fxFlex.gt-md="50%" class="">
           <div class="app-productive-heading-02 px-4">COMBOBOX</div>
           <div class="app-card mb-6">
             <div class="app-card__content">
@@ -167,10 +200,6 @@
               </div>
             </div>
           </div>
-
-
-
-
           <div class="app-productive-heading-02 px-4">DATE</div>
           <div class="app-card mb-6">
             <div class="app-card__content">
@@ -199,7 +228,6 @@
                   [dateFormat]="'m/d/Y'">
                 </ibm-date-picker>
               </div>
-
               <div class="">
                 <ibm-date-picker
                   class="app-inline-block"
@@ -217,10 +245,8 @@
                   [dateFormat]="'m/d/Y'">
                 </ibm-date-picker>
               </div>
-
             </div>
           </div>
-
           <div class="app-productive-heading-02 px-4">SLIDER / NUMBER</div>
           <div class="app-card mb-6">
             <div class="app-card__content">
@@ -254,12 +280,25 @@
               </div>
             </div>
           </div>
-
           <div class="app-productive-heading-02 px-4">FILE UPLOADER</div>
           <div class="app-card mb-6">
             <div class="app-card__content">
+              <div class="mb-6">
+                <ibm-file-uploader
+                  [title]="'File uploader'"
+                  [description]="'only jpg, png'"
+                  [buttonText]="'Add files'"
+                  [buttonType]="'primary'"
+                  [accept]="'.png,image/jpeg'"
+                  [multiple]="true"
+                  [size]="'normal'"
+                  [disabled]="false">
+                </ibm-file-uploader>
+              </div>
               <div class="">
                 <ibm-file-uploader
+                  drop="true"
+                  [dropText]="'Drag and drop files here or upload'"
                   [title]="'File uploader'"
                   [description]="'only jpg, png'"
                   [buttonText]="'Add files'"
@@ -272,10 +311,7 @@
               </div>
             </div>
           </div>
-
         </div>
-
-
       </div>
     </div>
   </div>

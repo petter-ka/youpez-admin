@@ -510,7 +510,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
               url: '/app/forms/advanced',
             },
             {
-              name: 'Validation',
+              name: 'Validation & Layouts',
               url: '/app/forms/validation',
             },
             {

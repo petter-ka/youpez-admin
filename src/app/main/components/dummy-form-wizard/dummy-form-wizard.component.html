@@ -1,0 +1,128 @@
+<div fxLayout="row wrap">
+  <div [fxFlex]="orientation === 'vertical'? '145px' : '100%'" [fxFlex.gt-md]="orientation === 'vertical'? '145px' : '100%'">
+    <ibm-progress-indicator
+      [orientation]="orientation"
+      [steps]="steps"
+      [current]="current"
+      (stepSelected)="stepSelected($event)"></ibm-progress-indicator>
+  </div>
+  <div [fxFlex]="orientation === 'vertical'? '' : '100%'" fxFlex.gt-md="">
+    <ng-container *ngIf="current === 0">
+      <div [class]="orientation === 'vertical'? '' : 'mt-6'">
+        <div class="app-productive-heading-02 mb-4">Fill in your basic information</div>
+        <app-dummy-form-billing #billingForm [theme]="formTheme" [layout]="formLayout"></app-dummy-form-billing>
+        <div class="mt-1 flex justify-end">
+          <button (click)="billingForm.submit();onGotoStep(1,billingForm.isFormValid())"
+                  ibmButton="primary"
+                  size="field">
+            Next
+            <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+          </button>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="current === 1">
+      <div [class]="orientation === 'vertical'? '' : 'mt-6'">
+        <div class="app-productive-heading-02 mb-4">Fill in your credit card details</div>
+        <app-dummy-form-credit-card #creditCardForm [theme]="formTheme" [layout]="formLayout"></app-dummy-form-credit-card>
+        <div class="mt-1 flex justify-end">
+          <button (click)="creditCardForm.submit();onGotoStep(2,creditCardForm.isFormValid())" ibmButton="primary" size="field">
+            Next
+            <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+          </button>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="current === 2">
+      <div [class]="orientation === 'vertical'? '' : 'mt-6'">
+        <div class="app-productive-heading-02 mb-1">This is your summary</div>
+        <div class="app-body-short-01 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non fringilla
+          lectus.
+          Quisque eleifend scelerisque felis, nec luctus nibh auctor in.
+        </div>
+
+        <div class="app-list app-list--simple app-list--hover app-list--select app-border-all">
+          <div class="app-list__item">
+            <div class="app-list__item__content">
+              <div class="flex justify-between w-full">
+                <div>Product #1</div>
+                <div>120 $</div>
+              </div>
+            </div>
+          </div>
+          <div class="app-list__item">
+            <div class="app-list__item__content">
+              <div class="flex justify-between w-full">
+                <div>Product #2</div>
+                <div>99 $</div>
+              </div>
+            </div>
+          </div>
+          <div class="app-list__item">
+            <div class="app-list__item__content">
+              <div class="flex justify-between w-full">
+                <div>Product #3</div>
+                <div>12 $</div>
+              </div>
+            </div>
+          </div>
+          <div class="app-list__item">
+            <div class="app-list__item__content">
+              <div class="flex justify-between w-full">
+                <div>Product #4</div>
+                <div>5 $</div>
+              </div>
+            </div>
+          </div>
+          <div class="app-list__item">
+            <div class="app-list__item__content">
+              <div class="flex justify-between w-full">
+                <div>Product #5</div>
+                <div>745 $</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-productive-heading-05 flex justify-end mt-2">1,123 $</div>
+
+        <div class="app-productive-heading-05 flex justify-end mt-4">
+          <button ibmButton="primary" size="field" (click)="onGotoStep(3,true)">
+            Purchase now
+            <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+          </button>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="current === 3">
+      <div [class]="orientation === 'vertical'? '' : 'mt-6'">
+        <div class="text-center">
+
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
+               width="150px" height="150px"
+               y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+            <g id="high_five">
+              <path id="high_five_1_"
+                    style="fill:none;stroke:#000000;stroke-width:0.72;stroke-linejoin:round;stroke-miterlimit:10;"
+                    d="   M9.5,34v-8.619c0-2.836,1.968-5.21,4.612-5.837c-1.197-0.533-2.032-1.73-2.032-3.124c0-1.889,1.531-3.42,3.42-3.42   s3.42,1.531,3.42,3.42c0,1.394-0.836,2.592-2.032,3.124c3.701-1.268,4.944-2.725,6.206-4.061c1.262-1.336,2.008-0.849,2.405-0.483   c0.442,0.406,1,1.263-0.313,2.625c-1.312,1.362-4.687,4.784-4.687,4.784V34 M28.5,34V22.409c0,0-2.39-2.423-3.93-4.003 M39.5,34   v-8.619c0-2.836-1.968-5.21-4.612-5.837c1.197-0.533,2.032-1.73,2.032-3.124c0-1.889-1.531-3.42-3.42-3.42   c-1.889,0-3.42,1.531-3.42,3.42c0,1.394,0.836,2.592,2.032,3.124c-3.701-1.268-5.119-2.956-6.381-4.291"/>
+            </g>
+          </svg>
+
+          <div class="app-productive-heading-04 mb-1">Thank your for purchasing!</div>
+          <div class="app-productive-heading-03 mb-6">You are awesome!</div>
+
+          <button ibmButton="primary" size="field">
+            Go to my purchases
+            <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+          </button>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+</div>
+
+

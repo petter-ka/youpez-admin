@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common'
 import {NavigationEnd, NavigationStart, Router, RouterModule} from '@angular/router'
 import {ReactiveFormsModule} from "@angular/forms"
 import {NgxMdModule} from 'ngx-md'
+import {NgxMaskModule, IConfig} from 'ngx-mask'
 
 import {NgScrollbarModule} from 'ngx-scrollbar'
 import {DragDropModule} from '@angular/cdk/drag-drop'
@@ -121,7 +122,7 @@ import {
   CheckmarkModule,
   CheckmarkFilledModule,
   AppsModule,
-  WatsonHealthContourFindingModule,
+  WatsonHealthContourFindingModule, SaveModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -158,7 +159,7 @@ import {
   SelectModule,
   SliderModule,
   NumberModule,
-  FileUploaderModule,
+  FileUploaderModule, ProgressIndicatorModule,
 } from 'carbon-components-angular'
 
 import {AppMenuComponent} from "./components/app-menu/app-menu/app-menu.component"
@@ -343,6 +344,8 @@ const CarbonIconModules = [
   ViewModule,
   AppsModule,
   CloseModule,
+  SaveModule,
+  ProgressIndicatorModule,
 ]
 
 const Components = [
@@ -388,6 +391,7 @@ const Pipes = [
     }),
     NgxMdModule,
     WatsonHealthContourFindingModule,
+    NgxMaskModule.forRoot(),
   ],
   declarations: [
     ...Components,
@@ -401,6 +405,7 @@ const Pipes = [
     ...Pipes,
     NgScrollbarModule,
     NgxMdModule,
+    NgxMaskModule,
   ]
 })
 export class YoupezModule {

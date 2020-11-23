@@ -1,1 +1,269 @@
-<p>forms-validation works!</p>
+<app-content-simple mainTitle="Validation & Layouts">
+  <div fxLayout="row wrap">
+    <div fxFlex="100%" fxFlex.gt-md="850px">
+      <div fxLayout="row wrap" class="mb-6">
+        <div fxFlex="100%" fxFlex.gt-md="70%" class="">
+          <div class="mb-6">
+            <div class="mb-3">
+              <div class="app-productive-heading-03 font-bold">Credit card form example</div>
+              <div class="app-body-short-01">form with advanced input-mask validate</div>
+            </div>
+            <div class="app-cards-vertical-merge">
+              <div class="app-card">
+                <div class="app-card__content">
+                  <app-dummy-form-credit-card #creditCardForm></app-dummy-form-credit-card>
+                </div>
+              </div>
+              <div class="app-card">
+                <div class="app-card__content flex justify-end">
+                  <button (click)="creditCardForm.reset()" ibmButton="ghost" size="field" class="mr-1">
+                    Reset
+                  </button>
+                  <button (click)="creditCardForm.submit()" ibmButton="primary" size="field">
+                    Save card
+                    <svg class="bx--btn__icon" ibmIconSave size="20"></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-6">
+            <div class="mb-3">
+              <div class="app-productive-heading-03 font-bold">Billing form example</div>
+              <div class="app-body-short-01">useful submit validated responsive form</div>
+            </div>
+            <div class="app-cards-vertical-merge">
+              <div class="app-card">
+                <div class="app-card__content">
+                  <app-dummy-form-billing #billingForm1></app-dummy-form-billing>
+                </div>
+              </div>
+              <div class="app-card">
+                <div class="app-card__content flex justify-end">
+                  <button (click)="billingForm1.reset()" ibmButton="ghost" size="field" class="mr-1">
+                    Reset
+                  </button>
+                  <button (click)="billingForm1.submit()" ibmButton="primary" size="field">
+                    Save data
+                    <svg class="bx--btn__icon" ibmIconSave size="20"></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-6">
+            <div class="app-cards-vertical-merge">
+              <div class="app-card">
+                <div class="app-card__content">
+                  <div class="">
+                    <div class="app-productive-heading-03 font-bold">Credit card layout #2</div>
+                    <div class="app-body-short-01">form inputs styling alternative</div>
+                  </div>
+                </div>
+              </div>
+              <div class="app-card">
+                <div class="app-card__content">
+                  <app-dummy-form-credit-card theme="dark" #creditCardForm2></app-dummy-form-credit-card>
+                </div>
+              </div>
+              <div class="app-card">
+                <div class="app-card__content flex justify-end">
+                  <button (click)="creditCardForm2.reset()" ibmButton="ghost" size="field" class="mr-1">
+                    Reset
+                  </button>
+                  <button (click)="creditCardForm2.submit()" ibmButton="primary" size="field">
+                    Save card
+                    <svg class="bx--btn__icon" ibmIconSave size="20"></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-6">
+            <div class="app-card app-card--m-0 app-card--transparent app-border-all">
+              <div class="app-card__content">
+                <div class="mb-6">
+                  <div class="app-productive-heading-03 font-bold">Credit card layout #3</div>
+                  <div class="app-body-short-01">form inputs styling alternative on transparent card</div>
+                </div>
+                <div class="mb-2">
+                  <app-dummy-form-credit-card #creditCardForm3></app-dummy-form-credit-card>
+                </div>
+                <div class="flex justify-end">
+                  <button (click)="creditCardForm3.reset()" ibmButton="ghost" size="field" class="mr-1">
+                    Reset
+                  </button>
+                  <button (click)="creditCardForm3.submit()" ibmButton="primary" size="field">
+                    Save card
+                    <svg class="bx--btn__icon" ibmIconSave size="20"></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-6">
+            <div class="app-card app-card--m-0 app-card--transparent app-border-all">
+              <div class="app-card__content">
+                <div class="mb-6">
+                  <div class="app-productive-heading-03 font-bold">Credit card layout #4</div>
+                  <div class="app-body-short-01">form inputs contrast styling on transparent card</div>
+                </div>
+                <div class="mb-2">
+                  <app-dummy-form-credit-card theme="dark" #creditCardForm4></app-dummy-form-credit-card>
+                </div>
+                <div class="flex justify-end">
+                  <button (click)="creditCardForm4.reset()" ibmButton="ghost" size="field" class="mr-1">
+                    Reset
+                  </button>
+                  <button (click)="creditCardForm4.submit()" ibmButton="primary" size="field">
+                    Save card
+                    <svg class="bx--btn__icon" ibmIconSave size="20"></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <div class="mb-3">
+              <div class="app-productive-heading-03 font-bold">Vertical layout</div>
+              <div class="app-body-short-01">separated vertical sections & common submit button</div>
+            </div>
+            <div class="app-cards-vertical-merge">
+              <div fxLayout="row wrap">
+                <div fxFlex="100%" fxFlex.gt-md="40%">
+                  <div class="app-card" fxFlex>
+                    <div class="app-card__content">
+                      <div class="app-productive-heading-02 font-bold mb-1">Billing form</div>
+                      <div class="app-body-short-01">this is a very long billing form explanation for this section
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div fxFlex="100%" fxFlex.gt-md="60%">
+                  <div class="app-card">
+                    <div class="app-card__content">
+                      <app-dummy-form-billing #billingForm layout="vertical"></app-dummy-form-billing>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div fxLayout="row wrap">
+                <div fxFlex="100%" fxFlex.gt-md="40%">
+                  <div class="app-card" fxFlex>
+                    <div class="app-card__content">
+                      <div class="app-productive-heading-02 font-bold mb-1">Credit card form</div>
+                      <div class="app-body-short-01">this is a very long credit card form explanation for this section
+                        beacuse it is nice
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div fxFlex="100%" fxFlex.gt-md="60%">
+                  <div class="app-card">
+                    <div class="app-card__content">
+                      <app-dummy-form-credit-card layout="vertical" #creditCardForm5></app-dummy-form-credit-card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="app-card">
+                <div class="app-card__content flex justify-end">
+                  <button (click)="creditCardForm5.reset();billingForm.reset()" ibmButton="ghost" size="field" class="mr-1">
+                    Reset
+                  </button>
+                  <button (click)="creditCardForm5.submit();billingForm.submit()" ibmButton="primary" size="field">
+                    Save data
+                    <svg class="bx--btn__icon" ibmIconSave size="20"></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <div class="app-cards-vertical-merge">
+
+              <div class="app-card">
+                <div class="app-card__content">
+                  <div class="">
+                    <div class="app-productive-heading-03 font-bold">Credit vertical layout</div>
+                    <div class="app-body-short-01">form advanced validate with input-mask</div>
+                  </div>
+                </div>
+              </div>
+
+              <div fxLayout="row wrap">
+                <div fxFlex="100%" fxFlex.gt-md="40%">
+                  <div class="app-card" fxFlex>
+                    <div class="app-card__content">
+                      <div class="app-productive-heading-02 font-bold mb-1">Credit card form</div>
+                      <div class="app-body-short-01">this is a very long credit card form explanation for this section
+                        beacuse it is nice
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div fxFlex="100%" fxFlex.gt-md="60%">
+                  <div class="app-card">
+                    <div class="app-card__content">
+                      <app-dummy-form-credit-card layout="vertical" theme="dark" #creditCardForm7></app-dummy-form-credit-card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="app-card">
+                <div class="app-card__content flex justify-end">
+                  <button (click)="creditCardForm7.reset()" ibmButton="ghost" size="field" class="mr-1">
+                    Reset
+                  </button>
+                  <button (click)="creditCardForm7.submit()" ibmButton="primary" size="field">
+                    Save card
+                    <svg class="bx--btn__icon" ibmIconSave size="20"></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <div class="app-cards-vertical-merge app-border-all">
+              <div fxLayout="row wrap">
+                <div fxFlex="100%" fxFlex.gt-md="40%">
+                  <div class="app-card app-card--transparent" fxFlex>
+                    <div class="app-card__content">
+                      <div class="app-productive-heading-02 font-bold mb-1">Credit card form</div>
+                      <div class="app-body-short-01">this is a very long credit card form explanation for this section
+                        beacuse it is nice
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div fxFlex="100%" fxFlex.gt-md="60%">
+                  <div class="app-card app-card--transparent">
+                    <div class="app-card__content">
+                      <app-dummy-form-credit-card layout="vertical" #creditCardForm6></app-dummy-form-credit-card>
+                      <div class="mt-3 flex justify-end">
+                        <button (click)="creditCardForm6.reset()" ibmButton="ghost" size="field" class="mr-1">
+                          Reset
+                        </button>
+                        <button (click)="creditCardForm6.submit()" ibmButton="primary" size="field">
+                          Save card
+                          <svg class="bx--btn__icon" ibmIconSave size="20"></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</app-content-simple>
+
+

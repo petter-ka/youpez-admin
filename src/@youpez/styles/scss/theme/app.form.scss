@@ -34,17 +34,34 @@
   }
 }
 
-.app-input-icon {
+.app-input {
   position: relative;
 
-  .app-icon {
+  .app-input__prefix {
     position: absolute;
-    bottom: 10px;
+    top: 32px;
     left: 10px;
     z-index: 1;
+
+    & + .bx--form-item {
+      .bx--text-input {
+        padding-left: 2.4rem;
+      }
+    }
   }
 
-  .bx--text-input {
-    padding-left: 2.4rem;
+  .app-input__suffix {
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    z-index: 1;
+
+    & + .bx--form-item {
+      .bx--text-input {
+        padding-right: 2.4rem;
+      }
+    }
   }
+
+
 }

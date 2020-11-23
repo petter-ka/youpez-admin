@@ -39,22 +39,25 @@ import {MaintenanceComponent} from './maintenance/maintenance.component'
 import {WelcomeComponent} from './application/welcome/welcome.component'
 import {GettingStartedComponent} from './application/getting-started/getting-started.component'
 import {PricingOtherComponent} from './pricing/pricing-other/pricing-other.component'
-import {UiComponentsComponent} from './ui-components/ui-components.component';
-import { WidgetsCardComponent } from './widgets/widgets-card/widgets-card.component';
-import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
-import { TableBasicComponent } from './tables/table-basic/table-basic.component';
-import { TableAdvancedComponent } from './tables/table-advanced/table-advanced.component';
-import { TableFullComponent } from './tables/table-full/table-full.component';
-import { ChartsComponent } from './charts/charts.component';
-import { IconsComponent } from './icons/icons.component';
-import { FormsGeneralComponent } from './forms/forms-general/forms-general.component';
-import { FormsAdvancedComponent } from './forms/forms-advanced/forms-advanced.component';
-import { FormsValidationComponent } from './forms/forms-validation/forms-validation.component';
-import { FormsWizardComponent } from './forms/forms-wizard/forms-wizard.component';
-import { DummyTableExpansionComponent } from './components/dummy-table-expansion/dummy-table-expansion.component';
-import { DummyTableAdvancedComponent } from './components/dummy-table-advanced/dummy-table-advanced.component';
-import { DummyTablePaginationComponent } from './components/dummy-table-pagination/dummy-table-pagination.component';
-import { DummyTableRichComponent } from './components/dummy-table-rich/dummy-table-rich.component'
+import {UiComponentsComponent} from './ui-components/ui-components.component'
+import {WidgetsCardComponent} from './widgets/widgets-card/widgets-card.component'
+import {WidgetsListComponent} from './widgets/widgets-list/widgets-list.component'
+import {TableBasicComponent} from './tables/table-basic/table-basic.component'
+import {TableAdvancedComponent} from './tables/table-advanced/table-advanced.component'
+import {TableFullComponent} from './tables/table-full/table-full.component'
+import {ChartsComponent} from './charts/charts.component'
+import {IconsComponent} from './icons/icons.component'
+import {FormsGeneralComponent} from './forms/forms-general/forms-general.component'
+import {FormsAdvancedComponent} from './forms/forms-advanced/forms-advanced.component'
+import {FormsValidationComponent} from './forms/forms-validation/forms-validation.component'
+import {FormsWizardComponent} from './forms/forms-wizard/forms-wizard.component'
+import {DummyTableExpansionComponent} from './components/dummy-table-expansion/dummy-table-expansion.component'
+import {DummyTableAdvancedComponent} from './components/dummy-table-advanced/dummy-table-advanced.component'
+import {DummyTablePaginationComponent} from './components/dummy-table-pagination/dummy-table-pagination.component'
+import {DummyTableRichComponent} from './components/dummy-table-rich/dummy-table-rich.component'
+import {DummyFormCreditCardComponent} from './components/dummy-form-credit-card/dummy-form-credit-card.component';
+import { DummyFormBillingComponent } from './components/dummy-form-billing/dummy-form-billing.component';
+import { DummyFormWizardComponent } from './components/dummy-form-wizard/dummy-form-wizard.component'
 
 @NgModule({
   declarations: [
@@ -106,6 +109,9 @@ import { DummyTableRichComponent } from './components/dummy-table-rich/dummy-tab
     DummyTableAdvancedComponent,
     DummyTablePaginationComponent,
     DummyTableRichComponent,
+    DummyFormCreditCardComponent,
+    DummyFormBillingComponent,
+    DummyFormWizardComponent,
   ],
   imports: [
     CommonModule,

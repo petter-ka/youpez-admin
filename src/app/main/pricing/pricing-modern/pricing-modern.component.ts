@@ -80,7 +80,6 @@ export class PricingModernComponent implements OnInit {
     else {
       this.period = 1
     }
-    console.log(event)
   }
 
 }

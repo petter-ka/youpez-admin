@@ -42,6 +42,7 @@
     "echarts": "^4.9.0",
     "lodash": "^4.17.20",
     "ng-dynamic-component": "^7.0.3",
+    "ngx-mask": "^11.0.1",
     "ngx-md": "^8.1.6",
     "ngx-router-animations": "0.0.9",
     "ngx-scrollbar": "^7.4.1",
