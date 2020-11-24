@@ -55,9 +55,9 @@ import {DummyTableExpansionComponent} from './components/dummy-table-expansion/d
 import {DummyTableAdvancedComponent} from './components/dummy-table-advanced/dummy-table-advanced.component'
 import {DummyTablePaginationComponent} from './components/dummy-table-pagination/dummy-table-pagination.component'
 import {DummyTableRichComponent} from './components/dummy-table-rich/dummy-table-rich.component'
-import {DummyFormCreditCardComponent} from './components/dummy-form-credit-card/dummy-form-credit-card.component';
-import { DummyFormBillingComponent } from './components/dummy-form-billing/dummy-form-billing.component';
-import { DummyFormWizardComponent } from './components/dummy-form-wizard/dummy-form-wizard.component'
+import {DummyFormCreditCardComponent} from './components/dummy-form-credit-card/dummy-form-credit-card.component'
+import {DummyFormBillingComponent} from './components/dummy-form-billing/dummy-form-billing.component'
+import {DummyFormWizardComponent} from './components/dummy-form-wizard/dummy-form-wizard.component'
 
 @NgModule({
   declarations: [

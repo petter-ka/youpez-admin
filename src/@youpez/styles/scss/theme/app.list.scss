@@ -164,17 +164,7 @@
       }
 
       &.app-list__item--active {
-        /*utline: 2px solid $appFocusBorder;
-        outline-offset: -2px;*/
-
-        background-color: rgba(205, 232, 255, .4);
-
-        /* .app-list__item__content {
-           &:before {
-             background-color: transparent;
-           }
-         }*/
-
+        background-color: $appHighLightColor;
       }
     }
   }
@@ -244,6 +234,7 @@
     outline: none;
     padding: 0;
     margin: 0;
+    color: $appText;
   }
 
   .app-list__item__content {

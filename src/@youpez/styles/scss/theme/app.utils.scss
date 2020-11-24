@@ -2,6 +2,7 @@
 @import 'app.helpers';
 
 @include color-helper('ui', $appUIBg);
+@include color-helper('container', $appUIForegroundBg);
 @include color-helper('primary', $appColorPrimary);
 @include color-helper('secondary', $appColorSecondary);
 @include color-helper('success', $appColorSuccess);
@@ -16,6 +17,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
+  svg {
+    fill: $appText;
+  }
+}
+
+.app-ibm-pictogram-stroke {
+  stroke: $appText;
+}
+
 .app-relative {
   position: relative;
 }
@@ -26,6 +37,14 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.app-bg-light{
+  background-color: $appColorLight;
+}
+
+.app-border-container {
+  border-color: $appUIForegroundBg;
 }
 
 .app-border-all {
@@ -125,7 +144,7 @@ body {
     cursor: pointer;
     padding: 2px;
     margin-left: -0.5rem;
-    background-color: #fff;
+    background-color: $appUIForegroundBg;
     transition: .1s cubic-bezier(.35, 0, .35, 1);
     transition-property: all;
 
@@ -194,7 +213,6 @@ body {
   height: 7px;
   box-shadow: 0 0 0 2px #fff;
   border-radius: 100px;
-
   background-color: $color;
 }
 

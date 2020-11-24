@@ -1,3 +1,5 @@
+@import '../../styles/scss/theme/app.variables';
+
 .app-search {
   position: absolute;
   top: 0;
@@ -44,8 +46,8 @@
 
   .app-search__input {
     position: relative;
-    border-bottom: 1px solid #eee;
-    background: #fff;
+    border-bottom: 1px solid $appBorderColor;
+    background: $appUIForegroundBg;
     border-radius: 5px 5px 0 0;
   }
 
@@ -71,13 +73,13 @@
 
   .app-search__result {
     height: 300px;
-    background: #fff;
+    background: $appUIForegroundBg;
     border-radius: 0 0 5px 5px;
     position: relative;
 
     .app-search__result__pane1 {
       position: relative;
-      border-right: 1px solid #eee;
+      border-right: 1px solid $appBorderColor;
     }
 
     .app-search__result__pane2 {

@@ -281,10 +281,10 @@
   float: left;
   min-width: 10rem;
   padding: 0 0;
-  color: #212529;
+  color: $appText;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: $appUIForegroundBg;
   background-clip: padding-box;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
@@ -367,7 +367,7 @@
   height: 0;
   margin: .5rem 0;
   overflow: hidden;
-  border-top: 1px solid #e9ecef
+  border-top: 1px solid $appBorderColor;
 }
 
 .app-ibm-icon-xl {

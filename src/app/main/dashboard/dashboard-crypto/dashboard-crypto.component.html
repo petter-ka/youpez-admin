@@ -17,7 +17,7 @@
         [mode]="'side'"
         [toggleableBtn]="true"
         initWidth="570">
-        <div class="app-a-box app-bg-ui app-scrollbar-fix">
+        <div class="app-a-box app-bg-container app-scrollbar-fix">
           <ng-scrollbar>
             <div class="app-inner-content app-inner-content--default">
               <div class="app-row app-row--center mb-4">
@@ -118,7 +118,7 @@
         </div>
       </app-sidenav-v2>
 
-      <div fxFill fxLayout="column" class="app-bg-ui relative">
+      <div fxFill fxLayout="column" class="app-bg-container relative">
         <div class="app-header app-header--sm">
           <div class="app-expressive-heading-02">Watchlist</div>
 
@@ -138,7 +138,7 @@
         </div>
 
         <div fxFlex class="relative">
-          <div class="app-a-box app-bg-ui app-scrollbar-fix">
+          <div class="app-a-box app-bg-container app-scrollbar-fix">
             <ng-scrollbar>
               <div class="app-list app-list--hover app-list--select app-list--condensed">
                 <ng-container *ngFor="let watch of watchList">
@@ -189,7 +189,7 @@
       initWidth="370"
       [toggleableBtn]="true"
       [size]="'sideBar1'">
-      <div fxFill fxLayout="column" class="app-bg-ui relative">
+      <div fxFill fxLayout="column" class="app-bg-container relative">
 
         <ibm-tab-header-group class="app-ibm-tab-auto">
           <ibm-tab-header>
@@ -261,7 +261,7 @@
       </div>
     </app-sidenav-v2>
 
-    <div fxFill fxLayout="column" class="relative app-bg-ui">
+    <div fxFill fxLayout="column" class="relative app-bg-container">
 
       <app-header [bordered]="false">
         <app-header-title>
@@ -280,7 +280,7 @@
       </app-header>
 
       <div fxFlex class="relative px-4 pb-4">
-        <div class="absolute top-0 left-0 ml-4 app-bg-ui" style="top:-8px;left:-3px;z-index: 1">
+        <div class="absolute top-0 left-0 ml-4 app-bg-container" style="top:-8px;left:-3px;z-index: 1">
           <div class="">
             <ibm-tag type="warm-gray">11452.0</ibm-tag>
             <span>- </span>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core'
+import charts from '../../../@youpez/data/charts'
 
 @Component({
   selector: 'app-charts',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartsComponent implements OnInit {
 
-  constructor() { }
+  public charts = charts
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

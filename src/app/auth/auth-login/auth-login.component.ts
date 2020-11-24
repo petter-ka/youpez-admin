@@ -39,7 +39,7 @@ export class AuthLoginComponent implements OnInit {
       title: "Sample toast",
       subtitle: "Sample subtitle message",
       caption: "Sample caption",
-      target: "body",
+      target: "#notificationHolder",
       message: "message",
       duration: 2000,
     })

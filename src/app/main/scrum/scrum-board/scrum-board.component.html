@@ -42,14 +42,14 @@
     </div>
   </div>
 
-  <div fxFlex class="relative" style="background-color: #eee;">
+  <div fxFlex class="relative app-border-t app-bg-light">
     <div class="app-a-box app-scrollbar-fix--horizontal ml-2">
       <ng-scrollbar track="horizontal">
         <div fxLayout="row" fxFill cdkDropListGroup>
           <ng-container *ngFor="let board of boards;let i = index">
             <div [fxFlex]="board.opened ? '320px' : '40px'"
                  class="relative app-transition-default mb-3">
-              <div fxFill fxLayout="column" class="overflow-hidden" style="border-right:1px solid #ccc;">
+              <div fxFill fxLayout="column" class="overflow-hidden app-border-r">
                 <ng-container *ngIf="!board.opened">
                   <div (click)="onToggleColumn(i)" class="app-productive-heading-01 whitespace-no-wrap cursor-pointer"
                        style="transform: rotate(270deg);margin-top: 100%;">

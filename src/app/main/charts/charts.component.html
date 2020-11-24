@@ -1,1 +1,16 @@
-<p>charts works!</p>
+<app-content-simple mainTitle="Forms - advanced">
+  <div fxLayout="row wrap">
+    <div fxFlex="100%" fxFlex.gt-md="100%">
+      <div fxLayout="row wrap" class="mb-6 app-card-row">
+        <ng-container *ngFor="let chart of charts">
+          <div fxFlex="100%" fxFlex.gt-md="33.33%" class="">
+            <div class="app-card p-2">
+              <app-echarts [options]="chart" class="app-echarts-component"
+                           style="height: 400px;"></app-echarts>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</app-content-simple>
