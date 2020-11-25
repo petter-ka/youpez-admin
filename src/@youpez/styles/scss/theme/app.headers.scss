@@ -104,8 +104,10 @@
 
   &.app-header--carbon {
     padding: 2.2rem 1.1rem 1.1rem 1.1rem;
-    background: $appColorHighContrast;
-    color: $appColorHighContrastTextOn;
+    /*background: $appColorHighContrast;
+    color: $appColorHighContrastTextOn;*/
+    background: #161616;
+    color: #ffffff;
 
     .app_header__tools {
       position: absolute;

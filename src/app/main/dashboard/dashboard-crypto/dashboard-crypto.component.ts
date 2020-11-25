@@ -21,7 +21,7 @@ const categories = {
   'Communications': '#001FD1',
 }
 
-const sectorCellRenderer = function(params) {
+const sectorCellRenderer = function (params) {
   const {value} = params
   const color = categories[value]
 
@@ -85,6 +85,12 @@ const numberCellRenderer = function (params) {
 const rateClassRenderer = (params) => {
   const value = params.value
   return value === 'Sell' ? {backgroundColor: 'rgba(255, 212, 219, .5)'} : (value === 'Strong Buy' ? {backgroundColor: 'rgba(198, 255, 189, .5)'} : {backgroundColor: 'rgba(227, 255, 223, .5)'})
+}
+
+const rateClassRendererAlt = (params, additional) => {
+  const value = params.value
+  const tmp = value === 'Sell' ? 'app-bg-danger-o-20' : (value === 'Strong Buy' ? 'app-bg-success-o-40' : 'app-bg-success-o-20')
+  return additional + ' ' + tmp
 }
 
 @Component({
@@ -434,8 +440,8 @@ export class DashboardCryptoComponent implements OnInit {
         headerName: 'Rating',
         field: 'rating',
         headerClass: 'cell-flex-center',
-        cellClass: 'cell-flex-middle',
-        cellStyle: rateClassRenderer,
+        cellClass: (params) => rateClassRendererAlt(params, 'cell-flex-middle'),
+        //cellStyle: rateClassRenderer,
       },
       {
         headerName: 'Volume',

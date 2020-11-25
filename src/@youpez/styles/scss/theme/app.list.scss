@@ -431,7 +431,7 @@
     }
 
     &:hover {
-      background-color: #eee;
+      background-color: $appHoverBg;
 
       .app-list-message__item__time {
         display: block;

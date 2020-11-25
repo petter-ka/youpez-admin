@@ -72,6 +72,10 @@
       }
     }
 
+    .app-bg-#{$type}-o-#{$i*10} {
+      background-color: rgba(darken($color, 3%), $i/10);
+    }
+
     svg.app-color-#{$type}-lt-#{$i*10} {
       fill: lighten($color, $i*10%);
     }

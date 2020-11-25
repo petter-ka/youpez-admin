@@ -53,6 +53,12 @@
   padding-left: 60px !important;
 }
 
+.app-ibm-table-header-fix {
+  th .bx--table-header-label {
+    padding-top: 0 !important;
+  }
+}
+
 .app-ibm-h-full {
   height: 100%;
 

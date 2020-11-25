@@ -39,8 +39,12 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
   bottom: 0;
 }
 
-.app-bg-light{
+.app-bg-light {
   background-color: $appColorLight;
+}
+
+.app-border-contrast {
+  border-color: $appBorderColorAlt;
 }
 
 .app-border-container {
@@ -222,7 +226,7 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
   position: relative;
 
   &.app-symbol--default {
-    background-color: $appCardBg;
+    background-color: $appUIBg;
   }
 
   .app-symbol__label {
@@ -271,7 +275,7 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
 
 .app-progress {
   height: 6px;
-  background-color: rgba(63, 63, 63, .15);
+  background-color: $appBorderColor;
   background-image: none;
   box-shadow: none;
   border-radius: 0;

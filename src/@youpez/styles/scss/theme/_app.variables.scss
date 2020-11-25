@@ -1,6 +1,7 @@
 @import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
 
-$carbon--theme: $carbon--theme--g10;
+$carbon--theme: $carbon--theme--g90;
+/*$carbon--theme-colors: $carbon--theme--g10;*/
 @import "~carbon-components/scss/globals/scss/colors";
 
 //$dummy: $ui-background;
@@ -19,6 +20,7 @@ $appBorderHighContrastColor: map-get($carbon--theme, 'ui-05');
 
 $appBorderColorAlt: map-get($carbon--theme, 'active-ui');
 $appHoverBg: map-get($carbon--theme, 'hover-ui');
+$appHoverText: map-get($carbon--theme, 'hover-primary-text');
 $appFocusBorder: map-get($carbon--theme, 'focus');
 
 $appColorLight: map-get($carbon--theme, 'ui-02');
@@ -28,6 +30,7 @@ $appColorPrimary: map-get($carbon--theme, 'interactive-01');
 $appColorDecorative: map-get($carbon--theme, 'ui-03');
 $appColorSecondary: map-get($carbon--theme, 'interactive-02');
 $appColorSecondaryHover: map-get($carbon--theme, 'hover-secondary');
+
 $appColorSuccess: map-get($carbon--theme, 'support-02');
 $appColorDanger: map-get($carbon--theme, 'support-01');
 $appColorWarning: map-get($carbon--theme, 'support-03');
@@ -71,10 +74,10 @@ $theme-map-light: (
   '--theme-background': $appUIForegroundBg,
   '--theme-sidenav-border': $appBorderColor,
   '--theme-header-border': $appBorderColor,
-  '--theme-list-pill--hover-background': #ebedf0,
-  '--theme-list-pill--hover-color': #464646,
-  '--theme-list-pill--active-background': #e0e2e5,
-  '--theme-list-pill--active-color': $appColorPrimary,
+  '--theme-list-pill--hover-background': $appHoverBg,
+  '--theme-list-pill--hover-color': $appText,
+  '--theme-list-pill--active-background': $appHighLightColor,
+  '--theme-list-pill--active-color': $appHoverText,
 );
 
 $theme-sidebar-1: (
