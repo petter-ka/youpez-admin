@@ -1,10 +1,8 @@
 @import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
 
-$carbon--theme: $carbon--theme--g90;
-/*$carbon--theme-colors: $carbon--theme--g10;*/
+$carbon--theme: $carbon--theme--g100;
+$logoWhite: false;
 @import "~carbon-components/scss/globals/scss/colors";
-
-//$dummy: $ui-background;
 
 $appUIBg: map-get($carbon--theme, 'ui-background');
 $appUIForegroundBg: map-get($carbon--theme, 'ui-01');
@@ -15,7 +13,7 @@ $appTextInverse: map-get($carbon--theme, 'inverse-01');
 $appHighLightColor: map-get($carbon--theme, 'highlight');
 
 $appBorderColor: map-get($carbon--theme, 'ui-03');
-$appBorderContrastColor:  map-get($carbon--theme, 'ui-04');
+$appBorderContrastColor: map-get($carbon--theme, 'ui-04');
 $appBorderHighContrastColor: map-get($carbon--theme, 'ui-05');
 
 $appBorderColorAlt: map-get($carbon--theme, 'active-ui');

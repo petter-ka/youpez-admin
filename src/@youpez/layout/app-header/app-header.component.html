@@ -1,10 +1,6 @@
 <div class="app-main-header" [ngClass]="{'app-main-header--border': bordered}">
   <div>
-    <div class="app-breadcrumb">
-      <a class="app-breadcrumb__item">Dashboard</a>
-      <a class="app-breadcrumb__item">Dashboard</a>
-      <div class="app-breadcrumb__item">Dashboard</div>
-    </div>
+    <app-breadcrumb></app-breadcrumb>
     <ng-content select="app-header-title"></ng-content>
     <ng-content select="app-header-tools"></ng-content>
   </div>

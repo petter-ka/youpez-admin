@@ -96,6 +96,19 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
   ) repeat;
 }
 
+.app-bg-dotted {
+  &:before {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    content: '';
+    @include dottedBackground();
+    opacity: .2;
+  }
+}
+
 .app-separator {
   position: relative;
   display: flex;

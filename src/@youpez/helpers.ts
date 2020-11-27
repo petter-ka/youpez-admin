@@ -11,28 +11,8 @@ import {
   trigger
 } from '@angular/animations'
 
-export function getDefaultEchartsTheme() {
-  const axisLine = {
-    color: 'rgb(204, 214, 235)'
-  }
-  const axisTick = {
-    color: 'rgb(204, 214, 235)'
-  }
-  const axisLabel = {
-    color: '#666666'
-  }
-  const splitLine = {
-    color: [
-      'rgb(230, 230, 230)'
-    ]
-  }
-  const defaultEmphasis = {
-    shadowBlur: 10,
-    shadowOffsetX: 0,
-    'borderWidth': 0,
-    'borderColor': 'transparent'
-  }
-
+export const getEchartsTheme = (params) => {
+  const {main, axisLine, axisTick, axisLabel, splitLine, defaultEmphasis} = params
   return {
     'color': [
       '#61a1ed',
@@ -48,10 +28,10 @@ export function getDefaultEchartsTheme() {
     },
     'title': {
       'textStyle': {
-        'color': '#666666'
+        'color': main.title,
       },
       'subtextStyle': {
-        'color': '#999999'
+        'color': main.subtitle
       }
     },
     'line': {
@@ -88,7 +68,7 @@ export function getDefaultEchartsTheme() {
       'itemStyle': {
         'normal': {
           'barBorderWidth': 0,
-          'barBorderColor': '#ccc'
+          'barBorderColor': main.borderColor
         },
         'emphasis': {
           ...defaultEmphasis,
@@ -99,7 +79,7 @@ export function getDefaultEchartsTheme() {
       'itemStyle': {
         'normal': {
           'borderWidth': 0,
-          'borderColor': '#ccc'
+          'borderColor': main.borderColor
         },
         'emphasis': {
           ...defaultEmphasis,
@@ -110,7 +90,7 @@ export function getDefaultEchartsTheme() {
       'itemStyle': {
         'normal': {
           'borderWidth': 0,
-          'borderColor': '#ccc'
+          'borderColor': main.borderColor
         },
         'emphasis': {
           ...defaultEmphasis,
@@ -121,7 +101,7 @@ export function getDefaultEchartsTheme() {
       'itemStyle': {
         'normal': {
           'borderWidth': 0,
-          'borderColor': '#ccc'
+          'borderColor': main.borderColor
         },
         'emphasis': {
           ...defaultEmphasis,
@@ -132,7 +112,7 @@ export function getDefaultEchartsTheme() {
       'itemStyle': {
         'normal': {
           'borderWidth': 0,
-          'borderColor': '#ccc'
+          'borderColor': main.borderColor
         },
         'emphasis': {
           ...defaultEmphasis,
@@ -143,7 +123,7 @@ export function getDefaultEchartsTheme() {
       'itemStyle': {
         'normal': {
           'borderWidth': 0,
-          'borderColor': '#ccc'
+          'borderColor': main.borderColor
         },
         'emphasis': {
           ...defaultEmphasis,
@@ -154,7 +134,7 @@ export function getDefaultEchartsTheme() {
       'itemStyle': {
         'normal': {
           'borderWidth': 0,
-          'borderColor': '#ccc'
+          'borderColor': main.borderColor
         },
         'emphasis': {
           ...defaultEmphasis,
@@ -165,7 +145,7 @@ export function getDefaultEchartsTheme() {
       'itemStyle': {
         'normal': {
           'borderWidth': 0,
-          'borderColor': '#ccc'
+          'borderColor': main.borderColor
         },
         'emphasis': {
           ...defaultEmphasis,
@@ -187,7 +167,7 @@ export function getDefaultEchartsTheme() {
       'itemStyle': {
         'normal': {
           'borderWidth': 0,
-          'borderColor': '#ccc'
+          'borderColor': main.borderColor
         }
       },
       'lineStyle': {
@@ -428,7 +408,7 @@ export function getDefaultEchartsTheme() {
       padding: [5, 8],
       'axisPointer': {
         label: {
-          backgroundColor: '#ccc',
+          backgroundColor: main.borderColor,
           borderColor: '#aaa',
           borderWidth: 1,
           shadowBlur: 0,
@@ -497,13 +477,13 @@ export function getDefaultEchartsTheme() {
     },
     'dataZoom': {
       'backgroundColor': 'rgba(255,255,255,0)',
-      'dataBackgroundColor': 'rgba(222,222,222,1)',
+      'dataBackgroundColor': 'rgba(222,222,222,0.7)',
       'fillerColor': 'rgb(222, 236, 255,0.25)',
       'handleColor': 'rgb(118,129,255)',
       'handleSize': '100%',
       'textStyle': {
         'color': '#999999'
-      }
+      },
     },
     'markPoint': {
       'label': {
@@ -520,6 +500,65 @@ export function getDefaultEchartsTheme() {
       }
     }
   }
+}
+
+export function getDarkEchartsTheme() {
+  const main = {
+    title: '#666666',
+    subtitle: '#999999',
+    borderColor: '#ccc',
+  }
+  const axisLine = {
+    color: '#454545'
+  }
+  const axisTick = {
+    color: '#454545'
+  }
+  const axisLabel = {
+    color: '#c8c8c8'
+  }
+  const splitLine = {
+    color: [
+      '#393939'
+    ]
+  }
+  const defaultEmphasis = {
+    shadowBlur: 10,
+    shadowOffsetX: 0,
+    'borderWidth': 0,
+    'borderColor': 'transparent'
+  }
+  return getEchartsTheme({main, axisLine, axisTick, axisLabel, splitLine, defaultEmphasis})
+}
+
+export function getLightEchartsTheme() {
+  const main = {
+    title: '#666666',
+    subtitle: '#999999',
+    borderColor: '#ccc',
+  }
+  const axisLine = {
+    color: 'rgb(204, 214, 235)'
+  }
+  const axisTick = {
+    color: 'rgb(204, 214, 235)'
+  }
+  const axisLabel = {
+    color: '#666666'
+  }
+  const splitLine = {
+    color: [
+      'rgb(230, 230, 230)'
+    ]
+  }
+  const defaultEmphasis = {
+    shadowBlur: 10,
+    shadowOffsetX: 0,
+    'borderWidth': 0,
+    'borderColor': 'transparent'
+  }
+  return getEchartsTheme({main, axisLine, axisTick, axisLabel, splitLine, defaultEmphasis})
+
 }
 
 export const defaultRouterTransition = trigger('defaultRouterAnimation', [

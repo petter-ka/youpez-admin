@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core'
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop'
+import {ScrumFormService} from "../scrum-form/scrum-form.service"
 
 @Component({
   selector: 'app-scrum-board',
@@ -180,7 +181,10 @@ export class ScrumBoardComponent implements OnInit {
     }
   ]
 
-  constructor() {
+  public modalTrigger
+  public modalOpened: boolean = true
+
+  constructor(private scrumFormService: ScrumFormService) {
   }
 
   ngOnInit(): void {
@@ -214,5 +218,15 @@ export class ScrumBoardComponent implements OnInit {
 
   onToggleColumn(index) {
     this.boards[index].opened = !this.boards[index].opened
+  }
+
+  onToggleModal(bool) {
+    this.modalOpened = bool
+  }
+
+  onCreate() {
+    this.scrumFormService.open(null).afterClosed().subscribe(() => {
+      console.log('dfasdasdas')
+    })
   }
 }

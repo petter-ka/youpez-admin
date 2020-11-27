@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core'
+import {Router, ActivatedRoute} from "@angular/router"
 import {registerTheme} from 'echarts/lib/echarts'
 
-import {getDefaultEchartsTheme} from "../@youpez"
+import {getLightEchartsTheme, getDarkEchartsTheme} from "../@youpez"
 import {SettingsService} from "../@youpez/services/settings.service"
 
 @Component({
@@ -12,12 +13,18 @@ import {SettingsService} from "../@youpez/services/settings.service"
 export class AppComponent implements OnInit {
   title = 'theme'
 
-  constructor(private settingsService: SettingsService) {
+  constructor(private settingsService: SettingsService,
+              private router: Router,
+              private route: ActivatedRoute,) {
 
   }
 
   ngOnInit(): void {
-    registerTheme('default', getDefaultEchartsTheme())
+    this.route.queryParams.subscribe((queryParams) => {
+      console.log(queryParams)
+    })
+    registerTheme('inverse', getDarkEchartsTheme())
+    registerTheme('default', getLightEchartsTheme())
     this.settingsService.setTheme('app-theme--light')
     this.settingsService.setTheme('app-theme-sidebar--black')
     this.settingsService.setTheme('app-theme-header--black')

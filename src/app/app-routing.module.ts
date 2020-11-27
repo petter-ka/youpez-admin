@@ -4,6 +4,9 @@ import {Routes, RouterModule} from '@angular/router'
 const routes: Routes = [
   {
     path: 'app',
+    data:{
+      breadcrumb: 'Home'
+    },
     loadChildren: () => import('./main/main.module').then(m => m.MainModule)
   },
   {

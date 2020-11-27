@@ -8,6 +8,9 @@ import {NgxMaskModule, IConfig} from 'ngx-mask'
 import {NgScrollbarModule} from 'ngx-scrollbar'
 import {DragDropModule} from '@angular/cdk/drag-drop'
 import {A11yModule} from '@angular/cdk/a11y'
+
+import {MatDialogModule} from "@angular/material/dialog"
+
 import {
   AddModule,
   CaretDownModule,
@@ -159,7 +162,7 @@ import {
   SelectModule,
   SliderModule,
   NumberModule,
-  FileUploaderModule, ProgressIndicatorModule,
+  FileUploaderModule, ProgressIndicatorModule, ModalModule,
 } from 'carbon-components-angular'
 
 import {AppMenuComponent} from "./components/app-menu/app-menu/app-menu.component"
@@ -187,6 +190,8 @@ import {AppContentTabsComponent} from './components/app-content/app-content-tabs
 import {AppCreditCardComponent} from './components/app-credit-card/app-credit-card.component'
 import {AppContentSimpleComponent} from './components/app-content/app-content-simple/app-content-simple.component'
 import {SafePipe} from "./pipes/safe"
+import {AppLogoComponent} from './components/app-logo/app-logo.component'
+import {AppBreadcrumbComponent} from './components/app-breadcrumb/app-breadcrumb.component'
 
 
 const MainModules = [
@@ -199,6 +204,7 @@ const MainModules = [
   DragDropModule,
   A11yModule,
   ReactiveFormsModule,
+  MatDialogModule,
 ]
 
 const CarbonModules = [
@@ -229,6 +235,7 @@ const CarbonModules = [
   SliderModule,
   NumberModule,
   FileUploaderModule,
+  ModalModule,
 ]
 
 const CarbonIconModules = [
@@ -372,6 +379,9 @@ const Components = [
   AppContentTabsComponent,
   AppCreditCardComponent,
   AppContentSimpleComponent,
+  AppLogoComponent,
+  AppLogoComponent,
+  AppBreadcrumbComponent,
 ]
 
 const Pipes = [

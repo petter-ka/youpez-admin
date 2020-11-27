@@ -89,9 +89,7 @@
       bottom: 0;
       left: 10px;
       content: '';
-      background: url(
-      data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAKklEQVQoU2NkIBIwEqmOgWyFDQwMDCCMAbCZiFUxLqsxFJPtRpyBQH0TAaqHAwtRB8lvAAAAAElFTkSuQmCC
-      ) repeat;
+      @include dottedBackground();
       opacity: .5;
     }
 

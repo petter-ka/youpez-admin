@@ -1,12 +1,11 @@
 @import 'app.variables.scss';
 @import 'app.helpers';
 
-
-
 // LAYOUT THEMES
 :root.app-theme--light {
   @include spread-map($theme-map-light);
   @include scrollbarStyleDark();
+  @include logoVisibility($logoWhite);
 }
 
 // SIDEBAR THEMES

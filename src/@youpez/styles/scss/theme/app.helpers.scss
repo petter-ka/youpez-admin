@@ -243,6 +243,35 @@
   }
 }
 
+@mixin logoVisibility($logoWhite) {
+  @if $logoWhite {
+    .app-logo--black {
+      display: none;
+    }
+    .app-logo--white {
+      display: inline-block;
+    }
+  } @else {
+    .app-logo--black {
+      display: inline-block;
+    }
+    .app-logo--white {
+      display: none;
+    }
+  }
+}
+
+@mixin dottedBackground() {
+/*  background: url(
+  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAK0lEQVQoU2NkIBIwoqlrYGBgAGEMgK4QpACrYmwKsSrGpZAoq7F6byiYCACglgMLvdqH6QAAAABJRU5ErkJggg==
+  ) repeat;*/
+
+  background: url(
+  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALklEQVQoU2NkIBIwIqv7//9/AyMjYwM2vSgKQQpwKcZQiEsxVoVEWY3Lb0PBRACHFwwLEZKHggAAAABJRU5ErkJggg==
+  ) repeat;
+}
+
+
 
 
 

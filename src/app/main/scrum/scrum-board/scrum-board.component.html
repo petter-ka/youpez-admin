@@ -7,9 +7,9 @@
       <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
         <svg class="bx--btn__icon" ibmIconCloudDownload size="32"></svg>
       </button>
-      <button ibmButton="primary" size="sm">
-        Complete sprint
-        <svg class="bx--btn__icon" ibmIconCheckmarkOutline size="20"></svg>
+      <button ibmButton="primary" size="sm" (click)="onCreate()">
+        Create
+        <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
       </button>
     </app-header-tools>
   </app-header>
@@ -41,7 +41,6 @@
       </button>
     </div>
   </div>
-
   <div fxFlex class="relative app-border-t">
     <div class="app-a-box app-scrollbar-fix--horizontal ml-2">
       <ng-scrollbar track="horizontal">

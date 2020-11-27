@@ -51,135 +51,224 @@ import {FormsWizardComponent} from "./forms/forms-wizard/forms-wizard.component"
 const routeForPages = [
   {
     path: 'dashboard',
+    data:{
+      breadcrumb: 'Dashboard'
+    },
     children: [
       {
         path: 'default',
         component: DashboardDefaultComponent,
+        data:{
+          breadcrumb: 'Default'
+        },
       },
       {
         path: 'analytics',
         component: DashboardAnalyticsComponent,
+        data:{
+          breadcrumb: 'Analytics'
+        },
       },
       {
         path: 'crypto',
         component: DashboardCryptoComponent,
+        data:{
+          breadcrumb: 'Stocks / Crypto'
+        },
       },
     ],
   },
   {
     path: 'typography',
     component: TypographyComponent,
+    data:{
+      breadcrumb: 'Typography'
+    },
   },
   {
     path: 'widgets',
+    data:{
+      breadcrumb: 'Widgets'
+    },
     children: [
       {
         path: 'general',
         component: WidgetsGeneralComponent,
+        data:{
+          breadcrumb: 'General'
+        },
       },
       {
         path: 'cards',
         component: WidgetsCardComponent,
+        data:{
+          breadcrumb: 'Cards'
+        },
       },
       {
         path: 'lists',
         component: WidgetsListComponent,
+        data:{
+          breadcrumb: 'List'
+        },
       },
     ]
   },
   {
     path: 'tables',
+    data:{
+      breadcrumb: 'Tables'
+    },
     children: [
       {
         path: 'basic',
         component: TableBasicComponent,
+        data:{
+          breadcrumb: 'Basic'
+        },
       },
       {
         path: 'advanced',
         component: TableAdvancedComponent,
+        data:{
+          breadcrumb: 'Advanced'
+        },
       },
       {
         path: 'full',
         component: TableFullComponent,
+        data:{
+          breadcrumb: 'Datagrid'
+        },
       },
     ]
   },
   {
     path: 'forms',
+    data:{
+      breadcrumb: 'Forms'
+    },
     children: [
       {
         path: 'general',
         component: FormsGeneralComponent,
+        data:{
+          breadcrumb: 'General'
+        },
       },
       {
         path: 'advanced',
         component: FormsAdvancedComponent,
+        data:{
+          breadcrumb: 'Advanced'
+        },
       },
       {
         path: 'validation',
         component: FormsValidationComponent,
+        data:{
+          breadcrumb: 'Validation'
+        },
       },
       {
         path: 'wizard',
         component: FormsWizardComponent,
+        data:{
+          breadcrumb: 'Wizard'
+        },
       },
     ]
   },
   {
     path: 'charts',
     component: ChartsComponent,
+    data:{
+      breadcrumb: 'Charts'
+    },
   },
   {
     path: 'icons',
     component: IconsComponent,
+    data:{
+      breadcrumb: 'Icons'
+    },
   },
   {
     path: 'scrum-board',
     component: ScrumBoardComponent,
+    data:{
+      breadcrumb: 'Scrum board'
+    },
   },
   {
     path: 'tasks',
     component: TasksComponent,
+    data:{
+      breadcrumb: 'Tasks'
+    },
   },
   {
     path: 'file-manager',
     component: FileManagerComponent,
+    data:{
+      breadcrumb: 'File-manager'
+    },
   },
   {
     path: 'ui-components',
     component: UiComponentsComponent,
+    data:{
+      breadcrumb: 'UI components'
+    },
   },
   {
     path: 'mail',
     component: MailComponent,
+    data:{
+      breadcrumb: 'Mail'
+    },
   },
   {
     path: 'messages',
     component: MessagesComponent,
+    data:{
+      breadcrumb: 'Messages'
+    },
   },
   {
     path: 'timeline',
     component: TimelineComponent,
+    data:{
+      breadcrumb: 'Timeline'
+    },
   },
   {
     path: 'profile',
     component: ProfileComponent,
+    data:{
+      breadcrumb: 'Profile'
+    },
   },
   {
     path: 'invoice',
     component: InvoiceComponent,
+    data:{
+      breadcrumb: 'Invoice'
+    },
   },
   {
     path: 'search-result',
     component: SearchResultComponent,
+    data:{
+      breadcrumb: 'Search Result'
+    },
   },
-  /*{
-    path: 'coming-soon',
-    component: ComingSoonComponent,
-  },*/
   {
     path: 'maintenance',
     component: MaintenanceComponent,
+    data:{
+      breadcrumb: 'Maintenance'
+    },
   },
   {
     path: 'errors',
@@ -196,69 +285,117 @@ const routeForPages = [
   },
   {
     path: 'pricing',
+    data:{
+      breadcrumb: 'Pricing'
+    },
     children: [
       {
         path: 'simple',
         component: PricingSimpleComponent,
+        data:{
+          breadcrumb: 'Simple'
+        },
       },
       {
         path: 'modern',
         component: PricingModernComponent,
+        data:{
+          breadcrumb: 'Modern'
+        },
       },
       {
         path: 'table',
         component: PricingTableComponent,
+        data:{
+          breadcrumb: 'Table'
+        },
       }
     ],
   },
   {
     path: 'user',
     component: UserLayoutComponent,
+    data:{
+      breadcrumb: 'User'
+    },
     children: [
       {
         path: 'settings',
         component: UserSettingsComponent,
+        data:{
+          breadcrumb: 'Settings'
+        },
       },
       {
         path: 'billing',
         component: UserBillingComponent,
+        data:{
+          breadcrumb: 'Billing'
+        },
       },
       {
         path: 'creditcard',
         component: UserCreditcardComponent,
+        data:{
+          breadcrumb: 'Creditcard'
+        },
       },
       {
         path: 'transactions',
         component: UserTransactionsComponent,
+        data:{
+          breadcrumb: 'Transactions'
+        },
       },
     ]
   },
   {
     path: 'application',
+    data:{
+      breadcrumb: 'Application'
+    },
     children: [
       {
         path: 'welcome',
         component: WelcomeComponent,
+        data:{
+          breadcrumb: 'Welcome'
+        },
       },
       {
         path: 'getting-started',
         component: GettingStartedComponent,
+        data:{
+          breadcrumb: 'Getting started'
+        },
       },
       {
         path: 'faq',
         component: FaqComponent,
+        data:{
+          breadcrumb: 'FAQ'
+        },
       },
       {
         path: 'manual',
         component: ManualComponent,
+        data:{
+          breadcrumb: 'Manual'
+        },
       },
       {
         path: 'support',
         component: SupportComponent,
+        data:{
+          breadcrumb: 'Support'
+        },
       },
       {
         path: 'changelog',
         component: ChangelogComponent,
+        data:{
+          breadcrumb: 'Changelog'
+        },
       },
     ]
   },

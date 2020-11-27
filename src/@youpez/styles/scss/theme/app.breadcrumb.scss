@@ -1,6 +1,7 @@
 .app-breadcrumb {
   margin-bottom: 1px;
 
+
   .app-breadcrumb__item {
     font-size: 0.75rem;
     font-weight: 400;
@@ -8,8 +9,12 @@
     text-transform: uppercase;
     display: inline-block;
     margin-right: .4rem;
-    opacity: .8;
     cursor: pointer;
+    text-decoration: none;
+
+    &.app-breadcrumb__item--active {
+      opacity: .75;
+    }
 
     &:before {
       display: inline-block;
@@ -26,7 +31,7 @@
 
     &:last-child {
       cursor: default;
-      opacity: 1;
+      //opacity: 1;
     }
   }
 }

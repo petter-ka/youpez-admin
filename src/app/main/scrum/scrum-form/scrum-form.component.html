@@ -1,0 +1,23 @@
+<div fxFill fxLayout="column" class="app-bg-container overflow-hidden">
+  <div class="px-4 py-4 flex">
+    <div>
+      <div class="app-productive-heading-03">Create issue</div>
+
+    </div>
+  </div>
+  <div fxFlex>
+
+  </div>
+  <div class="px-4 py-4 flex justify-end app-border-t">
+    <button (click)="onClose()"
+            ibmButton="secondary"
+            size="field"
+            class="mr-1">
+      Cancel
+    </button>
+    <button ibmButton="primary" size="field">
+      Create
+      <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+    </button>
+  </div>
+</div>

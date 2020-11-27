@@ -91,7 +91,7 @@ export class DashboardDefaultComponent implements OnInit {
             color: 'transparent'
           },
           itemStyle: {
-            color: index % 2 === 0 ? 'rgb(77, 137, 249)' : 'rgba(198,213,255,0.7)'
+            color: index % 2 === 0 ? 'rgb(77, 137, 249)' : 'rgba(198,213,255,0.3)'
           }
         }
       })
@@ -413,13 +413,11 @@ export class DashboardDefaultComponent implements OnInit {
           rich: {
             num: {
               fontWeight: 'bold',
-              color: '#1c1c1c',
               fontFamily: '微软雅黑',
               fontSize: 25,
             },
             key: {
               fontWeight: 'bold',
-              color: '#1c1c1c',
               fontFamily: '微软雅黑',
               fontSize: 15,
             }
@@ -558,7 +556,6 @@ export class DashboardDefaultComponent implements OnInit {
         splitLine: {
           show: true,
           lineStyle: {
-            color: '#999',
             type: 'dashed'
           }
         },
@@ -578,7 +575,6 @@ export class DashboardDefaultComponent implements OnInit {
         splitLine: {
           show: true,
           lineStyle: {
-            color: '#cdcdcd',
             type: 'dashed'
           }
         },

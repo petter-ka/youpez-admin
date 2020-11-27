@@ -498,7 +498,14 @@
   height: auto;
 }
 
-
 .bx--data-table--sticky-header:not(.bx--data-table--compact):not(.bx--data-table--tall):not(.bx--data-table--short) td:not(.bx--table-column-menu):not(.bx--table-column-checkbox) {
   padding-top: 0 !important;
+}
+
+mat-dialog-container {
+  max-width: none !important;
+}
+
+mat-dialog-container {
+  padding: 0 !important;
 }

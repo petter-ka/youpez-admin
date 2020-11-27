@@ -57,7 +57,9 @@ import {DummyTablePaginationComponent} from './components/dummy-table-pagination
 import {DummyTableRichComponent} from './components/dummy-table-rich/dummy-table-rich.component'
 import {DummyFormCreditCardComponent} from './components/dummy-form-credit-card/dummy-form-credit-card.component'
 import {DummyFormBillingComponent} from './components/dummy-form-billing/dummy-form-billing.component'
-import {DummyFormWizardComponent} from './components/dummy-form-wizard/dummy-form-wizard.component'
+import {DummyFormWizardComponent} from './components/dummy-form-wizard/dummy-form-wizard.component';
+import { ScrumFormComponent } from './scrum/scrum-form/scrum-form.component';
+import { ScrumViewComponent } from './scrum/scrum-view/scrum-view.component'
 
 @NgModule({
   declarations: [
@@ -112,6 +114,8 @@ import {DummyFormWizardComponent} from './components/dummy-form-wizard/dummy-for
     DummyFormCreditCardComponent,
     DummyFormBillingComponent,
     DummyFormWizardComponent,
+    ScrumFormComponent,
+    ScrumViewComponent,
   ],
   imports: [
     CommonModule,
