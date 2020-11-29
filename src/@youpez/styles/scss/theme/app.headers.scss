@@ -89,7 +89,7 @@
       bottom: 0;
       left: 10px;
       content: '';
-      @include dottedBackground();
+      @include dottedBackground($darkTheme);
       opacity: .5;
     }
 

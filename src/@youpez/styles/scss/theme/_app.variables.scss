@@ -1,7 +1,4 @@
-@import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
-
-$carbon--theme: $carbon--theme--g100;
-$logoWhite: false;
+@import './themes/app.light.2';
 @import "~carbon-components/scss/globals/scss/colors";
 
 $appUIBg: map-get($carbon--theme, 'ui-background');
@@ -23,7 +20,6 @@ $appFocusBorder: map-get($carbon--theme, 'focus');
 
 $appColorLight: map-get($carbon--theme, 'ui-02');
 
-//$appColorDefault: #fff;
 $appColorPrimary: map-get($carbon--theme, 'interactive-01');
 $appColorDecorative: map-get($carbon--theme, 'ui-03');
 $appColorSecondary: map-get($carbon--theme, 'interactive-02');

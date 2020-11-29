@@ -104,7 +104,7 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
     bottom: 10px;
     left: 10px;
     content: '';
-    @include dottedBackground();
+    @include dottedBackground($darkTheme);
     opacity: .2;
   }
 }

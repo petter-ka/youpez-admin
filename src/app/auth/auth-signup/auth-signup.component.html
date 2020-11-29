@@ -1,16 +1,15 @@
-<div class="mb-8">
+<div class="mb-8" fxHide fxShow.lt-md>
   <app-logo class="cursor-pointer" logoWidth="130px"></app-logo>
 </div>
 <h1 class="app-expressive-heading-06 mb-1">Sign up</h1>
 <div class="app-body-long-02 mb-8">
   Already have an account?
-  <a ibmLink>Sign in</a>
+  <a ibmLink routerLink="../signin">Sign in</a>
 </div>
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <div class="app-form">
-
-    <div fxLayout="row" class="">
-      <div fxFlex="50" class="app-form__row">
+    <div fxLayout="row" class="app-form__row">
+      <div fxFlex="50">
         <div class="app-form__item">
           <ibm-label
             [helperText]="''"
@@ -29,7 +28,7 @@
           </ibm-label>
         </div>
       </div>
-      <div fxFlex="50" class="app-form__row">
+      <div fxFlex="50">
         <div class="app-form__item">
           <ibm-label
             [helperText]="''"
@@ -49,7 +48,6 @@
         </div>
       </div>
     </div>
-
     <div class="app-form__item">
       <ibm-label
         [helperText]="''"

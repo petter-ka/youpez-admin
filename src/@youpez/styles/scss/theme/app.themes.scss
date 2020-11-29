@@ -4,8 +4,8 @@
 // LAYOUT THEMES
 :root.app-theme--light {
   @include spread-map($theme-map-light);
-  @include scrollbarStyleDark();
-  @include logoVisibility($logoWhite);
+  @include includeScrollbarStyle($darkTheme);
+  @include logoVisibility($darkTheme);
 }
 
 // SIDEBAR THEMES

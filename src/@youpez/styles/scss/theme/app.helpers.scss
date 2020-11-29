@@ -243,8 +243,8 @@
   }
 }
 
-@mixin logoVisibility($logoWhite) {
-  @if $logoWhite {
+@mixin logoVisibility($darkTheme) {
+  @if $darkTheme {
     .app-logo--black {
       display: none;
     }
@@ -261,14 +261,26 @@
   }
 }
 
-@mixin dottedBackground() {
-/*  background: url(
-  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAK0lEQVQoU2NkIBIwoqlrYGBgAGEMgK4QpACrYmwKsSrGpZAoq7F6byiYCACglgMLvdqH6QAAAABJRU5ErkJggg==
-  ) repeat;*/
+@mixin includeScrollbarStyle($darkTheme) {
+  .ng-scrollbar {
+    @if $darkTheme {
+      @include includeScrollbarLight();
+    } @else {
+      @include includeScrollbarDark();
+    }
+  }
+}
 
-  background: url(
-  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALklEQVQoU2NkIBIwIqv7//9/AyMjYwM2vSgKQQpwKcZQiEsxVoVEWY3Lb0PBRACHFwwLEZKHggAAAABJRU5ErkJggg==
-  ) repeat;
+@mixin dottedBackground($darkTheme) {
+  @if $darkTheme {
+    background: url(
+    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALklEQVQoU2NkIBIwIqv7//9/AyMjYwM2vSgKQQpwKcZQiEsxVoVEWY3Lb0PBRACHFwwLEZKHggAAAABJRU5ErkJggg==
+    ) repeat;
+  } @else {
+    background: url(
+    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAK0lEQVQoU2NkIBIwoqlrYGBgAGEMgK4QpACrYmwKsSrGpZAoq7F6byiYCACglgMLvdqH6QAAAABJRU5ErkJggg==
+    ) repeat;
+  }
 }
 
 

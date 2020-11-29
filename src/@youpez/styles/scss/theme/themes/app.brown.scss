@@ -1,0 +1,16 @@
+@import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
+
+$carbon--theme: map-merge(
+    $carbon--theme--white,
+    (
+      ui-background: #e6dccc,
+      ui-01: #ddd3c3,
+      ui-02: #eae0cf,
+      ui-03: #c1b18a,
+      field-01: #ddd3c3,
+      field-02: #ddd3c3,
+      disabled-01: #ddd3c3,
+      highlight: #c0875a,
+    )
+);
+$darkTheme: true;

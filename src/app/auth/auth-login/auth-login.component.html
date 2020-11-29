@@ -1,10 +1,10 @@
-<div class="mb-8">
+<div class="mb-8" fxHide fxShow.lt-md>
   <app-logo class="cursor-pointer" logoWidth="130px"></app-logo>
 </div>
 <h1 class="app-expressive-heading-06 mb-1">Sign in</h1>
 <div class="app-body-long-02 mb-8">
   Don't have an account?
-  <a ibmLink>Sign up</a>
+  <a ibmLink routerLink="../signup">Sign up</a>
 </div>
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <div class="app-form">
@@ -49,7 +49,7 @@
           checked="true">
           Remember me?
         </ibm-checkbox>
-        <a ibmLink>Forgot password?</a>
+        <a ibmLink routerLink="../forgot-password">Forgot password?</a>
       </div>
     </div>
     <div class="app-form__submit">
