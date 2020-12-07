@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core'
+import {MailService} from "../mail.service"
 
 @Component({
   selector: 'app-mail',
@@ -112,7 +113,7 @@ export class MailComponent implements OnInit {
   public selectedMail: any = null
   public sidebarVisible: boolean = true
 
-  constructor() {
+  constructor(private mailService: MailService) {
   }
 
   ngOnInit(): void {
@@ -126,6 +127,12 @@ export class MailComponent implements OnInit {
 
   onToggleSidebar() {
     this.sidebarVisible = !this.sidebarVisible
+  }
+
+  onCompose() {
+    this.mailService.open(null).afterClosed().subscribe(() => {
+
+    })
   }
 
 }

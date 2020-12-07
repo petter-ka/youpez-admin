@@ -425,6 +425,88 @@ export class LayoutComponent implements OnInit, OnDestroy {
             },
           ]
         },
+        {
+          name: 'Starters',
+          parentUrl: '/app/starters',
+          prefix: {
+            type: 'ibm-icon',
+            name: '3dCursorAlt',
+          },
+          children: [
+            {
+              name: 'Full width',
+              parentUrl: '/app/starters/full-width',
+              children: [
+                {
+                  name: 'Basic',
+                  url:'/app/starters/full-width/basic'
+                },
+                {
+                  name: 'Header',
+                  url:'/app/starters/full-width/header'
+                },
+                {
+                  name: 'Tabs',
+                  url:'/app/starters/full-width/tabs'
+                }
+              ]
+            },
+            {
+              name: 'Left sidebar',
+              parentUrl: '/app/starters/left-sidebar',
+              children: [
+                {
+                  name: 'Basic',
+                  url:'/app/starters/left-sidebar/basic'
+                },
+                {
+                  name: 'Header',
+                  url:'/app/starters/left-sidebar/header'
+                },
+                {
+                  name: 'Tabs',
+                  url:'/app/starters/left-sidebar/tabs'
+                }
+              ]
+            },
+            {
+              name: 'Right sidebar',
+              parentUrl: '/app/starters/right-sidebar',
+              children: [
+                {
+                  name: 'Basic',
+                  url:'/app/starters/right-sidebar/basic'
+                },
+                {
+                  name: 'Header',
+                  url:'/app/starters/right-sidebar/header'
+                },
+                {
+                  name: 'Tabs',
+                  url:'/app/starters/right-sidebar/tabs'
+                }
+              ]
+            },
+            {
+              name: 'Application',
+              parentUrl: '/app/starters/application',
+              children: [
+                {
+                  name: 'Basic',
+                  url:'/app/starters/application/basic'
+                },
+                {
+                  name: 'Advanced',
+                  url:'/app/starters/application/advanced'
+                },
+                {
+                  name: 'Complex',
+                  url:'/app/starters/application/complex'
+                }
+              ]
+            },
+          ]
+        }
       ]
     },
     {
@@ -701,7 +783,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     this.settingsVisible = true
   }
 
-  onSideBarOpen() {
+  onSideBarOpen(event) {
     this.mainSidebarOpts.opened = true
   }
 
@@ -719,5 +801,9 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
   onLockClose(event) {
     this.lockScreenVisible = false
+  }
+
+  onCloseSidebar() {
+    this.mainSidebarOpts.opened = false
   }
 }

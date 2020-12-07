@@ -14,6 +14,7 @@ export class AppContentTabsComponent implements OnInit {
 
   @Input() navigation: boolean = true
   @Input() tabs: AppTab[] = []
+  @Input() contentTitle:string = 'F'
 
   constructor(private router: Router) {
   }

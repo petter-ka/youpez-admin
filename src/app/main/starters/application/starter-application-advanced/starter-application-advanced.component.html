@@ -1,0 +1,54 @@
+<app-sidenav-container panel="panel">
+  <app-sidenav-v2
+    [breakpoint]="'md'"
+    [direction]="'bottom'"
+    [opened]="true"
+    [hoverAble]="true"
+    [mode]="'side'"
+    initWidth="200"
+    [toggleableBtn]="true"
+    [size]="'sideBar1'">
+    <div fxFill fxLayout="column" class="app-bg-container relative">
+      <div class="app-header app-header--sm">
+        <div class="app-expressive-heading-02">Bottom</div>
+      </div>
+    </div>
+  </app-sidenav-v2>
+
+  <div fxFill fxLayout="column" class="relative">
+    <app-header>
+      <app-header-title>
+        Main header
+      </app-header-title>
+      <app-header-tools>
+        <button ibmButton="primary" size="sm" class="mr-1">
+          Button
+          <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+        </button>
+      </app-header-tools>
+    </app-header>
+    <div fxFlex class="relative">
+
+      <app-sidenav-container panel="panel">
+        <app-sidenav-v2
+          [breakpoint]="'md'"
+          [direction]="'right'"
+          [opened]="true"
+          [hoverAble]="true"
+          [mode]="'side'"
+          initWidth="200"
+          [toggleableBtn]="true"
+          [size]="'sideBar1'">
+          <div fxFill fxLayout="column" class="app-bg-container relative">
+            <div class="app-header app-header--sm">
+              <div class="app-expressive-heading-02">Right</div>
+            </div>
+          </div>
+        </app-sidenav-v2>
+      </app-sidenav-container>
+
+    </div>
+  </div>
+</app-sidenav-container>
+
+

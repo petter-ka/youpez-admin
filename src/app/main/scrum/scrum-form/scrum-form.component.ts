@@ -8,6 +8,71 @@ import {MatDialogRef} from '@angular/material/dialog'
 })
 export class ScrumFormComponent implements OnInit {
 
+  public project = [
+    {
+      content: "Devops team",
+      selected: true,
+    },
+    {
+      content: "Kubernetes Cluster"
+    },
+    {
+      content: "Engineering"
+    },
+    {
+      content: "Frontend"
+    }
+  ]
+
+  public issueType = [
+    {
+      content: "Task",
+      selected: true,
+    },
+    {
+      content: "Bug"
+    },
+  ]
+
+  public sprint = [
+    {
+      content: "Current",
+    },
+    {
+      content: "W-30"
+    },
+  ]
+
+
+  public priority = [
+    {
+      content: "High",
+    },
+    {
+      content: "Low"
+    },
+  ]
+
+  public assignee = [
+    {
+      content: "Jon Doe",
+    },
+    {
+      content: "Mathias Inu"
+    },
+  ]
+
+  public reported = [
+    {
+      content: "Jon Doe",
+    },
+    {
+      content: "Mathias Inu"
+    },
+  ]
+
+
+
   constructor(private dialogRef: MatDialogRef<ScrumFormComponent>) {
   }
 

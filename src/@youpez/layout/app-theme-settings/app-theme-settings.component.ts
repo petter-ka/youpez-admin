@@ -16,7 +16,7 @@ export class AppThemeSettingsComponent implements OnInit {
     },
     {
       name: 'light',
-      theme: 'app-theme--light'
+      theme: 'app-theme--default'
     }, {
       name: 'darker',
       theme: 'app-theme--darker'

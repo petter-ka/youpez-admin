@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core'
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop'
-import {ScrumFormService} from "../scrum-form/scrum-form.service"
+import {ScrumFormService} from "../scrum-form.service"
 
 @Component({
   selector: 'app-scrum-board',
@@ -226,6 +226,12 @@ export class ScrumBoardComponent implements OnInit {
 
   onCreate() {
     this.scrumFormService.open(null).afterClosed().subscribe(() => {
+      console.log('dfasdasdas')
+    })
+  }
+
+  onView() {
+    this.scrumFormService.openEdit().afterClosed().subscribe(() => {
       console.log('dfasdasdas')
     })
   }

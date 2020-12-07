@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core'
+import {MatDialogRef} from "@angular/material/dialog"
 
 @Component({
   selector: 'app-scrum-view',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScrumViewComponent implements OnInit {
 
-  constructor() { }
+  public sidebarVisible:boolean = true
+
+  constructor(private dialogRef: MatDialogRef<ScrumViewComponent>) {
+  }
 
   ngOnInit(): void {
+  }
+
+  onClose() {
+    this.dialogRef.close(false)
+  }
+
+  onCloseSidebar(event){
+
   }
 
 }

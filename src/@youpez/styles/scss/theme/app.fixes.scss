@@ -509,3 +509,7 @@ mat-dialog-container {
 mat-dialog-container {
   padding: 0 !important;
 }
+
+.cdk-global-overlay-wrapper {
+  overflow-y: auto;
+}

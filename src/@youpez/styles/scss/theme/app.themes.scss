@@ -2,7 +2,7 @@
 @import 'app.helpers';
 
 // LAYOUT THEMES
-:root.app-theme--light {
+:root.app-theme--default {
   @include spread-map($theme-map-light);
   @include includeScrollbarStyle($darkTheme);
   @include logoVisibility($darkTheme);

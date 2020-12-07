@@ -1,1 +1,230 @@
-<p>scrum-view works!</p>
+<div fxFill fxLayout="column" class="app-bg-container overflow-hidden">
+  <div class="px-4 pt-4">
+    <div class="flex items-center">
+      <div class="h-3 w-3 app-bg-info rounded-full mr-2"></div>
+      <div class="app-productive-heading-02 font-bold">YP-2340</div>
+      <div class="flex-1 flex justify-end">
+        <button ibmButton="ghost" size="sm" class="bx--btn--icon-only mr-1">
+          <svg class="bx--btn__icon" ibmIconLocked size="32"></svg>
+        </button>
+        <button ibmButton="ghost" size="sm" class="bx--btn--icon-only mr-1">
+          <svg class="bx--btn__icon" ibmIconPin size="32"></svg>
+        </button>
+        <button ibmButton="ghost" size="sm" class="bx--btn--icon-only mr-1">
+          <svg class="bx--btn__icon" ibmIconShare size="32"></svg>
+        </button>
+        <button (click)="onClose()" ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+          <svg class="bx--btn__icon" ibmIconClose size="32"></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div fxFlex class="relative">
+    <app-sidenav-container>
+      <app-sidenav-v2
+        (close)="onCloseSidebar($event)"
+        [opened]="sidebarVisible"
+        [direction]="'right'"
+        breakpoint="md"
+        mode="side"
+        [size]="'md'">
+        <div fxFill fxLayout="column">
+          <div class="app-content app-content--default">
+            <button ibmButton="primary"
+                    size="sm"
+                    class="mr-1">
+              Todo
+              <svg class="bx--btn__icon" ibmIconChevronDown size="20"></svg>
+            </button>
+          </div>
+          <div fxFlex class="relative">
+            <div class="app-a-box app-scrollbar-fix">
+              <ng-scrollbar>
+                <div class="app-content app-content--default">
+                  <div class="flex items-center mb-4">
+                    <div class="app-subtitle w-24">assignee</div>
+                    <div class="font-bold app-body-short-01">
+                      <div class="flex items-center">
+                        <img src="/assets/img/avatar/avatar3.jpg" class="w-6 rounded-full mr-2"/>
+                        <span>Jon Doe</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center mb-4">
+                    <div class="app-subtitle w-24">reporter</div>
+                    <div class="font-bold app-body-short-01">
+                      <div class="flex items-center">
+                        <img src="/assets/img/avatar/avatar6.jpg" class="w-6 rounded-full mr-2"/>
+                        <span>James Robson</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center mb-4">
+                    <div class="app-subtitle w-24">category</div>
+                    <div class="font-bold app-body-short-01">
+                      <ibm-tag type="warm-gray">enterprise</ibm-tag>
+                    </div>
+                  </div>
+                  <div class="flex items-center mb-4">
+                    <div class="app-subtitle w-24">original estimate</div>
+                    <div class="font-bold app-body-short-01">
+                      <ibm-tag type="blue">2.5h</ibm-tag>
+                    </div>
+                  </div>
+                  <div class="flex items-center mb-4">
+                    <div class="app-subtitle w-24">time tracking</div>
+                    <div class="app-body-short-01 flex-1">
+                      <div class="app-progress app-progress--small">
+                        <div class="app-progress__bar app-bg-success" style="width:66%"></div>
+                      </div>
+                      <div class="mt-1">10m remaining</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center mb-4">
+                    <div class="app-subtitle w-24">sprint</div>
+                    <div class="font-bold app-body-short-01">2020 Sprint W31-32</div>
+                  </div>
+                  <div class="flex items-center mb-4">
+                    <div class="app-subtitle w-24">priority</div>
+                    <div class="font-bold app-body-short-01 app-color-danger">High</div>
+                  </div>
+                </div>
+              </ng-scrollbar>
+            </div>
+          </div>
+          <div class="app-content app-content--default app-border-t">
+            <div class="flex items-center mb-4">
+              <div class="app-subtitle w-24">created</div>
+              <div class="app-label-01">
+                November 8, 2020, 6:34 PM
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="app-subtitle w-24">updated</div>
+              <div class="app-label-01">
+                November 8, 2020, 8:34 PM
+              </div>
+            </div>
+          </div>
+        </div>
+      </app-sidenav-v2>
+
+      <div fxFill fxLayout="column">
+
+        <div fxFlex class="relative">
+          <div class="app-a-box app-scrollbar-fix">
+            <ng-scrollbar>
+              <div class="app-content app-content--default">
+                <div class="app-productive-heading-03 font-bold mb-4">Volumes are created in container with root
+                  ownership and strict permissions
+                </div>
+                <div class="mb-6">
+                  <button ibmButton="tertiary"
+                          size="sm"
+                          class="mr-1">
+                    Attach
+                    <svg class="bx--btn__icon" ibmIconAttachment size="20"></svg>
+                  </button>
+                  <button ibmButton="tertiary"
+                          size="sm"
+                          class="mr-1">
+                    Create subtask
+                    <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+                  </button>
+                </div>
+
+                <div class="app-subtitle mb-2">description</div>
+                <p class="app-body-long-01">
+                  Consider a Job with two containers in it -- one which does the work and then terminates, and another
+                  which isn't designed to ever explicitly exit but provides some sort of supporting functionality like
+                  log or metric collection.
+                  <br/><br/>
+                  What options exist for doing something like this? What options should exist?
+                  <br/><br/>
+                  Currently the Job will keep running as long as the second container keeps running, which means that
+                  the user has to modify the second container in some way to detect when the first one is done so that
+                  it can cleanly exit as well.
+                </p>
+
+                <div class="mt-6 pt-6 app-border-t">
+                  <div class="app-subtitle mb-1">activity</div>
+                  <ibm-tab-header-group class="app-ibm-tab-auto">
+                    <ibm-tab-header>
+                      Comments
+                    </ibm-tab-header>
+                    <ibm-tab-header>
+                      History
+                    </ibm-tab-header>
+                    <ibm-tab-header>
+                      Work log
+                    </ibm-tab-header>
+                  </ibm-tab-header-group>
+
+                  <div class="flex mb-6 mt-6">
+                    <img src="/assets/img/avatar/avatar7.jpg" class="w-6 h-6 rounded-full mr-2"/>
+                    <div>
+                      <div class=" mb-1">
+                        <span class="app-productive-heading-02 font-bold mr-2">Joe Util</span><span class="app-label-01">November 8, 2020, 6:30 PM</span>
+                      </div>
+                      <p class="app-body-long-01">
+                        Can we designate a particular container in the pod as the "completion" container so that when
+                        that container exits we can say the job is completed?<br/><br/>
+
+                        The sidecar containers tends to be long lived for things like log shipping and monitoring.
+                        We can force terminate them once the job is completed.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex">
+                    <img src="/assets/img/avatar/avatar2.jpg" class="w-6 h-6 rounded-full mr-2"/>
+                    <div>
+                      <div class=" mb-1">
+                        <span class="app-productive-heading-02 font-bold mr-2">Jane Silly</span><span class="app-label-01">November 8, 2020, 6:30 PM</span>
+                      </div>
+                      <p class="app-body-long-01">
+                        So, I have a job that basically runs a tool in a one container pod. <br/>As soon as the tool finishes running, it is supposed to produce a results file. I can't seem to capture this results file because as soon as the tool finishes running, the pod deletes and I lose the results file.
+                        <br/>
+                        I was able to capture this results file if I used HostPath as a VolumeSource and since I am running minikube locally, the results file gets saved onto my workstation. <br/><br/>
+
+                        But, I understand that's not recommended and ideal for production containers. So, I used EmptyDir as suggested above. But, again, if I do that, I can't really capture it because it gets deleted with the pod itself.
+
+                        So, should I be solving my problem using the sidecar container pattern as well?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </ng-scrollbar>
+          </div>
+        </div>
+
+        <div class="app-content app-content--default">
+          <div class="flex items-center mb-4">
+            <img src="/assets/img/avatar/avatar3.jpg" class="w-6 rounded-full mr-2"/>
+            <input
+              ibmText
+              size="md"
+              theme="light"
+              [placeholder]="'Add a comment...'">
+          </div>
+        </div>
+      </div>
+
+
+    </app-sidenav-container>
+  </div>
+  <!--  <div class="px-4 py-4 flex justify-end app-border-t">
+      <button (click)="onClose()"
+              ibmButton="secondary"
+              size="field"
+              class="mr-1">
+        Cancel
+      </button>
+      <button ibmButton="primary" size="field">
+        Create
+        <svg class="bx&#45;&#45;btn__icon" ibmIconAdd size="20"></svg>
+      </button>
+    </div>-->
+</div>

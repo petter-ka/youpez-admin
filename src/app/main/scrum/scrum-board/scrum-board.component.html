@@ -4,9 +4,6 @@
       Youpez 2020 Sprint W31-32
     </app-header-title>
     <app-header-tools>
-      <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
-        <svg class="bx--btn__icon" ibmIconCloudDownload size="32"></svg>
-      </button>
       <button ibmButton="primary" size="sm" (click)="onCreate()">
         Create
         <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
@@ -78,6 +75,7 @@
                         <div class="px-1">
                           <ng-container *ngFor="let task of board.tasks">
                             <div class="app-card cursor-move"
+                                 (click)="onView()"
                                  [ngClass]="{'app-card--bt-danger-vertical': task.important}"
                                  cdkDrag
                                  style="">

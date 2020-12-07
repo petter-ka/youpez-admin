@@ -125,7 +125,7 @@ import {
   CheckmarkModule,
   CheckmarkFilledModule,
   AppsModule,
-  WatsonHealthContourFindingModule, SaveModule,
+  WatsonHealthContourFindingModule, SaveModule, WatsonHealth_3DCursorAltModule,
 } from "@carbon/icons-angular"
 import {FlexLayoutModule} from '@angular/flex-layout'
 
@@ -402,6 +402,7 @@ const Pipes = [
     NgxMdModule,
     WatsonHealthContourFindingModule,
     NgxMaskModule.forRoot(),
+    WatsonHealth_3DCursorAltModule,
   ],
   declarations: [
     ...Components,

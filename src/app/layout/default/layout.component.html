@@ -48,7 +48,8 @@
           [hoverAble]="mainSidebarOpts.hoverAble"
           [mode]="mainSidebarOpts.mode"
           [toggleableBtn]="mainSidebarOpts.toggleableBtn"
-          [size]="mainSidebarOpts.size">
+          [size]="mainSidebarOpts.size"
+          (close)="onCloseSidebar()">
           <app-layout-sidebar
             [menu]="menu"
             [opened]="mainSidebarOpts.opened"

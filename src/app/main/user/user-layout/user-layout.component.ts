@@ -31,7 +31,6 @@ export class UserLayoutComponent implements OnInit {
     }
   ]
 
-
   constructor() { }
 
   ngOnInit(): void {

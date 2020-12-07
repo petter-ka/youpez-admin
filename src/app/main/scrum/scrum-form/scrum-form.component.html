@@ -1,12 +1,104 @@
+<ng-template #invalidText>
+  <img src="/assets/img/avatar/avatar3.jpg" class="app-img-select__item w-8 rounded"/>
+</ng-template>
 <div fxFill fxLayout="column" class="app-bg-container overflow-hidden">
   <div class="px-4 py-4 flex">
-    <div>
-      <div class="app-productive-heading-03">Create issue</div>
-
+    <div class="app-productive-heading-03 font-bold">Create issue</div>
+    <div class="flex-1 flex justify-end">
+      <button (click)="onClose()" ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+        <svg class="bx--btn__icon" ibmIconClose size="32"></svg>
+      </button>
     </div>
   </div>
   <div fxFlex>
+    <div class="app-content app-content--default">
+      <div class="app-form">
+        <div fxLayout="row wrap" class="app-form__row">
+          <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
+            <ibm-combo-box
+              label="Project"
+              [items]="project"
+              theme="light"
+              size="md">
+              <ibm-dropdown-list></ibm-dropdown-list>
+            </ibm-combo-box>
+          </div>
+          <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
+            <ibm-combo-box
+              label="Issue Type"
+              [items]="issueType"
+              theme="light"
+              size="md">
+              <ibm-dropdown-list></ibm-dropdown-list>
+            </ibm-combo-box>
+          </div>
+        </div>
+        <div class="mb-6 pb-3 app-border-b"></div>
+        <div class="app-form__item">
+          <ibm-label helperText="Summarize the issue in one sentence">
+            Title
+            <input
+              ibmText
+              size="md"
+              theme="light">
+          </ibm-label>
+        </div>
+        <div class="app-form__item">
+          <ibm-combo-box
+            helperText="Select the sprint for the issue"
+            label="Sprint"
+            [items]="sprint"
+            class="w-1/2"
+            theme="light"
+            size="md">
+            <ibm-dropdown-list></ibm-dropdown-list>
+          </ibm-combo-box>
+        </div>
+        <div class="app-form__item">
+          <ibm-combo-box
+            label="Priority"
+            [items]="priority"
+            class="w-1/2"
+            theme="light"
+            size="md">
+            <ibm-dropdown-list></ibm-dropdown-list>
+          </ibm-combo-box>
+        </div>
+        <div class="app-form__item">
+          <ibm-combo-box
+            label="Assignee"
+            [items]="assignee"
+            class="w-1/2"
+            theme="light"
+            size="md">
+            <ibm-dropdown-list></ibm-dropdown-list>
+          </ibm-combo-box>
+        </div>
+        <div class="app-form__item">
+          <ibm-combo-box
+            label="Reporter"
+            [items]="reported"
+            class="w-1/2"
+            theme="light"
+            size="md">
+            <ibm-dropdown-list></ibm-dropdown-list>
+          </ibm-combo-box>
+        </div>
+        <div class="">
+          <ibm-label
+            [helperText]="''">
+            Description
+            <textarea
+              ibmTextArea
+              theme="light"
+              [rows]="3"
+              [cols]="3"
+              aria-label="textarea"></textarea>
+          </ibm-label>
+        </div>
+      </div>
 
+    </div>
   </div>
   <div class="px-4 py-4 flex justify-end app-border-t">
     <button (click)="onClose()"
@@ -15,7 +107,7 @@
             class="mr-1">
       Cancel
     </button>
-    <button ibmButton="primary" size="field">
+    <button ibmButton="primary" size="field" (click)="onClose()">
       Create
       <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
     </button>

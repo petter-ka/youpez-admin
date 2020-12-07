@@ -47,32 +47,115 @@ import {FormsGeneralComponent} from "./forms/forms-general/forms-general.compone
 import {FormsAdvancedComponent} from "./forms/forms-advanced/forms-advanced.component"
 import {FormsValidationComponent} from "./forms/forms-validation/forms-validation.component"
 import {FormsWizardComponent} from "./forms/forms-wizard/forms-wizard.component"
+import {StarterFullWidthBasicComponent} from "./starters/full-width/starter-full-width-basic/starter-full-width-basic.component"
+import {StarterFullWidthHeaderComponent} from "./starters/full-width/starter-full-width-header/starter-full-width-header.component"
+import {StarterFullWidthTabsComponent} from "./starters/full-width/starter-full-width-tabs/starter-full-width-tabs.component"
+import {StarterLeftSidebarBasicComponent} from "./starters/left-sidebar/starter-left-sidebar-basic/starter-left-sidebar-basic.component"
+import {StarterLeftSidebarHeaderComponent} from "./starters/left-sidebar/starter-left-sidebar-header/starter-left-sidebar-header.component"
+import {StarterLeftSidebarTabsComponent} from "./starters/left-sidebar/starter-left-sidebar-tabs/starter-left-sidebar-tabs.component"
+import {StarterRightSidebarBasicComponent} from "./starters/right-sidebar/starter-right-sidebar-basic/starter-right-sidebar-basic.component"
+import {StarterRightSidebarHeaderComponent} from "./starters/right-sidebar/starter-right-sidebar-header/starter-right-sidebar-header.component"
+import {StarterRightSidebarTabsComponent} from "./starters/right-sidebar/starter-right-sidebar-tabs/starter-right-sidebar-tabs.component"
+import {StarterApplicationBasicComponent} from "./starters/application/starter-application-basic/starter-application-basic.component"
+import {StarterApplicationAdvancedComponent} from "./starters/application/starter-application-advanced/starter-application-advanced.component"
+import {StarterApplicationComplexComponent} from "./starters/application/starter-application-complex/starter-application-complex.component"
+
+const starterPages = [
+  {
+    path: 'full-width',
+    children: [
+      {
+        path: 'basic',
+        component: StarterFullWidthBasicComponent,
+      },
+      {
+        path: 'header',
+        component: StarterFullWidthHeaderComponent,
+      },
+      {
+        path: 'tabs',
+        component: StarterFullWidthTabsComponent,
+      }
+    ]
+  },
+  {
+    path: 'left-sidebar',
+    children: [
+      {
+        path: 'basic',
+        component: StarterLeftSidebarBasicComponent,
+      },
+      {
+        path: 'header',
+        component: StarterLeftSidebarHeaderComponent,
+      },
+      {
+        path: 'tabs',
+        component: StarterLeftSidebarTabsComponent,
+      }
+    ]
+  },
+  {
+    path: 'right-sidebar',
+    children: [
+      {
+        path: 'basic',
+        component: StarterRightSidebarBasicComponent,
+      },
+      {
+        path: 'header',
+        component: StarterRightSidebarHeaderComponent,
+      },
+      {
+        path: 'tabs',
+        component: StarterRightSidebarTabsComponent,
+      }
+    ]
+  },
+  {
+    path: 'application',
+    children: [
+      {
+        path: 'basic',
+        component: StarterApplicationBasicComponent,
+      },
+      {
+        path: 'advanced',
+        component: StarterApplicationAdvancedComponent,
+      },
+      {
+        path: 'complex',
+        component: StarterApplicationComplexComponent,
+      }
+    ]
+  }
+]
 
 const routeForPages = [
   {
     path: 'dashboard',
-    data:{
+    data: {
       breadcrumb: 'Dashboard'
     },
     children: [
       {
         path: 'default',
         component: DashboardDefaultComponent,
-        data:{
+        data: {
           breadcrumb: 'Default'
         },
       },
       {
         path: 'analytics',
         component: DashboardAnalyticsComponent,
-        data:{
+        data: {
           breadcrumb: 'Analytics'
         },
       },
       {
         path: 'crypto',
         component: DashboardCryptoComponent,
-        data:{
+        data: {
           breadcrumb: 'Stocks / Crypto'
         },
       },
@@ -81,34 +164,34 @@ const routeForPages = [
   {
     path: 'typography',
     component: TypographyComponent,
-    data:{
+    data: {
       breadcrumb: 'Typography'
     },
   },
   {
     path: 'widgets',
-    data:{
+    data: {
       breadcrumb: 'Widgets'
     },
     children: [
       {
         path: 'general',
         component: WidgetsGeneralComponent,
-        data:{
+        data: {
           breadcrumb: 'General'
         },
       },
       {
         path: 'cards',
         component: WidgetsCardComponent,
-        data:{
+        data: {
           breadcrumb: 'Cards'
         },
       },
       {
         path: 'lists',
         component: WidgetsListComponent,
-        data:{
+        data: {
           breadcrumb: 'List'
         },
       },
@@ -116,28 +199,28 @@ const routeForPages = [
   },
   {
     path: 'tables',
-    data:{
+    data: {
       breadcrumb: 'Tables'
     },
     children: [
       {
         path: 'basic',
         component: TableBasicComponent,
-        data:{
+        data: {
           breadcrumb: 'Basic'
         },
       },
       {
         path: 'advanced',
         component: TableAdvancedComponent,
-        data:{
+        data: {
           breadcrumb: 'Advanced'
         },
       },
       {
         path: 'full',
         component: TableFullComponent,
-        data:{
+        data: {
           breadcrumb: 'Datagrid'
         },
       },
@@ -145,35 +228,35 @@ const routeForPages = [
   },
   {
     path: 'forms',
-    data:{
+    data: {
       breadcrumb: 'Forms'
     },
     children: [
       {
         path: 'general',
         component: FormsGeneralComponent,
-        data:{
+        data: {
           breadcrumb: 'General'
         },
       },
       {
         path: 'advanced',
         component: FormsAdvancedComponent,
-        data:{
+        data: {
           breadcrumb: 'Advanced'
         },
       },
       {
         path: 'validation',
         component: FormsValidationComponent,
-        data:{
+        data: {
           breadcrumb: 'Validation'
         },
       },
       {
         path: 'wizard',
         component: FormsWizardComponent,
-        data:{
+        data: {
           breadcrumb: 'Wizard'
         },
       },
@@ -182,91 +265,91 @@ const routeForPages = [
   {
     path: 'charts',
     component: ChartsComponent,
-    data:{
+    data: {
       breadcrumb: 'Charts'
     },
   },
   {
     path: 'icons',
     component: IconsComponent,
-    data:{
+    data: {
       breadcrumb: 'Icons'
     },
   },
   {
     path: 'scrum-board',
     component: ScrumBoardComponent,
-    data:{
+    data: {
       breadcrumb: 'Scrum board'
     },
   },
   {
     path: 'tasks',
     component: TasksComponent,
-    data:{
+    data: {
       breadcrumb: 'Tasks'
     },
   },
   {
     path: 'file-manager',
     component: FileManagerComponent,
-    data:{
+    data: {
       breadcrumb: 'File-manager'
     },
   },
   {
     path: 'ui-components',
     component: UiComponentsComponent,
-    data:{
+    data: {
       breadcrumb: 'UI components'
     },
   },
   {
     path: 'mail',
     component: MailComponent,
-    data:{
+    data: {
       breadcrumb: 'Mail'
     },
   },
   {
     path: 'messages',
     component: MessagesComponent,
-    data:{
+    data: {
       breadcrumb: 'Messages'
     },
   },
   {
     path: 'timeline',
     component: TimelineComponent,
-    data:{
+    data: {
       breadcrumb: 'Timeline'
     },
   },
   {
     path: 'profile',
     component: ProfileComponent,
-    data:{
+    data: {
       breadcrumb: 'Profile'
     },
   },
   {
     path: 'invoice',
     component: InvoiceComponent,
-    data:{
+    data: {
       breadcrumb: 'Invoice'
     },
   },
   {
     path: 'search-result',
     component: SearchResultComponent,
-    data:{
+    data: {
       breadcrumb: 'Search Result'
     },
   },
   {
     path: 'maintenance',
     component: MaintenanceComponent,
-    data:{
+    data: {
       breadcrumb: 'Maintenance'
     },
   },
@@ -284,29 +367,33 @@ const routeForPages = [
     ],
   },
   {
+    path: 'starters',
+    children: [...starterPages],
+  },
+  {
     path: 'pricing',
-    data:{
+    data: {
       breadcrumb: 'Pricing'
     },
     children: [
       {
         path: 'simple',
         component: PricingSimpleComponent,
-        data:{
+        data: {
           breadcrumb: 'Simple'
         },
       },
       {
         path: 'modern',
         component: PricingModernComponent,
-        data:{
+        data: {
           breadcrumb: 'Modern'
         },
       },
       {
         path: 'table',
         component: PricingTableComponent,
-        data:{
+        data: {
           breadcrumb: 'Table'
         },
       }
@@ -315,35 +402,35 @@ const routeForPages = [
   {
     path: 'user',
     component: UserLayoutComponent,
-    data:{
+    data: {
       breadcrumb: 'User'
     },
     children: [
       {
         path: 'settings',
         component: UserSettingsComponent,
-        data:{
+        data: {
           breadcrumb: 'Settings'
         },
       },
       {
         path: 'billing',
         component: UserBillingComponent,
-        data:{
+        data: {
           breadcrumb: 'Billing'
         },
       },
       {
         path: 'creditcard',
         component: UserCreditcardComponent,
-        data:{
+        data: {
           breadcrumb: 'Creditcard'
         },
       },
       {
         path: 'transactions',
         component: UserTransactionsComponent,
-        data:{
+        data: {
           breadcrumb: 'Transactions'
         },
       },
@@ -351,49 +438,49 @@ const routeForPages = [
   },
   {
     path: 'application',
-    data:{
+    data: {
       breadcrumb: 'Application'
     },
     children: [
       {
         path: 'welcome',
         component: WelcomeComponent,
-        data:{
+        data: {
           breadcrumb: 'Welcome'
         },
       },
       {
         path: 'getting-started',
         component: GettingStartedComponent,
-        data:{
+        data: {
           breadcrumb: 'Getting started'
         },
       },
       {
         path: 'faq',
         component: FaqComponent,
-        data:{
+        data: {
           breadcrumb: 'FAQ'
         },
       },
       {
         path: 'manual',
         component: ManualComponent,
-        data:{
+        data: {
           breadcrumb: 'Manual'
         },
       },
       {
         path: 'support',
         component: SupportComponent,
-        data:{
+        data: {
           breadcrumb: 'Support'
         },
       },
       {
         path: 'changelog',
         component: ChangelogComponent,
-        data:{
+        data: {
           breadcrumb: 'Changelog'
         },
       },

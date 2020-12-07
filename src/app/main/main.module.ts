@@ -57,9 +57,22 @@ import {DummyTablePaginationComponent} from './components/dummy-table-pagination
 import {DummyTableRichComponent} from './components/dummy-table-rich/dummy-table-rich.component'
 import {DummyFormCreditCardComponent} from './components/dummy-form-credit-card/dummy-form-credit-card.component'
 import {DummyFormBillingComponent} from './components/dummy-form-billing/dummy-form-billing.component'
-import {DummyFormWizardComponent} from './components/dummy-form-wizard/dummy-form-wizard.component';
-import { ScrumFormComponent } from './scrum/scrum-form/scrum-form.component';
-import { ScrumViewComponent } from './scrum/scrum-view/scrum-view.component'
+import {DummyFormWizardComponent} from './components/dummy-form-wizard/dummy-form-wizard.component'
+import {ScrumFormComponent} from './scrum/scrum-form/scrum-form.component'
+import {ScrumViewComponent} from './scrum/scrum-view/scrum-view.component'
+import {MailComposeComponent} from './mail/mail-compose/mail-compose.component';
+import { StarterFullWidthBasicComponent } from './starters/full-width/starter-full-width-basic/starter-full-width-basic.component';
+import { StarterFullWidthHeaderComponent } from './starters/full-width/starter-full-width-header/starter-full-width-header.component';
+import { StarterFullWidthTabsComponent } from './starters/full-width/starter-full-width-tabs/starter-full-width-tabs.component';
+import { StarterLeftSidebarBasicComponent } from './starters/left-sidebar/starter-left-sidebar-basic/starter-left-sidebar-basic.component';
+import { StarterLeftSidebarHeaderComponent } from './starters/left-sidebar/starter-left-sidebar-header/starter-left-sidebar-header.component';
+import { StarterLeftSidebarTabsComponent } from './starters/left-sidebar/starter-left-sidebar-tabs/starter-left-sidebar-tabs.component';
+import { StarterRightSidebarBasicComponent } from './starters/right-sidebar/starter-right-sidebar-basic/starter-right-sidebar-basic.component';
+import { StarterRightSidebarHeaderComponent } from './starters/right-sidebar/starter-right-sidebar-header/starter-right-sidebar-header.component';
+import { StarterRightSidebarTabsComponent } from './starters/right-sidebar/starter-right-sidebar-tabs/starter-right-sidebar-tabs.component';
+import { StarterApplicationBasicComponent } from './starters/application/starter-application-basic/starter-application-basic.component';
+import { StarterApplicationAdvancedComponent } from './starters/application/starter-application-advanced/starter-application-advanced.component';
+import { StarterApplicationComplexComponent } from './starters/application/starter-application-complex/starter-application-complex.component'
 
 @NgModule({
   declarations: [
@@ -116,6 +129,19 @@ import { ScrumViewComponent } from './scrum/scrum-view/scrum-view.component'
     DummyFormWizardComponent,
     ScrumFormComponent,
     ScrumViewComponent,
+    MailComposeComponent,
+    StarterFullWidthBasicComponent,
+    StarterFullWidthHeaderComponent,
+    StarterFullWidthTabsComponent,
+    StarterLeftSidebarBasicComponent,
+    StarterLeftSidebarHeaderComponent,
+    StarterLeftSidebarTabsComponent,
+    StarterRightSidebarBasicComponent,
+    StarterRightSidebarHeaderComponent,
+    StarterRightSidebarTabsComponent,
+    StarterApplicationBasicComponent,
+    StarterApplicationAdvancedComponent,
+    StarterApplicationComplexComponent,
   ],
   imports: [
     CommonModule,

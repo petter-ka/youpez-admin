@@ -20,12 +20,13 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe((queryParams) => {
-      console.log(queryParams)
-    })
+    this.route.queryParams
+      .subscribe((queryParams) => {
+        //console.log(queryParams)
+      })
     registerTheme('inverse', getDarkEchartsTheme())
     registerTheme('default', getLightEchartsTheme())
-    this.settingsService.setTheme('app-theme--light')
+    this.settingsService.setTheme('app-theme--default')
     this.settingsService.setTheme('app-theme-sidebar--black')
     this.settingsService.setTheme('app-theme-header--black')
 

@@ -1,0 +1,103 @@
+<div fxFill fxLayout="column" class="app-bg-container overflow-hidden">
+  <div class="px-4 py-4 flex items-center">
+    <div>
+      <div class="app-productive-heading-03 font-bold">Compose mail</div>
+      <div class="app-label-01">jondoe@acme.com</div>
+    </div>
+    <div class="flex-1 flex justify-end">
+      <button (click)="onClose()" ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+        <svg class="bx--btn__icon" ibmIconClose size="32"></svg>
+      </button>
+    </div>
+  </div>
+  <div fxFlex>
+    <div class="app-content app-content--default">
+      <div class="app-form">
+        <div class="app-form__item">
+          <ibm-label>
+            To
+            <input
+              ibmText
+              size="md"
+              theme="light">
+          </ibm-label>
+        </div>
+        <div class="app-form__item">
+          <ibm-label>
+            Subject
+            <input
+              ibmText
+              size="md"
+              theme="light">
+          </ibm-label>
+        </div>
+        <div class="">
+          <ibm-label
+            [helperText]="''">
+            Content
+            <textarea
+              ibmTextArea
+              theme="light"
+              [rows]="10"
+              [cols]="3"
+              aria-label="textarea"></textarea>
+          </ibm-label>
+          <div class="flex items-center">
+            <div class="flex-1 flex items-center">
+              <button
+                ibmButton="ghost"
+                size="sm"
+                class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconTextBold size="32"></svg>
+              </button>
+              <button
+                ibmButton="ghost"
+                size="sm"
+                class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconTextItalic size="32"></svg>
+              </button>
+              <button
+                ibmButton="ghost"
+                size="sm"
+                class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconTextUnderline size="32"></svg>
+              </button>
+              <span class="app-btn-border-sep"></span>
+              <button
+                ibmButton="ghost"
+                size="sm"
+                class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconAttachment size="32"></svg>
+              </button>
+              <button
+                ibmButton="ghost"
+                size="sm"
+                class="bx--btn--icon-only">
+                <svg class="bx--btn__icon" ibmIconImage size="32"></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="px-4 py-4 flex justify-end app-border-t">
+    <button (click)="onClose()"
+            ibmButton="ghost"
+            size="field">
+      Save as draft
+      <svg class="bx--btn__icon" ibmIconSave size="20"></svg>
+    </button>
+    <button (click)="onClose()"
+            ibmButton="ghost"
+            size="field"
+            class="mr-1">
+      Discard
+      <svg class="bx--btn__icon" ibmIconTrashCan size="20"></svg>
+    </button>
+    <button ibmButton="primary" size="field" (click)="onClose()">
+      Send
+      <svg class="bx--btn__icon" ibmIconSend size="20"></svg>
+    </button>
+  </div>
+</div>
