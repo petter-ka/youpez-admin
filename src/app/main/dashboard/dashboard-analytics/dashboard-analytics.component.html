@@ -86,7 +86,7 @@
           <div class="app-card">
             <div class="app-card__header app-card__header--border">
               <div class="app-row app-row--center">
-                <div class="app-symbol app-symbol--default mr-3">
+                <div class="app-symbol app-symbol--default mr-3 rounded">
                   <div class="app-symbol__label w-12 h-10 app-expressive-heading-01 app-color-info">
                     SaaS
                   </div>
@@ -95,7 +95,7 @@
                   <div class="app-expressive-heading-03">Campaign Analysis</div>
                   <div class="app-label-01">Production environment of <span class="font-bold">US Region</span></div>
                 </div>
-                <div class="flex-1 flex justify-end">
+                <div class="flex-1 flex justify-end" fxHide fxShow.gt-sm>
                   <ibm-combo-box
                     style="width:200px"
                     [placeholder]="'Filter period...'"

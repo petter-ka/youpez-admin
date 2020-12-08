@@ -269,7 +269,7 @@
                 <div class="app-subtitle app-subtitle--cards mt-4">Recent</div>
                 <div fxLayout="row wrap" class="app-card-row-holder">
                   <ng-container *ngFor="let file of files">
-                    <div fxFlex="16.66%">
+                    <div fxFlex="100%" fxFlex.gt-md="16.66%">
                       <div class="app-card app-card--select"
                            (click)="onSelectItem(file)"
                            [ngClass]="{'app-card--select--active':selectedItem.name === file.name}">
@@ -293,7 +293,7 @@
                 <div class="app-subtitle app-subtitle--cards">Folders</div>
                 <div fxLayout="row wrap" class="app-card-row-holder">
                   <ng-container *ngFor="let folder of folders">
-                    <div fxFlex="20%">
+                    <div fxFlex="100%" fxFlex.gt-md="20%">
                       <div class="app-card app-card--select">
                         <div class="app-card__content__alt">
                           <div class="flex items-center">
@@ -317,7 +317,7 @@
                 <div class="app-subtitle app-subtitle--cards mt-2">Files</div>
                 <div fxLayout="row wrap" class="app-card-row-holder">
                   <ng-container *ngFor="let file of filesMore">
-                    <div fxFlex="16.66%">
+                    <div fxFlex="100%" fxFlex.gt-md="16.66%">
                       <div class="app-card app-card--select">
                         <div class="app-card__content__alt">
                           <div class="">

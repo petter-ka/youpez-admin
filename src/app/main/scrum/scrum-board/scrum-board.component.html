@@ -11,7 +11,7 @@
     </app-header-tools>
   </app-header>
   <div class="p-4 flex items-center">
-    <div class="app-ibm-btn-merge mr-2">
+    <div class="app-ibm-btn-merge mr-2" fxHide fxShow.gt-sm>
       <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
         <svg class="bx--btn__icon" ibmIconRenew size="32"></svg>
       </button>
@@ -31,7 +31,7 @@
              class="app-img-select__item w-10 rounded-full z-50"/>
       </ng-container>
     </div>
-    <div class="flex flex-1 justify-end">
+    <div class="flex flex-1 justify-end" fxHide fxShow.gt-sm>
       <button ibmButton="tertiary" size="sm">
         Quick filters
         <svg class="bx--btn__icon" ibmIconArrowDown size="20"></svg>

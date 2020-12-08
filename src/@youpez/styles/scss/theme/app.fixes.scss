@@ -513,3 +513,8 @@ mat-dialog-container {
 .cdk-global-overlay-wrapper {
   overflow-y: auto;
 }
+
+.cdk-overlay-pane {
+  max-width: 95vw !important;
+  max-height: 95% !important;
+}
