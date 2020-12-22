@@ -13,22 +13,22 @@ export class ScrumBoardComponent implements OnInit {
     {
       id: 1,
       name: 'Jon Done',
-      avatar: '/assets/img/avatar/avatar2.jpg',
+      avatar: 'assets/img/avatar/avatar2.jpg',
     },
     {
       id: 2,
       name: 'Sprint James',
-      avatar: '/assets/img/avatar/avatar3.jpg',
+      avatar: 'assets/img/avatar/avatar3.jpg',
     },
     {
       id: 3,
       name: 'Scrum Jonas',
-      avatar: '/assets/img/avatar/avatar6.jpg',
+      avatar: 'assets/img/avatar/avatar6.jpg',
     },
     {
       id: 4,
       name: 'Kanban Nikola',
-      avatar: '/assets/img/avatar/avatar7.jpg',
+      avatar: 'assets/img/avatar/avatar7.jpg',
     },
   ]
   public selectedId: number = null

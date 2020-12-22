@@ -15,7 +15,7 @@
       <app-sidenav-v2
         [breakpoint]="'md'"
         [direction]="'left'"
-        [opened]="true"
+        [opened]="leftSidebarVisibility"
         [hoverAble]="true"
         [mode]="'side'"
         [toggleableBtn]="true"
@@ -24,7 +24,7 @@
 
           <div class="app-border-b flex items-center px-4 py-3">
             <div class="pr-2">
-              <img class="w-10 h-10 rounded-full" src="/assets/img/avatar/avatar2.jpg"/>
+              <img class="w-10 h-10 rounded-full" src="assets/img/avatar/avatar2.jpg"/>
             </div>
             <div class="mr-4">
               <div>
@@ -91,6 +91,9 @@
                 <div fxFlex.gt-lg="100%">
                   <div class="app-content app-content--default">
                     <div class="flex items-center mb-4">
+                      <button (click)="onToggleLeftSidebar()" ibmButton="tertiary" size="sm" class="bx--btn--icon-only mr-2">
+                        <svg class="bx--btn__icon" ibmIconOpenPanelLeft size="20"></svg>
+                      </button>
                       <button (click)="onAddList()" ibmButton="primary" size="sm">
                         Add list
                         <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>

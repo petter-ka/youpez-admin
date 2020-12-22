@@ -72,7 +72,7 @@ export class AuthBookADemoComponent implements OnInit {
       country: ['', [Validators.required]],
       state: ['', [Validators.required]],
       condition: ['', [Validators.requiredTrue]],
-    }, {updateOn: 'change'})
+    }, {updateOn: 'blur'})
   }
 
   createForm2() {
@@ -83,13 +83,13 @@ export class AuthBookADemoComponent implements OnInit {
       job: ['', [Validators.required, Validators.minLength(4)]],
       industry: ['', [Validators.required]],
       storage: ['', [Validators.required]],
-    }, {updateOn: 'change'})
+    }, {updateOn: 'blur'})
   }
 
   createForm3() {
     this.formGroup3 = this.formBuilder.group({
       code: ['', [Validators.required, Validators.minLength(7), Validators.pattern(numberRegex)]],
-    }, {updateOn: 'change'})
+    }, {updateOn: 'blur'})
   }
 
   onSubmit() {

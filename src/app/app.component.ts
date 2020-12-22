@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core'
-import {Router, ActivatedRoute} from "@angular/router"
+import {Router, ActivatedRoute, NavigationStart, NavigationEnd, NavigationCancel} from "@angular/router"
 import {registerTheme} from 'echarts/lib/echarts'
 
 import {getLightEchartsTheme, getDarkEchartsTheme} from "../@youpez"
@@ -11,7 +11,8 @@ import {SettingsService} from "../@youpez/services/settings.service"
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'theme'
+  private appLoaded: boolean = false
+  private title: string = 'theme'
 
   constructor(private settingsService: SettingsService,
               private router: Router,
@@ -24,11 +25,27 @@ export class AppComponent implements OnInit {
       .subscribe((queryParams) => {
         //console.log(queryParams)
       })
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        //this.slimLoadingBarService.start()
+      }
+      if (event instanceof NavigationEnd) {
+        if (!this.appLoaded) {
+          (<any>window).appBootstrap()
+          this.appLoaded = true
+        }
+        //this.slimLoadingBarService.complete()
+      }
+      if (event instanceof NavigationCancel) {
+        //this.slimLoadingBarService.reset()
+      }
+    })
     registerTheme('inverse', getDarkEchartsTheme())
     registerTheme('default', getLightEchartsTheme())
     this.settingsService.setTheme('app-theme--default')
     this.settingsService.setTheme('app-theme-sidebar--black')
     this.settingsService.setTheme('app-theme-header--black')
+
 
   }
 }

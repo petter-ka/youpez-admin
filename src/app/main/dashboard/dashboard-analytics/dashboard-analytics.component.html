@@ -2,7 +2,7 @@
   <app-sidenav-v2
     [breakpoint]="'md'"
     [direction]="'right'"
-    [opened]="true"
+    [opened]="rightSidebarVisibility"
     [hoverAble]="true"
     [mode]="'side'"
     [toggleableBtn]="true"
@@ -75,8 +75,8 @@
             Widget
             <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
           </button>
-          <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
-            <svg class="bx--btn__icon" ibmIconCloudDownload size="32"></svg>
+          <button (click)="onToggleRightSidebar()" ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
+            <svg class="bx--btn__icon" ibmIconOpenPanelRight size="20"></svg>
           </button>
         </app-header-tools>
       </app-header>

@@ -195,31 +195,31 @@ export class TasksComponent implements OnInit {
 
   public users = [
     {
-      avatar: '/assets/img/avatar/avatar2.jpg',
+      avatar: 'assets/img/avatar/avatar2.jpg',
       name: 'John Belinda',
       text: 'Cannot start service web: error while creating mount source path ',
       date: '5 mins ago',
     },
     {
-      avatar: '/assets/img/avatar/avatar3.jpg',
+      avatar: 'assets/img/avatar/avatar3.jpg',
       name: 'Reta Collen',
       text: 'Automate the update of compose spec from docker-compose ',
       date: '1 hour ago',
     },
     {
-      avatar: '/assets/img/avatar/avatar6.jpg',
+      avatar: 'assets/img/avatar/avatar6.jpg',
       name: 'Elizabeth Mozelle',
       text: 'Add an option to config: entries to name the config by content hash',
       date: '5 hours ago',
     },
     {
-      avatar: '/assets/img/avatar/avatar7.jpg',
+      avatar: 'assets/img/avatar/avatar7.jpg',
       name: 'Marys Rob',
       text: 'Breaking Changes: Internal/External Secrets and Name/Label Problems with External Secrets',
       date: '1 day ago',
     },
     {
-      avatar: '/assets/img/avatar/avatar8.jpg',
+      avatar: 'assets/img/avatar/avatar8.jpg',
       name: 'Adoree Morgan',
       text: 'cpus value type in output of config command is not consistent in version 1.27.3 ',
       date: '3 days ago',
@@ -242,6 +242,7 @@ export class TasksComponent implements OnInit {
   ]
 
   public txtSearch: string = ''
+  public leftSidebarVisibility: boolean = true
 
   constructor() {
   }
@@ -263,5 +264,9 @@ export class TasksComponent implements OnInit {
 
   onSearchChange(event) {
     this.txtSearch = event
+  }
+
+  onToggleLeftSidebar() {
+    this.leftSidebarVisibility = !this.leftSidebarVisibility
   }
 }

@@ -18,7 +18,7 @@
       <app-sidenav-v2
         [breakpoint]="'md'"
         [direction]="'left'"
-        [opened]="true"
+        [opened]="leftSidebarVisibility"
         [hoverAble]="true"
         [mode]="'side'"
         [toggleableBtn]="true"
@@ -40,15 +40,13 @@
                   <div class="app-expressive-heading-02">Youpez coorp.</div>
                 </div>
               </div>
-
               <div class="-mr-2">
                 <button
-                  ibmButton="tertiary" size="sm"
+                  ibmButton="ghost" size="sm"
                   class="bx--btn--icon-only bx--btn--remove-tooltip">
                   <svg class="bx--btn__icon" ibmIconEdit size="32"></svg>
                 </button>
               </div>
-
               <div ngbDropdownMenu class="w-full">
                 <div class="app-list app-list--hover app-list--select app-list--no-border app-list--p">
 
@@ -68,7 +66,6 @@
                       Preferences
                     </div>
                   </div>
-
                   <div class="app-list__item" ngbDropdownItem>
                     <div class="app-list__item__content">
                       Administration
@@ -162,7 +159,7 @@
             <div class="mr-2">
               <div class="app-symbol app-symbol--status-success">
                 <div class="app-symbol__img">
-                  <img class="w-10 h-10 rounded" src="/assets/img/avatar/avatar8.jpg"/>
+                  <img class="w-10 h-10 rounded" src="assets/img/avatar/avatar8.jpg"/>
                 </div>
               </div>
 
@@ -183,7 +180,10 @@
       </app-sidenav-v2>
 
       <div fxFill fxLayout="column">
-        <div class="app-header-subheader" style="height:49px">
+        <div class="app-header-subheader app-header-subheader--left-alt app-header-subheader--right-alt" style="height:49px">
+          <button (click)="onToggleLeftSidebar()" ibmButton="tertiary" size="sm" class="bx--btn--icon-only mr-2">
+            <svg class="bx--btn__icon" ibmIconOpenPanelLeft size="20"></svg>
+          </button>
           <div>
             <div class="app-productive-heading-02"># {{selectedItem.name}}</div>
             <div class="app-helper-text-01">
@@ -191,7 +191,6 @@
               <span class="mx-1 opacity-50">|</span>
               <a class="cursor-pointer">+ Add a topic</a>
             </div>
-
           </div>
           <div class="flex flex-1 items-center justify-end">
             <button

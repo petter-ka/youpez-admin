@@ -136,4 +136,12 @@
   &.app-header-subheader--transparent {
     background-color: transparent;
   }
+
+  &.app-header-subheader--left-alt {
+    padding-left: calc(1.1rem - 0.4375rem);
+  }
+
+  &.app-header-subheader--right-alt {
+    padding-right: calc(1.1rem - 0.4375rem);
+  }
 }

@@ -140,6 +140,7 @@ export class FileManagerComponent implements OnInit {
     size: '0.1GB',
   }
   public isDetailsOpened: boolean = false
+  public leftSidebarVisibility: boolean = true
 
   constructor() {
   }
@@ -154,5 +155,9 @@ export class FileManagerComponent implements OnInit {
 
   onClose(event) {
     this.isDetailsOpened = false
+  }
+
+  onToggleLeftSidebar() {
+    this.leftSidebarVisibility = !this.leftSidebarVisibility
   }
 }

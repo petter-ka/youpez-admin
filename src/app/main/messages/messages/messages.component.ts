@@ -54,7 +54,7 @@ export class MessagesComponent implements OnInit {
       name: 'jonny cluster',
       avatar: {
         type: 'img',
-        src: '/assets/img/avatar/avatar2.jpg',
+        src: 'assets/img/avatar/avatar2.jpg',
       },
       active: false,
       read: false,
@@ -84,7 +84,7 @@ export class MessagesComponent implements OnInit {
       name: 'Harindra Kendal',
       avatar: {
         type: 'img',
-        src: '/assets/img/avatar/avatar3.jpg',
+        src: 'assets/img/avatar/avatar3.jpg',
       },
       active: false,
       read: true,
@@ -125,7 +125,7 @@ export class MessagesComponent implements OnInit {
       name: 'adam.csd',
       avatar: {
         type: 'img',
-        src: '/assets/img/avatar/avatar3.jpg',
+        src: 'assets/img/avatar/avatar3.jpg',
       },
       active: false,
       read: true,
@@ -178,7 +178,7 @@ export class MessagesComponent implements OnInit {
         name: 'jonny cluster',
         avatar: {
           type: 'img',
-          src: '/assets/img/avatar/avatar2.jpg',
+          src: 'assets/img/avatar/avatar2.jpg',
         },
         active: false,
         status: 'app-symbol--status-success',
@@ -215,7 +215,7 @@ export class MessagesComponent implements OnInit {
         name: 'adam.csd',
         avatar: {
           type: 'img',
-          src: '/assets/img/avatar/avatar3.jpg',
+          src: 'assets/img/avatar/avatar3.jpg',
         },
         active: true,
       },
@@ -274,6 +274,8 @@ export class MessagesComponent implements OnInit {
     },
   ]
 
+  public leftSidebarVisibility: boolean = true
+
   constructor() {
   }
 
@@ -283,6 +285,10 @@ export class MessagesComponent implements OnInit {
 
   onSelect(item) {
     this.selectedItem = item
+  }
+
+  onToggleLeftSidebar() {
+    this.leftSidebarVisibility = !this.leftSidebarVisibility
   }
 
 }

@@ -124,6 +124,8 @@ export class DashboardCryptoComponent implements OnInit {
     ['BABA', 307.31, 7.88, 2.89, '12.45M'],
   ]
   public selectedWatch = 'BTCUSD'
+  public rightSidebarVisibility: boolean = true
+  public bottomSidebarVisibility: boolean = true
 
   constructor(private http: HttpClient) {
   }
@@ -469,7 +471,7 @@ export class DashboardCryptoComponent implements OnInit {
         cellRenderer: sectorCellRenderer,
       },
     ]
-    this.http.get('/assets/data/stocks.csv', {responseType: 'text'})
+    this.http.get('assets/data/stocks.csv', {responseType: 'text'})
       .subscribe((response) => {
         const rowData = parseCSV(response).map(row => createRowHelper(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[9], row[10]))
         this.gridOptions = {
@@ -573,5 +575,9 @@ export class DashboardCryptoComponent implements OnInit {
 
   onSelect(watch) {
     this.selectedWatch = watch
+  }
+
+  onToggleRightSidebar() {
+    this.rightSidebarVisibility = !this.rightSidebarVisibility
   }
 }

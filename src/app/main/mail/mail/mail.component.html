@@ -185,19 +185,12 @@
       <div fxFill fxLayout="column" class="relative">
         <div class="app-a-box app-scrollbar-fix">
           <ng-scrollbar>
-            <div class="app-header-subheader">
-              <button (click)="onToggleSidebar()" class="app-sidebar-toggle-btn">
-                <app-ibm-icon iconSize="16" iconName="openPanelLeft"></app-ibm-icon>
-              </button>
-              <!--<button
-                (click)="onToggleSidebar()"
-                ibmButton="ghost"
-                size="sm"
-                class="bx&#45;&#45;btn&#45;&#45;icon-only">
-
-                &lt;!&ndash;<svg class="bx&#45;&#45;btn__icon" ibmIconOpenPanelFilledLeft size="32"></svg>&ndash;&gt;
-              </button>-->
+            <div class="app-header-subheader app-header-subheader--left-alt app-header-subheader--right-alt">
               <div class="flex flex-1 items-center">
+                <button (click)="onToggleSidebar()" ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                  <svg class="bx--btn__icon" ibmIconOpenPanelLeft size="20"></svg>
+                </button>
+                <span class="app-btn-border-sep"></span>
                 <button
                   ibmButton="ghost" size="sm"
                   class="bx--btn--icon-only bx--btn--remove-tooltip">
@@ -230,7 +223,6 @@
                   <svg class="bx--btn__icon" ibmIconPrinter size="32"></svg>
                 </button>
               </div>
-
               <div class="flex-1 flex items-center justify-end" fxHide fxShow.gt-sm>
                 <div class="app-helper-text-01">1 of 1,451</div>
                 <button
@@ -244,18 +236,13 @@
                   <svg class="bx--btn__icon" ibmIconChevronRight size="32"></svg>
                 </button>
               </div>
-
             </div>
-
-
             <div class="app-header-subheader" style="height: 40px">
               <div class="flex justify-between flex-1 items-center">
                 <div class="app-productive-heading-02">{{selectedMail.title}}</div>
                 <ibm-tag type="warm-gray">work</ibm-tag>
               </div>
-
             </div>
-
             <div class="app-card app-card--alone">
               <div class="app-card__content">
                 <div class="flex items-center overflow-hidden mb-6">

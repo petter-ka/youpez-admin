@@ -32,9 +32,10 @@ export class DashboardAnalyticsComponent implements OnInit {
   public miniChart1: any = {}
   public miniChart2: any = {}
   public miniChart3: any = {}
-
   public logs = []
   public users = []
+  public rightSidebarVisibility: boolean = true
+
 
   constructor(private http: HttpClient) {
   }
@@ -55,7 +56,7 @@ export class DashboardAnalyticsComponent implements OnInit {
           country: uniqueNamesGenerator(config),
         }
       })
-    this.users = Array.from({length: 10}).map(()=>{
+    this.users = Array.from({length: 10}).map(() => {
       return {
         avatar: generator.generateRandomAvatar(),
         name: uniqueNamesGenerator(configName),
@@ -225,7 +226,7 @@ export class DashboardAnalyticsComponent implements OnInit {
 
   createMainChart() {
     this.loading = true
-    this.http.get('/assets/data/example1.json').subscribe((data: any) => {
+    this.http.get('assets/data/example1.json').subscribe((data: any) => {
       this.mainChartOpts = {
         tooltip: {
           trigger: 'axis'
@@ -312,6 +313,10 @@ export class DashboardAnalyticsComponent implements OnInit {
 
       this.loading = false
     })
+  }
+
+  onToggleRightSidebar() {
+    this.rightSidebarVisibility = !this.rightSidebarVisibility
   }
 
 }

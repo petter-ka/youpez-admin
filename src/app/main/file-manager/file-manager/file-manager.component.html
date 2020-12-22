@@ -15,12 +15,11 @@
       <app-sidenav-v2
         [breakpoint]="'md'"
         [direction]="'left'"
-        [opened]="true"
+        [opened]="leftSidebarVisibility"
         [hoverAble]="true"
         [mode]="'side'"
         [toggleableBtn]="true"
         [size]="'sideBar1'">
-
         <div fxFill fxLayout="column" class="app-bg-container">
           <div class="app-border-b flex items-center px-4 py-3">
             <div class="pr-2">
@@ -91,7 +90,6 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="mt-2">
                   <div class="app-list-header-pill">TAGS</div>
                   <div class="app-list-pill">
@@ -130,10 +128,8 @@
               </ng-scrollbar>
             </div>
           </div>
-
           <div class="app-list-header-pill">STORAGE STATUS</div>
           <div class="flex items-center px-4 pb-4">
-
             <div class="pr-2">
               <app-ibm-icon iconName="cloudDataOps" iconSize="32"></app-ibm-icon>
             </div>
@@ -148,7 +144,6 @@
           </div>
         </div>
       </app-sidenav-v2>
-
 
       <app-sidenav-container panel="solid">
         <app-sidenav-v2
@@ -241,7 +236,10 @@
                 <div fxLayout="row wrap">
                   <div fxFlex="100%">
 
-                    <div class="app-header-subheader app-header-subheader--transparent" style="height: 65px">
+                    <div class="app-header-subheader app-header-subheader--transparent app-header-subheader--left-alt app-header-subheader--right-alt" style="height: 65px">
+                      <button (click)="onToggleLeftSidebar()" ibmButton="ghost" size="sm" class="bx--btn--icon-only mr-2">
+                        <svg class="bx--btn__icon" ibmIconOpenPanelLeft size="20"></svg>
+                      </button>
                       <div class="app-expressive-heading-02">
                         My storage
                       </div>
@@ -262,10 +260,8 @@
                         </button>
                       </div>
                     </div>
-
                   </div>
                 </div>
-
                 <div class="app-subtitle app-subtitle--cards mt-4">Recent</div>
                 <div fxLayout="row wrap" class="app-card-row-holder">
                   <ng-container *ngFor="let file of files">
@@ -308,7 +304,6 @@
                               </div>
                             </div>
                           </div>
-
                         </div>
                       </div>
                     </div>

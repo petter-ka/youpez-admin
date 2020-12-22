@@ -172,7 +172,7 @@ export class TableFullComponent implements OnInit {
         cellRenderer: sectorCellRenderer,
       },
     ]
-    this.http.get('/assets/data/stocks.csv', {responseType: 'text'})
+    this.http.get('assets/data/stocks.csv', {responseType: 'text'})
       .subscribe((response) => {
         const rowData = parseCSV(response).map(row => createRowHelper(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[9], row[10]))
         this.gridOptions = {
