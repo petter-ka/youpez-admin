@@ -16,6 +16,7 @@
         [breakpoint]="'md'"
         [direction]="'left'"
         [opened]="sidebarVisible"
+        (visibleChange)="sidebarVisible=$event"
         [hoverAble]="true"
         [mode]="'side'"
         [toggleableBtn]="true"
@@ -132,7 +133,7 @@
                               <div class="flex items-center overflow-hidden mb-2">
                                 <div class="app-symbol mr-1">
                                   <div
-                                    class="app-symbol__label app-bg-primary-lt-40 app-color-contrast rounded-full h-6 w-6">
+                                    class="app-symbol__label app-bg-primary-lt-40 app-color-contrast rounded-full h-6 w-6 app-text-contrast">
                                     {{mail.sender[0]}}
                                   </div>
                                 </div>
@@ -248,7 +249,7 @@
                 <div class="flex items-center overflow-hidden mb-6">
                   <div class="app-symbol mr-2">
                     <div
-                      class="app-symbol__label app-bg-primary-lt-40 app-color-contrast rounded-full h-10 w-10">
+                      class="app-symbol__label app-bg-primary-lt-40 app-color-contrast rounded-full h-10 w-10 app-text-contrast">
                       {{selectedMail.sender[0]}}
                     </div>
                   </div>

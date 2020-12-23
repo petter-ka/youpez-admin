@@ -3,6 +3,7 @@
     [breakpoint]="'md'"
     [direction]="'right'"
     [opened]="rightSidebarVisibility"
+    (visibleChange)="rightSidebarVisibility=$event"
     [hoverAble]="true"
     [mode]="'side'"
     [toggleableBtn]="true"
@@ -40,7 +41,6 @@
                 </div>
               </ng-container>
             </div>
-
             <div class="app-header app-header--sm">
               <div class="app-expressive-heading-02">Conversions log</div>
               <div class="app-helper-text-01">production environment</div>
@@ -67,7 +67,7 @@
 
       <app-header>
         <app-header-title>
-          Platform Analytics
+          Platform Analytics {{rightSidebarVisibility}}
         </app-header-title>
 
         <app-header-tools>

@@ -24,6 +24,7 @@
       <app-sidenav-v2
         (close)="onCloseSidebar($event)"
         [opened]="sidebarVisible"
+        (visibleChange)="sidebarVisible=$event"
         [direction]="'right'"
         breakpoint="md"
         mode="side"

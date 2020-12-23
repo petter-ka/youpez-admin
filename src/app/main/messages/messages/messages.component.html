@@ -19,6 +19,7 @@
         [breakpoint]="'md'"
         [direction]="'left'"
         [opened]="leftSidebarVisibility"
+        (visibleChange)="leftSidebarVisibility=$event"
         [hoverAble]="true"
         [mode]="'side'"
         [toggleableBtn]="true"
@@ -93,7 +94,7 @@
                         <div (click)="onSelect(channel)" class="app-list-pill__item">
                           <div class="app-list-pill__item__inner"
                                [ngClass]="{'app-list-pill__item__inner--active': channel === selectedItem}">
-                            <div class="w-5 h-5 app-bg-info-lt-50 mr-2 flex items-center justify-center rounded">
+                            <div class="w-5 h-5 app-bg-info-lt-50 mr-2 flex items-center justify-center rounded app-text-contrast">
                               <app-ibm-icon class="flex" iconSize="16" [iconName]="channel.icon"></app-ibm-icon>
                             </div>
                             <div class="flex-1 truncate app-body-long-01">{{channel.name}}</div>
@@ -104,7 +105,7 @@
                     <div class="app-list-pill mt-1">
                       <div class="app-list-pill__item">
                         <div class="app-list-pill__item__inner">
-                          <div class="w-5 h-5 app-bg-success-lt-30 mr-2 flex items-center justify-center rounded">
+                          <div class="w-5 h-5 app-bg-success-lt-30 mr-2 flex items-center justify-center rounded app-text-contrast">
                             <app-ibm-icon class="flex" iconSize="16" iconName="add"></app-ibm-icon>
                           </div>
                           <div class="flex-1 truncate app-body-long-01">Add channels</div>
@@ -122,7 +123,7 @@
                                [ngClass]="{'app-list-pill__item__inner--active': message === selectedItem}">
                             <ng-container *ngIf="message.avatar.type === 'symbol'">
                               <div class="app-symbol mr-2" [class]="message.status">
-                                <div [class]="message.avatar.color" class="app-symbol__label w-5 h-5 rounded">
+                                <div [class]="message.avatar.color" class="app-symbol__label w-5 h-5 rounded app-text-contrast">
                                   {{message.avatar.src}}
                                 </div>
                               </div>
@@ -142,7 +143,7 @@
                     <div class="app-list-pill mt-1">
                       <div class="app-list-pill__item">
                         <div class="app-list-pill__item__inner">
-                          <div class="w-5 h-5 app-bg-success-lt-30 mr-2 flex items-center justify-center rounded">
+                          <div class="w-5 h-5 app-bg-success-lt-30 mr-2 flex items-center justify-center rounded app-text-contrast">
                             <app-ibm-icon class="flex" iconSize="16" iconName="add"></app-ibm-icon>
                           </div>
                           <div class="flex-1 truncate app-body-long-01">Add teammates</div>
@@ -240,7 +241,7 @@
                           <ng-container *ngIf="channel.user.avatar.type === 'symbol'">
                             <div class="app-symbol mr-2" [class]="channel.user.status">
                               <div [class]="channel.user.avatar.color"
-                                   class="app-symbol__label w-10 h-10 rounded">
+                                   class="app-symbol__label w-10 h-10 rounded app-text-contrast">
                                 {{channel.user.avatar.src}}
                               </div>
                             </div>

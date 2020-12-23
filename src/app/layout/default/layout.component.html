@@ -45,6 +45,7 @@
         <app-sidenav-v2
           [breakpoint]="mainSidebarOpts.breakpoint"
           [opened]="mainSidebarOpts.opened"
+          (visibleChange)="mainSidebarOpts.opened=$event"
           [hoverAble]="mainSidebarOpts.hoverAble"
           [mode]="mainSidebarOpts.mode"
           [toggleableBtn]="mainSidebarOpts.toggleableBtn"

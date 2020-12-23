@@ -36,7 +36,6 @@ export class DashboardAnalyticsComponent implements OnInit {
   public users = []
   public rightSidebarVisibility: boolean = true
 
-
   constructor(private http: HttpClient) {
   }
 

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import {Router, ActivatedRoute, NavigationStart, NavigationEnd, NavigationCancel} from "@angular/router"
 import {registerTheme} from 'echarts/lib/echarts'
+import {environment} from "../environments/environment"
 
 import {getLightEchartsTheme, getDarkEchartsTheme} from "../@youpez"
 import {SettingsService} from "../@youpez/services/settings.service"
@@ -40,8 +41,16 @@ export class AppComponent implements OnInit {
         //this.slimLoadingBarService.reset()
       }
     })
-    registerTheme('inverse', getDarkEchartsTheme())
-    registerTheme('default', getLightEchartsTheme())
+
+    if (environment.theme === 'dark') {
+      registerTheme('inverse', getLightEchartsTheme())
+      registerTheme('default', getDarkEchartsTheme())
+    }
+    else {
+      registerTheme('inverse', getDarkEchartsTheme())
+      registerTheme('default', getLightEchartsTheme())
+    }
+
     this.settingsService.setTheme('app-theme--default')
     this.settingsService.setTheme('app-theme-sidebar--black')
     this.settingsService.setTheme('app-theme-header--black')

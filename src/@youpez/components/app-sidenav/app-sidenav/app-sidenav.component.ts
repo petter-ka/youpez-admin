@@ -59,6 +59,7 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
   @Output('change') change: EventEmitter<any> = new EventEmitter<any>()
   @Output('resizeEnd') resizeEnd: EventEmitter<any> = new EventEmitter<any>()
   @Output('resizing') resizing: EventEmitter<any> = new EventEmitter<any>()
+  @Output('visibleChange') visibleChange: EventEmitter<any> = new EventEmitter<any>()
 
   @ViewChild('sideNavEl', {static: true}) sideNavEl: ElementRef
 
@@ -105,7 +106,6 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
   ngOnInit() {
     this.firstInit()
 
-
     this.breakpointSub = this.appBreakpointService.$windowWidth
       .subscribe((width: any) => {
         if (this.breakpoint && this.breakpoint === 'md') {
@@ -113,11 +113,13 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
             this.mode = 'over'
             this.hoverAble = false
             this.opened = false
+            this.visibleChange.emit(false)
           }
           else {
             this.mode = this.originalMode
             this.hoverAble = this.originalHoverAble
             this.opened = this.originalOpened
+            this.visibleChange.emit(this.originalOpened)
           }
           this.change.emit()
         }
@@ -242,11 +244,13 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
 
   onClose() {
     this.opened = false
+    this.visibleChange.emit(false)
     this.close.emit()
   }
 
   onOpen() {
     this.opened = true
+    this.visibleChange.emit(true)
     this.open.emit()
   }
 
