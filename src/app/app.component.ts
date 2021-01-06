@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
     this.route.queryParams
       .subscribe((queryParams) => {
         //console.log(queryParams)
+        console.log(queryParams)
       })
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
