@@ -1,11 +1,19 @@
-@import 'app.variables.scss';
-@import 'app.helpers';
+@import '../../../@youpez/styles/scss/theme/app.variables.scss';
+@import '../../../@youpez/styles/scss/theme/app.helpers';
 
 // LAYOUT THEMES
 :root.app-theme--light {
   @include spread-map($theme-map-light);
-  @include includeScrollbarStyle($darkTheme);
-  @include logoVisibility($darkTheme);
+  @include includeScrollbarStyle(false);
+  @include logoVisibility(false);
+  @include includeColorHelpers($carbonThemeLight);
+}
+
+:root.app-theme--dark {
+  @include spread-map($theme-map-dark);
+  @include includeScrollbarStyle(true);
+  @include logoVisibility(true);
+  @include includeColorHelpers($carbonThemeDark);
 }
 
 // SIDEBAR THEMES

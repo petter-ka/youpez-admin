@@ -13,10 +13,10 @@
 
   .app-form__header {
     padding-top: 1rem;
-    border-top: 2px solid $appBorderColorAlt;
+    border-top: 2px solid var(--theme-appBorderColorAlt);
 
     &.app-form__header--active {
-      border-top: 3px solid $appColorPrimary;
+      border-top: 3px solid var(--theme-appColorPrimary);
     }
   }
 

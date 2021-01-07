@@ -5,17 +5,17 @@
 .app-table {
   .app-table__header {
     th {
-      border-bottom: 2px solid $appBorderColor;
+      border-bottom: 2px solid var(--theme-appBorderColor);
     }
   }
 
   .app-table__row {
     td {
-      border-bottom: 1px solid $appBorderColor;
+      border-bottom: 1px solid var(--theme-appBorderColor);
     }
 
     &.app-table__row--b-1 {
-      border: 1px solid $appBorderColor;
+      border: 1px solid var(--theme-appBorderColor);
     }
   }
 }
@@ -24,17 +24,17 @@
   @include ag-theme-balham((
     font-family: ('IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif),
     odd-row-background-color: null,
-    border-color:$appBorderColorAlt,
-    row-border-color:$appBorderColor,
-    header-foreground-color: $appText,
-    header-background-color: $appColorDecorative,
-    background-color: $appUIForegroundBg,
-    data-color:$appText,
-    selected-row-background-color: $appHighLightColor,
-    range-selection-border-color: $appColorPrimary,
-    checkbox-checked-color: $appColorPrimary,
-    checkbox-background-color: $appUIForegroundBg,
-    row-hover-color:$appHoverBg,
+    border-color: var(--theme-appBorderColorAlt),
+    row-border-color: var(--theme-appBorderColor),
+    header-foreground-color: var(--theme-appText),
+    header-background-color: var(--theme-appColorDecorative),
+    background-color: var(--theme-appUIForegroundBg),
+    data-color: var(--theme-appText),
+    selected-row-background-color: var(--theme-appHighLightColor),
+    range-selection-border-color: var(--theme-appColorPrimary),
+    checkbox-checked-color: var(--theme-appColorPrimary),
+    checkbox-background-color: var(--theme-appUIForegroundBg),
+    row-hover-color: var(--theme-appHoverBg),
     //checkbox-border-radius: none,
     //checkbox-unchecked-color: ag-derived(foreground-color),
     //checkbox-indeterminate-color: ag-derived(checkbox-unchecked-color),

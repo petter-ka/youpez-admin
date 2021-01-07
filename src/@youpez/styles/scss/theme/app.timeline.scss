@@ -2,26 +2,26 @@
 
 @mixin timelineColorHelper() {
   &:before, &:after {
-    background: $appColorSecondary;
+    background: var(--theme-appColorSecondary);
   }
   &.app-timeline__item--success {
     &:before, &:after {
-      background: $appColorSuccess;
+      background: var(--theme-appColorSuccess);
     }
   }
   &.app-timeline__item--info {
     &:before, &:after {
-      background: $appColorInfo;
+      background: var(--theme-appColorInfo);
     }
   }
   &.app-timeline__item--danger {
     &:before, &:after {
-      background: $appColorDanger;
+      background: var(--theme-appColorDanger);
     }
   }
   &.app-timeline__item--warning {
     &:before, &:after {
-      background: $appColorWarning;
+      background: var(--theme-appColorWarning);
     }
   }
 }
@@ -34,7 +34,7 @@
 
   .app-timeline__item {
     padding-left: 1.5rem;
-    border-left: 1px solid $appBorderColor;
+    border-left: 1px solid var(--theme-appBorderColor);
     position: relative;
 
     &.app-timeline__item--circle {

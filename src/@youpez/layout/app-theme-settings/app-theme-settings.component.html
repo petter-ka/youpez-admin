@@ -1,5 +1,11 @@
 <div class="p-4">
   <div class="app-productive-heading-03 mb-4 pb-3 app-border-b font-bold">Theme settings</div>
+
+  <div>
+    <button (click)="onChangeTheme('light')">Light</button>
+    <button (click)="onChangeTheme('dark')">Dark</button>
+  </div>
+
   <div class="mb-6">
     <div class="app-subtitle mb-1">SIDEBAR</div>
     <div fxLayout="row wrap" class="app-theme-bg--holder">

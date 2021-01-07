@@ -1,15 +1,7 @@
 @import 'app.variables';
 @import 'app.helpers';
 
-@include color-helper('ui', $appUIBg);
-@include color-helper('container', $appUIForegroundBg);
-@include color-helper('primary', $appColorPrimary);
-@include color-helper('secondary', $appColorSecondary);
-@include color-helper('success', $appColorSuccess);
-@include color-helper('danger', $appColorDanger);
-@include color-helper('warning', $appColorWarning);
-@include color-helper('info', $appColorInfo);
-@include color-helper('decorative', $appColorDecorative);
+
 
 body {
   overflow: hidden;
@@ -19,12 +11,12 @@ body {
 
 app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
   svg {
-    fill: $appText;
+    fill: var(--theme-appText);
   }
 }
 
 .app-ibm-pictogram-stroke {
-  stroke: $appText;
+  stroke: var(--theme-appText);
 }
 
 .app-relative {
@@ -40,42 +32,42 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
 }
 
 .app-bg-light {
-  background-color: $appColorLight;
+  background-color: var(--theme-appColorLight);
 }
 
 .app-border-contrast {
-  border-color: $appBorderColorAlt;
+  border-color: var(--theme-appBorderColorAlt);
 }
 
 .app-border-container {
-  border-color: $appUIForegroundBg;
+  border-color: var(--theme-appUIForegroundBg);
 }
 
 .app-border-all {
-  border: 1px solid $appBorderColor;
+  border: 1px solid var(--theme-appBorderColor);
 }
 
 .app-border-t {
-  border-top: 1px solid $appBorderColor;
+  border-top: 1px solid var(--theme-appBorderColor);
 }
 
 .app-border-b {
-  border-bottom: 1px solid $appBorderColor;
+  border-bottom: 1px solid var(--theme-appBorderColor);
 }
 
 .app-border-r {
-  border-right: 1px solid $appBorderColor;
+  border-right: 1px solid var(--theme-appBorderColor);
 }
 
 .app-border-l {
-  border-left: 1px solid $appBorderColor;
+  border-left: 1px solid var(--theme-appBorderColor);
 }
 
 .app-btn-border-sep {
   display: inline-block;
   height: 15px;
   width: 1px;
-  background-color: $appBorderColor;
+  background-color: var(--theme-appBorderColor);
   margin: 0 .5rem;
 }
 
@@ -119,7 +111,7 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
     display: block;
     flex: 1;
     height: 1px;
-    background-color: $appBorderColor;
+    background-color: var(--theme-appBorderColor);
     opacity: .7;
     margin-right: 0.75rem;
   }
@@ -135,7 +127,7 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
     display: block;
     flex: 1;
     height: 1px;
-    background-color: $appBorderColor;
+    background-color: var(--theme-appBorderColor);
     opacity: .7;
     margin-left: 0.75rem;
   }
@@ -161,7 +153,7 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
     cursor: pointer;
     padding: 2px;
     margin-left: -0.5rem;
-    background-color: $appUIForegroundBg;
+    background-color: var(--theme-appUIForegroundBg);
     transition: .1s cubic-bezier(.35, 0, .35, 1);
     transition-property: all;
 
@@ -239,7 +231,7 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
   position: relative;
 
   &.app-symbol--default {
-    background-color: $appUIBg;
+    background-color: var(--theme-appUIBg);
   }
 
   .app-symbol__label {
@@ -288,7 +280,7 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
 
 .app-progress {
   height: 6px;
-  background-color: $appBorderColor;
+  background-color: var(--theme-appBorderColor);
   background-image: none;
   box-shadow: none;
   border-radius: 0;

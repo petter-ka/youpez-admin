@@ -23,7 +23,7 @@
   .app-card {
     margin: 0;
     border: none;
-    border-bottom: 1px solid $appBorderColor;
+    border-bottom: 1px solid var(--theme-appBorderColor);
   }
 }
 
@@ -59,7 +59,7 @@
   position: relative;
   display: block;
   min-height: 2rem;
-  background-color: $appCardBg;
+  background-color: var(--theme-appCardBg);
   outline: 2px solid transparent;
   outline-offset: -2px;
   margin: 0.5rem;
@@ -96,7 +96,7 @@
     @include appCardBt();
 
     &:before {
-      background-color: $appColorSuccess;
+      background-color: var(--theme-appColorSuccess);
     }
   }
 
@@ -104,7 +104,7 @@
     @include appCardBtVertical();
 
     &:before {
-      background-color: $appColorSuccess;
+      background-color: var(--theme-appColorSuccess);
     }
   }
 
@@ -112,7 +112,7 @@
     @include appCardBt();
 
     &:before {
-      background-color: $appColorDanger;
+      background-color: var(--theme-appColorDanger);
     }
   }
 
@@ -120,7 +120,7 @@
     @include appCardBtVertical();
 
     &:before {
-      background-color: $appColorDanger;
+      background-color: var(--theme-appColorDanger);
     }
   }
 
@@ -128,7 +128,7 @@
     @include appCardBt();
 
     &:before {
-      background-color: $appColorWarning;
+      background-color: var(--theme-appColorWarning);
     }
   }
 
@@ -136,7 +136,7 @@
     @include appCardBtVertical();
 
     &:before {
-      background-color: $appColorWarning;
+      background-color: var(--theme-appColorWarning);
     }
   }
 
@@ -144,16 +144,16 @@
     cursor: pointer;
 
     &:hover {
-      outline: 1px solid $appColorSecondary;
+      outline: 1px solid var(--theme-appColorSecondary);
     }
   }
 
   &.app-card--select--active {
     cursor: pointer;
-    outline: 2px solid $appColorPrimary;
+    outline: 2px solid var(--theme-appColorPrimary);
 
     &:hover {
-      outline: 2px solid $appColorPrimary;
+      outline: 2px solid var(--theme-appColorPrimary);
     }
   }
 
@@ -161,7 +161,7 @@
     padding: 0.75rem 1.1rem;
 
     &.app-card__header--border {
-      border-bottom: 1px solid $appBorderColor;
+      border-bottom: 1px solid var(--theme-appBorderColor);
     }
   }
 
@@ -186,7 +186,7 @@
 
     .app-card__block {
       padding: 1rem;
-      border-right: 1px solid $appBorderColor;
+      border-right: 1px solid var(--theme-appBorderColor);
 
       &:last-child {
         border-right-color: transparent;
@@ -195,7 +195,7 @@
 
     &.app-card__blocks--collapse {
       .app-card__block {
-        border-bottom: 1px solid $appBorderColor;
+        border-bottom: 1px solid var(--theme-appBorderColor);
       }
     }
   }
@@ -226,22 +226,22 @@
       border-radius: 100%;
 
       &.app-card__tool__sign--danger {
-        background-color: $appColorDanger;
+        background-color: var(--theme-appColorDanger);
       }
 
       &.app-card__tool__sign--success {
-        background-color: $appColorSuccess;
+        background-color: var(--theme-appColorSuccess);
       }
 
       &.app-card__tool__sign--warning {
-        background-color: $appColorWarning;
+        background-color: var(--theme-appColorWarning);
       }
     }
   }
 }
 
 .app-cards-layout-1 {
-  background: $appBorderColor;
+  background: var(--theme-appBorderColor);
   margin-bottom: -1px;
   overflow: hidden;
 

@@ -46,8 +46,8 @@
 
   .app-search__input {
     position: relative;
-    border-bottom: 1px solid $appBorderColor;
-    background: $appUIForegroundBg;
+    border-bottom: 1px solid var(--theme-appBorderColor);
+    background: var(--theme-appUIForegroundBg);
     border-radius: 5px 5px 0 0;
   }
 
@@ -73,13 +73,13 @@
 
   .app-search__result {
     height: 300px;
-    background: $appUIForegroundBg;
+    background: var(--theme-appUIForegroundBg);
     border-radius: 0 0 5px 5px;
     position: relative;
 
     .app-search__result__pane1 {
       position: relative;
-      border-right: 1px solid $appBorderColor;
+      border-right: 1px solid var(--theme-appBorderColor);
     }
 
     .app-search__result__pane2 {

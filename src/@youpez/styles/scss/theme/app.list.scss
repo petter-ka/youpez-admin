@@ -2,8 +2,8 @@
 
 .app-list-header {
   padding: 0.5rem 1rem;
-  border-bottom: 1px solid $appBorderColorAlt;
-  background-color: $appUIBg;
+  border-bottom: 1px solid var(--theme-appBorderColorAlt);
+  background-color: var(--theme-appUIBg);
 }
 
 .app-list-header-alt {
@@ -12,7 +12,7 @@
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
-  border-bottom: 1px solid $appBorderColor;
+  border-bottom: 1px solid var(--theme-appBorderColor);
 
   &.app-list-header-alt--no-border {
     border-bottom: none;
@@ -48,13 +48,13 @@
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
-  border-bottom: 1px solid $appBorderColor;
-  background-color: $appUIBg;
+  border-bottom: 1px solid var(--theme-appBorderColor);
+  background-color: var(--theme-appUIBg);
 }
 
 .app-list-footer-alt {
   padding: 0.5rem 1rem 0.2rem 1rem;
-  border-top: 1px solid $appBorderColor;
+  border-top: 1px solid var(--theme-appBorderColor);
 }
 
 .app-list {
@@ -110,7 +110,7 @@
 
   &.app-list--hover {
     .app-list__item:hover {
-      background-color: $appHoverBg;
+      background-color: var(--theme-appHoverBg);
     }
   }
 
@@ -123,7 +123,7 @@
   }
 
   &.app-list--border-over {
-    border: 1px solid $appBorderColor;
+    border: 1px solid var(--theme-appBorderColor);
   }
 
   &.app-list--select {
@@ -131,12 +131,12 @@
       cursor: pointer;
 
       &:focus {
-        outline: 2px solid $appFocusBorder;
+        outline: 2px solid var(--theme-appFocusBorder);
         outline-offset: -2px;
       }
 
       &.app-list__item--active {
-        outline: 2px solid $appFocusBorder;
+        outline: 2px solid var(--theme-appFocusBorder);
         outline-offset: -2px;
 
         .app-list__item__content {
@@ -154,12 +154,12 @@
       cursor: pointer;
 
       &:focus {
-        outline: 2px solid $appFocusBorder;
+        outline: 2px solid var(--theme-appFocusBorder);
         outline-offset: -2px;
       }
 
       &.app-list__item--active {
-        background-color: $appHighLightColor;
+        background-color: var(--theme-appHighLightColort);
       }
     }
   }
@@ -211,7 +211,7 @@
   height: 0;
   margin: .5rem 0;
   overflow: hidden;
-  border-top: 1px solid $appBorderColor;
+  border-top: 1px solid var(--theme-appBorderColor);
 }
 
 .app-list__item {
@@ -229,7 +229,7 @@
     outline: none;
     padding: 0;
     margin: 0;
-    color: $appText;
+    color: var(--theme-appText);
   }
 
   .app-list__item__content {
@@ -247,7 +247,7 @@
       left: 0;
       content: '';
       height: 1px;
-      background-color: $appBorderColor;
+      background-color: var(--theme-appBorderColor);
     }
   }
 
@@ -426,7 +426,7 @@
     }
 
     &:hover {
-      background-color: $appHoverBg;
+      background-color: var(--theme-appHoverBg);
 
       .app-list-message__item__time {
         display: block;
@@ -453,19 +453,19 @@
     .app-nav-list__item__text {
       @extend .app-body-long-01;
       cursor: pointer;
-      border-left: 2px solid $appBorderColor;
+      border-left: 2px solid var(--theme-appBorderColor);
       padding-left: .75rem;
       padding-bottom: 0.125rem;
       padding-top: 0.125rem;
 
       &:hover {
-        border-left-color: $appColorInfo;
-        color: $appColorInfo;
+        border-left-color: var(--theme-appColorInfo);
+        color: var(--theme-appColorInfo);
       }
 
       &.app-nav-list__item__text--selected {
-        border-left-color: $appColorInfo;
-        color: $appColorInfo;
+        border-left-color: var(--theme-appColorInfo);
+        color: var(--theme-appColorInfo);
         font-weight: 700;
       }
     }

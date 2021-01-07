@@ -1,21 +1,21 @@
-@import './themes/app.dark.2';
+@import './themes/app.light.2';
 @import "~carbon-components/scss/globals/scss/colors";
 
-$appUIBg: map-get($carbon--theme, 'ui-background');
-$appUIForegroundBg: map-get($carbon--theme, 'ui-01');
+//$appUIBg: map-get($carbon--theme, 'ui-background');
+//$appUIForegroundBg: map-get($carbon--theme, 'ui-01');
 $appCardBg: map-get($carbon--theme, 'ui-01');
 
 $appText: map-get($carbon--theme, 'text-01');
-$appTextInverse: map-get($carbon--theme, 'inverse-01');
-$appHighLightColor: map-get($carbon--theme, 'highlight');
+//$appTextInverse: map-get($carbon--theme, 'inverse-01');
+// $appHighLightColor: map-get($carbon--theme, 'highlight');
 
 $appBorderColor: map-get($carbon--theme, 'ui-03');
-$appBorderContrastColor: map-get($carbon--theme, 'ui-04');
-$appBorderHighContrastColor: map-get($carbon--theme, 'ui-05');
+//$appBorderContrastColor: map-get($carbon--theme, 'ui-04');
+//$appBorderHighContrastColor: map-get($carbon--theme, 'ui-05');
 
 $appBorderColorAlt: map-get($carbon--theme, 'active-ui');
 $appHoverBg: map-get($carbon--theme, 'hover-ui');
-$appHoverText: map-get($carbon--theme, 'hover-primary-text');
+//$appHoverText: map-get($carbon--theme, 'hover-primary-text');
 $appFocusBorder: map-get($carbon--theme, 'focus');
 
 $appColorLight: map-get($carbon--theme, 'ui-02');
@@ -23,7 +23,7 @@ $appColorLight: map-get($carbon--theme, 'ui-02');
 $appColorPrimary: map-get($carbon--theme, 'interactive-01');
 $appColorDecorative: map-get($carbon--theme, 'ui-03');
 $appColorSecondary: map-get($carbon--theme, 'interactive-02');
-$appColorSecondaryHover: map-get($carbon--theme, 'hover-secondary');
+//$appColorSecondaryHover: map-get($carbon--theme, 'hover-secondary');
 
 $appColorSuccess: map-get($carbon--theme, 'support-02');
 $appColorDanger: map-get($carbon--theme, 'support-01');
@@ -32,11 +32,84 @@ $appColorInfo: map-get($carbon--theme, 'support-04');
 
 $appColorHighContrast: map-get($carbon--theme, 'ui-05');
 $appColorHighContrastTextOn: map-get($carbon--theme, 'text-04');
-$appSelectedColor: map-get($carbon--theme, 'selected-ui');
+//$appSelectedColor: map-get($carbon--theme, 'selected-ui');
 
 $__app_color_blue: rgb(39, 122, 252);
 $__app_on_color_blue: #fff;
 $__app_color_grey: rgb(239, 239, 239);
+
+$carbonThemeLight:$carbon--theme--g10;
+$carbonThemeDark:$carbon--theme--g100;
+
+$theme-map-light: (
+  '--theme-background': map-get($carbonThemeLight, 'ui-01'),
+  '--theme-sidenav-border': map-get($carbonThemeLight, 'ui-03'),
+  '--theme-header-border': map-get($carbonThemeLight, 'ui-03'),
+  '--theme-list-pill--hover-background': map-get($carbonThemeLight, 'hover-ui'),
+  '--theme-list-pill--hover-color': map-get($carbonThemeLight, 'text-01'),
+  '--theme-list-pill--active-background': map-get($carbonThemeLight, 'highlight'),
+  '--theme-list-pill--active-color': map-get($carbonThemeLight, 'hover-primary-text'),
+  '--theme-appUIBg':map-get($carbonThemeLight, 'ui-background'),
+  '--theme-appUIForegroundBg':map-get($carbonThemeLight, 'ui-01'),
+  '--theme-appCardBg':map-get($carbonThemeLight, 'ui-01'),
+  '--theme-appText':map-get($carbonThemeLight, 'text-01'),
+  '--theme-appTextInverse':map-get($carbonThemeLight, 'inverse-01'),
+  '--theme-appHighLightColor':map-get($carbonThemeLight, 'highlight'),
+  '--theme-appBorderColor':map-get($carbonThemeLight, 'ui-03'),
+  '--theme-appBorderContrastColor':map-get($carbonThemeLight, 'ui-04'),
+  '--theme-appBorderHighContrastColor':map-get($carbonThemeLight, 'ui-05'),
+  '--theme-appBorderColorAlt':map-get($carbonThemeLight, 'active-ui'),
+  '--theme-appHoverBg':map-get($carbonThemeLight, 'hover-ui'),
+  '--theme-appHoverText':map-get($carbonThemeLight, 'hover-primary-text'),
+  '--theme-appFocusBorder':map-get($carbonThemeLight, 'focus'),
+  '--theme-appColorLight':map-get($carbonThemeLight, 'ui-02'),
+  '--theme-appColorPrimary':map-get($carbonThemeLight, 'interactive-01'),
+  '--theme-appColorDecorative':map-get($carbonThemeLight, 'ui-03'),
+  '--theme-appColorSecondary':map-get($carbonThemeLight, 'interactive-02'),
+  '--theme-appColorSecondaryHover':map-get($carbonThemeLight, 'hover-secondary'),
+  '--theme-appColorSuccess':map-get($carbonThemeLight, 'support-02'),
+  '--theme-appColorDanger':map-get($carbonThemeLight, 'support-01'),
+  '--theme-appColorWarning':map-get($carbonThemeLight, 'support-03'),
+  '--theme-appColorInfo':map-get($carbonThemeLight, 'support-04'),
+  '--theme-appColorHighContrast':map-get($carbonThemeLight, 'ui-05'),
+  '--theme-appColorHighContrastTextOn':map-get($carbonThemeLight, 'text-04'),
+  '--theme-appSelectedColor':map-get($carbonThemeLight, 'selected-ui'),
+);
+
+$theme-map-dark: (
+  '--theme-background': map-get($carbonThemeDark, 'ui-01'),
+  '--theme-sidenav-border': map-get($carbonThemeDark, 'ui-03'),
+  '--theme-header-border': map-get($carbonThemeDark, 'ui-03'),
+  '--theme-list-pill--hover-background': map-get($carbonThemeDark, 'hover-ui'),
+  '--theme-list-pill--hover-color': map-get($carbonThemeDark, 'text-01'),
+  '--theme-list-pill--active-background': map-get($carbonThemeDark, 'highlight'),
+  '--theme-list-pill--active-color': map-get($carbonThemeDark, 'hover-primary-text'),
+  '--theme-appUIBg':map-get($carbonThemeDark, 'ui-background'),
+  '--theme-appUIForegroundBg':map-get($carbonThemeDark, 'ui-01'),
+  '--theme-appCardBg':map-get($carbonThemeDark, 'ui-01'),
+  '--theme-appText':map-get($carbonThemeDark, 'text-01'),
+  '--theme-appTextInverse':map-get($carbonThemeDark, 'inverse-01'),
+  '--theme-appHighLightColor':map-get($carbonThemeDark, 'highlight'),
+  '--theme-appBorderColor':map-get($carbonThemeDark, 'ui-03'),
+  '--theme-appBorderContrastColor':map-get($carbonThemeDark, 'ui-04'),
+  '--theme-appBorderHighContrastColor':map-get($carbonThemeDark, 'ui-05'),
+  '--theme-appBorderColorAlt':map-get($carbonThemeDark, 'active-ui'),
+  '--theme-appHoverBg':map-get($carbonThemeDark, 'hover-ui'),
+  '--theme-appHoverText':map-get($carbonThemeDark, 'hover-primary-text'),
+  '--theme-appFocusBorder':map-get($carbonThemeDark, 'focus'),
+  '--theme-appColorLight':map-get($carbonThemeDark, 'ui-02'),
+  '--theme-appColorPrimary':map-get($carbonThemeDark, 'interactive-01'),
+  '--theme-appColorDecorative':map-get($carbonThemeDark, 'ui-03'),
+  '--theme-appColorSecondary':map-get($carbonThemeDark, 'interactive-02'),
+  '--theme-appColorSecondaryHover':map-get($carbonThemeDark, 'hover-secondary'),
+  '--theme-appColorSuccess':map-get($carbonThemeDark, 'support-02'),
+  '--theme-appColorDanger':map-get($carbonThemeDark, 'support-01'),
+  '--theme-appColorWarning':map-get($carbonThemeDark, 'support-03'),
+  '--theme-appColorInfo':map-get($carbonThemeDark, 'support-04'),
+  '--theme-appColorHighContrast':map-get($carbonThemeDark, 'ui-05'),
+  '--theme-appColorHighContrastTextOn':map-get($carbonThemeDark, 'text-04'),
+  '--theme-appSelectedColor':map-get($carbonThemeDark, 'selected-ui'),
+);
 
 $theme-sidebar-light: (
   '--theme-main-sidebar': #fff,
@@ -62,16 +135,6 @@ $theme-sub-sidebar-light: (
   '--theme-sub-sidebar__required':#deecff,
   '--theme-sub-sidebar__badge':#dedede,
   '--theme-on-sub-sidebar__badge':#9e9e9e,
-);
-
-$theme-map-light: (
-  '--theme-background': $appUIForegroundBg,
-  '--theme-sidenav-border': $appBorderColor,
-  '--theme-header-border': $appBorderColor,
-  '--theme-list-pill--hover-background': $appHoverBg,
-  '--theme-list-pill--hover-color': $appText,
-  '--theme-list-pill--active-background': $appHighLightColor,
-  '--theme-list-pill--active-color': $appHoverText,
 );
 
 $theme-sidebar-1: (

@@ -23,13 +23,24 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "extractCss": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
+              {
+                "input": "src/@youpez/styles/scss/theme/app.carbon.light.scss",
+                "bundleName": "theme-light",
+                "inject": false
+              },
+              {
+                "input": "src/@youpez/styles/scss/theme/app.carbon.dark.scss",
+                "bundleName": "theme-dark",
+                "inject": false
+              },
               "src/@youpez/styles/scss/theme/app.scss",
+              "src/app/shared/styles/app.themes.scss",
               "src/assets/tailwind/tailwind.css"
             ],
             "scripts": []

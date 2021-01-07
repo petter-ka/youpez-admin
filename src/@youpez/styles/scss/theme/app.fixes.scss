@@ -287,10 +287,10 @@
   float: left;
   min-width: 10rem;
   padding: 0 0;
-  color: $appText;
+  color: var(--theme-appText);
   text-align: left;
   list-style: none;
-  background-color: $appUIForegroundBg;
+  background-color: var(--theme-appUIForegroundBg);
   background-clip: padding-box;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
@@ -373,7 +373,7 @@
   height: 0;
   margin: .5rem 0;
   overflow: hidden;
-  border-top: 1px solid $appBorderColor;
+  border-top: 1px solid var(--theme-appBorderColor);
 }
 
 .app-ibm-icon-xl {
@@ -405,24 +405,25 @@
   .bx--list__item {
     padding-bottom: 0.25rem;
     margin-bottom: 0.25rem;
+    //FIXME
     border-bottom: 1px solid lighten($appBorderColor, 5%);
   }
 }
 
 .app-ibm-search-inverse {
   input {
-    background-color: $appColorSecondary;
-    color: $appColorHighContrastTextOn;
-    border-bottom-color: $appColorHighContrastTextOn;
+    background-color: var(--theme-appColorSecondary);
+    color: var(--theme-appColorHighContrastTextOn);
+    border-bottom-color: var(--theme-appColorHighContrastTextOn);
   }
 
   .bx--search-magnifier {
-    fill: $appColorHighContrastTextOn;
+    fill: var(--theme-appColorHighContrastTextOn);
   }
 
   .bx--search-close {
     svg {
-      fill: $appColorHighContrastTextOn;
+      fill: var(--theme-appColorHighContrastTextOn);
 
     }
 
@@ -434,30 +435,30 @@
 
 .app-ibm-tabs-header {
   border-top: 1px solid #313131;
-  background: $appColorHighContrast;
-  color: $appColorHighContrastTextOn;
+  background: var(--theme-appColorHighContrast);
+  color: var(--theme-appColorHighContrastTextOn);
   padding: 0 1.1rem 0 1.1rem;
 
   .bx--tabs {
     .bx--tabs__nav-item {
       box-shadow: none;
-      background: $appColorHighContrast;
+      background: var(--theme-appColorHighContrast);
 
       .bx--tabs__nav-link {
         width: 8rem;
-        color: $appColorHighContrastTextOn;
+        color: var(--theme-appColorHighContrastTextOn);
       }
 
       &:hover {
-        background: $appColorSecondary;
+        background: var(--theme-appColorSecondary);
 
         .bx--tabs__nav-link {
-          color: $appColorHighContrastTextOn;
+          color: var(--theme-appColorHighContrastTextOn);
         }
       }
 
       &.bx--tabs__nav-item--selected {
-        background: $appColorSecondary;
+        background: var(--theme-appColorSecondary);
       }
 
       &.bx--tabs__nav-item--disabled {
@@ -471,17 +472,15 @@
   }
 
   .bx--tabs-trigger {
-    background: $appColorHighContrast;
-    color: $appColorHighContrastTextOn;
+    background: var(--theme-appColorHighContrast);
+    color: var(--theme-appColorHighContrastTextOn);
 
     .bx--tabs-trigger-text {
-      color: $appColorHighContrastTextOn;
-
-
+      color: var(--theme-appColorHighContrastTextOn);
     }
 
     svg {
-      fill: $appColorHighContrastTextOn;
+      fill: var(--theme-appColorHighContrastTextOn);
     }
 
     border: none;

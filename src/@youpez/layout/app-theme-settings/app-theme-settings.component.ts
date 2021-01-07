@@ -16,7 +16,7 @@ export class AppThemeSettingsComponent implements OnInit {
     },
     {
       name: 'light',
-      theme: 'app-theme--default'
+      theme: 'app-theme--light'
     }, {
       name: 'darker',
       theme: 'app-theme--darker'
@@ -100,6 +100,15 @@ export class AppThemeSettingsComponent implements OnInit {
 
   onSetHeaderTheme(name) {
     this.changeThemeHelper(this.headerThemes, name)
+  }
+
+  onChangeTheme(name) {
+    if (name === 'light') {
+      this.settingsService.loadLightTheme()
+    }
+    if (name === 'dark') {
+      this.settingsService.loadDarkTheme()
+    }
   }
 
 }

@@ -283,6 +283,28 @@
   }
 }
 
+@mixin includeColorHelpers($theme){
+  $appUIBg: map-get($theme, 'ui-background');
+  $appUIForegroundBg: map-get($theme, 'ui-01');
+  $appColorPrimary: map-get($theme, 'interactive-01');
+  $appColorDecorative: map-get($theme, 'ui-03');
+  $appColorSecondary: map-get($theme, 'interactive-02');
+  $appColorSuccess: map-get($theme, 'support-02');
+  $appColorDanger: map-get($theme, 'support-01');
+  $appColorWarning: map-get($theme, 'support-03');
+  $appColorInfo: map-get($theme, 'support-04');
+
+  @include color-helper('ui', $appUIBg);
+  @include color-helper('container', $appUIForegroundBg);
+  @include color-helper('primary', $appColorPrimary);
+  @include color-helper('secondary', $appColorSecondary);
+  @include color-helper('success', $appColorSuccess);
+  @include color-helper('danger', $appColorDanger);
+  @include color-helper('warning', $appColorWarning);
+  @include color-helper('info', $appColorInfo);
+  @include color-helper('decorative', $appColorDecorative);
+}
+
 
 
 

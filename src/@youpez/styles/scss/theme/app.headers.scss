@@ -124,8 +124,8 @@
   @extend .app-row;
   @extend .app-row--center;
   padding: 0 1.1rem;
-  background-color: $appUIForegroundBg;
-  border-bottom: 1px solid $appBorderColor;
+  background-color: var(--theme-appUIForegroundBg);
+  border-bottom: 1px solid var(--theme-appBorderColor);
   position: relative;
 
   .app-sidebar-toggle-btn {
