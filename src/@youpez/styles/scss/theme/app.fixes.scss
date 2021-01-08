@@ -1,5 +1,4 @@
 @import 'app.helpers';
-@import 'app.variables';
 
 .app-scrollbar-fix {
   .ng-scrollbar {
@@ -405,8 +404,7 @@
   .bx--list__item {
     padding-bottom: 0.25rem;
     margin-bottom: 0.25rem;
-    //FIXME
-    border-bottom: 1px solid lighten($appBorderColor, 5%);
+    border-bottom: 1px solid var(--theme-appBorderColor);
   }
 }
 

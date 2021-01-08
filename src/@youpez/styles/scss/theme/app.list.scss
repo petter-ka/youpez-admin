@@ -1,4 +1,3 @@
-@import 'app.variables';
 
 .app-list-header {
   padding: 0.5rem 1rem;
@@ -159,7 +158,7 @@
       }
 
       &.app-list__item--active {
-        background-color: var(--theme-appHighLightColort);
+        background-color: var(--theme-appHighLightColor);
       }
     }
   }
@@ -448,7 +447,7 @@
   }
 
   .app-nav-list__children {
-    margin: 0.5rem 0 0.5rem 0rem;
+    margin: 0.5rem 0 0.5rem 0;
 
     .app-nav-list__item__text {
       @extend .app-body-long-01;

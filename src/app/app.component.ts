@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core'
 import {Router, ActivatedRoute, NavigationStart, NavigationEnd, NavigationCancel} from "@angular/router"
-//import {registerTheme} from 'echarts/lib/echarts'
 import {environment} from "../environments/environment"
+import {SettingsService} from "@youpez/services/settings.service"
 
-//import {getLightEchartsTheme, getDarkEchartsTheme} from "../@youpez"
-import {SettingsService} from "../@youpez/services/settings.service"
+const getSessionStorage = (key) => {
+  return sessionStorage.getItem(key)
+}
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,6 @@ import {SettingsService} from "../@youpez/services/settings.service"
 })
 export class AppComponent implements OnInit {
   private appLoaded: boolean = false
-  private title: string = 'theme'
 
   constructor(private settingsService: SettingsService,
               private router: Router,
@@ -24,8 +24,28 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams
       .subscribe((queryParams) => {
-        //console.log(queryParams)
-        console.log(queryParams)
+        if (queryParams.theme) {
+          this.settingsService.setTheme(queryParams.theme)
+        }
+        else {
+          this.settingsService.setTheme(getSessionStorage('--app-theme'))
+        }
+
+        if (queryParams.sidebar) {
+          this.settingsService.setSideBar(queryParams.sidebar)
+        }
+        else {
+          this.settingsService.setSideBar(getSessionStorage('--app-theme-sidebar'))
+        }
+
+        if (queryParams.header) {
+          this.settingsService.setHeader(queryParams.header)
+        }
+        else {
+          this.settingsService.setHeader(getSessionStorage('--app-theme-header'))
+        }
+
+
       })
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
@@ -42,10 +62,5 @@ export class AppComponent implements OnInit {
         //this.slimLoadingBarService.reset()
       }
     })
-
-    this.settingsService.setTheme('app-theme-sidebar--black')
-    this.settingsService.setTheme('app-theme-header--black')
-
-    this.settingsService.loadTheme()
   }
 }

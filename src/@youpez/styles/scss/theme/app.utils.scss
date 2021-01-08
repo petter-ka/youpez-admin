@@ -1,7 +1,4 @@
-@import 'app.variables';
 @import 'app.helpers';
-
-
 
 body {
   overflow: hidden;
@@ -96,7 +93,6 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
     bottom: 10px;
     left: 10px;
     content: '';
-    @include dottedBackground($darkTheme);
     opacity: .2;
   }
 }
@@ -252,13 +248,13 @@ app-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
 
   &.app-symbol--status-success {
     &:after {
-      @include symbolStatus($appColorSuccess);
+      @include symbolStatus(var(--theme-appColorSuccess));
     }
   }
 
   &.app-symbol--status-warning {
     &:after {
-      @include symbolStatus($appColorWarning);
+      @include symbolStatus(var(--theme-appColorWarning));
     }
   }
 }

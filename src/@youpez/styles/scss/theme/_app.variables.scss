@@ -1,7 +1,7 @@
 @import './themes/app.light.2';
 @import "~carbon-components/scss/globals/scss/colors";
 
-//$appUIBg: map-get($carbon--theme, 'ui-background');
+/*//$appUIBg: map-get($carbon--theme, 'ui-background');
 //$appUIForegroundBg: map-get($carbon--theme, 'ui-01');
 $appCardBg: map-get($carbon--theme, 'ui-01');
 
@@ -32,7 +32,7 @@ $appColorInfo: map-get($carbon--theme, 'support-04');
 
 $appColorHighContrast: map-get($carbon--theme, 'ui-05');
 $appColorHighContrastTextOn: map-get($carbon--theme, 'text-04');
-//$appSelectedColor: map-get($carbon--theme, 'selected-ui');
+//$appSelectedColor: map-get($carbon--theme, 'selected-ui');*/
 
 $__app_color_blue: rgb(39, 122, 252);
 $__app_on_color_blue: #fff;

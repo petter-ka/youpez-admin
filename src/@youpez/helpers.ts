@@ -629,3 +629,56 @@ export interface AppTab {
   active?: boolean | null
   disabled?: boolean | null
 }
+
+export const appThemes = [
+  {
+    name: 'light',
+    theme: 'app-theme--light'
+  },
+  {
+    name: 'dark',
+    theme: 'app-theme--dark'
+  }
+]
+
+export const sideBarThemes = [
+  {
+    name: 'black',
+    theme: 'app-theme-sidebar--black'
+  },
+  {
+    name: 'dark-blue',
+    theme: 'app-theme-sidebar--dark-blue'
+  },
+  {
+    name: 'white',
+    theme: 'app-theme-sidebar--white'
+  },
+  {
+    name: 'blue',
+    theme: 'app-theme-sidebar--blue'
+  },
+  {
+    name: 'grey',
+    theme: 'app-theme-sidebar--grey'
+  },
+  {
+    name: 'gradient',
+    theme: 'app-theme-sidebar--gradient'
+  },
+]
+
+export const headerThemes = [
+  {
+    name: 'black',
+    theme: 'app-theme-header--black'
+  },
+  {
+    name: 'white',
+    theme: 'app-theme-header--white'
+  },
+  {
+    name: 'dark-blue',
+    theme: 'app-theme-header--dark-blue'
+  },
+]

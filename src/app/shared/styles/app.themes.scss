@@ -6,6 +6,7 @@
   @include spread-map($theme-map-light);
   @include includeScrollbarStyle(false);
   @include logoVisibility(false);
+  @include setHeroBg(false);
   @include includeColorHelpers($carbonThemeLight);
 }
 
@@ -13,6 +14,7 @@
   @include spread-map($theme-map-dark);
   @include includeScrollbarStyle(true);
   @include logoVisibility(true);
+  @include setHeroBg(true);
   @include includeColorHelpers($carbonThemeDark);
 }
 

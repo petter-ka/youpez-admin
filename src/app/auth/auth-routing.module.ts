@@ -7,7 +7,7 @@ import {
   AppLayoutDividedAltComponent,
   AppLayoutDividedFullComponent,
   AppLayoutBasicComponent
-} from "../../@youpez"
+} from "@youpez/index"
 
 import {AuthSignupComponent} from "./auth-signup/auth-signup.component"
 import {AuthForgotPasswordComponent} from "./auth-forgot-password/auth-forgot-password.component"

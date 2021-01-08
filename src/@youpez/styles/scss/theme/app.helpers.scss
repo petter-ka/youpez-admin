@@ -305,7 +305,19 @@
   @include color-helper('decorative', $appColorDecorative);
 }
 
+@mixin setHeroBg($darkTheme){
+  .app-header--hero {
+    &:before {
+      @include dottedBackground($darkTheme);
+    }
+  }
 
+  .app-bg-dotted {
+    &:before {
+      @include dottedBackground($darkTheme);
+    }
+  }
+}
 
 
 
