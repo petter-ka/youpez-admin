@@ -19,6 +19,7 @@
       left: 0;
       bottom: 0;
       z-index: 11111;
+      background: #f4f4f4;
     }
 
     .app-loading {
@@ -49,7 +50,7 @@
       stroke-dashoffset: 0;
       animation: dash 1.5s ease-in-out infinite;
       stroke-linecap: round;
-      stroke: #ddd;
+      stroke: #0047c3;
     }
 
     @keyframes rotate {
@@ -72,6 +73,94 @@
         stroke-dashoffset: -124px;
       }
     }
+
+    .logo{
+      position: relative;
+    }
+
+    .logo img {
+      width: 300px;
+      height: auto;
+    }
+
+    .loader {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left:0;
+      width: 330px;
+      height: 45px;
+      overflow: hidden;
+    }
+
+    .loader .ball {
+      height: 15px;
+      width: 0;
+      background: #000;
+      position: relative;
+      margin: 0;
+    }
+
+    .loader .ball:nth-child(1) {
+      -webkit-animation: ball 2s ease-in-out infinite;
+      animation: ball 2s ease-in-out infinite;
+    }
+
+    .loader .ball:nth-child(2) {
+      -webkit-animation: ball 2s ease-in-out .1s infinite;
+      animation: ball 2s ease-in-out .1s infinite;
+    }
+
+    .loader .ball:nth-child(3) {
+      -webkit-animation: ball 2s ease-in-out .2s infinite;
+      animation: ball 2s ease-in-out .2s infinite;
+    }
+
+    @-webkit-keyframes ball {
+      0% {
+        left: 0;
+        width: 0px;
+      }
+      25% {
+        left: 0;
+        width: 300px;
+      }
+      50% {
+        left: 300px;
+        width: 0px;
+      }
+      75% {
+        left: 0;
+        width: 300px;
+      }
+      100% {
+        left: 0;
+        width: 0px;
+      }
+    }
+
+    @keyframes ball {
+      0% {
+        left: 0;
+        width: 0px;
+      }
+      25% {
+        left: 0;
+        width: 300px;
+      }
+      50% {
+        left: 300px;
+        width: 0px;
+      }
+      75% {
+        left: 0;
+        width: 300px;
+      }
+      100% {
+        left: 0;
+        width: 0px;
+      }
+    }
   </style>
 
   <script>
@@ -89,10 +178,14 @@
 <div id="notificationHolder" style="position: absolute;z-index:100000"></div>
 <div id="app-loading-holder">
   <div class="app-loading">
-    <div class="logo"></div>
-    <svg class="spinner" viewBox="25 25 50 50">
-      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-    </svg>
+    <div class="logo">
+      <img src="assets/img/logo/logo-big-black.png"/>
+      <div class="loader">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+      </div>
+    </div>
   </div>
 </div>
 </body>

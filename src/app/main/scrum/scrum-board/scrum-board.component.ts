@@ -226,13 +226,13 @@ export class ScrumBoardComponent implements OnInit {
 
   onCreate() {
     this.scrumFormService.open(null).afterClosed().subscribe(() => {
-      console.log('dfasdasdas')
+
     })
   }
 
   onView() {
     this.scrumFormService.openEdit().afterClosed().subscribe(() => {
-      console.log('dfasdasdas')
+
     })
   }
 }

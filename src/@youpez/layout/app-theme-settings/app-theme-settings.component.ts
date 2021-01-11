@@ -27,7 +27,6 @@ export class AppThemeSettingsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.settingsSub = this.settingsService.$theme.subscribe((settings) => {
-      console.log(settings)
       this.selectedTheme = settings.theme
       this.selectedSidebar = settings.sidebar
       this.selectedHeader = settings.header
