@@ -105,15 +105,14 @@
                   </div>
                 </div>
               </div>
-
               <div class="app-expressive-heading-01 mt-4">Recommendation</div>
               <div class="overflow-hidden " style="height: 135px">
                 <div style="height: 250px" class="relative">
-                  <app-echarts [options]="technicalChart" class="app-echarts-component"></app-echarts>
+                  <app-echarts-container>
+                    <app-echarts [options]="technicalChart" class="app-echarts-component"></app-echarts>
+                  </app-echarts-container>
                 </div>
               </div>
-
-
             </div>
           </ng-scrollbar>
         </div>
@@ -292,7 +291,9 @@
             Vol <span class="font-bold ml-1">52.799K</span>
           </div>
         </div>
-        <app-echarts [options]="mainChart" [forceResize]="true" class="app-echarts-component"></app-echarts>
+        <app-echarts-container>
+          <app-echarts [options]="mainChart" [forceResize]="true" class="app-echarts-component"></app-echarts>
+        </app-echarts-container>
       </div>
     </div>
   </app-sidenav-container>

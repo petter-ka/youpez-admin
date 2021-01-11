@@ -5,7 +5,7 @@
 }
 
 @mixin bemMod($modifier) {
-  &--#{$modifier} {
+  &--#{"" + $modifier} {
     @content;
   }
 }
@@ -112,7 +112,7 @@
 }
 
 @mixin theme-bg-helper($color,$name) {
-  .app-theme-bg--#{$name} {
+  .app-theme-bg--#{"" + $name} {
     background: $color;
   }
 }
@@ -283,7 +283,7 @@
   }
 }
 
-@mixin includeColorHelpers($theme){
+@mixin includeColorHelpers($theme) {
   $appUIBg: map-get($theme, 'ui-background');
   $appUIForegroundBg: map-get($theme, 'ui-01');
   $appColorPrimary: map-get($theme, 'interactive-01');
@@ -305,7 +305,7 @@
   @include color-helper('decorative', $appColorDecorative);
 }
 
-@mixin setHeroBg($darkTheme){
+@mixin setHeroBg($darkTheme) {
   .app-header--hero {
     &:before {
       @include dottedBackground($darkTheme);

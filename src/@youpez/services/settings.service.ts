@@ -1,10 +1,11 @@
-import {Injectable} from '@angular/core'
+import {Injectable, EventEmitter} from '@angular/core'
 import {DOCUMENT} from '@angular/common'
 import {Inject} from "@angular/core"
+import {BehaviorSubject} from 'rxjs'
+
 import {environment} from "../../environments/environment"
 import {registerTheme} from 'echarts/lib/echarts'
-import {getLightEchartsTheme, getDarkEchartsTheme} from "../../@youpez"
-import {appThemes, headerThemes, sideBarThemes} from "../../@youpez"
+import {getLightEchartsTheme, getDarkEchartsTheme, appThemes, headerThemes, sideBarThemes} from "../helpers"
 
 const checkClass = (arr, name) => {
   return arr.some(el => el.name === name)
@@ -19,10 +20,69 @@ const saveSessionStorage = (key, value) => {
 })
 export class SettingsService {
 
+  private theme = new BehaviorSubject<any>({
+    theme: '',
+    sidebar: '',
+    header: '',
+  })
+  public $theme = this.theme.asObservable()
+  public themeChanged: EventEmitter<any> = new EventEmitter()
+
   constructor(@Inject(DOCUMENT) private document: Document) {
   }
 
-  removeTheme(themeName) {
+  public setTheme(name) {
+    if (this.theme.value.theme === name) {
+      return
+    }
+    if (checkClass(appThemes, name)) {
+      this.loadTheme(name)
+      this.emitThemeEvent('theme', name)
+      saveSessionStorage('--app-theme', name)
+    }
+    else {
+      this.loadTheme('light')
+      this.emitThemeEvent('theme', 'light')
+    }
+  }
+
+  public setSideBar(name) {
+    if (this.theme.value.sidebar === name) {
+      return
+    }
+    if (checkClass(sideBarThemes, name)) {
+      this.changeThemeClassHelper(sideBarThemes, name)
+      this.emitThemeEvent('sidebar', name)
+      saveSessionStorage('--app-theme-sidebar', name)
+    }
+    else {
+      this.changeThemeClassHelper(sideBarThemes, 'black')
+    }
+  }
+
+  public setHeader(name) {
+    if (this.theme.value.header === name) {
+      return
+    }
+    if (checkClass(headerThemes, name)) {
+      this.changeThemeClassHelper(headerThemes, name)
+      this.emitThemeEvent('header', name)
+      saveSessionStorage('--app-theme-header', name)
+    }
+    else {
+      this.changeThemeClassHelper(headerThemes, 'black')
+    }
+  }
+
+  private emitThemeEvent(key, value) {
+    const nextValue = {
+      ...this.theme.value,
+      [key]: value,
+    }
+    this.theme.next(nextValue)
+  }
+
+  private removeTheme(themeName) {
     const rootEl = document.querySelector('html')
     const classList = [].slice.apply(rootEl.classList)
 
@@ -31,7 +91,7 @@ export class SettingsService {
     }
   }
 
-  setClass(themeName) {
+  private setClass(themeName) {
     const rootEl = document.querySelector('html')
     const classList = [].slice.apply(rootEl.classList)
 
@@ -40,37 +100,7 @@ export class SettingsService {
     }
   }
 
-  setTheme(name) {
-    if (checkClass(appThemes, name)) {
-      this.loadTheme(name)
-      saveSessionStorage('--app-theme', name)
-    }
-    else {
-      this.loadTheme('light')
-    }
-  }
-
-  setSideBar(name) {
-    if (checkClass(sideBarThemes, name)) {
-      this.changeThemeClassHelper(sideBarThemes, name)
-      saveSessionStorage('--app-theme-sidebar', name)
-    }
-    else {
-      this.changeThemeClassHelper(sideBarThemes, 'black')
-    }
-  }
-
-  setHeader(name) {
-    if (checkClass(headerThemes, name)) {
-      this.changeThemeClassHelper(headerThemes, name)
-      saveSessionStorage('--app-theme-header', name)
-    }
-    else {
-      this.changeThemeClassHelper(headerThemes, 'black')
-    }
-  }
-
-  changeThemeClassHelper(themes, name) {
+  private changeThemeClassHelper(themes, name) {
     themes
       .filter(el => el.name !== name)
       .forEach(el => {
@@ -84,7 +114,7 @@ export class SettingsService {
       })
   }
 
-  loadTheme(theme) {
+  private loadTheme(theme) {
     if (theme === 'light') {
       this.loadLightTheme()
     }
@@ -96,7 +126,7 @@ export class SettingsService {
     }
   }
 
-  loadLightTheme() {
+  private loadLightTheme() {
     registerTheme('inverse', getDarkEchartsTheme())
     registerTheme('default', getLightEchartsTheme())
     this.removeTheme('app-theme--dark')
@@ -104,7 +134,7 @@ export class SettingsService {
     this.loadStyle('theme-light.css')
   }
 
-  loadDarkTheme() {
+  private loadDarkTheme() {
     registerTheme('inverse', getLightEchartsTheme())
     registerTheme('default', getDarkEchartsTheme())
     this.removeTheme('app-theme--light')
@@ -112,7 +142,7 @@ export class SettingsService {
     this.loadStyle('theme-dark.css')
   }
 
-  loadStyle(styleName: string) {
+  private loadStyle(styleName: string) {
     const head = this.document.getElementsByTagName('head')[0]
     let themeLink = this.document.getElementById('client-theme') as HTMLLinkElement
 

@@ -104,7 +104,10 @@
                 <div class="app-expressive-heading-02">Alerts</div>
                 <div class="app-label-01">Last 24hrs</div>
               </div>
-              <app-echarts [options]="chartOptions3" class="app-echarts-component" style="height: 100px;"></app-echarts>
+              <app-echarts-container>
+                <app-echarts [options]="chartOptions3" class="app-echarts-component"
+                             style="height: 100px;"></app-echarts>
+              </app-echarts-container>
             </div>
           </div>
           <div fxFlex="50%" fxFlex.gt-md="25%">
@@ -116,7 +119,10 @@
                 <div class="app-expressive-heading-02">Revenue</div>
                 <div class="app-label-01">Current month</div>
               </div>
-              <app-echarts [options]="chartOptions" class="app-echarts-component" style="height: 100px;"></app-echarts>
+              <app-echarts-container>
+                <app-echarts [options]="chartOptions" class="app-echarts-component"
+                             style="height: 100px;"></app-echarts>
+              </app-echarts-container>
             </div>
           </div>
           <div fxFlex="50%" fxFlex.gt-md="25%">
@@ -128,7 +134,10 @@
                 <div class="app-expressive-heading-02">Customers</div>
                 <div class="app-label-01">Last 6 month</div>
               </div>
-              <app-echarts [options]="chartOptions4" class="app-echarts-component" style="height: 100px;"></app-echarts>
+              <app-echarts-container>
+                <app-echarts [options]="chartOptions4" class="app-echarts-component"
+                             style="height: 100px;"></app-echarts>
+              </app-echarts-container>
             </div>
           </div>
           <div fxFlex="50%" fxFlex.gt-md="25%">
@@ -140,7 +149,10 @@
                 <div class="app-expressive-heading-02">Profit</div>
                 <div class="app-label-01">Last month</div>
               </div>
-              <app-echarts [options]="chartOptions2" class="app-echarts-component" style="height: 100px;"></app-echarts>
+              <app-echarts-container>
+                <app-echarts [options]="chartOptions2" class="app-echarts-component"
+                             style="height: 100px;"></app-echarts>
+              </app-echarts-container>
             </div>
           </div>
         </div>
@@ -161,7 +173,9 @@
             <div class="app-label-01">Working days</div>
           </div>
           <div class="app-card__content">
-            <app-echarts [options]="punchCardOpts" class="app-echarts-component" style="height: 210px;"></app-echarts>
+            <app-echarts-container>
+              <app-echarts [options]="punchCardOpts" class="app-echarts-component" style="height: 210px;"></app-echarts>
+            </app-echarts-container>
           </div>
         </div>
       </div>
@@ -284,7 +298,8 @@
                 </div>
               </div>
               <div style="height:270px;" class="relative">
-                <app-dummy-table-rich size="sh" stickyHeader="true" class="app-ibm-h-full app-ibm-table-header-fix"></app-dummy-table-rich>
+                <app-dummy-table-rich size="sh" stickyHeader="true"
+                                      class="app-ibm-h-full app-ibm-table-header-fix"></app-dummy-table-rich>
               </div>
             </div>
           </div>
@@ -304,7 +319,8 @@
           <div class="app-card__header">
             <div class="app-row app-row--center">
               <div class="app-symbol mr-3">
-                <div class="app-symbol__label w-10 h-10 app-expressive-heading-01 app-text-contrast app-bg-success-lt-50 rounded">
+                <div
+                  class="app-symbol__label w-10 h-10 app-expressive-heading-01 app-text-contrast app-bg-success-lt-50 rounded">
                   K8S
                 </div>
               </div>
@@ -334,7 +350,9 @@
                 <span class="app-productive-heading-02">users</span>
               </div>
               <div class="app-productive-heading-01 mb-2">Workload</div>
-              <app-echarts [options]="gaugeOpts" class="app-echarts-component" style="height: 240px;"></app-echarts>
+              <app-echarts-container>
+                <app-echarts [options]="gaugeOpts" class="app-echarts-component" style="height: 240px;"></app-echarts>
+              </app-echarts-container>
               <div class="">
                 <div fxLayout="row wrap" class="text-center">
                   <div fxFlex="50%">
@@ -374,7 +392,9 @@
                 <span class="app-productive-heading-02">users</span>
               </div>
               <div class="app-productive-heading-01 mb-2">Workload</div>
-              <app-echarts [options]="gaugeOpts" class="app-echarts-component" style="height: 240px;"></app-echarts>
+              <app-echarts-container>
+                <app-echarts [options]="gaugeOpts2" class="app-echarts-component" style="height: 240px;"></app-echarts>
+              </app-echarts-container>
               <div class="">
                 <div fxLayout="row wrap" class="text-center">
                   <div fxFlex="50%">
@@ -406,15 +426,15 @@
                   <span class="mr-1">Healthy</span>
                   <app-ibm-icon iconName="checkMarkOutline" iconSize="32"></app-ibm-icon>
                 </div>
-
               </div>
-
               <div class="mt-5 mb-1">
                 <span class="app-productive-heading-05 mr-2">4,105</span>
                 <span class="app-productive-heading-02">users</span>
               </div>
               <div class="app-productive-heading-01 mb-2">Workload</div>
-              <app-echarts [options]="gaugeOpts" class="app-echarts-component" style="height: 240px;"></app-echarts>
+              <app-echarts-container>
+                <app-echarts [options]="gaugeOpts3" class="app-echarts-component" style="height: 240px;"></app-echarts>
+              </app-echarts-container>
               <div class="">
                 <div fxLayout="row wrap" class="text-center">
                   <div fxFlex="50%">
@@ -462,8 +482,10 @@
                     </div>
                   </div>
                   <div>
-                    <app-echarts [options]="realtimeOpts" class="app-echarts-component"
-                                 style="height: 130px;"></app-echarts>
+                    <app-echarts-container>
+                      <app-echarts [options]="realtimeOpts" class="app-echarts-component"
+                                   style="height: 130px;"></app-echarts>
+                    </app-echarts-container>
                   </div>
                 </div>
               </ibm-tab>
@@ -484,8 +506,10 @@
                     </div>
                   </div>
                   <div>
-                    <app-echarts [options]="realtimeOpts" class="app-echarts-component"
-                                 style="height: 130px;"></app-echarts>
+                    <app-echarts-container>
+                      <app-echarts [options]="realtimeOpts" class="app-echarts-component"
+                                   style="height: 130px;"></app-echarts>
+                    </app-echarts-container>
                   </div>
                 </div>
               </ibm-tab>
@@ -499,7 +523,10 @@
             <div class="app-label-01">last 6 days</div>
           </div>
           <div>
-            <app-echarts [options]="themeRiverOpts" class="app-echarts-component" style="height: 240px;"></app-echarts>
+            <app-echarts-container>
+              <app-echarts [options]="themeRiverOpts" class="app-echarts-component"
+                           style="height: 240px;"></app-echarts>
+            </app-echarts-container>
           </div>
         </div>
       </div>

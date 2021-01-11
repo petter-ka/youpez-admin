@@ -17,6 +17,8 @@ export class DashboardDefaultComponent implements OnInit {
   public chartOptions4 = {}
   public punchCardOpts = {}
   public gaugeOpts = {}
+  public gaugeOpts2 = {}
+  public gaugeOpts3 = {}
   public themeRiverOpts = {}
   public realtimeOpts = {}
   public model = getDummyModel()
@@ -233,7 +235,7 @@ export class DashboardDefaultComponent implements OnInit {
   }
 
   createRealTime() {
-    var dataAxis = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',];
+    var dataAxis = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',]
     let data = [220, 182, 191, 234, 290, 330, 310, 123, 442, 321,]
     let yMax = 500
     let dataShadow = []
@@ -395,13 +397,51 @@ export class DashboardDefaultComponent implements OnInit {
   }
 
   createGauge() {
-
-    let data = {
+    this.gaugeOpts = this.getGauge({
       value: 52.32,
       name: 'EU'
+    })
+    this.gaugeOpts2 = this.getGauge({
+      value: 78.11,
+      name: 'US'
+    })
+    this.gaugeOpts3 = this.getGauge({
+      value: 11.21,
+      name: 'EU'
+    })
+  }
+
+  getGauge(data) {
+
+    let colorStops = [{
+      offset: 0,
+      color: 'rgba(51,227,189,1)' // 0%
+    }, {
+      offset: 1,
+      color: 'rgba(51,227,189,.1)' // 100%
+    }]
+
+    if (data.value > 50 && data.value < 70) {
+      colorStops = [{
+        offset: 0,
+        color: 'rgb(227,177,51)' // 0%
+      }, {
+        offset: 1,
+        color: 'rgba(134,96,35,.3)' // 100%
+      }]
     }
 
-    this.gaugeOpts = {
+    if (data.value > 70) {
+      colorStops = [{
+        offset: 0,
+        color: 'rgb(227,51,66)' // 0%
+      }, {
+        offset: 1,
+        color: 'rgba(134,35,78,.3)' // 100%
+      }]
+    }
+
+    return {
       backgroundColor: 'transparent',
       title: {
         text: '{num|' + data.value + '}{key| %}',
@@ -443,13 +483,7 @@ export class DashboardDefaultComponent implements OnInit {
           y: 0,
           x2: 0,
           y2: 0,
-          colorStops: [{
-            offset: 0,
-            color: 'rgba(51,227,189,1)' // 0% 处的颜色
-          }, {
-            offset: 1,
-            color: 'rgba(51,227,189,.1)' // 100% 处的颜色
-          }]
+          colorStops: colorStops,
         }, 'transparent'],
         hoverAnimation: true,
         legendHoverLink: false,
@@ -479,7 +513,7 @@ export class DashboardDefaultComponent implements OnInit {
         data: [{
           value: 75,
           itemStyle: {
-            color: '#eee'
+            color: 'rgba(237, 237, 237,0.6)'
           }
         }, {
           value: 25,
@@ -504,7 +538,7 @@ export class DashboardDefaultComponent implements OnInit {
         data: [{
           value: 75,
           itemStyle: {
-            borderColor: 'rgb(167,166,169)',
+            borderColor: 'rgba(237, 237, 237,0.8)',
             borderType: 'dashed'
           }
         }, {

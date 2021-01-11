@@ -20,8 +20,10 @@
         <ng-container *ngFor="let chart of charts">
           <div fxFlex="100%" fxFlex.gt-md="33.33%" class="">
             <div class="app-card p-2">
-              <app-echarts [options]="chart" class="app-echarts-component"
-                           style="height: 400px;"></app-echarts>
+              <app-echarts-container>
+                <app-echarts [options]="chart" class="app-echarts-component"
+                             style="height: 400px;"></app-echarts>
+              </app-echarts-container>
             </div>
           </div>
         </ng-container>

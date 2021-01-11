@@ -199,7 +199,7 @@ export class EchartsComponent implements OnInit, OnDestroy, OnChanges, DoCheck, 
     }
   }
 
-  private refreshChart() {
+  public refreshChart() {
     this.dispose()
     this.initChart()
   }

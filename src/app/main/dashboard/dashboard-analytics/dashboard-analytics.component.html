@@ -113,8 +113,10 @@
               <div fxFlex="100%" fxFlex.gt-lg="75%">
                 <ng-container *ngIf="!loading">
                   <div class="app-card__content">
-                    <app-echarts [options]="mainChartOpts" class="app-echarts-component"
-                                 style="height: 400px;"></app-echarts>
+                    <app-echarts-container>
+                      <app-echarts [options]="mainChartOpts" class="app-echarts-component"
+                                   style="height: 400px;"></app-echarts>
+                    </app-echarts-container>
                   </div>
                 </ng-container>
               </div>
@@ -272,8 +274,10 @@
               <div class="app-caption-01">EU/US and CTR</div>
             </div>
             <div class="">
-              <app-echarts [options]="miniChart1" class="app-echarts-component"
-                           style="height: 160px;"></app-echarts>
+              <app-echarts-container>
+                <app-echarts [options]="miniChart1" class="app-echarts-component"
+                             style="height: 160px;"></app-echarts>
+              </app-echarts-container>
             </div>
             <div class="app-list">
               <div class="app-caption-01 mx-2 mt-3">Top cities</div>
@@ -339,8 +343,10 @@
               <div class="app-caption-01">EU/US region</div>
             </div>
             <div class="">
-              <app-echarts [options]="miniChart2" class="app-echarts-component"
-                           style="height: 160px;"></app-echarts>
+              <app-echarts-container>
+                <app-echarts [options]="miniChart2" class="app-echarts-component"
+                             style="height: 160px;"></app-echarts>
+              </app-echarts-container>
             </div>
             <div class="app-list">
               <div class="app-caption-01 mx-2 mt-3">Top versions</div>
@@ -417,24 +423,20 @@
                   <div class="app-caption-01">Mobile</div>
                   <div class="app-productive-heading-03">11 223</div>
                 </div>
-
                 <div>
                   <div class="app-caption-01">Other</div>
                   <div class="app-productive-heading-03">9256</div>
                 </div>
-
               </div>
-
-
             </div>
-
             <div class="app-card__content">
-              <app-echarts [options]="miniChart3" class="app-echarts-component"
-                           style="height: 300px;"></app-echarts>
+              <app-echarts-container>
+                <app-echarts [options]="miniChart3" class="app-echarts-component"
+                             style="height: 300px;"></app-echarts>
+              </app-echarts-container>
             </div>
           </div>
         </div>
-
       </div>
     </ng-scrollbar>
   </div>
