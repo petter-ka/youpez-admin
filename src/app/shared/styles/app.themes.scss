@@ -75,12 +75,15 @@
 // HEADER THEMES
 :root.app-theme-header--black {
   @include spread-map($theme-header-1);
+  @include set-header-white-logo();
 }
 
 :root.app-theme-header--white {
   @include spread-map($theme-header-2);
+  @include set-header-black-logo();
 }
 
 :root.app-theme-header--dark-blue {
   @include spread-map($theme-header-3);
+  @include set-header-white-logo();
 }

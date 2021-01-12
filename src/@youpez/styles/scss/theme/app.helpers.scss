@@ -132,6 +132,11 @@
   }
 }
 
+@mixin set-header-white-logo() {
+  .app-layout__header {
+    @include set-white-logo();
+  }
+}
 
 @mixin set-black-logo() {
   .app-sidebar__logo__black {
@@ -145,6 +150,12 @@
   }
   .app-layout__header__logo--black {
     display: block;
+  }
+}
+
+@mixin set-header-black-logo() {
+  .app-layout__header {
+    @include set-black-logo();
   }
 }
 

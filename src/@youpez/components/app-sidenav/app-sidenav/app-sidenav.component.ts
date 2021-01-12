@@ -70,6 +70,7 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
   public hoverEvent: boolean = false
   public hoverAble: boolean = false
   public opened: boolean = false
+  public openedMemo:boolean = null
   public isMouseEntered: boolean = false
   public resizeEdges = {
     bottom: false,
@@ -105,21 +106,31 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
 
   ngOnInit() {
     this.firstInit()
-
+    //CURRENTLY: https://github.com/angular/flex-layout/issues/1059
     this.breakpointSub = this.appBreakpointService.$windowWidth
       .subscribe((width: any) => {
+        if (!width) {
+          return
+        }
         if (this.breakpoint && this.breakpoint === 'md') {
           if (width <= 960) {
             this.mode = 'over'
             this.hoverAble = false
             this.opened = false
-            this.visibleChange.emit(false)
+            this.openedMemo = this.originalOpened
+
+            setTimeout(() => {
+              this.visibleChange.emit(false)
+            }, 1)
           }
           else {
             this.mode = this.originalMode
             this.hoverAble = this.originalHoverAble
-            this.opened = this.originalOpened
-            this.visibleChange.emit(this.originalOpened)
+            this.opened = this.openedMemo || this.originalOpened
+
+            setTimeout(() => {
+              this.visibleChange.emit(this.openedMemo || this.originalOpened)
+            }, 1)
           }
           this.change.emit()
         }

@@ -439,15 +439,15 @@ export class LayoutComponent implements OnInit, OnDestroy {
               children: [
                 {
                   name: 'Basic',
-                  url:'/app/starters/full-width/basic'
+                  url: '/app/starters/full-width/basic'
                 },
                 {
                   name: 'Header',
-                  url:'/app/starters/full-width/header'
+                  url: '/app/starters/full-width/header'
                 },
                 {
                   name: 'Tabs',
-                  url:'/app/starters/full-width/tabs'
+                  url: '/app/starters/full-width/tabs'
                 }
               ]
             },
@@ -457,15 +457,15 @@ export class LayoutComponent implements OnInit, OnDestroy {
               children: [
                 {
                   name: 'Basic',
-                  url:'/app/starters/left-sidebar/basic'
+                  url: '/app/starters/left-sidebar/basic'
                 },
                 {
                   name: 'Header',
-                  url:'/app/starters/left-sidebar/header'
+                  url: '/app/starters/left-sidebar/header'
                 },
                 {
                   name: 'Tabs',
-                  url:'/app/starters/left-sidebar/tabs'
+                  url: '/app/starters/left-sidebar/tabs'
                 }
               ]
             },
@@ -475,15 +475,15 @@ export class LayoutComponent implements OnInit, OnDestroy {
               children: [
                 {
                   name: 'Basic',
-                  url:'/app/starters/right-sidebar/basic'
+                  url: '/app/starters/right-sidebar/basic'
                 },
                 {
                   name: 'Header',
-                  url:'/app/starters/right-sidebar/header'
+                  url: '/app/starters/right-sidebar/header'
                 },
                 {
                   name: 'Tabs',
-                  url:'/app/starters/right-sidebar/tabs'
+                  url: '/app/starters/right-sidebar/tabs'
                 }
               ]
             },
@@ -493,15 +493,15 @@ export class LayoutComponent implements OnInit, OnDestroy {
               children: [
                 {
                   name: 'Basic',
-                  url:'/app/starters/application/basic'
+                  url: '/app/starters/application/basic'
                 },
                 {
                   name: 'Advanced',
-                  url:'/app/starters/application/advanced'
+                  url: '/app/starters/application/advanced'
                 },
                 {
                   name: 'Complex',
-                  url:'/app/starters/application/complex'
+                  url: '/app/starters/application/complex'
                 }
               ]
             },
@@ -805,5 +805,9 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
   onCloseSidebar() {
     this.mainSidebarOpts.opened = false
+  }
+
+  onVisibilityChange(event){
+    this.mainSidebarOpts.opened=event
   }
 }

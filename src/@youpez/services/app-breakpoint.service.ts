@@ -21,7 +21,7 @@ export class AppBreakpointService {
   public $breakpoint = this.breakpoint.asObservable()
   public $windowWidth = this.windowWidth.asObservable()
 
-  constructor(private media: MediaObserver,
+  constructor(public media: MediaObserver,
               private eventManager: EventManager) {
     this.eventManager.addGlobalEventListener('window', 'resize', this.onResize.bind(this))
   }

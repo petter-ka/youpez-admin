@@ -45,6 +45,7 @@ export class LayoutSidebarComponent implements OnInit, AfterViewInit {
   scrollToActiveElement() {
     const holderElementHeight = this.sideBarHolder.nativeElement.offsetHeight
     const element: any = document.getElementsByClassName("app-sidebar__list__item__inner--active")[0]
+
     if (element) {
       const offsetTop = element.offsetTop
       if (offsetTop > holderElementHeight) {
