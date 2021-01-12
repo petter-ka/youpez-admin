@@ -433,34 +433,50 @@
 
 .app-ibm-tabs-header {
   border-top: 1px solid #313131;
-  background: var(--theme-appColorHighContrast);
-  color: var(--theme-appColorHighContrastTextOn);
+  border-bottom: 1px solid #313131;
+  background-color: var(--theme-tab-dark--background);
+  color: var(--theme-tab-dark--color);
   padding: 0 1.1rem 0 1.1rem;
 
   .bx--tabs {
+    background-color: var(--theme-tab-dark--background) !important;
     .bx--tabs__nav-item {
-      box-shadow: none;
-      background: var(--theme-appColorHighContrast);
+      box-shadow: none !important;
+
+      background-color: var(--theme-tab-dark--background);
+      border-right: none !important;
 
       .bx--tabs__nav-link {
         width: 8rem;
-        color: var(--theme-appColorHighContrastTextOn);
+        color: var(--theme-tab-dark--color);
+        border-right: none !important;
+      }
+
+      .bx--tabs__nav-link {
+        &:focus {
+          color: var(--theme-tab-dark--color) !important;
+        }
       }
 
       &:hover {
-        background: var(--theme-appColorSecondary);
+        background-color: var(--theme-tab-dark--hover-background) !important;
 
         .bx--tabs__nav-link {
-          color: var(--theme-appColorHighContrastTextOn);
+          color: var(--theme-tab-dark--color) !important;
         }
       }
 
       &.bx--tabs__nav-item--selected {
-        background: var(--theme-appColorSecondary);
+        background-color: var(--theme-tab-dark--selected-background);
+
+        &:hover {
+          background-color: var(--theme-tab-dark--selected-background);
+        }
       }
 
       &.bx--tabs__nav-item--disabled {
         opacity: .5;
+        background-color: var(--theme-tab-dark--selected-background) !important;
 
         &:hover {
           border-bottom: none;
@@ -470,15 +486,15 @@
   }
 
   .bx--tabs-trigger {
-    background: var(--theme-appColorHighContrast);
-    color: var(--theme-appColorHighContrastTextOn);
+    background-color: var(--theme-tab-dark--background);
+    color: var(--theme-tab-dark--color);
 
     .bx--tabs-trigger-text {
-      color: var(--theme-appColorHighContrastTextOn);
+      color: var(--theme-tab-dark--color);
     }
 
     svg {
-      fill: var(--theme-appColorHighContrastTextOn);
+      fill: var(--theme-tab-dark--color);
     }
 
     border: none;

@@ -1,45 +1,12 @@
 @import './themes/app.light.2';
 @import "~carbon-components/scss/globals/scss/colors";
 
-/*//$appUIBg: map-get($carbon--theme, 'ui-background');
-//$appUIForegroundBg: map-get($carbon--theme, 'ui-01');
-$appCardBg: map-get($carbon--theme, 'ui-01');
-
-$appText: map-get($carbon--theme, 'text-01');
-//$appTextInverse: map-get($carbon--theme, 'inverse-01');
-// $appHighLightColor: map-get($carbon--theme, 'highlight');
-
-$appBorderColor: map-get($carbon--theme, 'ui-03');
-//$appBorderContrastColor: map-get($carbon--theme, 'ui-04');
-//$appBorderHighContrastColor: map-get($carbon--theme, 'ui-05');
-
-$appBorderColorAlt: map-get($carbon--theme, 'active-ui');
-$appHoverBg: map-get($carbon--theme, 'hover-ui');
-//$appHoverText: map-get($carbon--theme, 'hover-primary-text');
-$appFocusBorder: map-get($carbon--theme, 'focus');
-
-$appColorLight: map-get($carbon--theme, 'ui-02');
-
-$appColorPrimary: map-get($carbon--theme, 'interactive-01');
-$appColorDecorative: map-get($carbon--theme, 'ui-03');
-$appColorSecondary: map-get($carbon--theme, 'interactive-02');
-//$appColorSecondaryHover: map-get($carbon--theme, 'hover-secondary');
-
-$appColorSuccess: map-get($carbon--theme, 'support-02');
-$appColorDanger: map-get($carbon--theme, 'support-01');
-$appColorWarning: map-get($carbon--theme, 'support-03');
-$appColorInfo: map-get($carbon--theme, 'support-04');
-
-$appColorHighContrast: map-get($carbon--theme, 'ui-05');
-$appColorHighContrastTextOn: map-get($carbon--theme, 'text-04');
-//$appSelectedColor: map-get($carbon--theme, 'selected-ui');*/
-
 $__app_color_blue: rgb(39, 122, 252);
 $__app_on_color_blue: #fff;
 $__app_color_grey: rgb(239, 239, 239);
 
-$carbonThemeLight:$carbon--theme--g10;
-$carbonThemeDark:$carbon--theme--g100;
+$carbonThemeLight: $carbon--theme--g10;
+$carbonThemeDark: $carbon--theme--g100;
 
 $theme-map-light: (
   '--theme-background': map-get($carbonThemeLight, 'ui-01'),
@@ -231,4 +198,11 @@ $theme-header-3: (
   '--theme-main-header--border-color':#1b1d37,
   '--theme-main-header--hover-background':#1b1d37,
   '--theme-main-header--hover-color':#2a6afe,
+);
+
+$theme-tab-header-dark: (
+  '--theme-tab-dark--background':#161616,
+  '--theme-tab-dark--color':#fff,
+  '--theme-tab-dark--selected-background':#393939,
+  '--theme-tab-dark--hover-background':#474747,
 );

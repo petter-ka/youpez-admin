@@ -68,6 +68,8 @@
   @include theme-bg-helper(map-get($theme-sidebar-4, --theme-main-sidebar--background), grey);
   @include theme-bg-helper(map-get($theme-sidebar-5, --theme-main-sidebar--background), gradient);
   @include theme-bg-helper(map-get($theme-sidebar-6, --theme-main-sidebar--background), dark-blue);
+
+  @include spread-map($theme-tab-header-dark);
 }
 
 // HEADER THEMES
