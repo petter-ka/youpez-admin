@@ -70,7 +70,7 @@
           Platform Analytics
         </youpez-header-title>
 
-        <app-header-tools>
+        <youpez-header-tools>
           <button ibmButton="primary" size="sm" class="mr-1">
             Widget
             <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
@@ -78,7 +78,7 @@
           <button (click)="onToggleRightSidebar()" ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
             <svg class="bx--btn__icon" ibmIconOpenPanelRight size="20"></svg>
           </button>
-        </app-header-tools>
+        </youpez-header-tools>
       </youpez-header>
 
       <div fxLayout="row wrap" class="app-card-row-holder">
@@ -113,10 +113,10 @@
               <div fxFlex="100%" fxFlex.gt-lg="75%">
                 <ng-container *ngIf="!loading">
                   <div class="app-card__content">
-                    <app-echarts-container>
-                      <app-echarts [options]="mainChartOpts" class="app-echarts-component"
-                                   style="height: 400px;"></app-echarts>
-                    </app-echarts-container>
+                    <youpez-echarts-container>
+                      <youpez-echarts [options]="mainChartOpts" class="app-echarts-component"
+                                   style="height: 400px;"></youpez-echarts>
+                    </youpez-echarts-container>
                   </div>
                 </ng-container>
               </div>
@@ -274,10 +274,10 @@
               <div class="app-caption-01">EU/US and CTR</div>
             </div>
             <div class="">
-              <app-echarts-container>
-                <app-echarts [options]="miniChart1" class="app-echarts-component"
-                             style="height: 160px;"></app-echarts>
-              </app-echarts-container>
+              <youpez-echarts-container>
+                <youpez-echarts [options]="miniChart1" class="app-echarts-component"
+                             style="height: 160px;"></youpez-echarts>
+              </youpez-echarts-container>
             </div>
             <div class="app-list">
               <div class="app-caption-01 mx-2 mt-3">Top cities</div>
@@ -343,10 +343,10 @@
               <div class="app-caption-01">EU/US region</div>
             </div>
             <div class="">
-              <app-echarts-container>
-                <app-echarts [options]="miniChart2" class="app-echarts-component"
-                             style="height: 160px;"></app-echarts>
-              </app-echarts-container>
+              <youpez-echarts-container>
+                <youpez-echarts [options]="miniChart2" class="app-echarts-component"
+                             style="height: 160px;"></youpez-echarts>
+              </youpez-echarts-container>
             </div>
             <div class="app-list">
               <div class="app-caption-01 mx-2 mt-3">Top versions</div>
@@ -430,10 +430,10 @@
               </div>
             </div>
             <div class="app-card__content">
-              <app-echarts-container>
-                <app-echarts [options]="miniChart3" class="app-echarts-component"
-                             style="height: 300px;"></app-echarts>
-              </app-echarts-container>
+              <youpez-echarts-container>
+                <youpez-echarts [options]="miniChart3" class="app-echarts-component"
+                             style="height: 300px;"></youpez-echarts>
+              </youpez-echarts-container>
             </div>
           </div>
         </div>

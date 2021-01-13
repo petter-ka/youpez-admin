@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-header-tools',
+  selector: 'youpez-header-tools',
   templateUrl: './app-header-tools.component.html',
   styleUrls: ['./app-header-tools.component.scss']
 })

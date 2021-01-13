@@ -108,9 +108,9 @@
               <div class="app-expressive-heading-01 mt-4">Recommendation</div>
               <div class="overflow-hidden " style="height: 135px">
                 <div style="height: 250px" class="relative">
-                  <app-echarts-container>
-                    <app-echarts [options]="technicalChart" class="app-echarts-component"></app-echarts>
-                  </app-echarts-container>
+                  <youpez-echarts-container>
+                    <youpez-echarts [options]="technicalChart" class="app-echarts-component"></youpez-echarts>
+                  </youpez-echarts-container>
                 </div>
               </div>
             </div>
@@ -269,7 +269,7 @@
           Bitcoin / U.S. Dollar
         </youpez-header-title>
 
-        <app-header-tools>
+        <youpez-header-tools>
           <button ibmButton="primary" size="sm" class="mr-1">
             Buy
             <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
@@ -277,7 +277,7 @@
           <button (click)="onToggleRightSidebar()" ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
             <svg class="bx--btn__icon" ibmIconOpenPanelRight size="20"></svg>
           </button>
-        </app-header-tools>
+        </youpez-header-tools>
       </youpez-header>
 
       <div fxFlex class="relative px-4 pb-4">
@@ -291,9 +291,9 @@
             Vol <span class="font-bold ml-1">52.799K</span>
           </div>
         </div>
-        <app-echarts-container>
-          <app-echarts [options]="mainChart" [forceResize]="true" class="app-echarts-component"></app-echarts>
-        </app-echarts-container>
+        <youpez-echarts-container>
+          <youpez-echarts [options]="mainChart" [forceResize]="true" class="app-echarts-component"></youpez-echarts>
+        </youpez-echarts-container>
       </div>
     </div>
   </youpez-sidenav-container>

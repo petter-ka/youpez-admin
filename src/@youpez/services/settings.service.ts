@@ -155,7 +155,7 @@ export class SettingsService {
       style.type = 'text/css'
       style.rel = 'stylesheet'
       style.href = `${styleName}`
-      head.appendChild(style)
+      head.prepend(style)
     }
   }
 }

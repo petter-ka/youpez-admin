@@ -3,12 +3,12 @@
     <youpez-header-title>
       The company tasks
     </youpez-header-title>
-    <app-header-tools>
+    <youpez-header-tools>
       <button ibmButton="primary" size="sm">
         Synchronise
         <svg class="bx--btn__icon" ibmIconCheckmarkOutline size="20"></svg>
       </button>
-    </app-header-tools>
+    </youpez-header-tools>
   </youpez-header>
   <div fxFlex class="relative">
     <youpez-sidenav-container panel="solid">
@@ -91,7 +91,7 @@
                 <div fxFlex.gt-lg="100%">
                   <div class="app-content app-content--default">
                     <div class="flex items-center mb-4">
-                      <button (click)="onToggleLeftSidebar()" ibmButton="ghost" size="sm" class="bx--btn--icon-only mr-2">
+                      <button (click)="onToggleLeftSidebar()" ibmButton="tertiary" size="sm" class="bx--btn--icon-only mr-1">
                         <svg class="bx--btn__icon" ibmIconOpenPanelLeft size="20"></svg>
                       </button>
                       <button (click)="onAddList()" ibmButton="primary" size="sm">

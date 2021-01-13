@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-auth-welcome-screen',
+  selector: 'youpez-auth-welcome-screen',
   templateUrl: './auth-welcome-screen.component.html',
   styleUrls: ['./auth-welcome-screen.component.scss']
 })

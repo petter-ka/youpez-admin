@@ -19,16 +19,19 @@
                 Youpez’s powerful platform empowers everyone <br/> across your organization with data.
               </p>
               <div class="flex justify-center mb-5">
-                <div class="mr-4">
-                  <ibm-checkbox checked="true" name="billing">
+                <ibm-radio-group
+                  class="app-ibm-checkbox-inline"
+                  aria-label="radiogroup">
+                  <ibm-radio
+                    value="radio"
+                    [checked]="true">
                     Monthly
-                  </ibm-checkbox>
-                </div>
-                <div>
-                  <ibm-checkbox name="billing">
+                  </ibm-radio>
+                  <ibm-radio
+                    value="radio">
                     Yearly
-                  </ibm-checkbox>
-                </div>
+                  </ibm-radio>
+                </ibm-radio-group>
               </div>
             </div>
             <div>

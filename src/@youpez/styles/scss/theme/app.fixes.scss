@@ -117,6 +117,14 @@
   }
 }
 
+.app-ibm-toggle-inline {
+  display: inline-block !important;
+}
+
+.app-ibm-checkbox-inline {
+  flex: initial !important;
+}
+
 .app-ibm-btn-merge {
   button {
     margin-right: -1px;
@@ -440,6 +448,7 @@
 
   .bx--tabs {
     background-color: var(--theme-tab-dark--background) !important;
+
     .bx--tabs__nav-item {
       box-shadow: none !important;
 
