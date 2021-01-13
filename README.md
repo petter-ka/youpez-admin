@@ -1,6 +1,6 @@
 # Thank you for choosing Youpez.
 
-Youpez is a highly customizable, flexible NextGen UI Angular admin template with custom made real life application UI/UX/Layouts 
+Youpez is a highly customizable, flexible NextGen Angular UI admin template with custom made real life application UI/UX/Layouts 
 
 Motivation behind Youpez creating a futuristic and well usable Admin application template which is different from other average templates.
 

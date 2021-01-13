@@ -242,7 +242,7 @@ const IndexPage = () => (
             </div>
             <div className={'col-xl-6'}>
               <div className={'paragraph text-muted2'} style={{paddingTop: 7}}>
-                Youpez is a highly customizable, flexible NextGen UI Angular admin template with custom made real life application UI/UX/Layouts.
+                Youpez is a highly customizable, flexible NextGen Angular UI admin template with custom made real life application UI/UX/Layouts.
               </div>
               <div className={'paragraph text-muted2'} style={{paddingTop: 12}}>
                 Motivation behind Youpez creating a futuristic and well usable Admin application template which is different from other average templates.

@@ -147,18 +147,18 @@ $theme-sidebar-4: (
   '--theme-main-sidebar--active-background':#d6d8db,
   '--theme-main-sidebar--active-color':#000,
   '--theme-main-sidebar--hover-background':#d6d8db,
-  '--theme-main-sidebar--border-color':#c2c4c5,
+  '--theme-main-sidebar--border-color':#d1d2d2,
   '--theme-main-sidebar--logo-background':#e4e6e8,
-  '--theme-main-sidebar--logo-border':#c2c4c5,
+  '--theme-main-sidebar--logo-border':#d1d2d2,
 );
 
 $theme-sidebar-5: (
   '--theme-main-sidebar--background':linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%),
   '--theme-main-sidebar--color':#000,
   '--theme-main-sidebar--toggle':#000,
-  '--theme-main-sidebar--active-background':rgba(142, 197, 252, 0.7),
+  '--theme-main-sidebar--active-background':rgba(103, 179, 255, 0.7),
   '--theme-main-sidebar--active-color':#000,
-  '--theme-main-sidebar--hover-background':rgba(142, 197, 252, 0.2),
+  '--theme-main-sidebar--hover-background':rgba(103, 179, 255, 0.3),
   '--theme-main-sidebar--border-color':#8ec5fc,
   '--theme-main-sidebar--logo-background':linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%),
   '--theme-main-sidebar--logo-border':#8ec5fc,
