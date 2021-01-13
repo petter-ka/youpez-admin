@@ -1,5 +1,5 @@
-<app-sidenav-container panel="panel">
-  <app-sidenav-v2
+<youpez-sidenav-container panel="panel">
+  <youpez-sidenav
     [breakpoint]="'md'"
     [direction]="'right'"
     [opened]="true"
@@ -8,8 +8,8 @@
     [toggleableBtn]="true"
     initWidth="300">
 
-    <app-sidenav-container panel="panel">
-      <app-sidenav-v2
+    <youpez-sidenav-container panel="panel">
+      <youpez-sidenav
         [breakpoint]="'md'"
         [direction]="'bottom'"
         [opened]="true"
@@ -22,7 +22,7 @@
             <div class="app-expressive-heading-02">Split bottom</div>
           </div>
         </div>
-      </app-sidenav-v2>
+      </youpez-sidenav>
 
       <div fxFill fxLayout="column" class="app-bg-container relative">
         <div class="app-header app-header--sm">
@@ -37,11 +37,11 @@
         </div>
       </div>
 
-    </app-sidenav-container>
-  </app-sidenav-v2>
+    </youpez-sidenav-container>
+  </youpez-sidenav>
 
-  <app-sidenav-container panel="panel">
-    <app-sidenav-v2
+  <youpez-sidenav-container panel="panel">
+    <youpez-sidenav
       [breakpoint]="'md'"
       [direction]="'bottom'"
       [opened]="true"
@@ -55,22 +55,22 @@
           <div class="app-expressive-heading-02">Bottom</div>
         </div>
       </div>
-    </app-sidenav-v2>
+    </youpez-sidenav>
 
     <div fxFill fxLayout="column" class="relative">
-      <app-header [bordered]="true">
-        <app-header-title>
+      <youpez-header [bordered]="true">
+        <youpez-header-title>
           Main header
-        </app-header-title>
+        </youpez-header-title>
         <app-header-tools>
           <button ibmButton="primary" size="sm" class="mr-1">
             Button
             <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
           </button>
         </app-header-tools>
-      </app-header>
+      </youpez-header>
     </div>
-  </app-sidenav-container>
+  </youpez-sidenav-container>
 
-</app-sidenav-container>
+</youpez-sidenav-container>
 

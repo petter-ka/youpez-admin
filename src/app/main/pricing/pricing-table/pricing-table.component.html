@@ -3,7 +3,7 @@
     <div fxLayout="row" fxLayoutAlign="center start" class="app-border-b  mb-5">
       <div fxFlex="100%" fxFlex.gt-md="80%" fxFlex.gt-lg="70%" class="app-content app-content--default">
         <div class="pt-5 pb-4">
-          <app-logo class="cursor-pointer" logoWidth="200px"></app-logo>
+          <youpez-logo class="cursor-pointer" logoWidth="200px"></youpez-logo>
         </div>
       </div>
     </div>
@@ -90,7 +90,7 @@
                       <div class="h-10 justify-center flex items-center app-body-short-01">
                         <ng-container *ngIf="isBoolean(pricePackage.features[feature.id])">
                           <ng-container *ngIf="pricePackage.features[feature.id] === true">
-                            <app-ibm-icon iconName="checkMarkOutline" class="app-color-success"></app-ibm-icon>
+                            <youpez-ibm-icon iconName="checkMarkOutline" class="app-color-success"></youpez-ibm-icon>
                           </ng-container>
                           <ng-container *ngIf="pricePackage.features[feature.id] === false">
                             -

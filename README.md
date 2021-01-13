@@ -1,4 +1,30 @@
-# Theme
+# Thank you for choosing Youpez.
+
+Youpez is a highly customizable, flexible NextGen UI Angular admin template with custom made real life application UI/UX/Layouts 
+
+Motivation behind Youpez creating a futuristic and well usable Admin application template which is different from other average templates.
+
+In Youpez we collected the best UI solutions/libraries for your next awesome admin project. It contains the current and future best practices from the frontend world.
+
+# Youpez Online Documentation
+
+We want to keep updated the documentation that's why we chose the online version for the detailed documentation
+
+[Youpez Documentation](https://flatedge.gitbook.io/youpez/)
+
+#Core libraries
+
+Angular is the core of Youpez.
+ 
+Angular Flex Angular Layout provides a sophisticated API using Flexbox, CSS Grid, and mediaQuery.
+ 
+Carbon design system & components  Carbon is IBM’s open source design system for products and digital experiences.
+ 
+TailwindCSS it provides utility classes for almost every CSS rule available.
+
+-----------
+
+# Youpez
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 

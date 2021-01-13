@@ -195,6 +195,10 @@ body {
   background: #0f0f0f;
   color: #fff;
   border: 2px solid transparent;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 .bt-alt {
@@ -221,6 +225,15 @@ body {
   font-size: 14px;
   padding: 5px 15px;
   font-weight: 700;
+}
+
+.btn-basic2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.29;
+  min-width: 210px;
+  text-align: center;
+  padding: 15px 30px 15px 30px;
 }
 
 .text-muted2 {
@@ -289,6 +302,31 @@ body {
   letter-spacing: 0;
 }
 
-.container{
+.container {
   max-width: calc(1280px + 3rem) !important;
+}
+
+.section-contrast {
+  background-color: #204dd9;
+  color: #fff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.core-features {
+  & > div {
+    margin-bottom: 80px;
+  }
+}
+
+.img-border {
+  border: 1px solid #ccc;
+  transition: transform .2s;
+
+  &:hover{
+    transform: scale(1.03);
+  }
 }

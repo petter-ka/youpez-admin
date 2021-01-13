@@ -1,21 +1,21 @@
 <div fxFill fxLayout="column">
-  <app-header>
-    <app-header-title>
+  <youpez-header>
+    <youpez-header-title>
       <!--      <button (click)="onToggleSidebar()" class="app-sidebar-toggle-btn">
-              <app-ibm-icon iconSize="20" iconName="openPanelLeft"></app-ibm-icon>
+              <youpez-ibm-icon iconSize="20" iconName="openPanelLeft"></youpez-ibm-icon>
             </button>-->
       Messages
-    </app-header-title>
+    </youpez-header-title>
     <app-header-tools>
       <button ibmButton="primary" size="sm">
         New
         <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
       </button>
     </app-header-tools>
-  </app-header>
+  </youpez-header>
   <div fxFlex class="relative">
-    <app-sidenav-container panel="solid">
-      <app-sidenav-v2
+    <youpez-sidenav-container panel="solid">
+      <youpez-sidenav
         [breakpoint]="'md'"
         [direction]="'left'"
         [opened]="leftSidebarVisibility"
@@ -95,7 +95,7 @@
                           <div class="app-list-pill__item__inner"
                                [ngClass]="{'app-list-pill__item__inner--active': channel === selectedItem}">
                             <div class="w-5 h-5 app-bg-info-lt-50 mr-2 flex items-center justify-center rounded app-text-contrast">
-                              <app-ibm-icon class="flex" iconSize="16" [iconName]="channel.icon"></app-ibm-icon>
+                              <youpez-ibm-icon class="flex" iconSize="16" [iconName]="channel.icon"></youpez-ibm-icon>
                             </div>
                             <div class="flex-1 truncate app-body-long-01">{{channel.name}}</div>
                           </div>
@@ -106,7 +106,7 @@
                       <div class="app-list-pill__item">
                         <div class="app-list-pill__item__inner">
                           <div class="w-5 h-5 app-bg-success-lt-30 mr-2 flex items-center justify-center rounded app-text-contrast">
-                            <app-ibm-icon class="flex" iconSize="16" iconName="add"></app-ibm-icon>
+                            <youpez-ibm-icon class="flex" iconSize="16" iconName="add"></youpez-ibm-icon>
                           </div>
                           <div class="flex-1 truncate app-body-long-01">Add channels</div>
                         </div>
@@ -144,7 +144,7 @@
                       <div class="app-list-pill__item">
                         <div class="app-list-pill__item__inner">
                           <div class="w-5 h-5 app-bg-success-lt-30 mr-2 flex items-center justify-center rounded app-text-contrast">
-                            <app-ibm-icon class="flex" iconSize="16" iconName="add"></app-ibm-icon>
+                            <youpez-ibm-icon class="flex" iconSize="16" iconName="add"></youpez-ibm-icon>
                           </div>
                           <div class="flex-1 truncate app-body-long-01">Add teammates</div>
                         </div>
@@ -178,7 +178,7 @@
             </button>
           </div>
         </div>
-      </app-sidenav-v2>
+      </youpez-sidenav>
 
       <div fxFill fxLayout="column">
         <div class="app-header-subheader app-header-subheader--left-alt app-header-subheader--right-alt" style="height:49px">
@@ -330,6 +330,6 @@
       </div>
 
 
-    </app-sidenav-container>
+    </youpez-sidenav-container>
   </div>
 </div>

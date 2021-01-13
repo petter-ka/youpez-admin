@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-credit-card',
+  selector: 'youpez-credit-card',
   templateUrl: './app-credit-card.component.html',
   styleUrls: ['./app-credit-card.component.scss']
 })

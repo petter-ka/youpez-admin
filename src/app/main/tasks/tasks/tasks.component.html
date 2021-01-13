@@ -1,18 +1,18 @@
 <div fxFill fxLayout="column">
-  <app-header>
-    <app-header-title>
+  <youpez-header>
+    <youpez-header-title>
       The company tasks
-    </app-header-title>
+    </youpez-header-title>
     <app-header-tools>
       <button ibmButton="primary" size="sm">
         Synchronise
         <svg class="bx--btn__icon" ibmIconCheckmarkOutline size="20"></svg>
       </button>
     </app-header-tools>
-  </app-header>
+  </youpez-header>
   <div fxFlex class="relative">
-    <app-sidenav-container panel="solid">
-      <app-sidenav-v2
+    <youpez-sidenav-container panel="solid">
+      <youpez-sidenav
         [breakpoint]="'md'"
         [direction]="'left'"
         [opened]="leftSidebarVisibility"
@@ -70,7 +70,7 @@
                     <ng-container *ngFor="let archive of archives">
                       <div class="app-list-pill__item">
                         <div class="app-list-pill__item__inner">
-                          <app-ibm-icon iconName="archive" iconSize="16" class="mr-2"></app-ibm-icon>
+                          <youpez-ibm-icon iconName="archive" iconSize="16" class="mr-2"></youpez-ibm-icon>
                           {{archive.name}}
                         </div>
                       </div>
@@ -81,7 +81,7 @@
             </div>
           </div>
         </div>
-      </app-sidenav-v2>
+      </youpez-sidenav>
 
       <div class="app-a-box app-scrollbar-fix">
         <ng-scrollbar>
@@ -91,14 +91,14 @@
                 <div fxFlex.gt-lg="100%">
                   <div class="app-content app-content--default">
                     <div class="flex items-center mb-4">
-                      <button (click)="onToggleLeftSidebar()" ibmButton="tertiary" size="sm" class="bx--btn--icon-only mr-2">
+                      <button (click)="onToggleLeftSidebar()" ibmButton="ghost" size="sm" class="bx--btn--icon-only mr-2">
                         <svg class="bx--btn__icon" ibmIconOpenPanelLeft size="20"></svg>
                       </button>
                       <button (click)="onAddList()" ibmButton="primary" size="sm">
                         Add list
                         <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
                       </button>
-                      <div class="ml-2" style="width:170px">
+                      <div class="ml-2" style="width:150px">
                         <ibm-search (valueChange)="onSearchChange($event)"
                                     (clear)="onSearchChange('')"
                                     placeholder="Search..."
@@ -120,11 +120,11 @@
 
                     <div fxLayout="row wrap">
                       <div fxFlex.gt-lg="65%">
-                        <app-tasks-list #appTasksList
+                        <youpez-tasks-list #appTasksList
                                         [tasks]="taskGroups"
                                         [transparent]="false"
                                         [filterText]="txtSearch"
-                        ></app-tasks-list>
+                        ></youpez-tasks-list>
                       </div>
                     </div>
                   </div>
@@ -134,7 +134,7 @@
           </div>
         </ng-scrollbar>
       </div>
-    </app-sidenav-container>
+    </youpez-sidenav-container>
   </div>
 </div>
 

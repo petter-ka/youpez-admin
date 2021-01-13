@@ -6,7 +6,7 @@ import {Router} from "@angular/router"
 export declare type TabType = 'navigation' | 'sm'
 
 @Component({
-  selector: 'app-content-tabs',
+  selector: 'youpez-content-tabs',
   templateUrl: './app-content-tabs.component.html',
   styleUrls: ['./app-content-tabs.component.scss']
 })

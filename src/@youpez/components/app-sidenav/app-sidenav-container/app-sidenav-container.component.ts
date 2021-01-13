@@ -15,7 +15,7 @@ import {WindowRefService} from "../../../services/window-ref.service"
 export declare type PanelType = '' | 'panel' | 'solid'
 
 @Component({
-  selector: 'app-sidenav-container',
+  selector: 'youpez-sidenav-container',
   templateUrl: './app-sidenav-container.component.html',
   styleUrls: ['./app-sidenav-container.component.scss'],
 })

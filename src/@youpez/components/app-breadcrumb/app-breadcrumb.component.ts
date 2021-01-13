@@ -8,7 +8,7 @@ export interface IBreadCrumb {
 }
 
 @Component({
-  selector: 'app-breadcrumb',
+  selector: 'youpez-breadcrumb',
   templateUrl: './app-breadcrumb.component.html',
   styleUrls: ['./app-breadcrumb.component.scss']
 })

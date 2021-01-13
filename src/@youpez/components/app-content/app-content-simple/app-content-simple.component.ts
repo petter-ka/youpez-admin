@@ -1,7 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core'
 
 @Component({
-  selector: 'app-content-simple',
+  selector: 'youpez-content-simple',
   templateUrl: './app-content-simple.component.html',
   styleUrls: ['./app-content-simple.component.scss']
 })

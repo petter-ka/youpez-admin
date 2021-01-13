@@ -4,20 +4,20 @@
     <img class="app-sidebar__logo__black" src="assets/img/logo/logo-big-black.png"/>
     <ng-container *ngIf="opened">
       <div (click)="onSideBarToggle()" class="app-sidebar__toggle-btn">
-        <app-ibm-icon iconName="radioButtonChecked" iconSize="16"></app-ibm-icon>
+        <youpez-ibm-icon iconName="radioButtonChecked" iconSize="16"></youpez-ibm-icon>
       </div>
     </ng-container>
     <ng-container *ngIf="!opened">
       <div (click)="onSideBarToggle()" class="app-sidebar__toggle-btn">
-        <app-ibm-icon iconName="radioButton" iconSize="16"></app-ibm-icon>
+        <youpez-ibm-icon iconName="radioButton" iconSize="16"></youpez-ibm-icon>
       </div>
     </ng-container>
   </div>
   <div #sideBarHolder fxFlex class="relative">
     <ng-scrollbar #scrollBar>
-      <app-menu
+      <youpez-menu
         [menu]="menu"
-        (groupToggle)="onGroupToggle($event)"></app-menu>
+        (groupToggle)="onGroupToggle($event)"></youpez-menu>
     </ng-scrollbar>
   </div>
 </div>

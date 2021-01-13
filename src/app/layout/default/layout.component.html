@@ -2,7 +2,7 @@
      [ngClass.lt-md]="{'app-layout--show-header': true}">
 
   <!-- BEGIN: MAIN SIDENAV CONTAINER -->
-  <app-sidenav-container>
+  <youpez-sidenav-container>
 
     <!-- BEGIN: THEME SETTINGS BTN -->
     <div class="app-theme-settings-btn"
@@ -10,19 +10,19 @@
          placement="left"
          container="body"
          ngbTooltip="Theme settings">
-      <app-ibm-icon iconName="settingsAdjust" iconSize="24"></app-ibm-icon>
+      <youpez-ibm-icon iconName="settingsAdjust" iconSize="24"></youpez-ibm-icon>
     </div>
     <!-- END: THEME SETTINGS BTN -->
 
     <!-- BEGIN: THEME SETTINGS SIDEBAR -->
-    <app-sidenav-v2
+    <youpez-sidenav
       (close)="onCloseSettings($event)"
       [opened]="settingsVisible"
       [direction]="'right'"
       [mode]="'over'"
       [size]="'md'">
       <app-theme-settings></app-theme-settings>
-    </app-sidenav-v2>
+    </youpez-sidenav>
     <!-- END: THEME SETTINGS SIDEBAR -->
 
     <!-- BEGIN: MAIN HEADER (XS VIEW) -->
@@ -39,10 +39,10 @@
 
     <!-- BEGIN: MAIN LAYOUT -->
     <div class="app-layout__content">
-      <app-sidenav-container>
+      <youpez-sidenav-container>
 
         <!-- BEGIN: MAIN SIDEBAR -->
-        <app-sidenav-v2
+        <youpez-sidenav
           [breakpoint]="mainSidebarOpts.breakpoint"
           [opened]="mainSidebarOpts.opened"
           (visibleChange)="onVisibilityChange($event)"
@@ -54,7 +54,7 @@
             [menu]="menu"
             [opened]="mainSidebarOpts.opened"
             (sideBarToggle)="onSideBarToggle($event)"></app-layout-sidebar>
-        </app-sidenav-v2>
+        </youpez-sidenav>
         <!-- END: MAIN SIDEBAR -->
 
         <!-- BEGIN: MAIN PAGE CONTENT -->
@@ -63,24 +63,24 @@
         </div>
         <!-- END: MAIN PAGE CONTENT -->
 
-      </app-sidenav-container>
+      </youpez-sidenav-container>
     </div>
     <!-- END: MAIN LAYOUT -->
 
-  </app-sidenav-container>
+  </youpez-sidenav-container>
 
   <!-- END: MAIN SIDENAV CONTAINER -->
 </div>
 
 <!-- BEGIN: GLOBAL SEARCH DIALOG -->
 <ng-container *ngIf="searchVisible">
-  <app-search (close)="onSearchClose($event)"></app-search>
+  <youpez-search (close)="onSearchClose($event)"></youpez-search>
 </ng-container>
 <!-- END: GLOBAL SEARCH DIALOG -->
 
 <!-- BEGIN: LOCK SCREEN DIALOG -->
 <ng-container *ngIf="lockScreenVisible">
-  <app-lock-screen (close)="onLockClose($event)"></app-lock-screen>
+  <youpez-lock-screen (close)="onLockClose($event)"></youpez-lock-screen>
 </ng-container>
 <!-- END: LOCK SCREEN DIALOG -->
 

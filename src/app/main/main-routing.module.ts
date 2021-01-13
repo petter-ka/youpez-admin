@@ -499,11 +499,6 @@ const routes: Routes = [
     component: LayoutComponent,
     children: routeForPages,
   },
-  {
-    path: 'horizontal',
-    component: AppLayoutHorizontalComponent,
-    children: routeForPages,
-  }
 ]
 
 @NgModule({

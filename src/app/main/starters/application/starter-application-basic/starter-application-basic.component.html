@@ -1,28 +1,6 @@
-<app-sidenav-container panel="solid">
-  <app-sidenav-v2
+<youpez-sidenav-container panel="solid">
+  <youpez-sidenav
     direction="right"
-    breakpoint="md"
-    [opened]="true"
-    hoverAble="true"
-    mode="side"
-    [toggleableBtn]="true"
-    size="xsm">
-    <div class="app-content app-content--default">
-      <div class="app-productive-heading-02">Resizable & hoverable</div>
-    </div>
-  </app-sidenav-v2>
-  <app-header [bordered]="true">
-    <app-header-title>
-      Main header
-    </app-header-title>
-    <app-header-tools>
-      <button ibmButton="primary" size="sm" class="mr-1">
-        Button
-        <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
-      </button>
-    </app-header-tools>
-  </app-header>
-  <app-sidenav-v2
     breakpoint="md"
     [opened]="true"
     hoverAble="true"
@@ -32,5 +10,27 @@
     <div class="app-content app-content--default">
       <div class="app-productive-heading-02">Resizable & hoverable</div>
     </div>
-  </app-sidenav-v2>
-</app-sidenav-container>
+  </youpez-sidenav>
+  <youpez-header [bordered]="true">
+    <youpez-header-title>
+      Main header
+    </youpez-header-title>
+    <app-header-tools>
+      <button ibmButton="primary" size="sm" class="mr-1">
+        Button
+        <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+      </button>
+    </app-header-tools>
+  </youpez-header>
+  <youpez-sidenav
+    breakpoint="md"
+    [opened]="true"
+    hoverAble="true"
+    mode="side"
+    [toggleableBtn]="true"
+    size="custom1">
+    <div class="app-content app-content--default">
+      <div class="app-productive-heading-02">Resizable & hoverable</div>
+    </div>
+  </youpez-sidenav>
+</youpez-sidenav-container>

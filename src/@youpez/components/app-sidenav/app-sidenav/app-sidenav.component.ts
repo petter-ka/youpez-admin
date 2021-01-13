@@ -31,35 +31,34 @@ export declare type SizeType =
   | 'mini'
 
 @Component({
-  selector: 'app-sidenav-v2',
+  selector: 'youpez-sidenav',
   templateUrl: './app-sidenav.component.html',
   styleUrls: ['./app-sidenav.component.scss'],
 })
 export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit, OnChanges, AfterViewInit, AfterViewChecked {
 
   @Input('opened') originalOpened: boolean
-  @Input('direction') direction: DirectionType = 'left'
-  @Input('size') size: SizeType = 'md'
+  @Input() direction: DirectionType = 'left'
+  @Input() size: SizeType = 'md'
   @Input('mode') originalMode: ModeType = 'over'
-  @Input('breakpoint') breakpoint: string = ''
-  @Input('transparent') transparent: boolean = false
-  @Input('toggleableBtn') toggleableBtn: boolean = false
-  @Input('toggleableBtnAlwaysVisible') toggleableBtnAlwaysVisible: boolean = false
+  @Input() breakpoint: string = ''
+  @Input() transparent: boolean = false
+  @Input() toggleableBtn: boolean = false
+  @Input() toggleableBtnAlwaysVisible: boolean = false
   @Input('hoverAble') originalHoverAble: boolean = false
-  @Input('hoverAbleBreakpoint') hoverAbleBreakpoint: string = 'md'
-  @Input('optionalClass') optionalClass: string = ''
-  @Input('initWidth') initWidth: string = ''
-  @Input('hoverDelay') hoverDelay: number = 100
-  @Input('options') options: Object = null
-  @Input('minDimension') minDimension: number = null
+  @Input() hoverAbleBreakpoint: string = 'md'
+  @Input() optionalClass: string = ''
+  @Input() initWidth: string = ''
+  @Input() hoverDelay: number = 100
+  @Input() minDimension: number = null
 
-  @Output('open') open: EventEmitter<any> = new EventEmitter<any>()
-  @Output('close') close: EventEmitter<any> = new EventEmitter<any>()
-  @Output('init') init: EventEmitter<any> = new EventEmitter<any>()
-  @Output('change') change: EventEmitter<any> = new EventEmitter<any>()
-  @Output('resizeEnd') resizeEnd: EventEmitter<any> = new EventEmitter<any>()
-  @Output('resizing') resizing: EventEmitter<any> = new EventEmitter<any>()
-  @Output('visibleChange') visibleChange: EventEmitter<any> = new EventEmitter<any>()
+  @Output() open: EventEmitter<any> = new EventEmitter<any>()
+  @Output() close: EventEmitter<any> = new EventEmitter<any>()
+  @Output() init: EventEmitter<any> = new EventEmitter<any>()
+  @Output() change: EventEmitter<any> = new EventEmitter<any>()
+  @Output() resizeEnd: EventEmitter<any> = new EventEmitter<any>()
+  @Output() resizing: EventEmitter<any> = new EventEmitter<any>()
+  @Output() visibleChange: EventEmitter<any> = new EventEmitter<any>()
 
   @ViewChild('sideNavEl', {static: true}) sideNavEl: ElementRef
 

@@ -6,7 +6,7 @@
         <div fxLayout="row" fxLayoutAlign="start start">
           <div fxFlex="90%" fxFlex.gt-md="80%" fxFlex.gt-lg="70%" class="app-content app-content--default">
             <div class="mt-8 mb-12">
-              <app-logo class="cursor-pointer" logoWidth="200px"></app-logo>
+              <youpez-logo class="cursor-pointer" logoWidth="200px"></youpez-logo>
             </div>
             <div class="">
               <button routerLink="/app/application/welcome" ibmButton="ghost" size="sm"
@@ -27,7 +27,7 @@
                     <div class="app-card__content app-border-b flex justify-between">
                       <div class="app-productive-heading-03">{{video.title}}</div>
                       <ng-container *ngIf="video.seen">
-                        <app-ibm-icon iconName="checkMarkOutline" class="app-color-success"></app-ibm-icon>
+                        <youpez-ibm-icon iconName="checkMarkOutline" class="app-color-success"></youpez-ibm-icon>
                       </ng-container>
                     </div>
                     <div class="app-card__content app-border-b">

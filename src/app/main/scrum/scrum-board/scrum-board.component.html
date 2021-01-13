@@ -1,15 +1,15 @@
 <div fxFill fxLayout="column">
-  <app-header>
-    <app-header-title>
+  <youpez-header>
+    <youpez-header-title>
       Youpez 2020 Sprint W31-32
-    </app-header-title>
+    </youpez-header-title>
     <app-header-tools>
       <button ibmButton="primary" size="sm" (click)="onCreate()">
         Create
         <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
       </button>
     </app-header-tools>
-  </app-header>
+  </youpez-header>
   <div class="p-4 flex items-center">
     <div class="app-ibm-btn-merge mr-2" fxHide fxShow.gt-sm>
       <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
@@ -84,7 +84,7 @@
                                   {{task.description}}
                                 </div>
                                 <div class="flex items-center mb-1">
-                                  <app-ibm-icon iconName="time" iconSize="16"></app-ibm-icon>
+                                  <youpez-ibm-icon iconName="time" iconSize="16"></youpez-ibm-icon>
                                   <span class="ml-1">26.10.2020</span>
                                 </div>
                                 <div class="app-label-01">

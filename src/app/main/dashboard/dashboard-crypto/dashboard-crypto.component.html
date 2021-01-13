@@ -1,5 +1,5 @@
-<app-sidenav-container panel="panel">
-  <app-sidenav-v2
+<youpez-sidenav-container panel="panel">
+  <youpez-sidenav
     [breakpoint]="'md'"
     [direction]="'right'"
     [opened]="rightSidebarVisibility"
@@ -9,8 +9,8 @@
     [toggleableBtn]="true"
     initWidth="300">
 
-    <app-sidenav-container panel="panel">
-      <app-sidenav-v2
+    <youpez-sidenav-container panel="panel">
+      <youpez-sidenav
         [breakpoint]="'md'"
         [direction]="'bottom'"
         [opened]="true"
@@ -116,7 +116,7 @@
             </div>
           </ng-scrollbar>
         </div>
-      </app-sidenav-v2>
+      </youpez-sidenav>
 
       <div fxFill fxLayout="column" class="app-bg-container relative">
         <div class="app-header app-header--sm">
@@ -152,7 +152,7 @@
                           <div fxFlex="35" class="app-helper-text-01 text-right app-color-danger">
                             <div class="flex justify-end items-center">
                               {{watch[2]}}
-                              <app-ibm-icon iconName="arrowDown" iconSize="16" class="-mr-2 ml-1"></app-ibm-icon>
+                              <youpez-ibm-icon iconName="arrowDown" iconSize="16" class="-mr-2 ml-1"></youpez-ibm-icon>
                             </div>
                           </div>
                         </ng-container>
@@ -160,7 +160,7 @@
                           <div fxFlex="35" class="app-helper-text-01 text-right app-color-success">
                             <div class="flex justify-end items-center">
                               {{watch[2]}}
-                              <app-ibm-icon iconName="arrowUp" iconSize="16" class="-mr-2 ml-1"></app-ibm-icon>
+                              <youpez-ibm-icon iconName="arrowUp" iconSize="16" class="-mr-2 ml-1"></youpez-ibm-icon>
                             </div>
                           </div>
                         </ng-container>
@@ -175,12 +175,12 @@
       </div>
 
 
-    </app-sidenav-container>
+    </youpez-sidenav-container>
 
-  </app-sidenav-v2>
+  </youpez-sidenav>
 
-  <app-sidenav-container panel="panel">
-    <app-sidenav-v2
+  <youpez-sidenav-container panel="panel">
+    <youpez-sidenav
       [breakpoint]="'md'"
       [direction]="'bottom'"
       [opened]="bottomSidebarVisibility"
@@ -260,14 +260,14 @@
           </ng-container>
         </div>
       </div>
-    </app-sidenav-v2>
+    </youpez-sidenav>
 
     <div fxFill fxLayout="column" class="relative app-bg-container">
 
-      <app-header [bordered]="false">
-        <app-header-title>
+      <youpez-header [bordered]="false">
+        <youpez-header-title>
           Bitcoin / U.S. Dollar
-        </app-header-title>
+        </youpez-header-title>
 
         <app-header-tools>
           <button ibmButton="primary" size="sm" class="mr-1">
@@ -278,7 +278,7 @@
             <svg class="bx--btn__icon" ibmIconOpenPanelRight size="20"></svg>
           </button>
         </app-header-tools>
-      </app-header>
+      </youpez-header>
 
       <div fxFlex class="relative px-4 pb-4">
         <div class="absolute top-0 left-0 ml-4 app-bg-container" style="top:-8px;left:-3px;z-index: 1">
@@ -296,6 +296,6 @@
         </app-echarts-container>
       </div>
     </div>
-  </app-sidenav-container>
+  </youpez-sidenav-container>
 
-</app-sidenav-container>
+</youpez-sidenav-container>

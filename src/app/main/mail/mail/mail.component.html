@@ -1,18 +1,18 @@
 <div fxFill fxLayout="column">
-  <app-header>
-    <app-header-title>
+  <youpez-header>
+    <youpez-header-title>
       Mailbox
-    </app-header-title>
+    </youpez-header-title>
     <app-header-tools>
       <button (click)="onCompose()" ibmButton="primary" size="sm">
         Compose
         <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
       </button>
     </app-header-tools>
-  </app-header>
+  </youpez-header>
   <div fxFlex class="relative">
-    <app-sidenav-container panel="solid">
-      <app-sidenav-v2
+    <youpez-sidenav-container panel="solid">
+      <youpez-sidenav
         [breakpoint]="'md'"
         [direction]="'left'"
         [opened]="sidebarVisible"
@@ -29,7 +29,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Inbox</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <app-ibm-icon iconSize="24" iconName="package"></app-ibm-icon>
+                  <youpez-ibm-icon iconSize="24" iconName="package"></youpez-ibm-icon>
                 </div>
               </div>
             </div>
@@ -38,7 +38,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Starred</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <app-ibm-icon iconSize="24" iconName="star"></app-ibm-icon>
+                  <youpez-ibm-icon iconSize="24" iconName="star"></youpez-ibm-icon>
                 </div>
               </div>
             </div>
@@ -47,7 +47,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Important</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <app-ibm-icon iconSize="24" iconName="alarm"></app-ibm-icon>
+                  <youpez-ibm-icon iconSize="24" iconName="alarm"></youpez-ibm-icon>
                 </div>
               </div>
             </div>
@@ -56,7 +56,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Sent</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <app-ibm-icon iconSize="24" iconName="sendAlt"></app-ibm-icon>
+                  <youpez-ibm-icon iconSize="24" iconName="sendAlt"></youpez-ibm-icon>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Drafts</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <app-ibm-icon iconSize="24" iconName="document"></app-ibm-icon>
+                  <youpez-ibm-icon iconSize="24" iconName="document"></youpez-ibm-icon>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Spam</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <app-ibm-icon iconSize="24" iconName="error"></app-ibm-icon>
+                  <youpez-ibm-icon iconSize="24" iconName="error"></youpez-ibm-icon>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Trash</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <app-ibm-icon iconSize="24" iconName="trashCan"></app-ibm-icon>
+                  <youpez-ibm-icon iconSize="24" iconName="trashCan"></youpez-ibm-icon>
                 </div>
               </div>
             </div>
@@ -123,7 +123,7 @@
                               </ng-container>
                               <ng-container *ngIf="mail.flagged">
                                 <div class="mb-2 app-color-warning">
-                                  <app-ibm-icon iconName="flagFilled" iconSize="16"></app-ibm-icon>
+                                  <youpez-ibm-icon iconName="flagFilled" iconSize="16"></youpez-ibm-icon>
                                 </div>
                               </ng-container>
                             </div>
@@ -148,7 +148,7 @@
                               <div class="app-productive-heading-02 mb-1">
                                 {{mail.title}}
                                 <ng-container *ngIf="mail.attachments">
-                                  <app-ibm-icon iconName="attachment" iconSize="16"></app-ibm-icon>
+                                  <youpez-ibm-icon iconName="attachment" iconSize="16"></youpez-ibm-icon>
                                 </ng-container>
                               </div>
                               <div class="app-body-long-01">{{mail.content | slice:0:110}}...</div>
@@ -181,7 +181,7 @@
             </div>
           </div>
         </div>
-      </app-sidenav-v2>
+      </youpez-sidenav>
 
       <div fxFill fxLayout="column" class="relative">
         <div class="app-a-box app-scrollbar-fix">
@@ -358,6 +358,6 @@
           </ng-scrollbar>
         </div>
       </div>
-    </app-sidenav-container>
+    </youpez-sidenav-container>
   </div>
 </div>

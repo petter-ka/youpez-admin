@@ -1,7 +1,7 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core'
 
 @Component({
-  selector: 'app-menu-header',
+  selector: 'youpez-menu-header',
   templateUrl: './app-menu-header.component.html',
   styleUrls: ['./app-menu-header.component.css']
 })

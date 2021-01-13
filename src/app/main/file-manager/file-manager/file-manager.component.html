@@ -1,18 +1,18 @@
 <div fxFill fxLayout="column">
-  <app-header>
-    <app-header-title>
+  <youpez-header>
+    <youpez-header-title>
       File manager
-    </app-header-title>
+    </youpez-header-title>
     <app-header-tools>
       <button ibmButton="primary" size="sm">
         Upload
         <svg class="bx--btn__icon" ibmIconUpload size="20"></svg>
       </button>
     </app-header-tools>
-  </app-header>
+  </youpez-header>
   <div fxFlex class="relative">
-    <app-sidenav-container panel="solid">
-      <app-sidenav-v2
+    <youpez-sidenav-container panel="solid">
+      <youpez-sidenav
         [breakpoint]="'md'"
         [direction]="'left'"
         [opened]="leftSidebarVisibility"
@@ -45,7 +45,7 @@
                   <div class="app-list-pill">
                     <div class="app-list-pill__item">
                       <div class="app-list-pill__item__inner font-bold">
-                        <app-ibm-icon iconSize="20" iconName="checkboxChecked" class="mr-2"></app-ibm-icon>
+                        <youpez-ibm-icon iconSize="20" iconName="checkboxChecked" class="mr-2"></youpez-ibm-icon>
                         Priority
                       </div>
                     </div>
@@ -53,7 +53,7 @@
                   <div class="app-list-pill">
                     <div class="app-list-pill__item">
                       <div class="app-list-pill__item__inner app-list-pill__item__inner--active font-bold">
-                        <app-ibm-icon iconSize="20" iconName="folder" class="mr-2"></app-ibm-icon>
+                        <youpez-ibm-icon iconSize="20" iconName="folder" class="mr-2"></youpez-ibm-icon>
                         Storage
                       </div>
                     </div>
@@ -61,7 +61,7 @@
                   <div class="app-list-pill">
                     <div class="app-list-pill__item">
                       <div class="app-list-pill__item__inner font-bold">
-                        <app-ibm-icon iconSize="20" iconName="folderShared" class="mr-2"></app-ibm-icon>
+                        <youpez-ibm-icon iconSize="20" iconName="folderShared" class="mr-2"></youpez-ibm-icon>
                         Shared
                       </div>
                     </div>
@@ -69,7 +69,7 @@
                   <div class="app-list-pill">
                     <div class="app-list-pill__item">
                       <div class="app-list-pill__item__inner font-bold">
-                        <app-ibm-icon iconSize="20" iconName="recentlyViewed" class="mr-2"></app-ibm-icon>
+                        <youpez-ibm-icon iconSize="20" iconName="recentlyViewed" class="mr-2"></youpez-ibm-icon>
                         Recent
                       </div>
                     </div>
@@ -77,7 +77,7 @@
                   <div class="app-list-pill">
                     <div class="app-list-pill__item">
                       <div class="app-list-pill__item__inner font-bold">
-                        <app-ibm-icon iconSize="20" iconName="star" class="mr-2"></app-ibm-icon>
+                        <youpez-ibm-icon iconSize="20" iconName="star" class="mr-2"></youpez-ibm-icon>
                         Starred
                       </div>
                     </div>
@@ -85,7 +85,7 @@
                   <div class="app-list-pill">
                     <div class="app-list-pill__item">
                       <div class="app-list-pill__item__inner font-bold">
-                        <app-ibm-icon iconSize="20" iconName="trashCan" class="mr-2"></app-ibm-icon>
+                        <youpez-ibm-icon iconSize="20" iconName="trashCan" class="mr-2"></youpez-ibm-icon>
                         Trash
                       </div>
                     </div>
@@ -96,7 +96,7 @@
                   <div class="app-list-pill">
                     <div class="app-list-pill__item">
                       <div class="app-list-pill__item__inner">
-                        <app-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></app-ibm-icon>
+                        <youpez-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></youpez-ibm-icon>
                         devops
                       </div>
                     </div>
@@ -104,7 +104,7 @@
                   <div class="app-list-pill">
                     <div class="app-list-pill__item">
                       <div class="app-list-pill__item__inner">
-                        <app-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></app-ibm-icon>
+                        <youpez-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></youpez-ibm-icon>
                         infrastructure
                       </div>
                     </div>
@@ -112,7 +112,7 @@
                   <div class="app-list-pill">
                     <div class="app-list-pill__item">
                       <div class="app-list-pill__item__inner">
-                        <app-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></app-ibm-icon>
+                        <youpez-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></youpez-ibm-icon>
                         holyday
                       </div>
                     </div>
@@ -120,7 +120,7 @@
                   <div class="app-list-pill">
                     <div class="app-list-pill__item">
                       <div class="app-list-pill__item__inner">
-                        <app-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></app-ibm-icon>
+                        <youpez-ibm-icon iconSize="20" iconName="hashtag" class="mr-2"></youpez-ibm-icon>
                         freelance
                       </div>
                     </div>
@@ -132,7 +132,7 @@
           <div class="app-list-header-pill">STORAGE STATUS</div>
           <div class="flex items-center px-4 pb-4">
             <div class="pr-2">
-              <app-ibm-icon iconName="cloudDataOps" iconSize="32"></app-ibm-icon>
+              <youpez-ibm-icon iconName="cloudDataOps" iconSize="32"></youpez-ibm-icon>
             </div>
             <div class="mr-4 flex-1">
               <div>
@@ -144,10 +144,10 @@
             </div>
           </div>
         </div>
-      </app-sidenav-v2>
+      </youpez-sidenav>
 
-      <app-sidenav-container panel="solid">
-        <app-sidenav-v2
+      <youpez-sidenav-container panel="solid">
+        <youpez-sidenav
           [breakpoint]="'md'"
           [direction]="'right'"
           [opened]="isDetailsOpened"
@@ -159,7 +159,7 @@
 
           <div fxFill fxLayout="column">
             <div class="px-20 py-20 text-center mb-2 app-border-b">
-              <app-ibm-icon iconName="document" iconSize="32"></app-ibm-icon>
+              <youpez-ibm-icon iconName="document" iconSize="32"></youpez-ibm-icon>
             </div>
             <div class="app-expressive-heading-02 px-4 truncate mb-2">{{selectedItem.name}}</div>
             <div fxFlex class="relative">
@@ -229,7 +229,7 @@
               </div>
             </div>
           </div>
-        </app-sidenav-v2>
+        </youpez-sidenav>
 
         <div class="app-a-box app-scrollbar-fix">
           <ng-scrollbar>
@@ -274,7 +274,7 @@
                         <div class="app-card__content__alt">
                           <div class="">
                             <div class="px-10 py-10 text-center app-bg-decorative mb-2">
-                              <app-ibm-icon iconName="document" iconSize="32"></app-ibm-icon>
+                              <youpez-ibm-icon iconName="document" iconSize="32"></youpez-ibm-icon>
                             </div>
                             <div>
                               <div class="app-expressive-heading-01 truncate">{{file.name}}</div>
@@ -296,7 +296,7 @@
                         <div class="app-card__content__alt">
                           <div class="flex items-center">
                             <div class="mr-3">
-                              <app-ibm-icon iconName="folder" iconSize="32"></app-ibm-icon>
+                              <youpez-ibm-icon iconName="folder" iconSize="32"></youpez-ibm-icon>
                             </div>
                             <div>
                               <div class="app-expressive-heading-01">{{folder.name}}</div>
@@ -319,7 +319,7 @@
                         <div class="app-card__content__alt">
                           <div class="">
                             <div class="px-10 py-10 text-center app-bg-decorative mb-2">
-                              <app-ibm-icon iconName="document" iconSize="32"></app-ibm-icon>
+                              <youpez-ibm-icon iconName="document" iconSize="32"></youpez-ibm-icon>
                             </div>
                             <div>
                               <div class="app-expressive-heading-01 truncate">{{file.name}}</div>
@@ -336,8 +336,8 @@
             </div>
           </ng-scrollbar>
         </div>
-      </app-sidenav-container>
-    </app-sidenav-container>
+      </youpez-sidenav-container>
+    </youpez-sidenav-container>
   </div>
 </div>
 

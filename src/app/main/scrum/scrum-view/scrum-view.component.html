@@ -20,8 +20,8 @@
     </div>
   </div>
   <div fxFlex class="relative">
-    <app-sidenav-container>
-      <app-sidenav-v2
+    <youpez-sidenav-container>
+      <youpez-sidenav
         (close)="onCloseSidebar($event)"
         [opened]="sidebarVisible"
         (visibleChange)="sidebarVisible=$event"
@@ -108,7 +108,7 @@
             </div>
           </div>
         </div>
-      </app-sidenav-v2>
+      </youpez-sidenav>
 
       <div fxFill fxLayout="column">
 
@@ -214,7 +214,7 @@
       </div>
 
 
-    </app-sidenav-container>
+    </youpez-sidenav-container>
   </div>
   <!--  <div class="px-4 py-4 flex justify-end app-border-t">
       <button (click)="onClose()"

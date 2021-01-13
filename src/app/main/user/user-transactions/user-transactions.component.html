@@ -13,10 +13,10 @@
                 <div fxFlex.gt-md="180px" fxFlex="100%">
                   <div class="flex items-center">
                     <ng-container *ngIf="invoice.payed">
-                      <app-ibm-icon iconName="document" iconSize="32"></app-ibm-icon>
+                      <youpez-ibm-icon iconName="document" iconSize="32"></youpez-ibm-icon>
                     </ng-container>
                     <ng-container *ngIf="!invoice.payed">
-                      <app-ibm-icon iconName="inProgress" iconSize="32"></app-ibm-icon>
+                      <youpez-ibm-icon iconName="inProgress" iconSize="32"></youpez-ibm-icon>
                     </ng-container>
                     <div class="ml-4">
                       <div class="app-productive-heading-01 mb-1">#{{invoice.number}}</div>
