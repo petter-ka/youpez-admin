@@ -580,4 +580,8 @@ export class DashboardCryptoComponent implements OnInit {
   onToggleRightSidebar() {
     this.rightSidebarVisibility = !this.rightSidebarVisibility
   }
+
+  onToggleBottom(){
+    this.bottomSidebarVisibility = !this.bottomSidebarVisibility
+  }
 }
