@@ -26,7 +26,9 @@
     <!-- END: THEME SETTINGS SIDEBAR -->
 
     <!-- BEGIN: MAIN HEADER (XS VIEW) -->
-    <app-main-header (menuClick)="onSideBarToggle($event)" class="app-layout__header"></app-main-header>
+    <app-main-header (menuClick)="onSideBarToggle($event)"
+                     (itemClick)="onMiniSidebarItemClick($event)"
+                     class="app-layout__header"></app-main-header>
     <!-- BEGIN: END HEADER (XS VIEW) -->
 
     <!-- BEGIN: MAIN MINI SIDEBAR (LEFT) -->
@@ -45,11 +47,11 @@
         <youpez-sidenav
           [breakpoint]="mainSidebarOpts.breakpoint"
           [opened]="mainSidebarOpts.opened"
-          (visibleChange)="onVisibilityChange($event)"
           [hoverAble]="mainSidebarOpts.hoverAble"
           [mode]="mainSidebarOpts.mode"
           [toggleableBtn]="mainSidebarOpts.toggleableBtn"
-          [size]="mainSidebarOpts.size">
+          [size]="mainSidebarOpts.size"
+          (visibleChange)="onVisibilityChange($event)">
           <app-layout-sidebar
             [menu]="menu"
             [opened]="mainSidebarOpts.opened"

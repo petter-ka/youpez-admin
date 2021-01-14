@@ -3,7 +3,6 @@
     <div class="app-a-box app-scrollbar-fix">
       <ng-scrollbar>
         <div class="app-mini-sidebar__list">
-
           <div (click)="onItemClick({key:'search'})"
                class="app-mini-sidebar__list__item app-mini-sidebar__list__item__highlight">
             <div class="app-mini-sidebar__list__item__pill"
@@ -13,7 +12,6 @@
               <youpez-ibm-icon iconName="search" iconSize="24"></youpez-ibm-icon>
             </div>
           </div>
-
           <div class="app-mini-sidebar__list__item"
                ngbDropdown
                container="body">
@@ -46,7 +44,6 @@
                             </ibm-skeleton-text>
                           </div>
                         </ng-container>
-
                         <ng-container *ngIf="!loading">
                           <div class="app-list app-list--hover app-list--no-border
                           app-list--p-notifications app-list--select app-helper-text-01">
@@ -86,7 +83,6 @@
               </div>
             </div>
           </div>
-
           <div class="app-mini-sidebar__list__item"
                ngbDropdown
                container="body">
@@ -119,7 +115,6 @@
                             </ibm-skeleton-text>
                           </div>
                         </ng-container>
-
                         <ng-container *ngIf="!loading">
                           <div class="app-list app-list--hover app-list--select app-list--p-messages">
                             <ng-container *ngFor="let item of messages">
@@ -154,7 +149,6 @@
               </div>
             </div>
           </div>
-
           <div class="app-mini-sidebar__list__item"
                ngbDropdown
                container="body">
@@ -234,16 +228,12 @@
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </ng-scrollbar>
     </div>
   </div>
-
   <div class="app-mini-sidebar__list">
-
     <div class="app-mini-sidebar__list__item"
          ngbDropdown
          container="body">
@@ -299,7 +289,6 @@
         </div>
       </div>
     </div>
-
     <div class="app-mini-sidebar__list__item"
          ngbDropdown
          container="body">
@@ -349,5 +338,4 @@
       </div>
     </div>
   </div>
-
 </div>

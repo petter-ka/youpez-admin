@@ -8,10 +8,9 @@
         </div>
         <input #searchElement placeholder="Search..." class="app-search__input__component" type="text"/>
       </div>
-      <div class="app-search__result">
-        <div fxFill fxLayout="row">
-          <div fxFlex="40%" class="app-search__result__pane1">
-
+      <div class="app-search__result" ngClass.lt-sm="app-search__result--xs">
+        <div fxFill fxLayout="row wrap">
+          <div fxFlex="100%" fxFlex.gt-sm="40%" class="app-search__result__pane1">
             <div class="app-a-box app-bg-container app-scrollbar-fix">
               <ng-scrollbar>
                 <ng-container *ngIf="loading">
@@ -23,7 +22,6 @@
                     </ibm-skeleton-text>
                   </div>
                 </ng-container>
-
                 <ng-container *ngIf="!loading">
                   <div class="app-list-header-title">TOP HITS</div>
                   <div class="app-list app-list--hover app-list--p app-list--select">
@@ -85,10 +83,8 @@
                 </ng-container>
               </ng-scrollbar>
             </div>
-
-
           </div>
-          <div fxFlex="60%" class="app-search__result__pane2">
+          <div fxFlex="100%" fxFlex.gt-sm="60%" class="app-search__result__pane2">
             <ng-container *ngIf="loading">
               <div class="mb-2">
                 <ibm-skeleton-text
@@ -97,7 +93,6 @@
                   [maxLineWidth]="180">
                 </ibm-skeleton-text>
               </div>
-
               <ibm-skeleton-text
                 [lines]="4"
                 [minLineWidth]="60"
@@ -118,7 +113,6 @@
                       <div class="app-helper-text-01 app-color-success">(GKS) status - OK</div>
                     </div>
                   </div>
-
                 </div>
                 <p class="app-body-long-01">
                   This is the production cluster.

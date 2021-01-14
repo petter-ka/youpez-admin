@@ -8,6 +8,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core'
 export class HeaderComponent implements OnInit {
 
   @Output() menuClick: EventEmitter<boolean> = new EventEmitter()
+  @Output() itemClick: EventEmitter<any> = new EventEmitter()
 
   constructor() {
   }
@@ -19,4 +20,7 @@ export class HeaderComponent implements OnInit {
     this.menuClick.next(true)
   }
 
+  onItemClick(event) {
+    this.itemClick.next(event)
+  }
 }
