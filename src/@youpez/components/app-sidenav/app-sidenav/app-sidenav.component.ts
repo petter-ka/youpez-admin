@@ -245,6 +245,7 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
   }
 
   getHeight() {
+
     return this.height
   }
 
