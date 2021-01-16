@@ -43,7 +43,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           },
         },
         {
-          name: 'Analytics',
+          name: 'Platform analytics',
           url: '/app/dashboard/analytics',
           prefix: {
             type: 'ibm-icon',
@@ -127,135 +127,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
       opened: true,
       children: [
         {
-          name: 'Auth',
-          prefix: {
-            type: 'ibm-icon',
-            name: 'userAdmin',
-          },
-          children: [
-            {
-              name: 'Sign In',
-              children: [
-                {
-                  name: 'Modern',
-                  url: '/auth/modern/signin'
-                },
-                {
-                  name: 'Full',
-                  url: '/auth/full/signin'
-                },
-                {
-                  name: 'Full middle',
-                  url: '/auth/full-middle/signin'
-                },
-                {
-                  name: 'Basic',
-                  url: '/auth/basic/signin'
-                }
-              ]
-            },
-            {
-              name: 'Sign Up',
-              children: [
-                {
-                  name: 'Modern',
-                  url: '/auth/modern/signup'
-                },
-                {
-                  name: 'Full',
-                  url: '/auth/full/signup'
-                },
-                {
-                  name: 'Full middle',
-                  url: '/auth/full-middle/signup'
-                },
-                {
-                  name: 'Basic',
-                  url: '/auth/basic/signup'
-                }
-              ]
-            },
-            {
-              name: 'Book a demo',
-              url: '/auth/book-a-demo',
-              suffix: {
-                type: 'badge',
-                level: 'danger',
-                text: 'HOT',
-              },
-            },
-            {
-              name: 'Confirmation',
-              url: '/auth/confirmation',
-              children: [
-                {
-                  name: 'Modern',
-                  url: '/auth/modern/confirmation'
-                },
-                {
-                  name: 'Full',
-                  url: '/auth/full/confirmation'
-                },
-                {
-                  name: 'Full middle',
-                  url: '/auth/full-middle/confirmation'
-                },
-                {
-                  name: 'Basic',
-                  url: '/auth/basic/confirmation'
-                }
-              ]
-            },
-
-            {
-              name: 'Forgot password',
-              children: [
-                {
-                  name: 'Modern',
-                  url: '/auth/modern/forgot-password'
-                },
-                {
-                  name: 'Full',
-                  url: '/auth/full/forgot-password'
-                },
-                {
-                  name: 'Full middle',
-                  url: '/auth/full-middle/forgot-password'
-                },
-                {
-                  name: 'Basic',
-                  url: '/auth/basic/forgot-password'
-                }
-              ]
-            },
-            {
-              name: 'Reset password',
-              children: [
-                {
-                  name: 'Modern',
-                  url: '/auth/modern/reset-password'
-                },
-                {
-                  name: 'Full',
-                  url: '/auth/full/reset-password'
-                },
-                {
-                  name: 'Full middle',
-                  url: '/auth/full-middle/reset-password'
-                },
-                {
-                  name: 'Basic',
-                  url: '/auth/basic/reset-password'
-                }
-              ]
-            },
-            {
-              name: 'Lock screen',
-              callback: 'lock',
-            },
-          ]
-        },
-        {
           name: 'User',
           parentUrl: '/app/user',
           prefix: {
@@ -316,6 +187,135 @@ export class LayoutComponent implements OnInit, OnDestroy {
           ]
         },
         {
+          name: 'Auth',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'userAdmin',
+          },
+          children: [
+            {
+              name: 'Sign In',
+              children: [
+                {
+                  name: 'Style #1',
+                  url: '/auth/modern/signin'
+                },
+                {
+                  name: 'Style #2',
+                  url: '/auth/full/signin'
+                },
+                {
+                  name: 'Style #3',
+                  url: '/auth/full-middle/signin'
+                },
+                {
+                  name: 'Style #4',
+                  url: '/auth/basic/signin'
+                }
+              ]
+            },
+            {
+              name: 'Sign Up',
+              children: [
+                {
+                  name: 'Style #1',
+                  url: '/auth/modern/signup'
+                },
+                {
+                  name: 'Style #2',
+                  url: '/auth/full/signup'
+                },
+                {
+                  name: 'Style #3',
+                  url: '/auth/full-middle/signup'
+                },
+                {
+                  name: 'Style #4',
+                  url: '/auth/basic/signup'
+                }
+              ]
+            },
+            {
+              name: 'Book a demo',
+              url: '/auth/book-a-demo',
+              suffix: {
+                type: 'badge',
+                level: 'danger',
+                text: 'HOT',
+              },
+            },
+            {
+              name: 'Confirmation',
+              url: '/auth/confirmation',
+              children: [
+                {
+                  name: 'Style #1',
+                  url: '/auth/modern/confirmation'
+                },
+                {
+                  name: 'Style #2',
+                  url: '/auth/full/confirmation'
+                },
+                {
+                  name: 'Style #3',
+                  url: '/auth/full-middle/confirmation'
+                },
+                {
+                  name: 'Style #4',
+                  url: '/auth/basic/confirmation'
+                }
+              ]
+            },
+
+            {
+              name: 'Forgot password',
+              children: [
+                {
+                  name: 'Style #1',
+                  url: '/auth/modern/forgot-password'
+                },
+                {
+                  name: 'Style #2',
+                  url: '/auth/full/forgot-password'
+                },
+                {
+                  name: 'Style #3',
+                  url: '/auth/full-middle/forgot-password'
+                },
+                {
+                  name: 'Style #4',
+                  url: '/auth/basic/forgot-password'
+                }
+              ]
+            },
+            {
+              name: 'Reset password',
+              children: [
+                {
+                  name: 'Style #1',
+                  url: '/auth/modern/reset-password'
+                },
+                {
+                  name: 'Style #2',
+                  url: '/auth/full/reset-password'
+                },
+                {
+                  name: 'Style #3',
+                  url: '/auth/full-middle/reset-password'
+                },
+                {
+                  name: 'Style #4',
+                  url: '/auth/basic/reset-password'
+                }
+              ]
+            },
+            {
+              name: 'Lock screen',
+              callback: 'lock',
+            },
+          ]
+        },
+        {
           name: 'Pricing',
           parentUrl: '/app/pricing',
           prefix: {
@@ -324,15 +324,15 @@ export class LayoutComponent implements OnInit, OnDestroy {
           },
           children: [
             {
-              name: 'Modern',
+              name: 'Startup',
               url: '/app/pricing/modern',
             },
             {
-              name: 'Table',
+              name: 'Corporate',
               url: '/app/pricing/table',
             },
             {
-              name: 'Simple',
+              name: 'Basic',
               url: '/app/pricing/simple',
             },
           ]
@@ -378,19 +378,19 @@ export class LayoutComponent implements OnInit, OnDestroy {
           },
           children: [
             {
-              name: 'Modern',
+              name: 'Style #1',
               url: '/auth/coming-soon/modern'
             },
             {
-              name: 'Full',
+              name: 'Style #2',
               url: '/auth/coming-soon/full'
             },
             {
-              name: 'Full middle',
+              name: 'Style #3',
               url: '/auth/coming-soon/full-middle'
             },
             {
-              name: 'Basic',
+              name: 'Style #4',
               url: '/auth/coming-soon/basic'
             }
           ]

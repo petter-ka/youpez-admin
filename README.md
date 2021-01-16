@@ -1,30 +1,58 @@
-# Thank you for choosing Youpez.
+# Introduction
 
-Youpez is a highly customizable, flexible NextGen Angular UI admin template with custom made real life application UI/UX/Layouts 
-
-Motivation behind Youpez creating a futuristic and well usable Admin application template which is different from other average templates.
+Youpez (youpez-admin) is a highly customizable, flexible NextGen Angular UI admin template with custom made real life application UI/UX/Layouts 
 
 In Youpez we collected the best UI solutions/libraries for your next awesome admin project. It contains the current and future best practices from the frontend world.
 
-# Youpez Online Documentation
+Motivation behind Youpez creating a futuristic and well usable **FREE** Admin application template which is different from other average templates.
 
-We want to keep updated the documentation that's why we chose the online version for the detailed documentation
+![preview](http://landing.youpez.flatedgethemes.com/static/mainpic-ceb50dc3ea0c04e923155fe38c8fafac.png)
 
-[Youpez Documentation](https://flatedge.gitbook.io/youpez/)
+![preview2](http://landing.youpez.flatedgethemes.com/static/dark-b3278e9b4f8ec3f59b72c5b99aae5ff7.png)
 
-#Core libraries
 
-Angular is the core of Youpez.
- 
-Angular Flex Angular Layout provides a sophisticated API using Flexbox, CSS Grid, and mediaQuery.
- 
-Carbon design system & components  Carbon is IBM’s open source design system for products and digital experiences.
- 
-TailwindCSS it provides utility classes for almost every CSS rule available.
+> As a developer, I would love to see entrepreneurs are creating awesome projects and applications with this template.
+> I wanted to build a free premium template so that developers could save more time and be inspired by the enterprise-ready built-in-apps and solutions
+
+## Key Features
+
+- Customizable & flexible design
+- Unique and futuristic UI
+- Pre-built and ready to use application and page designs
+- Ready to use content layouts
+- Custom components for admin panel specific use cases
+- Starter app layout ideas included for faster development
+- Dark and Light color theme support
+
+## Core libraries
+
+- Angular 11+
+- Angular Flex
+- Carbon design system & components
+- TailwindCSS
+
+### Built-in applications
+
+- Company Dashboard
+- Data Analytics Dashboard
+- Stocks / Crypto 
+- SCRUM Board 
+- Tasks 
+- File Manager
+- Mail
+- Messages
+
+### Pages
+
+A huge collection of usable pages. Check the demo!
+
+### Documentation
+
+Detailed documentation is being written, but it is super easy to understand if you familiar with angular
 
 -----------
 
-# Youpez
+## Setup
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
@@ -40,14 +68,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+-----------
+
+## Copyright and license
+MIT license with ONE LIMITATION: This template was created for startups, entrepreneurs, developers to help them create their awesome ideas/applications. It is prohibited to redistribute Youpez as stock template. 

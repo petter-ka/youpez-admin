@@ -245,7 +245,6 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
   }
 
   getHeight() {
-
     return this.height
   }
 
@@ -371,5 +370,4 @@ export class AppSidenavComponent implements OnInit, OnDestroy, AfterContentInit,
   onSetDefaultWidth(event) {
     this.setWidth(this.dimensions.width[this.size])
   }
-
 }

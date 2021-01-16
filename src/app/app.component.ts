@@ -44,22 +44,19 @@ export class AppComponent implements OnInit {
         else {
           this.settingsService.setHeader(getSessionStorage('--app-theme-header'))
         }
-
-
       })
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        //this.slimLoadingBarService.start()
+
       }
       if (event instanceof NavigationEnd) {
         if (!this.appLoaded) {
           (<any>window).appBootstrap()
           this.appLoaded = true
         }
-        //this.slimLoadingBarService.complete()
       }
       if (event instanceof NavigationCancel) {
-        //this.slimLoadingBarService.reset()
+
       }
     })
   }
