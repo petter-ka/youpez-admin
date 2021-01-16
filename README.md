@@ -13,7 +13,7 @@ Motivation behind Youpez creating a futuristic and well usable **FREE** Admin ap
 
 [Checkout the online demo](https://youpez.vercel.app/)
 
-> As a developer, I would love to see entrepreneurs are creating awesome projects and applications with/based on this template.
+> As a developer, I would love to see startuppers, entrepreneurs and developers are creating awesome projects and applications with/based on this template.
 > I wanted to build a free premium template so that developers could save more time and be inspired by the enterprise-ready built-in-apps and solutions
 > ... and a huge shoutout to IBM's Carbon-Design-System team, they are awesome :)
 
