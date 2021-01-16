@@ -32,8 +32,10 @@ Motivation behind Youpez creating a futuristic and well usable **FREE** Admin ap
 
 - Angular 11+
 - Angular Flex
-- Carbon design system & components
+- Carbon Design System & Components (carbon-components-angular)
 - TailwindCSS
+- Echarts
+- Ag-Grid
 
 ### Built-in applications
 
