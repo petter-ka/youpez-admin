@@ -6,18 +6,22 @@ In Youpez we collected the best UI solutions/libraries for your next awesome adm
 
 Motivation behind Youpez creating a futuristic and well usable **FREE** Admin application template which is different from other average templates.
 
+
 ![preview](http://landing.youpez.flatedgethemes.com/static/mainpic-ceb50dc3ea0c04e923155fe38c8fafac.png)
 
 ![preview2](http://landing.youpez.flatedgethemes.com/static/dark-b3278e9b4f8ec3f59b72c5b99aae5ff7.png)
 
+[Checkout the online demo](https://youpez.vercel.app/)
 
-> As a developer, I would love to see entrepreneurs are creating awesome projects and applications with this template.
+> As a developer, I would love to see entrepreneurs are creating awesome projects and applications with/based on this template.
 > I wanted to build a free premium template so that developers could save more time and be inspired by the enterprise-ready built-in-apps and solutions
+> ... and a huge shoutout to IBM's Carbon-Design-System team, they are awesome :)
 
 ## Key Features
 
 - Customizable & flexible design
 - Unique and futuristic UI
+- Resizable layout elements
 - Pre-built and ready to use application and page designs
 - Ready to use content layouts
 - Custom components for admin panel specific use cases
