@@ -89,7 +89,10 @@ const rateClassRenderer = (params) => {
 
 const rateClassRendererAlt = (params, additional) => {
   const value = params.value
-  const tmp = value === 'Sell' ? 'app-bg-danger-o-20' : (value === 'Strong Buy' ? 'app-bg-success-o-40' : 'app-bg-success-o-20')
+  const tmp = value === 'Strong Sell' ? 'app-bg-danger-o-40'
+                                      : (value === 'Sell' ? 'app-bg-danger-o-20'
+                                      : (value === 'Strong Buy' ? 'app-bg-success-o-40'
+                                      : 'app-bg-success-o-20'))
   return additional + ' ' + tmp
 }
 
