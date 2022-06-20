@@ -66,7 +66,10 @@ const numberCellRenderer = function (params) {
 
 const rateClassRenderer = (params) => {
   const value = params.value
-  return value === 'Sell' ? {backgroundColor: 'rgba(255, 212, 219, .5)'} : (value === 'Strong Buy' ? {backgroundColor: 'rgba(198, 255, 189, .5)'} : {backgroundColor: 'rgba(227, 255, 223, .5)'})
+  return value === 'Strong Sell' ? {backgroundColor: 'rgba(255, 212, 219, 1)'}
+  : (value === 'Sell' ? {backgroundColor: 'rgba(255, 212, 219, .5)'}
+  : (value === 'Strong Buy' ? {backgroundColor: 'rgba(227, 255, 223, 1)'}
+  : {backgroundColor: 'rgba(227, 255, 223, .5)'}))
 }
 
 const createRowHelper = (_1, _2, _3, _4, _5, _6, _7, _8, _9) => {
