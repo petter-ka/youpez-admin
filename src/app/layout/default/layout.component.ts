@@ -31,7 +31,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
   public menu: Array<MenuType> = [
     {
-      groupName: 'DASHBOARDS',
+      groupName: 'OVERVIEW',
       opened: true,
       children: [
         {
