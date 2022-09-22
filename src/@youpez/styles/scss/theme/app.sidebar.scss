@@ -58,7 +58,7 @@ body {
   .app-sidebar__logo {
     padding: 0 1.1rem 0 1.1rem;
     background: var(--theme-main-sidebar--logo-background);
-    height: 65px;
+    height: 115px;
     position: relative;
     @extend .app-row;
     @extend .app-row--center;
@@ -67,7 +67,7 @@ body {
     img {
       cursor: pointer;
       margin-top: 7px;
-      width: 145px;
+      width: 140px;
     }
   }
 
