@@ -27,10 +27,10 @@
               <button (click)="onToggleGroup(groupIndex)"
                       ibmButton="ghost" size="sm" class="bx--btn--icon-only">
                 <ng-container *ngIf="group.opened">
-                  <svg class="bx--btn__icon" cdsIcon="chevron--down" size="32"></svg>
+                  <svg class="cds--btn__icon" cdsIcon="chevron--down" size="32"></svg>
                 </ng-container>
                 <ng-container *ngIf="!group.opened">
-                  <svg class="bx--btn__icon" cdsIcon="chevron--up" size="32"></svg>
+                  <svg class="cds--btn__icon" cdsIcon="chevron--up" size="32"></svg>
                 </ng-container>
               </button>
             </div>
@@ -65,7 +65,7 @@
                 ibmButton="ghost"
                 size="sm"
                 class="bx--btn--icon-only bx--btn--remove-tooltip">
-                <svg class="bx--btn__icon" cdsIcon="trash-can" size="32"></svg>
+                <svg class="cds--btn__icon" cdsIcon="trash-can" size="32"></svg>
               </button>
             </div>
           </div>
@@ -129,7 +129,7 @@
               <button (click)="onDeleteTask(groupIndex,taskIndex)"
                       ibmButton="ghost" size="sm"
                       class="bx--btn--icon-only bx--btn--remove-tooltip">
-                <svg class="bx--btn__icon" cdsIcon="trash-can" size="32"></svg>
+                <svg class="cds--btn__icon" cdsIcon="trash-can" size="32"></svg>
               </button>
             </div>
           </ng-container>
@@ -137,7 +137,7 @@
             <ng-container *ngIf="_filterText === ''">
               <button (click)="onAddTask(groupIndex)" ibmButton="tertiary" size="sm">
                 Add task
-                <svg class="bx--btn__icon" cdsIcon="add" size="20"></svg>
+                <svg class="cds--btn__icon" cdsIcon="add" size="20"></svg>
               </button>
             </ng-container>
           </div>

@@ -1,17 +1,17 @@
 <button (click)="onSideBarToggle($event)" class="app-layout__header__btn app-layout__header__btn--menu">
-  <svg cdsIcon="menu"></svg>
+  <svg class="cds--btn__icon" cdsIcon="menu" size="20"></svg>
 </button>
 <img class="app-layout__header__logo app-layout__header__logo--white" src="assets/img/logo/logo-big-white.png"/>
 <img class="app-layout__header__logo app-layout__header__logo--black" src="assets/img/logo/logo-big-black.png"/>
 <div class="app-layout__header__tools">
   <button class="app-layout__header__btn app-layout__header__btn--icon" (click)="onItemClick({key:'search'})">
-    <svg cdsIcon="search" size="24"></svg>xy
+    <svg class="cds--btn__icon" cdsIcon="search" size="24"></svg>
   </button>
   <div ngbDropdown
        placement="bottom-right"
        container="body">
     <button class="app-layout__header__btn app-layout__header__btn--icon" ngbDropdownToggle>
-      <svg cdsIcon="contour-finding" size="24"></svg>
+      <svg class="cds--btn__icon" cdsIcon="contour-finding" size="24"></svg>
     </button>
     <div ngbDropdownMenu class="relative">
       <div fxLayout="column">
@@ -87,7 +87,7 @@
        placement="bottom-right"
        container="body">
     <button class="app-layout__header__btn app-layout__header__btn--icon" ngbDropdownToggle>
-      <svg cdsIcon="user" size="24"></svg>
+      <svg class="cds--btn__icon" cdsIcon="user" size="24"></svg>
     </button>
     <div ngbDropdownMenu>
       <div class="app-list app-list--hover app-list--select app-list--no-border app-list--p">

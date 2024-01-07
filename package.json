@@ -59,6 +59,7 @@
     "@angularclass/hmr": "^3.0.0",
     "@types/jasmine": "~5.1.0",
     "@types/jasminewd2": "^2.0.13",
+    "@types/lodash": "^4.14.202",
     "@types/node": "^18.18.0",
     "autoprefixer": "^10.4.16",
     "codelyzer": "^6.0.2",
