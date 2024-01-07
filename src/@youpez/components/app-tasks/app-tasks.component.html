@@ -1,9 +1,9 @@
 <ng-template #deleteGroupTemplate let-tooltip="tooltip" let-groupIndex="groupIndex">
   <p>Delete list?</p>
   <div class="bx--tooltip__footer">
-    <button ibmButton="danger" size="sm" (click)="tooltip.doClose();onDeleteGroup(deletableTaskGroupIndex)">Delete
+    <button cdsButton="danger" size="sm" (click)="tooltip.doClose();onDeleteGroup(deletableTaskGroupIndex)">Delete
     </button>
-    <button ibmButton="ghost" size="sm" (click)="tooltip.doClose();">Cancel</button>
+    <button cdsButton="ghost" size="sm" (click)="tooltip.doClose();">Cancel</button>
   </div>
 </ng-template>
 <div cdkDropList
@@ -27,10 +27,10 @@
               <button (click)="onToggleGroup(groupIndex)"
                       ibmButton="ghost" size="sm" class="bx--btn--icon-only">
                 <ng-container *ngIf="group.opened">
-                  <svg class="bx--btn__icon" ibmIconChevronDown size="32"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="chevron--down" size="32"></svg>
                 </ng-container>
                 <ng-container *ngIf="!group.opened">
-                  <svg class="bx--btn__icon" ibmIconChevronUp size="32"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="chevron--up" size="32"></svg>
                 </ng-container>
               </button>
             </div>
@@ -54,7 +54,7 @@
             </div>
             <div class="flex items-center">
               <div class="cursor-move" style="margin-bottom: -2px;">
-                <youpez-ibm-icon cdkDragHandle iconName="draggable" iconSize="16"></youpez-ibm-icon>
+                <svg cdkDragHandle iconName="draggable" size="16"></svg>
               </div>
               <button
                 (click)="onSelectedDeletableGroup(groupIndex)"
@@ -65,7 +65,7 @@
                 ibmButton="ghost"
                 size="sm"
                 class="bx--btn--icon-only bx--btn--remove-tooltip">
-                <svg class="bx--btn__icon" ibmIconTrashCan size="32"></svg>
+                <svg class="bx--btn__icon" cdsIcon="trash-can" size="32"></svg>
               </button>
             </div>
           </div>
@@ -81,7 +81,7 @@
             *ngFor="let task of group.tasks | inputTypeAdvanced:'description':_filterText;trackBy: trackByFn;let taskIndex=index">
             <div cdkDrag [cdkDragData]="task" class="app-list__item" [ngClass]="{'opacity-75':task.checked}">
               <div cdkDragHandle class="app-list__item__drag">
-                <youpez-ibm-icon iconName="draggable" iconSize="16"></youpez-ibm-icon>
+                <svg cdsIcon="draggable" size="16"></svg>
               </div>
               <div class="mr-1">
                 <ibm-checkbox
@@ -117,19 +117,19 @@
               </ng-container>
               <div (click)="onSwitchPriority(groupIndex,taskIndex)" class="cursor-pointer">
                 <ng-container *ngIf="task.priority === undefined || task.priority === 'normal'">
-                  <youpez-ibm-icon iconName="subtract" iconSize="16"></youpez-ibm-icon>
+                  <svg cdsIcon="subtract" size="16"></svg>
                 </ng-container>
                 <ng-container *ngIf="task.priority === 'low'">
-                  <youpez-ibm-icon iconName="arrowDown" iconSize="16" class="app-color-success"></youpez-ibm-icon>
+                  <svg cdsIcon="arrowDown" size="16" class="app-color-success"></svg>
                 </ng-container>
                 <ng-container *ngIf="task.priority === 'high'">
-                  <youpez-ibm-icon iconName="arrowUp" iconSize="16" class="app-color-danger"></youpez-ibm-icon>
+                  <svg cdsIcon="arrowUp" size="16" class="app-color-danger"></svg>
                 </ng-container>
               </div>
               <button (click)="onDeleteTask(groupIndex,taskIndex)"
                       ibmButton="ghost" size="sm"
                       class="bx--btn--icon-only bx--btn--remove-tooltip">
-                <svg class="bx--btn__icon" ibmIconTrashCan size="32"></svg>
+                <svg class="bx--btn__icon" cdsIcon="trash-can" size="32"></svg>
               </button>
             </div>
           </ng-container>
@@ -137,7 +137,7 @@
             <ng-container *ngIf="_filterText === ''">
               <button (click)="onAddTask(groupIndex)" ibmButton="tertiary" size="sm">
                 Add task
-                <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+                <svg class="bx--btn__icon" cdsIcon="add" size="20"></svg>
               </button>
             </ng-container>
           </div>

@@ -6,7 +6,7 @@
     <youpez-header-tools>
       <button (click)="onCompose()" ibmButton="primary" size="sm">
         Compose
-        <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+        <svg class="bx--btn__icon" cdsIcon="add" size="20"></svg>
       </button>
     </youpez-header-tools>
   </youpez-header>
@@ -29,7 +29,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Inbox</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <youpez-ibm-icon iconSize="24" iconName="package"></youpez-ibm-icon>
+                  <svg size="24" iconName="package"></svg>
                 </div>
               </div>
             </div>
@@ -38,7 +38,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Starred</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <youpez-ibm-icon iconSize="24" iconName="star"></youpez-ibm-icon>
+                  <svg size="24" iconName="star"></svg>
                 </div>
               </div>
             </div>
@@ -47,7 +47,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Important</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <youpez-ibm-icon iconSize="24" iconName="alarm"></youpez-ibm-icon>
+                  <svg size="24" iconName="alarm"></svg>
                 </div>
               </div>
             </div>
@@ -56,7 +56,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Sent</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <youpez-ibm-icon iconSize="24" iconName="sendAlt"></youpez-ibm-icon>
+                  <svg size="24" iconName="sendAlt"></svg>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Drafts</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <youpez-ibm-icon iconSize="24" iconName="document"></youpez-ibm-icon>
+                  <svg size="24" iconName="document"></svg>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Spam</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <youpez-ibm-icon iconSize="24" iconName="error"></youpez-ibm-icon>
+                  <svg size="24" iconName="error"></svg>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@
               <div class="app-mini-sidebar-alt__list__item__pill">
                 <div class="app-mini-sidebar-alt__list__item__pill__text">Trash</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
-                  <youpez-ibm-icon iconSize="24" iconName="trashCan"></youpez-ibm-icon>
+                  <svg size="24" iconName="trashCan"></svg>
                 </div>
               </div>
             </div>
@@ -123,7 +123,7 @@
                               </ng-container>
                               <ng-container *ngIf="mail.flagged">
                                 <div class="mb-2 app-color-warning">
-                                  <youpez-ibm-icon iconName="flagFilled" iconSize="16"></youpez-ibm-icon>
+                                  <svg cdsIcon="flagFilled" size="16"></svg>
                                 </div>
                               </ng-container>
                             </div>
@@ -148,7 +148,7 @@
                               <div class="app-productive-heading-02 mb-1">
                                 {{mail.title}}
                                 <ng-container *ngIf="mail.attachments">
-                                  <youpez-ibm-icon iconName="attachment" iconSize="16"></youpez-ibm-icon>
+                                  <svg cdsIcon="attachment" size="16"></svg>
                                 </ng-container>
                               </div>
                               <div class="app-body-long-01">{{mail.content | slice:0:110}}...</div>
@@ -169,12 +169,12 @@
                   <button
                     ibmButton="ghost" size="sm"
                     class="bx--btn--icon-only bx--btn--remove-tooltip">
-                    <svg class="bx--btn__icon" ibmIconChevronLeft size="32"></svg>
+                    <svg class="bx--btn__icon" cdsIcon="chevron--left" size="32"></svg>
                   </button>
                   <button
                     ibmButton="ghost" size="sm"
                     class="bx--btn--icon-only bx--btn--remove-tooltip">
-                    <svg class="bx--btn__icon" ibmIconChevronRight size="32"></svg>
+                    <svg class="bx--btn__icon" cdsIcon="chevron--right" size="32"></svg>
                   </button>
                 </div>
               </div>
@@ -189,39 +189,39 @@
             <div class="app-header-subheader app-header-subheader--left-alt app-header-subheader--right-alt">
               <div class="flex flex-1 items-center">
                 <button (click)="onToggleSidebar()" ibmButton="ghost" size="sm" class="bx--btn--icon-only">
-                  <svg class="bx--btn__icon" ibmIconOpenPanelLeft size="20"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="open-panel--left" size="20"></svg>
                 </button>
                 <span class="app-btn-border-sep"></span>
                 <button
                   ibmButton="ghost" size="sm"
                   class="bx--btn--icon-only bx--btn--remove-tooltip">
-                  <svg class="bx--btn__icon" ibmIconFlag size="32"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="flag" size="32"></svg>
                 </button>
                 <button
                   ibmButton="ghost" size="sm"
                   class="bx--btn--icon-only bx--btn--remove-tooltip">
-                  <svg class="bx--btn__icon" ibmIconError size="32"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="error" size="32"></svg>
                 </button>
                 <button
                   ibmButton="ghost" size="sm"
                   class="bx--btn--icon-only bx--btn--remove-tooltip">
-                  <svg class="bx--btn__icon" ibmIconTag size="32"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="tag" size="32"></svg>
                 </button>
                 <span class="app-btn-border-sep"></span>
                 <button
                   ibmButton="ghost" size="sm"
                   class="bx--btn--icon-only bx--btn--remove-tooltip">
-                  <svg class="bx--btn__icon" ibmIconStar size="32"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="star" size="32"></svg>
                 </button>
                 <button
                   ibmButton="ghost" size="sm"
                   class="bx--btn--icon-only bx--btn--remove-tooltip">
-                  <svg class="bx--btn__icon" ibmIconTrashCan size="32"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="trash-can" size="32"></svg>
                 </button>
                 <button
                   ibmButton="ghost" size="sm"
                   class="bx--btn--icon-only bx--btn--remove-tooltip">
-                  <svg class="bx--btn__icon" ibmIconPrinter size="32"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="print"er size="32"></svg>
                 </button>
               </div>
               <div class="flex-1 flex items-center justify-end" fxHide fxShow.gt-sm>
@@ -229,12 +229,12 @@
                 <button
                   ibmButton="ghost" size="sm"
                   class="bx--btn--icon-only bx--btn--remove-tooltip">
-                  <svg class="bx--btn__icon" ibmIconChevronLeft size="32"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="chevron--left" size="32"></svg>
                 </button>
                 <button
                   ibmButton="ghost" size="sm"
                   class="bx--btn--icon-only bx--btn--remove-tooltip">
-                  <svg class="bx--btn__icon" ibmIconChevronRight size="32"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="chevron--right" size="32"></svg>
                 </button>
               </div>
             </div>
@@ -304,7 +304,7 @@
                 </p>
                 <div class="mt-6">
               <textarea
-                ibmTextArea
+                cdsTextArea
                 [placeholder]="'Type your reply here'"
                 class="app-border-all"
                 [rows]="5"
@@ -316,40 +316,40 @@
                         ibmButton="ghost"
                         size="sm"
                         class="bx--btn--icon-only">
-                        <svg class="bx--btn__icon" ibmIconTextBold size="32"></svg>
+                        <svg class="bx--btn__icon" cdsIcon="text--bold" size="32"></svg>
                       </button>
                       <button
                         ibmButton="ghost"
                         size="sm"
                         class="bx--btn--icon-only">
-                        <svg class="bx--btn__icon" ibmIconTextItalic size="32"></svg>
+                        <svg class="bx--btn__icon" cdsIcon="text--italic" size="32"></svg>
                       </button>
                       <button
                         ibmButton="ghost"
                         size="sm"
                         class="bx--btn--icon-only">
-                        <svg class="bx--btn__icon" ibmIconTextUnderline size="32"></svg>
+                        <svg class="bx--btn__icon" cdsIcon="text--underline" size="32"></svg>
                       </button>
                       <span class="app-btn-border-sep"></span>
                       <button
                         ibmButton="ghost"
                         size="sm"
                         class="bx--btn--icon-only">
-                        <svg class="bx--btn__icon" ibmIconAttachment size="32"></svg>
+                        <svg class="bx--btn__icon" cdsIcon="attachment" size="32"></svg>
                       </button>
                       <button
                         ibmButton="ghost"
                         size="sm"
                         class="bx--btn--icon-only">
-                        <svg class="bx--btn__icon" ibmIconImage size="32"></svg>
+                        <svg class="bx--btn__icon" cdsIcon="image" size="32"></svg>
                       </button>
                     </div>
-                    <button ibmButton="ghost" size="sm">
+                    <button cdsButton="ghost" size="sm">
                       Discard
                     </button>
-                    <button ibmButton="primary" size="sm">
+                    <button cdsButton="primary" size="sm">
                       Send
-                      <svg class="bx--btn__icon" ibmIconSend size="20"></svg>
+                      <svg class="bx--btn__icon" cdsIcon="send" size="20"></svg>
                     </button>
                   </div>
                 </div>

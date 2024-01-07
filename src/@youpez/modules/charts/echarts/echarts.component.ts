@@ -12,7 +12,7 @@ import {
   Output,
   SimpleChanges
 } from '@angular/core'
-import {EChartOption, ECharts} from 'echarts'
+import {EChartsOption, ECharts} from 'echarts'
 import {fromEvent, Observable, Subscription} from 'rxjs'
 import {debounceTime, switchMap} from 'rxjs/operators'
 import {init} from 'echarts/lib/echarts'
@@ -40,7 +40,7 @@ function isChanged(param) {
 })
 export class EchartsComponent implements OnInit, OnDestroy, OnChanges, DoCheck, AfterViewInit {
 
-  @Input() options: EChartOption
+  @Input() options: EChartsOption
   @Input() theme: string
   @Input() loading: boolean
   @Input() initOpts: {
@@ -49,7 +49,7 @@ export class EchartsComponent implements OnInit, OnDestroy, OnChanges, DoCheck, 
     width?: number | string
     height?: number | string
   }
-  @Input() merge: EChartOption
+  @Input() merge: EChartsOption
   @Input() autoResize = true
   @Input() forceResize = false
   @Input() loadingType = 'default'
@@ -110,7 +110,7 @@ export class EchartsComponent implements OnInit, OnDestroy, OnChanges, DoCheck, 
     const {options, merge, loading, theme} = changes
 
     if (isChanged(options)) {
-      this.onOptionsChange(options)
+      this.onOptionsChange(options as unknown as EChartsOption)
     }
     if (isChanged(merge)) {
       this.setOption(merge)
@@ -229,7 +229,7 @@ export class EchartsComponent implements OnInit, OnDestroy, OnChanges, DoCheck, 
     }
   }
 
-  private onOptionsChange(opt: EChartOption) {
+  private onOptionsChange(opt: EChartsOption) {
     if (opt) {
       if (!this.chart) {
         this.chart = this.createChart()

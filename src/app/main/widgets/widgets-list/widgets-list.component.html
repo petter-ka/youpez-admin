@@ -126,18 +126,18 @@
               <div class="app-list__item" [ngClass]="{'app-color-success':sub.up,'app-color-danger':!sub.up}">
                 <div class="app-list__item__prefix w-10 text-center">
                   <ng-container *ngIf="sub.up">
-                    <youpez-ibm-icon iconName="arrowUp" iconSize="16"></youpez-ibm-icon>
+                    <svg cdsIcon="arrowUp" size="16"></svg>
                   </ng-container>
                   <ng-container *ngIf="!sub.up">
-                    <youpez-ibm-icon iconName="arrowDown" iconSize="16"></youpez-ibm-icon>
+                    <svg cdsIcon="arrowDown" size="16"></svg>
                   </ng-container>
                 </div>
                 <div class="app-list__item__content">
                   {{sub.month}}
                 </div>
                 <div class="app-expressive-heading-02 mr-1">{{sub.count}}$</div>
-                <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
-                  <svg class="bx--btn__icon" ibmIconArrowRight size="32"></svg>
+                <button cdsButton="ghost" size="sm" class="bx--btn--icon-only">
+                  <svg class="bx--btn__icon" cdsIcon="arrow--right" size="32"></svg>
                 </button>
               </div>
             </ng-container>
@@ -224,7 +224,7 @@
                       </ng-container>
                       <ng-container *ngIf="mail.flagged">
                         <div class="mb-2 app-color-warning">
-                          <youpez-ibm-icon iconName="flagFilled" iconSize="16"></youpez-ibm-icon>
+                          <svg cdsIcon="flagFilled" size="16"></svg>
                         </div>
                       </ng-container>
                     </div>
@@ -249,7 +249,7 @@
                       <div class="app-productive-heading-02 mb-1">
                         {{mail.title}}
                         <ng-container *ngIf="mail.attachments">
-                          <youpez-ibm-icon iconName="attachment" iconSize="16"></youpez-ibm-icon>
+                          <svg cdsIcon="attachment" size="16"></svg>
                         </ng-container>
                       </div>
                       <div class="app-body-long-01">{{mail.content | slice:0:110}}...</div>

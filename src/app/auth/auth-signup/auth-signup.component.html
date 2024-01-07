@@ -11,76 +11,76 @@
     <div fxLayout="row" class="app-form__row">
       <div fxFlex="50">
         <div class="app-form__item">
-          <ibm-label
+          <cds-text-label
             [helperText]="''"
             [invalid]="isValid('firstName')"
             [invalidText]="'This field is required'">
             First name
             <input
               formControlName="firstName"
-              ibmText
+              cdsText
               size="md"
               [invalid]="isValid('firstName')"
               [disabled]="false"
               theme="light"
               [placeholder]="'First name'"
               [autocomplete]="true">
-          </ibm-label>
+          </cds-text-label>
         </div>
       </div>
       <div fxFlex="50">
         <div class="app-form__item">
-          <ibm-label
+          <cds-text-label
             [helperText]="''"
             [invalid]="isValid('lastName')"
             [invalidText]="'This field is required'">
             Last name
             <input
               formControlName="lastName"
-              ibmText
+              cdsText
               size="md"
               [invalid]="isValid('lastName')"
               [disabled]="false"
               theme="light"
               [placeholder]="'Last name'"
               [autocomplete]="true">
-          </ibm-label>
+          </cds-text-label>
         </div>
       </div>
     </div>
     <div class="app-form__item">
-      <ibm-label
+      <cds-text-label
         [helperText]="''"
         [invalid]="isValid('email')"
         [invalidText]="'This field is required'">
         Email address
         <input
           formControlName="email"
-          ibmText
+          cdsText
           size="md"
           [invalid]="isValid('email')"
           [disabled]="false"
           theme="light"
           [placeholder]="'Email address'"
           [autocomplete]="true">
-      </ibm-label>
+      </cds-text-label>
     </div>
     <div class="app-form__item">
-      <ibm-label
+      <cds-text-label
         [helperText]="''"
         [invalid]="isValid('company')"
         [invalidText]="'This field is required'">
         Company
         <input
           formControlName="company"
-          ibmText
+          cdsText
           size="md"
           [invalid]="isValid('company')"
           [disabled]="false"
           theme="light"
           [placeholder]="'Company'"
           [autocomplete]="true">
-      </ibm-label>
+      </cds-text-label>
     </div>
     <div class="app-form__item app-form__item--opts">
       <div class="flex justify-between items-center">
@@ -93,7 +93,7 @@
     <div class="app-form__submit">
       <button type="submit" class="app-ibm-btn-full" ibmButton="primary" size="field">
         Create your account
-        <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+        <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
       </button>
     </div>
   </div>

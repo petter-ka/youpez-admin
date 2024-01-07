@@ -4,7 +4,7 @@
     <div class="app-search__modal__inner" (click)="$event.stopPropagation()">
       <div class="app-search__input">
         <div class="app-search__input__icon">
-          <youpez-ibm-icon iconName="search" iconSize="32"></youpez-ibm-icon>
+          <svg cdsIcon="search" size="32"></svg>
         </div>
         <input #searchElement placeholder="Search..." class="app-search__input__component" type="text"/>
       </div>
@@ -127,7 +127,7 @@
               </button>
               <button (click)="onClose()" [skeleton]="loading" ibmButton="primary" size="sm">
                 Go to project
-                <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+                <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
               </button>
             </div>
           </div>

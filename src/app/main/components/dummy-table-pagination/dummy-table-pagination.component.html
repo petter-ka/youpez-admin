@@ -5,12 +5,12 @@
   <i><a [attr.href]="data.link">{{data.name}}</a></i>
 </ng-template>
 <ng-template #filter let-popover="popover" let-filter="data">
-  <ibm-label class="first-label">
+  <cds-text-label class="first-label">
     Value
     <input type="text" [(ngModel)]="filter1" class="input-field">
     <button class="btn--primary" (click)="filter.data = filter1; popover.doClose()">Apply</button>
     <button class="btn--secondary" (click)="popover.doClose()">Cancel</button>
-  </ibm-label>
+  </cds-text-label>
 </ng-template>
 <ibm-table
   [sortable]="sortable"

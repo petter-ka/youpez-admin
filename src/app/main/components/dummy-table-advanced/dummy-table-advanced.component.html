@@ -5,17 +5,17 @@
     [size]="size"
     #toolbar>
     <ibm-table-toolbar-actions>
-      <button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+      <button cdsButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
         Delete
-        <youpez-ibm-icon iconName="trashCan" iconSize="16" class="bx--btn__icon"></youpez-ibm-icon>
+        <svg cdsIcon="trashCan" size="16" class="bx--btn__icon"></svg>
       </button>
-      <button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+      <button cdsButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
         Save
-        <youpez-ibm-icon iconName="document" iconSize="16" class="bx--btn__icon"></youpez-ibm-icon>
+        <svg cdsIcon="document" size="16" class="bx--btn__icon"></svg>
       </button>
-      <button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+      <button cdsButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
         Download
-        <youpez-ibm-icon iconName="download" iconSize="16" class="bx--btn__icon"></youpez-ibm-icon>
+        <svg cdsIcon="download" size="16" class="bx--btn__icon"></svg>
       </button>
     </ibm-table-toolbar-actions>
     <ibm-table-toolbar-content>
@@ -32,7 +32,7 @@
         <ibm-overflow-menu-option disabled="true">Disabled</ibm-overflow-menu-option>
         <ibm-overflow-menu-option type="danger">Danger option</ibm-overflow-menu-option>
       </ibm-overflow-menu>
-      <button ibmButton="primary" size="sm" [tabindex]="toolbar.selected ? -1 : 0">
+      <button cdsButton="primary" size="sm" [tabindex]="toolbar.selected ? -1 : 0">
         Primary Button
         <svg cdsIcon="add" size="20" class="bx--btn__icon"></svg>
       </button>
@@ -50,6 +50,6 @@
     [isDataGrid]="true">
   </app-dummy-table-rich>
   <ng-template #customTrigger>
-    <svg ibmIconSettings size="16"></svg>
+    <svg cdsIcon="settings" size="16"></svg>
   </ng-template>
 </ibm-table-container>

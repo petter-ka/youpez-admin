@@ -7,7 +7,7 @@
     "types": ["node"],
     "paths": {
       "@youpez/*": [
-        "src/youpez/*"
+        "src/@youpez/*"
       ],
       "@environment": [
         "src/environments/environment.ts"

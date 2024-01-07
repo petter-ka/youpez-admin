@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
-import { YoupezModule } from '../../youpez/youpez.module'
+import { YoupezModule } from '../../@youpez/youpez.module'
 
 @NgModule({
   imports: [

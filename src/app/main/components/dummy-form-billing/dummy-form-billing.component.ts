@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core'
 import {FormBuilder, FormGroup, Validators} from "@angular/forms"
-import {isFormItemValid} from "../../../../youpez"
-import {countriesData, usStatesData} from "../../../../youpez/data/dummy"
+import {isFormItemValid} from "../../../../@youpez"
+import {countriesData, usStatesData} from "../../../../@youpez/data/dummy"
 
 @Component({
   selector: 'app-dummy-form-billing',

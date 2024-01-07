@@ -7,15 +7,15 @@
 </div>
 <div class="app-form">
   <div class="app-form__item">
-    <ibm-label>
+    <cds-text-label>
       Get early access
       <input
-        ibmText
+        cdsText
         size="md"
         theme="light"
         placeholder="Type your eamil to get early access"
         [autocomplete]="true">
-    </ibm-label>
+    </cds-text-label>
   </div>
   <div class="app-form__item app-form__item--opts">
     <div class="flex justify-between items-center">
@@ -28,7 +28,7 @@
   <div class="app-form__submit">
     <button routerLink="/app" class="app-ibm-btn-full" ibmButton="primary" size="field">
       Request my early access
-      <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+      <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
     </button>
   </div>
 </div>

@@ -1,8 +1,8 @@
 <ng-template #menuItemTemplate>
   <ng-container *ngIf="item.prefix">
     <div class="app-sidebar__list__item__icon">
-      <ng-container *ngIf="item.prefix.type === 'ibm-icon'">
-        <youpez-ibm-icon [iconName]="item.prefix.name" [iconSize]="'20'"></youpez-ibm-icon>
+      <ng-container *ngIf="item.prefix.type === 'cds-icon'">
+        <svg [cdsIcon]="item.prefix.name" size="20"></svg>
       </ng-container>
     </div>
   </ng-container>

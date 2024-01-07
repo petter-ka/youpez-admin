@@ -18,22 +18,22 @@
           </div>
         </div>
       </div>
-      <ibm-label
+      <cds-text-label
         [helperText]="''">
         Password
         <input
-          ibmText
+          cdsText
           type="password"
           size="md"
           [disabled]="false"
           theme="light"
           [placeholder]="''"
           [autocomplete]="true">
-      </ibm-label>
+      </cds-text-label>
       <div class="mt-5">
-        <button ibmButton="primary" size="field" class="app-ibm-btn-full" (click)="onClose()">
+        <button cdsButton="primary" size="field" class="app-ibm-btn-full" (click)="onClose()">
           Unlock session
-          <svg class="bx--btn__icon" ibmIconCheckmarkOutline size="20"></svg>
+          <svg class="bx--btn__icon" cdsIcon="checkmark--outline" size="20"></svg>
         </button>
       </div>
       <div class="pt-5 text-center">

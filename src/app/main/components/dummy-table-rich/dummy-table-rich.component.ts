@@ -1,6 +1,6 @@
 import {Component, Input, OnInit, SimpleChanges, TemplateRef, ViewChild} from '@angular/core'
 import {TableItem, TableModel,TableHeaderItem} from "carbon-components-angular"
-import {getDummyModel} from "../../../../youpez/data/dummy"
+import {getDummyModel} from "../../../../@youpez/data/dummy"
 
 class CustomHeaderItem extends TableHeaderItem {
   // used for custom sorting

@@ -10,8 +10,8 @@
               <div>
                 <youpez-logo class="cursor-pointer" logoWidth="120px"></youpez-logo>
               </div>
-              <button ibmButton="ghost" size="sm" class="bx--btn--icon-only" (click)="onToggle()" fxHide fxShow.lt-lg>
-                <svg class="bx--btn__icon" ibmIconClose size="32"></svg>
+              <button cdsButton="ghost" size="sm" class="bx--btn--icon-only" (click)="onToggle()" fxHide fxShow.lt-lg>
+                <svg class="bx--btn__icon" cdsIcon="close" size="32"></svg>
               </button>
             </div>
             <ng-container *ngFor="let section of sections;">
@@ -35,7 +35,7 @@
           <div fxFlex="90%" fxFlex.gt-md="80%" fxFlex.gt-lg="70%" class="app-content app-content--default">
             <button (click)="onToggle()" ibmButton="ghost" fxHide fxShow.lt-lg size="sm"
               class="bx--btn__icon--left -ml-2">
-              <svg class="bx--btn__icon" ibmIconArrowLeft size="20"></svg>
+              <svg class="bx--btn__icon" cdsIcon="arrow--left" size="20"></svg>
               Show menu
             </button>
             <div class="app-markdown ">

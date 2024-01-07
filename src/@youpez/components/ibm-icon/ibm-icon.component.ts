@@ -10,7 +10,7 @@ export declare type ibmIconSizeType = '16' | '20' | '24' | '32'
 export class IbmIconComponent implements OnInit {
 
   @Input() iconName: string = ''
-  @Input() iconSize: ibmIconSizeType = '24'
+  @Input() size: ibmIconSizeType = '24'
 
   constructor() {
   }

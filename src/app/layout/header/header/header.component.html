@@ -1,17 +1,17 @@
 <button (click)="onSideBarToggle($event)" class="app-layout__header__btn app-layout__header__btn--menu">
-  <youpez-ibm-icon iconName="menu"></youpez-ibm-icon>
+  <svg cdsIcon="menu"></svg>
 </button>
 <img class="app-layout__header__logo app-layout__header__logo--white" src="assets/img/logo/logo-big-white.png"/>
 <img class="app-layout__header__logo app-layout__header__logo--black" src="assets/img/logo/logo-big-black.png"/>
 <div class="app-layout__header__tools">
   <button class="app-layout__header__btn app-layout__header__btn--icon" (click)="onItemClick({key:'search'})">
-    <youpez-ibm-icon iconName="search" iconSize="24"></youpez-ibm-icon>
+    <svg cdsIcon="search" size="24"></svg>
   </button>
   <div ngbDropdown
        placement="bottom-right"
        container="body">
     <button class="app-layout__header__btn app-layout__header__btn--icon" ngbDropdownToggle>
-      <youpez-ibm-icon iconName="contourFinding" iconSize="24"></youpez-ibm-icon>
+      <svg cdsIcon="contourFinding" size="24"></svg>
     </button>
     <div ngbDropdownMenu class="relative">
       <div fxLayout="column">
@@ -27,7 +27,7 @@
                 <div class="app-card app-card--select app-card--m-0" ngbDropdownItem
                      routerLink="/app/scrum-board">
                   <div class="app-card__content text-center">
-                    <youpez-ibm-icon iconName="dashboardReference" iconSize="32"></youpez-ibm-icon>
+                    <svg cdsIcon="dashboardReference" size="32"></svg>
                     <div class="app-productive-heading-01 mt-2">SCRUM board</div>
                   </div>
                 </div>
@@ -35,7 +35,7 @@
               <div fxFlex="50%">
                 <div class="app-card app-card--select app-card--m-0" ngbDropdownItem routerLink="/app/tasks">
                   <div class="app-card__content text-center">
-                    <youpez-ibm-icon iconName="task" iconSize="32"></youpez-ibm-icon>
+                    <svg cdsIcon="task" size="32"></svg>
                     <div class="app-productive-heading-01 mt-2">Tasks</div>
                   </div>
                 </div>
@@ -46,7 +46,7 @@
                 <div class="app-card app-card--select app-card--m-0" ngbDropdownItem
                      routerLink="/app/file-manager">
                   <div class="app-card__content text-center">
-                    <youpez-ibm-icon iconName="folder" iconSize="32"></youpez-ibm-icon>
+                    <svg cdsIcon="folder" size="32"></svg>
                     <div class="app-productive-heading-01 mt-2">File manager</div>
                   </div>
                 </div>
@@ -54,7 +54,7 @@
               <div fxFlex="50%">
                 <div class="app-card app-card--select app-card--m-0" ngbDropdownItem routerLink="/app/mail">
                   <div class="app-card__content text-center">
-                    <youpez-ibm-icon iconName="email" iconSize="32"></youpez-ibm-icon>
+                    <svg cdsIcon="email" size="32"></svg>
                     <div class="app-productive-heading-01 mt-2">Mail</div>
                   </div>
                 </div>
@@ -64,7 +64,7 @@
               <div fxFlex="50%" class="app-border-r">
                 <div class="app-card app-card--select app-card--m-0" ngbDropdownItem routerLink="/app/messages">
                   <div class="app-card__content text-center">
-                    <youpez-ibm-icon iconName="sendAlt" iconSize="32"></youpez-ibm-icon>
+                    <svg cdsIcon="sendAlt" size="32"></svg>
                     <div class="app-productive-heading-01 mt-2">Messages</div>
                   </div>
                 </div>
@@ -72,7 +72,7 @@
               <div fxFlex="50%">
                 <div class="app-card app-card--select app-card--m-0" ngbDropdownItem routerLink="/app/profile">
                   <div class="app-card__content text-center">
-                    <youpez-ibm-icon iconName="faceActivated" iconSize="32"></youpez-ibm-icon>
+                    <svg cdsIcon="faceActivated" size="32"></svg>
                     <div class="app-productive-heading-01 mt-2">Profile</div>
                   </div>
                 </div>
@@ -87,7 +87,7 @@
        placement="bottom-right"
        container="body">
     <button class="app-layout__header__btn app-layout__header__btn--icon" ngbDropdownToggle>
-      <youpez-ibm-icon iconName="user" iconSize="24"></youpez-ibm-icon>
+      <svg cdsIcon="user" size="24"></svg>
     </button>
     <div ngbDropdownMenu>
       <div class="app-list app-list--hover app-list--select app-list--no-border app-list--p">

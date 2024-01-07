@@ -9,24 +9,24 @@
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <div class="app-form">
     <div class="app-form__item">
-      <ibm-label
+      <cds-text-label
         [helperText]="''"
         [invalid]="isValid('email')"
         [invalidText]="'This field is required'">
         Email address
         <input
           formControlName="email"
-          ibmText
+          cdsText
           size="md"
           [invalid]="isValid('email')"
           [disabled]="false"
           theme="light"
           [placeholder]="'Email address'"
           [autocomplete]="true">
-      </ibm-label>
+      </cds-text-label>
     </div>
     <div class="app-form__item">
-      <ibm-label
+      <cds-text-label
         [helperText]="''"
         [invalid]="isValid('password')"
         [invalidText]="'This field is required'">
@@ -34,14 +34,14 @@
         <input
           type="password"
           formControlName="password"
-          ibmText
+          cdsText
           size="md"
           [invalid]="isValid('password')"
           [disabled]="false"
           theme="light"
           [placeholder]="'Password'"
           [autocomplete]="true">
-      </ibm-label>
+      </cds-text-label>
     </div>
     <div class="app-form__item app-form__item--opts">
       <div class="flex justify-between items-center">
@@ -55,7 +55,7 @@
     <div class="app-form__submit">
       <button type="submit" class="app-ibm-btn-full" ibmButton="primary" size="field">
         Sign In
-        <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+        <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
       </button>
     </div>
   </div>

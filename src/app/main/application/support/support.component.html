@@ -7,7 +7,7 @@
         </div>
         <div class="">
           <button routerLink="/app/application/welcome" ibmButton="ghost" size="sm" class="bx--btn__icon--left -ml-2">
-            <svg class="bx--btn__icon" ibmIconArrowLeft size="20"></svg>
+            <svg class="bx--btn__icon" cdsIcon="arrow--left" size="20"></svg>
             Back to dashboard screen
           </button>
         </div>
@@ -22,47 +22,47 @@
         <div class="app-card app-card--m-0">
           <div class="app-card__content app-form">
             <div class="app-form__item">
-              <ibm-label
+              <cds-text-label
                 [helperText]="'Use your registered e-mail'"
                 [invalidText]="'This field is required or incorrect'">
                 Email address
                 <input
-                  ibmText
+                  cdsText
                   size="md"
                   [disabled]="false"
                   theme="light"
                   [placeholder]="''"
                   [autocomplete]="true">
-              </ibm-label>
+              </cds-text-label>
             </div>
             <div fxLayout="row wrap" class="app-form__row">
               <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
-                <ibm-label
+                <cds-text-label
                   [helperText]="''"
                   [invalidText]="'This field is required or incorrect'">
                   First name
                   <input
-                    ibmText
+                    cdsText
                     size="md"
                     [disabled]="false"
                     theme="light"
                     [placeholder]="''"
                     [autocomplete]="true">
-                </ibm-label>
+                </cds-text-label>
               </div>
               <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
-                <ibm-label
+                <cds-text-label
                   [helperText]="''"
                   [invalidText]="'This field is required or incorrect'">
                   Last name
                   <input
-                    ibmText
+                    cdsText
                     size="md"
                     [disabled]="false"
                     theme="light"
                     [placeholder]="''"
                     [autocomplete]="true">
-                </ibm-label>
+                </cds-text-label>
               </div>
             </div>
             <div fxLayout="row wrap" class="app-form__row">
@@ -78,18 +78,18 @@
                 </ibm-dropdown>
               </div>
               <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
-                <ibm-label
+                <cds-text-label
                   [helperText]="''">
                   Program version and build
                   <input
                     value="0.0.0 (000)"
-                    ibmText
+                    cdsText
                     size="md"
                     [disabled]="false"
                     theme="light"
                     [placeholder]="''"
                     [autocomplete]="true">
-                </ibm-label>
+                </cds-text-label>
               </div>
             </div>
             <div fxLayout="row wrap" class="app-form__row">
@@ -117,16 +117,16 @@
               </div>
             </div>
             <div class="app-form__item">
-              <ibm-label
+              <cds-text-label
                 [helperText]="''">
                 Problem or feature request
               <textarea
-                ibmTextArea
+                cdsTextArea
                 theme="light"
                 [rows]="5"
                 [cols]="5"
                 aria-label="textarea"></textarea>
-              </ibm-label>
+              </cds-text-label>
             </div>
             <div class="app-form__item app-form__item--opts">
               <div class="flex justify-between items-center">
@@ -144,7 +144,7 @@
             <div class="app-form__submit flex justify-end">
               <button type="submit" ibmButton="primary" size="field">
                 Submit
-                <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+                <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
               </button>
             </div>
           </div>

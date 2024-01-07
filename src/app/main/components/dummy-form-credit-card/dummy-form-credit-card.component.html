@@ -2,8 +2,8 @@
   <div fxLayout="row wrap" class="app-form__row">
     <div fxFlex="100%" [fxFlex.gt-md]="getRowLayout(50)" class="app-form__item">
       <div class="app-input">
-        <youpez-ibm-icon iconName="purchase" class="app-input__prefix" iconSize="20"></youpez-ibm-icon>
-        <ibm-label
+        <svg cdsIcon="purchase" class="app-input__prefix" size="20"></svg>
+        <cds-text-label
           [invalidText]="'This field is required or incorrect'"
           [invalid]="isValid('cardNumber')">
           Card number
@@ -12,38 +12,38 @@
             mask="0000 0000 0000 0000"
             formControlName="cardNumber"
             [invalid]="isValid('cardNumber')"
-            ibmText
+            cdsText
             size="md"
             [theme]="theme"
             [placeholder]="'1111 1111 1111 11111'"
             [autocomplete]="false">
-        </ibm-label>
+        </cds-text-label>
       </div>
     </div>
     <div fxFlex="100%" [fxFlex.gt-md]="getRowLayout(50)"  class="app-form__item">
       <div class="app-input">
-        <youpez-ibm-icon iconName="user" class="app-input__prefix" iconSize="20"></youpez-ibm-icon>
-        <ibm-label
+        <svg cdsIcon="user" class="app-input__prefix" size="20"></svg>
+        <cds-text-label
           [invalidText]="'This field is required or incorrect'"
           [invalid]="isValid('cardHolder')">
           Cardholder name
           <input
             formControlName="cardHolder"
             [invalid]="isValid('cardHolder')"
-            ibmText
+            cdsText
             size="md"
             [theme]="theme"
             [placeholder]="'John Doe'"
             [autocomplete]="false">
-        </ibm-label>
+        </cds-text-label>
       </div>
     </div>
   </div>
   <div fxLayout="row wrap" class="app-form__row">
     <div fxFlex="100%" [fxFlex.gt-md]="getRowLayout(33.33)"  class="app-form__item">
       <div class="app-input">
-        <youpez-ibm-icon iconName="calendar" class="app-input__prefix" iconSize="20"></youpez-ibm-icon>
-        <ibm-label
+        <svg cdsIcon="calendar" class="app-input__prefix" size="20"></svg>
+        <cds-text-label
           [invalidText]="'This field is required or incorrect'"
           [invalid]="isValid('expiration')">
           Expiration
@@ -52,18 +52,18 @@
             mask="00/00"
             formControlName="expiration"
             [invalid]="isValid('expiration')"
-            ibmText
+            cdsText
             size="md"
             [theme]="theme"
             [placeholder]="'10/22'"
             [autocomplete]="false">
-        </ibm-label>
+        </cds-text-label>
       </div>
     </div>
     <div fxFlex="100%" [fxFlex.gt-md]="getRowLayout(33.33)" class="app-form__item">
       <div class="app-input">
-        <youpez-ibm-icon iconName="locked" class="app-input__prefix" iconSize="20"></youpez-ibm-icon>
-        <ibm-label
+        <svg cdsIcon="locked" class="app-input__prefix" size="20"></svg>
+        <cds-text-label
           [invalidText]="'This field is required or incorrect'"
           [invalid]="isValid('cvc')">
           CVC
@@ -72,18 +72,18 @@
             mask="000"
             formControlName="cvc"
             [invalid]="isValid('cvc')"
-            ibmText
+            cdsText
             size="md"
             [theme]="theme"
             [placeholder]="'126'"
             [autocomplete]="false">
-        </ibm-label>
+        </cds-text-label>
       </div>
     </div>
     <div fxFlex="100%" [fxFlex.gt-md]="getRowLayout(33.33)" class="app-form__item">
       <div class="app-input">
-        <youpez-ibm-icon iconName="location" class="app-input__prefix" iconSize="20"></youpez-ibm-icon>
-        <ibm-label
+        <svg cdsIcon="location" class="app-input__prefix" size="20"></svg>
+        <cds-text-label
           [invalidText]="'This field is required or incorrect'"
           [invalid]="isValid('postalCode')">
           Postal code
@@ -92,12 +92,12 @@
             mask="00000"
             formControlName="postalCode"
             [invalid]="isValid('postalCode')"
-            ibmText
+            cdsText
             size="md"
             [theme]="theme"
             [placeholder]="'2567'"
             [autocomplete]="false">
-        </ibm-label>
+        </cds-text-label>
       </div>
     </div>
   </div>

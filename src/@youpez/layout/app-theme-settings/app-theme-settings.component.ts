@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core'
 import {Subscription, Observable} from 'rxjs'
 
 import {SettingsService} from "../../services/settings.service"
-import {appThemes, sideBarThemes, headerThemes} from "@youpez/helpers"
+import {appThemes, sideBarThemes, headerThemes} from "../../../@youpez/helpers"
 import set = Reflect.set
 
 @Component({

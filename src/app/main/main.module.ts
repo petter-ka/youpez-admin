@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common'
 import { SharedModule } from "../shared/shared.module"
 import { LayoutModule } from "../layout/layout.module"
 import { AgGridModule } from '@ag-grid-community/angular'
-import { ChartsModule } from '../../youpez'
+import { ChartsModule } from '../../@youpez'
 import { MainRoutingModule } from './main-routing.module'
 
 import { TypographyComponent } from './typography/typography.component'

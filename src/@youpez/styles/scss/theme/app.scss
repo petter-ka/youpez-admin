@@ -1,5 +1,5 @@
-@import '~@angular/material/dialog/dialog-theme';
-@import '~@angular/cdk/overlay-prebuilt.css';
+@import '@angular/material';
+@import '@angular/cdk/overlay-prebuilt.css';
 @import 'app.utils';
 @import 'app.fixes.scss';
 @import 'app.typograpy';

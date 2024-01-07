@@ -4,12 +4,12 @@
     <img class="app-sidebar__logo__black" src="assets/img/logo/logo-big-black.png"/>
     <ng-container *ngIf="opened">
       <div (click)="onSideBarToggle()" class="app-sidebar__toggle-btn">
-        <youpez-ibm-icon iconName="radioButtonChecked" iconSize="16"></youpez-ibm-icon>
+        <svg cdsIcon="radioButtonChecked" size="16"></svg>
       </div>
     </ng-container>
     <ng-container *ngIf="!opened">
       <div (click)="onSideBarToggle()" class="app-sidebar__toggle-btn">
-        <youpez-ibm-icon iconName="radioButton" iconSize="16"></youpez-ibm-icon>
+        <svg cdsIcon="radioButton" size="16"></svg>
       </div>
     </ng-container>
   </div>

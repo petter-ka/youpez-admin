@@ -4,16 +4,16 @@
       Youpez 2020 Sprint W31-32
     </youpez-header-title>
     <youpez-header-tools>
-      <button ibmButton="primary" size="sm" (click)="onCreate()">
+      <button cdsButton="primary" size="sm" (click)="onCreate()">
         Create
-        <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+        <svg class="bx--btn__icon" cdsIcon="add" size="20"></svg>
       </button>
     </youpez-header-tools>
   </youpez-header>
   <div class="p-4 flex items-center">
     <div class="app-ibm-btn-merge mr-2" fxHide fxShow.gt-sm>
-      <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
-        <svg class="bx--btn__icon" ibmIconRenew size="32"></svg>
+      <button cdsButton="tertiary" size="sm" class="bx--btn--icon-only">
+        <svg class="bx--btn__icon" cdsIcon="renew" size="32"></svg>
       </button>
     </div>
     <div class="mr-3" style="width:170px">
@@ -32,9 +32,9 @@
       </ng-container>
     </div>
     <div class="flex flex-1 justify-end" fxHide fxShow.gt-sm>
-      <button ibmButton="tertiary" size="sm">
+      <button cdsButton="tertiary" size="sm">
         Quick filters
-        <svg class="bx--btn__icon" ibmIconArrowDown size="20"></svg>
+        <svg class="bx--btn__icon" cdsIcon="arrow--down" size="20"></svg>
       </button>
     </div>
   </div>
@@ -63,7 +63,7 @@
                       ibmButton="ghost"
                       size="sm"
                       class="bx--btn--icon-only">
-                      <svg class="bx--btn__icon" ibmIconMinimize size="32"></svg>
+                      <svg class="bx--btn__icon" cdsIcon="minimize" size="32"></svg>
                     </button>
                   </div>
                   <div fxFlex class="relative">
@@ -84,7 +84,7 @@
                                   {{task.description}}
                                 </div>
                                 <div class="flex items-center mb-1">
-                                  <youpez-ibm-icon iconName="time" iconSize="16"></youpez-ibm-icon>
+                                  <svg cdsIcon="time" size="16"></svg>
                                   <span class="ml-1">26.10.2020</span>
                                 </div>
                                 <div class="app-label-01">

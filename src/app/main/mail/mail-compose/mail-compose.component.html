@@ -6,7 +6,7 @@
     </div>
     <div class="flex-1 flex justify-end">
       <button (click)="onClose()" ibmButton="ghost" size="sm" class="bx--btn--icon-only">
-        <svg class="bx--btn__icon" ibmIconClose size="32"></svg>
+        <svg class="bx--btn__icon" cdsIcon="close" size="32"></svg>
       </button>
     </div>
   </div>
@@ -14,66 +14,66 @@
     <div class="app-content app-content--default">
       <div class="app-form">
         <div class="app-form__item">
-          <ibm-label>
+          <cds-text-label>
             To
             <input
-              ibmText
+              cdsText
               size="md"
               theme="light">
-          </ibm-label>
+          </cds-text-label>
         </div>
         <div class="app-form__item">
-          <ibm-label>
+          <cds-text-label>
             Subject
             <input
-              ibmText
+              cdsText
               size="md"
               theme="light">
-          </ibm-label>
+          </cds-text-label>
         </div>
         <div class="">
-          <ibm-label
+          <cds-text-label
             [helperText]="''">
             Content
             <textarea
-              ibmTextArea
+              cdsTextArea
               theme="light"
               [rows]="10"
               [cols]="3"
               aria-label="textarea"></textarea>
-          </ibm-label>
+          </cds-text-label>
           <div class="flex items-center">
             <div class="flex-1 flex items-center">
               <button
                 ibmButton="ghost"
                 size="sm"
                 class="bx--btn--icon-only">
-                <svg class="bx--btn__icon" ibmIconTextBold size="32"></svg>
+                <svg class="bx--btn__icon" cdsIcon="text--bold" size="32"></svg>
               </button>
               <button
                 ibmButton="ghost"
                 size="sm"
                 class="bx--btn--icon-only">
-                <svg class="bx--btn__icon" ibmIconTextItalic size="32"></svg>
+                <svg class="bx--btn__icon" cdsIcon="text--italic" size="32"></svg>
               </button>
               <button
                 ibmButton="ghost"
                 size="sm"
                 class="bx--btn--icon-only">
-                <svg class="bx--btn__icon" ibmIconTextUnderline size="32"></svg>
+                <svg class="bx--btn__icon" cdsIcon="text--underline" size="32"></svg>
               </button>
               <span class="app-btn-border-sep"></span>
               <button
                 ibmButton="ghost"
                 size="sm"
                 class="bx--btn--icon-only">
-                <svg class="bx--btn__icon" ibmIconAttachment size="32"></svg>
+                <svg class="bx--btn__icon" cdsIcon="attachment" size="32"></svg>
               </button>
               <button
                 ibmButton="ghost"
                 size="sm"
                 class="bx--btn--icon-only">
-                <svg class="bx--btn__icon" ibmIconImage size="32"></svg>
+                <svg class="bx--btn__icon" cdsIcon="image" size="32"></svg>
               </button>
             </div>
           </div>
@@ -86,18 +86,18 @@
             ibmButton="ghost"
             size="field">
       Save as draft
-      <svg class="bx--btn__icon" ibmIconSave size="20"></svg>
+      <svg class="bx--btn__icon" cdsIcon="save" size="20"></svg>
     </button>
     <button (click)="onClose()"
             ibmButton="ghost"
             size="field"
             class="mr-1">
       Discard
-      <svg class="bx--btn__icon" ibmIconTrashCan size="20"></svg>
+      <svg class="bx--btn__icon" cdsIcon="trash-can" size="20"></svg>
     </button>
-    <button ibmButton="primary" size="field" (click)="onClose()">
+    <button cdsButton="primary" size="field" (click)="onClose()">
       Send
-      <svg class="bx--btn__icon" ibmIconSend size="20"></svg>
+      <svg class="bx--btn__icon" cdsIcon="send" size="20"></svg>
     </button>
   </div>
 </div>

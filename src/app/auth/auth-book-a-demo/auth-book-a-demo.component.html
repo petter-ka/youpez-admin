@@ -51,66 +51,66 @@
             <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
               <div>
                 <div class="app-form__item">
-                  <ibm-label
+                  <cds-text-label
                     [invalid]="isValid('email')"
                     [helperText]="'Disposable email addresses are not permitted'"
                     [invalidText]="'This field is required or incorrect'">
                     Email address
                     <input
                       formControlName="email"
-                      ibmText
+                      cdsText
                       size="md"
                       [invalid]="isValid('email')"
                       [disabled]="false"
                       theme="light"
                       [placeholder]="''"
                       [autocomplete]="true">
-                  </ibm-label>
+                  </cds-text-label>
                 </div>
                 <div fxLayout="row wrap" class="app-form__row">
                   <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
-                    <ibm-label
+                    <cds-text-label
                       [helperText]="''"
                       [invalid]="isValid('firstName')"
                       [invalidText]="'This field is required or incorrect'">
                       First name
                       <input
                         formControlName="firstName"
-                        ibmText
+                        cdsText
                         size="md"
                         [invalid]="isValid('firstName')"
                         [disabled]="false"
                         theme="light"
                         [placeholder]="''"
                         [autocomplete]="true">
-                    </ibm-label>
+                    </cds-text-label>
                   </div>
                   <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
-                    <ibm-label
+                    <cds-text-label
                       [helperText]="''"
                       [invalid]="isValid('lastName')"
                       [invalidText]="'This field is required or incorrect'">
                       Last name
                       <input
                         formControlName="lastName"
-                        ibmText
+                        cdsText
                         size="md"
                         [invalid]="isValid('lastName')"
                         [disabled]="false"
                         theme="light"
                         [placeholder]="''"
                         [autocomplete]="true">
-                    </ibm-label>
+                    </cds-text-label>
                   </div>
                 </div>
                 <div class="app-form__item">
-                  <ibm-label
+                  <cds-text-label
                     [helperText]="''"
                     [invalid]="isValid('password')">
                     Password
                     <input
                       formControlName="password"
-                      ibmText
+                      cdsText
                       size="md"
                       type="password"
                       [invalid]="isValid('password')"
@@ -118,7 +118,7 @@
                       theme="light"
                       [placeholder]="''"
                       [autocomplete]="true">
-                  </ibm-label>
+                  </cds-text-label>
                   <div fxLayout="row wrap" class="mt-4">
                     <div fxFlex="50%">
                       <div class="px-4">
@@ -185,7 +185,7 @@
                   <button type="submit" ibmButton="primary" size="field" [skeleton]="step1Loading"
                           [disabled]="currentStep !== 1">
                     Next
-                    <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+                    <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
                   </button>
                 </div>
               </div>
@@ -220,58 +220,58 @@
                         </ibm-dropdown>
                       </div>
                       <div fxFlex="50%">
-                        <ibm-label
+                        <cds-text-label
                           [invalid]="isValid2('phone')"
                           [invalidText]="'This field is required or incorrect'">
                           Phone
                           <input
                             formControlName="phone"
-                            ibmText
+                            cdsText
                             size="md"
                             [invalid]="isValid2('phone')"
                             [disabled]="false"
                             theme="light"
                             [placeholder]="''"
                             [autocomplete]="true">
-                        </ibm-label>
+                        </cds-text-label>
                       </div>
                     </div>
 
                   </div>
                   <div fxLayout="row wrap" class="app-form__row">
                     <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
-                      <ibm-label
+                      <cds-text-label
                         [helperText]="''"
                         [invalid]="isValid2('company')"
                         [invalidText]="'This field is required or incorrect'">
                         Company name
                         <input
                           formControlName="company"
-                          ibmText
+                          cdsText
                           size="md"
                           [invalid]="isValid2('company')"
                           [disabled]="false"
                           theme="light"
                           [placeholder]="''"
                           [autocomplete]="true">
-                      </ibm-label>
+                      </cds-text-label>
                     </div>
                     <div fxFlex="100%" fxFlex.gt-md="50%" class="app-form__item">
-                      <ibm-label
+                      <cds-text-label
                         [helperText]="''"
                         [invalid]="isValid2('job')"
                         [invalidText]="'This field is required or incorrect'">
                         Job role
                         <input
                           formControlName="job"
-                          ibmText
+                          cdsText
                           size="md"
                           [invalid]="isValid2('job')"
                           [disabled]="false"
                           theme="light"
                           [placeholder]="''"
                           [autocomplete]="true">
-                      </ibm-label>
+                      </cds-text-label>
                     </div>
                   </div>
                   <div fxLayout="row wrap" class="app-form__row">
@@ -306,7 +306,7 @@
                     <button type="submit" ibmButton="primary" size="field" [skeleton]="step2Loading"
                             [disabled]="currentStep !== 2">
                       Next
-                      <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+                      <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
                     </button>
                   </div>
                 </div>
@@ -329,26 +329,26 @@
             <form [formGroup]="formGroup3" (ngSubmit)="onSubmit3()">
               <div>
                 <div class="app-form__item" style="max-width: 300px">
-                  <ibm-label
+                  <cds-text-label
                     [invalid]="isValid3('code')"
                     [invalidText]="'This field is required or incorrect'">
                     Verification code
                     <input
                       formControlName="code"
-                      ibmText
+                      cdsText
                       size="md"
                       [invalid]="isValid3('code')"
                       [disabled]="false"
                       theme="light"
                       [placeholder]="''"
                       [autocomplete]="true">
-                  </ibm-label>
+                  </cds-text-label>
                 </div>
               </div>
               <div class="app-form__submit flex justify-end">
                 <button type="submit" ibmButton="primary" size="field" [skeleton]="step3Loading">
                   Create my account
-                  <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
                 </button>
               </div>
             </form>
@@ -358,7 +358,7 @@
               <div></div>
               <button type="submit" ibmButton="primary" size="field" [disabled]="true">
                 Create my account
-                <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+                <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
               </button>
             </div>
           </ng-container>

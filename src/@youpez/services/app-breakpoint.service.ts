@@ -23,11 +23,11 @@ export class AppBreakpointService {
 
   constructor(public media: MediaObserver,
               private eventManager: EventManager) {
-    this.eventManager.addGlobalEventListener('window', 'resize', this.onResize.bind(this))
+    // this.eventManager.addGlobalEventListener('window', 'resize', this.onResize.bind(this))
   }
 
   init() {
-    this.activeMediaQueryWatcher = this.media.media$.subscribe((change: MediaChange) => {
+    this.activeMediaQueryWatcher = this.media.asObservable().subscribe((change: any /* MediaChange */) => {
       this.activatedMqAlias = change.mqAlias
       this.activeMediaQuery = change.mediaQuery
       this.checkMediaQuery()

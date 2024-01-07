@@ -4,17 +4,17 @@
       <div class="h-3 w-3 app-bg-info rounded-full mr-2"></div>
       <div class="app-productive-heading-02 font-bold">YP-2340</div>
       <div class="flex-1 flex justify-end">
-        <button ibmButton="ghost" size="sm" class="bx--btn--icon-only mr-1">
-          <svg class="bx--btn__icon" ibmIconLocked size="32"></svg>
+        <button cdsButton="ghost" size="sm" class="bx--btn--icon-only mr-1">
+          <svg class="bx--btn__icon" cdsIcon="locked" size="32"></svg>
         </button>
-        <button ibmButton="ghost" size="sm" class="bx--btn--icon-only mr-1">
-          <svg class="bx--btn__icon" ibmIconPin size="32"></svg>
+        <button cdsButton="ghost" size="sm" class="bx--btn--icon-only mr-1">
+          <svg class="bx--btn__icon" cdsIcon="pin" size="32"></svg>
         </button>
-        <button ibmButton="ghost" size="sm" class="bx--btn--icon-only mr-1">
-          <svg class="bx--btn__icon" ibmIconShare size="32"></svg>
+        <button cdsButton="ghost" size="sm" class="bx--btn--icon-only mr-1">
+          <svg class="bx--btn__icon" cdsIcon="share" size="32"></svg>
         </button>
         <button (click)="onClose()" ibmButton="ghost" size="sm" class="bx--btn--icon-only">
-          <svg class="bx--btn__icon" ibmIconClose size="32"></svg>
+          <svg class="bx--btn__icon" cdsIcon="close" size="32"></svg>
         </button>
       </div>
     </div>
@@ -31,11 +31,11 @@
         [size]="'md'">
         <div fxFill fxLayout="column">
           <div class="app-content app-content--default">
-            <button ibmButton="primary"
+            <button cdsButton="primary"
                     size="sm"
                     class="mr-1">
               Todo
-              <svg class="bx--btn__icon" ibmIconChevronDown size="20"></svg>
+              <svg class="bx--btn__icon" cdsIcon="chevron--down" size="20"></svg>
             </button>
           </div>
           <div fxFlex class="relative">
@@ -120,17 +120,17 @@
                   ownership and strict permissions
                 </div>
                 <div class="mb-6">
-                  <button ibmButton="tertiary"
+                  <button cdsButton="tertiary"
                           size="sm"
                           class="mr-1">
                     Attach
-                    <svg class="bx--btn__icon" ibmIconAttachment size="20"></svg>
+                    <svg class="bx--btn__icon" cdsIcon="attachment" size="20"></svg>
                   </button>
-                  <button ibmButton="tertiary"
+                  <button cdsButton="tertiary"
                           size="sm"
                           class="mr-1">
                     Create subtask
-                    <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+                    <svg class="bx--btn__icon" cdsIcon="add" size="20"></svg>
                   </button>
                 </div>
 
@@ -205,7 +205,7 @@
           <div class="flex items-center mb-4">
             <img src="assets/img/avatar/avatar3.jpg" class="w-6 rounded-full mr-2"/>
             <input
-              ibmText
+              cdsText
               size="md"
               theme="light"
               [placeholder]="'Add a comment...'">
@@ -223,9 +223,9 @@
               class="mr-1">
         Cancel
       </button>
-      <button ibmButton="primary" size="field">
+      <button cdsButton="primary" size="field">
         Create
-        <svg class="bx&#45;&#45;btn__icon" ibmIconAdd size="20"></svg>
+        <svg class="bx&#45;&#45;btn__icon" cdsIcon="add" size="20"></svg>
       </button>
     </div>-->
 </div>

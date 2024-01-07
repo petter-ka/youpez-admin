@@ -3,12 +3,12 @@
 
     <div fxLayout="row wrap" class="app-header app-header--hero">
       <div class="app_header__tools">
-        <button ibmButton="primary" size="sm" class="mr-1">
+        <button cdsButton="primary" size="sm" class="mr-1">
           Invoices
         </button>
-        <button ibmButton="tertiary" size="sm" fxHide fxShow.gt-sm>
+        <button cdsButton="tertiary" size="sm" fxHide fxShow.gt-sm>
           Schedule
-          <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+          <svg class="bx--btn__icon" cdsIcon="add" size="16"></svg>
         </button>
       </div>
       <div fxFlex="100%" fxFlex.gt-sm="50%" class="relative z-10">
@@ -23,22 +23,22 @@
     </div>
     <div fxLayout="row wrap" class="mx-4">
       <div fxFlex="100%" fxFlex.gt-sm="50%" class="mt-4">
-        <ibm-combo-box
+        <cds-combo-box
           style="width:200px"
           [placeholder]="'Filter group...'"
           [items]="comboboxItems"
           size="md"
           [appendInline]="false">
           <ibm-dropdown-list></ibm-dropdown-list>
-        </ibm-combo-box>
+        </cds-combo-box>
       </div>
       <div fxFlex="100%" fxFlex.gt-sm="50%" class="mt-4">
         <div class="text-left lg:text-right">
           <span class="app-label-01 mr-3">Date range</span>
-          <ibm-date-picker
+          <cds-date-picker
             class="app-inline-block"
             size="md" range="true">
-          </ibm-date-picker>
+          </cds-date-picker>
         </div>
       </div>
     </div>
@@ -53,7 +53,7 @@
                 <div class="app-label-01">Current</div>
                 <div>
                   <span class="app-expressive-heading-06 mr-2">1,231</span>
-                  <youpez-ibm-icon iconName="arrowUp" class="app-color-success"></youpez-ibm-icon>
+                  <svg cdsIcon="arrowUp" class="app-color-success"></svg>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@
                 <div class="app-label-01">Current</div>
                 <div>
                   <span class="app-expressive-heading-06 mr-2">566</span>
-                  <youpez-ibm-icon iconName="arrowUp" class="app-color-success"></youpez-ibm-icon>
+                  <svg cdsIcon="arrowUp" class="app-color-success"></svg>
                 </div>
               </div>
             </div>
@@ -77,7 +77,7 @@
                 <div class="app-label-01">Current</div>
                 <div>
                   <span class="app-expressive-heading-06 mr-2">11,122</span>
-                  <youpez-ibm-icon iconName="arrowUp" class="app-color-success"></youpez-ibm-icon>
+                  <svg cdsIcon="arrowUp" class="app-color-success"></svg>
                 </div>
               </div>
             </div>
@@ -89,7 +89,7 @@
                 <div class="app-label-01">Current</div>
                 <div>
                   <span class="app-expressive-heading-06 mr-2">234,122</span>
-                  <youpez-ibm-icon iconName="arrowDown" class="app-color-danger"></youpez-ibm-icon>
+                  <svg cdsIcon="arrowDown" class="app-color-danger"></svg>
                 </div>
               </div>
             </div>
@@ -161,11 +161,11 @@
       <div fxFlex="100%" fxFlex.gt-lg="40%">
         <div class="app-card" fxFlex>
           <div class="app-card__tool">
-            <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
-              <svg class="bx--btn__icon" ibmIconRenew size="32"></svg>
+            <button cdsButton="tertiary" size="sm" class="bx--btn--icon-only">
+              <svg class="bx--btn__icon" cdsIcon="renew" size="32"></svg>
             </button>
-            <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
-              <svg class="bx--btn__icon" ibmIconOverflowMenuVertical size="32"></svg>
+            <button cdsButton="tertiary" size="sm" class="bx--btn--icon-only">
+              <svg class="bx--btn__icon" cdsIcon="overflow-menu--vertical" size="32"></svg>
             </button>
           </div>
           <div class="app-card__header pb-0">
@@ -188,7 +188,7 @@
                 <div class="app-row app-row--center">
                   <div class="app-symbol app-symbol--default mr-4 rounded">
                     <div class="app-symbol__label w-20 h-20">
-                      <youpez-ibm-icon iconName="cloudDataOps" iconSize="32"></youpez-ibm-icon>
+                      <svg cdsIcon="cloudDataOps" size="32"></svg>
                     </div>
                   </div>
                   <div>
@@ -202,18 +202,18 @@
                   <div class="app-list__item" [ngClass]="{'app-color-success':sub.up,'app-color-danger':!sub.up}">
                     <div class="app-list__item__prefix w-10 text-center">
                       <ng-container *ngIf="sub.up">
-                        <youpez-ibm-icon iconName="arrowUp" iconSize="16"></youpez-ibm-icon>
+                        <svg cdsIcon="arrow--up" size="16"></svg>
                       </ng-container>
                       <ng-container *ngIf="!sub.up">
-                        <youpez-ibm-icon iconName="arrowDown" iconSize="16"></youpez-ibm-icon>
+                        <svg cdsIcon="arrow--down" size="16"></svg>
                       </ng-container>
                     </div>
                     <div class="app-list__item__content">
                       {{sub.month}}
                     </div>
                     <div class="app-expressive-heading-02 mr-1">{{sub.count}}$</div>
-                    <button ibmButton="ghost" size="sm" class="bx--btn--icon-only">
-                      <svg class="bx--btn__icon" ibmIconArrowRight size="32"></svg>
+                    <button cdsButton="ghost" size="sm" class="bx--btn--icon-only">
+                      <svg class="bx--btn__icon" cdsIcon="arrow--right" size="32"></svg>
                     </button>
                   </div>
                 </ng-container>
@@ -282,11 +282,11 @@
           <div fxFlex="100%" fxFlex.gt-lg="50%">
             <div class="app-card" fxFlex>
               <div class="app-card__tool">
-                <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
-                  <svg class="bx--btn__icon" ibmIconRenew size="32"></svg>
+                <button cdsButton="tertiary" size="sm" class="bx--btn--icon-only">
+                  <svg class="bx--btn__icon" cdsIcon="renew" size="32"></svg>
                 </button>
-                <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
-                  <svg class="bx--btn__icon" ibmIconOverflowMenuVertical size="32"></svg>
+                <button cdsButton="tertiary" size="sm" class="bx--btn--icon-only">
+                  <svg class="bx--btn__icon" cdsIcon="overflow-menu--vertical" size="32"></svg>
                 </button>
               </div>
               <div class="app-card__header">
@@ -309,11 +309,11 @@
       <div fxFlex="100%" fxFlex.gt-md="70%">
         <div class="app-card">
           <div class="app-card__tool">
-            <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
-              <svg class="bx--btn__icon" ibmIconRenew size="32"></svg>
+            <button cdsButton="tertiary" size="sm" class="bx--btn--icon-only">
+              <svg class="bx--btn__icon" cdsIcon="renew" size="32"></svg>
             </button>
-            <button ibmButton="tertiary" size="sm" class="bx--btn--icon-only">
-              <svg class="bx--btn__icon" ibmIconOverflowMenuVertical size="32"></svg>
+            <button cdsButton="tertiary" size="sm" class="bx--btn--icon-only">
+              <svg class="bx--btn__icon" cdsIcon="overflow-menu--vertical" size="32"></svg>
             </button>
           </div>
           <div class="app-card__header">
@@ -340,7 +340,7 @@
                 </div>
                 <div class="app-row app-row--center app-color-success">
                   <span class="mr-1">Healthy</span>
-                  <youpez-ibm-icon iconName="checkMarkOutline" iconSize="32"></youpez-ibm-icon>
+                  <svg cdsIcon="checkmark--outline" size="32"></svg>
                 </div>
 
               </div>
@@ -368,9 +368,9 @@
                 </div>
               </div>
               <div class="text-center mt-4">
-                <button ibmButton="tertiary" size="sm">
+                <button cdsButton="tertiary" size="sm">
                   SSH
-                  <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
                 </button>
               </div>
             </div>
@@ -382,7 +382,7 @@
                 </div>
                 <div class="app-row app-row--center app-color-success">
                   <span class="mr-1">Healthy</span>
-                  <youpez-ibm-icon iconName="checkMarkOutline" iconSize="32"></youpez-ibm-icon>
+                  <svg cdsIcon="checkMarkOutline" size="32"></svg>
                 </div>
 
               </div>
@@ -410,9 +410,9 @@
                 </div>
               </div>
               <div class="text-center mt-4">
-                <button ibmButton="tertiary" size="sm">
+                <button cdsButton="tertiary" size="sm">
                   SSH
-                  <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
                 </button>
               </div>
             </div>
@@ -424,7 +424,7 @@
                 </div>
                 <div class="app-row app-row--center app-color-success">
                   <span class="mr-1">Healthy</span>
-                  <youpez-ibm-icon iconName="checkMarkOutline" iconSize="32"></youpez-ibm-icon>
+                  <svg cdsIcon="checkMarkOutline" size="32"></svg>
                 </div>
               </div>
               <div class="mt-5 mb-1">
@@ -450,9 +450,9 @@
                 </div>
               </div>
               <div class="text-center mt-4">
-                <button ibmButton="tertiary" size="sm">
+                <button cdsButton="tertiary" size="sm">
                   SSH
-                  <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+                  <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
                 </button>
               </div>
             </div>

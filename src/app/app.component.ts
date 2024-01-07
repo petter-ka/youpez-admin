@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Router, ActivatedRoute, NavigationStart, NavigationEnd, NavigationCancel } from "@angular/router"
-import { SettingsService } from '../youpez/services/settings.service'
+import { SettingsService } from '../@youpez/services/settings.service'
 
 const getSessionStorage = (key) => {
   return sessionStorage.getItem(key)

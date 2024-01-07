@@ -6,7 +6,7 @@
     <div class="app-productive-heading-03 font-bold">Create issue</div>
     <div class="flex-1 flex justify-end">
       <button (click)="onClose()" ibmButton="ghost" size="sm" class="bx--btn--icon-only">
-        <svg class="bx--btn__icon" ibmIconClose size="32"></svg>
+        <svg class="bx--btn__icon" cdsIcon="close" size="32"></svg>
       </button>
     </div>
   </div>
@@ -35,13 +35,13 @@
         </div>
         <div class="mb-6 pb-3 app-border-b"></div>
         <div class="app-form__item">
-          <ibm-label helperText="Summarize the issue in one sentence">
+          <cds-text-label helperText="Summarize the issue in one sentence">
             Title
             <input
-              ibmText
+              cdsText
               size="md"
               theme="light">
-          </ibm-label>
+          </cds-text-label>
         </div>
         <div class="app-form__item">
           <ibm-combo-box
@@ -85,16 +85,16 @@
           </ibm-combo-box>
         </div>
         <div class="">
-          <ibm-label
+          <cds-text-label
             [helperText]="''">
             Description
             <textarea
-              ibmTextArea
+              cdsTextArea
               theme="light"
               [rows]="3"
               [cols]="3"
               aria-label="textarea"></textarea>
-          </ibm-label>
+          </cds-text-label>
         </div>
       </div>
 
@@ -107,9 +107,9 @@
             class="mr-1">
       Cancel
     </button>
-    <button ibmButton="primary" size="field" (click)="onClose()">
+    <button cdsButton="primary" size="field" (click)="onClose()">
       Create
-      <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+      <svg class="bx--btn__icon" cdsIcon="add" size="20"></svg>
     </button>
   </div>
 </div>

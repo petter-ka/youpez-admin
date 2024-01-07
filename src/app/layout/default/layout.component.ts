@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core'
 import {takeUntil} from 'rxjs/operators'
 import {Subject} from "rxjs"
-import {defaultRouterTransition, MenuType} from "../../../youpez"
-import {SettingsService} from "../../../youpez"
-import {AppMenuService} from "../../../youpez"
+import {defaultRouterTransition, MenuType} from "../../../@youpez"
+import {SettingsService} from "../../../@youpez"
+import {AppMenuService} from "../../../@youpez"
 
 @Component({
   selector: 'app-layout',
@@ -38,7 +38,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Dashboard',
           url: '/app/dashboard/default',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'home',
           },
         },
@@ -46,7 +46,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Platform analytics',
           url: '/app/dashboard/analytics',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'activity',
           },
         },
@@ -54,7 +54,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Stocks / crypto',
           url: '/app/dashboard/crypto',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'analytics',
           },
           suffix: {
@@ -73,15 +73,15 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Scrum board',
 
           prefix: {
-            type: 'ibm-icon',
-            name: 'dashboardReference',
+            type: 'cds-icon',
+            name: 'dashboard-reference',
           },
           url: '/app/scrum-board',
         },
         {
           name: 'Tasks',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'task',
           },
           suffix: {
@@ -94,7 +94,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'File manager',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'folder',
           },
           url: '/app/file-manager',
@@ -102,7 +102,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Mail',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'email',
           },
           suffix: {
@@ -115,8 +115,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Messages',
           prefix: {
-            type: 'ibm-icon',
-            name: 'sendAlt',
+            type: 'cds-icon',
+            name: 'send--alt',
           },
           url: '/app/messages',
         }
@@ -130,8 +130,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'User',
           parentUrl: '/app/user',
           prefix: {
-            type: 'ibm-icon',
-            name: 'userAvatar',
+            type: 'cds-icon',
+            name: 'user--avatar',
           },
           children: [
             {
@@ -156,7 +156,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Web application',
           parentUrl: '/app/application',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'application',
           },
           children: [
@@ -189,8 +189,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Auth',
           prefix: {
-            type: 'ibm-icon',
-            name: 'userAdmin',
+            type: 'cds-icon',
+            name: 'user--admin',
           },
           children: [
             {
@@ -319,7 +319,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Pricing',
           parentUrl: '/app/pricing',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'money',
           },
           children: [
@@ -340,15 +340,15 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Profile',
           prefix: {
-            type: 'ibm-icon',
-            name: 'faceActivated',
+            type: 'cds-icon',
+            name: 'face--activated',
           },
           url: '/app/profile',
         },
         {
           name: 'Timeline',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'alarm',
           },
           url: '/app/timeline',
@@ -356,7 +356,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Invoice',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'document',
           },
           url: '/app/invoice',
@@ -364,16 +364,16 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Search result',
           prefix: {
-            type: 'ibm-icon',
-            name: 'imageSearch',
+            type: 'cds-icon',
+            name: 'image--search',
           },
           url: '/app/search-result',
         },
         {
           name: 'Coming soon',
           prefix: {
-            type: 'ibm-icon',
-            name: 'inProgress',
+            type: 'cds-icon',
+            name: 'in-progress',
 
           },
           children: [
@@ -398,7 +398,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Maintenance',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'hourglass',
           },
           url: '/app/maintenance',
@@ -406,7 +406,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Errors',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'error',
           },
           suffix: {
@@ -429,8 +429,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Starters',
           parentUrl: '/app/starters',
           prefix: {
-            type: 'ibm-icon',
-            name: '3dCursorAlt',
+            type: 'cds-icon',
+            name: '3d-cursor--alt',
           },
           children: [
             {
@@ -517,14 +517,14 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'UI components',
           url: '/app/ui-components',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'view',
           },
         },
         {
           name: 'Widgets',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'phraseSentiment',
           },
           parentUrl: '/app/widgets',
@@ -552,8 +552,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Tables',
           parentUrl: '/app/tables',
           prefix: {
-            type: 'ibm-icon',
-            name: 'tableSplit',
+            type: 'cds-icon',
+            name: 'table--split',
           },
           children: [
             {
@@ -578,8 +578,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Forms',
           prefix: {
-            type: 'ibm-icon',
-            name: 'textCreation',
+            type: 'cds-icon',
+            name: 'text--creation',
           },
           parentUrl: '/app/forms',
           children: [
@@ -605,24 +605,24 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Charts',
           url: '/app/charts',
           prefix: {
-            type: 'ibm-icon',
-            name: 'chartColumn',
+            type: 'cds-icon',
+            name: 'chart--column',
           },
         },
         {
           name: 'Icons',
           url: '/app/icons',
           prefix: {
-            type: 'ibm-icon',
-            name: 'magicWand',
+            type: 'cds-icon',
+            name: 'magic-wand',
           },
         },
         {
           name: 'Typography',
           url: '/app/typography',
           prefix: {
-            type: 'ibm-icon',
-            name: 'textTracking',
+            type: 'cds-icon',
+            name: 'text--tracking',
           },
         }
       ]
@@ -634,7 +634,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Badge number',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'home',
           },
           suffix: {
@@ -646,7 +646,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Badge text',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'home',
           },
           suffix: {
@@ -660,7 +660,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Disabled Item',
           disabled: true,
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'home',
           },
         },
@@ -668,7 +668,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Disabled Group',
           disabled: true,
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'home',
           },
           children: []
@@ -676,7 +676,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Disabled Subitem',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'home',
           },
           children: [
@@ -689,7 +689,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         {
           name: 'Looooong Menu item, with loooong menu item',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'home',
           },
         },
@@ -697,7 +697,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Menu item',
           subtitle: 'with subtitle',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'home',
           },
           children: [
@@ -710,7 +710,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Menu item',
           subtitle: 'with subtitle',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'home',
           },
         },
@@ -718,7 +718,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           name: 'Menu item',
           subtitle: 'with long subtitle, with long subtitle, with log subtitle',
           prefix: {
-            type: 'ibm-icon',
+            type: 'cds-icon',
             name: 'home',
           },
         },

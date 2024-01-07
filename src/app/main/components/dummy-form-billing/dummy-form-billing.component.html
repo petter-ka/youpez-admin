@@ -2,7 +2,7 @@
   <div fxLayout="row wrap" class="app-form__row">
     <div fxFlex="100%" class="app-form__item">
       <div class="app-input">
-        <ibm-label
+        <cds-text-label
           [invalidText]="'This field is required or incorrect'"
           [invalid]="isValid('name')">
           Name
@@ -10,12 +10,12 @@
             type="text"
             formControlName="name"
             [invalid]="isValid('name')"
-            ibmText
+            cdsText
             size="md"
             [theme]="theme"
             [placeholder]="''"
             [autocomplete]="false">
-        </ibm-label>
+        </cds-text-label>
       </div>
     </div>
 
@@ -54,41 +54,41 @@
   <div fxLayout="row wrap" class="app-form__row">
     <div fxFlex="100%" [fxFlex.gt-md]="getRowLayout(25)" class="app-form__item">
       <div class="app-input">
-        <ibm-label
+        <cds-text-label
           [invalid]="isValid('zip')">
           Zip code
           <input
             type="text"
             formControlName="zip"
             [invalid]="isValid('zip')"
-            ibmText
+            cdsText
             size="md"
             [theme]="theme"
             [placeholder]="''"
             [autocomplete]="false">
-        </ibm-label>
+        </cds-text-label>
       </div>
     </div>
     <div fxFlex="100%" [fxFlex.gt-md]="getRowLayout(75)" class="app-form__item">
       <div class="app-input">
-        <ibm-label
+        <cds-text-label
           [invalidText]="'This field is required or incorrect'"
           [invalid]="isValid('city')">
           City
           <input
             formControlName="city"
             [invalid]="isValid('city')"
-            ibmText
+            cdsText
             size="md"
             [theme]="theme"
             [placeholder]="''"
             [autocomplete]="false">
-        </ibm-label>
+        </cds-text-label>
       </div>
     </div>
     <div fxFlex="100%" class="app-form__item">
       <div class="app-input">
-        <ibm-label
+        <cds-text-label
           [invalidText]="'This field is required or incorrect'"
           [invalid]="isValid('street')">
           Street address
@@ -96,12 +96,12 @@
             type="text"
             formControlName="street"
             [invalid]="isValid('street')"
-            ibmText
+            cdsText
             size="md"
             [theme]="theme"
             [placeholder]="''"
             [autocomplete]="false">
-        </ibm-label>
+        </cds-text-label>
       </div>
     </div>
     <div fxFlex="100%" class="app-form__item">

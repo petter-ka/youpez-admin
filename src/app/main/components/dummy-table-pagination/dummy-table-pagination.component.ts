@@ -1,6 +1,6 @@
 import {Component, OnInit, Input, TemplateRef,ViewChild} from '@angular/core'
 import {TableModel, TableHeaderItem, TableItem} from "carbon-components-angular"
-import {getDummyData} from "../../../../youpez/data/dummy"
+import {getDummyData} from "../../../../@youpez/data/dummy"
 
 @Component({
   selector: 'app-dummy-table-pagination',

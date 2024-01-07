@@ -63,22 +63,22 @@
                       </div>
                       <ng-container *ngFor="let feature of package.features">
                         <div class="flex items-center mb-1">
-                          <youpez-ibm-icon iconName="checkMarkOutline" class="app-color-success"></youpez-ibm-icon>
+                          <svg cdsIcon="checkMarkOutline" class="app-color-success"></svg>
                           <div class="ml-2">{{feature}}</div>
                         </div>
                       </ng-container>
                     </div>
                     <div class="app-card__content">
                       <ng-container *ngIf="package.button === 1">
-                        <button ibmButton="primary" size="field" class="app-ibm-btn-full">
+                        <button cdsButton="primary" size="field" class="app-ibm-btn-full">
                           Choose plan
-                          <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+                          <svg class="bx--btn__icon" cdsIcon="arrow--right" size="20"></svg>
                         </button>
                       </ng-container>
                       <ng-container *ngIf="package.button === 2">
-                        <button ibmButton="secondary" size="field" class="app-ibm-btn-full">
+                        <button cdsButton="secondary" size="field" class="app-ibm-btn-full">
                           Contact us
-                          <svg class="bx--btn__icon" ibmIconSend size="20"></svg>
+                          <svg class="bx--btn__icon" cdsIcon="send" size="20"></svg>
                         </button>
                       </ng-container>
                     </div>

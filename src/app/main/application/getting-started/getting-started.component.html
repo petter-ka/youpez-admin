@@ -11,7 +11,7 @@
             <div class="">
               <button routerLink="/app/application/welcome" ibmButton="ghost" size="sm"
                       class="bx--btn__icon--left -ml-2">
-                <svg class="bx--btn__icon" ibmIconArrowLeft size="20"></svg>
+                <svg class="bx--btn__icon" cdsIcon="arrow--left" size="20"></svg>
                 Back to dashboard screen
               </button>
             </div>
@@ -27,7 +27,7 @@
                     <div class="app-card__content app-border-b flex justify-between">
                       <div class="app-productive-heading-03">{{video.title}}</div>
                       <ng-container *ngIf="video.seen">
-                        <youpez-ibm-icon iconName="checkMarkOutline" class="app-color-success"></youpez-ibm-icon>
+                        <svg cdsIcon="checkMarkOutline" class="app-color-success"></svg>
                       </ng-container>
                     </div>
                     <div class="app-card__content app-border-b">
