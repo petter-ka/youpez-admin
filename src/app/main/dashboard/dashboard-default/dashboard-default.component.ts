@@ -100,6 +100,7 @@ export class DashboardDefaultComponent implements OnInit {
     }
 
     const getXAxis = (data) => {
+      // @ts-ignore
       return [...Array(data[0].length).keys()]
     }
 

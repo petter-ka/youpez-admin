@@ -120,10 +120,10 @@
                   <svg cdsIcon="subtract" size="16"></svg>
                 </ng-container>
                 <ng-container *ngIf="task.priority === 'low'">
-                  <svg cdsIcon="arrowDown" size="16" class="app-color-success"></svg>
+                  <svg cdsIcon="arrow--down" size="16" class="app-color-success"></svg>
                 </ng-container>
                 <ng-container *ngIf="task.priority === 'high'">
-                  <svg cdsIcon="arrowUp" size="16" class="app-color-danger"></svg>
+                  <svg cdsIcon="arrow--up" size="16" class="app-color-danger"></svg>
                 </ng-container>
               </div>
               <button (click)="onDeleteTask(groupIndex,taskIndex)"

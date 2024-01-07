@@ -5,13 +5,13 @@
 <img class="app-layout__header__logo app-layout__header__logo--black" src="assets/img/logo/logo-big-black.png"/>
 <div class="app-layout__header__tools">
   <button class="app-layout__header__btn app-layout__header__btn--icon" (click)="onItemClick({key:'search'})">
-    <svg cdsIcon="search" size="24"></svg>
+    <svg cdsIcon="search" size="24"></svg>xy
   </button>
   <div ngbDropdown
        placement="bottom-right"
        container="body">
     <button class="app-layout__header__btn app-layout__header__btn--icon" ngbDropdownToggle>
-      <svg cdsIcon="contourFinding" size="24"></svg>
+      <svg cdsIcon="contour-finding" size="24"></svg>
     </button>
     <div ngbDropdownMenu class="relative">
       <div fxLayout="column">
@@ -27,7 +27,7 @@
                 <div class="app-card app-card--select app-card--m-0" ngbDropdownItem
                      routerLink="/app/scrum-board">
                   <div class="app-card__content text-center">
-                    <svg cdsIcon="dashboardReference" size="32"></svg>
+                    <svg cdsIcon="dashboard--reference" size="32"></svg>
                     <div class="app-productive-heading-01 mt-2">SCRUM board</div>
                   </div>
                 </div>

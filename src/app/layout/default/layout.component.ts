@@ -74,7 +74,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
           prefix: {
             type: 'cds-icon',
-            name: 'dashboard-reference',
+            name: 'dashboard--reference',
           },
           url: '/app/scrum-board',
         },

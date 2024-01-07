@@ -13,7 +13,7 @@ import { MatDialogModule } from "@angular/material/dialog"
 import { FlexLayoutModule } from '@angular/flex-layout'
 
 import { ResizableModule } from 'angular-resizable-element'
-// import { BemModule } from 'angular-bem'
+
 import { NgbDropdownModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { AppSidenavComponent } from "./components/app-sidenav/app-sidenav/app-sidenav.component"
@@ -45,8 +45,10 @@ import {
   SelectModule,
   SliderModule,
   NumberModule,
-  FileUploaderModule, ProgressIndicatorModule, ModalModule, TabHeader, IconModule,
+  FileUploaderModule, ProgressIndicatorModule, ModalModule, IconModule, IconService,
 } from 'carbon-components-angular'
+
+import { ArrowLeft20, ArrowRight20, Email20, Notification20, Dashboard20 } from '@carbon/icons'
 
 import { AppMenuComponent } from "./components/app-menu/app-menu/app-menu.component"
 import { AppMenuHeaderComponent } from "./components/app-menu/app-menu-header/app-menu-header.component"
@@ -75,6 +77,7 @@ import { AppContentSimpleComponent } from './components/app-content/app-content-
 import { SafePipe } from "./pipes/safe"
 import { AppLogoComponent } from './components/app-logo/app-logo.component'
 import { AppBreadcrumbComponent } from './components/app-breadcrumb/app-breadcrumb.component'
+import { allIcons } from './icons'
 
 const MainModules = [
   RouterModule,
@@ -182,4 +185,7 @@ const Pipes = [
   ]
 })
 export class YoupezModule {
+  constructor(protected iconService: IconService) {
+    iconService.registerAll(allIcons)
+  }
 }
