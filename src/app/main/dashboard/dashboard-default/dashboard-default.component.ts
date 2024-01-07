@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 
 import * as echarts from 'echarts'
-import {getDummyModel} from "../../../../@youpez/data/dummy"
+import {getDummyModel} from "../../../../youpez/data/dummy"
 
 @Component({
   selector: 'app-dashboard-default',

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core'
-import {getDummyModel} from "../../../../@youpez/data/dummy"
+import {getDummyModel} from "../../../../youpez/data/dummy"
 
 @Component({
   selector: 'app-table-advanced',

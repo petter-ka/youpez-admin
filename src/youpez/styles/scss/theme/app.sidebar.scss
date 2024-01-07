@@ -1,0 +1,270 @@
+@import 'app.helpers';
+
+@mixin appSideBarListStyle1() {
+  .app-sidebar {
+    .app-sidebar__list__item {
+      margin: 0 10px 0 10px;
+
+      .app-sidebar__list__item__inner {
+        padding: 0 16px 0 10px;
+        margin-bottom: 2px;
+        border-radius: 8px;
+      }
+
+      .app-sidebar__list__item__children {
+        padding-left: 18px;
+        margin-right: -10px;
+      }
+    }
+  }
+}
+
+@mixin appSideBarListStyle2() {
+  .app-sidebar {
+    .app-sidebar__list__item {
+      /*margin: 0 10px 0 10px;*/
+
+      .app-sidebar__list__item__inner {
+        padding: 0 26px 0 20px;
+      }
+
+      .app-sidebar__list__item__children {
+
+        .app-sidebar__list__item {
+          .app-sidebar__list__item__inner {
+            padding-left: 48px;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  @include appSideBarListStyle1();
+}
+
+.app-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--theme-main-sidebar--background);
+  padding: 0;
+  color: var(--theme-main-sidebar--color);
+  border-right: 1px solid var(--theme-main-sidebar--border-color);
+
+  .app-sidebar__logo {
+    padding: 0 1.1rem 0 1.1rem;
+    background: var(--theme-main-sidebar--logo-background);
+    height: 65px;
+    position: relative;
+    @extend .app-row;
+    @extend .app-row--center;
+    border-bottom: 1px solid var(--theme-main-sidebar--logo-border);
+
+    img {
+      cursor: pointer;
+      margin-top: 7px;
+      width: 145px;
+    }
+  }
+
+  .app-sidebar__toggle-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    svg {
+      fill: var(--theme-main-sidebar--toggle);
+    }
+  }
+
+  .app-sidebar__list {
+
+    .app-sidebar__list__group {
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s cubic-bezier(.35, 0, .35, 1);
+      transition-property: max-height;
+
+      &.app-sidebar__list__group--opened {
+        max-height: 3000px;
+      }
+    }
+
+    .app-sidebar__list__header {
+      margin: 20px 25px 8px 20px;
+      letter-spacing: 1px;
+      font-size: 12px;
+      cursor: pointer;
+      text-transform: uppercase;
+      @extend .app-row;
+      @extend .app-row--center;
+
+      .app-sidebar__list__header__text {
+        @extend .app-row__fill;
+        @extend .text-overflow-ellipsis;
+        opacity: .8;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .app-sidebar__list__header__toggle {
+        opacity: .8;
+
+        svg {
+          fill: var(--theme-main-sidebar--color);
+        }
+      }
+    }
+
+    .app-sidebar__list__item {
+      cursor: pointer;
+
+      .app-sidebar__list__item__inner {
+        min-height: 38px;
+        outline: none;
+        transition: .1s cubic-bezier(.35, 0, .35, 1);
+        transition-property: all;
+        @extend .app-row;
+        @extend .app-row--center;
+
+        &:hover {
+          &:not(.app-sidebar__list__item__inner--disabled) {
+            background: var(--theme-main-sidebar--hover-background);
+            color: var(--theme-main-sidebar--active-color);
+
+            svg {
+              fill: var(--theme-main-sidebar--active-color);
+            }
+          }
+        }
+
+        &.app-sidebar__list__item__inner--active {
+          background: var(--theme-main-sidebar--active-background);
+          color: var(--theme-main-sidebar--active-color);
+
+          svg {
+            fill: var(--theme-main-sidebar--active-color);
+          }
+        }
+
+        &.app-sidebar__list__item__inner--disabled {
+          cursor: no-drop;
+          opacity: .7;
+        }
+      }
+
+      .app-sidebar__list__item__icon {
+        margin-right: 8px;
+
+        .material-icons-two-tone {
+          font-size: 22px;
+          filter: invert(91%) sepia(5%) saturate(37%) hue-rotate(201deg) brightness(88%) contrast(82%);
+        }
+
+        svg {
+          fill: var(--theme-main-sidebar--color);
+        }
+      }
+
+      .app-sidebar__list__item__caret {
+        fill: var(--theme-main-sidebar--color);
+        transition: .3s cubic-bezier(.35, 0, .35, 1);
+        transition-property: all;
+        transform: rotate(-90deg);
+      }
+
+      .app-sidebar__list__item__text {
+        /*margin-left: 4px;*/
+        @extend .app-row__fill;
+        @extend .text-overflow-ellipsis;
+        line-height: 1rem;
+
+        .app-sidebar__list__item__text__main {
+          padding-top: 10px;
+          margin-bottom: 2px;
+          @extend .text-overflow-ellipsis;
+        }
+
+        .app-sidebar__list__item__text__sub {
+          padding-bottom: 10px;
+          @extend .text-overflow-ellipsis;
+          font-size: 12px;
+          opacity: 0.7;
+        }
+      }
+
+      .app-sidebar__list__item__badge {
+        font-size: 10px;
+        font-weight: 700;
+        border-radius: 100px;
+        padding: 3px 5px;
+        display: inline-block;
+        margin-right: -4px;
+        text-align: center;
+        min-width: 16px;
+
+        & + .app-sidebar__list__item__caret {
+          margin-left: 10px;
+        }
+      }
+
+      .app-sidebar__list__item__children {
+        max-height: 0;
+        padding-top: 0;
+        overflow: hidden;
+        transition: .3s cubic-bezier(.35, 0, .35, 1);
+        transition-property: max-height;
+
+        .app-sidebar__list__item {
+          .app-sidebar__list__item__inner {
+            min-height: 30px;
+
+          }
+
+          .app-sidebar__list__item__children {
+            .app-sidebar__list__item {
+              .app-sidebar__list__item__inner {
+                min-height: 30px;
+              }
+            }
+          }
+        }
+      }
+
+      &.app-sidebar__list__item--opened {
+        & > .app-sidebar__list__item__inner {
+          background: var(--theme-main-sidebar--hover-background);
+          color: var(--theme-main-sidebar--active-color);
+
+          .app-sidebar__list__item__caret {
+            transform: rotate(0deg);
+          }
+        }
+
+        & > .app-sidebar__list__item__children {
+          max-height: 3000px;
+        }
+      }
+
+      &.app-sidebar__list__item--active-opened {
+        & > .app-sidebar__list__item__inner {
+          background: var(--theme-main-sidebar--hover-background);
+          color: var(--theme-main-sidebar--active-color);
+
+          svg {
+            fill: var(--theme-main-sidebar--active-color);
+          }
+        }
+      }
+    }
+  }
+}

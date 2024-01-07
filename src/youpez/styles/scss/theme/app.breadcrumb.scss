@@ -1,0 +1,35 @@
+.app-breadcrumb {
+  margin-bottom: 1px;
+
+  .app-breadcrumb__item {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: .4rem;
+    cursor: pointer;
+    text-decoration: none;
+
+    &.app-breadcrumb__item--active {
+      opacity: .75;
+    }
+
+    &:before {
+      display: inline-block;
+      padding-right: 0.35rem;
+      font-size: 0.72rem;
+      content: "/";
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      cursor: default;
+    }
+  }
+}

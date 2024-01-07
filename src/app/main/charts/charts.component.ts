@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core'
-import charts from '../../../@youpez/data/charts'
+import charts from '../../../youpez/data/charts'
 
 @Component({
   selector: 'app-charts',

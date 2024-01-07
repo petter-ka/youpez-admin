@@ -1,0 +1,334 @@
+@mixin bemEl($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin bemMod($modifier) {
+  &--#{"" + $modifier} {
+    @content;
+  }
+}
+
+@function theme-var($key, $fallback: null, $map: $theme-map-light) {
+  @if not map-has-key($map, $key) {
+    @error "key: '#{$key}', is not a key in map: #{$map}";
+  }
+  @if ($fallback) {
+    @return var($key, $fallback);
+  } @else {
+    @return var($key);
+  }
+}
+
+@mixin spread-map($map: ()) {
+  @each $key, $value in $map {
+    #{$key}: $value;
+  }
+}
+
+@function theme-var($key, $fallback: null, $map: $theme-map-light) {
+  @if not map-has-key($map, $key) {
+    @error "key: '#{$key}', is not a key in map: #{$map}";
+  }
+  @if ($fallback) {
+    @return var($key, $fallback);
+  } @else {
+    @return var($key);
+  }
+}
+
+@mixin color-helper($type,$color) {
+  .app-bg-#{$type} {
+    background-color: $color;
+
+    &.app-bg-#{type}--contrast, &.app-text-contrast {
+      @include text-contrast($color);
+    }
+  }
+
+  svg.app-color-#{$type} {
+    fill: $color;
+  }
+
+  .app-color-#{$type} {
+    color: $color;
+
+    svg {
+      fill: $color;
+    }
+  }
+
+  .app-border-color-#{$type} {
+    border-color: $color;
+  }
+
+  @for $i from 1 through 10 {
+    .app-bg-#{$type}-lt-#{$i*10} {
+      background-color: lighten($color, $i*10%);
+
+      &.app-bg-#{$type}-lt-#{$i*10}--contrast, &.app-text-contrast {
+        @include text-contrast(lighten($color, $i*10%));
+      }
+    }
+
+    .app-bg-#{$type}-o-#{$i*10} {
+      background-color: rgba(darken($color, 3%), calc($i / 10));
+    }
+
+    svg.app-color-#{$type}-lt-#{$i*10} {
+      fill: lighten($color, $i*10%);
+    }
+
+    .app-color-#{$type}-lt-#{$i*10} {
+      color: lighten($color, $i*10%);
+
+      svg {
+        fill: lighten($color, $i*10%);
+      }
+    }
+
+    .app-border-color-#{$type}-lt-#{$i*10} {
+      border-color: lighten($color, $i*10%);
+    }
+  }
+}
+
+@mixin text-contrast($n) {
+  $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+
+  @if abs($color-brightness) < calc($light-color / 2) {
+    color: white;
+    svg {
+      fill: white;
+    }
+  } @else {
+    color: black;
+    svg {
+      fill: black;
+    }
+  }
+}
+
+@mixin theme-bg-helper($color,$name) {
+  .app-theme-bg--#{"" + $name} {
+    background: $color;
+  }
+}
+
+@mixin set-white-logo() {
+  .app-sidebar__logo__black {
+    display: none;
+  }
+  .app-sidebar__logo__white {
+    display: block;
+  }
+  .app-layout__header__logo--white {
+    display: block;
+  }
+  .app-layout__header__logo--black {
+    display: none;
+  }
+}
+
+@mixin set-header-white-logo() {
+  .app-layout__header {
+    @include set-white-logo();
+  }
+}
+
+@mixin set-black-logo() {
+  .app-sidebar__logo__black {
+    display: block;
+  }
+  .app-sidebar__logo__white {
+    display: none;
+  }
+  .app-layout__header__logo--white {
+    display: none;
+  }
+  .app-layout__header__logo--black {
+    display: block;
+  }
+}
+
+@mixin set-header-black-logo() {
+  .app-layout__header {
+    @include set-black-logo();
+  }
+}
+
+@mixin includeScrollbarDark() {
+  --scrollbar-border-radius: 0px;
+  --scrollbar-padding: 2px;
+  --scrollbar-viewport-margin: 0;
+  --scrollbar-track-color: rgba(0, 0, 0, 0.15);
+  --scrollbar-wrapper-color: transparent;
+  --scrollbar-thumb-color: rgba(0, 0, 0, 0.2);
+  --scrollbar-thumb-hover-color: rgba(0, 0, 0, 0.15);
+  --scrollbar-size: 7px;
+  --scrollbar-hover-size: 12px;
+  --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
+  --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
+}
+
+@mixin includeScrollbarLight() {
+  --scrollbar-border-radius: 0px;
+  --scrollbar-padding: 2px;
+  --scrollbar-viewport-margin: 0;
+  --scrollbar-track-color: rgba(255, 255, 255, 0.15);
+  --scrollbar-wrapper-color: transparent;
+  --scrollbar-thumb-color: rgba(255, 255, 255, 0.2);
+  --scrollbar-thumb-hover-color: rgba(255, 255, 255, 0.15);
+  --scrollbar-size: 7px;
+  --scrollbar-hover-size: 12px;
+  --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
+  --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
+}
+
+
+@mixin scrollbarStyleDark() {
+  .app-scrollbar-fix, .app-scrollbar-fix--horizontal {
+    .ng-scrollbar {
+      @include includeScrollbarDark();
+    }
+  }
+}
+
+@mixin scrollbarStyleLight() {
+  .app-scrollbar-fix, .app-scrollbar-fix--horizontal {
+    .ng-scrollbar {
+      @include includeScrollbarLight();
+    }
+  }
+}
+
+@mixin sidebarScrollbarStyleDark() {
+  .app-sidebar.app-scrollbar-fix, .app-sidebar.app-scrollbar-fix--horizontal {
+    .ng-scrollbar {
+      @include includeScrollbarDark();
+    }
+  }
+}
+
+@mixin sidebarScrollbarStyleLight() {
+  .app-sidebar.app-scrollbar-fix, .app-sidebar.app-scrollbar-fix--horizontal {
+    .ng-scrollbar {
+      @include includeScrollbarLight();
+    }
+  }
+}
+
+@mixin sideBarBadgesDarker() {
+  .app-sidebar__list__item__badge--success {
+    background-color: #31413f;
+    color: #2cc9b6;
+  }
+
+  .app-sidebar__list__item__badge--default {
+    background-color: #3f3629;
+    color: #ff9d42;
+  }
+
+  .app-sidebar__list__item__badge--danger {
+    background-color: #413131;
+    color: #ff6057;
+  }
+}
+
+@mixin sideBarBadgesLighter() {
+  .app-sidebar__list__item__badge--success {
+    background-color: #1ed35e;
+    color: #ffffff;
+  }
+
+  .app-sidebar__list__item__badge--default {
+    background-color: #e0e6ee;
+    color: #000000;
+  }
+
+  .app-sidebar__list__item__badge--danger {
+    background-color: #ff5461;
+    color: #fff;
+  }
+}
+
+@mixin logoVisibility($darkTheme) {
+  @if $darkTheme {
+    .app-logo--black {
+      display: none;
+    }
+    .app-logo--white {
+      display: inline-block;
+    }
+  } @else {
+    .app-logo--black {
+      display: inline-block;
+    }
+    .app-logo--white {
+      display: none;
+    }
+  }
+}
+
+@mixin includeScrollbarStyle($darkTheme) {
+  .ng-scrollbar {
+    @if $darkTheme {
+      @include includeScrollbarLight();
+    } @else {
+      @include includeScrollbarDark();
+    }
+  }
+}
+
+@mixin dottedBackground($darkTheme) {
+  @if $darkTheme {
+    background: url(
+    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALklEQVQoU2NkIBIwIqv7//9/AyMjYwM2vSgKQQpwKcZQiEsxVoVEWY3Lb0PBRACHFwwLEZKHggAAAABJRU5ErkJggg==
+    ) repeat;
+  } @else {
+    background: url(
+    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAK0lEQVQoU2NkIBIwoqlrYGBgAGEMgK4QpACrYmwKsSrGpZAoq7F6byiYCACglgMLvdqH6QAAAABJRU5ErkJggg==
+    ) repeat;
+  }
+}
+
+@mixin includeColorHelpers($theme) {
+  $appUIBg: map-get($theme, 'ui-background');
+  $appUIForegroundBg: map-get($theme, 'ui-01');
+  $appColorPrimary: map-get($theme, 'interactive-01');
+  $appColorDecorative: map-get($theme, 'ui-03');
+  $appColorSecondary: map-get($theme, 'interactive-02');
+  $appColorSuccess: map-get($theme, 'support-02');
+  $appColorDanger: map-get($theme, 'support-01');
+  $appColorWarning: map-get($theme, 'support-03');
+  $appColorInfo: map-get($theme, 'support-04');
+
+  @include color-helper('ui', $appUIBg);
+  @include color-helper('container', $appUIForegroundBg);
+  @include color-helper('primary', $appColorPrimary);
+  @include color-helper('secondary', $appColorSecondary);
+  @include color-helper('success', $appColorSuccess);
+  @include color-helper('danger', $appColorDanger);
+  @include color-helper('warning', $appColorWarning);
+  @include color-helper('info', $appColorInfo);
+  @include color-helper('decorative', $appColorDecorative);
+}
+
+@mixin setHeroBg($darkTheme) {
+  .app-header--hero {
+    &:before {
+      @include dottedBackground($darkTheme);
+    }
+  }
+
+  .app-bg-dotted {
+    &:before {
+      @include dottedBackground($darkTheme);
+    }
+  }
+}
+
+
+

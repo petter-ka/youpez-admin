@@ -1,0 +1,19 @@
+.app-theme-bg--holder {
+  margin: 0 -3px;
+}
+
+.app-theme-bg--block {
+  padding: 1px;
+  cursor: pointer;
+  border: 3px solid transparent;
+
+  & > div {
+    height: 35px;
+    margin: 1px;
+    border: 1px solid #ccc;
+  }
+
+  &.app-theme-bg--block--selected {
+    border: 3px solid green;
+  }
+}

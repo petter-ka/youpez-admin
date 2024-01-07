@@ -1,0 +1,45 @@
+<div class="app-lock-screen">
+  <div class="app-lock-screen__overlay app-bg-container app-bg-dotted"></div>
+  <div class="app-lock-screen__modal">
+    <div class="app-lock-screen__modal__inner p-6 app-bg-container" (click)="$event.stopPropagation()">
+      <div class="mb-6">
+        <youpez-logo class="cursor-pointer" logoWidth="140px"></youpez-logo>
+      </div>
+      <div class="app-productive-heading-03 font-bold">Unlock your session</div>
+      <div class="app-body-short-01 mb-4">Your session is locked due to inactivity</div>
+      <div class="flex items-center py-3">
+        <div class="pr-2">
+          <img class="w-10 h-10 rounded-full" src="assets/img/avatar/avatar2.jpg"/>
+        </div>
+        <div class="mr-4">
+          <div>
+            <div class="app-helper-text-01">Signed in as</div>
+            <div class="app-expressive-heading-02">David Robson</div>
+          </div>
+        </div>
+      </div>
+      <ibm-label
+        [helperText]="''">
+        Password
+        <input
+          ibmText
+          type="password"
+          size="md"
+          [disabled]="false"
+          theme="light"
+          [placeholder]="''"
+          [autocomplete]="true">
+      </ibm-label>
+      <div class="mt-5">
+        <button ibmButton="primary" size="field" class="app-ibm-btn-full" (click)="onClose()">
+          Unlock session
+          <svg class="bx--btn__icon" ibmIconCheckmarkOutline size="20"></svg>
+        </button>
+      </div>
+      <div class="pt-5 text-center">
+        <a href="/auth/modern/signin" class="app-link">I am not David Robson</a>
+      </div>
+    </div>
+  </div>
+</div>
+

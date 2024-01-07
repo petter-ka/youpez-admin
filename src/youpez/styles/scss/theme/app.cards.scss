@@ -1,0 +1,253 @@
+.app-card-row-holder {
+  padding: 8px 8px;
+}
+
+.app-card-row {
+  margin: -.5rem;
+}
+
+.app-cards-vertical {
+  .app-card {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.app-cards-title {
+  margin-bottom: -12px;
+}
+
+.app-cards-vertical-merge {
+  .app-card {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid var(--theme-appBorderColor);
+  }
+}
+
+@mixin appCardBt() {
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 3px;
+    background-color: transparent;
+    content: '';
+  }
+}
+
+@mixin appCardBtVertical() {
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: transparent;
+    content: '';
+  }
+}
+
+.app-card-row {
+  margin: 0 -.5rem;
+}
+
+.app-card {
+  position: relative;
+  display: block;
+  min-height: 2rem;
+  background-color: var(--theme-appCardBg);
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  margin: 0.5rem;
+
+  &.app-card--transparent {
+    background-color: transparent;
+  }
+
+  &.app-card--tile {
+    margin: 0.25rem;
+  }
+
+  &.app-card--alone {
+    margin: 1.25rem;
+
+    .app-card__content {
+      padding: 1.5rem;
+    }
+  }
+
+  &.app-card--b-0 {
+    border: none;
+  }
+
+  &.app-card--m-0 {
+    margin: 0;
+  }
+
+  &.app-card--m-b {
+    margin: 0 0 1rem 0;
+  }
+
+  &.app-card--bt-success {
+    @include appCardBt();
+
+    &:before {
+      background-color: var(--theme-appColorSuccess);
+    }
+  }
+
+  &.app-card--bt-success-vertical {
+    @include appCardBtVertical();
+
+    &:before {
+      background-color: var(--theme-appColorSuccess);
+    }
+  }
+
+  &.app-card--bt-danger {
+    @include appCardBt();
+
+    &:before {
+      background-color: var(--theme-appColorDanger);
+    }
+  }
+
+  &.app-card--bt-danger-vertical {
+    @include appCardBtVertical();
+
+    &:before {
+      background-color: var(--theme-appColorDanger);
+    }
+  }
+
+  &.app-card--bt-warning {
+    @include appCardBt();
+
+    &:before {
+      background-color: var(--theme-appColorWarning);
+    }
+  }
+
+  &.app-card--bt-warning-vertical {
+    @include appCardBtVertical();
+
+    &:before {
+      background-color: var(--theme-appColorWarning);
+    }
+  }
+
+  &.app-card--select {
+    cursor: pointer;
+
+    &:hover {
+      outline: 1px solid var(--theme-appColorSecondary);
+    }
+  }
+
+  &.app-card--select--active {
+    cursor: pointer;
+    outline: 2px solid var(--theme-appColorPrimary);
+
+    &:hover {
+      outline: 2px solid var(--theme-appColorPrimary);
+    }
+  }
+
+  .app-card__header {
+    padding: 0.75rem 1.1rem;
+
+    &.app-card__header--border {
+      border-bottom: 1px solid var(--theme-appBorderColor);
+    }
+  }
+
+  .app-card__content {
+    padding: 1.1rem;
+  }
+
+  .app-card__content--inverse {
+    margin: 0 -1.1rem -1.1rem -1.1rem;
+  }
+
+  .app-card__content__alt {
+    padding: 0.8rem;
+  }
+
+  .app-card__content__fill {
+    padding: 0;
+  }
+
+  .app-card__blocks {
+    //border-top: 1px solid $appBorderColor;
+
+    .app-card__block {
+      padding: 1rem;
+      border-right: 1px solid var(--theme-appBorderColor);
+
+      &:last-child {
+        border-right-color: transparent;
+      }
+    }
+
+    &.app-card__blocks--collapse {
+      .app-card__block {
+        border-bottom: 1px solid var(--theme-appBorderColor);
+      }
+    }
+  }
+
+  .app-card__tool {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    button {
+      margin-left: 0.25rem;
+    }
+
+    &.app-card__tool--ghost {
+      button {
+        margin-left: 0;
+      }
+    }
+
+    &.app-card__tool--sign {
+      top: 6px;
+      right: 6px;
+    }
+
+    .app-card__tool__sign {
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+
+      &.app-card__tool__sign--danger {
+        background-color: var(--theme-appColorDanger);
+      }
+
+      &.app-card__tool__sign--success {
+        background-color: var(--theme-appColorSuccess);
+      }
+
+      &.app-card__tool__sign--warning {
+        background-color: var(--theme-appColorWarning);
+      }
+    }
+  }
+}
+
+.app-cards-layout-1 {
+  background: var(--theme-appBorderColor);
+  margin-bottom: -1px;
+  overflow: hidden;
+
+  .app-card {
+    border: none;
+
+    .app-card__content {
+      padding: 1.5rem;
+    }
+  }
+}

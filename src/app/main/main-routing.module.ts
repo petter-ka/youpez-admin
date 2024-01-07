@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core'
-import {Routes, RouterModule} from '@angular/router'
+import {Routes, RouterModule, Route} from '@angular/router'
 import {TypographyComponent} from "./typography/typography.component"
 
 import {LayoutComponent} from '../layout/default/layout.component'
@@ -489,7 +489,7 @@ const routeForPages = [
   {
     path: '**',
     redirectTo: '/app/dashboard/default',
-    pathMatch: 'full',
+    pathMatch: "full" as Route["pathMatch"],
   },
 ]
 

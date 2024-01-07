@@ -1,0 +1,18 @@
+<div class="app-a-box app-scrollbar-fix">
+  <ng-scrollbar track="vertical">
+    <div fxFill
+         fxLayout="row"
+         fxLayoutAlign="center center">
+      <div class="app-divided-content" fxLayout="row">
+        <div data-right fxFlex fxHide fxShow.gt-sm class="relative text-white app-bg-primary">
+          <youpez-auth-welcome-screen></youpez-auth-welcome-screen>
+        </div>
+        <div data-left fxFlex="450px" fxLayoutAlign="center center" class="px-16 py-16 app-bg-container">
+          <div fxFlex style="min-width: 450px">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-scrollbar>
+</div>

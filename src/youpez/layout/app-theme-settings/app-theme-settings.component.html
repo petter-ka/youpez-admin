@@ -1,0 +1,36 @@
+<div class="p-4">
+  <div class="app-productive-heading-03 mb-4 pb-3 app-border-b font-bold">Theme settings</div>
+  <div class="mb-6">
+    <div class="app-subtitle mb-1">THEME STYLE</div>
+    <div fxLayout="row wrap" class="app-theme-bg--holder">
+      <ng-container *ngFor="let theme of appThemes">
+        <div fxFlex="100%" class="app-theme-bg--block "
+             [ngClass]="{'app-theme-bg--block--selected':theme.name === selectedTheme}">
+          <div class="px-3 py-2 uppercase font-bold" (click)="onChangeTheme(theme.name)">{{theme.name}}</div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="mb-6">
+    <div class="app-subtitle mb-1">SIDEBAR STYLE</div>
+    <div fxLayout="row wrap" class="app-theme-bg--holder">
+      <ng-container *ngFor="let theme of sideBarThemes">
+        <div fxFlex="50%" class="app-theme-bg--block"
+             [ngClass]="{'app-theme-bg--block--selected':theme.name === selectedSidebar}">
+          <div (click)="onSetSideBarTheme(theme.name)" class="app-theme-bg--{{theme.name}}"></div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="mb-6">
+    <div class="app-subtitle mb-1">MINI SIDEBAR / HEADER STYLE</div>
+    <div fxLayout="row wrap" class="app-theme-bg--holder">
+      <ng-container *ngFor="let theme of headerThemes">
+        <div fxFlex="50%" class="app-theme-bg--block"
+             [ngClass]="{'app-theme-bg--block--selected':theme.name === selectedHeader}">
+          <div (click)="onSetHeaderTheme(theme.name)" class="app-theme-bg--{{theme.name}}"></div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

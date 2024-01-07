@@ -1,9 +1,8 @@
-import {Component, OnInit} from '@angular/core'
-import {Router, ActivatedRoute, NavigationStart, NavigationEnd, NavigationCancel} from "@angular/router"
-import {environment} from "../environments/environment"
-import {SettingsService} from "../youpez/services/settings.service"
+import { Component, OnInit } from '@angular/core'
+import { Router, ActivatedRoute, NavigationStart, NavigationEnd, NavigationCancel } from "@angular/router"
+import { SettingsService } from '../youpez/services/settings.service'
 
-const getSessionStorage = (key: string) => {
+const getSessionStorage = (key) => {
   return sessionStorage.getItem(key)
 }
 
@@ -15,31 +14,32 @@ const getSessionStorage = (key: string) => {
 export class AppComponent implements OnInit {
   private appLoaded: boolean = false
 
-  constructor(private settingsService: SettingsService,
-              private router: Router,
-              private route: ActivatedRoute,) {
+  constructor(
+    private settingsService: SettingsService,
+    private router: Router,
+    private route: ActivatedRoute,) {
 
   }
 
   ngOnInit(): void {
     this.route.queryParams
       .subscribe((queryParams) => {
-        if (queryParams['theme']) {
-          this.settingsService.setTheme(queryParams['theme'])
+        if (queryParams.theme) {
+          this.settingsService.setTheme(queryParams.theme)
         }
         else {
           this.settingsService.setTheme(getSessionStorage('--app-theme'))
         }
 
-        if (queryParams['sidebar']) {
-          this.settingsService.setSideBar(queryParams['sidebar'])
+        if (queryParams.sidebar) {
+          this.settingsService.setSideBar(queryParams.sidebar)
         }
         else {
           this.settingsService.setSideBar(getSessionStorage('--app-theme-sidebar'))
         }
 
-        if (queryParams['header']) {
-          this.settingsService.setHeader(queryParams['header'])
+        if (queryParams.header) {
+          this.settingsService.setHeader(queryParams.header)
         }
         else {
           this.settingsService.setHeader(getSessionStorage('--app-theme-header'))

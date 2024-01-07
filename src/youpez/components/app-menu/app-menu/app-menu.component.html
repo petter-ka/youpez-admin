@@ -1,0 +1,17 @@
+<div class="app-sidebar__list">
+  <ng-template ngFor let-menuItem [ngForOf]="menu" let-i="index">
+    <div class="app-sidebar__list__inner">
+      <youpez-menu-header [groupName]="menuItem.groupName"
+                       [opened]="menuItem.opened"
+                       (toggle)="onGroupToggle(menuItem.groupName)"></youpez-menu-header>
+      <div class="app-sidebar__list__group" [ngClass]="{'app-sidebar__list__group--opened':menuItem.opened}">
+        <ng-template ngFor let-subMenuItem [ngForOf]="menuItem.children" let-i="index">
+          <app-menu-item [item]="subMenuItem"
+                         (toggle)="onToggle($event)"
+                         #menuLevel></app-menu-item>
+        </ng-template>
+      </div>
+    </div>
+  </ng-template>
+</div>
+

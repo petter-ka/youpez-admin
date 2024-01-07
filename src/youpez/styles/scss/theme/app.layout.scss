@@ -1,0 +1,140 @@
+$appMainHeaderHeight: 48px;
+
+.app-layout {
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  .app-layout__mini-sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 3;
+  }
+
+  .app-layout__content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 60px;
+
+    .app-layout__content__inner {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  .app-layout__header {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: $appMainHeaderHeight;
+    background: var(--theme-main-header--background);
+    color: var(--theme-main-header--color);
+    z-index: 2;
+    @extend .app-row;
+    @extend .app-row--center;
+
+    svg {
+      fill: var(--theme-main-header--color);
+    }
+
+    .app-layout__header__tools {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      justify-content: flex-end;
+    }
+
+    .app-layout__header__btn {
+      outline: 0;
+      border: 0;
+      background: transparent;
+      padding: 0 1rem;
+      margin: 0;
+      cursor: pointer;
+      height: 100%;
+      color: var(--theme-main-header--color);
+
+      &.app-layout__header__btn--icon {
+        padding: 0;
+        width: $appMainHeaderHeight;
+      }
+
+      &:hover {
+        background: var(--theme-main-header--hover-background);
+
+        svg {
+          fill: var(--theme-main-header--hover-color);
+        }
+      }
+
+      &.app-layout__header__btn--menu {
+        width: 60px;
+        padding: 0;
+      }
+    }
+
+
+    .app-layout__header__inner {
+
+    }
+
+    .app-layout__header__logo {
+      width: 120px;
+      cursor: pointer;
+    }
+  }
+
+  &.app-layout--show-header {
+    .app-layout__header {
+      display: flex;
+    }
+
+    .app-layout__content__inner {
+      top: $appMainHeaderHeight;
+    }
+
+    .app-layout__mini-sidebar {
+      display: none;
+    }
+
+    .app-layout__content {
+      left: 0;
+    }
+  }
+
+  &.app-layout--blurred {
+  }
+}
+
+.app-content {
+  position: relative;
+
+  &.app-content--carbon {
+    padding: 0 1.1rem 0 1.1rem;
+  }
+
+  &.app-content--default {
+    padding: 1.1rem;
+  }
+
+  &.app-content--default-bottom {
+    padding: 0 1.1rem 1.1rem 1.1rem;
+  }
+
+  &.app-content--sm {
+    padding: 0.75rem 1.1rem;
+  }
+}

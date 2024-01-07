@@ -1,18 +1,29 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "extends": "./tsconfig.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": "./",
     "outDir": "./out-tsc/app",
-    "types": [
-      "node"
-    ]
+    "types": ["node"],
+    "paths": {
+      "@youpez/*": [
+        "src/youpez/*"
+      ],
+      "@environment": [
+        "src/environments/environment.ts"
+      ],
+    }
   },
   "files": [
     "src/main.ts",
-    "src/main.server.ts",
-    "server.ts"
+    "src/polyfills.ts"
   ],
   "include": [
     "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts",
+    "**/*.mock.ts"
   ]
 }

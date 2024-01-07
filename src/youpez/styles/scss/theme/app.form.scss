@@ -1,0 +1,66 @@
+@import 'app.variables';
+
+.app-form {
+
+  .app-form__row {
+    margin: 0 -0.55rem;
+
+    .app-form__item {
+      padding-left: 0.55rem;
+      padding-right: 0.55rem;
+    }
+  }
+
+  .app-form__header {
+    padding-top: 1rem;
+    border-top: 2px solid var(--theme-appBorderColorAlt);
+
+    &.app-form__header--active {
+      border-top: 3px solid var(--theme-appColorPrimary);
+    }
+  }
+
+  .app-form__item {
+    margin-bottom: 1.1rem;
+
+    &.app-form__item--opts {
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .app-form__submit {
+    margin-top: 1rem;
+  }
+}
+
+.app-input {
+  position: relative;
+
+  .app-input__prefix {
+    position: absolute;
+    top: 32px;
+    left: 10px;
+    z-index: 1;
+
+    & + .bx--form-item {
+      .bx--text-input {
+        padding-left: 2.4rem;
+      }
+    }
+
+  }
+
+  .app-input__suffix {
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    z-index: 1;
+
+    & + .bx--form-item {
+      .bx--text-input {
+        padding-right: 2.4rem;
+      }
+    }
+  }
+}

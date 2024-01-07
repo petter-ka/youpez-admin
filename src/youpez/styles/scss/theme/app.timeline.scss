@@ -1,0 +1,140 @@
+
+@mixin timelineColorHelper() {
+  &:before, &:after {
+    background: var(--theme-appColorSecondary);
+  }
+  &.app-timeline__item--success {
+    &:before, &:after {
+      background: var(--theme-appColorSuccess);
+    }
+  }
+  &.app-timeline__item--info {
+    &:before, &:after {
+      background: var(--theme-appColorInfo);
+    }
+  }
+  &.app-timeline__item--danger {
+    &:before, &:after {
+      background: var(--theme-appColorDanger);
+    }
+  }
+  &.app-timeline__item--warning {
+    &:before, &:after {
+      background: var(--theme-appColorWarning);
+    }
+  }
+}
+
+.app-timeline {
+  position: relative;
+
+  .app-timeline__group {
+  }
+
+  .app-timeline__item {
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--theme-appBorderColor);
+    position: relative;
+
+    &.app-timeline__item--circle {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: -7px;
+        width: 13px;
+        height: 13px;
+        border-radius: 100%;
+      }
+
+      &.app-timeline__item--pulse {
+        &:after {
+          content: "";
+          position: absolute;
+          top: -2px;
+          left: -11px;
+          width: 21px;
+          height: 21px;
+          border-radius: 100%;
+          animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+      }
+
+      .app-timeline__item--level2, &.app-timeline__item--level2 {
+        &:before {
+          top: 4px;
+          left: -4px;
+          width: 7px;
+          height: 7px;
+        }
+
+        &:after {
+          top: -3px;
+        }
+      }
+
+      @include timelineColorHelper();
+    }
+
+    &.app-timeline__item--line {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: -7px;
+        width: 13px;
+        height: 4px;
+      }
+
+      @include timelineColorHelper();
+    }
+
+    & > .app-timeline {
+      padding-top: 0.5rem;
+      margin-left: -1.5rem;
+
+      .app-timeline__item {
+        border-left: none;
+      }
+
+    }
+
+    .app-timeline__item__content {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .app-timeline__time {
+    position: relative;
+    padding-right: 1.5rem;
+
+    &.app-timeline__time--collapse {
+      padding-left: 1.5rem;
+      padding-right: 0;
+      padding-bottom: 0.25rem;
+      border-left: 1px solid rgba(72, 94, 144, 0.16);
+      text-align: left;
+    }
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(.63);
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.8);
+  }
+}

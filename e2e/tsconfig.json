@@ -9,6 +9,7 @@
       "jasmine",
       "jasminewd2",
       "node"
-    ]
+    ],
+    "composite": true
   }
 }

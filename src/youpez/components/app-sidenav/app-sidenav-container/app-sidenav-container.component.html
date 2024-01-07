@@ -1,0 +1,18 @@
+<div class="app-sidenav-container"
+     [ngClass]="{
+      'app-sidenav-container--opened': overlayVisible,
+      'app-sidenav-container--side': sideMode}">
+  <div class="app-sidenav-container__content"
+       [style.marginRight]="contentMargins.right"
+       [style.marginLeft]="contentMargins.left"
+       [style.marginTop]="contentMargins.top"
+       [style.marginBottom]="contentMargins.bottom">
+    <ng-content></ng-content>
+  </div>
+  <div class="app-sidenav-container__overlay"
+       [ngClass]="{'app-sidenav-container__overlay--visible': overlayVisible && !sideMode}"
+       (click)="onCloseAll()"
+       [style.opacity]="overlayOpacity">
+  </div>
+  <ng-content select="youpez-sidenav"></ng-content>
+</div>

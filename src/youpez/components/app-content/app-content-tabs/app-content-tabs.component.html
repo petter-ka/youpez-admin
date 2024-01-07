@@ -1,0 +1,21 @@
+<div class="app-a-box app-scrollbar-fix">
+  <ng-scrollbar>
+    <div class="app-header app-header--carbon">
+      <div class="app-productive-heading-04">{{contentTitle}}</div>
+    </div>
+    <div class="app-ibm-tabs-header sticky top-0 z-10">
+      <ibm-tabs type="container" [isNavigation]="true" [followFocus]="true">
+        <ng-container *ngFor="let tab of tabs;let i = index">
+          <ibm-tab [tabIndex]="i"
+                   [active]="!!tab.active"
+                   [heading]="tab.name"
+                   [disabled]="!!tab.disabled"
+                   (selected)="onClick(tab)"></ibm-tab>
+        </ng-container>
+      </ibm-tabs>
+    </div>
+    <div class="app-content app-content--default z-0">
+      <ng-content></ng-content>
+    </div>
+  </ng-scrollbar>
+</div>

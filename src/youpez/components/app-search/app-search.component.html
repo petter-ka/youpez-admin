@@ -1,0 +1,138 @@
+<div class="app-search">
+  <div class="app-search__overlay"></div>
+  <div class="app-search__modal" (click)="onClose()">
+    <div class="app-search__modal__inner" (click)="$event.stopPropagation()">
+      <div class="app-search__input">
+        <div class="app-search__input__icon">
+          <youpez-ibm-icon iconName="search" iconSize="32"></youpez-ibm-icon>
+        </div>
+        <input #searchElement placeholder="Search..." class="app-search__input__component" type="text"/>
+      </div>
+      <div class="app-search__result" ngClass.lt-md="app-search__result--xs">
+        <div fxFill fxLayout="row wrap">
+          <div fxFlex="100%" fxFlex.gt-sm="40%" class="app-search__result__pane1">
+            <div class="app-a-box app-bg-container app-scrollbar-fix">
+              <ng-scrollbar>
+                <ng-container *ngIf="loading">
+                  <div class="p-4">
+                    <ibm-skeleton-text
+                      [lines]="12"
+                      [minLineWidth]="70"
+                      [maxLineWidth]="220">
+                    </ibm-skeleton-text>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="!loading">
+                  <div class="app-list-header-title">TOP HITS</div>
+                  <div class="app-list app-list--hover app-list--p app-list--select">
+                    <div class="app-list__item">
+                      <div class="app-list__item__content truncate">
+                        <mark class="app-text-mark">Kube</mark>
+                        rnetes cluster prod env
+                      </div>
+                    </div>
+                    <div class="app-list__item">
+                      <div class="app-list__item__content truncate">
+                        <mark class="app-text-mark">Kube</mark>
+                        ctl EU. Region
+                      </div>
+                    </div>
+                    <div class="app-list__item">
+                      <div class="app-list__item__content truncate">
+                        <mark class="app-text-mark">Kube</mark>
+                        -proxy EKS
+                      </div>
+                    </div>
+                    <div class="app-list__item">
+                      <div class="app-list__item__content truncate">
+                        <mark class="app-text-mark">Kube</mark>
+                        let primary node US
+                      </div>
+                    </div>
+                    <div class="app-list__item">
+                      <div class="app-list__item__content truncate">
+                        K8S-
+                        <mark class="app-text-mark"> Kuber</mark>
+                        netes scheduler
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-list-header-title">MORE RESULT</div>
+                  <div class="app-list app-list--hover app-list--p app-list--select">
+                    <div class="app-list__item">
+                      <div class="app-list__item__content">
+                        Google Cloud - GKS
+                      </div>
+                    </div>
+                    <div class="app-list__item">
+                      <div class="app-list__item__content">
+                        AWS - EKS
+                      </div>
+                    </div>
+                    <div class="app-list__item">
+                      <div class="app-list__item__content">
+                        Azure - AKS
+                      </div>
+                    </div>
+                    <div class="app-list__item">
+                      <div class="app-list__item__content">
+                        Alibaba - ACK
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </ng-scrollbar>
+            </div>
+          </div>
+          <div fxFlex="100%" fxFlex.gt-sm="60%" class="app-search__result__pane2">
+            <ng-container *ngIf="loading">
+              <div class="mb-2">
+                <ibm-skeleton-text
+                  [lines]="2"
+                  [minLineWidth]="70"
+                  [maxLineWidth]="180">
+                </ibm-skeleton-text>
+              </div>
+              <ibm-skeleton-text
+                [lines]="4"
+                [minLineWidth]="60"
+                [maxLineWidth]="220">
+              </ibm-skeleton-text>
+            </ng-container>
+            <ng-container *ngIf="!loading">
+              <div>
+                <div class="mb-2">
+                  <div class="app-row app-row--center">
+                    <div class="app-symbol mr-3">
+                      <div class="app-symbol__label w-10 h-10 app-expressive-heading-01 app-color-success app-bg-success-lt-40 rounded-md">
+                        K8S
+                      </div>
+                    </div>
+                    <div>
+                      <div class="app-expressive-heading-03">Kubernetes workload</div>
+                      <div class="app-helper-text-01 app-color-success">(GKS) status - OK</div>
+                    </div>
+                  </div>
+                </div>
+                <p class="app-body-long-01">
+                  This is the production cluster.
+                  To access Dashboard from your local workstation you must create a secure channel to your Kubernetes
+                  cluster.
+                </p>
+              </div>
+            </ng-container>
+            <div class="app-search__result__btn">
+              <button (click)="onClose()" [skeleton]="loading" ibmButton="tertiary" size="sm">
+                Cancel
+              </button>
+              <button (click)="onClose()" [skeleton]="loading" ibmButton="primary" size="sm">
+                Go to project
+                <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

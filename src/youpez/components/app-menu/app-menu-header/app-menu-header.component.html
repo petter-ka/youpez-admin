@@ -1,0 +1,17 @@
+<div class="app-sidebar__list__header" (click)="onToggle()">
+  <div class="app-sidebar__list__header__text">
+    {{groupName}}
+  </div>
+  <div class="app-sidebar__list__header__toggle">
+    <ng-container *ngIf="opened">
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24">
+        <path d="M0 9h24v6h-24z"/>
+      </svg>
+    </ng-container>
+    <ng-container *ngIf="!opened">
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24">
+        <path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/>
+      </svg>
+    </ng-container>
+  </div>
+</div>

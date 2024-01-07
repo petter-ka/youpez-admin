@@ -1,0 +1,144 @@
+.app-main-header {
+  padding: 0 1.1rem 0 1.1rem;
+  position: relative;
+  height: 65px;
+  @extend .app-row;
+  @extend .app-row--center;
+
+  .app-main-header__inner {
+    @extend .app-row;
+    @extend .app-row--center;
+  }
+
+  .app-main-header__text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  .app-main-header__menu-btn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 6px;
+    height: 19px;
+    width: 18px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .app_main-header__tools {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem;
+
+    @extend .app-row;
+    @extend .app-row--center;
+  }
+
+  &.app-main-header--border {
+    border-bottom: 1px solid var(--theme-header-border);
+  }
+}
+
+.app-header {
+  position: relative;
+
+  &.app-header--default {
+    padding: 0.75rem 1.1rem;
+
+    .app_header__tools {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.75rem;
+
+      @extend .app-row;
+      @extend .app-row--center;
+    }
+  }
+
+  &.app-header--sm {
+    padding: 0.75rem 1rem;
+
+    .app_header__tools {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+
+      @extend .app-row;
+      @extend .app-row--center;
+    }
+  }
+
+  &.app-header--hero {
+    padding: 40px 40px;
+    background: transparent;
+
+    &:before {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      bottom: 0;
+      left: 10px;
+      content: '';
+      opacity: .5;
+    }
+
+    .app_header__tools {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+  }
+
+  &.app-header--carbon {
+    padding: 2.2rem 1.1rem 1.1rem 1.1rem;
+    /*background: $appColorHighContrast;
+    color: $appColorHighContrastTextOn;*/
+    background: #161616;
+    color: #ffffff;
+
+    .app_header__tools {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+
+    &.app-header--with-tabs {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.app-header-subheader {
+  height: 47px;
+  @extend .app-row;
+  @extend .app-row--center;
+  padding: 0 1.1rem;
+  background-color: var(--theme-appUIForegroundBg);
+  border-bottom: 1px solid var(--theme-appBorderColor);
+  position: relative;
+
+  .app-sidebar-toggle-btn {
+    margin-left: -0.25rem;
+    margin-right: 0.75rem;
+  }
+
+  &.app-header-subheader--transparent {
+    background-color: transparent;
+  }
+
+  &.app-header-subheader--left-alt {
+    padding-left: calc(1.1rem - 0.4375rem);
+  }
+
+  &.app-header-subheader--right-alt {
+    padding-right: calc(1.1rem - 0.4375rem);
+  }
+}

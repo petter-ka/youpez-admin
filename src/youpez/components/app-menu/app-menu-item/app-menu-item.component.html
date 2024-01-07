@@ -1,0 +1,86 @@
+<ng-template #menuItemTemplate>
+  <ng-container *ngIf="item.prefix">
+    <div class="app-sidebar__list__item__icon">
+      <ng-container *ngIf="item.prefix.type === 'ibm-icon'">
+        <youpez-ibm-icon [iconName]="item.prefix.name" [iconSize]="'20'"></youpez-ibm-icon>
+      </ng-container>
+    </div>
+  </ng-container>
+  <div class="app-sidebar__list__item__text">
+    <ng-container *ngIf="!item.subtitle">
+      {{item.name}}
+    </ng-container>
+    <ng-container *ngIf="item.subtitle">
+      <div class="app-sidebar__list__item__text__main">{{item.name}}</div>
+      <div class="app-sidebar__list__item__text__sub">{{item.subtitle}}</div>
+    </ng-container>
+  </div>
+  <ng-container *ngIf="item.suffix">
+    <span class="app-sidebar__list__item__badge"
+          [ngClass]="{'app-sidebar__list__item__badge--default':item.suffix.level === 'default',
+    'app-sidebar__list__item__badge--danger':item.suffix.level === 'danger',
+    'app-sidebar__list__item__badge--success':item.suffix.level === 'success'}">
+      {{item.suffix.text || '&nbsp;'}}
+    </span>
+  </ng-container>
+  <ng-container *ngIf="item.children">
+    <div class="app-sidebar__list__item__caret">
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24">
+        <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
+      </svg>
+    </div>
+  </ng-container>
+</ng-template>
+
+<div class="app-sidebar__list__item"
+     [ngClass]="{'app-sidebar__list__item--opened app-sidebar__list__item--active-opened':isRouteActive(item.parentUrl)}"
+     #parentHolder>
+
+  <ng-container *ngIf="item.children">
+    <ng-container *ngIf="!item.disabled">
+      <div class="app-sidebar__list__item__inner" (click)="toggle.next($event)">
+        <ng-container *ngTemplateOutlet="menuItemTemplate"></ng-container>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="item.disabled === true">
+      <div class="app-sidebar__list__item__inner app-sidebar__list__item__inner--disabled">
+        <ng-container *ngTemplateOutlet="menuItemTemplate"></ng-container>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="!item.children">
+    <ng-container *ngIf="!item.disabled">
+      <ng-container *ngIf="item.url">
+        <div class="app-sidebar__list__item__inner"
+             [routerLinkActive]="['app-sidebar__list__item__inner--active']"
+             [routerLinkActiveOptions]="{exact:true}"
+             [routerLink]="item.url"
+             [attr.route]="item.url">
+          <ng-container *ngTemplateOutlet="menuItemTemplate"></ng-container>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="!item.url">
+        <div (click)="onClick()" class="app-sidebar__list__item__inner">
+          <ng-container *ngTemplateOutlet="menuItemTemplate"></ng-container>
+        </div>
+      </ng-container>
+    </ng-container>
+    <ng-container *ngIf="item.disabled === true">
+      <div class="app-sidebar__list__item__inner app-sidebar__list__item__inner--disabled">
+        <ng-container *ngTemplateOutlet="menuItemTemplate"></ng-container>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="item.children">
+    <div class="app-sidebar__list__item__children">
+      <ng-template ngFor let-child [ngForOf]="item.children" let-i="index">
+        <app-menu-item [item]="child"
+                       (toggle)="onToggle($event)"
+                       #menuLevel></app-menu-item>
+      </ng-template>
+    </div>
+  </ng-container>
+
+</div>

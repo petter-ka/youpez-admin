@@ -1,0 +1,148 @@
+<ng-template #deleteGroupTemplate let-tooltip="tooltip" let-groupIndex="groupIndex">
+  <p>Delete list?</p>
+  <div class="bx--tooltip__footer">
+    <button ibmButton="danger" size="sm" (click)="tooltip.doClose();onDeleteGroup(deletableTaskGroupIndex)">Delete
+    </button>
+    <button ibmButton="ghost" size="sm" (click)="tooltip.doClose();">Cancel</button>
+  </div>
+</ng-template>
+<div cdkDropList
+     [cdkDropListData]="taskGroups"
+     (cdkDropListDropped)="dropGroup($event)">
+  <ng-container *ngFor="let group of taskGroups;trackBy: trackByFn;let groupIndex=index">
+    <div cdkDropListGroup
+         cdkDrag
+         [cdkDragData]="group"
+         [ngClass]="{'app-bg-container app-list--border-over':!transparent, 'opacity-75':getProgress(groupIndex) === '100%'}"
+         class="app-list app-list--todo mb-3">
+      <div class="app-list__group">
+        <ng-container *ngIf="group.tasks.length">
+          <div class="app-progress app-progress--x-small">
+            <div class="app-progress__bar app-bg-success-lt-20" [style.width]="getProgress(groupIndex)"></div>
+          </div>
+        </ng-container>
+        <div>
+          <div class="app-list__item">
+            <div>
+              <button (click)="onToggleGroup(groupIndex)"
+                      ibmButton="ghost" size="sm" class="bx--btn--icon-only">
+                <ng-container *ngIf="group.opened">
+                  <svg class="bx--btn__icon" ibmIconChevronDown size="32"></svg>
+                </ng-container>
+                <ng-container *ngIf="!group.opened">
+                  <svg class="bx--btn__icon" ibmIconChevronUp size="32"></svg>
+                </ng-container>
+              </button>
+            </div>
+            <div class="app-list__item__content" [ngClass]="{'line-through':getProgress(groupIndex) === '100%'}">
+              <ng-container *ngIf="taskFocusId === group.id">
+                <input cdkTrapFocus
+                       cdkTrapFocusAutoCapture
+                       placeholder="List description..."
+                       class="flex-1 app-list__item__input app-expressive-heading-02"
+                       type="text"
+                       (input)="onGroupChange($event.target.value,groupIndex)"
+                       [value]="group.groupName"/>
+              </ng-container>
+              <ng-container *ngIf="taskFocusId !== group.id">
+                <input class="flex-1 app-list__item__input app-expressive-heading-02"
+                       type="text"
+                       placeholder="List description..."
+                       (input)="onGroupChange($event.target.value,groupIndex)"
+                       [value]="group.groupName"/>
+              </ng-container>
+            </div>
+            <div class="flex items-center">
+              <div class="cursor-move" style="margin-bottom: -2px;">
+                <youpez-ibm-icon cdkDragHandle iconName="draggable" iconSize="16"></youpez-ibm-icon>
+              </div>
+              <button
+                (click)="onSelectedDeletableGroup(groupIndex)"
+                [ibmTooltip]="deleteGroupTemplate"
+                [offset]="{x:0,y:0}"
+                [trigger]="'click'"
+                [placement]="'left'"
+                ibmButton="ghost"
+                size="sm"
+                class="bx--btn--icon-only bx--btn--remove-tooltip">
+                <svg class="bx--btn__icon" ibmIconTrashCan size="32"></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div cdkDropList
+             id={{group.id}}
+             [cdkDropListData]="group.tasks"
+             (cdkDropListDropped)="drop($event)"
+             [cdkDropListConnectedTo]="getConnectedList()"
+             [ngClass]="{'hidden':!group.opened}"
+             class="app-list__group__children">
+          <ng-container
+            *ngFor="let task of group.tasks | inputTypeAdvanced:'description':_filterText;trackBy: trackByFn;let taskIndex=index">
+            <div cdkDrag [cdkDragData]="task" class="app-list__item" [ngClass]="{'opacity-75':task.checked}">
+              <div cdkDragHandle class="app-list__item__drag">
+                <youpez-ibm-icon iconName="draggable" iconSize="16"></youpez-ibm-icon>
+              </div>
+              <div class="mr-1">
+                <ibm-checkbox
+                  (change)="onToggleTask($event,groupIndex,taskIndex)"
+                  [checked]="task.checked">
+                </ibm-checkbox>
+              </div>
+              <ng-container *ngIf="task.checked">
+                <div class="app-list__item__content">
+                  <div
+                    class="flex-1 app-list__item__input app-body-short-01 line-through text-muted">{{task.description}}</div>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="!task.checked">
+                <div class="app-list__item__content">
+                  <ng-container *ngIf="taskFocusId === task.id">
+                    <input class="flex-1 app-list__item__input app-body-short-01"
+                           placeholder="Task description..."
+                           cdkTrapFocus
+                           cdkTrapFocusAutoCapture
+                           type="text"
+                           (input)="onTaskChange($event.target.value,groupIndex,taskIndex)"
+                           [value]="task.description"/>
+                  </ng-container>
+                  <ng-container *ngIf="taskFocusId !== task.id">
+                    <input class="flex-1 app-list__item__input app-body-short-01"
+                           placeholder="Task description..."
+                           type="text"
+                           (input)="onTaskChange($event.target.value,groupIndex,taskIndex)"
+                           [value]="task.description"/>
+                  </ng-container>
+                </div>
+              </ng-container>
+              <div (click)="onSwitchPriority(groupIndex,taskIndex)" class="cursor-pointer">
+                <ng-container *ngIf="task.priority === undefined || task.priority === 'normal'">
+                  <youpez-ibm-icon iconName="subtract" iconSize="16"></youpez-ibm-icon>
+                </ng-container>
+                <ng-container *ngIf="task.priority === 'low'">
+                  <youpez-ibm-icon iconName="arrowDown" iconSize="16" class="app-color-success"></youpez-ibm-icon>
+                </ng-container>
+                <ng-container *ngIf="task.priority === 'high'">
+                  <youpez-ibm-icon iconName="arrowUp" iconSize="16" class="app-color-danger"></youpez-ibm-icon>
+                </ng-container>
+              </div>
+              <button (click)="onDeleteTask(groupIndex,taskIndex)"
+                      ibmButton="ghost" size="sm"
+                      class="bx--btn--icon-only bx--btn--remove-tooltip">
+                <svg class="bx--btn__icon" ibmIconTrashCan size="32"></svg>
+              </button>
+            </div>
+          </ng-container>
+          <div class="app-list__add-btn">
+            <ng-container *ngIf="_filterText === ''">
+              <button (click)="onAddTask(groupIndex)" ibmButton="tertiary" size="sm">
+                Add task
+                <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+              </button>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core'
-import {AppTasksComponent} from "../../../../@youpez"
+import {AppTasksComponent} from "../../../../youpez"
 
 
 @Component({

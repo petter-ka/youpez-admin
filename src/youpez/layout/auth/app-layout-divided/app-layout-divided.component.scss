@@ -1,0 +1,9 @@
+.app-layout-divided-middle {
+  max-width: 1200px;
+  width: calc(100% - 16px);
+
+
+  .app-divided-content {
+    min-height: 660px;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="app-a-box app-scrollbar-fix">
+  <ng-scrollbar track="vertical">
+    <div fxFill
+         fxLayout="row"
+         fxLayoutAlign="center center">
+      <div class="app-layout-divided-middle">
+        <div class="app-divided-content" fxLayout="row">
+          <div data-left fxFlex="450px" class="px-16 py-16 app-bg-container" style="max-width: 450px">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-scrollbar>
+</div>
+
