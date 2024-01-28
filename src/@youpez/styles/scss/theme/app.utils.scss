@@ -4,9 +4,15 @@ body {
   overflow: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: .16px;
 }
 
- youpez-ibm-icon, .app-ibm-icon, .app-ibm-pictogram {
+youpez-ibm-icon,
+.app-ibm-icon,
+.app-ibm-pictogram {
   svg {
     fill: var(--theme-appText);
   }
@@ -80,9 +86,8 @@ body {
 
 .app-bg-pattern-dotted {
   background-repeat: repeat;
-  background: url(
-  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAKklEQVQoU2NkIBIwEqmOgWyFDQwMDCCMAbCZiFUxLqsxFJPtRpyBQH0TAaqHAwtRB8lvAAAAAElFTkSuQmCC
-  ) repeat;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAKklEQVQoU2NkIBIwEqmOgWyFDQwMDCCMAbCZiFUxLqsxFJPtRpyBQH0TAaqHAwtRB8lvAAAAAElFTkSuQmCC
+) repeat;
 }
 
 .app-bg-dotted {

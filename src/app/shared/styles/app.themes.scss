@@ -1,8 +1,11 @@
+@use "@carbon/styles";
+
 @import '../../../@youpez/styles/scss/theme/app.variables.scss';
 @import '../../../@youpez/styles/scss/theme/app.helpers.scss';
 
 // LAYOUT THEMES
 :root.app-theme--light {
+  @include styles.theme(styles.$g10);
   @include spread-map($theme-map-light);
   @include includeScrollbarStyle(false);
   @include logoVisibility(false);
@@ -11,6 +14,7 @@
 }
 
 :root.app-theme--dark {
+  @include styles.theme(styles.$g100);
   @include spread-map($theme-map-dark);
   @include includeScrollbarStyle(true);
   @include logoVisibility(true);

@@ -1,2 +1,3 @@
-@use "@carbon/styles";
-@import "app.variables";
+@use "@carbon/styles/scss/config" with ( // Use flexbox for grid - stick to CSS Grid or Flexbox
+    // CSS Grid has become the default grid system in v11
+    $use-flexbox-grid: true);
