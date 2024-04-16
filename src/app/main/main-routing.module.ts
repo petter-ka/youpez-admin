@@ -9,33 +9,13 @@ import {WidgetsGeneralComponent} from "./widgets/widgets-general/widgets-general
 import {DashboardDefaultComponent} from "./dashboard/dashboard-default/dashboard-default.component"
 import {DashboardAnalyticsComponent} from "./dashboard/dashboard-analytics/dashboard-analytics.component"
 import {DashboardCryptoComponent} from "./dashboard/dashboard-crypto/dashboard-crypto.component"
-import {ScrumBoardComponent} from "./scrum/scrum-board/scrum-board.component"
-import {TasksComponent} from "./tasks/tasks/tasks.component"
-import {FileManagerComponent} from "./file-manager/file-manager/file-manager.component"
-import {MailComponent} from "./mail/mail/mail.component"
-import {MessagesComponent} from "./messages/messages/messages.component"
-import {UserSettingsComponent} from "./user/user-settings/user-settings.component"
-import {UserLayoutComponent} from "./user/user-layout/user-layout.component"
-import {UserBillingComponent} from "./user/user-billing/user-billing.component"
-import {UserCreditcardComponent} from "./user/user-creditcard/user-creditcard.component"
-import {UserTransactionsComponent} from "./user/user-transactions/user-transactions.component"
-import {TimelineComponent} from "./timeline/timeline.component"
-import {ProfileComponent} from "./profile/profile.component"
-import {InvoiceComponent} from "./invoice/invoice.component"
-import {SearchResultComponent} from "./search-result/search-result.component"
 import {Error404Component} from "./errors/error404/error404.component"
 import {Error500Component} from "./errors/error500/error500.component"
-import {PricingSimpleComponent} from "./pricing/pricing-simple/pricing-simple.component"
-import {PricingModernComponent} from "./pricing/pricing-modern/pricing-modern.component"
-import {PricingTableComponent} from "./pricing/pricing-table/pricing-table.component"
-import {MaintenanceComponent} from "./maintenance/maintenance.component"
 import {FaqComponent} from "./application/faq/faq.component"
 import {ManualComponent} from "./application/manual/manual.component"
 import {SupportComponent} from "./application/support/support.component"
-import {ChangelogComponent} from "./application/changelog/changelog.component"
 import {WelcomeComponent} from "./application/welcome/welcome.component"
 import {GettingStartedComponent} from "./application/getting-started/getting-started.component"
-import {UiComponentsComponent} from "./ui-components/ui-components.component"
 import {WidgetsCardComponent} from "./widgets/widgets-card/widgets-card.component"
 import {WidgetsListComponent} from "./widgets/widgets-list/widgets-list.component"
 import {TableBasicComponent} from "./tables/table-basic/table-basic.component"
@@ -277,83 +257,6 @@ const routeForPages = [
     },
   },
   {
-    path: 'scrum-board',
-    component: ScrumBoardComponent,
-    data: {
-      breadcrumb: 'Scrum board'
-    },
-  },
-  {
-    path: 'tasks',
-    component: TasksComponent,
-    data: {
-      breadcrumb: 'Tasks'
-    },
-  },
-  {
-    path: 'file-manager',
-    component: FileManagerComponent,
-    data: {
-      breadcrumb: 'File-manager'
-    },
-  },
-  {
-    path: 'ui-components',
-    component: UiComponentsComponent,
-    data: {
-      breadcrumb: 'UI components'
-    },
-  },
-  {
-    path: 'mail',
-    component: MailComponent,
-    data: {
-      breadcrumb: 'Mail'
-    },
-  },
-  {
-    path: 'messages',
-    component: MessagesComponent,
-    data: {
-      breadcrumb: 'Messages'
-    },
-  },
-  {
-    path: 'timeline',
-    component: TimelineComponent,
-    data: {
-      breadcrumb: 'Timeline'
-    },
-  },
-  {
-    path: 'profile',
-    component: ProfileComponent,
-    data: {
-      breadcrumb: 'Profile'
-    },
-  },
-  {
-    path: 'invoice',
-    component: InvoiceComponent,
-    data: {
-      breadcrumb: 'Invoice'
-    },
-  },
-  {
-    path: 'search-result',
-    component: SearchResultComponent,
-    data: {
-      breadcrumb: 'Search Result'
-    },
-  },
-  {
-    path: 'maintenance',
-    component: MaintenanceComponent,
-    data: {
-      breadcrumb: 'Maintenance'
-    },
-  },
-  {
     path: 'errors',
     children: [
       {
@@ -369,72 +272,6 @@ const routeForPages = [
   {
     path: 'starters',
     children: [...starterPages],
-  },
-  {
-    path: 'pricing',
-    data: {
-      breadcrumb: 'Pricing'
-    },
-    children: [
-      {
-        path: 'simple',
-        component: PricingSimpleComponent,
-        data: {
-          breadcrumb: 'Simple'
-        },
-      },
-      {
-        path: 'modern',
-        component: PricingModernComponent,
-        data: {
-          breadcrumb: 'Modern'
-        },
-      },
-      {
-        path: 'table',
-        component: PricingTableComponent,
-        data: {
-          breadcrumb: 'Table'
-        },
-      }
-    ],
-  },
-  {
-    path: 'user',
-    component: UserLayoutComponent,
-    data: {
-      breadcrumb: 'User'
-    },
-    children: [
-      {
-        path: 'settings',
-        component: UserSettingsComponent,
-        data: {
-          breadcrumb: 'Settings'
-        },
-      },
-      {
-        path: 'billing',
-        component: UserBillingComponent,
-        data: {
-          breadcrumb: 'Billing'
-        },
-      },
-      {
-        path: 'creditcard',
-        component: UserCreditcardComponent,
-        data: {
-          breadcrumb: 'Creditcard'
-        },
-      },
-      {
-        path: 'transactions',
-        component: UserTransactionsComponent,
-        data: {
-          breadcrumb: 'Transactions'
-        },
-      },
-    ]
   },
   {
     path: 'application',
@@ -475,13 +312,6 @@ const routeForPages = [
         component: SupportComponent,
         data: {
           breadcrumb: 'Support'
-        },
-      },
-      {
-        path: 'changelog',
-        component: ChangelogComponent,
-        data: {
-          breadcrumb: 'Changelog'
         },
       },
     ]
