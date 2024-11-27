@@ -1,3 +1,6 @@
+@use '@carbon/styles';
+
 @import './themes/app.dark.2';
-@import "~carbon-components/scss/globals/scss/colors";
-@import "node_modules/carbon-components/scss/globals/scss/styles";
+@import '@carbon/colors';
+// @import "carbon-components/scss/globals/scss/colors";
+// @import "carbon-components/scss/globals/scss/styles";

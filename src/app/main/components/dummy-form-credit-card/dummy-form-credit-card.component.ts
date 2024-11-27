@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core'
-import {FormBuilder, FormGroup, Validators} from "@angular/forms"
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms"
 import {isFormItemValid} from "../../../../@youpez"
 
 @Component({
@@ -12,9 +12,9 @@ export class DummyFormCreditCardComponent implements OnInit {
   @Input() theme: string = 'light'
   @Input() layout: string = 'horizontal'
 
-  public formGroup: FormGroup
+  public formGroup: UntypedFormGroup
 
-  constructor(protected formBuilder: FormBuilder,) {
+  constructor(protected formBuilder: UntypedFormBuilder,) {
   }
 
   ngOnInit(): void {

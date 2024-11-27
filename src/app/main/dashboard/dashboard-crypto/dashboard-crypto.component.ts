@@ -490,9 +490,9 @@ export class DashboardCryptoComponent implements OnInit {
           },
         }
         this.loading = false
-        setTimeout(() => {
+        setTimeout((params) => {
           try {
-            this.gridOptions.api.sizeColumnsToFit()
+            params.gridOptions.api.sizeColumnsToFit(6)
           } catch (error) {
 
           }

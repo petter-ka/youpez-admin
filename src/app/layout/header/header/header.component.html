@@ -1,15 +1,13 @@
 <button (click)="onSideBarToggle($event)" class="app-layout__header__btn app-layout__header__btn--menu">
   <youpez-ibm-icon iconName="menu"></youpez-ibm-icon>
 </button>
-<img class="app-layout__header__logo app-layout__header__logo--white" src="assets/img/logo/logo-big-white.png"/>
-<img class="app-layout__header__logo app-layout__header__logo--black" src="assets/img/logo/logo-big-black.png"/>
+<img class="app-layout__header__logo app-layout__header__logo--white" src="assets/img/logo/logo-big-white.png" />
+<img class="app-layout__header__logo app-layout__header__logo--black" src="assets/img/logo/logo-big-black.png" />
 <div class="app-layout__header__tools">
   <button class="app-layout__header__btn app-layout__header__btn--icon" (click)="onItemClick({key:'search'})">
     <youpez-ibm-icon iconName="search" iconSize="24"></youpez-ibm-icon>
   </button>
-  <div ngbDropdown
-       placement="bottom-right"
-       container="body">
+  <div ngbDropdown placement="bottom-right" container="body">
     <button class="app-layout__header__btn app-layout__header__btn--icon" ngbDropdownToggle>
       <youpez-ibm-icon iconName="contourFinding" iconSize="24"></youpez-ibm-icon>
     </button>
@@ -24,8 +22,7 @@
           <div class="relative" style="width: 260px">
             <div fxLayout="row wrap" class="app-border-b">
               <div fxFlex="50%" class="app-border-r">
-                <div class="app-card app-card--select app-card--m-0" ngbDropdownItem
-                     routerLink="/app/scrum-board">
+                <div class="app-card app-card--select app-card--m-0" ngbDropdownItem routerLink="/app/scrum-board">
                   <div class="app-card__content text-center">
                     <youpez-ibm-icon iconName="dashboardReference" iconSize="32"></youpez-ibm-icon>
                     <div class="app-productive-heading-01 mt-2">SCRUM board</div>
@@ -43,8 +40,7 @@
             </div>
             <div fxLayout="row wrap" class="app-border-b">
               <div fxFlex="50%" class="app-border-r">
-                <div class="app-card app-card--select app-card--m-0" ngbDropdownItem
-                     routerLink="/app/file-manager">
+                <div class="app-card app-card--select app-card--m-0" ngbDropdownItem routerLink="/app/file-manager">
                   <div class="app-card__content text-center">
                     <youpez-ibm-icon iconName="folder" iconSize="32"></youpez-ibm-icon>
                     <div class="app-productive-heading-01 mt-2">File manager</div>
@@ -83,9 +79,7 @@
       </div>
     </div>
   </div>
-  <div ngbDropdown
-       placement="bottom-right"
-       container="body">
+  <div ngbDropdown placement="bottom-right" container="body">
     <button class="app-layout__header__btn app-layout__header__btn--icon" ngbDropdownToggle>
       <youpez-ibm-icon iconName="user" iconSize="24"></youpez-ibm-icon>
     </button>
@@ -93,7 +87,7 @@
       <div class="app-list app-list--hover app-list--select app-list--no-border app-list--p">
         <div class="app-list__item app-list__item--no-p" ngbDropdownItem>
           <div class="px-2">
-            <img class="w-10 h-10 rounded-full" src="assets/img/avatar/avatar2.jpg"/>
+            <img class="w-10 h-10 rounded-full" src="assets/img/avatar/avatar2.jpg" />
           </div>
           <div class="app-list__item__content mr-4">
             <div>

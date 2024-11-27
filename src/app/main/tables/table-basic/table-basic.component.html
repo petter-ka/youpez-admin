@@ -7,10 +7,10 @@
           <ibm-radio-group
             aria-label="radiogroup">
             <ibm-radio *ngFor="let radio of tableSizes"
-                       (change)="onChange1($event)"
-                       [checked]="radio.checked"
-                       [value]="radio.num"
-                       [disabled]="radio.disabled">
+                      (change)="onChange1($event)"
+                      [checked]="radio.checked"
+                      [value]="radio.num"
+                      [disabled]="radio.disabled">
               {{radio.num}}
             </ibm-radio>
           </ibm-radio-group>

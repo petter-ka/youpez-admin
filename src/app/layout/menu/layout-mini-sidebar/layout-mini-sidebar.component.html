@@ -4,23 +4,15 @@
       <ng-scrollbar>
         <div class="app-mini-sidebar__list">
           <div (click)="onItemClick({key:'search'})"
-               class="app-mini-sidebar__list__item app-mini-sidebar__list__item__highlight">
-            <div class="app-mini-sidebar__list__item__pill"
-                 placement="right"
-                 container="body"
-                 ngbTooltip="Global search">
+            class="app-mini-sidebar__list__item app-mini-sidebar__list__item__highlight">
+            <div class="app-mini-sidebar__list__item__pill" placement="right" container="body"
+              ngbTooltip="Global search">
               <youpez-ibm-icon iconName="search" iconSize="24"></youpez-ibm-icon>
             </div>
           </div>
-          <div class="app-mini-sidebar__list__item"
-               ngbDropdown
-               container="body">
-            <div class="app-mini-sidebar__list__item__pill"
-                 (click)="onFakeLoading()"
-                 placement="right"
-                 container="body"
-                 ngbTooltip="Notifications"
-                 ngbDropdownToggle>
+          <div class="app-mini-sidebar__list__item" ngbDropdown container="body">
+            <div class="app-mini-sidebar__list__item__pill" (click)="onFakeLoading()" placement="right" container="body"
+              ngbTooltip="Notifications" ngbDropdownToggle>
               <youpez-ibm-icon iconName="notification" iconSize="24"></youpez-ibm-icon>
             </div>
             <div ngbDropdownMenu class="relative">
@@ -37,10 +29,7 @@
                       <ng-scrollbar>
                         <ng-container *ngIf="loading">
                           <div class="p-4">
-                            <ibm-skeleton-text
-                              [lines]="12"
-                              [minLineWidth]="70"
-                              [maxLineWidth]="220">
+                            <ibm-skeleton-text [lines]="12" [minLineWidth]="70" [maxLineWidth]="220">
                             </ibm-skeleton-text>
                           </div>
                         </ng-container>
@@ -83,15 +72,9 @@
               </div>
             </div>
           </div>
-          <div class="app-mini-sidebar__list__item"
-               ngbDropdown
-               container="body">
-            <div class="app-mini-sidebar__list__item__pill"
-                 (click)="onFakeLoading()"
-                 placement="right"
-                 container="body"
-                 ngbTooltip="Messages"
-                 ngbDropdownToggle>
+          <div class="app-mini-sidebar__list__item" ngbDropdown container="body">
+            <div class="app-mini-sidebar__list__item__pill" (click)="onFakeLoading()" placement="right" container="body"
+              ngbTooltip="Messages" ngbDropdownToggle>
               <youpez-ibm-icon iconName="chat" iconSize="24"></youpez-ibm-icon>
             </div>
             <div ngbDropdownMenu class="relative">
@@ -108,10 +91,7 @@
                       <ng-scrollbar>
                         <ng-container *ngIf="loading">
                           <div class="p-4">
-                            <ibm-skeleton-text
-                              [lines]="12"
-                              [minLineWidth]="70"
-                              [maxLineWidth]="220">
+                            <ibm-skeleton-text [lines]="12" [minLineWidth]="70" [maxLineWidth]="220">
                             </ibm-skeleton-text>
                           </div>
                         </ng-container>
@@ -120,7 +100,7 @@
                             <ng-container *ngFor="let item of messages">
                               <div class="app-list__item app-list__item--align-top" ngbDropdownItem>
                                 <div class="app-list__item__prefix mt-3">
-                                  <img [src]="item.avatar" class="w-8 h-8 rounded-full"/>
+                                  <img [src]="item.avatar" class="w-8 h-8 rounded-full" />
                                 </div>
                                 <div class="app-list__item__content">
                                   <div class="overflow-hidden">
@@ -149,14 +129,9 @@
               </div>
             </div>
           </div>
-          <div class="app-mini-sidebar__list__item"
-               ngbDropdown
-               container="body">
-            <div class="app-mini-sidebar__list__item__pill"
-                 placement="right"
-                 container="body"
-                 ngbTooltip="Applications"
-                 ngbDropdownToggle>
+          <div class="app-mini-sidebar__list__item" ngbDropdown container="body">
+            <div class="app-mini-sidebar__list__item__pill" placement="right" container="body" ngbTooltip="Applications"
+              ngbDropdownToggle>
               <youpez-ibm-icon iconName="contourFinding" iconSize="24"></youpez-ibm-icon>
             </div>
             <div ngbDropdownMenu class="relative">
@@ -171,7 +146,7 @@
                     <div fxLayout="row wrap" class="app-border-b">
                       <div fxFlex="50%" class="app-border-r">
                         <div class="app-card app-card--select app-card--m-0" ngbDropdownItem
-                             routerLink="/app/scrum-board">
+                          routerLink="/app/scrum-board">
                           <div class="app-card__content text-center">
                             <youpez-ibm-icon iconName="dashboardReference" iconSize="32"></youpez-ibm-icon>
                             <div class="app-productive-heading-01 mt-2">SCRUM board</div>
@@ -190,7 +165,7 @@
                     <div fxLayout="row wrap" class="app-border-b">
                       <div fxFlex="50%" class="app-border-r">
                         <div class="app-card app-card--select app-card--m-0" ngbDropdownItem
-                             routerLink="/app/file-manager">
+                          routerLink="/app/file-manager">
                           <div class="app-card__content text-center">
                             <youpez-ibm-icon iconName="folder" iconSize="32"></youpez-ibm-icon>
                             <div class="app-productive-heading-01 mt-2">File manager</div>
@@ -234,14 +209,9 @@
     </div>
   </div>
   <div class="app-mini-sidebar__list">
-    <div class="app-mini-sidebar__list__item"
-         ngbDropdown
-         container="body">
-      <div class="app-mini-sidebar__list__item__pill"
-           placement="right"
-           container="body"
-           ngbTooltip="Help"
-           ngbDropdownToggle>
+    <div class="app-mini-sidebar__list__item" ngbDropdown container="body">
+      <div class="app-mini-sidebar__list__item__pill" placement="right" container="body" ngbTooltip="Help"
+        ngbDropdownToggle>
         <youpez-ibm-icon iconName="help" iconSize="24"></youpez-ibm-icon>
       </div>
       <div ngbDropdownMenu>
@@ -289,21 +259,16 @@
         </div>
       </div>
     </div>
-    <div class="app-mini-sidebar__list__item"
-         ngbDropdown
-         container="body">
-      <div class="app-mini-sidebar__list__item__pill"
-           placement="right"
-           container="body"
-           ngbTooltip="Account details"
-           ngbDropdownToggle>
+    <div class="app-mini-sidebar__list__item" ngbDropdown container="body">
+      <div class="app-mini-sidebar__list__item__pill" placement="right" container="body" ngbTooltip="Account details"
+        ngbDropdownToggle>
         <youpez-ibm-icon iconName="user" iconSize="24"></youpez-ibm-icon>
       </div>
       <div ngbDropdownMenu>
         <div class="app-list app-list--hover app-list--select app-list--no-border app-list--p">
           <div class="app-list__item app-list__item--no-p" ngbDropdownItem>
             <div class="px-2">
-              <img class="w-10 h-10 rounded-full" src="assets/img/avatar/avatar2.jpg"/>
+              <img class="w-10 h-10 rounded-full" src="assets/img/avatar/avatar2.jpg" />
             </div>
             <div class="app-list__item__content mr-4">
               <div>

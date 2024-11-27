@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser'
-import {NgModule} from '@angular/core'
-import {FlexLayoutModule} from '@angular/flex-layout'
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core'
+import {FlexLayoutModule} from '@ngbracket/ngx-layout'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import {NgxMdModule} from "ngx-md"
 
@@ -43,6 +43,7 @@ import {AppEffects} from './store/app.effects'
     NgxMdModule.forRoot(),
   ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule {

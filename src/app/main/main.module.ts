@@ -149,7 +149,7 @@ import { StarterApplicationComplexComponent } from './starters/application/start
     LayoutModule,
     SharedModule,
     ChartsModule,
-    AgGridModule.withComponents([]),
+    AgGridModule,
   ]
 })
 export class MainModule {

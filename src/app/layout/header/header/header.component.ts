@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
     this.menuClick.next(true)
   }
 
-  onItemClick(event) {
+  onItemClick(event: any) {
     this.itemClick.next(event)
   }
 }

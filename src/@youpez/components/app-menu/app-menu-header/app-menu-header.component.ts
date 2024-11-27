@@ -19,7 +19,7 @@ export class AppMenuHeaderComponent implements OnInit {
   }
 
   onToggle() {
-    this.toggle.next()
+    this.toggle.next(0)
   }
 
 }

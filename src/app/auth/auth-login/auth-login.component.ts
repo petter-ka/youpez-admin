@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import {
-  FormGroup,
-  FormBuilder,
+  UntypedFormGroup,
+  UntypedFormBuilder,
   FormControl,
   ReactiveFormsModule,
   Validators
@@ -17,9 +17,9 @@ import {NotificationService} from "carbon-components-angular"
 })
 export class AuthLoginComponent implements OnInit {
 
-  public formGroup: FormGroup
+  public formGroup: UntypedFormGroup
 
-  constructor(protected formBuilder: FormBuilder,
+  constructor(protected formBuilder: UntypedFormBuilder,
               private router: Router,
               private notificationService: NotificationService) {
   }

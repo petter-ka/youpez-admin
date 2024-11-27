@@ -38,7 +38,7 @@ export class TasksComponent implements OnInit {
           checked: false,
         },
         {
-          description: 'docs: update /deep/ to ::ng-deep ',
+          description: 'docs: update ::ng-deep to ::ng-deep ',
           id: 'sadassdfsddfdasdsasdasdfdsdas',
           checked: false,
           priority: 'low',

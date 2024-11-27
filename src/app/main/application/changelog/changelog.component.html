@@ -2,9 +2,12 @@
   <ng-scrollbar>
     <div fxLayout="row" fxLayoutAlign="center start">
       <div fxFlex="100%" fxFlex.gt-md="70%" fxFlex.gt-lg="60%" class="app-content app-content--default">
-        <ngx-md class="app-markdown ">
+        <!--ngx-md class="app-markdown ">
           {{changelog}}
-        </ngx-md>
+        </ngx-md-->
+        <markdown class="app-markdown">
+          {{changelog}}
+        </markdown>
       </div>
     </div>
   </ng-scrollbar>

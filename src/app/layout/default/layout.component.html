@@ -1,15 +1,15 @@
 <div class="app-layout"
-     [ngClass.lt-md]="{'app-layout--show-header': true}">
+    [ngClass.lt-md]="{'app-layout--show-header': true}">
 
   <!-- BEGIN: MAIN SIDENAV CONTAINER -->
   <youpez-sidenav-container>
 
     <!-- BEGIN: THEME SETTINGS BTN -->
     <div class="app-theme-settings-btn"
-         (click)="onToggleThemeSettings()"
-         placement="left"
-         container="body"
-         ngbTooltip="Theme settings">
+        (click)="onToggleThemeSettings()"
+        placement="left"
+        container="body"
+        ngbTooltip="Theme settings">
       <youpez-ibm-icon iconName="settingsAdjust" iconSize="24"></youpez-ibm-icon>
     </div>
     <!-- END: THEME SETTINGS BTN -->
@@ -27,8 +27,8 @@
 
     <!-- BEGIN: MAIN HEADER (XS VIEW) -->
     <app-main-header (menuClick)="onSideBarToggle($event)"
-                     (itemClick)="onMiniSidebarItemClick($event)"
-                     class="app-layout__header"></app-main-header>
+                    (itemClick)="onMiniSidebarItemClick($event)"
+                    class="app-layout__header"></app-main-header>
     <!-- BEGIN: END HEADER (XS VIEW) -->
 
     <!-- BEGIN: MAIN MINI SIDEBAR (LEFT) -->

@@ -1,6 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core'
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from "@angular/cdk/drag-drop"
-import {CheckboxChange} from "carbon-components-angular"
+import { Checkbox } from 'carbon-components-angular'
+//import {CheckboxChange} from "carbon-components-angular"
 
 export function getUniqueId(parts: number): string {
   const stringArr = []
@@ -104,7 +105,7 @@ export class AppTasksComponent implements OnInit {
     this.deletableTaskGroupIndex = groupIndex
   }
 
-  onToggleTask(event: CheckboxChange, groupIndex, taskIndex) {
+  onToggleTask(event: Checkbox, groupIndex, taskIndex) {
     const {checked} = event
     this.taskGroups[groupIndex].tasks[taskIndex].checked = checked
   }

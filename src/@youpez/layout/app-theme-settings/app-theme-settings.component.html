@@ -5,7 +5,7 @@
     <div fxLayout="row wrap" class="app-theme-bg--holder">
       <ng-container *ngFor="let theme of appThemes">
         <div fxFlex="100%" class="app-theme-bg--block "
-             [ngClass]="{'app-theme-bg--block--selected':theme.name === selectedTheme}">
+          [ngClass]="{'app-theme-bg--block--selected':theme.name === selectedTheme}">
           <div class="px-3 py-2 uppercase font-bold" (click)="onChangeTheme(theme.name)">{{theme.name}}</div>
         </div>
       </ng-container>
@@ -16,7 +16,7 @@
     <div fxLayout="row wrap" class="app-theme-bg--holder">
       <ng-container *ngFor="let theme of sideBarThemes">
         <div fxFlex="50%" class="app-theme-bg--block"
-             [ngClass]="{'app-theme-bg--block--selected':theme.name === selectedSidebar}">
+          [ngClass]="{'app-theme-bg--block--selected':theme.name === selectedSidebar}">
           <div (click)="onSetSideBarTheme(theme.name)" class="app-theme-bg--{{theme.name}}"></div>
         </div>
       </ng-container>
@@ -27,7 +27,7 @@
     <div fxLayout="row wrap" class="app-theme-bg--holder">
       <ng-container *ngFor="let theme of headerThemes">
         <div fxFlex="50%" class="app-theme-bg--block"
-             [ngClass]="{'app-theme-bg--block--selected':theme.name === selectedHeader}">
+          [ngClass]="{'app-theme-bg--block--selected':theme.name === selectedHeader}">
           <div (click)="onSetHeaderTheme(theme.name)" class="app-theme-bg--{{theme.name}}"></div>
         </div>
       </ng-container>

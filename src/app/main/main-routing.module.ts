@@ -131,7 +131,7 @@ const starterPages = [
   }
 ]
 
-const routeForPages = [
+const routeForPages: Routes = [
   {
     path: 'dashboard',
     data: {

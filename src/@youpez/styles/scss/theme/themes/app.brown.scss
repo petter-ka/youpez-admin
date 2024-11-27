@@ -1,4 +1,5 @@
-@import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
+// @import 'carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
+@import '@carbon/elements/scss/elements';
 
 $carbon--theme: map-merge(
     $carbon--theme--white,

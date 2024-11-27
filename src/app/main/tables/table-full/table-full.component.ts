@@ -194,9 +194,9 @@ export class TableFullComponent implements OnInit {
           groupSelectsChildren: true,
         }
         this.loading = false
-        setTimeout(() => {
+        setTimeout((params) => {
           try {
-            this.gridOptions.api.sizeColumnsToFit()
+            params.gridOptions.api.sizeColumnsToFit()
           } catch (error) {
 
           }

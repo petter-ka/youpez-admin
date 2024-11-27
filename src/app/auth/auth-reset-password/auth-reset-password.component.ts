@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms"
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms"
 import {Router} from "@angular/router"
 import {NotificationService} from "carbon-components-angular"
 
@@ -10,9 +10,9 @@ import {NotificationService} from "carbon-components-angular"
 })
 export class AuthResetPasswordComponent implements OnInit {
 
-  public formGroup: FormGroup
+  public formGroup: UntypedFormGroup
 
-  constructor(protected formBuilder: FormBuilder,
+  constructor(protected formBuilder: UntypedFormBuilder,
               private router: Router,
               private notificationService: NotificationService) {
   }

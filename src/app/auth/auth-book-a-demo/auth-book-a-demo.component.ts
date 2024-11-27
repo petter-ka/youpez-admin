@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core'
-import {FormBuilder, FormGroup, Validators} from "@angular/forms"
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms"
 import {Router} from "@angular/router"
 import {NotificationService} from "carbon-components-angular"
 
@@ -16,9 +16,9 @@ export class AuthBookADemoComponent implements OnInit {
 
   @ViewChild('scrollbar', {static: false}) scrollbar: NgScrollbar
 
-  public formGroup: FormGroup
-  public formGroup2: FormGroup
-  public formGroup3: FormGroup
+  public formGroup: UntypedFormGroup
+  public formGroup2: UntypedFormGroup
+  public formGroup3: UntypedFormGroup
   public currentStep: number = 1
   public step1Valid: boolean = false
   public step2Valid: boolean = false
@@ -52,7 +52,7 @@ export class AuthBookADemoComponent implements OnInit {
     {content: "+44", id: "6"},
   ]
 
-  constructor(protected formBuilder: FormBuilder,
+  constructor(protected formBuilder: UntypedFormBuilder,
               private router: Router,
               private notificationService: NotificationService) {
   }

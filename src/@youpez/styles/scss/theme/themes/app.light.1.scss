@@ -1,3 +1,10 @@
-@import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
-$carbon--theme: $carbon--theme--white;
+//@import 'carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
+@use '@carbon/themes/scss/themes';
+@use '@carbon/themes/scss/theme';
+@import '@carbon/elements';
+
+// $carbon--theme: $carbon--theme--white;
+.carbon-theme {
+    @include theme.theme(themes.$g90);
+}
 $darkTheme: false;

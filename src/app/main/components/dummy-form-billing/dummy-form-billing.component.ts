@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core'
-import {FormBuilder, FormGroup, Validators} from "@angular/forms"
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms"
 import {isFormItemValid} from "../../../../@youpez"
 import {countriesData, usStatesData} from "../../../../@youpez/data/dummy"
 
@@ -16,9 +16,9 @@ export class DummyFormBillingComponent implements OnInit {
   public countries = countriesData
   public usStates = usStatesData
 
-  public formGroup: FormGroup
+  public formGroup: UntypedFormGroup
 
-  constructor(protected formBuilder: FormBuilder,) {
+  constructor(protected formBuilder: UntypedFormBuilder,) {
   }
 
   ngOnInit(): void {
